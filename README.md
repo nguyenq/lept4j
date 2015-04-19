@@ -1,4 +1,4 @@
-# Lept4J
+## Lept4J
 
 A JNA Java wrapper for Leptonica Image Processing library (http://www.leptonica.com/).
 
