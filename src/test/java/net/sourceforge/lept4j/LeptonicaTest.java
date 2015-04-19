@@ -34429,7 +34429,6 @@ public class LeptonicaTest {
         String filename = "eurotext.png";
         File image = new File(testResourcesPath, filename);
         Leptonica instance = new LeptonicaImpl().getInstance();
-        Pix expResult = null;
         Pix result = instance.pixRead(image.getPath());
         assertNotNull(result);
     }

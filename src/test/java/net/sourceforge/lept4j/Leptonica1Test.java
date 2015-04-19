@@ -32467,7 +32467,6 @@ public class Leptonica1Test {
         System.out.println("pixRead");
         String filename = "eurotext.png";
         File image = new File(testResourcesPath, filename);
-//        Pix expResult = null;
         Pix result = Leptonica1.pixRead(image.getPath());
         assertNotNull(result);
     }

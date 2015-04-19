@@ -1,5 +1,5 @@
 /**
- * Copyright @ 2014 Quan Nguyen
+ * Copyright @ 2015 Quan Nguyen
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
@@ -71,7 +71,7 @@ public class LoadLibs {
     /**
      * Loads Leptonica library via JNA.
      *
-     * @return TessAPI instance being loaded using
+     * @return Leptonica instance being loaded using
      * <code>Native.loadLibrary()</code>.
      */
     public static Leptonica getLeptonicaInstance() {
@@ -81,7 +81,7 @@ public class LoadLibs {
     /**
      * Gets native library name.
      *
-     * @return the name of the tesseract library to be loaded using the
+     * @return the name of the Leptonica library to be loaded using the
      * <code>Native.register()</code>.
      */
     public static String getLeptonicaLibName() {
@@ -100,12 +100,12 @@ public class LoadLibs {
         try {
             targetTempDir = new File(LEPT4J_TEMP_DIR, dirname);
 
-            URL tessResourceUrl = LoadLibs.class.getResource(dirname.startsWith("/") ? dirname : "/" + dirname);
-            if (tessResourceUrl == null) {
+            URL leptResourceUrl = LoadLibs.class.getResource(dirname.startsWith("/") ? dirname : "/" + dirname);
+            if (leptResourceUrl == null) {
                 return null;
             }
 
-            URLConnection urlConnection = tessResourceUrl.openConnection();
+            URLConnection urlConnection = leptResourceUrl.openConnection();
 
             /**
              * Either load from resources from jar or project resource folder.
@@ -113,7 +113,7 @@ public class LoadLibs {
             if (urlConnection instanceof JarURLConnection) {
                 copyJarResourceToDirectory((JarURLConnection) urlConnection, targetTempDir);
             } else {
-                FileUtils.copyDirectory(new File(tessResourceUrl.getPath()), targetTempDir);
+                FileUtils.copyDirectory(new File(leptResourceUrl.getPath()), targetTempDir);
             }
         } catch (Exception e) {
             logger.log(Level.WARNING, e.getMessage(), e);
