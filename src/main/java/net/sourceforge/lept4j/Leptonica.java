@@ -16365,7 +16365,7 @@ public interface Leptonica extends Library, ILeptonica {
 //
 //    /**
 //     * Original signature :
-//     * <code>char* stringConcatNew(const char*, null)</code><br>
+//     * <code>char* stringConcatNew(const char*, ...)</code><br>
 //     * <i>native declaration : allheaders.h:4658</i>
 //     */
 //    Pointer stringConcatNew(String first, Object... varArgs1);
