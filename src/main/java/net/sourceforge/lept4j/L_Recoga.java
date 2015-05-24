@@ -1,6 +1,7 @@
 package net.sourceforge.lept4j;
 import com.sun.jna.Pointer;
 import com.sun.jna.Structure;
+import com.sun.jna.ptr.PointerByReference;
 import java.util.Arrays;
 import java.util.List;
 /**
@@ -70,7 +71,7 @@ public class L_Recoga extends Structure {
 	 * recog ptr array<br>
 	 * C type : L_Recog**
 	 */
-	public net.sourceforge.lept4j.L_Recog.ByReference[] recog;
+	public PointerByReference recog;
 	/**
 	 * stores the array of best chars<br>
 	 * C type : L_Rcha*
@@ -92,12 +93,12 @@ public class L_Recoga extends Structure {
 	 * @param rcha stores the array of best chars<br>
 	 * C type : L_Rcha*
 	 */
-	public L_Recoga(int n, int nalloc, net.sourceforge.lept4j.L_Recog.ByReference recog[], net.sourceforge.lept4j.L_Rcha.ByReference rcha) {
+	public L_Recoga(int n, int nalloc, PointerByReference recog, net.sourceforge.lept4j.L_Rcha.ByReference rcha) {
 		super();
 		this.n = n;
-		this.nalloc = nalloc;
-		if ((recog.length != this.recog.length)) 
-			throw new IllegalArgumentException("Wrong array size !");
+//		this.nalloc = nalloc;
+//		if ((recog.length != this.recog.length)) 
+//			throw new IllegalArgumentException("Wrong array size !");
 		this.recog = recog;
 		this.rcha = rcha;
 	}

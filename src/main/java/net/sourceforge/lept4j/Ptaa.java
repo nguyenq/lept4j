@@ -1,6 +1,7 @@
 package net.sourceforge.lept4j;
 import com.sun.jna.Pointer;
 import com.sun.jna.Structure;
+import com.sun.jna.ptr.PointerByReference;
 import java.util.Arrays;
 import java.util.List;
 /**
@@ -27,7 +28,7 @@ public class Ptaa extends Structure {
 	 * pta ptr array<br>
 	 * C type : Pta**
 	 */
-	public net.sourceforge.lept4j.Pta.ByReference[] pta;
+	public PointerByReference pta;
 	public Ptaa() {
 		super();
 	}
@@ -42,12 +43,12 @@ public class Ptaa extends Structure {
 	 * @param pta pta ptr array<br>
 	 * C type : Pta**
 	 */
-	public Ptaa(int n, int nalloc, net.sourceforge.lept4j.Pta.ByReference pta[]) {
+	public Ptaa(int n, int nalloc, PointerByReference pta) {
 		super();
 		this.n = n;
 		this.nalloc = nalloc;
-		if ((pta.length != this.pta.length)) 
-			throw new IllegalArgumentException("Wrong array size !");
+//		if ((pta.length != this.pta.length)) 
+//			throw new IllegalArgumentException("Wrong array size !");
 		this.pta = pta;
 	}
 	public Ptaa(Pointer peer) {

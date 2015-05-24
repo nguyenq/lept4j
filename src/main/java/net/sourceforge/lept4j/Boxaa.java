@@ -1,6 +1,7 @@
 package net.sourceforge.lept4j;
 import com.sun.jna.Pointer;
 import com.sun.jna.Structure;
+import com.sun.jna.ptr.PointerByReference;
 import java.util.Arrays;
 import java.util.List;
 /**
@@ -24,7 +25,7 @@ public class Boxaa extends Structure {
 	 * boxa ptr array<br>
 	 * C type : Boxa**
 	 */
-	public net.sourceforge.lept4j.Boxa.ByReference[] boxa;
+	public PointerByReference boxa;
 	public Boxaa() {
 		super();
 	}
@@ -39,12 +40,12 @@ public class Boxaa extends Structure {
 	 * @param boxa boxa ptr array<br>
 	 * C type : Boxa**
 	 */
-	public Boxaa(int n, int nalloc, net.sourceforge.lept4j.Boxa.ByReference boxa[]) {
+	public Boxaa(int n, int nalloc, PointerByReference boxa) {
 		super();
 		this.n = n;
 		this.nalloc = nalloc;
-		if ((boxa.length != this.boxa.length)) 
-			throw new IllegalArgumentException("Wrong array size !");
+//		if ((boxa.length != this.boxa.length)) 
+//			throw new IllegalArgumentException("Wrong array size !");
 		this.boxa = boxa;
 	}
 	public Boxaa(Pointer peer) {

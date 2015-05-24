@@ -1,6 +1,7 @@
 package net.sourceforge.lept4j;
 import com.sun.jna.Pointer;
 import com.sun.jna.Structure;
+import com.sun.jna.ptr.PointerByReference;
 import java.util.Arrays;
 import java.util.List;
 /**
@@ -24,7 +25,7 @@ public class Numaa extends Structure {
 	 * array of Numa<br>
 	 * C type : Numa**
 	 */
-	public net.sourceforge.lept4j.Numa.ByReference[] numa;
+	public PointerByReference numa;
 	public Numaa() {
 		super();
 	}
@@ -39,12 +40,12 @@ public class Numaa extends Structure {
 	 * @param numa array of Numa<br>
 	 * C type : Numa**
 	 */
-	public Numaa(int nalloc, int n, net.sourceforge.lept4j.Numa.ByReference numa[]) {
+	public Numaa(int nalloc, int n, PointerByReference numa) {
 		super();
 		this.nalloc = nalloc;
 		this.n = n;
-		if ((numa.length != this.numa.length)) 
-			throw new IllegalArgumentException("Wrong array size !");
+//		if ((numa.length != this.numa.length)) 
+//			throw new IllegalArgumentException("Wrong array size !");
 		this.numa = numa;
 	}
 	public Numaa(Pointer peer) {

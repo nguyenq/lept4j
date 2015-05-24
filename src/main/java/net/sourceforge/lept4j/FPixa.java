@@ -1,6 +1,7 @@
 package net.sourceforge.lept4j;
 import com.sun.jna.Pointer;
 import com.sun.jna.Structure;
+import com.sun.jna.ptr.PointerByReference;
 import java.util.Arrays;
 import java.util.List;
 /**
@@ -29,7 +30,7 @@ public class FPixa extends Structure {
 	 * the array of ptrs to fpix<br>
 	 * C type : FPix**
 	 */
-	public net.sourceforge.lept4j.FPix.ByReference[] fpix;
+	public PointerByReference fpix;
 	public FPixa() {
 		super();
 	}
@@ -46,13 +47,13 @@ public class FPixa extends Structure {
 	 * @param fpix the array of ptrs to fpix<br>
 	 * C type : FPix**
 	 */
-	public FPixa(int n, int nalloc, int refcount, net.sourceforge.lept4j.FPix.ByReference fpix[]) {
+	public FPixa(int n, int nalloc, int refcount, PointerByReference fpix) {
 		super();
 		this.n = n;
 		this.nalloc = nalloc;
 		this.refcount = refcount;
-		if ((fpix.length != this.fpix.length)) 
-			throw new IllegalArgumentException("Wrong array size !");
+//		if ((fpix.length != this.fpix.length)) 
+//			throw new IllegalArgumentException("Wrong array size !");
 		this.fpix = fpix;
 	}
 	public FPixa(Pointer peer) {

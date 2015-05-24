@@ -1,6 +1,7 @@
 package net.sourceforge.lept4j;
 import com.sun.jna.Pointer;
 import com.sun.jna.Structure;
+import com.sun.jna.ptr.PointerByReference;
 import java.util.Arrays;
 import java.util.List;
 /**
@@ -24,7 +25,7 @@ public class Sela extends Structure {
 	 * sel ptr array<br>
 	 * C type : Sel**
 	 */
-	public net.sourceforge.lept4j.Sel.ByReference[] sel;
+	public PointerByReference sel;
 	public Sela() {
 		super();
 	}
@@ -39,12 +40,12 @@ public class Sela extends Structure {
 	 * @param sel sel ptr array<br>
 	 * C type : Sel**
 	 */
-	public Sela(int n, int nalloc, net.sourceforge.lept4j.Sel.ByReference sel[]) {
+	public Sela(int n, int nalloc, PointerByReference sel) {
 		super();
 		this.n = n;
 		this.nalloc = nalloc;
-		if ((sel.length != this.sel.length)) 
-			throw new IllegalArgumentException("Wrong array size !");
+//		if ((sel.length != this.sel.length)) 
+//			throw new IllegalArgumentException("Wrong array size !");
 		this.sel = sel;
 	}
 	public Sela(Pointer peer) {

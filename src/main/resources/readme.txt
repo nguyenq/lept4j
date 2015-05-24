@@ -6,12 +6,6 @@ The code works partially due to the heap size issue. Will work on it later when 
    [junit] Could not reserve enough space for 2097152KB object heap
 
 java.lang.ExceptionInInitializerError
-	at net.sourceforge.lept4j.Leptonica1Test.testPixRead(Leptonica1Test.java:32480)
-	at com.sun.jna.Native.register(Native.java:1463)
-	at com.sun.jna.Native.register(Native.java:1396)
-	at com.sun.jna.Native.register(Native.java:1156)
-
-java.lang.ExceptionInInitializerError
 	at net.sourceforge.lept4j.LeptonicaTest$LeptonicaImpl.getInstance(LeptonicaTest.java:43867)
 	at net.sourceforge.lept4j.LeptonicaTest.testPixRead(LeptonicaTest.java:34440)
 	at sun.misc.ProxyGenerator.generateStaticInitializer(ProxyGenerator.java:1261)
@@ -26,4 +20,11 @@ java.lang.ExceptionInInitializerError
 	at com.sun.jna.Native.loadLibrary(Native.java:415)
 	at com.sun.jna.Native.loadLibrary(Native.java:391)
 	at net.sourceforge.lept4j.util.LoadLibs.getLeptonicaInstance(LoadLibs.java:78)
+
+java.lang.IllegalArgumentException: code size limit exceeded
+sun.misc.ProxyGenerator.generateStaticInitializer(ProxyGenerator.java:1261)
+
+if (minfo.code.size() > 65535) {
+   throw new IllegalArgumentException("code size limit exceeded");
+}
 

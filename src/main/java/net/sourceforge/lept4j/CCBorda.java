@@ -1,6 +1,7 @@
 package net.sourceforge.lept4j;
 import com.sun.jna.Pointer;
 import com.sun.jna.Structure;
+import com.sun.jna.ptr.PointerByReference;
 import java.util.Arrays;
 import java.util.List;
 /**
@@ -39,7 +40,7 @@ public class CCBorda extends Structure {
 	 * ccb ptr array<br>
 	 * C type : CCBord**
 	 */
-	public net.sourceforge.lept4j.CCBord.ByReference[] ccb;
+	public PointerByReference ccb;
 	public CCBorda() {
 		super();
 	}
@@ -60,15 +61,15 @@ public class CCBorda extends Structure {
 	 * @param ccb ccb ptr array<br>
 	 * C type : CCBord**
 	 */
-	public CCBorda(net.sourceforge.lept4j.Pix.ByReference pix, int w, int h, int n, int nalloc, net.sourceforge.lept4j.CCBord.ByReference ccb[]) {
+	public CCBorda(net.sourceforge.lept4j.Pix.ByReference pix, int w, int h, int n, int nalloc, PointerByReference ccb) {
 		super();
 		this.pix = pix;
 		this.w = w;
 		this.h = h;
 		this.n = n;
 		this.nalloc = nalloc;
-		if ((ccb.length != this.ccb.length)) 
-			throw new IllegalArgumentException("Wrong array size !");
+//		if ((ccb.length != this.ccb.length)) 
+//			throw new IllegalArgumentException("Wrong array size !");
 		this.ccb = ccb;
 	}
 	public CCBorda(Pointer peer) {

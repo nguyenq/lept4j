@@ -1,6 +1,7 @@
 package net.sourceforge.lept4j;
 import com.sun.jna.Pointer;
 import com.sun.jna.Structure;
+import com.sun.jna.ptr.PointerByReference;
 import java.util.Arrays;
 import java.util.List;
 /**
@@ -29,7 +30,7 @@ public class Pixa extends Structure {
 	 * the array of ptrs to pix<br>
 	 * C type : Pix**
 	 */
-	public net.sourceforge.lept4j.Pix.ByReference[] pix;
+	public PointerByReference pix;
 	/**
 	 * array of boxes<br>
 	 * C type : Boxa*
@@ -53,13 +54,13 @@ public class Pixa extends Structure {
 	 * @param boxa array of boxes<br>
 	 * C type : Boxa*
 	 */
-	public Pixa(int n, int nalloc, int refcount, net.sourceforge.lept4j.Pix.ByReference pix[], net.sourceforge.lept4j.Boxa.ByReference boxa) {
+	public Pixa(int n, int nalloc, int refcount, PointerByReference pix, net.sourceforge.lept4j.Boxa.ByReference boxa) {
 		super();
 		this.n = n;
 		this.nalloc = nalloc;
 		this.refcount = refcount;
-		if ((pix.length != this.pix.length)) 
-			throw new IllegalArgumentException("Wrong array size !");
+//		if ((pix.length != this.pix.length)) 
+//			throw new IllegalArgumentException("Wrong array size !");
 		this.pix = pix;
 		this.boxa = boxa;
 	}

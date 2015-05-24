@@ -1,6 +1,7 @@
 package net.sourceforge.lept4j;
 import com.sun.jna.Pointer;
 import com.sun.jna.Structure;
+import com.sun.jna.ptr.PointerByReference;
 import java.util.Arrays;
 import java.util.List;
 /**
@@ -19,7 +20,7 @@ public class L_Ptraa extends Structure {
 	 * array of ptra<br>
 	 * C type : L_Ptra**
 	 */
-	public net.sourceforge.lept4j.L_Ptra.ByReference[] ptra;
+	public PointerByReference ptra;
 	public L_Ptraa() {
 		super();
 	}
@@ -32,11 +33,11 @@ public class L_Ptraa extends Structure {
 	 * @param ptra array of ptra<br>
 	 * C type : L_Ptra**
 	 */
-	public L_Ptraa(int nalloc, net.sourceforge.lept4j.L_Ptra.ByReference ptra[]) {
+	public L_Ptraa(int nalloc, PointerByReference ptra) {
 		super();
 		this.nalloc = nalloc;
-		if ((ptra.length != this.ptra.length)) 
-			throw new IllegalArgumentException("Wrong array size !");
+//		if ((ptra.length != this.ptra.length)) 
+//			throw new IllegalArgumentException("Wrong array size !");
 		this.ptra = ptra;
 	}
 	public L_Ptraa(Pointer peer) {

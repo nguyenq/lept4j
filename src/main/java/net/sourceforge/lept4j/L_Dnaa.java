@@ -1,6 +1,7 @@
 package net.sourceforge.lept4j;
 import com.sun.jna.Pointer;
 import com.sun.jna.Structure;
+import com.sun.jna.ptr.PointerByReference;
 import java.util.Arrays;
 import java.util.List;
 /**
@@ -24,7 +25,7 @@ public class L_Dnaa extends Structure {
 	 * array of L_Dna<br>
 	 * C type : L_Dna**
 	 */
-	public net.sourceforge.lept4j.L_Dna.ByReference[] dna;
+	public PointerByReference dna;
 	public L_Dnaa() {
 		super();
 	}
@@ -39,12 +40,12 @@ public class L_Dnaa extends Structure {
 	 * @param dna array of L_Dna<br>
 	 * C type : L_Dna**
 	 */
-	public L_Dnaa(int nalloc, int n, net.sourceforge.lept4j.L_Dna.ByReference dna[]) {
+	public L_Dnaa(int nalloc, int n, PointerByReference dna) {
 		super();
 		this.nalloc = nalloc;
 		this.n = n;
-		if ((dna.length != this.dna.length)) 
-			throw new IllegalArgumentException("Wrong array size !");
+//		if ((dna.length != this.dna.length)) 
+//			throw new IllegalArgumentException("Wrong array size !");
 		this.dna = dna;
 	}
 	public L_Dnaa(Pointer peer) {
