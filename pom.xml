@@ -5,11 +5,13 @@
 	<artifactId>lept4j</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.7</maven.compiler.source>
 		<maven.compiler.target>1.7</maven.compiler.target>
 	</properties>
+
 	<name>Lept4J - Leptonica for Java</name>
 	<description>
 		# Lept4J 
@@ -19,6 +21,32 @@
         A Java JNA wrapper for Leptonica Image Processing library. 
 
         Lept4J is released and distributed under the Apache License, v2.0.</description>
+
+	<scm>
+		<connection>scm:svn:https://github.com/nguyenq/lept4j/trunk/</connection>
+		<developerConnection>scm:svn:https://github.com/nguyenq/lept4j/trunk/</developerConnection>
+		<url>https://github.com/nguyenq/lept4j/trunk/</url>
+	</scm>
+
+	<developers>
+		<developer>
+			<name>Quan Nguyen</name>
+			<email>nguyenq@users.sf.net</email>
+		</developer>
+	</developers>
+
+	<contributors>
+		<contributor>
+			<name>O.J. Sousa Rodrigues</name>
+			<email>osoriojaques@gmail.com</email>
+			<roles>
+				<role>developer</role>
+				<role>contributor</role>
+			</roles>
+			<timezone>+1</timezone>
+		</contributor>
+	</contributors>
+
 	<dependencies>
 		<dependency>
 			<groupId>net.java.dev.jna</groupId>
