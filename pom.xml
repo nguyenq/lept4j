@@ -13,6 +13,8 @@
 	</properties>
 
 	<name>Lept4J - Leptonica for Java</name>
+	<url>https://github.com/nguyenq/lept4j</url>
+	
 	<description>
 		# Lept4J 
 
