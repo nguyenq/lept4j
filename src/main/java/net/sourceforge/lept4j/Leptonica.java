@@ -63,56 +63,56 @@ public interface Leptonica extends Library, ILeptonica {
      * <code>l_int32 pixBackgroundNormGrayArray(PIX*, PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, PIX**)</code><br>
      * <i>native declaration : allheaders.h:8</i>
      */
-    int pixBackgroundNormGrayArray(Pix pixs, Pix pixim, int sx, int sy, int thresh, int mincount, int bgval, int smoothx, int smoothy, Pix.ByReference ppixd[]);
+    int pixBackgroundNormGrayArray(Pix pixs, Pix pixim, int sx, int sy, int thresh, int mincount, int bgval, int smoothx, int smoothy, PointerByReference ppixd);
 
     /**
      * Original signature :
      * <code>l_int32 pixBackgroundNormRGBArrays(PIX*, PIX*, PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, PIX**, PIX**, PIX**)</code><br>
      * <i>native declaration : allheaders.h:10</i>
      */
-    int pixBackgroundNormRGBArrays(Pix pixs, Pix pixim, Pix pixg, int sx, int sy, int thresh, int mincount, int bgval, int smoothx, int smoothy, Pix.ByReference ppixr[], Pix.ByReference ppixg[], Pix.ByReference ppixb[]);
+    int pixBackgroundNormRGBArrays(Pix pixs, Pix pixim, Pix pixg, int sx, int sy, int thresh, int mincount, int bgval, int smoothx, int smoothy, PointerByReference ppixr, PointerByReference ppixg, PointerByReference ppixb);
 
     /**
      * Original signature :
      * <code>l_int32 pixBackgroundNormGrayArrayMorph(PIX*, PIX*, l_int32, l_int32, l_int32, PIX**)</code><br>
      * <i>native declaration : allheaders.h:12</i>
      */
-    int pixBackgroundNormGrayArrayMorph(Pix pixs, Pix pixim, int reduction, int size, int bgval, Pix.ByReference ppixd[]);
+    int pixBackgroundNormGrayArrayMorph(Pix pixs, Pix pixim, int reduction, int size, int bgval, PointerByReference ppixd);
 
     /**
      * Original signature :
      * <code>l_int32 pixBackgroundNormRGBArraysMorph(PIX*, PIX*, l_int32, l_int32, l_int32, PIX**, PIX**, PIX**)</code><br>
      * <i>native declaration : allheaders.h:14</i>
      */
-    int pixBackgroundNormRGBArraysMorph(Pix pixs, Pix pixim, int reduction, int size, int bgval, Pix.ByReference ppixr[], Pix.ByReference ppixg[], Pix.ByReference ppixb[]);
+    int pixBackgroundNormRGBArraysMorph(Pix pixs, Pix pixim, int reduction, int size, int bgval, PointerByReference ppixr, PointerByReference ppixg, PointerByReference ppixb);
 
     /**
      * Original signature :
      * <code>l_int32 pixGetBackgroundGrayMap(PIX*, PIX*, l_int32, l_int32, l_int32, l_int32, PIX**)</code><br>
      * <i>native declaration : allheaders.h:16</i>
      */
-    int pixGetBackgroundGrayMap(Pix pixs, Pix pixim, int sx, int sy, int thresh, int mincount, Pix.ByReference ppixd[]);
+    int pixGetBackgroundGrayMap(Pix pixs, Pix pixim, int sx, int sy, int thresh, int mincount, PointerByReference ppixd);
 
     /**
      * Original signature :
      * <code>l_int32 pixGetBackgroundRGBMap(PIX*, PIX*, PIX*, l_int32, l_int32, l_int32, l_int32, PIX**, PIX**, PIX**)</code><br>
      * <i>native declaration : allheaders.h:18</i>
      */
-    int pixGetBackgroundRGBMap(Pix pixs, Pix pixim, Pix pixg, int sx, int sy, int thresh, int mincount, Pix.ByReference ppixmr[], Pix.ByReference ppixmg[], Pix.ByReference ppixmb[]);
+    int pixGetBackgroundRGBMap(Pix pixs, Pix pixim, Pix pixg, int sx, int sy, int thresh, int mincount, PointerByReference ppixmr, PointerByReference ppixmg, PointerByReference ppixmb);
 
     /**
      * Original signature :
      * <code>l_int32 pixGetBackgroundGrayMapMorph(PIX*, PIX*, l_int32, l_int32, PIX**)</code><br>
      * <i>native declaration : allheaders.h:20</i>
      */
-    int pixGetBackgroundGrayMapMorph(Pix pixs, Pix pixim, int reduction, int size, Pix.ByReference ppixm[]);
+    int pixGetBackgroundGrayMapMorph(Pix pixs, Pix pixim, int reduction, int size, PointerByReference ppixm);
 
     /**
      * Original signature :
      * <code>l_int32 pixGetBackgroundRGBMapMorph(PIX*, PIX*, l_int32, l_int32, PIX**, PIX**, PIX**)</code><br>
      * <i>native declaration : allheaders.h:22</i>
      */
-    int pixGetBackgroundRGBMapMorph(Pix pixs, Pix pixim, int reduction, int size, Pix.ByReference ppixmr[], Pix.ByReference ppixmg[], Pix.ByReference ppixmb[]);
+    int pixGetBackgroundRGBMapMorph(Pix pixs, Pix pixim, int reduction, int size, PointerByReference ppixmr, PointerByReference ppixmg, PointerByReference ppixmb);
 
     /**
      * Original signature :
@@ -182,7 +182,7 @@ public interface Leptonica extends Library, ILeptonica {
      * <code>l_int32 pixThresholdSpreadNorm(PIX*, l_int32, l_int32, l_int32, l_int32, l_float32, l_int32, l_int32, l_int32, PIX**, PIX**, PIX**)</code><br>
      * <i>native declaration : allheaders.h:42</i>
      */
-    int pixThresholdSpreadNorm(Pix pixs, int filtertype, int edgethresh, int smoothx, int smoothy, float gamma, int minval, int maxval, int targetthresh, Pix.ByReference ppixth[], Pix.ByReference ppixb[], Pix.ByReference ppixd[]);
+    int pixThresholdSpreadNorm(Pix pixs, int filtertype, int edgethresh, int smoothx, int smoothy, float gamma, int minval, int maxval, int targetthresh, PointerByReference ppixth, PointerByReference ppixb, PointerByReference ppixd);
 
     /**
      * Original signature :
@@ -203,7 +203,7 @@ public interface Leptonica extends Library, ILeptonica {
      * <code>l_int32 pixMinMaxTiles(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, PIX**, PIX**)</code><br>
      * <i>native declaration : allheaders.h:48</i>
      */
-    int pixMinMaxTiles(Pix pixs, int sx, int sy, int mindiff, int smoothx, int smoothy, Pix.ByReference ppixmin[], Pix.ByReference ppixmax[]);
+    int pixMinMaxTiles(Pix pixs, int sx, int sy, int mindiff, int smoothx, int smoothy, PointerByReference ppixmin, PointerByReference ppixmax);
 
     /**
      * Original signature :
@@ -572,7 +572,7 @@ public interface Leptonica extends Library, ILeptonica {
      * <code>NUMA* pixFindBaselines(PIX*, PTA**, l_int32)</code><br>
      * <i>native declaration : allheaders.h:154</i>
      */
-    Numa pixFindBaselines(Pix pixs, Pta.ByReference ppta[], int debug);
+    Numa pixFindBaselines(Pix pixs, PointerByReference ppta, int debug);
 
     /**
      * Original signature :
@@ -586,7 +586,7 @@ public interface Leptonica extends Library, ILeptonica {
      * <code>l_int32 pixGetLocalSkewTransform(PIX*, l_int32, l_int32, l_int32, l_float32, l_float32, l_float32, PTA**, PTA**)</code><br>
      * <i>native declaration : allheaders.h:158</i>
      */
-    int pixGetLocalSkewTransform(Pix pixs, int nslices, int redsweep, int redsearch, float sweeprange, float sweepdelta, float minbsdelta, Pta.ByReference pptas[], Pta.ByReference pptad[]);
+    int pixGetLocalSkewTransform(Pix pixs, int nslices, int redsweep, int redsearch, float sweeprange, float sweepdelta, float minbsdelta, PointerByReference pptas, PointerByReference pptad);
 
     /**
      * Original signature :
@@ -606,14 +606,14 @@ public interface Leptonica extends Library, ILeptonica {
      * Original signature : <code>void bbufferDestroy(BBUFFER**)</code><br>
      * <i>native declaration : allheaders.h:164</i>
      */
-    void bbufferDestroy(net.sourceforge.lept4j.ByteBuffer.ByReference pbb[]);
+    void bbufferDestroy(PointerByReference pbb);
 
     /**
      * Original signature :
      * <code>l_uint8* bbufferDestroyAndSaveData(BBUFFER**, size_t*)</code><br>
      * <i>native declaration : allheaders.h:166</i>
      */
-    Pointer bbufferDestroyAndSaveData(net.sourceforge.lept4j.ByteBuffer.ByReference pbb[], NativeSizeByReference pnbytes);
+    Pointer bbufferDestroyAndSaveData(PointerByReference pbb, NativeSizeByReference pnbytes);
 
     /**
      * Original signature :
@@ -788,7 +788,7 @@ public interface Leptonica extends Library, ILeptonica {
      * <code>l_int32 pixOtsuAdaptiveThreshold(PIX*, l_int32, l_int32, l_int32, l_int32, l_float32, PIX**, PIX**)</code><br>
      * <i>native declaration : allheaders.h:216</i>
      */
-    int pixOtsuAdaptiveThreshold(Pix pixs, int sx, int sy, int smoothx, int smoothy, float scorefract, Pix.ByReference ppixth[], Pix.ByReference ppixd[]);
+    int pixOtsuAdaptiveThreshold(Pix pixs, int sx, int sy, int smoothx, int smoothy, float scorefract, PointerByReference ppixth, PointerByReference ppixd);
 
     /**
      * Original signature :
@@ -809,21 +809,21 @@ public interface Leptonica extends Library, ILeptonica {
      * <code>l_int32 pixSauvolaBinarizeTiled(PIX*, l_int32, l_float32, l_int32, l_int32, PIX**, PIX**)</code><br>
      * <i>native declaration : allheaders.h:222</i>
      */
-    int pixSauvolaBinarizeTiled(Pix pixs, int whsize, float factor, int nx, int ny, Pix.ByReference ppixth[], Pix.ByReference ppixd[]);
+    int pixSauvolaBinarizeTiled(Pix pixs, int whsize, float factor, int nx, int ny, PointerByReference ppixth, PointerByReference ppixd);
 
     /**
      * Original signature :
      * <code>l_int32 pixSauvolaBinarize(PIX*, l_int32, l_float32, l_int32, PIX**, PIX**, PIX**, PIX**)</code><br>
      * <i>native declaration : allheaders.h:224</i>
      */
-    int pixSauvolaBinarize(Pix pixs, int whsize, float factor, int addborder, Pix.ByReference ppixm[], Pix.ByReference ppixsd[], Pix.ByReference ppixth[], Pix.ByReference ppixd[]);
+    int pixSauvolaBinarize(Pix pixs, int whsize, float factor, int addborder, PointerByReference ppixm, PointerByReference ppixsd, PointerByReference ppixth, PointerByReference ppixd);
 
     /**
      * Original signature :
      * <code>PIX* pixSauvolaGetThreshold(PIX*, PIX*, l_float32, PIX**)</code><br>
      * <i>native declaration : allheaders.h:226</i>
      */
-    Pix pixSauvolaGetThreshold(Pix pixm, Pix pixms, float factor, Pix.ByReference ppixsd[]);
+    Pix pixSauvolaGetThreshold(Pix pixm, Pix pixms, float factor, PointerByReference ppixsd);
 
     /**
      * Original signature :
@@ -837,14 +837,14 @@ public interface Leptonica extends Library, ILeptonica {
      * <code>l_int32 pixThresholdByConnComp(PIX*, PIX*, l_int32, l_int32, l_int32, l_float32, l_float32, l_int32*, PIX**, l_int32)</code><br>
      * <i>native declaration : allheaders.h:230</i>
      */
-    int pixThresholdByConnComp(Pix pixs, Pix pixm, int start, int end, int incr, float thresh48, float threshdiff, IntBuffer pglobthresh, Pix.ByReference ppixd[], int debugflag);
+    int pixThresholdByConnComp(Pix pixs, Pix pixm, int start, int end, int incr, float thresh48, float threshdiff, IntBuffer pglobthresh, PointerByReference ppixd, int debugflag);
 
     /**
      * Original signature :
      * <code>l_int32 pixThresholdByConnComp(PIX*, PIX*, l_int32, l_int32, l_int32, l_float32, l_float32, l_int32*, PIX**, l_int32)</code><br>
      * <i>native declaration : allheaders.h:230</i>
      */
-    int pixThresholdByConnComp(Pix pixs, Pix pixm, int start, int end, int incr, float thresh48, float threshdiff, IntByReference pglobthresh, Pix.ByReference ppixd[], int debugflag);
+    int pixThresholdByConnComp(Pix pixs, Pix pixm, int start, int end, int incr, float thresh48, float threshdiff, IntByReference pglobthresh, PointerByReference ppixd, int debugflag);
 
     /**
      * Original signature :
@@ -1009,7 +1009,7 @@ public interface Leptonica extends Library, ILeptonica {
      * Original signature : <code>void bmfDestroy(L_BMF**)</code><br>
      * <i>native declaration : allheaders.h:278</i>
      */
-    void bmfDestroy(L_Bmf.ByReference pbmf[]);
+    void bmfDestroy(PointerByReference pbmf);
 
     /**
      * Original signature : <code>PIX* bmfGetPix(L_BMF*, char)</code><br>
@@ -1109,7 +1109,7 @@ public interface Leptonica extends Library, ILeptonica {
      * Original signature : <code>void boxDestroy(BOX**)</code><br>
      * <i>native declaration : allheaders.h:308</i>
      */
-    void boxDestroy(Box.ByReference pbox[]);
+    void boxDestroy(PointerByReference pbox);
 
     /**
      * Original signature :
@@ -1167,7 +1167,7 @@ public interface Leptonica extends Library, ILeptonica {
      * Original signature : <code>void boxaDestroy(BOXA**)</code><br>
      * <i>native declaration : allheaders.h:326</i>
      */
-    void boxaDestroy(Boxa.ByReference pboxa[]);
+    void boxaDestroy(PointerByReference pboxa);
 
     /**
      * Original signature :
@@ -1254,7 +1254,7 @@ public interface Leptonica extends Library, ILeptonica {
      * <code>l_int32 boxaRemoveBoxAndSave(BOXA*, l_int32, BOX**)</code><br>
      * <i>native declaration : allheaders.h:352</i>
      */
-    int boxaRemoveBoxAndSave(Boxa boxa, int index, Box.ByReference pbox[]);
+    int boxaRemoveBoxAndSave(Boxa boxa, int index, PointerByReference pbox);
 
     /**
      * Original signature : <code>BOXA* boxaSaveValid(BOXA*, l_int32)</code><br>
@@ -1290,7 +1290,7 @@ public interface Leptonica extends Library, ILeptonica {
      * Original signature : <code>void boxaaDestroy(BOXAA**)</code><br>
      * <i>native declaration : allheaders.h:364</i>
      */
-    void boxaaDestroy(Boxaa.ByReference pbaa[]);
+    void boxaaDestroy(PointerByReference pbaa);
 
     /**
      * Original signature :
@@ -1531,7 +1531,7 @@ public interface Leptonica extends Library, ILeptonica {
      * <code>BOXA* boxaHandleOverlaps(BOXA*, l_int32, l_int32, l_float32, l_float32, NUMA**)</code><br>
      * <i>native declaration : allheaders.h:436</i>
      */
-    Boxa boxaHandleOverlaps(Boxa boxas, int op, int range, float min_overlap, float max_ratio, Numa.ByReference pnamap[]);
+    Boxa boxaHandleOverlaps(Boxa boxas, int op, int range, float min_overlap, float max_ratio, PointerByReference pnamap);
 
     /**
      * Original signature :
@@ -1629,14 +1629,14 @@ public interface Leptonica extends Library, ILeptonica {
      * <code>l_int32 boxaEqual(BOXA*, BOXA*, l_int32, NUMA**, l_int32*)</code><br>
      * <i>native declaration : allheaders.h:464</i>
      */
-    int boxaEqual(Boxa boxa1, Boxa boxa2, int maxdist, Numa.ByReference pnaindex[], IntBuffer psame);
+    int boxaEqual(Boxa boxa1, Boxa boxa2, int maxdist, PointerByReference pnaindex, IntBuffer psame);
 
     /**
      * Original signature :
      * <code>l_int32 boxaEqual(BOXA*, BOXA*, l_int32, NUMA**, l_int32*)</code><br>
      * <i>native declaration : allheaders.h:464</i>
      */
-    int boxaEqual(Boxa boxa1, Boxa boxa2, int maxdist, Numa.ByReference pnaindex[], IntByReference psame);
+    int boxaEqual(Boxa boxa1, Boxa boxa2, int maxdist, PointerByReference pnaindex, IntByReference psame);
 
     /**
      * Original signature :
@@ -1671,7 +1671,7 @@ public interface Leptonica extends Library, ILeptonica {
      * <code>l_int32 boxaSplitEvenOdd(BOXA*, l_int32, BOXA**, BOXA**)</code><br>
      * <i>native declaration : allheaders.h:474</i>
      */
-    int boxaSplitEvenOdd(Boxa boxa, int fillflag, Boxa.ByReference pboxae[], Boxa.ByReference pboxao[]);
+    int boxaSplitEvenOdd(Boxa boxa, int fillflag, PointerByReference pboxae, PointerByReference pboxao);
 
     /**
      * Original signature :
@@ -1727,14 +1727,14 @@ public interface Leptonica extends Library, ILeptonica {
      * <code>BOXA* boxaSort(BOXA*, l_int32, l_int32, NUMA**)</code><br>
      * <i>native declaration : allheaders.h:490</i>
      */
-    Boxa boxaSort(Boxa boxas, int sorttype, int sortorder, Numa.ByReference pnaindex[]);
+    Boxa boxaSort(Boxa boxas, int sorttype, int sortorder, PointerByReference pnaindex);
 
     /**
      * Original signature :
      * <code>BOXA* boxaBinSort(BOXA*, l_int32, l_int32, NUMA**)</code><br>
      * <i>native declaration : allheaders.h:492</i>
      */
-    Boxa boxaBinSort(Boxa boxas, int sorttype, int sortorder, Numa.ByReference pnaindex[]);
+    Boxa boxaBinSort(Boxa boxas, int sorttype, int sortorder, PointerByReference pnaindex);
 
     /**
      * Original signature : <code>BOXA* boxaSortByIndex(BOXA*, NUMA*)</code><br>
@@ -1747,7 +1747,7 @@ public interface Leptonica extends Library, ILeptonica {
      * <code>BOXAA* boxaSort2d(BOXA*, NUMAA**, l_int32, l_int32, l_int32)</code><br>
      * <i>native declaration : allheaders.h:496</i>
      */
-    Boxaa boxaSort2d(Boxa boxas, Numaa.ByReference pnaad[], int delta1, int delta2, int minh1);
+    Boxaa boxaSort2d(Boxa boxas, PointerByReference pnaad, int delta1, int delta2, int minh1);
 
     /**
      * Original signature :
@@ -1761,14 +1761,14 @@ public interface Leptonica extends Library, ILeptonica {
      * <code>l_int32 boxaExtractAsNuma(BOXA*, NUMA**, NUMA**, NUMA**, NUMA**, l_int32)</code><br>
      * <i>native declaration : allheaders.h:500</i>
      */
-    int boxaExtractAsNuma(Boxa boxa, Numa.ByReference pnax[], Numa.ByReference pnay[], Numa.ByReference pnaw[], Numa.ByReference pnah[], int keepinvalid);
+    int boxaExtractAsNuma(Boxa boxa, PointerByReference pnax, PointerByReference pnay, PointerByReference pnaw, PointerByReference pnah, int keepinvalid);
 
     /**
      * Original signature :
      * <code>l_int32 boxaExtractAsPta(BOXA*, PTA**, PTA**, PTA**, PTA**, l_int32)</code><br>
      * <i>native declaration : allheaders.h:502</i>
      */
-    int boxaExtractAsPta(Boxa boxa, Pta.ByReference pptal[], Pta.ByReference pptat[], Pta.ByReference pptar[], Pta.ByReference pptab[], int keepinvalid);
+    int boxaExtractAsPta(Boxa boxa, PointerByReference pptal, PointerByReference pptat, PointerByReference pptar, PointerByReference pptab, int keepinvalid);
 
     /**
      * Original signature :
@@ -1795,21 +1795,21 @@ public interface Leptonica extends Library, ILeptonica {
      * <code>l_int32 boxaaGetExtent(BOXAA*, l_int32*, l_int32*, BOX**, BOXA**)</code><br>
      * <i>native declaration : allheaders.h:510</i>
      */
-    int boxaaGetExtent(Boxaa baa, IntBuffer pw, IntBuffer ph, Box.ByReference pbox[], Boxa.ByReference pboxa[]);
+    int boxaaGetExtent(Boxaa baa, IntBuffer pw, IntBuffer ph, PointerByReference pbox, PointerByReference pboxa);
 
     /**
      * Original signature :
      * <code>l_int32 boxaaGetExtent(BOXAA*, l_int32*, l_int32*, BOX**, BOXA**)</code><br>
      * <i>native declaration : allheaders.h:510</i>
      */
-    int boxaaGetExtent(Boxaa baa, IntByReference pw, IntByReference ph, Box.ByReference pbox[], Boxa.ByReference pboxa[]);
+    int boxaaGetExtent(Boxaa baa, IntByReference pw, IntByReference ph, PointerByReference pbox, PointerByReference pboxa);
 
     /**
      * Original signature :
      * <code>BOXA* boxaaFlattenToBoxa(BOXAA*, NUMA**, l_int32)</code><br>
      * <i>native declaration : allheaders.h:512</i>
      */
-    Boxa boxaaFlattenToBoxa(Boxaa baa, Numa.ByReference pnaindex[], int copyflag);
+    Boxa boxaaFlattenToBoxa(Boxaa baa, PointerByReference pnaindex, int copyflag);
 
     /**
      * Original signature :
@@ -1837,7 +1837,7 @@ public interface Leptonica extends Library, ILeptonica {
      * <code>PIX* pixMaskConnComp(PIX*, l_int32, BOXA**)</code><br>
      * <i>native declaration : allheaders.h:520</i>
      */
-    Pix pixMaskConnComp(Pix pixs, int connectivity, Boxa.ByReference pboxa[]);
+    Pix pixMaskConnComp(Pix pixs, int connectivity, PointerByReference pboxa);
 
     /**
      * Original signature :
@@ -1921,14 +1921,14 @@ public interface Leptonica extends Library, ILeptonica {
      * <code>l_int32 boxaCompareRegions(BOXA*, BOXA*, l_int32, l_int32*, l_float32*, l_float32*, PIX**)</code><br>
      * <i>native declaration : allheaders.h:544</i>
      */
-    int boxaCompareRegions(Boxa boxa1, Boxa boxa2, int areathresh, IntBuffer pnsame, FloatBuffer pdiffarea, FloatBuffer pdiffxor, Pix.ByReference ppixdb[]);
+    int boxaCompareRegions(Boxa boxa1, Boxa boxa2, int areathresh, IntBuffer pnsame, FloatBuffer pdiffarea, FloatBuffer pdiffxor, PointerByReference ppixdb);
 
     /**
      * Original signature :
      * <code>l_int32 boxaCompareRegions(BOXA*, BOXA*, l_int32, l_int32*, l_float32*, l_float32*, PIX**)</code><br>
      * <i>native declaration : allheaders.h:544</i>
      */
-    int boxaCompareRegions(Boxa boxa1, Boxa boxa2, int areathresh, IntByReference pnsame, FloatByReference pdiffarea, FloatByReference pdiffxor, Pix.ByReference ppixdb[]);
+    int boxaCompareRegions(Boxa boxa1, Boxa boxa2, int areathresh, IntByReference pnsame, FloatByReference pdiffarea, FloatByReference pdiffxor, PointerByReference ppixdb);
 
     /**
      * Original signature :
@@ -2054,28 +2054,28 @@ public interface Leptonica extends Library, ILeptonica {
      * <code>l_int32 boxaPlotSides(BOXA*, const char*, NUMA**, NUMA**, NUMA**, NUMA**, l_int32)</code><br>
      * <i>native declaration : allheaders.h:580</i>
      */
-    int boxaPlotSides(Boxa boxa, String plotname, Numa.ByReference pnal[], Numa.ByReference pnat[], Numa.ByReference pnar[], Numa.ByReference pnab[], int outformat);
+    int boxaPlotSides(Boxa boxa, String plotname, PointerByReference pnal, PointerByReference pnat, PointerByReference pnar, PointerByReference pnab, int outformat);
 
     /**
      * Original signature :
      * <code>l_int32 boxaPlotSides(BOXA*, const char*, NUMA**, NUMA**, NUMA**, NUMA**, l_int32)</code><br>
      * <i>native declaration : allheaders.h:580</i>
      */
-    int boxaPlotSides(Boxa boxa, Pointer plotname, Numa.ByReference pnal[], Numa.ByReference pnat[], Numa.ByReference pnar[], Numa.ByReference pnab[], int outformat);
+    int boxaPlotSides(Boxa boxa, Pointer plotname, PointerByReference pnal, PointerByReference pnat, PointerByReference pnar, PointerByReference pnab, int outformat);
 
     /**
      * Original signature :
      * <code>l_int32 boxaGetExtent(BOXA*, l_int32*, l_int32*, BOX**)</code><br>
      * <i>native declaration : allheaders.h:582</i>
      */
-    int boxaGetExtent(Boxa boxa, IntBuffer pw, IntBuffer ph, Box.ByReference pbox[]);
+    int boxaGetExtent(Boxa boxa, IntBuffer pw, IntBuffer ph, PointerByReference pbox);
 
     /**
      * Original signature :
      * <code>l_int32 boxaGetExtent(BOXA*, l_int32*, l_int32*, BOX**)</code><br>
      * <i>native declaration : allheaders.h:582</i>
      */
-    int boxaGetExtent(Boxa boxa, IntByReference pw, IntByReference ph, Box.ByReference pbox[]);
+    int boxaGetExtent(Boxa boxa, IntByReference pw, IntByReference ph, PointerByReference pbox);
 
     /**
      * Original signature :
@@ -2157,7 +2157,7 @@ public interface Leptonica extends Library, ILeptonica {
      * Original signature : <code>void l_byteaDestroy(L_BYTEA**)</code><br>
      * <i>native declaration : allheaders.h:606</i>
      */
-    void l_byteaDestroy(L_Bytea.ByReference pba[]);
+    void l_byteaDestroy(PointerByReference pba);
 
     /**
      * Original signature : <code>size_t l_byteaGetSize(L_BYTEA*)</code><br>
@@ -2198,28 +2198,28 @@ public interface Leptonica extends Library, ILeptonica {
      * <code>l_int32 l_byteaJoin(L_BYTEA*, L_BYTEA**)</code><br>
      * <i>native declaration : allheaders.h:618</i>
      */
-    int l_byteaJoin(L_Bytea ba1, L_Bytea.ByReference pba2[]);
+    int l_byteaJoin(L_Bytea ba1, PointerByReference pba2);
 
     /**
      * Original signature :
      * <code>l_int32 l_byteaSplit(L_BYTEA*, size_t, L_BYTEA**)</code><br>
      * <i>native declaration : allheaders.h:620</i>
      */
-    int l_byteaSplit(L_Bytea ba1, NativeSize splitloc, L_Bytea.ByReference pba2[]);
+    int l_byteaSplit(L_Bytea ba1, NativeSize splitloc, PointerByReference pba2);
 
     /**
      * Original signature :
      * <code>l_int32 l_byteaFindEachSequence(L_BYTEA*, l_uint8*, l_int32, L_DNA**)</code><br>
      * <i>native declaration : allheaders.h:622</i>
      */
-    int l_byteaFindEachSequence(L_Bytea ba, java.nio.ByteBuffer sequence, int seqlen, L_Dna.ByReference pda[]);
+    int l_byteaFindEachSequence(L_Bytea ba, java.nio.ByteBuffer sequence, int seqlen, PointerByReference pda);
 
     /**
      * Original signature :
      * <code>l_int32 l_byteaFindEachSequence(L_BYTEA*, l_uint8*, l_int32, L_DNA**)</code><br>
      * <i>native declaration : allheaders.h:622</i>
      */
-    int l_byteaFindEachSequence(L_Bytea ba, Pointer sequence, int seqlen, L_Dna.ByReference pda[]);
+    int l_byteaFindEachSequence(L_Bytea ba, Pointer sequence, int seqlen, PointerByReference pda);
 
     /**
      * Original signature :
@@ -2245,7 +2245,7 @@ public interface Leptonica extends Library, ILeptonica {
      * Original signature : <code>void ccbaDestroy(CCBORDA**)</code><br>
      * <i>native declaration : allheaders.h:630</i>
      */
-    void ccbaDestroy(CCBorda.ByReference pccba[]);
+    void ccbaDestroy(PointerByReference pccba);
 
     /**
      * Original signature : <code>CCBORD* ccbCreate(PIX*)</code><br>
@@ -2257,7 +2257,7 @@ public interface Leptonica extends Library, ILeptonica {
      * Original signature : <code>void ccbDestroy(CCBORD**)</code><br>
      * <i>native declaration : allheaders.h:634</i>
      */
-    void ccbDestroy(CCBord.ByReference pccb[]);
+    void ccbDestroy(PointerByReference pccb);
 
     /**
      * Original signature :
@@ -2478,28 +2478,28 @@ public interface Leptonica extends Library, ILeptonica {
      * <code>JBCLASSER* jbWordsInTextlines(const char*, l_int32, l_int32, l_int32, l_float32, l_float32, NUMA**, l_int32, l_int32)</code><br>
      * <i>native declaration : allheaders.h:700</i>
      */
-    JbClasser jbWordsInTextlines(String dirin, int reduction, int maxwidth, int maxheight, float thresh, float weight, Numa.ByReference pnatl[], int firstpage, int npages);
+    JbClasser jbWordsInTextlines(String dirin, int reduction, int maxwidth, int maxheight, float thresh, float weight, PointerByReference pnatl, int firstpage, int npages);
 
     /**
      * Original signature :
      * <code>JBCLASSER* jbWordsInTextlines(const char*, l_int32, l_int32, l_int32, l_float32, l_float32, NUMA**, l_int32, l_int32)</code><br>
      * <i>native declaration : allheaders.h:700</i>
      */
-    JbClasser jbWordsInTextlines(Pointer dirin, int reduction, int maxwidth, int maxheight, float thresh, float weight, Numa.ByReference pnatl[], int firstpage, int npages);
+    JbClasser jbWordsInTextlines(Pointer dirin, int reduction, int maxwidth, int maxheight, float thresh, float weight, PointerByReference pnatl, int firstpage, int npages);
 
     /**
      * Original signature :
      * <code>l_int32 pixGetWordsInTextlines(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, BOXA**, PIXA**, NUMA**)</code><br>
      * <i>native declaration : allheaders.h:702</i>
      */
-    int pixGetWordsInTextlines(Pix pixs, int reduction, int minwidth, int minheight, int maxwidth, int maxheight, Boxa.ByReference pboxad[], Pixa.ByReference ppixad[], Numa.ByReference pnai[]);
+    int pixGetWordsInTextlines(Pix pixs, int reduction, int minwidth, int minheight, int maxwidth, int maxheight, PointerByReference pboxad, PointerByReference ppixad, PointerByReference pnai);
 
     /**
      * Original signature :
      * <code>l_int32 pixGetWordBoxesInTextlines(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, BOXA**, NUMA**)</code><br>
      * <i>native declaration : allheaders.h:704</i>
      */
-    int pixGetWordBoxesInTextlines(Pix pixs, int reduction, int minwidth, int minheight, int maxwidth, int maxheight, Boxa.ByReference pboxad[], Numa.ByReference pnai[]);
+    int pixGetWordBoxesInTextlines(Pix pixs, int reduction, int minwidth, int minheight, int maxwidth, int maxheight, PointerByReference pboxad, PointerByReference pnai);
 
     /**
      * Original signature :
@@ -2520,7 +2520,7 @@ public interface Leptonica extends Library, ILeptonica {
      * <code>l_int32 pixColorContent(PIX*, l_int32, l_int32, l_int32, l_int32, PIX**, PIX**, PIX**)</code><br>
      * <i>native declaration : allheaders.h:710</i>
      */
-    int pixColorContent(Pix pixs, int rwhite, int gwhite, int bwhite, int mingray, Pix.ByReference ppixr[], Pix.ByReference ppixg[], Pix.ByReference ppixb[]);
+    int pixColorContent(Pix pixs, int rwhite, int gwhite, int bwhite, int mingray, PointerByReference ppixr, PointerByReference ppixg, PointerByReference ppixb);
 
     /**
      * Original signature :
@@ -2569,7 +2569,7 @@ public interface Leptonica extends Library, ILeptonica {
      * <code>l_int32 pixGetMostPopulatedColors(PIX*, l_int32, l_int32, l_int32, l_uint32**, PIXCMAP**)</code><br>
      * <i>native declaration : allheaders.h:724</i>
      */
-    int pixGetMostPopulatedColors(Pix pixs, int sigbits, int factor, int ncolors, PointerByReference parray, PixColormap.ByReference pcmap[]);
+    int pixGetMostPopulatedColors(Pix pixs, int sigbits, int factor, int ncolors, PointerByReference parray, PointerByReference pcmap);
 
     /**
      * Original signature :
@@ -2604,14 +2604,14 @@ public interface Leptonica extends Library, ILeptonica {
      * <code>l_int32 pixHasHighlightRed(PIX*, l_int32, l_float32, l_float32, l_int32*, l_float32*, PIX**)</code><br>
      * <i>native declaration : allheaders.h:734</i>
      */
-    int pixHasHighlightRed(Pix pixs, int factor, float fract, float fthresh, IntBuffer phasred, FloatBuffer pratio, Pix.ByReference ppixdb[]);
+    int pixHasHighlightRed(Pix pixs, int factor, float fract, float fthresh, IntBuffer phasred, FloatBuffer pratio, PointerByReference ppixdb);
 
     /**
      * Original signature :
      * <code>l_int32 pixHasHighlightRed(PIX*, l_int32, l_float32, l_float32, l_int32*, l_float32*, PIX**)</code><br>
      * <i>native declaration : allheaders.h:734</i>
      */
-    int pixHasHighlightRed(Pix pixs, int factor, float fract, float fthresh, IntByReference phasred, FloatByReference pratio, Pix.ByReference ppixdb[]);
+    int pixHasHighlightRed(Pix pixs, int factor, float fract, float fthresh, IntByReference phasred, FloatByReference pratio, PointerByReference ppixdb);
 
     /**
      * Original signature :
@@ -2706,7 +2706,7 @@ public interface Leptonica extends Library, ILeptonica {
      * Original signature : <code>void pixcmapDestroy(PIXCMAP**)</code><br>
      * <i>native declaration : allheaders.h:762</i>
      */
-    void pixcmapDestroy(PixColormap.ByReference pcmap[]);
+    void pixcmapDestroy(PointerByReference pcmap);
 
     /**
      * Original signature :
@@ -3271,28 +3271,28 @@ public interface Leptonica extends Library, ILeptonica {
      * <code>PIX* pixMakeHistoHS(PIX*, l_int32, NUMA**, NUMA**)</code><br>
      * <i>native declaration : allheaders.h:926</i>
      */
-    Pix pixMakeHistoHS(Pix pixs, int factor, Numa.ByReference pnahue[], Numa.ByReference pnasat[]);
+    Pix pixMakeHistoHS(Pix pixs, int factor, PointerByReference pnahue, PointerByReference pnasat);
 
     /**
      * Original signature :
      * <code>PIX* pixMakeHistoHV(PIX*, l_int32, NUMA**, NUMA**)</code><br>
      * <i>native declaration : allheaders.h:928</i>
      */
-    Pix pixMakeHistoHV(Pix pixs, int factor, Numa.ByReference pnahue[], Numa.ByReference pnaval[]);
+    Pix pixMakeHistoHV(Pix pixs, int factor, PointerByReference pnahue, PointerByReference pnaval);
 
     /**
      * Original signature :
      * <code>PIX* pixMakeHistoSV(PIX*, l_int32, NUMA**, NUMA**)</code><br>
      * <i>native declaration : allheaders.h:930</i>
      */
-    Pix pixMakeHistoSV(Pix pixs, int factor, Numa.ByReference pnasat[], Numa.ByReference pnaval[]);
+    Pix pixMakeHistoSV(Pix pixs, int factor, PointerByReference pnasat, PointerByReference pnaval);
 
     /**
      * Original signature :
      * <code>l_int32 pixFindHistoPeaksHSV(PIX*, l_int32, l_int32, l_int32, l_int32, l_float32, PTA**, NUMA**, PIXA**)</code><br>
      * <i>native declaration : allheaders.h:932</i>
      */
-    int pixFindHistoPeaksHSV(Pix pixs, int type, int width, int height, int npeaks, float erasefactor, Pta.ByReference ppta[], Numa.ByReference pnatot[], Pixa.ByReference ppixa[]);
+    int pixFindHistoPeaksHSV(Pix pixs, int type, int width, int height, int npeaks, float erasefactor, PointerByReference ppta, PointerByReference pnatot, PointerByReference ppixa);
 
     /**
      * Original signature :
@@ -3388,63 +3388,63 @@ public interface Leptonica extends Library, ILeptonica {
      * <code>l_int32 pixCompareBinary(PIX*, PIX*, l_int32, l_float32*, PIX**)</code><br>
      * <i>native declaration : allheaders.h:960</i>
      */
-    int pixCompareBinary(Pix pix1, Pix pix2, int comptype, FloatBuffer pfract, Pix.ByReference ppixdiff[]);
+    int pixCompareBinary(Pix pix1, Pix pix2, int comptype, FloatBuffer pfract, PointerByReference ppixdiff);
 
     /**
      * Original signature :
      * <code>l_int32 pixCompareBinary(PIX*, PIX*, l_int32, l_float32*, PIX**)</code><br>
      * <i>native declaration : allheaders.h:960</i>
      */
-    int pixCompareBinary(Pix pix1, Pix pix2, int comptype, FloatByReference pfract, Pix.ByReference ppixdiff[]);
+    int pixCompareBinary(Pix pix1, Pix pix2, int comptype, FloatByReference pfract, PointerByReference ppixdiff);
 
     /**
      * Original signature :
      * <code>l_int32 pixCompareGrayOrRGB(PIX*, PIX*, l_int32, l_int32, l_int32*, l_float32*, l_float32*, PIX**)</code><br>
      * <i>native declaration : allheaders.h:962</i>
      */
-    int pixCompareGrayOrRGB(Pix pix1, Pix pix2, int comptype, int plottype, IntBuffer psame, FloatBuffer pdiff, FloatBuffer prmsdiff, Pix.ByReference ppixdiff[]);
+    int pixCompareGrayOrRGB(Pix pix1, Pix pix2, int comptype, int plottype, IntBuffer psame, FloatBuffer pdiff, FloatBuffer prmsdiff, PointerByReference ppixdiff);
 
     /**
      * Original signature :
      * <code>l_int32 pixCompareGrayOrRGB(PIX*, PIX*, l_int32, l_int32, l_int32*, l_float32*, l_float32*, PIX**)</code><br>
      * <i>native declaration : allheaders.h:962</i>
      */
-    int pixCompareGrayOrRGB(Pix pix1, Pix pix2, int comptype, int plottype, IntByReference psame, FloatByReference pdiff, FloatByReference prmsdiff, Pix.ByReference ppixdiff[]);
+    int pixCompareGrayOrRGB(Pix pix1, Pix pix2, int comptype, int plottype, IntByReference psame, FloatByReference pdiff, FloatByReference prmsdiff, PointerByReference ppixdiff);
 
     /**
      * Original signature :
      * <code>l_int32 pixCompareGray(PIX*, PIX*, l_int32, l_int32, l_int32*, l_float32*, l_float32*, PIX**)</code><br>
      * <i>native declaration : allheaders.h:964</i>
      */
-    int pixCompareGray(Pix pix1, Pix pix2, int comptype, int plottype, IntBuffer psame, FloatBuffer pdiff, FloatBuffer prmsdiff, Pix.ByReference ppixdiff[]);
+    int pixCompareGray(Pix pix1, Pix pix2, int comptype, int plottype, IntBuffer psame, FloatBuffer pdiff, FloatBuffer prmsdiff, PointerByReference ppixdiff);
 
     /**
      * Original signature :
      * <code>l_int32 pixCompareGray(PIX*, PIX*, l_int32, l_int32, l_int32*, l_float32*, l_float32*, PIX**)</code><br>
      * <i>native declaration : allheaders.h:964</i>
      */
-    int pixCompareGray(Pix pix1, Pix pix2, int comptype, int plottype, IntByReference psame, FloatByReference pdiff, FloatByReference prmsdiff, Pix.ByReference ppixdiff[]);
+    int pixCompareGray(Pix pix1, Pix pix2, int comptype, int plottype, IntByReference psame, FloatByReference pdiff, FloatByReference prmsdiff, PointerByReference ppixdiff);
 
     /**
      * Original signature :
      * <code>l_int32 pixCompareRGB(PIX*, PIX*, l_int32, l_int32, l_int32*, l_float32*, l_float32*, PIX**)</code><br>
      * <i>native declaration : allheaders.h:966</i>
      */
-    int pixCompareRGB(Pix pix1, Pix pix2, int comptype, int plottype, IntBuffer psame, FloatBuffer pdiff, FloatBuffer prmsdiff, Pix.ByReference ppixdiff[]);
+    int pixCompareRGB(Pix pix1, Pix pix2, int comptype, int plottype, IntBuffer psame, FloatBuffer pdiff, FloatBuffer prmsdiff, PointerByReference ppixdiff);
 
     /**
      * Original signature :
      * <code>l_int32 pixCompareRGB(PIX*, PIX*, l_int32, l_int32, l_int32*, l_float32*, l_float32*, PIX**)</code><br>
      * <i>native declaration : allheaders.h:966</i>
      */
-    int pixCompareRGB(Pix pix1, Pix pix2, int comptype, int plottype, IntByReference psame, FloatByReference pdiff, FloatByReference prmsdiff, Pix.ByReference ppixdiff[]);
+    int pixCompareRGB(Pix pix1, Pix pix2, int comptype, int plottype, IntByReference psame, FloatByReference pdiff, FloatByReference prmsdiff, PointerByReference ppixdiff);
 
     /**
      * Original signature :
      * <code>l_int32 pixCompareTiled(PIX*, PIX*, l_int32, l_int32, l_int32, PIX**)</code><br>
      * <i>native declaration : allheaders.h:968</i>
      */
-    int pixCompareTiled(Pix pix1, Pix pix2, int sx, int sy, int type, Pix.ByReference ppixdiff[]);
+    int pixCompareTiled(Pix pix1, Pix pix2, int sx, int sy, int type, PointerByReference ppixdiff);
 
     /**
      * Original signature :
@@ -3479,14 +3479,14 @@ public interface Leptonica extends Library, ILeptonica {
      * <code>l_int32 pixGetPerceptualDiff(PIX*, PIX*, l_int32, l_int32, l_int32, l_float32*, PIX**, PIX**)</code><br>
      * <i>native declaration : allheaders.h:978</i>
      */
-    int pixGetPerceptualDiff(Pix pixs1, Pix pixs2, int sampling, int dilation, int mindiff, FloatBuffer pfract, Pix.ByReference ppixdiff1[], Pix.ByReference ppixdiff2[]);
+    int pixGetPerceptualDiff(Pix pixs1, Pix pixs2, int sampling, int dilation, int mindiff, FloatBuffer pfract, PointerByReference ppixdiff1, PointerByReference ppixdiff2);
 
     /**
      * Original signature :
      * <code>l_int32 pixGetPerceptualDiff(PIX*, PIX*, l_int32, l_int32, l_int32, l_float32*, PIX**, PIX**)</code><br>
      * <i>native declaration : allheaders.h:978</i>
      */
-    int pixGetPerceptualDiff(Pix pixs1, Pix pixs2, int sampling, int dilation, int mindiff, FloatByReference pfract, Pix.ByReference ppixdiff1[], Pix.ByReference ppixdiff2[]);
+    int pixGetPerceptualDiff(Pix pixs1, Pix pixs2, int sampling, int dilation, int mindiff, FloatByReference pfract, PointerByReference ppixdiff1, PointerByReference ppixdiff2);
 
     /**
      * Original signature :
@@ -3514,14 +3514,14 @@ public interface Leptonica extends Library, ILeptonica {
      * <code>BOXA* pixConnComp(PIX*, PIXA**, l_int32)</code><br>
      * <i>native declaration : allheaders.h:986</i>
      */
-    Boxa pixConnComp(Pix pixs, Pixa.ByReference ppixa[], int connectivity);
+    Boxa pixConnComp(Pix pixs, PointerByReference ppixa, int connectivity);
 
     /**
      * Original signature :
      * <code>BOXA* pixConnCompPixa(PIX*, PIXA**, l_int32)</code><br>
      * <i>native declaration : allheaders.h:988</i>
      */
-    Boxa pixConnCompPixa(Pix pixs, Pixa.ByReference ppixa[], int connectivity);
+    Boxa pixConnCompPixa(Pix pixs, PointerByReference ppixa, int connectivity);
 
     /**
      * Original signature : <code>BOXA* pixConnCompBB(PIX*, l_int32)</code><br>
@@ -3645,7 +3645,7 @@ public interface Leptonica extends Library, ILeptonica {
      * <code>l_int32 pixWindowedStats(PIX*, l_int32, l_int32, l_int32, PIX**, PIX**, FPIX**, FPIX**)</code><br>
      * <i>native declaration : allheaders.h:1024</i>
      */
-    int pixWindowedStats(Pix pixs, int wc, int hc, int hasborder, Pix.ByReference ppixm[], Pix.ByReference ppixms[], FPix.ByReference pfpixv[], FPix.ByReference pfpixrv[]);
+    int pixWindowedStats(Pix pixs, int wc, int hc, int hasborder, PointerByReference ppixm, PointerByReference ppixms, PointerByReference pfpixv, PointerByReference pfpixrv);
 
     /**
      * Original signature :
@@ -3666,7 +3666,7 @@ public interface Leptonica extends Library, ILeptonica {
      * <code>l_int32 pixWindowedVariance(PIX*, PIX*, FPIX**, FPIX**)</code><br>
      * <i>native declaration : allheaders.h:1030</i>
      */
-    int pixWindowedVariance(Pix pixm, Pix pixms, FPix.ByReference pfpixv[], FPix.ByReference pfpixrv[]);
+    int pixWindowedVariance(Pix pixm, Pix pixms, PointerByReference pfpixv, PointerByReference pfpixrv);
 
     /**
      * Original signature : <code>DPIX* pixMeanSquareAccum(PIX*)</code><br>
@@ -3831,7 +3831,7 @@ public interface Leptonica extends Library, ILeptonica {
      * Original signature : <code>void dewarpDestroy(L_DEWARP**)</code><br>
      * <i>native declaration : allheaders.h:1078</i>
      */
-    void dewarpDestroy(L_Dewarp.ByReference pdew[]);
+    void dewarpDestroy(PointerByReference pdew);
 
     /**
      * Original signature :
@@ -3851,7 +3851,7 @@ public interface Leptonica extends Library, ILeptonica {
      * Original signature : <code>void dewarpaDestroy(L_DEWARPA**)</code><br>
      * <i>native declaration : allheaders.h:1084</i>
      */
-    void dewarpaDestroy(L_Dewarpa.ByReference pdewa[]);
+    void dewarpaDestroy(PointerByReference pdewa);
 
     /**
      * Original signature :
@@ -4001,14 +4001,14 @@ public interface Leptonica extends Library, ILeptonica {
      * <code>l_int32 dewarpaApplyDisparity(L_DEWARPA*, l_int32, PIX*, l_int32, l_int32, l_int32, PIX**, const char*)</code><br>
      * <i>native declaration : allheaders.h:1128</i>
      */
-    int dewarpaApplyDisparity(L_Dewarpa dewa, int pageno, Pix pixs, int grayin, int x, int y, Pix.ByReference ppixd[], String debugfile);
+    int dewarpaApplyDisparity(L_Dewarpa dewa, int pageno, Pix pixs, int grayin, int x, int y, PointerByReference ppixd, String debugfile);
 
     /**
      * Original signature :
      * <code>l_int32 dewarpaApplyDisparity(L_DEWARPA*, l_int32, PIX*, l_int32, l_int32, l_int32, PIX**, const char*)</code><br>
      * <i>native declaration : allheaders.h:1128</i>
      */
-    int dewarpaApplyDisparity(L_Dewarpa dewa, int pageno, Pix pixs, int grayin, int x, int y, Pix.ByReference ppixd[], Pointer debugfile);
+    int dewarpaApplyDisparity(L_Dewarpa dewa, int pageno, Pix pixs, int grayin, int x, int y, PointerByReference ppixd, Pointer debugfile);
 
     /**
      * Original signature : <code>l_int32 dewarpMinimize(L_DEWARP*)</code><br>
@@ -4028,7 +4028,7 @@ public interface Leptonica extends Library, ILeptonica {
      * <code>l_int32 dewarpSinglePage(PIX*, l_int32, l_int32, l_int32, PIX**, L_DEWARPA**, l_int32)</code><br>
      * <i>native declaration : allheaders.h:1134</i>
      */
-    int dewarpSinglePage(Pix pixs, int thresh, int adaptive, int use_both, Pix.ByReference ppixd[], L_Dewarpa.ByReference pdewa[], int debug);
+    int dewarpSinglePage(Pix pixs, int thresh, int adaptive, int use_both, PointerByReference ppixd, PointerByReference pdewa, int debug);
 
     /**
      * Original signature :
@@ -4131,7 +4131,7 @@ public interface Leptonica extends Library, ILeptonica {
      * Original signature : <code>void l_dnaDestroy(L_DNA**)</code><br>
      * <i>native declaration : allheaders.h:1164</i>
      */
-    void l_dnaDestroy(L_Dna.ByReference pda[]);
+    void l_dnaDestroy(PointerByReference pda);
 
     /**
      * Original signature : <code>L_DNA* l_dnaCopy(L_DNA*)</code><br>
@@ -4303,7 +4303,7 @@ public interface Leptonica extends Library, ILeptonica {
      * Original signature : <code>void l_dnaaDestroy(L_DNAA**)</code><br>
      * <i>native declaration : allheaders.h:1216</i>
      */
-    void l_dnaaDestroy(L_Dnaa.ByReference pdaa[]);
+    void l_dnaaDestroy(PointerByReference pdaa);
 
     /**
      * Original signature :
@@ -4687,7 +4687,7 @@ public interface Leptonica extends Library, ILeptonica {
      * <code>l_int32 pixItalicWords(PIX*, BOXA*, PIX*, BOXA**, l_int32)</code><br>
      * <i>native declaration : allheaders.h:1328</i>
      */
-    int pixItalicWords(Pix pixs, Boxa boxaw, Pix pixw, Boxa.ByReference pboxa[], int debugflag);
+    int pixItalicWords(Pix pixs, Boxa boxaw, Pix pixw, PointerByReference pboxa, int debugflag);
 
     /**
      * Original signature :
@@ -4794,631 +4794,631 @@ public interface Leptonica extends Library, ILeptonica {
      */
     Pix pixFMorphopGen_1(Pix pixd, Pix pixs, int operation, java.nio.ByteBuffer selname);
 
-    /**
-     * Original signature :
-     * <code>l_int32 fmorphopgen_low_1(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1360</i>
-     */
-    int fmorphopgen_low_1(IntBuffer datad, int w, int h, int wpld, IntBuffer datas, int wpls, int index);
-
-    /**
-     * Original signature : <code>FPIX* fpixCreate(l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1362</i>
-     */
-    FPix fpixCreate(int width, int height);
-
-    /**
-     * Original signature : <code>FPIX* fpixCreateTemplate(FPIX*)</code><br>
-     * <i>native declaration : allheaders.h:1364</i>
-     */
-    FPix fpixCreateTemplate(FPix fpixs);
-
-    /**
-     * Original signature : <code>FPIX* fpixClone(FPIX*)</code><br>
-     * <i>native declaration : allheaders.h:1366</i>
-     */
-    FPix fpixClone(FPix fpix);
-
-    /**
-     * Original signature : <code>FPIX* fpixCopy(FPIX*, FPIX*)</code><br>
-     * <i>native declaration : allheaders.h:1368</i>
-     */
-    FPix fpixCopy(FPix fpixd, FPix fpixs);
-
-    /**
-     * Original signature :
-     * <code>l_int32 fpixResizeImageData(FPIX*, FPIX*)</code><br>
-     * <i>native declaration : allheaders.h:1370</i>
-     */
-    int fpixResizeImageData(FPix fpixd, FPix fpixs);
-
-    /**
-     * Original signature : <code>void fpixDestroy(FPIX**)</code><br>
-     * <i>native declaration : allheaders.h:1372</i>
-     */
-    void fpixDestroy(FPix.ByReference pfpix[]);
-
-    /**
-     * Original signature :
-     * <code>l_int32 fpixGetDimensions(FPIX*, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:1374</i>
-     */
-    int fpixGetDimensions(FPix fpix, IntBuffer pw, IntBuffer ph);
-
-    /**
-     * Original signature :
-     * <code>l_int32 fpixSetDimensions(FPIX*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1376</i>
-     */
-    int fpixSetDimensions(FPix fpix, int w, int h);
-
-    /**
-     * Original signature : <code>l_int32 fpixGetWpl(FPIX*)</code><br>
-     * <i>native declaration : allheaders.h:1378</i>
-     */
-    int fpixGetWpl(FPix fpix);
-
-    /**
-     * Original signature : <code>l_int32 fpixSetWpl(FPIX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1380</i>
-     */
-    int fpixSetWpl(FPix fpix, int wpl);
-
-    /**
-     * Original signature : <code>l_int32 fpixGetRefcount(FPIX*)</code><br>
-     * <i>native declaration : allheaders.h:1382</i>
-     */
-    int fpixGetRefcount(FPix fpix);
-
-    /**
-     * Original signature :
-     * <code>l_int32 fpixChangeRefcount(FPIX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1384</i>
-     */
-    int fpixChangeRefcount(FPix fpix, int delta);
-
-    /**
-     * Original signature :
-     * <code>l_int32 fpixGetResolution(FPIX*, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:1386</i>
-     */
-    int fpixGetResolution(FPix fpix, IntBuffer pxres, IntBuffer pyres);
-
-    /**
-     * Original signature :
-     * <code>l_int32 fpixSetResolution(FPIX*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1388</i>
-     */
-    int fpixSetResolution(FPix fpix, int xres, int yres);
-
-    /**
-     * Original signature :
-     * <code>l_int32 fpixCopyResolution(FPIX*, FPIX*)</code><br>
-     * <i>native declaration : allheaders.h:1390</i>
-     */
-    int fpixCopyResolution(FPix fpixd, FPix fpixs);
-
-    /**
-     * Original signature : <code>l_float32* fpixGetData(FPIX*)</code><br>
-     * <i>native declaration : allheaders.h:1392</i>
-     */
-    FloatByReference fpixGetData(FPix fpix);
-
-    /**
-     * Original signature :
-     * <code>l_int32 fpixSetData(FPIX*, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:1394</i>
-     */
-    int fpixSetData(FPix fpix, FloatBuffer data);
-
-    /**
-     * Original signature :
-     * <code>l_int32 fpixGetPixel(FPIX*, l_int32, l_int32, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:1396</i>
-     */
-    int fpixGetPixel(FPix fpix, int x, int y, FloatBuffer pval);
-
-    /**
-     * Original signature :
-     * <code>l_int32 fpixSetPixel(FPIX*, l_int32, l_int32, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:1398</i>
-     */
-    int fpixSetPixel(FPix fpix, int x, int y, float val);
-
-    /**
-     * Original signature : <code>FPIXA* fpixaCreate(l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1400</i>
-     */
-    FPixa fpixaCreate(int n);
-
-    /**
-     * Original signature : <code>FPIXA* fpixaCopy(FPIXA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1402</i>
-     */
-    FPixa fpixaCopy(FPixa fpixa, int copyflag);
-
-    /**
-     * Original signature : <code>void fpixaDestroy(FPIXA**)</code><br>
-     * <i>native declaration : allheaders.h:1404</i>
-     */
-    void fpixaDestroy(FPixa.ByReference pfpixa[]);
-
-    /**
-     * Original signature :
-     * <code>l_int32 fpixaAddFPix(FPIXA*, FPIX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1406</i>
-     */
-    int fpixaAddFPix(FPixa fpixa, FPix fpix, int copyflag);
-
-    /**
-     * Original signature : <code>l_int32 fpixaGetCount(FPIXA*)</code><br>
-     * <i>native declaration : allheaders.h:1408</i>
-     */
-    int fpixaGetCount(FPixa fpixa);
-
-    /**
-     * Original signature :
-     * <code>l_int32 fpixaChangeRefcount(FPIXA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1410</i>
-     */
-    int fpixaChangeRefcount(FPixa fpixa, int delta);
-
-    /**
-     * Original signature :
-     * <code>FPIX* fpixaGetFPix(FPIXA*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1412</i>
-     */
-    FPix fpixaGetFPix(FPixa fpixa, int index, int accesstype);
-
-    /**
-     * Original signature :
-     * <code>l_int32 fpixaGetFPixDimensions(FPIXA*, l_int32, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:1414</i>
-     */
-    int fpixaGetFPixDimensions(FPixa fpixa, int index, IntBuffer pw, IntBuffer ph);
-
-    /**
-     * Original signature :
-     * <code>l_int32 fpixaGetPixel(FPIXA*, l_int32, l_int32, l_int32, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:1416</i>
-     */
-    int fpixaGetPixel(FPixa fpixa, int index, int x, int y, FloatBuffer pval);
-
-    /**
-     * Original signature :
-     * <code>l_int32 fpixaSetPixel(FPIXA*, l_int32, l_int32, l_int32, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:1418</i>
-     */
-    int fpixaSetPixel(FPixa fpixa, int index, int x, int y, float val);
-
-    /**
-     * Original signature : <code>DPIX* dpixCreate(l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1420</i>
-     */
-    DPix dpixCreate(int width, int height);
-
-    /**
-     * Original signature : <code>DPIX* dpixCreateTemplate(DPIX*)</code><br>
-     * <i>native declaration : allheaders.h:1422</i>
-     */
-    DPix dpixCreateTemplate(DPix dpixs);
-
-    /**
-     * Original signature : <code>DPIX* dpixClone(DPIX*)</code><br>
-     * <i>native declaration : allheaders.h:1424</i>
-     */
-    DPix dpixClone(DPix dpix);
-
-    /**
-     * Original signature : <code>DPIX* dpixCopy(DPIX*, DPIX*)</code><br>
-     * <i>native declaration : allheaders.h:1426</i>
-     */
-    DPix dpixCopy(DPix dpixd, DPix dpixs);
-
-    /**
-     * Original signature :
-     * <code>l_int32 dpixResizeImageData(DPIX*, DPIX*)</code><br>
-     * <i>native declaration : allheaders.h:1428</i>
-     */
-    int dpixResizeImageData(DPix dpixd, DPix dpixs);
-
-    /**
-     * Original signature : <code>void dpixDestroy(DPIX**)</code><br>
-     * <i>native declaration : allheaders.h:1430</i>
-     */
-    void dpixDestroy(DPix.ByReference pdpix[]);
-
-    /**
-     * Original signature :
-     * <code>l_int32 dpixGetDimensions(DPIX*, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:1432</i>
-     */
-    int dpixGetDimensions(DPix dpix, IntBuffer pw, IntBuffer ph);
-
-    /**
-     * Original signature :
-     * <code>l_int32 dpixSetDimensions(DPIX*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1434</i>
-     */
-    int dpixSetDimensions(DPix dpix, int w, int h);
-
-    /**
-     * Original signature : <code>l_int32 dpixGetWpl(DPIX*)</code><br>
-     * <i>native declaration : allheaders.h:1436</i>
-     */
-    int dpixGetWpl(DPix dpix);
-
-    /**
-     * Original signature : <code>l_int32 dpixSetWpl(DPIX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1438</i>
-     */
-    int dpixSetWpl(DPix dpix, int wpl);
-
-    /**
-     * Original signature : <code>l_int32 dpixGetRefcount(DPIX*)</code><br>
-     * <i>native declaration : allheaders.h:1440</i>
-     */
-    int dpixGetRefcount(DPix dpix);
-
-    /**
-     * Original signature :
-     * <code>l_int32 dpixChangeRefcount(DPIX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1442</i>
-     */
-    int dpixChangeRefcount(DPix dpix, int delta);
-
-    /**
-     * Original signature :
-     * <code>l_int32 dpixGetResolution(DPIX*, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:1444</i>
-     */
-    int dpixGetResolution(DPix dpix, IntBuffer pxres, IntBuffer pyres);
-
-    /**
-     * Original signature :
-     * <code>l_int32 dpixSetResolution(DPIX*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1446</i>
-     */
-    int dpixSetResolution(DPix dpix, int xres, int yres);
-
-    /**
-     * Original signature :
-     * <code>l_int32 dpixCopyResolution(DPIX*, DPIX*)</code><br>
-     * <i>native declaration : allheaders.h:1448</i>
-     */
-    int dpixCopyResolution(DPix dpixd, DPix dpixs);
-
-    /**
-     * Original signature : <code>l_float64* dpixGetData(DPIX*)</code><br>
-     * <i>native declaration : allheaders.h:1450</i>
-     */
-    DoubleByReference dpixGetData(DPix dpix);
-
-    /**
-     * Original signature :
-     * <code>l_int32 dpixSetData(DPIX*, l_float64*)</code><br>
-     * <i>native declaration : allheaders.h:1452</i>
-     */
-    int dpixSetData(DPix dpix, DoubleBuffer data);
-
-    /**
-     * Original signature :
-     * <code>l_int32 dpixGetPixel(DPIX*, l_int32, l_int32, l_float64*)</code><br>
-     * <i>native declaration : allheaders.h:1454</i>
-     */
-    int dpixGetPixel(DPix dpix, int x, int y, DoubleBuffer pval);
-
-    /**
-     * Original signature :
-     * <code>l_int32 dpixSetPixel(DPIX*, l_int32, l_int32, l_float64)</code><br>
-     * <i>native declaration : allheaders.h:1456</i>
-     */
-    int dpixSetPixel(DPix dpix, int x, int y, double val);
-
-    /**
-     * Original signature : <code>FPIX* fpixRead(const char*)</code><br>
-     * <i>native declaration : allheaders.h:1458</i>
-     */
-    FPix fpixRead(String filename);
-
-    /**
-     * Original signature : <code>FPIX* fpixReadStream(FILE*)</code><br>
-     * <i>native declaration : allheaders.h:1460</i>
-     */
-    FPix fpixReadStream(PointerByReference fp);
-
-    /**
-     * Original signature :
-     * <code>l_int32 fpixWrite(const char*, FPIX*)</code><br>
-     * <i>native declaration : allheaders.h:1462</i>
-     */
-    int fpixWrite(String filename, FPix fpix);
-
-    /**
-     * Original signature :
-     * <code>l_int32 fpixWriteStream(FILE*, FPIX*)</code><br>
-     * <i>native declaration : allheaders.h:1464</i>
-     */
-    int fpixWriteStream(PointerByReference fp, FPix fpix);
-
-    /**
-     * Original signature :
-     * <code>FPIX* fpixEndianByteSwap(FPIX*, FPIX*)</code><br>
-     * <i>native declaration : allheaders.h:1466</i>
-     */
-    FPix fpixEndianByteSwap(FPix fpixd, FPix fpixs);
-
-    /**
-     * Original signature : <code>DPIX* dpixRead(const char*)</code><br>
-     * <i>native declaration : allheaders.h:1468</i>
-     */
-    DPix dpixRead(String filename);
-
-    /**
-     * Original signature : <code>DPIX* dpixReadStream(FILE*)</code><br>
-     * <i>native declaration : allheaders.h:1470</i>
-     */
-    DPix dpixReadStream(PointerByReference fp);
-
-    /**
-     * Original signature :
-     * <code>l_int32 dpixWrite(const char*, DPIX*)</code><br>
-     * <i>native declaration : allheaders.h:1472</i>
-     */
-    int dpixWrite(String filename, DPix dpix);
-
-    /**
-     * Original signature :
-     * <code>l_int32 dpixWriteStream(FILE*, DPIX*)</code><br>
-     * <i>native declaration : allheaders.h:1474</i>
-     */
-    int dpixWriteStream(PointerByReference fp, DPix dpix);
-
-    /**
-     * Original signature :
-     * <code>DPIX* dpixEndianByteSwap(DPIX*, DPIX*)</code><br>
-     * <i>native declaration : allheaders.h:1476</i>
-     */
-    DPix dpixEndianByteSwap(DPix dpixd, DPix dpixs);
-
-    /**
-     * Original signature :
-     * <code>l_int32 fpixPrintStream(FILE*, FPIX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1478</i>
-     */
-    int fpixPrintStream(PointerByReference fp, FPix fpix, int factor);
-
-    /**
-     * Original signature :
-     * <code>FPIX* pixConvertToFPix(PIX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1480</i>
-     */
-    FPix pixConvertToFPix(Pix pixs, int ncomps);
-
-    /**
-     * Original signature :
-     * <code>DPIX* pixConvertToDPix(PIX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1482</i>
-     */
-    DPix pixConvertToDPix(Pix pixs, int ncomps);
-
-    /**
-     * Original signature :
-     * <code>PIX* fpixConvertToPix(FPIX*, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1484</i>
-     */
-    Pix fpixConvertToPix(FPix fpixs, int outdepth, int negvals, int errorflag);
-
-    /**
-     * Original signature :
-     * <code>PIX* fpixDisplayMaxDynamicRange(FPIX*)</code><br>
-     * <i>native declaration : allheaders.h:1486</i>
-     */
-    Pix fpixDisplayMaxDynamicRange(FPix fpixs);
-
-    /**
-     * Original signature : <code>DPIX* fpixConvertToDPix(FPIX*)</code><br>
-     * <i>native declaration : allheaders.h:1488</i>
-     */
-    DPix fpixConvertToDPix(FPix fpix);
-
-    /**
-     * Original signature :
-     * <code>PIX* dpixConvertToPix(DPIX*, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1490</i>
-     */
-    Pix dpixConvertToPix(DPix dpixs, int outdepth, int negvals, int errorflag);
-
-    /**
-     * Original signature : <code>FPIX* dpixConvertToFPix(DPIX*)</code><br>
-     * <i>native declaration : allheaders.h:1492</i>
-     */
-    FPix dpixConvertToFPix(DPix dpix);
-
-    /**
-     * Original signature :
-     * <code>l_int32 fpixGetMin(FPIX*, l_float32*, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:1494</i>
-     */
-    int fpixGetMin(FPix fpix, FloatBuffer pminval, IntBuffer pxminloc, IntBuffer pyminloc);
-
-    /**
-     * Original signature :
-     * <code>l_int32 fpixGetMax(FPIX*, l_float32*, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:1496</i>
-     */
-    int fpixGetMax(FPix fpix, FloatBuffer pmaxval, IntBuffer pxmaxloc, IntBuffer pymaxloc);
-
-    /**
-     * Original signature :
-     * <code>l_int32 dpixGetMin(DPIX*, l_float64*, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:1498</i>
-     */
-    int dpixGetMin(DPix dpix, DoubleBuffer pminval, IntBuffer pxminloc, IntBuffer pyminloc);
-
-    /**
-     * Original signature :
-     * <code>l_int32 dpixGetMax(DPIX*, l_float64*, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:1500</i>
-     */
-    int dpixGetMax(DPix dpix, DoubleBuffer pmaxval, IntBuffer pxmaxloc, IntBuffer pymaxloc);
-
-    /**
-     * Original signature :
-     * <code>FPIX* fpixScaleByInteger(FPIX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1502</i>
-     */
-    FPix fpixScaleByInteger(FPix fpixs, int factor);
-
-    /**
-     * Original signature :
-     * <code>DPIX* dpixScaleByInteger(DPIX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1504</i>
-     */
-    DPix dpixScaleByInteger(DPix dpixs, int factor);
-
-    /**
-     * Original signature :
-     * <code>FPIX* fpixLinearCombination(FPIX*, FPIX*, FPIX*, l_float32, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:1506</i>
-     */
-    FPix fpixLinearCombination(FPix fpixd, FPix fpixs1, FPix fpixs2, float a, float b);
-
-    /**
-     * Original signature :
-     * <code>l_int32 fpixAddMultConstant(FPIX*, l_float32, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:1508</i>
-     */
-    int fpixAddMultConstant(FPix fpix, float addc, float multc);
-
-    /**
-     * Original signature :
-     * <code>DPIX* dpixLinearCombination(DPIX*, DPIX*, DPIX*, l_float32, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:1510</i>
-     */
-    DPix dpixLinearCombination(DPix dpixd, DPix dpixs1, DPix dpixs2, float a, float b);
-
-    /**
-     * Original signature :
-     * <code>l_int32 dpixAddMultConstant(DPIX*, l_float64, l_float64)</code><br>
-     * <i>native declaration : allheaders.h:1512</i>
-     */
-    int dpixAddMultConstant(DPix dpix, double addc, double multc);
-
-    /**
-     * Original signature :
-     * <code>l_int32 fpixSetAllArbitrary(FPIX*, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:1514</i>
-     */
-    int fpixSetAllArbitrary(FPix fpix, float inval);
-
-    /**
-     * Original signature :
-     * <code>l_int32 dpixSetAllArbitrary(DPIX*, l_float64)</code><br>
-     * <i>native declaration : allheaders.h:1516</i>
-     */
-    int dpixSetAllArbitrary(DPix dpix, double inval);
-
-    /**
-     * Original signature :
-     * <code>FPIX* fpixAddBorder(FPIX*, l_int32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1518</i>
-     */
-    FPix fpixAddBorder(FPix fpixs, int left, int right, int top, int bot);
-
-    /**
-     * Original signature :
-     * <code>FPIX* fpixRemoveBorder(FPIX*, l_int32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1520</i>
-     */
-    FPix fpixRemoveBorder(FPix fpixs, int left, int right, int top, int bot);
-
-    /**
-     * Original signature :
-     * <code>FPIX* fpixAddMirroredBorder(FPIX*, l_int32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1522</i>
-     */
-    FPix fpixAddMirroredBorder(FPix fpixs, int left, int right, int top, int bot);
-
-    /**
-     * Original signature :
-     * <code>FPIX* fpixAddContinuedBorder(FPIX*, l_int32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1524</i>
-     */
-    FPix fpixAddContinuedBorder(FPix fpixs, int left, int right, int top, int bot);
-
-    /**
-     * Original signature :
-     * <code>FPIX* fpixAddSlopeBorder(FPIX*, l_int32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1526</i>
-     */
-    FPix fpixAddSlopeBorder(FPix fpixs, int left, int right, int top, int bot);
-
-    /**
-     * Original signature :
-     * <code>l_int32 fpixRasterop(FPIX*, l_int32, l_int32, l_int32, l_int32, FPIX*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1528</i>
-     */
-    int fpixRasterop(FPix fpixd, int dx, int dy, int dw, int dh, FPix fpixs, int sx, int sy);
-
-    /**
-     * Original signature :
-     * <code>FPIX* fpixRotateOrth(FPIX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1530</i>
-     */
-    FPix fpixRotateOrth(FPix fpixs, int quads);
-
-    /**
-     * Original signature : <code>FPIX* fpixRotate180(FPIX*, FPIX*)</code><br>
-     * <i>native declaration : allheaders.h:1532</i>
-     */
-    FPix fpixRotate180(FPix fpixd, FPix fpixs);
-
-    /**
-     * Original signature : <code>FPIX* fpixRotate90(FPIX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1534</i>
-     */
-    FPix fpixRotate90(FPix fpixs, int direction);
-
-    /**
-     * Original signature : <code>FPIX* fpixFlipLR(FPIX*, FPIX*)</code><br>
-     * <i>native declaration : allheaders.h:1536</i>
-     */
-    FPix fpixFlipLR(FPix fpixd, FPix fpixs);
-
-    /**
-     * Original signature : <code>FPIX* fpixFlipTB(FPIX*, FPIX*)</code><br>
-     * <i>native declaration : allheaders.h:1538</i>
-     */
-    FPix fpixFlipTB(FPix fpixd, FPix fpixs);
-
-    /**
-     * Original signature :
-     * <code>FPIX* fpixAffinePta(FPIX*, PTA*, PTA*, l_int32, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:1540</i>
-     */
-    FPix fpixAffinePta(FPix fpixs, Pta ptad, Pta ptas, int border, float inval);
-
-    /**
-     * Original signature :
-     * <code>FPIX* fpixAffine(FPIX*, l_float32*, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:1542</i>
-     */
-    FPix fpixAffine(FPix fpixs, FloatBuffer vc, float inval);
-
-    /**
-     * Original signature :
-     * <code>FPIX* fpixProjectivePta(FPIX*, PTA*, PTA*, l_int32, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:1544</i>
-     */
-    FPix fpixProjectivePta(FPix fpixs, Pta ptad, Pta ptas, int border, float inval);
-
-    /**
-     * Original signature :
-     * <code>FPIX* fpixProjective(FPIX*, l_float32*, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:1546</i>
-     */
-    FPix fpixProjective(FPix fpixs, FloatBuffer vc, float inval);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 fmorphopgen_low_1(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1360</i>
+//     */
+//    int fmorphopgen_low_1(IntBuffer datad, int w, int h, int wpld, IntBuffer datas, int wpls, int index);
+//
+//    /**
+//     * Original signature : <code>FPIX* fpixCreate(l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1362</i>
+//     */
+//    FPix fpixCreate(int width, int height);
+//
+//    /**
+//     * Original signature : <code>FPIX* fpixCreateTemplate(FPIX*)</code><br>
+//     * <i>native declaration : allheaders.h:1364</i>
+//     */
+//    FPix fpixCreateTemplate(FPix fpixs);
+//
+//    /**
+//     * Original signature : <code>FPIX* fpixClone(FPIX*)</code><br>
+//     * <i>native declaration : allheaders.h:1366</i>
+//     */
+//    FPix fpixClone(FPix fpix);
+//
+//    /**
+//     * Original signature : <code>FPIX* fpixCopy(FPIX*, FPIX*)</code><br>
+//     * <i>native declaration : allheaders.h:1368</i>
+//     */
+//    FPix fpixCopy(FPix fpixd, FPix fpixs);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 fpixResizeImageData(FPIX*, FPIX*)</code><br>
+//     * <i>native declaration : allheaders.h:1370</i>
+//     */
+//    int fpixResizeImageData(FPix fpixd, FPix fpixs);
+//
+//    /**
+//     * Original signature : <code>void fpixDestroy(FPIX**)</code><br>
+//     * <i>native declaration : allheaders.h:1372</i>
+//     */
+//    void fpixDestroy(FPointerByReference pfpix);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 fpixGetDimensions(FPIX*, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:1374</i>
+//     */
+//    int fpixGetDimensions(FPix fpix, IntBuffer pw, IntBuffer ph);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 fpixSetDimensions(FPIX*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1376</i>
+//     */
+//    int fpixSetDimensions(FPix fpix, int w, int h);
+//
+//    /**
+//     * Original signature : <code>l_int32 fpixGetWpl(FPIX*)</code><br>
+//     * <i>native declaration : allheaders.h:1378</i>
+//     */
+//    int fpixGetWpl(FPix fpix);
+//
+//    /**
+//     * Original signature : <code>l_int32 fpixSetWpl(FPIX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1380</i>
+//     */
+//    int fpixSetWpl(FPix fpix, int wpl);
+//
+//    /**
+//     * Original signature : <code>l_int32 fpixGetRefcount(FPIX*)</code><br>
+//     * <i>native declaration : allheaders.h:1382</i>
+//     */
+//    int fpixGetRefcount(FPix fpix);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 fpixChangeRefcount(FPIX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1384</i>
+//     */
+//    int fpixChangeRefcount(FPix fpix, int delta);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 fpixGetResolution(FPIX*, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:1386</i>
+//     */
+//    int fpixGetResolution(FPix fpix, IntBuffer pxres, IntBuffer pyres);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 fpixSetResolution(FPIX*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1388</i>
+//     */
+//    int fpixSetResolution(FPix fpix, int xres, int yres);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 fpixCopyResolution(FPIX*, FPIX*)</code><br>
+//     * <i>native declaration : allheaders.h:1390</i>
+//     */
+//    int fpixCopyResolution(FPix fpixd, FPix fpixs);
+//
+//    /**
+//     * Original signature : <code>l_float32* fpixGetData(FPIX*)</code><br>
+//     * <i>native declaration : allheaders.h:1392</i>
+//     */
+//    FloatByReference fpixGetData(FPix fpix);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 fpixSetData(FPIX*, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:1394</i>
+//     */
+//    int fpixSetData(FPix fpix, FloatBuffer data);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 fpixGetPixel(FPIX*, l_int32, l_int32, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:1396</i>
+//     */
+//    int fpixGetPixel(FPix fpix, int x, int y, FloatBuffer pval);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 fpixSetPixel(FPIX*, l_int32, l_int32, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:1398</i>
+//     */
+//    int fpixSetPixel(FPix fpix, int x, int y, float val);
+//
+//    /**
+//     * Original signature : <code>FPIXA* fpixaCreate(l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1400</i>
+//     */
+//    FPixa fpixaCreate(int n);
+//
+//    /**
+//     * Original signature : <code>FPIXA* fpixaCopy(FPIXA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1402</i>
+//     */
+//    FPixa fpixaCopy(FPixa fpixa, int copyflag);
+//
+//    /**
+//     * Original signature : <code>void fpixaDestroy(FPIXA**)</code><br>
+//     * <i>native declaration : allheaders.h:1404</i>
+//     */
+//    void fpixaDestroy(PointerByReference pfpixa);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 fpixaAddFPix(FPIXA*, FPIX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1406</i>
+//     */
+//    int fpixaAddFPix(FPixa fpixa, FPix fpix, int copyflag);
+//
+//    /**
+//     * Original signature : <code>l_int32 fpixaGetCount(FPIXA*)</code><br>
+//     * <i>native declaration : allheaders.h:1408</i>
+//     */
+//    int fpixaGetCount(FPixa fpixa);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 fpixaChangeRefcount(FPIXA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1410</i>
+//     */
+//    int fpixaChangeRefcount(FPixa fpixa, int delta);
+//
+//    /**
+//     * Original signature :
+//     * <code>FPIX* fpixaGetFPix(FPIXA*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1412</i>
+//     */
+//    FPix fpixaGetFPix(FPixa fpixa, int index, int accesstype);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 fpixaGetFPixDimensions(FPIXA*, l_int32, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:1414</i>
+//     */
+//    int fpixaGetFPixDimensions(FPixa fpixa, int index, IntBuffer pw, IntBuffer ph);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 fpixaGetPixel(FPIXA*, l_int32, l_int32, l_int32, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:1416</i>
+//     */
+//    int fpixaGetPixel(FPixa fpixa, int index, int x, int y, FloatBuffer pval);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 fpixaSetPixel(FPIXA*, l_int32, l_int32, l_int32, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:1418</i>
+//     */
+//    int fpixaSetPixel(FPixa fpixa, int index, int x, int y, float val);
+//
+//    /**
+//     * Original signature : <code>DPIX* dpixCreate(l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1420</i>
+//     */
+//    DPix dpixCreate(int width, int height);
+//
+//    /**
+//     * Original signature : <code>DPIX* dpixCreateTemplate(DPIX*)</code><br>
+//     * <i>native declaration : allheaders.h:1422</i>
+//     */
+//    DPix dpixCreateTemplate(DPix dpixs);
+//
+//    /**
+//     * Original signature : <code>DPIX* dpixClone(DPIX*)</code><br>
+//     * <i>native declaration : allheaders.h:1424</i>
+//     */
+//    DPix dpixClone(DPix dpix);
+//
+//    /**
+//     * Original signature : <code>DPIX* dpixCopy(DPIX*, DPIX*)</code><br>
+//     * <i>native declaration : allheaders.h:1426</i>
+//     */
+//    DPix dpixCopy(DPix dpixd, DPix dpixs);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 dpixResizeImageData(DPIX*, DPIX*)</code><br>
+//     * <i>native declaration : allheaders.h:1428</i>
+//     */
+//    int dpixResizeImageData(DPix dpixd, DPix dpixs);
+//
+//    /**
+//     * Original signature : <code>void dpixDestroy(DPIX**)</code><br>
+//     * <i>native declaration : allheaders.h:1430</i>
+//     */
+//    void dpixDestroy(DPointerByReference pdpix);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 dpixGetDimensions(DPIX*, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:1432</i>
+//     */
+//    int dpixGetDimensions(DPix dpix, IntBuffer pw, IntBuffer ph);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 dpixSetDimensions(DPIX*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1434</i>
+//     */
+//    int dpixSetDimensions(DPix dpix, int w, int h);
+//
+//    /**
+//     * Original signature : <code>l_int32 dpixGetWpl(DPIX*)</code><br>
+//     * <i>native declaration : allheaders.h:1436</i>
+//     */
+//    int dpixGetWpl(DPix dpix);
+//
+//    /**
+//     * Original signature : <code>l_int32 dpixSetWpl(DPIX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1438</i>
+//     */
+//    int dpixSetWpl(DPix dpix, int wpl);
+//
+//    /**
+//     * Original signature : <code>l_int32 dpixGetRefcount(DPIX*)</code><br>
+//     * <i>native declaration : allheaders.h:1440</i>
+//     */
+//    int dpixGetRefcount(DPix dpix);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 dpixChangeRefcount(DPIX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1442</i>
+//     */
+//    int dpixChangeRefcount(DPix dpix, int delta);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 dpixGetResolution(DPIX*, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:1444</i>
+//     */
+//    int dpixGetResolution(DPix dpix, IntBuffer pxres, IntBuffer pyres);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 dpixSetResolution(DPIX*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1446</i>
+//     */
+//    int dpixSetResolution(DPix dpix, int xres, int yres);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 dpixCopyResolution(DPIX*, DPIX*)</code><br>
+//     * <i>native declaration : allheaders.h:1448</i>
+//     */
+//    int dpixCopyResolution(DPix dpixd, DPix dpixs);
+//
+//    /**
+//     * Original signature : <code>l_float64* dpixGetData(DPIX*)</code><br>
+//     * <i>native declaration : allheaders.h:1450</i>
+//     */
+//    DoubleByReference dpixGetData(DPix dpix);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 dpixSetData(DPIX*, l_float64*)</code><br>
+//     * <i>native declaration : allheaders.h:1452</i>
+//     */
+//    int dpixSetData(DPix dpix, DoubleBuffer data);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 dpixGetPixel(DPIX*, l_int32, l_int32, l_float64*)</code><br>
+//     * <i>native declaration : allheaders.h:1454</i>
+//     */
+//    int dpixGetPixel(DPix dpix, int x, int y, DoubleBuffer pval);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 dpixSetPixel(DPIX*, l_int32, l_int32, l_float64)</code><br>
+//     * <i>native declaration : allheaders.h:1456</i>
+//     */
+//    int dpixSetPixel(DPix dpix, int x, int y, double val);
+//
+//    /**
+//     * Original signature : <code>FPIX* fpixRead(const char*)</code><br>
+//     * <i>native declaration : allheaders.h:1458</i>
+//     */
+//    FPix fpixRead(String filename);
+//
+//    /**
+//     * Original signature : <code>FPIX* fpixReadStream(FILE*)</code><br>
+//     * <i>native declaration : allheaders.h:1460</i>
+//     */
+//    FPix fpixReadStream(PointerByReference fp);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 fpixWrite(const char*, FPIX*)</code><br>
+//     * <i>native declaration : allheaders.h:1462</i>
+//     */
+//    int fpixWrite(String filename, FPix fpix);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 fpixWriteStream(FILE*, FPIX*)</code><br>
+//     * <i>native declaration : allheaders.h:1464</i>
+//     */
+//    int fpixWriteStream(PointerByReference fp, FPix fpix);
+//
+//    /**
+//     * Original signature :
+//     * <code>FPIX* fpixEndianByteSwap(FPIX*, FPIX*)</code><br>
+//     * <i>native declaration : allheaders.h:1466</i>
+//     */
+//    FPix fpixEndianByteSwap(FPix fpixd, FPix fpixs);
+//
+//    /**
+//     * Original signature : <code>DPIX* dpixRead(const char*)</code><br>
+//     * <i>native declaration : allheaders.h:1468</i>
+//     */
+//    DPix dpixRead(String filename);
+//
+//    /**
+//     * Original signature : <code>DPIX* dpixReadStream(FILE*)</code><br>
+//     * <i>native declaration : allheaders.h:1470</i>
+//     */
+//    DPix dpixReadStream(PointerByReference fp);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 dpixWrite(const char*, DPIX*)</code><br>
+//     * <i>native declaration : allheaders.h:1472</i>
+//     */
+//    int dpixWrite(String filename, DPix dpix);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 dpixWriteStream(FILE*, DPIX*)</code><br>
+//     * <i>native declaration : allheaders.h:1474</i>
+//     */
+//    int dpixWriteStream(PointerByReference fp, DPix dpix);
+//
+//    /**
+//     * Original signature :
+//     * <code>DPIX* dpixEndianByteSwap(DPIX*, DPIX*)</code><br>
+//     * <i>native declaration : allheaders.h:1476</i>
+//     */
+//    DPix dpixEndianByteSwap(DPix dpixd, DPix dpixs);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 fpixPrintStream(FILE*, FPIX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1478</i>
+//     */
+//    int fpixPrintStream(PointerByReference fp, FPix fpix, int factor);
+//
+//    /**
+//     * Original signature :
+//     * <code>FPIX* pixConvertToFPix(PIX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1480</i>
+//     */
+//    FPix pixConvertToFPix(Pix pixs, int ncomps);
+//
+//    /**
+//     * Original signature :
+//     * <code>DPIX* pixConvertToDPix(PIX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1482</i>
+//     */
+//    DPix pixConvertToDPix(Pix pixs, int ncomps);
+//
+//    /**
+//     * Original signature :
+//     * <code>PIX* fpixConvertToPix(FPIX*, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1484</i>
+//     */
+//    Pix fpixConvertToPix(FPix fpixs, int outdepth, int negvals, int errorflag);
+//
+//    /**
+//     * Original signature :
+//     * <code>PIX* fpixDisplayMaxDynamicRange(FPIX*)</code><br>
+//     * <i>native declaration : allheaders.h:1486</i>
+//     */
+//    Pix fpixDisplayMaxDynamicRange(FPix fpixs);
+//
+//    /**
+//     * Original signature : <code>DPIX* fpixConvertToDPix(FPIX*)</code><br>
+//     * <i>native declaration : allheaders.h:1488</i>
+//     */
+//    DPix fpixConvertToDPix(FPix fpix);
+//
+//    /**
+//     * Original signature :
+//     * <code>PIX* dpixConvertToPix(DPIX*, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1490</i>
+//     */
+//    Pix dpixConvertToPix(DPix dpixs, int outdepth, int negvals, int errorflag);
+//
+//    /**
+//     * Original signature : <code>FPIX* dpixConvertToFPix(DPIX*)</code><br>
+//     * <i>native declaration : allheaders.h:1492</i>
+//     */
+//    FPix dpixConvertToFPix(DPix dpix);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 fpixGetMin(FPIX*, l_float32*, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:1494</i>
+//     */
+//    int fpixGetMin(FPix fpix, FloatBuffer pminval, IntBuffer pxminloc, IntBuffer pyminloc);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 fpixGetMax(FPIX*, l_float32*, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:1496</i>
+//     */
+//    int fpixGetMax(FPix fpix, FloatBuffer pmaxval, IntBuffer pxmaxloc, IntBuffer pymaxloc);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 dpixGetMin(DPIX*, l_float64*, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:1498</i>
+//     */
+//    int dpixGetMin(DPix dpix, DoubleBuffer pminval, IntBuffer pxminloc, IntBuffer pyminloc);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 dpixGetMax(DPIX*, l_float64*, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:1500</i>
+//     */
+//    int dpixGetMax(DPix dpix, DoubleBuffer pmaxval, IntBuffer pxmaxloc, IntBuffer pymaxloc);
+//
+//    /**
+//     * Original signature :
+//     * <code>FPIX* fpixScaleByInteger(FPIX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1502</i>
+//     */
+//    FPix fpixScaleByInteger(FPix fpixs, int factor);
+//
+//    /**
+//     * Original signature :
+//     * <code>DPIX* dpixScaleByInteger(DPIX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1504</i>
+//     */
+//    DPix dpixScaleByInteger(DPix dpixs, int factor);
+//
+//    /**
+//     * Original signature :
+//     * <code>FPIX* fpixLinearCombination(FPIX*, FPIX*, FPIX*, l_float32, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:1506</i>
+//     */
+//    FPix fpixLinearCombination(FPix fpixd, FPix fpixs1, FPix fpixs2, float a, float b);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 fpixAddMultConstant(FPIX*, l_float32, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:1508</i>
+//     */
+//    int fpixAddMultConstant(FPix fpix, float addc, float multc);
+//
+//    /**
+//     * Original signature :
+//     * <code>DPIX* dpixLinearCombination(DPIX*, DPIX*, DPIX*, l_float32, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:1510</i>
+//     */
+//    DPix dpixLinearCombination(DPix dpixd, DPix dpixs1, DPix dpixs2, float a, float b);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 dpixAddMultConstant(DPIX*, l_float64, l_float64)</code><br>
+//     * <i>native declaration : allheaders.h:1512</i>
+//     */
+//    int dpixAddMultConstant(DPix dpix, double addc, double multc);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 fpixSetAllArbitrary(FPIX*, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:1514</i>
+//     */
+//    int fpixSetAllArbitrary(FPix fpix, float inval);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 dpixSetAllArbitrary(DPIX*, l_float64)</code><br>
+//     * <i>native declaration : allheaders.h:1516</i>
+//     */
+//    int dpixSetAllArbitrary(DPix dpix, double inval);
+//
+//    /**
+//     * Original signature :
+//     * <code>FPIX* fpixAddBorder(FPIX*, l_int32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1518</i>
+//     */
+//    FPix fpixAddBorder(FPix fpixs, int left, int right, int top, int bot);
+//
+//    /**
+//     * Original signature :
+//     * <code>FPIX* fpixRemoveBorder(FPIX*, l_int32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1520</i>
+//     */
+//    FPix fpixRemoveBorder(FPix fpixs, int left, int right, int top, int bot);
+//
+//    /**
+//     * Original signature :
+//     * <code>FPIX* fpixAddMirroredBorder(FPIX*, l_int32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1522</i>
+//     */
+//    FPix fpixAddMirroredBorder(FPix fpixs, int left, int right, int top, int bot);
+//
+//    /**
+//     * Original signature :
+//     * <code>FPIX* fpixAddContinuedBorder(FPIX*, l_int32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1524</i>
+//     */
+//    FPix fpixAddContinuedBorder(FPix fpixs, int left, int right, int top, int bot);
+//
+//    /**
+//     * Original signature :
+//     * <code>FPIX* fpixAddSlopeBorder(FPIX*, l_int32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1526</i>
+//     */
+//    FPix fpixAddSlopeBorder(FPix fpixs, int left, int right, int top, int bot);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 fpixRasterop(FPIX*, l_int32, l_int32, l_int32, l_int32, FPIX*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1528</i>
+//     */
+//    int fpixRasterop(FPix fpixd, int dx, int dy, int dw, int dh, FPix fpixs, int sx, int sy);
+//
+//    /**
+//     * Original signature :
+//     * <code>FPIX* fpixRotateOrth(FPIX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1530</i>
+//     */
+//    FPix fpixRotateOrth(FPix fpixs, int quads);
+//
+//    /**
+//     * Original signature : <code>FPIX* fpixRotate180(FPIX*, FPIX*)</code><br>
+//     * <i>native declaration : allheaders.h:1532</i>
+//     */
+//    FPix fpixRotate180(FPix fpixd, FPix fpixs);
+//
+//    /**
+//     * Original signature : <code>FPIX* fpixRotate90(FPIX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1534</i>
+//     */
+//    FPix fpixRotate90(FPix fpixs, int direction);
+//
+//    /**
+//     * Original signature : <code>FPIX* fpixFlipLR(FPIX*, FPIX*)</code><br>
+//     * <i>native declaration : allheaders.h:1536</i>
+//     */
+//    FPix fpixFlipLR(FPix fpixd, FPix fpixs);
+//
+//    /**
+//     * Original signature : <code>FPIX* fpixFlipTB(FPIX*, FPIX*)</code><br>
+//     * <i>native declaration : allheaders.h:1538</i>
+//     */
+//    FPix fpixFlipTB(FPix fpixd, FPix fpixs);
+//
+//    /**
+//     * Original signature :
+//     * <code>FPIX* fpixAffinePta(FPIX*, PTA*, PTA*, l_int32, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:1540</i>
+//     */
+//    FPix fpixAffinePta(FPix fpixs, Pta ptad, Pta ptas, int border, float inval);
+//
+//    /**
+//     * Original signature :
+//     * <code>FPIX* fpixAffine(FPIX*, l_float32*, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:1542</i>
+//     */
+//    FPix fpixAffine(FPix fpixs, FloatBuffer vc, float inval);
+//
+//    /**
+//     * Original signature :
+//     * <code>FPIX* fpixProjectivePta(FPIX*, PTA*, PTA*, l_int32, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:1544</i>
+//     */
+//    FPix fpixProjectivePta(FPix fpixs, Pta ptad, Pta ptas, int border, float inval);
+//
+//    /**
+//     * Original signature :
+//     * <code>FPIX* fpixProjective(FPIX*, l_float32*, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:1546</i>
+//     */
+//    FPix fpixProjective(FPix fpixs, FloatBuffer vc, float inval);
 
     /**
      * Original signature :
@@ -5468,249 +5468,249 @@ public interface Leptonica extends Library, ILeptonica {
      */
     int pixWriteMemGif(PointerByReference pdata, NativeSizeByReference psize, Pix pix);
 
-    /**
-     * Original signature :
-     * <code>GPLOT* gplotCreate(const char*, l_int32, const char*, const char*, const char*)</code><br>
-     * <i>native declaration : allheaders.h:1562</i>
-     */
-    GPlot gplotCreate(String rootname, int outformat, String title, String xlabel, String ylabel);
-
-    /**
-     * Original signature : <code>void gplotDestroy(GPLOT**)</code><br>
-     * <i>native declaration : allheaders.h:1564</i>
-     */
-    void gplotDestroy(GPlot.ByReference pgplot[]);
-
-    /**
-     * Original signature :
-     * <code>l_int32 gplotAddPlot(GPLOT*, NUMA*, NUMA*, l_int32, const char*)</code><br>
-     * <i>native declaration : allheaders.h:1566</i>
-     */
-    int gplotAddPlot(GPlot gplot, Numa nax, Numa nay, int plotstyle, String plottitle);
-
-    /**
-     * Original signature :
-     * <code>l_int32 gplotSetScaling(GPLOT*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1568</i>
-     */
-    int gplotSetScaling(GPlot gplot, int scaling);
-
-    /**
-     * Original signature : <code>l_int32 gplotMakeOutput(GPLOT*)</code><br>
-     * <i>native declaration : allheaders.h:1570</i>
-     */
-    int gplotMakeOutput(GPlot gplot);
-
-    /**
-     * Original signature : <code>l_int32 gplotGenCommandFile(GPLOT*)</code><br>
-     * <i>native declaration : allheaders.h:1572</i>
-     */
-    int gplotGenCommandFile(GPlot gplot);
-
-    /**
-     * Original signature : <code>l_int32 gplotGenDataFiles(GPLOT*)</code><br>
-     * <i>native declaration : allheaders.h:1574</i>
-     */
-    int gplotGenDataFiles(GPlot gplot);
-
-    /**
-     * Original signature :
-     * <code>l_int32 gplotSimple1(NUMA*, l_int32, const char*, const char*)</code><br>
-     * <i>native declaration : allheaders.h:1576</i>
-     */
-    int gplotSimple1(Numa na, int outformat, String outroot, String title);
-
-    /**
-     * Original signature :
-     * <code>l_int32 gplotSimple2(NUMA*, NUMA*, l_int32, const char*, const char*)</code><br>
-     * <i>native declaration : allheaders.h:1578</i>
-     */
-    int gplotSimple2(Numa na1, Numa na2, int outformat, String outroot, String title);
-
-    /**
-     * Original signature :
-     * <code>l_int32 gplotSimpleN(NUMAA*, l_int32, const char*, const char*)</code><br>
-     * <i>native declaration : allheaders.h:1580</i>
-     */
-    int gplotSimpleN(Numaa naa, int outformat, String outroot, String title);
-
-    /**
-     * Original signature :
-     * <code>l_int32 gplotSimpleXY1(NUMA*, NUMA*, l_int32, const char*, const char*)</code><br>
-     * <i>native declaration : allheaders.h:1582</i>
-     */
-    int gplotSimpleXY1(Numa nax, Numa nay, int outformat, String outroot, String title);
-
-    /**
-     * Original signature :
-     * <code>l_int32 gplotSimpleXY2(NUMA*, NUMA*, NUMA*, l_int32, const char*, const char*)</code><br>
-     * <i>native declaration : allheaders.h:1584</i>
-     */
-    int gplotSimpleXY2(Numa nax, Numa nay1, Numa nay2, int outformat, String outroot, String title);
-
-    /**
-     * Original signature :
-     * <code>l_int32 gplotSimpleXYN(NUMA*, NUMAA*, l_int32, const char*, const char*)</code><br>
-     * <i>native declaration : allheaders.h:1586</i>
-     */
-    int gplotSimpleXYN(Numa nax, Numaa naay, int outformat, String outroot, String title);
-
-    /**
-     * Original signature : <code>GPLOT* gplotRead(const char*)</code><br>
-     * <i>native declaration : allheaders.h:1588</i>
-     */
-    GPlot gplotRead(String filename);
-
-    /**
-     * Original signature :
-     * <code>l_int32 gplotWrite(const char*, GPLOT*)</code><br>
-     * <i>native declaration : allheaders.h:1590</i>
-     */
-    int gplotWrite(String filename, GPlot gplot);
-
-    /**
-     * Original signature :
-     * <code>PTA* generatePtaLine(l_int32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1592</i>
-     */
-    Pta generatePtaLine(int x1, int y1, int x2, int y2);
-
-    /**
-     * Original signature :
-     * <code>PTA* generatePtaWideLine(l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1594</i>
-     */
-    Pta generatePtaWideLine(int x1, int y1, int x2, int y2, int width);
-
-    /**
-     * Original signature : <code>PTA* generatePtaBox(BOX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1596</i>
-     */
-    Pta generatePtaBox(Box box, int width);
-
-    /**
-     * Original signature :
-     * <code>PTA* generatePtaBoxa(BOXA*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1598</i>
-     */
-    Pta generatePtaBoxa(Boxa boxa, int width, int removedups);
-
-    /**
-     * Original signature :
-     * <code>PTA* generatePtaHashBox(BOX*, l_int32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1600</i>
-     */
-    Pta generatePtaHashBox(Box box, int spacing, int width, int orient, int outline);
-
-    /**
-     * Original signature :
-     * <code>PTA* generatePtaHashBoxa(BOXA*, l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1602</i>
-     */
-    Pta generatePtaHashBoxa(Boxa boxa, int spacing, int width, int orient, int outline, int removedups);
-
-    /**
-     * Original signature : <code>PTAA* generatePtaaBoxa(BOXA*)</code><br>
-     * <i>native declaration : allheaders.h:1604</i>
-     */
-    Ptaa generatePtaaBoxa(Boxa boxa);
-
-    /**
-     * Original signature :
-     * <code>PTAA* generatePtaaHashBoxa(BOXA*, l_int32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1606</i>
-     */
-    Ptaa generatePtaaHashBoxa(Boxa boxa, int spacing, int width, int orient, int outline);
-
-    /**
-     * Original signature :
-     * <code>PTA* generatePtaPolyline(PTA*, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1608</i>
-     */
-    Pta generatePtaPolyline(Pta ptas, int width, int closeflag, int removedups);
-
-    /**
-     * Original signature : <code>PTA* convertPtaLineTo4cc(PTA*)</code><br>
-     * <i>native declaration : allheaders.h:1610</i>
-     */
-    Pta convertPtaLineTo4cc(Pta ptas);
-
-    /**
-     * Original signature :
-     * <code>PTA* generatePtaFilledCircle(l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1612</i>
-     */
-    Pta generatePtaFilledCircle(int radius);
-
-    /**
-     * Original signature :
-     * <code>PTA* generatePtaFilledSquare(l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1614</i>
-     */
-    Pta generatePtaFilledSquare(int side);
-
-    /**
-     * Original signature :
-     * <code>PTA* generatePtaLineFromPt(l_int32, l_int32, l_float64, l_float64)</code><br>
-     * <i>native declaration : allheaders.h:1616</i>
-     */
-    Pta generatePtaLineFromPt(int x, int y, double length, double radang);
-
-    /**
-     * Original signature :
-     * <code>l_int32 locatePtRadially(l_int32, l_int32, l_float64, l_float64, l_float64*, l_float64*)</code><br>
-     * <i>native declaration : allheaders.h:1618</i>
-     */
-    int locatePtRadially(int xr, int yr, double dist, double radang, DoubleBuffer px, DoubleBuffer py);
-
-    /**
-     * Original signature :
-     * <code>l_int32 pixRenderPlotFromNuma(PIX**, NUMA*, l_int32, l_int32, l_int32, l_uint32)</code><br>
-     * <i>native declaration : allheaders.h:1620</i>
-     */
-    int pixRenderPlotFromNuma(Pix.ByReference ppix[], Numa na, int plotloc, int linewidth, int max, int color);
-
-    /**
-     * Original signature :
-     * <code>PTA* makePlotPtaFromNuma(NUMA*, l_int32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1622</i>
-     */
-    Pta makePlotPtaFromNuma(Numa na, int size, int plotloc, int linewidth, int max);
-
-    /**
-     * Original signature :
-     * <code>l_int32 pixRenderPlotFromNumaGen(PIX**, NUMA*, l_int32, l_int32, l_int32, l_int32, l_int32, l_uint32)</code><br>
-     * <i>native declaration : allheaders.h:1624</i>
-     */
-    int pixRenderPlotFromNumaGen(Pix.ByReference ppix[], Numa na, int orient, int linewidth, int refpos, int max, int drawref, int color);
-
-    /**
-     * Original signature :
-     * <code>PTA* makePlotPtaFromNumaGen(NUMA*, l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1626</i>
-     */
-    Pta makePlotPtaFromNumaGen(Numa na, int orient, int linewidth, int refpos, int max, int drawref);
-
-    /**
-     * Original signature :
-     * <code>l_int32 pixRenderPta(PIX*, PTA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1628</i>
-     */
-    int pixRenderPta(Pix pix, Pta pta, int op);
-
-    /**
-     * Original signature :
-     * <code>l_int32 pixRenderPtaArb(PIX*, PTA*, l_uint8, l_uint8, l_uint8)</code><br>
-     * <i>native declaration : allheaders.h:1630</i>
-     */
-    int pixRenderPtaArb(Pix pix, Pta pta, byte rval, byte gval, byte bval);
-
-    /**
-     * Original signature :
-     * <code>l_int32 pixRenderPtaBlend(PIX*, PTA*, l_uint8, l_uint8, l_uint8, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:1632</i>
-     */
-    int pixRenderPtaBlend(Pix pix, Pta pta, byte rval, byte gval, byte bval, float fract);
+//    /**
+//     * Original signature :
+//     * <code>GPLOT* gplotCreate(const char*, l_int32, const char*, const char*, const char*)</code><br>
+//     * <i>native declaration : allheaders.h:1562</i>
+//     */
+//    GPlot gplotCreate(String rootname, int outformat, String title, String xlabel, String ylabel);
+//
+//    /**
+//     * Original signature : <code>void gplotDestroy(GPLOT**)</code><br>
+//     * <i>native declaration : allheaders.h:1564</i>
+//     */
+//    void gplotDestroy(PointerByReference pgplot);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 gplotAddPlot(GPLOT*, NUMA*, NUMA*, l_int32, const char*)</code><br>
+//     * <i>native declaration : allheaders.h:1566</i>
+//     */
+//    int gplotAddPlot(GPlot gplot, Numa nax, Numa nay, int plotstyle, String plottitle);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 gplotSetScaling(GPLOT*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1568</i>
+//     */
+//    int gplotSetScaling(GPlot gplot, int scaling);
+//
+//    /**
+//     * Original signature : <code>l_int32 gplotMakeOutput(GPLOT*)</code><br>
+//     * <i>native declaration : allheaders.h:1570</i>
+//     */
+//    int gplotMakeOutput(GPlot gplot);
+//
+//    /**
+//     * Original signature : <code>l_int32 gplotGenCommandFile(GPLOT*)</code><br>
+//     * <i>native declaration : allheaders.h:1572</i>
+//     */
+//    int gplotGenCommandFile(GPlot gplot);
+//
+//    /**
+//     * Original signature : <code>l_int32 gplotGenDataFiles(GPLOT*)</code><br>
+//     * <i>native declaration : allheaders.h:1574</i>
+//     */
+//    int gplotGenDataFiles(GPlot gplot);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 gplotSimple1(NUMA*, l_int32, const char*, const char*)</code><br>
+//     * <i>native declaration : allheaders.h:1576</i>
+//     */
+//    int gplotSimple1(Numa na, int outformat, String outroot, String title);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 gplotSimple2(NUMA*, NUMA*, l_int32, const char*, const char*)</code><br>
+//     * <i>native declaration : allheaders.h:1578</i>
+//     */
+//    int gplotSimple2(Numa na1, Numa na2, int outformat, String outroot, String title);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 gplotSimpleN(NUMAA*, l_int32, const char*, const char*)</code><br>
+//     * <i>native declaration : allheaders.h:1580</i>
+//     */
+//    int gplotSimpleN(Numaa naa, int outformat, String outroot, String title);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 gplotSimpleXY1(NUMA*, NUMA*, l_int32, const char*, const char*)</code><br>
+//     * <i>native declaration : allheaders.h:1582</i>
+//     */
+//    int gplotSimpleXY1(Numa nax, Numa nay, int outformat, String outroot, String title);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 gplotSimpleXY2(NUMA*, NUMA*, NUMA*, l_int32, const char*, const char*)</code><br>
+//     * <i>native declaration : allheaders.h:1584</i>
+//     */
+//    int gplotSimpleXY2(Numa nax, Numa nay1, Numa nay2, int outformat, String outroot, String title);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 gplotSimpleXYN(NUMA*, NUMAA*, l_int32, const char*, const char*)</code><br>
+//     * <i>native declaration : allheaders.h:1586</i>
+//     */
+//    int gplotSimpleXYN(Numa nax, Numaa naay, int outformat, String outroot, String title);
+//
+//    /**
+//     * Original signature : <code>GPLOT* gplotRead(const char*)</code><br>
+//     * <i>native declaration : allheaders.h:1588</i>
+//     */
+//    GPlot gplotRead(String filename);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 gplotWrite(const char*, GPLOT*)</code><br>
+//     * <i>native declaration : allheaders.h:1590</i>
+//     */
+//    int gplotWrite(String filename, GPlot gplot);
+//
+//    /**
+//     * Original signature :
+//     * <code>PTA* generatePtaLine(l_int32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1592</i>
+//     */
+//    Pta generatePtaLine(int x1, int y1, int x2, int y2);
+//
+//    /**
+//     * Original signature :
+//     * <code>PTA* generatePtaWideLine(l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1594</i>
+//     */
+//    Pta generatePtaWideLine(int x1, int y1, int x2, int y2, int width);
+//
+//    /**
+//     * Original signature : <code>PTA* generatePtaBox(BOX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1596</i>
+//     */
+//    Pta generatePtaBox(Box box, int width);
+//
+//    /**
+//     * Original signature :
+//     * <code>PTA* generatePtaBoxa(BOXA*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1598</i>
+//     */
+//    Pta generatePtaBoxa(Boxa boxa, int width, int removedups);
+//
+//    /**
+//     * Original signature :
+//     * <code>PTA* generatePtaHashBox(BOX*, l_int32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1600</i>
+//     */
+//    Pta generatePtaHashBox(Box box, int spacing, int width, int orient, int outline);
+//
+//    /**
+//     * Original signature :
+//     * <code>PTA* generatePtaHashBoxa(BOXA*, l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1602</i>
+//     */
+//    Pta generatePtaHashBoxa(Boxa boxa, int spacing, int width, int orient, int outline, int removedups);
+//
+//    /**
+//     * Original signature : <code>PTAA* generatePtaaBoxa(BOXA*)</code><br>
+//     * <i>native declaration : allheaders.h:1604</i>
+//     */
+//    Ptaa generatePtaaBoxa(Boxa boxa);
+//
+//    /**
+//     * Original signature :
+//     * <code>PTAA* generatePtaaHashBoxa(BOXA*, l_int32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1606</i>
+//     */
+//    Ptaa generatePtaaHashBoxa(Boxa boxa, int spacing, int width, int orient, int outline);
+//
+//    /**
+//     * Original signature :
+//     * <code>PTA* generatePtaPolyline(PTA*, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1608</i>
+//     */
+//    Pta generatePtaPolyline(Pta ptas, int width, int closeflag, int removedups);
+//
+//    /**
+//     * Original signature : <code>PTA* convertPtaLineTo4cc(PTA*)</code><br>
+//     * <i>native declaration : allheaders.h:1610</i>
+//     */
+//    Pta convertPtaLineTo4cc(Pta ptas);
+//
+//    /**
+//     * Original signature :
+//     * <code>PTA* generatePtaFilledCircle(l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1612</i>
+//     */
+//    Pta generatePtaFilledCircle(int radius);
+//
+//    /**
+//     * Original signature :
+//     * <code>PTA* generatePtaFilledSquare(l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1614</i>
+//     */
+//    Pta generatePtaFilledSquare(int side);
+//
+//    /**
+//     * Original signature :
+//     * <code>PTA* generatePtaLineFromPt(l_int32, l_int32, l_float64, l_float64)</code><br>
+//     * <i>native declaration : allheaders.h:1616</i>
+//     */
+//    Pta generatePtaLineFromPt(int x, int y, double length, double radang);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 locatePtRadially(l_int32, l_int32, l_float64, l_float64, l_float64*, l_float64*)</code><br>
+//     * <i>native declaration : allheaders.h:1618</i>
+//     */
+//    int locatePtRadially(int xr, int yr, double dist, double radang, DoubleBuffer px, DoubleBuffer py);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixRenderPlotFromNuma(PIX**, NUMA*, l_int32, l_int32, l_int32, l_uint32)</code><br>
+//     * <i>native declaration : allheaders.h:1620</i>
+//     */
+//    int pixRenderPlotFromNuma(PointerByReference ppix, Numa na, int plotloc, int linewidth, int max, int color);
+//
+//    /**
+//     * Original signature :
+//     * <code>PTA* makePlotPtaFromNuma(NUMA*, l_int32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1622</i>
+//     */
+//    Pta makePlotPtaFromNuma(Numa na, int size, int plotloc, int linewidth, int max);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixRenderPlotFromNumaGen(PIX**, NUMA*, l_int32, l_int32, l_int32, l_int32, l_int32, l_uint32)</code><br>
+//     * <i>native declaration : allheaders.h:1624</i>
+//     */
+//    int pixRenderPlotFromNumaGen(PointerByReference ppix, Numa na, int orient, int linewidth, int refpos, int max, int drawref, int color);
+//
+//    /**
+//     * Original signature :
+//     * <code>PTA* makePlotPtaFromNumaGen(NUMA*, l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1626</i>
+//     */
+//    Pta makePlotPtaFromNumaGen(Numa na, int orient, int linewidth, int refpos, int max, int drawref);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixRenderPta(PIX*, PTA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1628</i>
+//     */
+//    int pixRenderPta(Pix pix, Pta pta, int op);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixRenderPtaArb(PIX*, PTA*, l_uint8, l_uint8, l_uint8)</code><br>
+//     * <i>native declaration : allheaders.h:1630</i>
+//     */
+//    int pixRenderPtaArb(Pix pix, Pta pta, byte rval, byte gval, byte bval);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixRenderPtaBlend(PIX*, PTA*, l_uint8, l_uint8, l_uint8, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:1632</i>
+//     */
+//    int pixRenderPtaBlend(Pix pix, Pta pta, byte rval, byte gval, byte bval, float fract);
 
     /**
      * Original signature :
@@ -6053,47 +6053,47 @@ public interface Leptonica extends Library, ILeptonica {
      */
     Pix pixThresholdGrayArb(Pix pixs, String edgevals, int outdepth, int use_average, int setblack, int setwhite);
 
-    /**
-     * Original signature :
-     * <code>l_int32* makeGrayQuantIndexTable(l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1732</i>
-     */
-    IntByReference makeGrayQuantIndexTable(int nlevels);
-
-    /**
-     * Original signature :
-     * <code>l_int32* makeGrayQuantTargetTable(l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1734</i>
-     */
-    IntByReference makeGrayQuantTargetTable(int nlevels, int depth);
-
-    /**
-     * Original signature :
-     * <code>l_int32 makeGrayQuantTableArb(NUMA*, l_int32, l_int32**, PIXCMAP**)</code><br>
-     * <i>native declaration : allheaders.h:1736</i>
-     */
-    int makeGrayQuantTableArb(Numa na, int outdepth, PointerByReference ptab, PixColormap.ByReference pcmap[]);
-
-    /**
-     * Original signature :
-     * <code>l_int32 makeGrayQuantColormapArb(PIX*, l_int32*, l_int32, PIXCMAP**)</code><br>
-     * <i>native declaration : allheaders.h:1738</i>
-     */
-    int makeGrayQuantColormapArb(Pix pixs, IntBuffer tab, int outdepth, PixColormap.ByReference pcmap[]);
-
-    /**
-     * Original signature :
-     * <code>l_int32 makeGrayQuantColormapArb(PIX*, l_int32*, l_int32, PIXCMAP**)</code><br>
-     * <i>native declaration : allheaders.h:1738</i>
-     */
-    int makeGrayQuantColormapArb(Pix pixs, IntByReference tab, int outdepth, PixColormap.ByReference pcmap[]);
-
-    /**
-     * Original signature :
-     * <code>PIX* pixGenerateMaskByBand32(PIX*, l_uint32, l_int32, l_int32, l_float32, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:1740</i>
-     */
-    Pix pixGenerateMaskByBand32(Pix pixs, int refval, int delm, int delp, float fractm, float fractp);
+//    /**
+//     * Original signature :
+//     * <code>l_int32* makeGrayQuantIndexTable(l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1732</i>
+//     */
+//    IntByReference makeGrayQuantIndexTable(int nlevels);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32* makeGrayQuantTargetTable(l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1734</i>
+//     */
+//    IntByReference makeGrayQuantTargetTable(int nlevels, int depth);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 makeGrayQuantTableArb(NUMA*, l_int32, l_int32**, PIXCMAP**)</code><br>
+//     * <i>native declaration : allheaders.h:1736</i>
+//     */
+//    int makeGrayQuantTableArb(Numa na, int outdepth, PointerByReference ptab, PointerByReference pcmap);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 makeGrayQuantColormapArb(PIX*, l_int32*, l_int32, PIXCMAP**)</code><br>
+//     * <i>native declaration : allheaders.h:1738</i>
+//     */
+//    int makeGrayQuantColormapArb(Pix pixs, IntBuffer tab, int outdepth, PointerByReference pcmap);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 makeGrayQuantColormapArb(PIX*, l_int32*, l_int32, PIXCMAP**)</code><br>
+//     * <i>native declaration : allheaders.h:1738</i>
+//     */
+//    int makeGrayQuantColormapArb(Pix pixs, IntByReference tab, int outdepth, PointerByReference pcmap);
+//
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixGenerateMaskByBand32(PIX*, l_uint32, l_int32, l_int32, l_float32, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:1740</i>
+//     */
+//    Pix pixGenerateMaskByBand32(Pix pixs, int refval, int delm, int delp, float fractm, float fractp);
 
     /**
      * Original signature :
@@ -6212,7 +6212,7 @@ public interface Leptonica extends Library, ILeptonica {
      * <code>void lheapDestroy(L_HEAP**, l_int32)</code><br>
      * <i>native declaration : allheaders.h:1774</i>
      */
-    void lheapDestroy(L_Heap.ByReference plh[], int freeflag);
+    void lheapDestroy(PointerByReference plh, int freeflag);
 
     /**
      * Original signature : <code>l_int32 lheapAdd(L_HEAP*, void*)</code><br>
@@ -6338,42 +6338,42 @@ public interface Leptonica extends Library, ILeptonica {
      * <code>l_int32 jbGetComponents(PIX*, l_int32, l_int32, l_int32, BOXA**, PIXA**)</code><br>
      * <i>native declaration : allheaders.h:1812</i>
      */
-    int jbGetComponents(Pix pixs, int components, int maxwidth, int maxheight, Boxa.ByReference pboxad[], Pixa.ByReference ppixad[]);
+    int jbGetComponents(Pix pixs, int components, int maxwidth, int maxheight, PointerByReference pboxad, PointerByReference ppixad);
 
     /**
      * Original signature :
      * <code>l_int32 pixWordMaskByDilation(PIX*, l_int32, PIX**, l_int32*)</code><br>
      * <i>native declaration : allheaders.h:1814</i>
      */
-    int pixWordMaskByDilation(Pix pixs, int maxdil, Pix.ByReference ppixm[], IntBuffer psize);
+    int pixWordMaskByDilation(Pix pixs, int maxdil, PointerByReference ppixm, IntBuffer psize);
 
     /**
      * Original signature :
      * <code>l_int32 pixWordMaskByDilation(PIX*, l_int32, PIX**, l_int32*)</code><br>
      * <i>native declaration : allheaders.h:1814</i>
      */
-    int pixWordMaskByDilation(Pix pixs, int maxdil, Pix.ByReference ppixm[], IntByReference psize);
+    int pixWordMaskByDilation(Pix pixs, int maxdil, PointerByReference ppixm, IntByReference psize);
 
     /**
      * Original signature :
      * <code>l_int32 pixWordBoxesByDilation(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, BOXA**, l_int32*)</code><br>
      * <i>native declaration : allheaders.h:1816</i>
      */
-    int pixWordBoxesByDilation(Pix pixs, int maxdil, int minwidth, int minheight, int maxwidth, int maxheight, Boxa.ByReference pboxa[], IntBuffer psize);
+    int pixWordBoxesByDilation(Pix pixs, int maxdil, int minwidth, int minheight, int maxwidth, int maxheight, PointerByReference pboxa, IntBuffer psize);
 
     /**
      * Original signature :
      * <code>l_int32 pixWordBoxesByDilation(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, BOXA**, l_int32*)</code><br>
      * <i>native declaration : allheaders.h:1816</i>
      */
-    int pixWordBoxesByDilation(Pix pixs, int maxdil, int minwidth, int minheight, int maxwidth, int maxheight, Boxa.ByReference pboxa[], IntByReference psize);
+    int pixWordBoxesByDilation(Pix pixs, int maxdil, int minwidth, int minheight, int maxwidth, int maxheight, PointerByReference pboxa, IntByReference psize);
 
     /**
      * Original signature :
      * <code>PIXA* jbAccumulateComposites(PIXAA*, NUMA**, PTA**)</code><br>
      * <i>native declaration : allheaders.h:1818</i>
      */
-    Pixa jbAccumulateComposites(Pixaa pixaa, Numa.ByReference pna[], Pta.ByReference pptat[]);
+    Pixa jbAccumulateComposites(Pixaa pixaa, PointerByReference pna, PointerByReference pptat);
 
     /**
      * Original signature :
@@ -6393,7 +6393,7 @@ public interface Leptonica extends Library, ILeptonica {
      * Original signature : <code>void jbClasserDestroy(JBCLASSER**)</code><br>
      * <i>native declaration : allheaders.h:1824</i>
      */
-    void jbClasserDestroy(JbClasser.ByReference pclasser[]);
+    void jbClasserDestroy(PointerByReference pclasser);
 
     /**
      * Original signature : <code>JBDATA* jbDataSave(JBCLASSER*)</code><br>
@@ -6405,7 +6405,7 @@ public interface Leptonica extends Library, ILeptonica {
      * Original signature : <code>void jbDataDestroy(JBDATA**)</code><br>
      * <i>native declaration : allheaders.h:1828</i>
      */
-    void jbDataDestroy(JbData.ByReference pdata[]);
+    void jbDataDestroy(PointerByReference pdata);
 
     /**
      * Original signature :
@@ -6640,7 +6640,7 @@ public interface Leptonica extends Library, ILeptonica {
      * Original signature : <code>void kernelDestroy(L_KERNEL**)</code><br>
      * <i>native declaration : allheaders.h:1886</i>
      */
-    void kernelDestroy(L_Kernel.ByReference pkel[]);
+    void kernelDestroy(PointerByReference pkel);
 
     /**
      * Original signature : <code>L_KERNEL* kernelCopy(L_KERNEL*)</code><br>
@@ -6790,7 +6790,7 @@ public interface Leptonica extends Library, ILeptonica {
      * <code>l_int32 makeGaussianKernelSep(l_int32, l_int32, l_float32, l_float32, L_KERNEL**, L_KERNEL**)</code><br>
      * <i>native declaration : allheaders.h:1930</i>
      */
-    int makeGaussianKernelSep(int halfheight, int halfwidth, float stdev, float max, L_Kernel.ByReference pkelx[], L_Kernel.ByReference pkely[]);
+    int makeGaussianKernelSep(int halfheight, int halfwidth, float stdev, float max, PointerByReference pkelx, PointerByReference pkely);
 
     /**
      * Original signature :
@@ -6809,55 +6809,55 @@ public interface Leptonica extends Library, ILeptonica {
      * Original signature : <code>void listDestroy(DLLIST**)</code><br>
      * <i>native declaration : allheaders.h:1936</i>
      */
-    void listDestroy(DoubleLinkedList.ByReference phead[]);
+    void listDestroy(PointerByReference phead);
 
     /**
      * Original signature :
      * <code>l_int32 listAddToHead(DLLIST**, void*)</code><br>
      * <i>native declaration : allheaders.h:1938</i>
      */
-    int listAddToHead(DoubleLinkedList.ByReference phead[], Pointer data);
+    int listAddToHead(PointerByReference phead, Pointer data);
 
     /**
      * Original signature :
      * <code>l_int32 listAddToTail(DLLIST**, DLLIST**, void*)</code><br>
      * <i>native declaration : allheaders.h:1940</i>
      */
-    int listAddToTail(DoubleLinkedList.ByReference phead[], DoubleLinkedList.ByReference ptail[], Pointer data);
+    int listAddToTail(PointerByReference phead, PointerByReference ptail, Pointer data);
 
     /**
      * Original signature :
      * <code>l_int32 listInsertBefore(DLLIST**, DLLIST*, void*)</code><br>
      * <i>native declaration : allheaders.h:1942</i>
      */
-    int listInsertBefore(DoubleLinkedList.ByReference phead[], DoubleLinkedList elem, Pointer data);
+    int listInsertBefore(PointerByReference phead, DoubleLinkedList elem, Pointer data);
 
     /**
      * Original signature :
      * <code>l_int32 listInsertAfter(DLLIST**, DLLIST*, void*)</code><br>
      * <i>native declaration : allheaders.h:1944</i>
      */
-    int listInsertAfter(DoubleLinkedList.ByReference phead[], DoubleLinkedList elem, Pointer data);
+    int listInsertAfter(PointerByReference phead, DoubleLinkedList elem, Pointer data);
 
     /**
      * Original signature :
      * <code>void* listRemoveElement(DLLIST**, DLLIST*)</code><br>
      * <i>native declaration : allheaders.h:1946</i>
      */
-    Pointer listRemoveElement(DoubleLinkedList.ByReference phead[], DoubleLinkedList elem);
+    Pointer listRemoveElement(PointerByReference phead, DoubleLinkedList elem);
 
     /**
      * Original signature : <code>void* listRemoveFromHead(DLLIST**)</code><br>
      * <i>native declaration : allheaders.h:1948</i>
      */
-    Pointer listRemoveFromHead(DoubleLinkedList.ByReference phead[]);
+    Pointer listRemoveFromHead(PointerByReference phead);
 
     /**
      * Original signature :
      * <code>void* listRemoveFromTail(DLLIST**, DLLIST**)</code><br>
      * <i>native declaration : allheaders.h:1950</i>
      */
-    Pointer listRemoveFromTail(DoubleLinkedList.ByReference phead[], DoubleLinkedList.ByReference ptail[]);
+    Pointer listRemoveFromTail(PointerByReference phead, PointerByReference ptail);
 
     /**
      * Original signature :
@@ -6882,14 +6882,14 @@ public interface Leptonica extends Library, ILeptonica {
      * Original signature : <code>l_int32 listReverse(DLLIST**)</code><br>
      * <i>native declaration : allheaders.h:1958</i>
      */
-    int listReverse(DoubleLinkedList.ByReference phead[]);
+    int listReverse(PointerByReference phead);
 
     /**
      * Original signature :
      * <code>l_int32 listJoin(DLLIST**, DLLIST**)</code><br>
      * <i>native declaration : allheaders.h:1960</i>
      */
-    int listJoin(DoubleLinkedList.ByReference phead1[], DoubleLinkedList.ByReference phead2[]);
+    int listJoin(PointerByReference phead1, PointerByReference phead2);
 
     /**
      * Original signature :
@@ -6903,28 +6903,28 @@ public interface Leptonica extends Library, ILeptonica {
      * <code>PTA* pixSearchBinaryMaze(PIX*, l_int32, l_int32, l_int32, l_int32, PIX**)</code><br>
      * <i>native declaration : allheaders.h:1964</i>
      */
-    Pta pixSearchBinaryMaze(Pix pixs, int xi, int yi, int xf, int yf, Pix.ByReference ppixd[]);
+    Pta pixSearchBinaryMaze(Pix pixs, int xi, int yi, int xf, int yf, PointerByReference ppixd);
 
     /**
      * Original signature :
      * <code>PTA* pixSearchGrayMaze(PIX*, l_int32, l_int32, l_int32, l_int32, PIX**)</code><br>
      * <i>native declaration : allheaders.h:1966</i>
      */
-    Pta pixSearchGrayMaze(Pix pixs, int xi, int yi, int xf, int yf, Pix.ByReference ppixd[]);
+    Pta pixSearchGrayMaze(Pix pixs, int xi, int yi, int xf, int yf, PointerByReference ppixd);
 
     /**
      * Original signature :
      * <code>l_int32 pixFindLargestRectangle(PIX*, l_int32, BOX**, const char*)</code><br>
      * <i>native declaration : allheaders.h:1968</i>
      */
-    int pixFindLargestRectangle(Pix pixs, int polarity, Box.ByReference pbox[], String debugfile);
+    int pixFindLargestRectangle(Pix pixs, int polarity, PointerByReference pbox, String debugfile);
 
     /**
      * Original signature :
      * <code>l_int32 pixFindLargestRectangle(PIX*, l_int32, BOX**, const char*)</code><br>
      * <i>native declaration : allheaders.h:1968</i>
      */
-    int pixFindLargestRectangle(Pix pixs, int polarity, Box.ByReference pbox[], Pointer debugfile);
+    int pixFindLargestRectangle(Pix pixs, int polarity, PointerByReference pbox, Pointer debugfile);
 
     /**
      * Original signature : <code>PIX* pixDilate(PIX*, PIX*, SEL*)</code><br>
@@ -7093,14 +7093,14 @@ public interface Leptonica extends Library, ILeptonica {
      * <code>PIX* pixMorphSequenceByComponent(PIX*, const char*, l_int32, l_int32, l_int32, BOXA**)</code><br>
      * <i>native declaration : allheaders.h:2018</i>
      */
-    Pix pixMorphSequenceByComponent(Pix pixs, String sequence, int connectivity, int minw, int minh, Boxa.ByReference pboxa[]);
+    Pix pixMorphSequenceByComponent(Pix pixs, String sequence, int connectivity, int minw, int minh, PointerByReference pboxa);
 
     /**
      * Original signature :
      * <code>PIX* pixMorphSequenceByComponent(PIX*, const char*, l_int32, l_int32, l_int32, BOXA**)</code><br>
      * <i>native declaration : allheaders.h:2018</i>
      */
-    Pix pixMorphSequenceByComponent(Pix pixs, Pointer sequence, int connectivity, int minw, int minh, Boxa.ByReference pboxa[]);
+    Pix pixMorphSequenceByComponent(Pix pixs, Pointer sequence, int connectivity, int minw, int minh, PointerByReference pboxa);
 
     /**
      * Original signature :
@@ -7114,14 +7114,14 @@ public interface Leptonica extends Library, ILeptonica {
      * <code>PIX* pixMorphSequenceByRegion(PIX*, PIX*, const char*, l_int32, l_int32, l_int32, BOXA**)</code><br>
      * <i>native declaration : allheaders.h:2022</i>
      */
-    Pix pixMorphSequenceByRegion(Pix pixs, Pix pixm, String sequence, int connectivity, int minw, int minh, Boxa.ByReference pboxa[]);
+    Pix pixMorphSequenceByRegion(Pix pixs, Pix pixm, String sequence, int connectivity, int minw, int minh, PointerByReference pboxa);
 
     /**
      * Original signature :
      * <code>PIX* pixMorphSequenceByRegion(PIX*, PIX*, const char*, l_int32, l_int32, l_int32, BOXA**)</code><br>
      * <i>native declaration : allheaders.h:2022</i>
      */
-    Pix pixMorphSequenceByRegion(Pix pixs, Pix pixm, Pointer sequence, int connectivity, int minw, int minh, Boxa.ByReference pboxa[]);
+    Pix pixMorphSequenceByRegion(Pix pixs, Pix pixm, Pointer sequence, int connectivity, int minw, int minh, PointerByReference pboxa);
 
     /**
      * Original signature :
@@ -7384,7 +7384,7 @@ public interface Leptonica extends Library, ILeptonica {
      * Original signature : <code>void numaDestroy(NUMA**)</code><br>
      * <i>native declaration : allheaders.h:2098</i>
      */
-    void numaDestroy(Numa.ByReference pna[]);
+    void numaDestroy(PointerByReference pna);
 
     /**
      * Original signature : <code>NUMA* numaCopy(NUMA*)</code><br>
@@ -7576,7 +7576,7 @@ public interface Leptonica extends Library, ILeptonica {
      * Original signature : <code>void numaaDestroy(NUMAA**)</code><br>
      * <i>native declaration : allheaders.h:2156</i>
      */
-    void numaaDestroy(Numaa.ByReference pnaa[]);
+    void numaaDestroy(PointerByReference pnaa);
 
     /**
      * Original signature :
@@ -7614,7 +7614,7 @@ public interface Leptonica extends Library, ILeptonica {
      * Original signature : <code>NUMA** numaaGetPtrArray(NUMAA*)</code><br>
      * <i>native declaration : allheaders.h:2168</i>
      */
-    Numa.ByReference[] numaaGetPtrArray(Numaa naa);
+    PointerByReference numaaGetPtrArray(Numaa naa);
 
     /**
      * Original signature :
@@ -7681,7 +7681,7 @@ public interface Leptonica extends Library, ILeptonica {
      * Original signature : <code>void numa2dDestroy(NUMA2D**)</code><br>
      * <i>native declaration : allheaders.h:2188</i>
      */
-    void numa2dDestroy(Numa2d.ByReference pna2d[]);
+    void numa2dDestroy(PointerByReference pna2d);
 
     /**
      * Original signature :
@@ -7729,7 +7729,7 @@ public interface Leptonica extends Library, ILeptonica {
      * Original signature : <code>void numaHashDestroy(NUMAHASH**)</code><br>
      * <i>native declaration : allheaders.h:2202</i>
      */
-    void numaHashDestroy(NumaHash.ByReference pnahash[]);
+    void numaHashDestroy(PointerByReference pnahash);
 
     /**
      * Original signature :
@@ -7962,14 +7962,14 @@ public interface Leptonica extends Library, ILeptonica {
      * <code>l_int32 numaInterpolateEqxInterval(l_float32, l_float32, NUMA*, l_int32, l_float32, l_float32, l_int32, NUMA**, NUMA**)</code><br>
      * <i>native declaration : allheaders.h:2270</i>
      */
-    int numaInterpolateEqxInterval(float startx, float deltax, Numa nasy, int type, float x0, float x1, int npts, Numa.ByReference pnax[], Numa.ByReference pnay[]);
+    int numaInterpolateEqxInterval(float startx, float deltax, Numa nasy, int type, float x0, float x1, int npts, PointerByReference pnax, PointerByReference pnay);
 
     /**
      * Original signature :
      * <code>l_int32 numaInterpolateArbxInterval(NUMA*, NUMA*, l_int32, l_float32, l_float32, l_int32, NUMA**, NUMA**)</code><br>
      * <i>native declaration : allheaders.h:2272</i>
      */
-    int numaInterpolateArbxInterval(Numa nax, Numa nay, int type, float x0, float x1, int npts, Numa.ByReference pnadx[], Numa.ByReference pnady[]);
+    int numaInterpolateArbxInterval(Numa nax, Numa nay, int type, float x0, float x1, int npts, PointerByReference pnadx, PointerByReference pnady);
 
     /**
      * Original signature :
@@ -7983,7 +7983,7 @@ public interface Leptonica extends Library, ILeptonica {
      * <code>l_int32 numaDifferentiateInterval(NUMA*, NUMA*, l_float32, l_float32, l_int32, NUMA**, NUMA**)</code><br>
      * <i>native declaration : allheaders.h:2276</i>
      */
-    int numaDifferentiateInterval(Numa nax, Numa nay, float x0, float x1, int npts, Numa.ByReference pnadx[], Numa.ByReference pnady[]);
+    int numaDifferentiateInterval(Numa nax, Numa nay, float x0, float x1, int npts, PointerByReference pnadx, PointerByReference pnady);
 
     /**
      * Original signature :
@@ -7997,7 +7997,7 @@ public interface Leptonica extends Library, ILeptonica {
      * <code>l_int32 numaSortGeneral(NUMA*, NUMA**, NUMA**, NUMA**, l_int32, l_int32)</code><br>
      * <i>native declaration : allheaders.h:2280</i>
      */
-    int numaSortGeneral(Numa na, Numa.ByReference pnasort[], Numa.ByReference pnaindex[], Numa.ByReference pnainvert[], int sortorder, int sorttype);
+    int numaSortGeneral(Numa na, PointerByReference pnasort, PointerByReference pnaindex, PointerByReference pnainvert, int sortorder, int sorttype);
 
     /**
      * Original signature :
@@ -8064,7 +8064,7 @@ public interface Leptonica extends Library, ILeptonica {
      * <code>l_int32 numaSortPair(NUMA*, NUMA*, l_int32, NUMA**, NUMA**)</code><br>
      * <i>native declaration : allheaders.h:2300</i>
      */
-    int numaSortPair(Numa nax, Numa nay, int sortorder, Numa.ByReference pnasx[], Numa.ByReference pnasy[]);
+    int numaSortPair(Numa nax, Numa nay, int sortorder, PointerByReference pnasx, PointerByReference pnasy);
 
     /**
      * Original signature : <code>NUMA* numaInvertMap(NUMA*)</code><br>
@@ -8177,7 +8177,7 @@ public interface Leptonica extends Library, ILeptonica {
      * <code>l_int32 numaWindowedStats(NUMA*, l_int32, NUMA**, NUMA**, NUMA**, NUMA**)</code><br>
      * <i>native declaration : allheaders.h:2334</i>
      */
-    int numaWindowedStats(Numa nas, int wc, Numa.ByReference pnam[], Numa.ByReference pnams[], Numa.ByReference pnav[], Numa.ByReference pnarv[]);
+    int numaWindowedStats(Numa nas, int wc, PointerByReference pnam, PointerByReference pnams, PointerByReference pnav, PointerByReference pnarv);
 
     /**
      * Original signature :
@@ -8198,7 +8198,7 @@ public interface Leptonica extends Library, ILeptonica {
      * <code>l_int32 numaWindowedVariance(NUMA*, NUMA*, NUMA**, NUMA**)</code><br>
      * <i>native declaration : allheaders.h:2340</i>
      */
-    int numaWindowedVariance(Numa nam, Numa nams, Numa.ByReference pnav[], Numa.ByReference pnarv[]);
+    int numaWindowedVariance(Numa nam, Numa nams, PointerByReference pnav, PointerByReference pnarv);
 
     /**
      * Original signature : <code>NUMA* numaConvertToInt(NUMA*)</code><br>
@@ -8246,14 +8246,14 @@ public interface Leptonica extends Library, ILeptonica {
      * <code>l_int32 numaGetStatsUsingHistogram(NUMA*, l_int32, l_float32*, l_float32*, l_float32*, l_float32*, l_float32*, l_float32, l_float32*, NUMA**)</code><br>
      * <i>native declaration : allheaders.h:2354</i>
      */
-    int numaGetStatsUsingHistogram(Numa na, int maxbins, FloatBuffer pmin, FloatBuffer pmax, FloatBuffer pmean, FloatBuffer pvariance, FloatBuffer pmedian, float rank, FloatBuffer prval, Numa.ByReference phisto[]);
+    int numaGetStatsUsingHistogram(Numa na, int maxbins, FloatBuffer pmin, FloatBuffer pmax, FloatBuffer pmean, FloatBuffer pvariance, FloatBuffer pmedian, float rank, FloatBuffer prval, PointerByReference phisto);
 
     /**
      * Original signature :
      * <code>l_int32 numaGetStatsUsingHistogram(NUMA*, l_int32, l_float32*, l_float32*, l_float32*, l_float32*, l_float32*, l_float32, l_float32*, NUMA**)</code><br>
      * <i>native declaration : allheaders.h:2354</i>
      */
-    int numaGetStatsUsingHistogram(Numa na, int maxbins, FloatByReference pmin, FloatByReference pmax, FloatByReference pmean, FloatByReference pvariance, FloatByReference pmedian, float rank, FloatByReference prval, Numa.ByReference phisto[]);
+    int numaGetStatsUsingHistogram(Numa na, int maxbins, FloatByReference pmin, FloatByReference pmax, FloatByReference pmean, FloatByReference pvariance, FloatByReference pmedian, float rank, FloatByReference prval, PointerByReference phisto);
 
     /**
      * Original signature :
@@ -8274,7 +8274,7 @@ public interface Leptonica extends Library, ILeptonica {
      * <code>l_int32 numaMakeRankFromHistogram(l_float32, l_float32, NUMA*, l_int32, NUMA**, NUMA**)</code><br>
      * <i>native declaration : allheaders.h:2360</i>
      */
-    int numaMakeRankFromHistogram(float startx, float deltax, Numa nasy, int npts, Numa.ByReference pnax[], Numa.ByReference pnay[]);
+    int numaMakeRankFromHistogram(float startx, float deltax, Numa nasy, int npts, PointerByReference pnax, PointerByReference pnay);
 
     /**
      * Original signature :
@@ -8295,28 +8295,28 @@ public interface Leptonica extends Library, ILeptonica {
      * <code>l_int32 numaDiscretizeRankAndIntensity(NUMA*, l_int32, NUMA**, NUMA**, NUMA**, NUMA**)</code><br>
      * <i>native declaration : allheaders.h:2366</i>
      */
-    int numaDiscretizeRankAndIntensity(Numa na, int nbins, Numa.ByReference pnarbin[], Numa.ByReference pnam[], Numa.ByReference pnar[], Numa.ByReference pnabb[]);
+    int numaDiscretizeRankAndIntensity(Numa na, int nbins, PointerByReference pnarbin, PointerByReference pnam, PointerByReference pnar, PointerByReference pnabb);
 
     /**
      * Original signature :
      * <code>l_int32 numaGetRankBinValues(NUMA*, l_int32, NUMA**, NUMA**)</code><br>
      * <i>native declaration : allheaders.h:2368</i>
      */
-    int numaGetRankBinValues(Numa na, int nbins, Numa.ByReference pnarbin[], Numa.ByReference pnam[]);
+    int numaGetRankBinValues(Numa na, int nbins, PointerByReference pnarbin, PointerByReference pnam);
 
     /**
      * Original signature :
      * <code>l_int32 numaSplitDistribution(NUMA*, l_float32, l_int32*, l_float32*, l_float32*, l_float32*, l_float32*, NUMA**)</code><br>
      * <i>native declaration : allheaders.h:2370</i>
      */
-    int numaSplitDistribution(Numa na, float scorefract, IntBuffer psplitindex, FloatBuffer pave1, FloatBuffer pave2, FloatBuffer pnum1, FloatBuffer pnum2, Numa.ByReference pnascore[]);
+    int numaSplitDistribution(Numa na, float scorefract, IntBuffer psplitindex, FloatBuffer pave1, FloatBuffer pave2, FloatBuffer pnum1, FloatBuffer pnum2, PointerByReference pnascore);
 
     /**
      * Original signature :
      * <code>l_int32 numaSplitDistribution(NUMA*, l_float32, l_int32*, l_float32*, l_float32*, l_float32*, l_float32*, NUMA**)</code><br>
      * <i>native declaration : allheaders.h:2370</i>
      */
-    int numaSplitDistribution(Numa na, float scorefract, IntByReference psplitindex, FloatByReference pave1, FloatByReference pave2, FloatByReference pnum1, FloatByReference pnum2, Numa.ByReference pnascore[]);
+    int numaSplitDistribution(Numa na, float scorefract, IntByReference psplitindex, FloatByReference pave1, FloatByReference pave2, FloatByReference pnum1, FloatByReference pnum2, PointerByReference pnascore);
 
     /**
      * Original signature :
@@ -8386,35 +8386,35 @@ public interface Leptonica extends Library, ILeptonica {
      * <code>l_int32 pixGetRegionsBinary(PIX*, PIX**, PIX**, PIX**, l_int32)</code><br>
      * <i>native declaration : allheaders.h:2390</i>
      */
-    int pixGetRegionsBinary(Pix pixs, Pix.ByReference ppixhm[], Pix.ByReference ppixtm[], Pix.ByReference ppixtb[], int debug);
+    int pixGetRegionsBinary(Pix pixs, PointerByReference ppixhm, PointerByReference ppixtm, PointerByReference ppixtb, int debug);
 
     /**
      * Original signature :
      * <code>PIX* pixGenHalftoneMask(PIX*, PIX**, l_int32*, l_int32)</code><br>
      * <i>native declaration : allheaders.h:2392</i>
      */
-    Pix pixGenHalftoneMask(Pix pixs, Pix.ByReference ppixtext[], IntBuffer phtfound, int debug);
+    Pix pixGenHalftoneMask(Pix pixs, PointerByReference ppixtext, IntBuffer phtfound, int debug);
 
     /**
      * Original signature :
      * <code>PIX* pixGenHalftoneMask(PIX*, PIX**, l_int32*, l_int32)</code><br>
      * <i>native declaration : allheaders.h:2392</i>
      */
-    Pix pixGenHalftoneMask(Pix pixs, Pix.ByReference ppixtext[], IntByReference phtfound, int debug);
+    Pix pixGenHalftoneMask(Pix pixs, PointerByReference ppixtext, IntByReference phtfound, int debug);
 
     /**
      * Original signature :
      * <code>PIX* pixGenTextlineMask(PIX*, PIX**, l_int32*, l_int32)</code><br>
      * <i>native declaration : allheaders.h:2394</i>
      */
-    Pix pixGenTextlineMask(Pix pixs, Pix.ByReference ppixvws[], IntBuffer ptlfound, int debug);
+    Pix pixGenTextlineMask(Pix pixs, PointerByReference ppixvws, IntBuffer ptlfound, int debug);
 
     /**
      * Original signature :
      * <code>PIX* pixGenTextlineMask(PIX*, PIX**, l_int32*, l_int32)</code><br>
      * <i>native declaration : allheaders.h:2394</i>
      */
-    Pix pixGenTextlineMask(Pix pixs, Pix.ByReference ppixvws[], IntByReference ptlfound, int debug);
+    Pix pixGenTextlineMask(Pix pixs, PointerByReference ppixvws, IntByReference ptlfound, int debug);
 
     /**
      * Original signature :
@@ -8435,14 +8435,14 @@ public interface Leptonica extends Library, ILeptonica {
      * <code>l_int32 pixSplitIntoCharacters(PIX*, l_int32, l_int32, BOXA**, PIXA**, PIX**)</code><br>
      * <i>native declaration : allheaders.h:2400</i>
      */
-    int pixSplitIntoCharacters(Pix pixs, int minw, int minh, Boxa.ByReference pboxa[], Pixa.ByReference ppixa[], Pix.ByReference ppixdebug[]);
+    int pixSplitIntoCharacters(Pix pixs, int minw, int minh, PointerByReference pboxa, PointerByReference ppixa, PointerByReference ppixdebug);
 
     /**
      * Original signature :
      * <code>BOXA* pixSplitComponentWithProfile(PIX*, l_int32, l_int32, PIX**)</code><br>
      * <i>native declaration : allheaders.h:2402</i>
      */
-    Boxa pixSplitComponentWithProfile(Pix pixs, int delta, int mindel, Pix.ByReference ppixdebug[]);
+    Boxa pixSplitComponentWithProfile(Pix pixs, int delta, int mindel, PointerByReference ppixdebug);
 
     /**
      * Original signature :
@@ -8470,7 +8470,7 @@ public interface Leptonica extends Library, ILeptonica {
      * <code>l_int32 addColorizedGrayToCmap(PIXCMAP*, l_int32, l_int32, l_int32, l_int32, NUMA**)</code><br>
      * <i>native declaration : allheaders.h:2410</i>
      */
-    int addColorizedGrayToCmap(PixColormap cmap, int type, int rval, int gval, int bval, Numa.ByReference pna[]);
+    int addColorizedGrayToCmap(PixColormap cmap, int type, int rval, int gval, int bval, PointerByReference pna);
 
     /**
      * Original signature :
@@ -8582,70 +8582,70 @@ public interface Leptonica extends Library, ILeptonica {
      * <code>l_int32 convertToPdf(const char*, l_int32, l_int32, const char*, l_int32, l_int32, l_int32, const char*, L_PDF_DATA**, l_int32)</code><br>
      * <i>native declaration : allheaders.h:2442</i>
      */
-    int convertToPdf(String filein, int type, int quality, String fileout, int x, int y, int res, String title, net.sourceforge.lept4j.L_Pdf_Data.ByReference plpd[], int position);
+    int convertToPdf(String filein, int type, int quality, String fileout, int x, int y, int res, String title, PointerByReference plpd, int position);
 
     /**
      * Original signature :
      * <code>l_int32 convertToPdf(const char*, l_int32, l_int32, const char*, l_int32, l_int32, l_int32, const char*, L_PDF_DATA**, l_int32)</code><br>
      * <i>native declaration : allheaders.h:2442</i>
      */
-    int convertToPdf(Pointer filein, int type, int quality, Pointer fileout, int x, int y, int res, Pointer title, net.sourceforge.lept4j.L_Pdf_Data.ByReference plpd[], int position);
+    int convertToPdf(Pointer filein, int type, int quality, Pointer fileout, int x, int y, int res, Pointer title, PointerByReference plpd, int position);
 
     /**
      * Original signature :
      * <code>l_int32 convertImageDataToPdf(l_uint8*, size_t, l_int32, l_int32, const char*, l_int32, l_int32, l_int32, const char*, L_PDF_DATA**, l_int32)</code><br>
      * <i>native declaration : allheaders.h:2444</i>
      */
-    int convertImageDataToPdf(java.nio.ByteBuffer imdata, NativeSize size, int type, int quality, String fileout, int x, int y, int res, String title, net.sourceforge.lept4j.L_Pdf_Data.ByReference plpd[], int position);
+    int convertImageDataToPdf(java.nio.ByteBuffer imdata, NativeSize size, int type, int quality, String fileout, int x, int y, int res, String title, PointerByReference plpd, int position);
 
     /**
      * Original signature :
      * <code>l_int32 convertImageDataToPdf(l_uint8*, size_t, l_int32, l_int32, const char*, l_int32, l_int32, l_int32, const char*, L_PDF_DATA**, l_int32)</code><br>
      * <i>native declaration : allheaders.h:2444</i>
      */
-    int convertImageDataToPdf(Pointer imdata, NativeSize size, int type, int quality, Pointer fileout, int x, int y, int res, Pointer title, net.sourceforge.lept4j.L_Pdf_Data.ByReference plpd[], int position);
+    int convertImageDataToPdf(Pointer imdata, NativeSize size, int type, int quality, Pointer fileout, int x, int y, int res, Pointer title, PointerByReference plpd, int position);
 
     /**
      * Original signature :
      * <code>l_int32 convertToPdfData(const char*, l_int32, l_int32, l_uint8**, size_t*, l_int32, l_int32, l_int32, const char*, L_PDF_DATA**, l_int32)</code><br>
      * <i>native declaration : allheaders.h:2446</i>
      */
-    int convertToPdfData(String filein, int type, int quality, PointerByReference pdata, NativeSizeByReference pnbytes, int x, int y, int res, String title, net.sourceforge.lept4j.L_Pdf_Data.ByReference plpd[], int position);
+    int convertToPdfData(String filein, int type, int quality, PointerByReference pdata, NativeSizeByReference pnbytes, int x, int y, int res, String title, PointerByReference plpd, int position);
 
     /**
      * Original signature :
      * <code>l_int32 convertToPdfData(const char*, l_int32, l_int32, l_uint8**, size_t*, l_int32, l_int32, l_int32, const char*, L_PDF_DATA**, l_int32)</code><br>
      * <i>native declaration : allheaders.h:2446</i>
      */
-    int convertToPdfData(Pointer filein, int type, int quality, PointerByReference pdata, NativeSizeByReference pnbytes, int x, int y, int res, Pointer title, net.sourceforge.lept4j.L_Pdf_Data.ByReference plpd[], int position);
+    int convertToPdfData(Pointer filein, int type, int quality, PointerByReference pdata, NativeSizeByReference pnbytes, int x, int y, int res, Pointer title, PointerByReference plpd, int position);
 
     /**
      * Original signature :
      * <code>l_int32 convertImageDataToPdfData(l_uint8*, size_t, l_int32, l_int32, l_uint8**, size_t*, l_int32, l_int32, l_int32, const char*, L_PDF_DATA**, l_int32)</code><br>
      * <i>native declaration : allheaders.h:2448</i>
      */
-    int convertImageDataToPdfData(java.nio.ByteBuffer imdata, NativeSize size, int type, int quality, PointerByReference pdata, NativeSizeByReference pnbytes, int x, int y, int res, String title, net.sourceforge.lept4j.L_Pdf_Data.ByReference plpd[], int position);
+    int convertImageDataToPdfData(java.nio.ByteBuffer imdata, NativeSize size, int type, int quality, PointerByReference pdata, NativeSizeByReference pnbytes, int x, int y, int res, String title, PointerByReference plpd, int position);
 
     /**
      * Original signature :
      * <code>l_int32 convertImageDataToPdfData(l_uint8*, size_t, l_int32, l_int32, l_uint8**, size_t*, l_int32, l_int32, l_int32, const char*, L_PDF_DATA**, l_int32)</code><br>
      * <i>native declaration : allheaders.h:2448</i>
      */
-    int convertImageDataToPdfData(Pointer imdata, NativeSize size, int type, int quality, PointerByReference pdata, NativeSizeByReference pnbytes, int x, int y, int res, Pointer title, net.sourceforge.lept4j.L_Pdf_Data.ByReference plpd[], int position);
+    int convertImageDataToPdfData(Pointer imdata, NativeSize size, int type, int quality, PointerByReference pdata, NativeSizeByReference pnbytes, int x, int y, int res, Pointer title, PointerByReference plpd, int position);
 
     /**
      * Original signature :
      * <code>l_int32 pixConvertToPdf(PIX*, l_int32, l_int32, const char*, l_int32, l_int32, l_int32, const char*, L_PDF_DATA**, l_int32)</code><br>
      * <i>native declaration : allheaders.h:2450</i>
      */
-    int pixConvertToPdf(Pix pix, int type, int quality, String fileout, int x, int y, int res, String title, net.sourceforge.lept4j.L_Pdf_Data.ByReference plpd[], int position);
+    int pixConvertToPdf(Pix pix, int type, int quality, String fileout, int x, int y, int res, String title, PointerByReference plpd, int position);
 
     /**
      * Original signature :
      * <code>l_int32 pixConvertToPdf(PIX*, l_int32, l_int32, const char*, l_int32, l_int32, l_int32, const char*, L_PDF_DATA**, l_int32)</code><br>
      * <i>native declaration : allheaders.h:2450</i>
      */
-    int pixConvertToPdf(Pix pix, int type, int quality, Pointer fileout, int x, int y, int res, Pointer title, net.sourceforge.lept4j.L_Pdf_Data.ByReference plpd[], int position);
+    int pixConvertToPdf(Pix pix, int type, int quality, Pointer fileout, int x, int y, int res, Pointer title, PointerByReference plpd, int position);
 
     /**
      * Original signature :
@@ -8750,14 +8750,14 @@ public interface Leptonica extends Library, ILeptonica {
      * <code>l_int32 pixConvertToPdfData(PIX*, l_int32, l_int32, l_uint8**, size_t*, l_int32, l_int32, l_int32, const char*, L_PDF_DATA**, l_int32)</code><br>
      * <i>native declaration : allheaders.h:2478</i>
      */
-    int pixConvertToPdfData(Pix pix, int type, int quality, PointerByReference pdata, NativeSizeByReference pnbytes, int x, int y, int res, String title, net.sourceforge.lept4j.L_Pdf_Data.ByReference plpd[], int position);
+    int pixConvertToPdfData(Pix pix, int type, int quality, PointerByReference pdata, NativeSizeByReference pnbytes, int x, int y, int res, String title, PointerByReference plpd, int position);
 
     /**
      * Original signature :
      * <code>l_int32 pixConvertToPdfData(PIX*, l_int32, l_int32, l_uint8**, size_t*, l_int32, l_int32, l_int32, const char*, L_PDF_DATA**, l_int32)</code><br>
      * <i>native declaration : allheaders.h:2478</i>
      */
-    int pixConvertToPdfData(Pix pix, int type, int quality, PointerByReference pdata, NativeSizeByReference pnbytes, int x, int y, int res, Pointer title, net.sourceforge.lept4j.L_Pdf_Data.ByReference plpd[], int position);
+    int pixConvertToPdfData(Pix pix, int type, int quality, PointerByReference pdata, NativeSizeByReference pnbytes, int x, int y, int res, Pointer title, PointerByReference plpd, int position);
 
     /**
      * Original signature :
@@ -8771,14 +8771,14 @@ public interface Leptonica extends Library, ILeptonica {
      * <code>l_int32 l_generateCIDataForPdf(const char*, PIX*, l_int32, L_COMP_DATA**)</code><br>
      * <i>native declaration : allheaders.h:2482</i>
      */
-    int l_generateCIDataForPdf(String fname, Pix pix, int quality, L_Compressed_Data.ByReference pcid[]);
+    int l_generateCIDataForPdf(String fname, Pix pix, int quality, PointerByReference pcid);
 
     /**
      * Original signature :
      * <code>l_int32 l_generateCIDataForPdf(const char*, PIX*, l_int32, L_COMP_DATA**)</code><br>
      * <i>native declaration : allheaders.h:2482</i>
      */
-    int l_generateCIDataForPdf(Pointer fname, Pix pix, int quality, L_Compressed_Data.ByReference pcid[]);
+    int l_generateCIDataForPdf(Pointer fname, Pix pix, int quality, PointerByReference pcid);
 
     /**
      * Original signature :
@@ -8799,21 +8799,21 @@ public interface Leptonica extends Library, ILeptonica {
      * <code>l_int32 l_generateCIData(const char*, l_int32, l_int32, l_int32, L_COMP_DATA**)</code><br>
      * <i>native declaration : allheaders.h:2488</i>
      */
-    int l_generateCIData(String fname, int type, int quality, int ascii85, L_Compressed_Data.ByReference pcid[]);
+    int l_generateCIData(String fname, int type, int quality, int ascii85, PointerByReference pcid);
 
     /**
      * Original signature :
      * <code>l_int32 l_generateCIData(const char*, l_int32, l_int32, l_int32, L_COMP_DATA**)</code><br>
      * <i>native declaration : allheaders.h:2488</i>
      */
-    int l_generateCIData(Pointer fname, int type, int quality, int ascii85, L_Compressed_Data.ByReference pcid[]);
+    int l_generateCIData(Pointer fname, int type, int quality, int ascii85, PointerByReference pcid);
 
     /**
      * Original signature :
      * <code>l_int32 pixGenerateCIData(PIX*, l_int32, l_int32, l_int32, L_COMP_DATA**)</code><br>
      * <i>native declaration : allheaders.h:2490</i>
      */
-    int pixGenerateCIData(Pix pixs, int type, int quality, int ascii85, L_Compressed_Data.ByReference pcid[]);
+    int pixGenerateCIData(Pix pixs, int type, int quality, int ascii85, PointerByReference pcid);
 
     /**
      * Original signature :
@@ -8840,7 +8840,7 @@ public interface Leptonica extends Library, ILeptonica {
      * Original signature : <code>void l_CIDataDestroy(L_COMP_DATA**)</code><br>
      * <i>native declaration : allheaders.h:2498</i>
      */
-    void l_CIDataDestroy(L_Compressed_Data.ByReference pcid[]);
+    void l_CIDataDestroy(PointerByReference pcid);
 
     /**
      * Original signature : <code>void l_pdfSetG4ImageMask(l_int32)</code><br>
@@ -8905,7 +8905,7 @@ public interface Leptonica extends Library, ILeptonica {
      * Original signature : <code>void pixDestroy(PIX**)</code><br>
      * <i>native declaration : allheaders.h:2518</i>
      */
-    void pixDestroy(Pix.ByReference ppix[]);
+    void pixDestroy(PointerByReference ppix);
 
     /**
      * Original signature : <code>PIX* pixCopy(PIX*, PIX*)</code><br>
@@ -8937,14 +8937,14 @@ public interface Leptonica extends Library, ILeptonica {
      * <code>l_int32 pixTransferAllData(PIX*, PIX**, l_int32, l_int32)</code><br>
      * <i>native declaration : allheaders.h:2528</i>
      */
-    int pixTransferAllData(Pix pixd, Pix.ByReference ppixs[], int copytext, int copyformat);
+    int pixTransferAllData(Pix pixd, PointerByReference ppixs, int copytext, int copyformat);
 
     /**
      * Original signature :
      * <code>l_int32 pixSwapAndDestroy(PIX**, PIX**)</code><br>
      * <i>native declaration : allheaders.h:2530</i>
      */
-    int pixSwapAndDestroy(Pix.ByReference ppixd[], Pix.ByReference ppixs[]);
+    int pixSwapAndDestroy(PointerByReference ppixd, PointerByReference ppixs);
 
     /**
      * Original signature : <code>l_int32 pixGetWidth(PIX*)</code><br>
@@ -9896,14 +9896,14 @@ public interface Leptonica extends Library, ILeptonica {
 //     * <code>l_int32 pixGetColorHistogram(PIX*, l_int32, NUMA**, NUMA**, NUMA**)</code><br>
 //     * <i>native declaration : allheaders.h:2812</i>
 //     */
-//    int pixGetColorHistogram(Pix pixs, int factor, Numa.ByReference pnar[], Numa.ByReference pnag[], Numa.ByReference pnab[]);
+//    int pixGetColorHistogram(Pix pixs, int factor, PointerByReference pnar, PointerByReference pnag, PointerByReference pnab);
 //
 //    /**
 //     * Original signature :
 //     * <code>l_int32 pixGetColorHistogramMasked(PIX*, PIX*, l_int32, l_int32, l_int32, NUMA**, NUMA**, NUMA**)</code><br>
 //     * <i>native declaration : allheaders.h:2814</i>
 //     */
-//    int pixGetColorHistogramMasked(Pix pixs, Pix pixm, int x, int y, int factor, Numa.ByReference pnar[], Numa.ByReference pnag[], Numa.ByReference pnab[]);
+//    int pixGetColorHistogramMasked(Pix pixs, Pix pixm, int x, int y, int factor, PointerByReference pnar, PointerByReference pnag, PointerByReference pnab);
 //
 //    /**
 //     * Original signature :
@@ -9945,14 +9945,14 @@ public interface Leptonica extends Library, ILeptonica {
 //     * <code>l_int32 pixGetRankValueMasked(PIX*, PIX*, l_int32, l_int32, l_int32, l_float32, l_float32*, NUMA**)</code><br>
 //     * <i>native declaration : allheaders.h:2826</i>
 //     */
-//    int pixGetRankValueMasked(Pix pixs, Pix pixm, int x, int y, int factor, float rank, FloatBuffer pval, Numa.ByReference pna[]);
+//    int pixGetRankValueMasked(Pix pixs, Pix pixm, int x, int y, int factor, float rank, FloatBuffer pval, PointerByReference pna);
 //
 //    /**
 //     * Original signature :
 //     * <code>l_int32 pixGetRankValueMasked(PIX*, PIX*, l_int32, l_int32, l_int32, l_float32, l_float32*, NUMA**)</code><br>
 //     * <i>native declaration : allheaders.h:2826</i>
 //     */
-//    int pixGetRankValueMasked(Pix pixs, Pix pixm, int x, int y, int factor, float rank, FloatByReference pval, Numa.ByReference pna[]);
+//    int pixGetRankValueMasked(Pix pixs, Pix pixm, int x, int y, int factor, float rank, FloatByReference pval, PointerByReference pna);
 //
 //    /**
 //     * Original signature :
@@ -9980,7 +9980,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     * <code>l_int32 pixGetAverageTiledRGB(PIX*, l_int32, l_int32, l_int32, PIX**, PIX**, PIX**)</code><br>
 //     * <i>native declaration : allheaders.h:2834</i>
 //     */
-//    int pixGetAverageTiledRGB(Pix pixs, int sx, int sy, int type, Pix.ByReference ppixr[], Pix.ByReference ppixg[], Pix.ByReference ppixb[]);
+//    int pixGetAverageTiledRGB(Pix pixs, int sx, int sy, int type, PointerByReference ppixr, PointerByReference ppixg, PointerByReference ppixb);
 //
 //    /**
 //     * Original signature :
@@ -9994,14 +9994,14 @@ public interface Leptonica extends Library, ILeptonica {
 //     * <code>l_int32 pixRowStats(PIX*, BOX*, NUMA**, NUMA**, NUMA**, NUMA**, NUMA**, NUMA**)</code><br>
 //     * <i>native declaration : allheaders.h:2838</i>
 //     */
-//    int pixRowStats(Pix pixs, Box box, Numa.ByReference pnamean[], Numa.ByReference pnamedian[], Numa.ByReference pnamode[], Numa.ByReference pnamodecount[], Numa.ByReference pnavar[], Numa.ByReference pnarootvar[]);
+//    int pixRowStats(Pix pixs, Box box, PointerByReference pnamean, PointerByReference pnamedian, PointerByReference pnamode, PointerByReference pnamodecount, PointerByReference pnavar, PointerByReference pnarootvar);
 //
 //    /**
 //     * Original signature :
 //     * <code>l_int32 pixColumnStats(PIX*, BOX*, NUMA**, NUMA**, NUMA**, NUMA**, NUMA**, NUMA**)</code><br>
 //     * <i>native declaration : allheaders.h:2840</i>
 //     */
-//    int pixColumnStats(Pix pixs, Box box, Numa.ByReference pnamean[], Numa.ByReference pnamedian[], Numa.ByReference pnamode[], Numa.ByReference pnamodecount[], Numa.ByReference pnavar[], Numa.ByReference pnarootvar[]);
+//    int pixColumnStats(Pix pixs, Box box, PointerByReference pnamean, PointerByReference pnamedian, PointerByReference pnamode, PointerByReference pnamodecount, PointerByReference pnavar, PointerByReference pnarootvar);
 //
 //    /**
 //     * Original signature :
@@ -10113,7 +10113,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     * <code>l_int32 pixaFindDimensions(PIXA*, NUMA**, NUMA**)</code><br>
 //     * <i>native declaration : allheaders.h:2872</i>
 //     */
-//    int pixaFindDimensions(Pixa pixa, Numa.ByReference pnaw[], Numa.ByReference pnah[]);
+//    int pixaFindDimensions(Pixa pixa, PointerByReference pnaw, PointerByReference pnah);
 //
 //    /**
 //     * Original signature :
@@ -10223,7 +10223,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     * <code>PIX* pixClipRectangle(PIX*, BOX*, BOX**)</code><br>
 //     * <i>native declaration : allheaders.h:2904</i>
 //     */
-//    Pix pixClipRectangle(Pix pixs, Box box, Box.ByReference pboxc[]);
+//    Pix pixClipRectangle(Pix pixs, Box box, PointerByReference pboxc);
 //
 //    /**
 //     * Original signature :
@@ -10237,7 +10237,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     * <code>l_int32 pixCropToMatch(PIX*, PIX*, PIX**, PIX**)</code><br>
 //     * <i>native declaration : allheaders.h:2908</i>
 //     */
-//    int pixCropToMatch(Pix pixs1, Pix pixs2, Pix.ByReference ppixd1[], Pix.ByReference ppixd2[]);
+//    int pixCropToMatch(Pix pixs1, Pix pixs2, PointerByReference ppixd1, PointerByReference ppixd2);
 //
 //    /**
 //     * Original signature :
@@ -10258,7 +10258,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     * <code>l_int32 pixClipToForeground(PIX*, PIX**, BOX**)</code><br>
 //     * <i>native declaration : allheaders.h:2914</i>
 //     */
-//    int pixClipToForeground(Pix pixs, Pix.ByReference ppixd[], Box.ByReference pbox[]);
+//    int pixClipToForeground(Pix pixs, PointerByReference ppixd, PointerByReference pbox);
 //
 //    /**
 //     * Original signature :
@@ -10272,7 +10272,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     * <code>l_int32 pixClipBoxToForeground(PIX*, BOX*, PIX**, BOX**)</code><br>
 //     * <i>native declaration : allheaders.h:2918</i>
 //     */
-//    int pixClipBoxToForeground(Pix pixs, Box boxs, Pix.ByReference ppixd[], Box.ByReference pboxd[]);
+//    int pixClipBoxToForeground(Pix pixs, Box boxs, PointerByReference ppixd, PointerByReference pboxd);
 //
 //    /**
 //     * Original signature :
@@ -10286,7 +10286,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     * <code>l_int32 pixClipBoxToEdges(PIX*, BOX*, l_int32, l_int32, l_int32, l_int32, PIX**, BOX**)</code><br>
 //     * <i>native declaration : allheaders.h:2922</i>
 //     */
-//    int pixClipBoxToEdges(Pix pixs, Box boxs, int lowthresh, int highthresh, int maxwidth, int factor, Pix.ByReference ppixd[], Box.ByReference pboxd[]);
+//    int pixClipBoxToEdges(Pix pixs, Box boxs, int lowthresh, int highthresh, int maxwidth, int factor, PointerByReference ppixd, PointerByReference pboxd);
 //
 //    /**
 //     * Original signature :
@@ -10328,21 +10328,21 @@ public interface Leptonica extends Library, ILeptonica {
 //     * <code>l_int32 pixWindowedVarianceOnLine(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, NUMA**)</code><br>
 //     * <i>native declaration : allheaders.h:2934</i>
 //     */
-//    int pixWindowedVarianceOnLine(Pix pixs, int dir, int loc, int c1, int c2, int size, Numa.ByReference pnad[]);
+//    int pixWindowedVarianceOnLine(Pix pixs, int dir, int loc, int c1, int c2, int size, PointerByReference pnad);
 //
 //    /**
 //     * Original signature :
 //     * <code>l_int32 pixMinMaxNearLine(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, NUMA**, NUMA**, l_float32*, l_float32*)</code><br>
 //     * <i>native declaration : allheaders.h:2936</i>
 //     */
-//    int pixMinMaxNearLine(Pix pixs, int x1, int y1, int x2, int y2, int dist, int direction, Numa.ByReference pnamin[], Numa.ByReference pnamax[], FloatBuffer pminave, FloatBuffer pmaxave);
+//    int pixMinMaxNearLine(Pix pixs, int x1, int y1, int x2, int y2, int dist, int direction, PointerByReference pnamin, PointerByReference pnamax, FloatBuffer pminave, FloatBuffer pmaxave);
 //
 //    /**
 //     * Original signature :
 //     * <code>l_int32 pixMinMaxNearLine(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, NUMA**, NUMA**, l_float32*, l_float32*)</code><br>
 //     * <i>native declaration : allheaders.h:2936</i>
 //     */
-//    int pixMinMaxNearLine(Pix pixs, int x1, int y1, int x2, int y2, int dist, int direction, Numa.ByReference pnamin[], Numa.ByReference pnamax[], FloatByReference pminave, FloatByReference pmaxave);
+//    int pixMinMaxNearLine(Pix pixs, int x1, int y1, int x2, int y2, int dist, int direction, PointerByReference pnamin, PointerByReference pnamax, FloatByReference pminave, FloatByReference pmaxave);
 //
 //    /**
 //     * Original signature : <code>PIX* pixRankRowTransform(PIX*)</code><br>
@@ -10387,7 +10387,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     * Original signature : <code>void pixaDestroy(PIXA**)</code><br>
 //     * <i>native declaration : allheaders.h:2950</i>
 //     */
-//    void pixaDestroy(Pixa.ByReference ppixa[]);
+//    void pixaDestroy(PointerByReference ppixa);
 //
 //    /**
 //     * Original signature : <code>PIXA* pixaCopy(PIXA*, l_int32)</code><br>
@@ -10480,7 +10480,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     * Original signature : <code>PIX** pixaGetPixArray(PIXA*)</code><br>
 //     * <i>native declaration : allheaders.h:2978</i>
 //     */
-//    Pix.ByReference[] pixaGetPixArray(Pixa pixa);
+//    PointerByReference pixaGetPixArray(Pixa pixa);
 //
 //    /**
 //     * Original signature :
@@ -10536,7 +10536,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     * <code>l_int32 pixaRemovePixAndSave(PIXA*, l_int32, PIX**, BOX**)</code><br>
 //     * <i>native declaration : allheaders.h:2994</i>
 //     */
-//    int pixaRemovePixAndSave(Pixa pixa, int index, Pix.ByReference ppix[], Box.ByReference pbox[]);
+//    int pixaRemovePixAndSave(Pixa pixa, int index, PointerByReference ppix, PointerByReference pbox);
 //
 //    /**
 //     * Original signature :
@@ -10582,7 +10582,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     * Original signature : <code>void pixaaDestroy(PIXAA**)</code><br>
 //     * <i>native declaration : allheaders.h:3008</i>
 //     */
-//    void pixaaDestroy(Pixaa.ByReference ppaa[]);
+//    void pixaaDestroy(PointerByReference ppaa);
 //
 //    /**
 //     * Original signature :
@@ -10616,7 +10616,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     * <code>l_int32 pixaaGetCount(PIXAA*, NUMA**)</code><br>
 //     * <i>native declaration : allheaders.h:3018</i>
 //     */
-//    int pixaaGetCount(Pixaa paa, Numa.ByReference pna[]);
+//    int pixaaGetCount(Pixaa paa, PointerByReference pna);
 //
 //    /**
 //     * Original signature :
@@ -10755,7 +10755,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     * Original signature : <code>void pixaccDestroy(PIXACC**)</code><br>
 //     * <i>native declaration : allheaders.h:3060</i>
 //     */
-//    void pixaccDestroy(Pixacc.ByReference ppixacc[]);
+//    void pixaccDestroy(PointerByReference ppixacc);
 //
 //    /**
 //     * Original signature : <code>PIX* pixaccFinal(PIXACC*, l_int32)</code><br>
@@ -10912,14 +10912,14 @@ public interface Leptonica extends Library, ILeptonica {
 //     * <code>PIXA* pixaSort(PIXA*, l_int32, l_int32, NUMA**, l_int32)</code><br>
 //     * <i>native declaration : allheaders.h:3106</i>
 //     */
-//    Pixa pixaSort(Pixa pixas, int sorttype, int sortorder, Numa.ByReference pnaindex[], int copyflag);
+//    Pixa pixaSort(Pixa pixas, int sorttype, int sortorder, PointerByReference pnaindex, int copyflag);
 //
 //    /**
 //     * Original signature :
 //     * <code>PIXA* pixaBinSort(PIXA*, l_int32, l_int32, NUMA**, l_int32)</code><br>
 //     * <i>native declaration : allheaders.h:3108</i>
 //     */
-//    Pixa pixaBinSort(Pixa pixas, int sorttype, int sortorder, Numa.ByReference pnaindex[], int copyflag);
+//    Pixa pixaBinSort(Pixa pixas, int sorttype, int sortorder, PointerByReference pnaindex, int copyflag);
 //
 //    /**
 //     * Original signature :
@@ -10982,7 +10982,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     * <code>PIXA* pixaaFlattenToPixa(PIXAA*, NUMA**, l_int32)</code><br>
 //     * <i>native declaration : allheaders.h:3126</i>
 //     */
-//    Pixa pixaaFlattenToPixa(Pixaa paa, Numa.ByReference pnaindex[], int copyflag);
+//    Pixa pixaaFlattenToPixa(Pixaa paa, PointerByReference pnaindex, int copyflag);
 //
 //    /**
 //     * Original signature :
@@ -11043,14 +11043,14 @@ public interface Leptonica extends Library, ILeptonica {
 //     * <code>l_int32 pixaEqual(PIXA*, PIXA*, l_int32, NUMA**, l_int32*)</code><br>
 //     * <i>native declaration : allheaders.h:3144</i>
 //     */
-//    int pixaEqual(Pixa pixa1, Pixa pixa2, int maxdist, Numa.ByReference pnaindex[], IntBuffer psame);
+//    int pixaEqual(Pixa pixa1, Pixa pixa2, int maxdist, PointerByReference pnaindex, IntBuffer psame);
 //
 //    /**
 //     * Original signature :
 //     * <code>l_int32 pixaEqual(PIXA*, PIXA*, l_int32, NUMA**, l_int32*)</code><br>
 //     * <i>native declaration : allheaders.h:3144</i>
 //     */
-//    int pixaEqual(Pixa pixa1, Pixa pixa2, int maxdist, Numa.ByReference pnaindex[], IntByReference psame);
+//    int pixaEqual(Pixa pixa1, Pixa pixa2, int maxdist, PointerByReference pnaindex, IntByReference psame);
 //
 //    /**
 //     * Original signature :
@@ -11078,21 +11078,21 @@ public interface Leptonica extends Library, ILeptonica {
 //     * <code>PIX* pixaDisplayLinearly(PIXA*, l_int32, l_float32, l_int32, l_int32, l_int32, BOXA**)</code><br>
 //     * <i>native declaration : allheaders.h:3152</i>
 //     */
-//    Pix pixaDisplayLinearly(Pixa pixas, int direction, float scalefactor, int background, int spacing, int border, Boxa.ByReference pboxa[]);
+//    Pix pixaDisplayLinearly(Pixa pixas, int direction, float scalefactor, int background, int spacing, int border, PointerByReference pboxa);
 //
 //    /**
 //     * Original signature :
 //     * <code>PIX* pixaDisplayOnLattice(PIXA*, l_int32, l_int32, l_int32*, BOXA**)</code><br>
 //     * <i>native declaration : allheaders.h:3154</i>
 //     */
-//    Pix pixaDisplayOnLattice(Pixa pixa, int cellw, int cellh, IntBuffer pncols, Boxa.ByReference pboxa[]);
+//    Pix pixaDisplayOnLattice(Pixa pixa, int cellw, int cellh, IntBuffer pncols, PointerByReference pboxa);
 //
 //    /**
 //     * Original signature :
 //     * <code>PIX* pixaDisplayOnLattice(PIXA*, l_int32, l_int32, l_int32*, BOXA**)</code><br>
 //     * <i>native declaration : allheaders.h:3154</i>
 //     */
-//    Pix pixaDisplayOnLattice(Pixa pixa, int cellw, int cellh, IntByReference pncols, Boxa.ByReference pboxa[]);
+//    Pix pixaDisplayOnLattice(Pixa pixa, int cellw, int cellh, IntByReference pncols, PointerByReference pboxa);
 //
 //    /**
 //     * Original signature :
@@ -11368,7 +11368,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     * Original signature : <code>void pixcompDestroy(PIXC**)</code><br>
 //     * <i>native declaration : allheaders.h:3236</i>
 //     */
-//    void pixcompDestroy(PixComp.ByReference ppixc[]);
+//    void pixcompDestroy(PointerByReference ppixc);
 //
 //    /**
 //     * Original signature :
@@ -11428,7 +11428,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     * Original signature : <code>void pixacompDestroy(PIXAC**)</code><br>
 //     * <i>native declaration : allheaders.h:3254</i>
 //     */
-//    void pixacompDestroy(PixaComp.ByReference ppixac[]);
+//    void pixacompDestroy(PointerByReference ppixac);
 //
 //    /**
 //     * Original signature :
@@ -11714,7 +11714,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     * <code>l_int32 pixQuantizeIfFewColors(PIX*, l_int32, l_int32, l_int32, PIX**)</code><br>
 //     * <i>native declaration : allheaders.h:3334</i>
 //     */
-//    int pixQuantizeIfFewColors(Pix pixs, int maxcolors, int mingraycolors, int octlevel, Pix.ByReference ppixd[]);
+//    int pixQuantizeIfFewColors(Pix pixs, int maxcolors, int mingraycolors, int octlevel, PointerByReference ppixd);
 //
 //    /**
 //     * Original signature : <code>PIX* pixConvert16To8(PIX*, l_int32)</code><br>
@@ -11956,7 +11956,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     * Original signature : <code>void pixTilingDestroy(PIXTILING**)</code><br>
 //     * <i>native declaration : allheaders.h:3408</i>
 //     */
-//    void pixTilingDestroy(PixTiling.ByReference ppt[]);
+//    void pixTilingDestroy(PointerByReference ppt);
 //
 //    /**
 //     * Original signature :
@@ -12497,7 +12497,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     * Original signature : <code>void ptaDestroy(PTA**)</code><br>
 //     * <i>native declaration : allheaders.h:3558</i>
 //     */
-//    void ptaDestroy(Pta.ByReference ppta[]);
+//    void ptaDestroy(PointerByReference ppta);
 //
 //    /**
 //     * Original signature : <code>PTA* ptaCopy(PTA*)</code><br>
@@ -12589,7 +12589,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     * <code>l_int32 ptaGetArrays(PTA*, NUMA**, NUMA**)</code><br>
 //     * <i>native declaration : allheaders.h:3586</i>
 //     */
-//    int ptaGetArrays(Pta pta, Numa.ByReference pnax[], Numa.ByReference pnay[]);
+//    int ptaGetArrays(Pta pta, PointerByReference pnax, PointerByReference pnay);
 //
 //    /**
 //     * Original signature : <code>PTA* ptaRead(const char*)</code><br>
@@ -12627,7 +12627,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     * Original signature : <code>void ptaaDestroy(PTAA**)</code><br>
 //     * <i>native declaration : allheaders.h:3598</i>
 //     */
-//    void ptaaDestroy(Ptaa.ByReference pptaa[]);
+//    void ptaaDestroy(PointerByReference pptaa);
 //
 //    /**
 //     * Original signature :
@@ -12752,14 +12752,14 @@ public interface Leptonica extends Library, ILeptonica {
 //     * <code>PTA* ptaSort(PTA*, l_int32, l_int32, NUMA**)</code><br>
 //     * <i>native declaration : allheaders.h:3636</i>
 //     */
-//    Pta ptaSort(Pta ptas, int sorttype, int sortorder, Numa.ByReference pnaindex[]);
+//    Pta ptaSort(Pta ptas, int sorttype, int sortorder, PointerByReference pnaindex);
 //
 //    /**
 //     * Original signature :
 //     * <code>l_int32 ptaGetSortIndex(PTA*, l_int32, l_int32, NUMA**)</code><br>
 //     * <i>native declaration : allheaders.h:3638</i>
 //     */
-//    int ptaGetSortIndex(Pta ptas, int sorttype, int sortorder, Numa.ByReference pnaindex[]);
+//    int ptaGetSortIndex(Pta ptas, int sorttype, int sortorder, PointerByReference pnaindex);
 //
 //    /**
 //     * Original signature : <code>PTA* ptaSortByIndex(PTA*, NUMA*)</code><br>
@@ -12845,84 +12845,84 @@ public interface Leptonica extends Library, ILeptonica {
 //     * <code>l_int32 ptaGetLinearLSF(PTA*, l_float32*, l_float32*, NUMA**)</code><br>
 //     * <i>native declaration : allheaders.h:3664</i>
 //     */
-//    int ptaGetLinearLSF(Pta pta, FloatBuffer pa, FloatBuffer pb, Numa.ByReference pnafit[]);
+//    int ptaGetLinearLSF(Pta pta, FloatBuffer pa, FloatBuffer pb, PointerByReference pnafit);
 //
 //    /**
 //     * Original signature :
 //     * <code>l_int32 ptaGetLinearLSF(PTA*, l_float32*, l_float32*, NUMA**)</code><br>
 //     * <i>native declaration : allheaders.h:3664</i>
 //     */
-//    int ptaGetLinearLSF(Pta pta, FloatByReference pa, FloatByReference pb, Numa.ByReference pnafit[]);
+//    int ptaGetLinearLSF(Pta pta, FloatByReference pa, FloatByReference pb, PointerByReference pnafit);
 //
 //    /**
 //     * Original signature :
 //     * <code>l_int32 ptaGetQuadraticLSF(PTA*, l_float32*, l_float32*, l_float32*, NUMA**)</code><br>
 //     * <i>native declaration : allheaders.h:3666</i>
 //     */
-//    int ptaGetQuadraticLSF(Pta pta, FloatBuffer pa, FloatBuffer pb, FloatBuffer pc, Numa.ByReference pnafit[]);
+//    int ptaGetQuadraticLSF(Pta pta, FloatBuffer pa, FloatBuffer pb, FloatBuffer pc, PointerByReference pnafit);
 //
 //    /**
 //     * Original signature :
 //     * <code>l_int32 ptaGetQuadraticLSF(PTA*, l_float32*, l_float32*, l_float32*, NUMA**)</code><br>
 //     * <i>native declaration : allheaders.h:3666</i>
 //     */
-//    int ptaGetQuadraticLSF(Pta pta, FloatByReference pa, FloatByReference pb, FloatByReference pc, Numa.ByReference pnafit[]);
+//    int ptaGetQuadraticLSF(Pta pta, FloatByReference pa, FloatByReference pb, FloatByReference pc, PointerByReference pnafit);
 //
 //    /**
 //     * Original signature :
 //     * <code>l_int32 ptaGetCubicLSF(PTA*, l_float32*, l_float32*, l_float32*, l_float32*, NUMA**)</code><br>
 //     * <i>native declaration : allheaders.h:3668</i>
 //     */
-//    int ptaGetCubicLSF(Pta pta, FloatBuffer pa, FloatBuffer pb, FloatBuffer pc, FloatBuffer pd, Numa.ByReference pnafit[]);
+//    int ptaGetCubicLSF(Pta pta, FloatBuffer pa, FloatBuffer pb, FloatBuffer pc, FloatBuffer pd, PointerByReference pnafit);
 //
 //    /**
 //     * Original signature :
 //     * <code>l_int32 ptaGetCubicLSF(PTA*, l_float32*, l_float32*, l_float32*, l_float32*, NUMA**)</code><br>
 //     * <i>native declaration : allheaders.h:3668</i>
 //     */
-//    int ptaGetCubicLSF(Pta pta, FloatByReference pa, FloatByReference pb, FloatByReference pc, FloatByReference pd, Numa.ByReference pnafit[]);
+//    int ptaGetCubicLSF(Pta pta, FloatByReference pa, FloatByReference pb, FloatByReference pc, FloatByReference pd, PointerByReference pnafit);
 //
 //    /**
 //     * Original signature :
 //     * <code>l_int32 ptaGetQuarticLSF(PTA*, l_float32*, l_float32*, l_float32*, l_float32*, l_float32*, NUMA**)</code><br>
 //     * <i>native declaration : allheaders.h:3670</i>
 //     */
-//    int ptaGetQuarticLSF(Pta pta, FloatBuffer pa, FloatBuffer pb, FloatBuffer pc, FloatBuffer pd, FloatBuffer pe, Numa.ByReference pnafit[]);
+//    int ptaGetQuarticLSF(Pta pta, FloatBuffer pa, FloatBuffer pb, FloatBuffer pc, FloatBuffer pd, FloatBuffer pe, PointerByReference pnafit);
 //
 //    /**
 //     * Original signature :
 //     * <code>l_int32 ptaGetQuarticLSF(PTA*, l_float32*, l_float32*, l_float32*, l_float32*, l_float32*, NUMA**)</code><br>
 //     * <i>native declaration : allheaders.h:3670</i>
 //     */
-//    int ptaGetQuarticLSF(Pta pta, FloatByReference pa, FloatByReference pb, FloatByReference pc, FloatByReference pd, FloatByReference pe, Numa.ByReference pnafit[]);
+//    int ptaGetQuarticLSF(Pta pta, FloatByReference pa, FloatByReference pb, FloatByReference pc, FloatByReference pd, FloatByReference pe, PointerByReference pnafit);
 //
 //    /**
 //     * Original signature :
 //     * <code>l_int32 ptaNoisyLinearLSF(PTA*, l_float32, PTA**, l_float32*, l_float32*, l_float32*, NUMA**)</code><br>
 //     * <i>native declaration : allheaders.h:3672</i>
 //     */
-//    int ptaNoisyLinearLSF(Pta pta, float factor, Pta.ByReference pptad[], FloatBuffer pa, FloatBuffer pb, FloatBuffer pmederr, Numa.ByReference pnafit[]);
+//    int ptaNoisyLinearLSF(Pta pta, float factor, PointerByReference pptad, FloatBuffer pa, FloatBuffer pb, FloatBuffer pmederr, PointerByReference pnafit);
 //
 //    /**
 //     * Original signature :
 //     * <code>l_int32 ptaNoisyLinearLSF(PTA*, l_float32, PTA**, l_float32*, l_float32*, l_float32*, NUMA**)</code><br>
 //     * <i>native declaration : allheaders.h:3672</i>
 //     */
-//    int ptaNoisyLinearLSF(Pta pta, float factor, Pta.ByReference pptad[], FloatByReference pa, FloatByReference pb, FloatByReference pmederr, Numa.ByReference pnafit[]);
+//    int ptaNoisyLinearLSF(Pta pta, float factor, PointerByReference pptad, FloatByReference pa, FloatByReference pb, FloatByReference pmederr, PointerByReference pnafit);
 //
 //    /**
 //     * Original signature :
 //     * <code>l_int32 ptaNoisyQuadraticLSF(PTA*, l_float32, PTA**, l_float32*, l_float32*, l_float32*, l_float32*, NUMA**)</code><br>
 //     * <i>native declaration : allheaders.h:3674</i>
 //     */
-//    int ptaNoisyQuadraticLSF(Pta pta, float factor, Pta.ByReference pptad[], FloatBuffer pa, FloatBuffer pb, FloatBuffer pc, FloatBuffer pmederr, Numa.ByReference pnafit[]);
+//    int ptaNoisyQuadraticLSF(Pta pta, float factor, PointerByReference pptad, FloatBuffer pa, FloatBuffer pb, FloatBuffer pc, FloatBuffer pmederr, PointerByReference pnafit);
 //
 //    /**
 //     * Original signature :
 //     * <code>l_int32 ptaNoisyQuadraticLSF(PTA*, l_float32, PTA**, l_float32*, l_float32*, l_float32*, l_float32*, NUMA**)</code><br>
 //     * <i>native declaration : allheaders.h:3674</i>
 //     */
-//    int ptaNoisyQuadraticLSF(Pta pta, float factor, Pta.ByReference pptad[], FloatByReference pa, FloatByReference pb, FloatByReference pc, FloatByReference pmederr, Numa.ByReference pnafit[]);
+//    int ptaNoisyQuadraticLSF(Pta pta, float factor, PointerByReference pptad, FloatByReference pa, FloatByReference pb, FloatByReference pc, FloatByReference pmederr, PointerByReference pnafit);
 //
 //    /**
 //     * Original signature :
@@ -12985,7 +12985,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     * <code>PTAA* ptaaGetBoundaryPixels(PIX*, l_int32, l_int32, BOXA**, PIXA**)</code><br>
 //     * <i>native declaration : allheaders.h:3692</i>
 //     */
-//    Ptaa ptaaGetBoundaryPixels(Pix pixs, int type, int connectivity, Boxa.ByReference pboxa[], Pixa.ByReference ppixa[]);
+//    Ptaa ptaaGetBoundaryPixels(Pix pixs, int type, int connectivity, PointerByReference pboxa, PointerByReference ppixa);
 //
 //    /**
 //     * Original signature :
@@ -13032,7 +13032,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     * <code>void ptraDestroy(L_PTRA**, l_int32, l_int32)</code><br>
 //     * <i>native declaration : allheaders.h:3706</i>
 //     */
-//    void ptraDestroy(L_Ptra.ByReference ppa[], int freeflag, int warnflag);
+//    void ptraDestroy(PointerByReference ppa, int freeflag, int warnflag);
 //
 //    /**
 //     * Original signature : <code>l_int32 ptraAdd(L_PTRA*, void*)</code><br>
@@ -13124,7 +13124,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     * <code>void ptraaDestroy(L_PTRAA**, l_int32, l_int32)</code><br>
 //     * <i>native declaration : allheaders.h:3734</i>
 //     */
-//    void ptraaDestroy(L_Ptraa.ByReference ppaa[], int freeflag, int warnflag);
+//    void ptraaDestroy(PointerByReference ppaa, int freeflag, int warnflag);
 //
 //    /**
 //     * Original signature :
@@ -13159,14 +13159,14 @@ public interface Leptonica extends Library, ILeptonica {
 //     * <code>l_int32 pixQuadtreeMean(PIX*, l_int32, PIX*, FPIXA**)</code><br>
 //     * <i>native declaration : allheaders.h:3744</i>
 //     */
-//    int pixQuadtreeMean(Pix pixs, int nlevels, Pix pix_ma, FPixa.ByReference pfpixa[]);
+//    int pixQuadtreeMean(Pix pixs, int nlevels, Pix pix_ma, PointerByReference pfpixa);
 //
 //    /**
 //     * Original signature :
 //     * <code>l_int32 pixQuadtreeVariance(PIX*, l_int32, PIX*, DPIX*, FPIXA**, FPIXA**)</code><br>
 //     * <i>native declaration : allheaders.h:3746</i>
 //     */
-//    int pixQuadtreeVariance(Pix pixs, int nlevels, Pix pix_ma, DPix dpix_msa, FPixa.ByReference pfpixa_v[], FPixa.ByReference pfpixa_rv[]);
+//    int pixQuadtreeVariance(Pix pixs, int nlevels, Pix pix_ma, DPix dpix_msa, PointerByReference pfpixa_v, PointerByReference pfpixa_rv);
 //
 //    /**
 //     * Original signature :
@@ -13228,7 +13228,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     * <code>void lqueueDestroy(L_QUEUE**, l_int32)</code><br>
 //     * <i>native declaration : allheaders.h:3764</i>
 //     */
-//    void lqueueDestroy(L_Queue.ByReference plq[], int freeflag);
+//    void lqueueDestroy(PointerByReference plq, int freeflag);
 //
 //    /**
 //     * Original signature : <code>l_int32 lqueueAdd(L_QUEUE*, void*)</code><br>
@@ -13295,7 +13295,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     * <code>SARRAY* pixProcessBarcodes(PIX*, l_int32, l_int32, SARRAY**, l_int32)</code><br>
 //     * <i>native declaration : allheaders.h:3784</i>
 //     */
-//    Sarray pixProcessBarcodes(Pix pixs, int format, int method, Sarray.ByReference psaw[], int debugflag);
+//    Sarray pixProcessBarcodes(Pix pixs, int format, int method, PointerByReference psaw, int debugflag);
 //
 //    /**
 //     * Original signature :
@@ -13309,7 +13309,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     * <code>SARRAY* pixReadBarcodes(PIXA*, l_int32, l_int32, SARRAY**, l_int32)</code><br>
 //     * <i>native declaration : allheaders.h:3788</i>
 //     */
-//    Sarray pixReadBarcodes(Pixa pixa, int format, int method, Sarray.ByReference psaw[], int debugflag);
+//    Sarray pixReadBarcodes(Pixa pixa, int format, int method, PointerByReference psaw, int debugflag);
 //
 //    /**
 //     * Original signature :
@@ -13323,7 +13323,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     * <code>BOXA* pixLocateBarcodes(PIX*, l_int32, PIX**, PIX**)</code><br>
 //     * <i>native declaration : allheaders.h:3792</i>
 //     */
-//    Boxa pixLocateBarcodes(Pix pixs, int thresh, Pix.ByReference ppixb[], Pix.ByReference ppixm[]);
+//    Boxa pixLocateBarcodes(Pix pixs, int thresh, PointerByReference ppixb, PointerByReference ppixm);
 //
 //    /**
 //     * Original signature :
@@ -13337,21 +13337,21 @@ public interface Leptonica extends Library, ILeptonica {
 //     * <code>NUMA* pixExtractBarcodeWidths1(PIX*, l_float32, l_float32, NUMA**, NUMA**, l_int32)</code><br>
 //     * <i>native declaration : allheaders.h:3796</i>
 //     */
-//    Numa pixExtractBarcodeWidths1(Pix pixs, float thresh, float binfract, Numa.ByReference pnaehist[], Numa.ByReference pnaohist[], int debugflag);
+//    Numa pixExtractBarcodeWidths1(Pix pixs, float thresh, float binfract, PointerByReference pnaehist, PointerByReference pnaohist, int debugflag);
 //
 //    /**
 //     * Original signature :
 //     * <code>NUMA* pixExtractBarcodeWidths2(PIX*, l_float32, l_float32*, NUMA**, l_int32)</code><br>
 //     * <i>native declaration : allheaders.h:3798</i>
 //     */
-//    Numa pixExtractBarcodeWidths2(Pix pixs, float thresh, FloatBuffer pwidth, Numa.ByReference pnac[], int debugflag);
+//    Numa pixExtractBarcodeWidths2(Pix pixs, float thresh, FloatBuffer pwidth, PointerByReference pnac, int debugflag);
 //
 //    /**
 //     * Original signature :
 //     * <code>NUMA* pixExtractBarcodeWidths2(PIX*, l_float32, l_float32*, NUMA**, l_int32)</code><br>
 //     * <i>native declaration : allheaders.h:3798</i>
 //     */
-//    Numa pixExtractBarcodeWidths2(Pix pixs, float thresh, FloatByReference pwidth, Numa.ByReference pnac[], int debugflag);
+//    Numa pixExtractBarcodeWidths2(Pix pixs, float thresh, FloatByReference pwidth, PointerByReference pnac, int debugflag);
 //
 //    /**
 //     * Original signature :
@@ -13365,21 +13365,21 @@ public interface Leptonica extends Library, ILeptonica {
 //     * <code>NUMA* numaQuantizeCrossingsByWidth(NUMA*, l_float32, NUMA**, NUMA**, l_int32)</code><br>
 //     * <i>native declaration : allheaders.h:3802</i>
 //     */
-//    Numa numaQuantizeCrossingsByWidth(Numa nas, float binfract, Numa.ByReference pnaehist[], Numa.ByReference pnaohist[], int debugflag);
+//    Numa numaQuantizeCrossingsByWidth(Numa nas, float binfract, PointerByReference pnaehist, PointerByReference pnaohist, int debugflag);
 //
 //    /**
 //     * Original signature :
 //     * <code>NUMA* numaQuantizeCrossingsByWindow(NUMA*, l_float32, l_float32*, l_float32*, NUMA**, l_int32)</code><br>
 //     * <i>native declaration : allheaders.h:3804</i>
 //     */
-//    Numa numaQuantizeCrossingsByWindow(Numa nas, float ratio, FloatBuffer pwidth, FloatBuffer pfirstloc, Numa.ByReference pnac[], int debugflag);
+//    Numa numaQuantizeCrossingsByWindow(Numa nas, float ratio, FloatBuffer pwidth, FloatBuffer pfirstloc, PointerByReference pnac, int debugflag);
 //
 //    /**
 //     * Original signature :
 //     * <code>NUMA* numaQuantizeCrossingsByWindow(NUMA*, l_float32, l_float32*, l_float32*, NUMA**, l_int32)</code><br>
 //     * <i>native declaration : allheaders.h:3804</i>
 //     */
-//    Numa numaQuantizeCrossingsByWindow(Numa nas, float ratio, FloatByReference pwidth, FloatByReference pfirstloc, Numa.ByReference pnac[], int debugflag);
+//    Numa numaQuantizeCrossingsByWindow(Numa nas, float ratio, FloatByReference pwidth, FloatByReference pfirstloc, PointerByReference pnac, int debugflag);
 
     /**
      * Original signature :
@@ -13505,7 +13505,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     * Original signature : <code>void recogaDestroy(L_RECOGA**)</code><br>
 //     * <i>native declaration : allheaders.h:3840</i>
 //     */
-//    void recogaDestroy(L_Recoga.ByReference precoga[]);
+//    void recogaDestroy(PointerByReference precoga);
 //
 //    /**
 //     * Original signature :
@@ -13519,7 +13519,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     * <code>l_int32 recogReplaceInRecoga(L_RECOG**, L_RECOG*)</code><br>
 //     * <i>native declaration : allheaders.h:3844</i>
 //     */
-//    int recogReplaceInRecoga(L_Recog.ByReference precog1[], L_Recog recog2);
+//    int recogReplaceInRecoga(PointerByReference precog1, L_Recog recog2);
 //
 //    /**
 //     * Original signature :
@@ -13584,7 +13584,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     * Original signature : <code>void recogDestroy(L_RECOG**)</code><br>
 //     * <i>native declaration : allheaders.h:3864</i>
 //     */
-//    void recogDestroy(L_Recog.ByReference precog[]);
+//    void recogDestroy(PointerByReference precog);
 //
 //    /**
 //     * Original signature :
@@ -13706,7 +13706,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     * <code>l_int32 recogDecode(L_RECOG*, PIX*, l_int32, PIX**)</code><br>
 //     * <i>native declaration : allheaders.h:3896</i>
 //     */
-//    int recogDecode(L_Recog recog, Pix pixs, int nlevels, Pix.ByReference ppixdb[]);
+//    int recogDecode(L_Recog recog, Pix pixs, int nlevels, PointerByReference ppixdb);
 //
 //    /**
 //     * Original signature :
@@ -13720,7 +13720,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     * <code>l_int32 recogRunViterbi(L_RECOG*, PIX**)</code><br>
 //     * <i>native declaration : allheaders.h:3900</i>
 //     */
-//    int recogRunViterbi(L_Recog recog, Pix.ByReference ppixdb[]);
+//    int recogRunViterbi(L_Recog recog, PointerByReference ppixdb);
 //
 //    /**
 //     * Original signature :
@@ -13759,56 +13759,56 @@ public interface Leptonica extends Library, ILeptonica {
 //     * <code>l_int32 recogaIdentifyMultiple(L_RECOGA*, PIX*, l_int32, l_int32, l_int32, BOXA**, PIXA**, PIX**, l_int32)</code><br>
 //     * <i>native declaration : allheaders.h:3912</i>
 //     */
-//    int recogaIdentifyMultiple(L_Recoga recoga, Pix pixs, int nitems, int minw, int minh, Boxa.ByReference pboxa[], Pixa.ByReference ppixa[], Pix.ByReference ppixdb[], int debugsplit);
+//    int recogaIdentifyMultiple(L_Recoga recoga, Pix pixs, int nitems, int minw, int minh, PointerByReference pboxa, PointerByReference ppixa, PointerByReference ppixdb, int debugsplit);
 //
 //    /**
 //     * Original signature :
 //     * <code>l_int32 recogSplitIntoCharacters(L_RECOG*, PIX*, l_int32, l_int32, BOXA**, PIXA**, NUMA**, l_int32)</code><br>
 //     * <i>native declaration : allheaders.h:3914</i>
 //     */
-//    int recogSplitIntoCharacters(L_Recog recog, Pix pixs, int minw, int minh, Boxa.ByReference pboxa[], Pixa.ByReference ppixa[], Numa.ByReference pnaid[], int debug);
+//    int recogSplitIntoCharacters(L_Recog recog, Pix pixs, int minw, int minh, PointerByReference pboxa, PointerByReference ppixa, PointerByReference pnaid, int debug);
 //
 //    /**
 //     * Original signature :
 //     * <code>l_int32 recogCorrelationBestRow(L_RECOG*, PIX*, BOXA**, NUMA**, NUMA**, SARRAY**, l_int32)</code><br>
 //     * <i>native declaration : allheaders.h:3916</i>
 //     */
-//    int recogCorrelationBestRow(L_Recog recog, Pix pixs, Boxa.ByReference pboxa[], Numa.ByReference pnascore[], Numa.ByReference pnaindex[], Sarray.ByReference psachar[], int debug);
+//    int recogCorrelationBestRow(L_Recog recog, Pix pixs, PointerByReference pboxa, PointerByReference pnascore, PointerByReference pnaindex, PointerByReference psachar, int debug);
 //
 //    /**
 //     * Original signature :
 //     * <code>l_int32 recogCorrelationBestChar(L_RECOG*, PIX*, BOX**, l_float32*, l_int32*, char**, PIX**)</code><br>
 //     * <i>native declaration : allheaders.h:3918</i>
 //     */
-//    int recogCorrelationBestChar(L_Recog recog, Pix pixs, Box.ByReference pbox[], FloatBuffer pscore, IntBuffer pindex, PointerByReference pcharstr, Pix.ByReference ppixdb[]);
+//    int recogCorrelationBestChar(L_Recog recog, Pix pixs, PointerByReference pbox, FloatBuffer pscore, IntBuffer pindex, PointerByReference pcharstr, PointerByReference ppixdb);
 //
 //    /**
 //     * Original signature :
 //     * <code>l_int32 recogCorrelationBestChar(L_RECOG*, PIX*, BOX**, l_float32*, l_int32*, char**, PIX**)</code><br>
 //     * <i>native declaration : allheaders.h:3918</i>
 //     */
-//    int recogCorrelationBestChar(L_Recog recog, Pix pixs, Box.ByReference pbox[], FloatByReference pscore, IntByReference pindex, PointerByReference pcharstr, Pix.ByReference ppixdb[]);
+//    int recogCorrelationBestChar(L_Recog recog, Pix pixs, PointerByReference pbox, FloatByReference pscore, IntByReference pindex, PointerByReference pcharstr, PointerByReference ppixdb);
 //
 //    /**
 //     * Original signature :
 //     * <code>l_int32 recogaIdentifyPixa(L_RECOGA*, PIXA*, NUMA*, PIX**)</code><br>
 //     * <i>native declaration : allheaders.h:3920</i>
 //     */
-//    int recogaIdentifyPixa(L_Recoga recoga, Pixa pixa, Numa naid, Pix.ByReference ppixdb[]);
+//    int recogaIdentifyPixa(L_Recoga recoga, Pixa pixa, Numa naid, PointerByReference ppixdb);
 //
 //    /**
 //     * Original signature :
 //     * <code>l_int32 recogIdentifyPixa(L_RECOG*, PIXA*, NUMA*, PIX**)</code><br>
 //     * <i>native declaration : allheaders.h:3922</i>
 //     */
-//    int recogIdentifyPixa(L_Recog recog, Pixa pixa, Numa naid, Pix.ByReference ppixdb[]);
+//    int recogIdentifyPixa(L_Recog recog, Pixa pixa, Numa naid, PointerByReference ppixdb);
 //
 //    /**
 //     * Original signature :
 //     * <code>l_int32 recogIdentifyPix(L_RECOG*, PIX*, PIX**)</code><br>
 //     * <i>native declaration : allheaders.h:3924</i>
 //     */
-//    int recogIdentifyPix(L_Recog recog, Pix pixs, Pix.ByReference ppixdb[]);
+//    int recogIdentifyPix(L_Recog recog, Pix pixs, PointerByReference ppixdb);
 //
 //    /**
 //     * Original signature : <code>l_int32 recogSkipIdentify(L_RECOG*)</code><br>
@@ -13820,20 +13820,20 @@ public interface Leptonica extends Library, ILeptonica {
 //     * Original signature : <code>void rchaDestroy(L_RCHA**)</code><br>
 //     * <i>native declaration : allheaders.h:3928</i>
 //     */
-//    void rchaDestroy(L_Rcha.ByReference prcha[]);
+//    void rchaDestroy(PointerByReference prcha);
 //
 //    /**
 //     * Original signature : <code>void rchDestroy(L_RCH**)</code><br>
 //     * <i>native declaration : allheaders.h:3930</i>
 //     */
-//    void rchDestroy(L_Rch.ByReference prch[]);
+//    void rchDestroy(PointerByReference prch);
 //
 //    /**
 //     * Original signature :
 //     * <code>l_int32 rchaExtract(L_RCHA*, NUMA**, NUMA**, SARRAY**, NUMA**, NUMA**, NUMA**, NUMA**)</code><br>
 //     * <i>native declaration : allheaders.h:3932</i>
 //     */
-//    int rchaExtract(L_Rcha rcha, Numa.ByReference pnaindex[], Numa.ByReference pnascore[], Sarray.ByReference psatext[], Numa.ByReference pnasample[], Numa.ByReference pnaxloc[], Numa.ByReference pnayloc[], Numa.ByReference pnawidth[]);
+//    int rchaExtract(L_Rcha rcha, PointerByReference pnaindex, PointerByReference pnascore, PointerByReference psatext, PointerByReference pnasample, PointerByReference pnaxloc, PointerByReference pnayloc, PointerByReference pnawidth);
 //
 //    /**
 //     * Original signature :
@@ -13868,7 +13868,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     * <code>SARRAY* recogaExtractNumbers(L_RECOGA*, BOXA*, l_float32, l_int32, BOXAA**, NUMAA**)</code><br>
 //     * <i>native declaration : allheaders.h:3942</i>
 //     */
-//    Sarray recogaExtractNumbers(L_Recoga recoga, Boxa boxas, float scorethresh, int spacethresh, Boxaa.ByReference pbaa[], Numaa.ByReference pnaa[]);
+//    Sarray recogaExtractNumbers(L_Recoga recoga, Boxa boxas, float scorethresh, int spacethresh, PointerByReference pbaa, PointerByReference pnaa);
 //
 //    /**
 //     * Original signature :
@@ -13896,28 +13896,28 @@ public interface Leptonica extends Library, ILeptonica {
 //     * <code>l_int32 recogProcessMultLabelled(L_RECOG*, PIX*, BOX*, char*, PIXA**, l_int32)</code><br>
 //     * <i>native declaration : allheaders.h:3950</i>
 //     */
-//    int recogProcessMultLabelled(L_Recog recog, Pix pixs, Box box, java.nio.ByteBuffer text, Pixa.ByReference ppixa[], int debug);
+//    int recogProcessMultLabelled(L_Recog recog, Pix pixs, Box box, java.nio.ByteBuffer text, PointerByReference ppixa, int debug);
 //
 //    /**
 //     * Original signature :
 //     * <code>l_int32 recogProcessMultLabelled(L_RECOG*, PIX*, BOX*, char*, PIXA**, l_int32)</code><br>
 //     * <i>native declaration : allheaders.h:3950</i>
 //     */
-//    int recogProcessMultLabelled(L_Recog recog, Pix pixs, Box box, Pointer text, Pixa.ByReference ppixa[], int debug);
+//    int recogProcessMultLabelled(L_Recog recog, Pix pixs, Box box, Pointer text, PointerByReference ppixa, int debug);
 //
 //    /**
 //     * Original signature :
 //     * <code>l_int32 recogProcessSingleLabelled(L_RECOG*, PIX*, BOX*, char*, PIXA**)</code><br>
 //     * <i>native declaration : allheaders.h:3952</i>
 //     */
-//    int recogProcessSingleLabelled(L_Recog recog, Pix pixs, Box box, java.nio.ByteBuffer text, Pixa.ByReference ppixa[]);
+//    int recogProcessSingleLabelled(L_Recog recog, Pix pixs, Box box, java.nio.ByteBuffer text, PointerByReference ppixa);
 //
 //    /**
 //     * Original signature :
 //     * <code>l_int32 recogProcessSingleLabelled(L_RECOG*, PIX*, BOX*, char*, PIXA**)</code><br>
 //     * <i>native declaration : allheaders.h:3952</i>
 //     */
-//    int recogProcessSingleLabelled(L_Recog recog, Pix pixs, Box box, Pointer text, Pixa.ByReference ppixa[]);
+//    int recogProcessSingleLabelled(L_Recog recog, Pix pixs, Box box, Pointer text, PointerByReference ppixa);
 //
 //    /**
 //     * Original signature :
@@ -13945,14 +13945,14 @@ public interface Leptonica extends Library, ILeptonica {
 //     * <code>l_int32 pixaAccumulateSamples(PIXA*, PTA*, PIX**, l_float32*, l_float32*)</code><br>
 //     * <i>native declaration : allheaders.h:3960</i>
 //     */
-//    int pixaAccumulateSamples(Pixa pixa, Pta pta, Pix.ByReference ppixd[], FloatBuffer px, FloatBuffer py);
+//    int pixaAccumulateSamples(Pixa pixa, Pta pta, PointerByReference ppixd, FloatBuffer px, FloatBuffer py);
 //
 //    /**
 //     * Original signature :
 //     * <code>l_int32 pixaAccumulateSamples(PIXA*, PTA*, PIX**, l_float32*, l_float32*)</code><br>
 //     * <i>native declaration : allheaders.h:3960</i>
 //     */
-//    int pixaAccumulateSamples(Pixa pixa, Pta pta, Pix.ByReference ppixd[], FloatByReference px, FloatByReference py);
+//    int pixaAccumulateSamples(Pixa pixa, Pta pta, PointerByReference ppixd, FloatByReference px, FloatByReference py);
 //
 //    /**
 //     * Original signature :
@@ -13994,21 +13994,21 @@ public interface Leptonica extends Library, ILeptonica {
 //     * <code>l_int32 recogPadTrainingSet(L_RECOG**, l_int32)</code><br>
 //     * <i>native declaration : allheaders.h:3972</i>
 //     */
-//    int recogPadTrainingSet(L_Recog.ByReference precog[], int debug);
+//    int recogPadTrainingSet(PointerByReference precog, int debug);
 //
 //    /**
 //     * Original signature :
 //     * <code>l_int32 recogBestCorrelForPadding(L_RECOG*, L_RECOGA*, NUMA**, NUMA**, NUMA**, NUMA**, PIXA**)</code><br>
 //     * <i>native declaration : allheaders.h:3974</i>
 //     */
-//    int recogBestCorrelForPadding(L_Recog recog, L_Recoga recoga, Numa.ByReference pnaset[], Numa.ByReference pnaindex[], Numa.ByReference pnascore[], Numa.ByReference pnasum[], Pixa.ByReference ppixadb[]);
+//    int recogBestCorrelForPadding(L_Recog recog, L_Recoga recoga, PointerByReference pnaset, PointerByReference pnaindex, PointerByReference pnascore, PointerByReference pnasum, PointerByReference ppixadb);
 //
 //    /**
 //     * Original signature :
 //     * <code>l_int32 recogCorrelAverages(L_RECOG*, L_RECOG*, NUMA**, NUMA**, PIXA**)</code><br>
 //     * <i>native declaration : allheaders.h:3976</i>
 //     */
-//    int recogCorrelAverages(L_Recog recog1, L_Recog recog2, Numa.ByReference pnaindex[], Numa.ByReference pnascore[], Pixa.ByReference ppixadb[]);
+//    int recogCorrelAverages(L_Recog recog1, L_Recog recog2, PointerByReference pnaindex, PointerByReference pnascore, PointerByReference ppixadb);
 //
 //    /**
 //     * Original signature :
@@ -14071,7 +14071,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     * <code>l_int32 regTestSetup(l_int32, char**, L_REGPARAMS**)</code><br>
 //     * <i>native declaration : allheaders.h:3994</i>
 //     */
-//    int regTestSetup(int argc, PointerByReference argv, L_RegParams.ByReference prp[]);
+//    int regTestSetup(int argc, PointerByReference argv, PointerByReference prp);
 //
 //    /**
 //     * Original signature :
@@ -14430,7 +14430,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     * <code>NUMA* pixFindMaxRuns(PIX*, l_int32, NUMA**)</code><br>
 //     * <i>native declaration : allheaders.h:4098</i>
 //     */
-//    Numa pixFindMaxRuns(Pix pix, int direction, Numa.ByReference pnastart[]);
+//    Numa pixFindMaxRuns(Pix pix, int direction, PointerByReference pnastart);
 //
 //    /**
 //     * Original signature :
@@ -14490,7 +14490,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     * Original signature : <code>void sarrayDestroy(SARRAY**)</code><br>
 //     * <i>native declaration : allheaders.h:4116</i>
 //     */
-//    void sarrayDestroy(Sarray.ByReference psa[]);
+//    void sarrayDestroy(PointerByReference psa);
 //
 //    /**
 //     * Original signature : <code>SARRAY* sarrayCopy(SARRAY*)</code><br>
@@ -15308,14 +15308,14 @@ public interface Leptonica extends Library, ILeptonica {
 //     * <code>l_int32 pixLocalExtrema(PIX*, l_int32, l_int32, PIX**, PIX**)</code><br>
 //     * <i>native declaration : allheaders.h:4358</i>
 //     */
-//    int pixLocalExtrema(Pix pixs, int maxmin, int minmax, Pix.ByReference ppixmin[], Pix.ByReference ppixmax[]);
+//    int pixLocalExtrema(Pix pixs, int maxmin, int minmax, PointerByReference ppixmin, PointerByReference ppixmax);
 //
 //    /**
 //     * Original signature :
 //     * <code>l_int32 pixSelectedLocalExtrema(PIX*, l_int32, PIX**, PIX**)</code><br>
 //     * <i>native declaration : allheaders.h:4360</i>
 //     */
-//    int pixSelectedLocalExtrema(Pix pixs, int mindist, Pix.ByReference ppixmin[], Pix.ByReference ppixmax[]);
+//    int pixSelectedLocalExtrema(Pix pixs, int mindist, PointerByReference ppixmin, PointerByReference ppixmax);
 //
 //    /**
 //     * Original signature : <code>PIX* pixFindEqualValues(PIX*, PIX*)</code><br>
@@ -15328,7 +15328,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     * <code>l_int32 pixSelectMinInConnComp(PIX*, PIX*, PTA**, NUMA**)</code><br>
 //     * <i>native declaration : allheaders.h:4364</i>
 //     */
-//    int pixSelectMinInConnComp(Pix pixs, Pix pixm, Pta.ByReference ppta[], Numa.ByReference pnav[]);
+//    int pixSelectMinInConnComp(Pix pixs, Pix pixm, PointerByReference ppta, PointerByReference pnav);
 //
 //    /**
 //     * Original signature :
@@ -15396,7 +15396,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     * Original signature : <code>void selaDestroy(SELA**)</code><br>
 //     * <i>native declaration : allheaders.h:4384</i>
 //     */
-//    void selaDestroy(Sela.ByReference psela[]);
+//    void selaDestroy(PointerByReference psela);
 //
 //    /**
 //     * Original signature :
@@ -15707,21 +15707,21 @@ public interface Leptonica extends Library, ILeptonica {
 //     * <code>SEL* pixGenerateSelWithRuns(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, PIX**)</code><br>
 //     * <i>native declaration : allheaders.h:4478</i>
 //     */
-//    Selector pixGenerateSelWithRuns(Pix pixs, int nhlines, int nvlines, int distance, int minlength, int toppix, int botpix, int leftpix, int rightpix, Pix.ByReference ppixe[]);
+//    Selector pixGenerateSelWithRuns(Pix pixs, int nhlines, int nvlines, int distance, int minlength, int toppix, int botpix, int leftpix, int rightpix, PointerByReference ppixe);
 //
 //    /**
 //     * Original signature :
 //     * <code>SEL* pixGenerateSelRandom(PIX*, l_float32, l_float32, l_int32, l_int32, l_int32, l_int32, l_int32, PIX**)</code><br>
 //     * <i>native declaration : allheaders.h:4480</i>
 //     */
-//    Selector pixGenerateSelRandom(Pix pixs, float hitfract, float missfract, int distance, int toppix, int botpix, int leftpix, int rightpix, Pix.ByReference ppixe[]);
+//    Selector pixGenerateSelRandom(Pix pixs, float hitfract, float missfract, int distance, int toppix, int botpix, int leftpix, int rightpix, PointerByReference ppixe);
 //
 //    /**
 //     * Original signature :
 //     * <code>SEL* pixGenerateSelBoundary(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, PIX**)</code><br>
 //     * <i>native declaration : allheaders.h:4482</i>
 //     */
-//    Selector pixGenerateSelBoundary(Pix pixs, int hitdist, int missdist, int hitskip, int missskip, int topflag, int botflag, int leftflag, int rightflag, Pix.ByReference ppixe[]);
+//    Selector pixGenerateSelBoundary(Pix pixs, int hitdist, int missdist, int hitskip, int missskip, int topflag, int botflag, int leftflag, int rightflag, PointerByReference ppixe);
 //
 //    /**
 //     * Original signature :
@@ -15984,7 +15984,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     * <code>void lstackDestroy(L_STACK**, l_int32)</code><br>
 //     * <i>native declaration : allheaders.h:4556</i>
 //     */
-//    void lstackDestroy(L_Stack.ByReference plstack[], int freeflag);
+//    void lstackDestroy(PointerByReference plstack, int freeflag);
 //
 //    /**
 //     * Original signature : <code>l_int32 lstackAdd(L_STACK*, void*)</code><br>
@@ -16035,7 +16035,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     * Original signature : <code>void sudokuDestroy(L_SUDOKU**)</code><br>
 //     * <i>native declaration : allheaders.h:4572</i>
 //     */
-//    void sudokuDestroy(L_Sudoku.ByReference psud[]);
+//    void sudokuDestroy(PointerByReference psud);
 //
 //    /**
 //     * Original signature : <code>l_int32 sudokuSolve(L_SUDOKU*)</code><br>
@@ -16801,286 +16801,286 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    Pointer l_getFormattedDate();
 //
-//    /**
-//     * Original signature :
-//     * <code>l_int32 pixHtmlViewer(const char*, const char*, const char*, l_int32, l_int32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4788</i>
-//     */
-//    int pixHtmlViewer(String dirin, String dirout, String rootname, int thumbwidth, int viewwidth, int copyorig);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixSimpleCaptcha(PIX*, l_int32, l_int32, l_uint32, l_uint32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4790</i>
-//     */
-//    Pix pixSimpleCaptcha(Pix pixs, int border, int nterms, int seed, int color, int cmapflag);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixRandomHarmonicWarp(PIX*, l_float32, l_float32, l_float32, l_float32, l_int32, l_int32, l_uint32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4792</i>
-//     */
-//    Pix pixRandomHarmonicWarp(Pix pixs, float xmag, float ymag, float xfreq, float yfreq, int nx, int ny, int seed, int grayval);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixWarpStereoscopic(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4794</i>
-//     */
-//    Pix pixWarpStereoscopic(Pix pixs, int zbend, int zshiftt, int zshiftb, int ybendt, int ybendb, int redleft);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixStretchHorizontal(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4796</i>
-//     */
-//    Pix pixStretchHorizontal(Pix pixs, int dir, int type, int hmax, int operation, int incolor);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixStretchHorizontalSampled(PIX*, l_int32, l_int32, l_int32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4798</i>
-//     */
-//    Pix pixStretchHorizontalSampled(Pix pixs, int dir, int type, int hmax, int incolor);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixStretchHorizontalLI(PIX*, l_int32, l_int32, l_int32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4800</i>
-//     */
-//    Pix pixStretchHorizontalLI(Pix pixs, int dir, int type, int hmax, int incolor);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixQuadraticVShear(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4802</i>
-//     */
-//    Pix pixQuadraticVShear(Pix pixs, int dir, int vmaxt, int vmaxb, int operation, int incolor);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixQuadraticVShearSampled(PIX*, l_int32, l_int32, l_int32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4804</i>
-//     */
-//    Pix pixQuadraticVShearSampled(Pix pixs, int dir, int vmaxt, int vmaxb, int incolor);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixQuadraticVShearLI(PIX*, l_int32, l_int32, l_int32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4806</i>
-//     */
-//    Pix pixQuadraticVShearLI(Pix pixs, int dir, int vmaxt, int vmaxb, int incolor);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixStereoFromPair(PIX*, PIX*, l_float32, l_float32, l_float32)</code><br>
-//     * <i>native declaration : allheaders.h:4808</i>
-//     */
-//    Pix pixStereoFromPair(Pix pix1, Pix pix2, float rwt, float gwt, float bwt);
-//
-//    /**
-//     * Original signature :
-//     * <code>L_WSHED* wshedCreate(PIX*, PIX*, l_int32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4810</i>
-//     */
-//    L_WShed wshedCreate(Pix pixs, Pix pixm, int mindepth, int debugflag);
-//
-//    /**
-//     * Original signature : <code>void wshedDestroy(L_WSHED**)</code><br>
-//     * <i>native declaration : allheaders.h:4812</i>
-//     */
-//    void wshedDestroy(L_WShed.ByReference pwshed[]);
-//
-//    /**
-//     * Original signature : <code>l_int32 wshedApply(L_WSHED*)</code><br>
-//     * <i>native declaration : allheaders.h:4814</i>
-//     */
-//    int wshedApply(L_WShed wshed);
-//
-//    /**
-//     * Original signature :
-//     * <code>l_int32 wshedBasins(L_WSHED*, PIXA**, NUMA**)</code><br>
-//     * <i>native declaration : allheaders.h:4816</i>
-//     */
-//    int wshedBasins(L_WShed wshed, Pixa.ByReference ppixa[], Numa.ByReference pnalevels[]);
-//
-//    /**
-//     * Original signature : <code>PIX* wshedRenderFill(L_WSHED*)</code><br>
-//     * <i>native declaration : allheaders.h:4818</i>
-//     */
-//    Pix wshedRenderFill(L_WShed wshed);
-//
-//    /**
-//     * Original signature : <code>PIX* wshedRenderColors(L_WSHED*)</code><br>
-//     * <i>native declaration : allheaders.h:4820</i>
-//     */
-//    Pix wshedRenderColors(L_WShed wshed);
-//
-//    /**
-//     * Original signature : <code>PIX* pixReadStreamWebP(FILE*)</code><br>
-//     * <i>native declaration : allheaders.h:4822</i>
-//     */
-//    Pix pixReadStreamWebP(PointerByReference fp);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixReadMemWebP(const l_uint8*, size_t)</code><br>
-//     * <i>native declaration : allheaders.h:4824</i>
-//     */
-//    Pix pixReadMemWebP(java.nio.ByteBuffer filedata, NativeSize filesize);
-//
-//    /**
-//     * Original signature :
-//     * <code>l_int32 readHeaderWebP(const char*, l_int32*, l_int32*, l_int32*)</code><br>
-//     * <i>native declaration : allheaders.h:4826</i>
-//     */
-//    int readHeaderWebP(String filename, IntBuffer pw, IntBuffer ph, IntBuffer pspp);
-//
-//    /**
-//     * Original signature :
-//     * <code>l_int32 readHeaderMemWebP(const l_uint8*, size_t, l_int32*, l_int32*, l_int32*)</code><br>
-//     * <i>native declaration : allheaders.h:4828</i>
-//     */
-//    int readHeaderMemWebP(java.nio.ByteBuffer data, NativeSize size, IntBuffer pw, IntBuffer ph, IntBuffer pspp);
-//
-//    /**
-//     * Original signature :
-//     * <code>l_int32 pixWriteWebP(const char*, PIX*, l_int32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4830</i>
-//     */
-//    int pixWriteWebP(String filename, Pix pixs, int quality, int lossless);
-//
-//    /**
-//     * Original signature :
-//     * <code>l_int32 pixWriteStreamWebP(FILE*, PIX*, l_int32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4832</i>
-//     */
-//    int pixWriteStreamWebP(PointerByReference fp, Pix pixs, int quality, int lossless);
-//
-//    /**
-//     * Original signature :
-//     * <code>l_int32 pixWriteMemWebP(l_uint8**, size_t*, PIX*, l_int32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4834</i>
-//     */
-//    int pixWriteMemWebP(PointerByReference pencdata, NativeSizeByReference pencsize, Pix pixs, int quality, int lossless);
-//
-//    /**
-//     * Original signature :
-//     * <code>l_int32 pixaWriteFiles(const char*, PIXA*, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4836</i>
-//     */
-//    int pixaWriteFiles(String rootname, Pixa pixa, int format);
-//
-//    /**
-//     * Original signature :
-//     * <code>l_int32 pixWrite(const char*, PIX*, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4838</i>
-//     */
-//    int pixWrite(String filename, Pix pix, int format);
-//
-//    /**
-//     * Original signature :
-//     * <code>l_int32 pixWriteStream(FILE*, PIX*, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4840</i>
-//     */
-//    int pixWriteStream(PointerByReference fp, Pix pix, int format);
-//
-//    /**
-//     * Original signature :
-//     * <code>l_int32 pixWriteImpliedFormat(const char*, PIX*, l_int32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4842</i>
-//     */
-//    int pixWriteImpliedFormat(String filename, Pix pix, int quality, int progressive);
-//
-//    /**
-//     * Original signature :
-//     * <code>l_int32 pixWriteTempfile(const char*, const char*, PIX*, l_int32, char**)</code><br>
-//     * <i>native declaration : allheaders.h:4844</i>
-//     */
-//    int pixWriteTempfile(String dir, String tail, Pix pix, int format, PointerByReference pfilename);
-//
-//    /**
-//     * Original signature : <code>l_int32 pixChooseOutputFormat(PIX*)</code><br>
-//     * <i>native declaration : allheaders.h:4846</i>
-//     */
-//    int pixChooseOutputFormat(Pix pix);
-//
-//    /**
-//     * Original signature :
-//     * <code>l_int32 getImpliedFileFormat(const char*)</code><br>
-//     * <i>native declaration : allheaders.h:4848</i>
-//     */
-//    int getImpliedFileFormat(String filename);
-//
-//    /**
-//     * Original signature : <code>char* getFormatExtension(l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4850</i>
-//     */
-//    Pointer getFormatExtension(int format);
-//
-//    /**
-//     * Original signature :
-//     * <code>l_int32 pixWriteMem(l_uint8**, size_t*, PIX*, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4852</i>
-//     */
-//    int pixWriteMem(PointerByReference pdata, NativeSizeByReference psize, Pix pix, int format);
-//
-//    /**
-//     * Original signature :
-//     * <code>l_int32 pixDisplay(PIX*, l_int32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4854</i>
-//     */
-//    int pixDisplay(Pix pixs, int x, int y);
-//
-//    /**
-//     * Original signature :
-//     * <code>l_int32 pixDisplayWithTitle(PIX*, l_int32, l_int32, const char*, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4856</i>
-//     */
-//    int pixDisplayWithTitle(Pix pixs, int x, int y, String title, int dispflag);
-//
-//    /**
-//     * Original signature :
-//     * <code>l_int32 pixDisplayMultiple(const char*)</code><br>
-//     * <i>native declaration : allheaders.h:4858</i>
-//     */
-//    int pixDisplayMultiple(String filepattern);
-//
-//    /**
-//     * Original signature :
-//     * <code>l_int32 pixDisplayWrite(PIX*, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4860</i>
-//     */
-//    int pixDisplayWrite(Pix pixs, int reduction);
-//
-//    /**
-//     * Original signature :
-//     * <code>l_int32 pixDisplayWriteFormat(PIX*, l_int32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4862</i>
-//     */
-//    int pixDisplayWriteFormat(Pix pixs, int reduction, int format);
-//
-//    /**
-//     * Original signature :
-//     * <code>l_int32 pixSaveTiled(PIX*, PIXA*, l_float32, l_int32, l_int32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4864</i>
-//     */
-//    int pixSaveTiled(Pix pixs, Pixa pixa, float scalefactor, int newrow, int space, int dp);
-//
-//    /**
-//     * Original signature :
-//     * <code>l_int32 pixSaveTiledOutline(PIX*, PIXA*, l_float32, l_int32, l_int32, l_int32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4866</i>
-//     */
-//    int pixSaveTiledOutline(Pix pixs, Pixa pixa, float scalefactor, int newrow, int space, int linewidth, int dp);
-//
-//    /**
-//     * Original signature :
-//     * <code>l_int32 pixSaveTiledWithText(PIX*, PIXA*, l_int32, l_int32, l_int32, l_int32, L_BMF*, const char*, l_uint32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4868</i>
-//     */
-//    int pixSaveTiledWithText(Pix pixs, Pixa pixa, int outwidth, int newrow, int space, int linewidth, L_Bmf bmf, String textstr, int val, int location);
-//
+    /**
+     * Original signature :
+     * <code>l_int32 pixHtmlViewer(const char*, const char*, const char*, l_int32, l_int32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4788</i>
+     */
+    int pixHtmlViewer(String dirin, String dirout, String rootname, int thumbwidth, int viewwidth, int copyorig);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixSimpleCaptcha(PIX*, l_int32, l_int32, l_uint32, l_uint32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4790</i>
+     */
+    Pix pixSimpleCaptcha(Pix pixs, int border, int nterms, int seed, int color, int cmapflag);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixRandomHarmonicWarp(PIX*, l_float32, l_float32, l_float32, l_float32, l_int32, l_int32, l_uint32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4792</i>
+     */
+    Pix pixRandomHarmonicWarp(Pix pixs, float xmag, float ymag, float xfreq, float yfreq, int nx, int ny, int seed, int grayval);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixWarpStereoscopic(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4794</i>
+     */
+    Pix pixWarpStereoscopic(Pix pixs, int zbend, int zshiftt, int zshiftb, int ybendt, int ybendb, int redleft);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixStretchHorizontal(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4796</i>
+     */
+    Pix pixStretchHorizontal(Pix pixs, int dir, int type, int hmax, int operation, int incolor);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixStretchHorizontalSampled(PIX*, l_int32, l_int32, l_int32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4798</i>
+     */
+    Pix pixStretchHorizontalSampled(Pix pixs, int dir, int type, int hmax, int incolor);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixStretchHorizontalLI(PIX*, l_int32, l_int32, l_int32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4800</i>
+     */
+    Pix pixStretchHorizontalLI(Pix pixs, int dir, int type, int hmax, int incolor);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixQuadraticVShear(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4802</i>
+     */
+    Pix pixQuadraticVShear(Pix pixs, int dir, int vmaxt, int vmaxb, int operation, int incolor);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixQuadraticVShearSampled(PIX*, l_int32, l_int32, l_int32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4804</i>
+     */
+    Pix pixQuadraticVShearSampled(Pix pixs, int dir, int vmaxt, int vmaxb, int incolor);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixQuadraticVShearLI(PIX*, l_int32, l_int32, l_int32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4806</i>
+     */
+    Pix pixQuadraticVShearLI(Pix pixs, int dir, int vmaxt, int vmaxb, int incolor);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixStereoFromPair(PIX*, PIX*, l_float32, l_float32, l_float32)</code><br>
+     * <i>native declaration : allheaders.h:4808</i>
+     */
+    Pix pixStereoFromPair(Pix pix1, Pix pix2, float rwt, float gwt, float bwt);
+
+    /**
+     * Original signature :
+     * <code>L_WSHED* wshedCreate(PIX*, PIX*, l_int32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4810</i>
+     */
+    L_WShed wshedCreate(Pix pixs, Pix pixm, int mindepth, int debugflag);
+
+    /**
+     * Original signature : <code>void wshedDestroy(L_WSHED**)</code><br>
+     * <i>native declaration : allheaders.h:4812</i>
+     */
+    void wshedDestroy(PointerByReference pwshed);
+
+    /**
+     * Original signature : <code>l_int32 wshedApply(L_WSHED*)</code><br>
+     * <i>native declaration : allheaders.h:4814</i>
+     */
+    int wshedApply(L_WShed wshed);
+
+    /**
+     * Original signature :
+     * <code>l_int32 wshedBasins(L_WSHED*, PIXA**, NUMA**)</code><br>
+     * <i>native declaration : allheaders.h:4816</i>
+     */
+    int wshedBasins(L_WShed wshed, PointerByReference ppixa, PointerByReference pnalevels);
+
+    /**
+     * Original signature : <code>PIX* wshedRenderFill(L_WSHED*)</code><br>
+     * <i>native declaration : allheaders.h:4818</i>
+     */
+    Pix wshedRenderFill(L_WShed wshed);
+
+    /**
+     * Original signature : <code>PIX* wshedRenderColors(L_WSHED*)</code><br>
+     * <i>native declaration : allheaders.h:4820</i>
+     */
+    Pix wshedRenderColors(L_WShed wshed);
+
+    /**
+     * Original signature : <code>PIX* pixReadStreamWebP(FILE*)</code><br>
+     * <i>native declaration : allheaders.h:4822</i>
+     */
+    Pix pixReadStreamWebP(PointerByReference fp);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixReadMemWebP(const l_uint8*, size_t)</code><br>
+     * <i>native declaration : allheaders.h:4824</i>
+     */
+    Pix pixReadMemWebP(java.nio.ByteBuffer filedata, NativeSize filesize);
+
+    /**
+     * Original signature :
+     * <code>l_int32 readHeaderWebP(const char*, l_int32*, l_int32*, l_int32*)</code><br>
+     * <i>native declaration : allheaders.h:4826</i>
+     */
+    int readHeaderWebP(String filename, IntBuffer pw, IntBuffer ph, IntBuffer pspp);
+
+    /**
+     * Original signature :
+     * <code>l_int32 readHeaderMemWebP(const l_uint8*, size_t, l_int32*, l_int32*, l_int32*)</code><br>
+     * <i>native declaration : allheaders.h:4828</i>
+     */
+    int readHeaderMemWebP(java.nio.ByteBuffer data, NativeSize size, IntBuffer pw, IntBuffer ph, IntBuffer pspp);
+
+    /**
+     * Original signature :
+     * <code>l_int32 pixWriteWebP(const char*, PIX*, l_int32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4830</i>
+     */
+    int pixWriteWebP(String filename, Pix pixs, int quality, int lossless);
+
+    /**
+     * Original signature :
+     * <code>l_int32 pixWriteStreamWebP(FILE*, PIX*, l_int32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4832</i>
+     */
+    int pixWriteStreamWebP(PointerByReference fp, Pix pixs, int quality, int lossless);
+
+    /**
+     * Original signature :
+     * <code>l_int32 pixWriteMemWebP(l_uint8**, size_t*, PIX*, l_int32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4834</i>
+     */
+    int pixWriteMemWebP(PointerByReference pencdata, NativeSizeByReference pencsize, Pix pixs, int quality, int lossless);
+
+    /**
+     * Original signature :
+     * <code>l_int32 pixaWriteFiles(const char*, PIXA*, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4836</i>
+     */
+    int pixaWriteFiles(String rootname, Pixa pixa, int format);
+
+    /**
+     * Original signature :
+     * <code>l_int32 pixWrite(const char*, PIX*, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4838</i>
+     */
+    int pixWrite(String filename, Pix pix, int format);
+
+    /**
+     * Original signature :
+     * <code>l_int32 pixWriteStream(FILE*, PIX*, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4840</i>
+     */
+    int pixWriteStream(PointerByReference fp, Pix pix, int format);
+
+    /**
+     * Original signature :
+     * <code>l_int32 pixWriteImpliedFormat(const char*, PIX*, l_int32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4842</i>
+     */
+    int pixWriteImpliedFormat(String filename, Pix pix, int quality, int progressive);
+
+    /**
+     * Original signature :
+     * <code>l_int32 pixWriteTempfile(const char*, const char*, PIX*, l_int32, char**)</code><br>
+     * <i>native declaration : allheaders.h:4844</i>
+     */
+    int pixWriteTempfile(String dir, String tail, Pix pix, int format, PointerByReference pfilename);
+
+    /**
+     * Original signature : <code>l_int32 pixChooseOutputFormat(PIX*)</code><br>
+     * <i>native declaration : allheaders.h:4846</i>
+     */
+    int pixChooseOutputFormat(Pix pix);
+
+    /**
+     * Original signature :
+     * <code>l_int32 getImpliedFileFormat(const char*)</code><br>
+     * <i>native declaration : allheaders.h:4848</i>
+     */
+    int getImpliedFileFormat(String filename);
+
+    /**
+     * Original signature : <code>char* getFormatExtension(l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4850</i>
+     */
+    Pointer getFormatExtension(int format);
+
+    /**
+     * Original signature :
+     * <code>l_int32 pixWriteMem(l_uint8**, size_t*, PIX*, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4852</i>
+     */
+    int pixWriteMem(PointerByReference pdata, NativeSizeByReference psize, Pix pix, int format);
+
+    /**
+     * Original signature :
+     * <code>l_int32 pixDisplay(PIX*, l_int32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4854</i>
+     */
+    int pixDisplay(Pix pixs, int x, int y);
+
+    /**
+     * Original signature :
+     * <code>l_int32 pixDisplayWithTitle(PIX*, l_int32, l_int32, const char*, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4856</i>
+     */
+    int pixDisplayWithTitle(Pix pixs, int x, int y, String title, int dispflag);
+
+    /**
+     * Original signature :
+     * <code>l_int32 pixDisplayMultiple(const char*)</code><br>
+     * <i>native declaration : allheaders.h:4858</i>
+     */
+    int pixDisplayMultiple(String filepattern);
+
+    /**
+     * Original signature :
+     * <code>l_int32 pixDisplayWrite(PIX*, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4860</i>
+     */
+    int pixDisplayWrite(Pix pixs, int reduction);
+
+    /**
+     * Original signature :
+     * <code>l_int32 pixDisplayWriteFormat(PIX*, l_int32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4862</i>
+     */
+    int pixDisplayWriteFormat(Pix pixs, int reduction, int format);
+
+    /**
+     * Original signature :
+     * <code>l_int32 pixSaveTiled(PIX*, PIXA*, l_float32, l_int32, l_int32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4864</i>
+     */
+    int pixSaveTiled(Pix pixs, Pixa pixa, float scalefactor, int newrow, int space, int dp);
+
+    /**
+     * Original signature :
+     * <code>l_int32 pixSaveTiledOutline(PIX*, PIXA*, l_float32, l_int32, l_int32, l_int32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4866</i>
+     */
+    int pixSaveTiledOutline(Pix pixs, Pixa pixa, float scalefactor, int newrow, int space, int linewidth, int dp);
+
+    /**
+     * Original signature :
+     * <code>l_int32 pixSaveTiledWithText(PIX*, PIXA*, l_int32, l_int32, l_int32, l_int32, L_BMF*, const char*, l_uint32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4868</i>
+     */
+    int pixSaveTiledWithText(Pix pixs, Pixa pixa, int outwidth, int newrow, int space, int linewidth, L_Bmf bmf, String textstr, int val, int location);
+
 //    /**
 //     * Original signature : <code>void l_chooseDisplayProg(l_int32)</code><br>
 //     * <i>native declaration : allheaders.h:4870</i>
