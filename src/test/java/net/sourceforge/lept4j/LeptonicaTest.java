@@ -15,6 +15,7 @@
  */
 package net.sourceforge.lept4j;
 
+import com.sun.jna.ptr.PointerByReference;
 import java.io.File;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -34430,6 +34431,9 @@ public class LeptonicaTest {
         File image = new File(testResourcesPath, filename);
         Leptonica instance = new LeptonicaImpl().getInstance();
         Pix result = instance.pixRead(image.getPath());
+        PointerByReference pRef = new PointerByReference();
+        pRef.setValue(result.getPointer());
+        instance.pixDestroy(pRef);
         assertNotNull(result);
     }
 
