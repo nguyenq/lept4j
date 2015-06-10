@@ -15,12 +15,14 @@
  */
 package net.sourceforge.lept4j.util;
 
+import com.sun.jna.ptr.PointerByReference;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileInputStream;
 import javax.imageio.ImageIO;
 
 import net.sourceforge.lept4j.Leptonica;
+import net.sourceforge.lept4j.Leptonica1;
 import net.sourceforge.lept4j.Pix;
 
 import org.junit.After;
@@ -69,6 +71,9 @@ public class LeptUtilsTest {
         assertEquals(pix.h, result.getHeight());
         assertEquals(pix.d, result.getColorModel().getPixelSize());
         System.out.println(String.format("Image properties: width=%d, height=%d, depth=%d", result.getWidth(), result.getHeight(), result.getColorModel().getPixelSize()));
+        PointerByReference pRef = new PointerByReference();
+        pRef.setValue(pix.getPointer());
+        leptInstance.pixDestroy(pRef);
     }
 
     /**
@@ -86,6 +91,9 @@ public class LeptUtilsTest {
         assertEquals(image.getHeight(), result.h);
         assertEquals(image.getColorModel().getPixelSize(), result.d);
         System.out.println(String.format("Image properties: width=%d, height=%d, depth=%d", result.w, result.h, result.d));
+        PointerByReference pRef = new PointerByReference();
+        pRef.setValue(result.getPointer());
+        Leptonica1.pixDestroy(pRef);
     }
 
 }
