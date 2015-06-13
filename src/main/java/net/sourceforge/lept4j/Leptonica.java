@@ -624,13 +624,6 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 bbufferReadStream(BBUFFER*, FILE*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:170</i>
-     */
-    int bbufferReadStream(net.sourceforge.lept4j.ByteBuffer bb, PointerByReference fp, int nbytes);
-
-    /**
-     * Original signature :
      * <code>l_int32 bbufferExtendArray(BBUFFER*, l_int32)</code><br>
      * <i>native declaration : allheaders.h:172</i>
      */
@@ -642,13 +635,6 @@ public interface Leptonica extends Library, ILeptonica {
      * <i>native declaration : allheaders.h:174</i>
      */
     int bbufferWrite(net.sourceforge.lept4j.ByteBuffer bb, java.nio.ByteBuffer dest, NativeSize nbytes, NativeSizeByReference pnout);
-
-    /**
-     * Original signature :
-     * <code>l_int32 bbufferWriteStream(BBUFFER*, FILE*, size_t, size_t*)</code><br>
-     * <i>native declaration : allheaders.h:176</i>
-     */
-    int bbufferWriteStream(net.sourceforge.lept4j.ByteBuffer bb, PointerByReference fp, NativeSize nbytes, NativeSizeByReference pnout);
 
     /**
      * Original signature :
@@ -1053,19 +1039,6 @@ public interface Leptonica extends Library, ILeptonica {
     Pixa pixaGenerateFont(String dir, int size, IntBuffer pbl0, IntBuffer pbl1, IntBuffer pbl2);
 
     /**
-     * Original signature : <code>PIX* pixReadStreamBmp(FILE*)</code><br>
-     * <i>native declaration : allheaders.h:292</i>
-     */
-    Pix pixReadStreamBmp(PointerByReference fp);
-
-    /**
-     * Original signature :
-     * <code>l_int32 pixWriteStreamBmp(FILE*, PIX*)</code><br>
-     * <i>native declaration : allheaders.h:294</i>
-     */
-    int pixWriteStreamBmp(PointerByReference fp, Pix pix);
-
-    /**
      * Original signature :
      * <code>PIX* pixReadMemBmp(const l_uint8*, size_t)</code><br>
      * <i>native declaration : allheaders.h:296</i>
@@ -1394,12 +1367,6 @@ public interface Leptonica extends Library, ILeptonica {
     Boxaa boxaaRead(String filename);
 
     /**
-     * Original signature : <code>BOXAA* boxaaReadStream(FILE*)</code><br>
-     * <i>native declaration : allheaders.h:396</i>
-     */
-    Boxaa boxaaReadStream(PointerByReference fp);
-
-    /**
      * Original signature :
      * <code>l_int32 boxaaWrite(const char*, BOXAA*)</code><br>
      * <i>native declaration : allheaders.h:398</i>
@@ -1407,23 +1374,10 @@ public interface Leptonica extends Library, ILeptonica {
     int boxaaWrite(String filename, Boxaa baa);
 
     /**
-     * Original signature :
-     * <code>l_int32 boxaaWriteStream(FILE*, BOXAA*)</code><br>
-     * <i>native declaration : allheaders.h:400</i>
-     */
-    int boxaaWriteStream(PointerByReference fp, Boxaa baa);
-
-    /**
      * Original signature : <code>BOXA* boxaRead(const char*)</code><br>
      * <i>native declaration : allheaders.h:402</i>
      */
     Boxa boxaRead(String filename);
-
-    /**
-     * Original signature : <code>BOXA* boxaReadStream(FILE*)</code><br>
-     * <i>native declaration : allheaders.h:404</i>
-     */
-    Boxa boxaReadStream(PointerByReference fp);
 
     /**
      * Original signature :
@@ -1441,24 +1395,10 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 boxaWriteStream(FILE*, BOXA*)</code><br>
-     * <i>native declaration : allheaders.h:410</i>
-     */
-    int boxaWriteStream(PointerByReference fp, Boxa boxa);
-
-    /**
-     * Original signature :
      * <code>l_int32 boxaWriteMem(l_uint8**, size_t*, BOXA*)</code><br>
      * <i>native declaration : allheaders.h:412</i>
      */
     int boxaWriteMem(PointerByReference pdata, NativeSizeByReference psize, Boxa boxa);
-
-    /**
-     * Original signature :
-     * <code>l_int32 boxPrintStreamInfo(FILE*, BOX*)</code><br>
-     * <i>native declaration : allheaders.h:414</i>
-     */
-    int boxPrintStreamInfo(PointerByReference fp, Box box);
 
     /**
      * Original signature :
@@ -2141,13 +2081,6 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>L_BYTEA* l_byteaInitFromStream(FILE*)</code><br>
-     * <i>native declaration : allheaders.h:602</i>
-     */
-    L_Bytea l_byteaInitFromStream(PointerByReference fp);
-
-    /**
-     * Original signature :
      * <code>L_BYTEA* l_byteaCopy(L_BYTEA*, l_int32)</code><br>
      * <i>native declaration : allheaders.h:604</i>
      */
@@ -2227,13 +2160,6 @@ public interface Leptonica extends Library, ILeptonica {
      * <i>native declaration : allheaders.h:624</i>
      */
     int l_byteaWrite(String fname, L_Bytea ba, NativeSize startloc, NativeSize endloc);
-
-    /**
-     * Original signature :
-     * <code>l_int32 l_byteaWriteStream(FILE*, L_BYTEA*, size_t, size_t)</code><br>
-     * <i>native declaration : allheaders.h:626</i>
-     */
-    int l_byteaWriteStream(PointerByReference fp, L_Bytea ba, NativeSize startloc, NativeSize endloc);
 
     /**
      * Original signature : <code>CCBORDA* ccbaCreate(PIX*, l_int32)</code><br>
@@ -2406,23 +2332,10 @@ public interface Leptonica extends Library, ILeptonica {
     int ccbaWrite(String filename, CCBorda ccba);
 
     /**
-     * Original signature :
-     * <code>l_int32 ccbaWriteStream(FILE*, CCBORDA*)</code><br>
-     * <i>native declaration : allheaders.h:680</i>
-     */
-    int ccbaWriteStream(PointerByReference fp, CCBorda ccba);
-
-    /**
      * Original signature : <code>CCBORDA* ccbaRead(const char*)</code><br>
      * <i>native declaration : allheaders.h:682</i>
      */
     CCBorda ccbaRead(String filename);
-
-    /**
-     * Original signature : <code>CCBORDA* ccbaReadStream(FILE*)</code><br>
-     * <i>native declaration : allheaders.h:684</i>
-     */
-    CCBorda ccbaReadStream(PointerByReference fp);
 
     /**
      * Original signature :
@@ -2900,19 +2813,6 @@ public interface Leptonica extends Library, ILeptonica {
      * <i>native declaration : allheaders.h:818</i>
      */
     PixColormap pixcmapColorToGray(PixColormap cmaps, float rwt, float gwt, float bwt);
-
-    /**
-     * Original signature : <code>PIXCMAP* pixcmapReadStream(FILE*)</code><br>
-     * <i>native declaration : allheaders.h:820</i>
-     */
-    PixColormap pixcmapReadStream(PointerByReference fp);
-
-    /**
-     * Original signature :
-     * <code>l_int32 pixcmapWriteStream(FILE*, PIXCMAP*)</code><br>
-     * <i>native declaration : allheaders.h:822</i>
-     */
-    int pixcmapWriteStream(PointerByReference fp, PixColormap cmap);
 
     /**
      * Original signature :
@@ -3902,24 +3802,11 @@ public interface Leptonica extends Library, ILeptonica {
     L_Dewarp dewarpRead(String filename);
 
     /**
-     * Original signature : <code>L_DEWARP* dewarpReadStream(FILE*)</code><br>
-     * <i>native declaration : allheaders.h:1100</i>
-     */
-    L_Dewarp dewarpReadStream(PointerByReference fp);
-
-    /**
      * Original signature :
      * <code>l_int32 dewarpWrite(const char*, L_DEWARP*)</code><br>
      * <i>native declaration : allheaders.h:1102</i>
      */
     int dewarpWrite(String filename, L_Dewarp dew);
-
-    /**
-     * Original signature :
-     * <code>l_int32 dewarpWriteStream(FILE*, L_DEWARP*)</code><br>
-     * <i>native declaration : allheaders.h:1104</i>
-     */
-    int dewarpWriteStream(PointerByReference fp, L_Dewarp dew);
 
     /**
      * Original signature : <code>L_DEWARPA* dewarpaRead(const char*)</code><br>
@@ -3928,24 +3815,11 @@ public interface Leptonica extends Library, ILeptonica {
     L_Dewarpa dewarpaRead(String filename);
 
     /**
-     * Original signature : <code>L_DEWARPA* dewarpaReadStream(FILE*)</code><br>
-     * <i>native declaration : allheaders.h:1108</i>
-     */
-    L_Dewarpa dewarpaReadStream(PointerByReference fp);
-
-    /**
      * Original signature :
      * <code>l_int32 dewarpaWrite(const char*, L_DEWARPA*)</code><br>
      * <i>native declaration : allheaders.h:1110</i>
      */
     int dewarpaWrite(String filename, L_Dewarpa dewa);
-
-    /**
-     * Original signature :
-     * <code>l_int32 dewarpaWriteStream(FILE*, L_DEWARPA*)</code><br>
-     * <i>native declaration : allheaders.h:1112</i>
-     */
-    int dewarpaWriteStream(PointerByReference fp, L_Dewarpa dewa);
 
     /**
      * Original signature :
@@ -4064,13 +3938,6 @@ public interface Leptonica extends Library, ILeptonica {
      * <i>native declaration : allheaders.h:1144</i>
      */
     int dewarpaRestoreModels(L_Dewarpa dewa);
-
-    /**
-     * Original signature :
-     * <code>l_int32 dewarpaInfo(FILE*, L_DEWARPA*)</code><br>
-     * <i>native declaration : allheaders.h:1146</i>
-     */
-    int dewarpaInfo(PointerByReference fp, L_Dewarpa dewa);
 
     /**
      * Original signature :
@@ -4274,24 +4141,11 @@ public interface Leptonica extends Library, ILeptonica {
     L_Dna l_dnaRead(String filename);
 
     /**
-     * Original signature : <code>L_DNA* l_dnaReadStream(FILE*)</code><br>
-     * <i>native declaration : allheaders.h:1208</i>
-     */
-    L_Dna l_dnaReadStream(PointerByReference fp);
-
-    /**
      * Original signature :
      * <code>l_int32 l_dnaWrite(const char*, L_DNA*)</code><br>
      * <i>native declaration : allheaders.h:1210</i>
      */
     int l_dnaWrite(String filename, L_Dna da);
-
-    /**
-     * Original signature :
-     * <code>l_int32 l_dnaWriteStream(FILE*, L_DNA*)</code><br>
-     * <i>native declaration : allheaders.h:1212</i>
-     */
-    int l_dnaWriteStream(PointerByReference fp, L_Dna da);
 
     /**
      * Original signature : <code>L_DNAA* l_dnaaCreate(l_int32)</code><br>
@@ -4367,24 +4221,11 @@ public interface Leptonica extends Library, ILeptonica {
     L_Dnaa l_dnaaRead(String filename);
 
     /**
-     * Original signature : <code>L_DNAA* l_dnaaReadStream(FILE*)</code><br>
-     * <i>native declaration : allheaders.h:1236</i>
-     */
-    L_Dnaa l_dnaaReadStream(PointerByReference fp);
-
-    /**
      * Original signature :
      * <code>l_int32 l_dnaaWrite(const char*, L_DNAA*)</code><br>
      * <i>native declaration : allheaders.h:1238</i>
      */
     int l_dnaaWrite(String filename, L_Dnaa daa);
-
-    /**
-     * Original signature :
-     * <code>l_int32 l_dnaaWriteStream(FILE*, L_DNAA*)</code><br>
-     * <i>native declaration : allheaders.h:1240</i>
-     */
-    int l_dnaaWriteStream(PointerByReference fp, L_Dnaa daa);
 
     /**
      * Original signature : <code>L_DNA* l_dnaMakeDelta(L_DNA*)</code><br>
@@ -5121,11 +4962,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    FPix fpixRead(String filename);
 //
-//    /**
-//     * Original signature : <code>FPIX* fpixReadStream(FILE*)</code><br>
-//     * <i>native declaration : allheaders.h:1460</i>
-//     */
-//    FPix fpixReadStream(PointerByReference fp);
+//
 //
 //    /**
 //     * Original signature :
@@ -5134,12 +4971,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int fpixWrite(String filename, FPix fpix);
 //
-//    /**
-//     * Original signature :
-//     * <code>l_int32 fpixWriteStream(FILE*, FPIX*)</code><br>
-//     * <i>native declaration : allheaders.h:1464</i>
-//     */
-//    int fpixWriteStream(PointerByReference fp, FPix fpix);
+//
 //
 //    /**
 //     * Original signature :
@@ -5154,11 +4986,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    DPix dpixRead(String filename);
 //
-//    /**
-//     * Original signature : <code>DPIX* dpixReadStream(FILE*)</code><br>
-//     * <i>native declaration : allheaders.h:1470</i>
-//     */
-//    DPix dpixReadStream(PointerByReference fp);
+//
 //
 //    /**
 //     * Original signature :
@@ -5167,12 +4995,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int dpixWrite(String filename, DPix dpix);
 //
-//    /**
-//     * Original signature :
-//     * <code>l_int32 dpixWriteStream(FILE*, DPIX*)</code><br>
-//     * <i>native declaration : allheaders.h:1474</i>
-//     */
-//    int dpixWriteStream(PointerByReference fp, DPix dpix);
+//
 //
 //    /**
 //     * Original signature :
@@ -5181,12 +5004,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    DPix dpixEndianByteSwap(DPix dpixd, DPix dpixs);
 //
-//    /**
-//     * Original signature :
-//     * <code>l_int32 fpixPrintStream(FILE*, FPIX*, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:1478</i>
-//     */
-//    int fpixPrintStream(PointerByReference fp, FPix fpix, int factor);
+//
 //
 //    /**
 //     * Original signature :
@@ -5440,19 +5258,6 @@ public interface Leptonica extends Library, ILeptonica {
      * <i>native declaration : allheaders.h:1552</i>
      */
     FPix pixComponentFunction(Pix pix, float rnum, float gnum, float bnum, float rdenom, float gdenom, float bdenom);
-
-    /**
-     * Original signature : <code>PIX* pixReadStreamGif(FILE*)</code><br>
-     * <i>native declaration : allheaders.h:1554</i>
-     */
-    Pix pixReadStreamGif(PointerByReference fp);
-
-    /**
-     * Original signature :
-     * <code>l_int32 pixWriteStreamGif(FILE*, PIX*)</code><br>
-     * <i>native declaration : allheaders.h:1556</i>
-     */
-    int pixWriteStreamGif(PointerByReference fp, Pix pix);
 
     /**
      * Original signature :
@@ -6259,12 +6064,6 @@ public interface Leptonica extends Library, ILeptonica {
     int lheapSortStrictOrder(L_Heap lh);
 
     /**
-     * Original signature : <code>l_int32 lheapPrint(FILE*, L_HEAP*)</code><br>
-     * <i>native declaration : allheaders.h:1790</i>
-     */
-    int lheapPrint(PointerByReference fp, L_Heap lh);
-
-    /**
      * Original signature :
      * <code>JBCLASSER* jbRankHausInit(l_int32, l_int32, l_int32, l_int32, l_float32)</code><br>
      * <i>native declaration : allheaders.h:1792</i>
@@ -6449,38 +6248,10 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 freadHeaderJp2k(FILE*, l_int32*, l_int32*, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:1842</i>
-     */
-    int freadHeaderJp2k(PointerByReference fp, IntBuffer pw, IntBuffer ph, IntBuffer pbps, IntBuffer pspp);
-
-    /**
-     * Original signature :
-     * <code>l_int32 freadHeaderJp2k(FILE*, l_int32*, l_int32*, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:1842</i>
-     */
-    int freadHeaderJp2k(PointerByReference fp, IntByReference pw, IntByReference ph, IntByReference pbps, IntByReference pspp);
-
-    /**
-     * Original signature :
      * <code>l_int32 readHeaderMemJp2k(const l_uint8*, size_t, l_int32*, l_int32*, l_int32*, l_int32*)</code><br>
      * <i>native declaration : allheaders.h:1844</i>
      */
     int readHeaderMemJp2k(java.nio.ByteBuffer data, NativeSize size, IntBuffer pw, IntBuffer ph, IntBuffer pbps, IntBuffer pspp);
-
-    /**
-     * Original signature :
-     * <code>l_int32 fgetJp2kResolution(FILE*, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:1846</i>
-     */
-    int fgetJp2kResolution(PointerByReference fp, IntBuffer pxres, IntBuffer pyres);
-
-    /**
-     * Original signature :
-     * <code>l_int32 fgetJp2kResolution(FILE*, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:1846</i>
-     */
-    int fgetJp2kResolution(PointerByReference fp, IntByReference pxres, IntByReference pyres);
 
     /**
      * Original signature :
@@ -6491,24 +6262,10 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>PIX* pixReadStreamJp2k(FILE*, l_uint32, BOX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1850</i>
-     */
-    Pix pixReadStreamJp2k(PointerByReference fp, int reduction, Box box, int hint);
-
-    /**
-     * Original signature :
      * <code>l_int32 pixWriteJp2k(const char*, PIX*, l_int32, l_int32, l_int32)</code><br>
      * <i>native declaration : allheaders.h:1852</i>
      */
     int pixWriteJp2k(String filename, Pix pix, int quality, int nlevels, int hint);
-
-    /**
-     * Original signature :
-     * <code>l_int32 pixWriteStreamJp2k(FILE*, PIX*, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1854</i>
-     */
-    int pixWriteStreamJp2k(PointerByReference fp, Pix pix, int quality, int nlevels, int hint);
 
     /**
      * Original signature :
@@ -6533,20 +6290,6 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>PIX* pixReadStreamJpeg(FILE*, l_int32, l_int32, l_int32*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1862</i>
-     */
-    Pix pixReadStreamJpeg(PointerByReference fp, int cmflag, int reduction, IntBuffer pnwarn, int hint);
-
-    /**
-     * Original signature :
-     * <code>PIX* pixReadStreamJpeg(FILE*, l_int32, l_int32, l_int32*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1862</i>
-     */
-    Pix pixReadStreamJpeg(PointerByReference fp, int cmflag, int reduction, IntByReference pnwarn, int hint);
-
-    /**
-     * Original signature :
      * <code>l_int32 readHeaderJpeg(const char*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code><br>
      * <i>native declaration : allheaders.h:1864</i>
      */
@@ -6554,52 +6297,10 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 freadHeaderJpeg(FILE*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:1866</i>
-     */
-    int freadHeaderJpeg(PointerByReference fp, IntBuffer pw, IntBuffer ph, IntBuffer pspp, IntBuffer pycck, IntBuffer pcmyk);
-
-    /**
-     * Original signature :
-     * <code>l_int32 freadHeaderJpeg(FILE*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:1866</i>
-     */
-    int freadHeaderJpeg(PointerByReference fp, IntByReference pw, IntByReference ph, IntByReference pspp, IntByReference pycck, IntByReference pcmyk);
-
-    /**
-     * Original signature :
-     * <code>l_int32 fgetJpegResolution(FILE*, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:1868</i>
-     */
-    int fgetJpegResolution(PointerByReference fp, IntBuffer pxres, IntBuffer pyres);
-
-    /**
-     * Original signature :
-     * <code>l_int32 fgetJpegResolution(FILE*, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:1868</i>
-     */
-    int fgetJpegResolution(PointerByReference fp, IntByReference pxres, IntByReference pyres);
-
-    /**
-     * Original signature :
-     * <code>l_int32 fgetJpegComment(FILE*, l_uint8**)</code><br>
-     * <i>native declaration : allheaders.h:1870</i>
-     */
-    int fgetJpegComment(PointerByReference fp, PointerByReference pcomment);
-
-    /**
-     * Original signature :
      * <code>l_int32 pixWriteJpeg(const char*, PIX*, l_int32, l_int32)</code><br>
      * <i>native declaration : allheaders.h:1872</i>
      */
     int pixWriteJpeg(String filename, Pix pix, int quality, int progressive);
-
-    /**
-     * Original signature :
-     * <code>l_int32 pixWriteStreamJpeg(FILE*, PIX*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1874</i>
-     */
-    int pixWriteStreamJpeg(PointerByReference fp, Pix pixs, int quality, int progressive);
 
     /**
      * Original signature :
@@ -6717,24 +6418,11 @@ public interface Leptonica extends Library, ILeptonica {
     L_Kernel kernelRead(String fname);
 
     /**
-     * Original signature : <code>L_KERNEL* kernelReadStream(FILE*)</code><br>
-     * <i>native declaration : allheaders.h:1910</i>
-     */
-    L_Kernel kernelReadStream(PointerByReference fp);
-
-    /**
      * Original signature :
      * <code>l_int32 kernelWrite(const char*, L_KERNEL*)</code><br>
      * <i>native declaration : allheaders.h:1912</i>
      */
     int kernelWrite(String fname, L_Kernel kel);
-
-    /**
-     * Original signature :
-     * <code>l_int32 kernelWriteStream(FILE*, L_KERNEL*)</code><br>
-     * <i>native declaration : allheaders.h:1914</i>
-     */
-    int kernelWriteStream(PointerByReference fp, L_Kernel kel);
 
     /**
      * Original signature :
@@ -7534,24 +7222,11 @@ public interface Leptonica extends Library, ILeptonica {
     Numa numaRead(String filename);
 
     /**
-     * Original signature : <code>NUMA* numaReadStream(FILE*)</code><br>
-     * <i>native declaration : allheaders.h:2144</i>
-     */
-    Numa numaReadStream(PointerByReference fp);
-
-    /**
      * Original signature :
      * <code>l_int32 numaWrite(const char*, NUMA*)</code><br>
      * <i>native declaration : allheaders.h:2146</i>
      */
     int numaWrite(String filename, Numa na);
-
-    /**
-     * Original signature :
-     * <code>l_int32 numaWriteStream(FILE*, NUMA*)</code><br>
-     * <i>native declaration : allheaders.h:2148</i>
-     */
-    int numaWriteStream(PointerByReference fp, Numa na);
 
     /**
      * Original signature : <code>NUMAA* numaaCreate(l_int32)</code><br>
@@ -7651,24 +7326,11 @@ public interface Leptonica extends Library, ILeptonica {
     Numaa numaaRead(String filename);
 
     /**
-     * Original signature : <code>NUMAA* numaaReadStream(FILE*)</code><br>
-     * <i>native declaration : allheaders.h:2180</i>
-     */
-    Numaa numaaReadStream(PointerByReference fp);
-
-    /**
      * Original signature :
      * <code>l_int32 numaaWrite(const char*, NUMAA*)</code><br>
      * <i>native declaration : allheaders.h:2182</i>
      */
     int numaaWrite(String filename, Numaa naa);
-
-    /**
-     * Original signature :
-     * <code>l_int32 numaaWriteStream(FILE*, NUMAA*)</code><br>
-     * <i>native declaration : allheaders.h:2184</i>
-     */
-    int numaaWriteStream(PointerByReference fp, Numaa naa);
 
     /**
      * Original signature :
@@ -8649,20 +8311,6 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixWriteStreamPdf(FILE*, PIX*, l_int32, const char*)</code><br>
-     * <i>native declaration : allheaders.h:2452</i>
-     */
-    int pixWriteStreamPdf(PointerByReference fp, Pix pix, int res, String title);
-
-    /**
-     * Original signature :
-     * <code>l_int32 pixWriteStreamPdf(FILE*, PIX*, l_int32, const char*)</code><br>
-     * <i>native declaration : allheaders.h:2452</i>
-     */
-    int pixWriteStreamPdf(PointerByReference fp, Pix pix, int res, Pointer title);
-
-    /**
-     * Original signature :
      * <code>l_int32 pixWriteMemPdf(l_uint8**, size_t*, PIX*, l_int32, const char*)</code><br>
      * <i>native declaration : allheaders.h:2454</i>
      */
@@ -9193,20 +8841,6 @@ public interface Leptonica extends Library, ILeptonica {
      * <i>native declaration : allheaders.h:2608</i>
      */
     PointerByReference pixGetLinePtrs(Pix pix, IntBuffer psize);
-
-    /**
-     * Original signature :
-     * <code>l_int32 pixPrintStreamInfo(FILE*, PIX*, const char*)</code><br>
-     * <i>native declaration : allheaders.h:2610</i>
-     */
-    int pixPrintStreamInfo(PointerByReference fp, Pix pix, String text);
-
-    /**
-     * Original signature :
-     * <code>l_int32 pixPrintStreamInfo(FILE*, PIX*, const char*)</code><br>
-     * <i>native declaration : allheaders.h:2610</i>
-     */
-    int pixPrintStreamInfo(PointerByReference fp, Pix pix, Pointer text);
 
     /**
      * Original signature :
@@ -10684,11 +10318,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    Pixa pixaRead(String filename);
 //
-//    /**
-//     * Original signature : <code>PIXA* pixaReadStream(FILE*)</code><br>
-//     * <i>native declaration : allheaders.h:3040</i>
-//     */
-//    Pixa pixaReadStream(PointerByReference fp);
+//
 //
 //    /**
 //     * Original signature :
@@ -10697,12 +10327,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int pixaWrite(String filename, Pixa pixa);
 //
-//    /**
-//     * Original signature :
-//     * <code>l_int32 pixaWriteStream(FILE*, PIXA*)</code><br>
-//     * <i>native declaration : allheaders.h:3044</i>
-//     */
-//    int pixaWriteStream(PointerByReference fp, Pixa pixa);
+//
 //
 //    /**
 //     * Original signature :
@@ -10717,11 +10342,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    Pixaa pixaaRead(String filename);
 //
-//    /**
-//     * Original signature : <code>PIXAA* pixaaReadStream(FILE*)</code><br>
-//     * <i>native declaration : allheaders.h:3050</i>
-//     */
-//    Pixaa pixaaReadStream(PointerByReference fp);
+//
 //
 //    /**
 //     * Original signature :
@@ -10730,12 +10351,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int pixaaWrite(String filename, Pixaa paa);
 //
-//    /**
-//     * Original signature :
-//     * <code>l_int32 pixaaWriteStream(FILE*, PIXAA*)</code><br>
-//     * <i>native declaration : allheaders.h:3054</i>
-//     */
-//    int pixaaWriteStream(PointerByReference fp, Pixaa paa);
+//
 //
 //    /**
 //     * Original signature :
@@ -11546,11 +11162,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    PixaComp pixacompRead(String filename);
 //
-//    /**
-//     * Original signature : <code>PIXAC* pixacompReadStream(FILE*)</code><br>
-//     * <i>native declaration : allheaders.h:3290</i>
-//     */
-//    PixaComp pixacompReadStream(PointerByReference fp);
+//
 //
 //    /**
 //     * Original signature :
@@ -11559,12 +11171,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int pixacompWrite(String filename, PixaComp pixac);
 //
-//    /**
-//     * Original signature :
-//     * <code>l_int32 pixacompWriteStream(FILE*, PIXAC*)</code><br>
-//     * <i>native declaration : allheaders.h:3294</i>
-//     */
-//    int pixacompWriteStream(PointerByReference fp, PixaComp pixac);
+//
 //
 //    /**
 //     * Original signature :
@@ -11580,33 +11187,13 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int pixacompConvertToPdfData(PixaComp pixac, int res, float scalefactor, int type, int quality, String title, PointerByReference pdata, NativeSizeByReference pnbytes);
 //
-//    /**
-//     * Original signature :
-//     * <code>l_int32 pixacompWriteStreamInfo(FILE*, PIXAC*, const char*)</code><br>
-//     * <i>native declaration : allheaders.h:3300</i>
-//     */
-//    int pixacompWriteStreamInfo(PointerByReference fp, PixaComp pixac, String text);
 //
-//    /**
-//     * Original signature :
-//     * <code>l_int32 pixacompWriteStreamInfo(FILE*, PIXAC*, const char*)</code><br>
-//     * <i>native declaration : allheaders.h:3300</i>
-//     */
-//    int pixacompWriteStreamInfo(PointerByReference fp, PixaComp pixac, Pointer text);
 //
-//    /**
-//     * Original signature :
-//     * <code>l_int32 pixcompWriteStreamInfo(FILE*, PIXC*, const char*)</code><br>
-//     * <i>native declaration : allheaders.h:3302</i>
-//     */
-//    int pixcompWriteStreamInfo(PointerByReference fp, PixComp pixc, String text);
 //
-//    /**
-//     * Original signature :
-//     * <code>l_int32 pixcompWriteStreamInfo(FILE*, PIXC*, const char*)</code><br>
-//     * <i>native declaration : allheaders.h:3302</i>
-//     */
-//    int pixcompWriteStreamInfo(PointerByReference fp, PixComp pixc, Pointer text);
+//
+//
+//
+//
 //
 //    /**
 //     * Original signature :
@@ -11993,11 +11580,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int pixTilingPaintTile(Pix pixd, int i, int j, Pix pixs, PixTiling pt);
 //
-//    /**
-//     * Original signature : <code>PIX* pixReadStreamPng(FILE*)</code><br>
-//     * <i>native declaration : allheaders.h:3420</i>
-//     */
-//    Pix pixReadStreamPng(PointerByReference fp);
+//
 //
 //    /**
 //     * Original signature :
@@ -12006,19 +11589,9 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int readHeaderPng(String filename, IntBuffer pw, IntBuffer ph, IntBuffer pbps, IntBuffer pspp, IntBuffer piscmap);
 //
-//    /**
-//     * Original signature :
-//     * <code>l_int32 freadHeaderPng(FILE*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code><br>
-//     * <i>native declaration : allheaders.h:3424</i>
-//     */
-//    int freadHeaderPng(PointerByReference fp, IntBuffer pw, IntBuffer ph, IntBuffer pbps, IntBuffer pspp, IntBuffer piscmap);
 //
-//    /**
-//     * Original signature :
-//     * <code>l_int32 freadHeaderPng(FILE*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code><br>
-//     * <i>native declaration : allheaders.h:3424</i>
-//     */
-//    int freadHeaderPng(PointerByReference fp, IntByReference pw, IntByReference ph, IntByReference pbps, IntByReference pspp, IntByReference piscmap);
+//
+//
 //
 //    /**
 //     * Original signature :
@@ -12027,19 +11600,9 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int readHeaderMemPng(java.nio.ByteBuffer data, NativeSize size, IntBuffer pw, IntBuffer ph, IntBuffer pbps, IntBuffer pspp, IntBuffer piscmap);
 //
-//    /**
-//     * Original signature :
-//     * <code>l_int32 fgetPngResolution(FILE*, l_int32*, l_int32*)</code><br>
-//     * <i>native declaration : allheaders.h:3428</i>
-//     */
-//    int fgetPngResolution(PointerByReference fp, IntBuffer pxres, IntBuffer pyres);
 //
-//    /**
-//     * Original signature :
-//     * <code>l_int32 fgetPngResolution(FILE*, l_int32*, l_int32*)</code><br>
-//     * <i>native declaration : allheaders.h:3428</i>
-//     */
-//    int fgetPngResolution(PointerByReference fp, IntByReference pxres, IntByReference pyres);
+//
+//
 //
 //    /**
 //     * Original signature :
@@ -12055,12 +11618,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int pixWritePng(String filename, Pix pix, float gamma);
 //
-//    /**
-//     * Original signature :
-//     * <code>l_int32 pixWriteStreamPng(FILE*, PIX*, l_float32)</code><br>
-//     * <i>native declaration : allheaders.h:3434</i>
-//     */
-//    int pixWriteStreamPng(PointerByReference fp, Pix pix, float gamma);
+//
 //
 //    /**
 //     * Original signature :
@@ -12090,11 +11648,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int pixWriteMemPng(PointerByReference pdata, NativeSizeByReference psize, Pix pix, float gamma);
 //
-//    /**
-//     * Original signature : <code>PIX* pixReadStreamPnm(FILE*)</code><br>
-//     * <i>native declaration : allheaders.h:3444</i>
-//     */
-//    Pix pixReadStreamPnm(PointerByReference fp);
+//
 //
 //    /**
 //     * Original signature :
@@ -12103,33 +11657,13 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int readHeaderPnm(String filename, IntBuffer pw, IntBuffer ph, IntBuffer pd, IntBuffer ptype, IntBuffer pbps, IntBuffer pspp);
 //
-//    /**
-//     * Original signature :
-//     * <code>l_int32 freadHeaderPnm(FILE*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code><br>
-//     * <i>native declaration : allheaders.h:3448</i>
-//     */
-//    int freadHeaderPnm(PointerByReference fp, IntBuffer pw, IntBuffer ph, IntBuffer pd, IntBuffer ptype, IntBuffer pbps, IntBuffer pspp);
 //
-//    /**
-//     * Original signature :
-//     * <code>l_int32 freadHeaderPnm(FILE*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code><br>
-//     * <i>native declaration : allheaders.h:3448</i>
-//     */
-//    int freadHeaderPnm(PointerByReference fp, IntByReference pw, IntByReference ph, IntByReference pd, IntByReference ptype, IntByReference pbps, IntByReference pspp);
 //
-//    /**
-//     * Original signature :
-//     * <code>l_int32 pixWriteStreamPnm(FILE*, PIX*)</code><br>
-//     * <i>native declaration : allheaders.h:3450</i>
-//     */
-//    int pixWriteStreamPnm(PointerByReference fp, Pix pix);
 //
-//    /**
-//     * Original signature :
-//     * <code>l_int32 pixWriteStreamAsciiPnm(FILE*, PIX*)</code><br>
-//     * <i>native declaration : allheaders.h:3452</i>
-//     */
-//    int pixWriteStreamAsciiPnm(PointerByReference fp, Pix pix);
+//
+//
+//
+//
 //
 //    /**
 //     * Original signature :
@@ -12313,12 +11847,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int pixWritePSEmbed(String filein, String fileout);
 //
-//    /**
-//     * Original signature :
-//     * <code>l_int32 pixWriteStreamPS(FILE*, PIX*, BOX*, l_int32, l_float32)</code><br>
-//     * <i>native declaration : allheaders.h:3506</i>
-//     */
-//    int pixWriteStreamPS(PointerByReference fp, Pix pix, Box box, int res, float scale);
+//
 //
 //    /**
 //     * Original signature :
@@ -12597,11 +12126,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    Pta ptaRead(String filename);
 //
-//    /**
-//     * Original signature : <code>PTA* ptaReadStream(FILE*)</code><br>
-//     * <i>native declaration : allheaders.h:3590</i>
-//     */
-//    Pta ptaReadStream(PointerByReference fp);
+//
 //
 //    /**
 //     * Original signature :
@@ -12610,12 +12135,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int ptaWrite(String filename, Pta pta, int type);
 //
-//    /**
-//     * Original signature :
-//     * <code>l_int32 ptaWriteStream(FILE*, PTA*, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:3594</i>
-//     */
-//    int ptaWriteStream(PointerByReference fp, Pta pta, int type);
+//
 //
 //    /**
 //     * Original signature : <code>PTAA* ptaaCreate(l_int32)</code><br>
@@ -12688,11 +12208,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    Ptaa ptaaRead(String filename);
 //
-//    /**
-//     * Original signature : <code>PTAA* ptaaReadStream(FILE*)</code><br>
-//     * <i>native declaration : allheaders.h:3618</i>
-//     */
-//    Ptaa ptaaReadStream(PointerByReference fp);
+//
 //
 //    /**
 //     * Original signature :
@@ -12701,12 +12217,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int ptaaWrite(String filename, Ptaa ptaa, int type);
 //
-//    /**
-//     * Original signature :
-//     * <code>l_int32 ptaaWriteStream(FILE*, PTAA*, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:3622</i>
-//     */
-//    int ptaaWriteStream(PointerByReference fp, Ptaa ptaa, int type);
+//
 //
 //    /**
 //     * Original signature : <code>PTA* ptaSubsample(PTA*, l_int32)</code><br>
@@ -13248,12 +12759,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int lqueueGetCount(L_Queue lq);
 //
-//    /**
-//     * Original signature :
-//     * <code>l_int32 lqueuePrint(FILE*, L_QUEUE*)</code><br>
-//     * <i>native declaration : allheaders.h:3772</i>
-//     */
-//    int lqueuePrint(PointerByReference fp, L_Queue lq);
+//
 //
 //    /**
 //     * Original signature :
@@ -13414,11 +12920,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    Pix pixReadIndexed(Sarray sa, int index);
 //
-//    /**
-//     * Original signature : <code>PIX* pixReadStream(FILE*, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:3816</i>
-//     */
-//    Pix pixReadStream(PointerByReference fp, int hint);
+//
 //
 //    /**
 //     * Original signature :
@@ -13434,19 +12936,9 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int findFileFormat(String filename, IntBuffer pformat);
 //
-//    /**
-//     * Original signature :
-//     * <code>l_int32 findFileFormatStream(FILE*, l_int32*)</code><br>
-//     * <i>native declaration : allheaders.h:3822</i>
-//     */
-//    int findFileFormatStream(PointerByReference fp, IntBuffer pformat);
 //
-//    /**
-//     * Original signature :
-//     * <code>l_int32 findFileFormatStream(FILE*, l_int32*)</code><br>
-//     * <i>native declaration : allheaders.h:3822</i>
-//     */
-//    int findFileFormatStream(PointerByReference fp, IntByReference pformat);
+//
+//
 //
 //    /**
 //     * Original signature :
@@ -13455,11 +12947,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int findFileFormatBuffer(java.nio.ByteBuffer buf, IntBuffer pformat);
 //
-//    /**
-//     * Original signature : <code>l_int32 fileFormatIsTiff(FILE*)</code><br>
-//     * <i>native declaration : allheaders.h:3826</i>
-//     */
-//    int fileFormatIsTiff(PointerByReference fp);
+//
 //
 //    /**
 //     * Original signature :
@@ -13627,11 +13115,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    L_Recoga recogaRead(String filename);
 //
-//    /**
-//     * Original signature : <code>L_RECOGA* recogaReadStream(FILE*)</code><br>
-//     * <i>native declaration : allheaders.h:3878</i>
-//     */
-//    L_Recoga recogaReadStream(PointerByReference fp);
+//
 //
 //    /**
 //     * Original signature :
@@ -13640,19 +13124,9 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int recogaWrite(String filename, L_Recoga recoga);
 //
-//    /**
-//     * Original signature :
-//     * <code>l_int32 recogaWriteStream(FILE*, L_RECOGA*, const char*)</code><br>
-//     * <i>native declaration : allheaders.h:3882</i>
-//     */
-//    int recogaWriteStream(PointerByReference fp, L_Recoga recoga, String filename);
 //
-//    /**
-//     * Original signature :
-//     * <code>l_int32 recogaWriteStream(FILE*, L_RECOGA*, const char*)</code><br>
-//     * <i>native declaration : allheaders.h:3882</i>
-//     */
-//    int recogaWriteStream(PointerByReference fp, L_Recoga recoga, Pointer filename);
+//
+//
 //
 //    /**
 //     * Original signature :
@@ -13667,11 +13141,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    L_Recog recogRead(String filename);
 //
-//    /**
-//     * Original signature : <code>L_RECOG* recogReadStream(FILE*)</code><br>
-//     * <i>native declaration : allheaders.h:3888</i>
-//     */
-//    L_Recog recogReadStream(PointerByReference fp);
+//
 //
 //    /**
 //     * Original signature :
@@ -13680,19 +13150,9 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int recogWrite(String filename, L_Recog recog);
 //
-//    /**
-//     * Original signature :
-//     * <code>l_int32 recogWriteStream(FILE*, L_RECOG*, const char*)</code><br>
-//     * <i>native declaration : allheaders.h:3892</i>
-//     */
-//    int recogWriteStream(PointerByReference fp, L_Recog recog, String filename);
 //
-//    /**
-//     * Original signature :
-//     * <code>l_int32 recogWriteStream(FILE*, L_RECOG*, const char*)</code><br>
-//     * <i>native declaration : allheaders.h:3892</i>
-//     */
-//    int recogWriteStream(PointerByReference fp, L_Recog recog, Pointer filename);
+//
+//
 //
 //    /**
 //     * Original signature :
@@ -14017,19 +13477,9 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int recogSetPadParams(L_Recog recog, String bootdir, String bootpattern, String bootpath, int type, int min_nopad, int max_afterpad);
 //
-//    /**
-//     * Original signature :
-//     * <code>l_int32 recogaShowContent(FILE*, L_RECOGA*, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:3980</i>
-//     */
-//    int recogaShowContent(PointerByReference fp, L_Recoga recoga, int display);
 //
-//    /**
-//     * Original signature :
-//     * <code>l_int32 recogShowContent(FILE*, L_RECOG*, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:3982</i>
-//     */
-//    int recogShowContent(PointerByReference fp, L_Recog recog, int display);
+//
+//
 //
 //    /**
 //     * Original signature :
@@ -14661,11 +14111,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    Sarray sarrayRead(String filename);
 //
-//    /**
-//     * Original signature : <code>SARRAY* sarrayReadStream(FILE*)</code><br>
-//     * <i>native declaration : allheaders.h:4168</i>
-//     */
-//    Sarray sarrayReadStream(PointerByReference fp);
+//
 //
 //    /**
 //     * Original signature :
@@ -14674,12 +14120,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int sarrayWrite(String filename, Sarray sa);
 //
-//    /**
-//     * Original signature :
-//     * <code>l_int32 sarrayWriteStream(FILE*, SARRAY*)</code><br>
-//     * <i>native declaration : allheaders.h:4172</i>
-//     */
-//    int sarrayWriteStream(PointerByReference fp, Sarray sa);
+//
 //
 //    /**
 //     * Original signature :
@@ -15558,11 +14999,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    Sela selaRead(String fname);
 //
-//    /**
-//     * Original signature : <code>SELA* selaReadStream(FILE*)</code><br>
-//     * <i>native declaration : allheaders.h:4434</i>
-//     */
-//    Sela selaReadStream(PointerByReference fp);
+//
 //
 //    /**
 //     * Original signature : <code>SEL* selRead(const char*)</code><br>
@@ -15570,11 +15007,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    Selector selRead(String fname);
 //
-//    /**
-//     * Original signature : <code>SEL* selReadStream(FILE*)</code><br>
-//     * <i>native declaration : allheaders.h:4438</i>
-//     */
-//    Selector selReadStream(PointerByReference fp);
+//
 //
 //    /**
 //     * Original signature :
@@ -15583,12 +15016,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int selaWrite(String fname, Sela sela);
 //
-//    /**
-//     * Original signature :
-//     * <code>l_int32 selaWriteStream(FILE*, SELA*)</code><br>
-//     * <i>native declaration : allheaders.h:4442</i>
-//     */
-//    int selaWriteStream(PointerByReference fp, Sela sela);
+//
 //
 //    /**
 //     * Original signature : <code>l_int32 selWrite(const char*, SEL*)</code><br>
@@ -15596,11 +15024,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int selWrite(String fname, Pointer sel);
 //
-//    /**
-//     * Original signature : <code>l_int32 selWriteStream(FILE*, SEL*)</code><br>
-//     * <i>native declaration : allheaders.h:4446</i>
-//     */
-//    int selWriteStream(PointerByReference fp, Pointer sel);
+//
 //
 //    /**
 //     * Original signature :
@@ -15904,11 +15328,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int pixFindNormalizedSquareSum(Pix pixs, FloatBuffer phratio, FloatBuffer pvratio, FloatBuffer pfract);
 //
-//    /**
-//     * Original signature : <code>PIX* pixReadStreamSpix(FILE*)</code><br>
-//     * <i>native declaration : allheaders.h:4536</i>
-//     */
-//    Pix pixReadStreamSpix(PointerByReference fp);
+//
 //
 //    /**
 //     * Original signature :
@@ -15917,19 +15337,9 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int readHeaderSpix(String filename, IntBuffer pwidth, IntBuffer pheight, IntBuffer pbps, IntBuffer pspp, IntBuffer piscmap);
 //
-//    /**
-//     * Original signature :
-//     * <code>l_int32 freadHeaderSpix(FILE*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code><br>
-//     * <i>native declaration : allheaders.h:4540</i>
-//     */
-//    int freadHeaderSpix(PointerByReference fp, IntBuffer pwidth, IntBuffer pheight, IntBuffer pbps, IntBuffer pspp, IntBuffer piscmap);
 //
-//    /**
-//     * Original signature :
-//     * <code>l_int32 freadHeaderSpix(FILE*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code><br>
-//     * <i>native declaration : allheaders.h:4540</i>
-//     */
-//    int freadHeaderSpix(PointerByReference fp, IntByReference pwidth, IntByReference pheight, IntByReference pbps, IntByReference pspp, IntByReference piscmap);
+//
+//
 //
 //    /**
 //     * Original signature :
@@ -15938,12 +15348,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int sreadHeaderSpix(IntBuffer data, IntBuffer pwidth, IntBuffer pheight, IntBuffer pbps, IntBuffer pspp, IntBuffer piscmap);
 //
-//    /**
-//     * Original signature :
-//     * <code>l_int32 pixWriteStreamSpix(FILE*, PIX*)</code><br>
-//     * <i>native declaration : allheaders.h:4544</i>
-//     */
-//    int pixWriteStreamSpix(PointerByReference fp, Pix pix);
+//
 //
 //    /**
 //     * Original signature :
@@ -16004,12 +15409,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int lstackGetCount(L_Stack lstack);
 //
-//    /**
-//     * Original signature :
-//     * <code>l_int32 lstackPrint(FILE*, L_STACK*)</code><br>
-//     * <i>native declaration : allheaders.h:4564</i>
-//     */
-//    int lstackPrint(PointerByReference fp, L_Stack lstack);
+//
 //
 //    /**
 //     * Original signature :
@@ -16141,12 +15541,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    Pix pixReadTiff(String filename, int n);
 //
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixReadStreamTiff(FILE*, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4604</i>
-//     */
-//    Pix pixReadStreamTiff(PointerByReference fp, int n);
+//
 //
 //    /**
 //     * Original signature :
@@ -16162,12 +15557,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int pixWriteTiffCustom(String filename, Pix pix, int comptype, String modestring, Numa natags, Sarray savals, Sarray satypes, Numa nasizes);
 //
-//    /**
-//     * Original signature :
-//     * <code>l_int32 pixWriteStreamTiff(FILE*, PIX*, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4610</i>
-//     */
-//    int pixWriteStreamTiff(PointerByReference fp, Pix pix, int comptype);
+//
 //
 //    /**
 //     * Original signature :
@@ -16190,47 +15580,17 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int writeMultipageTiffSA(Sarray sa, String fileout);
 //
-//    /**
-//     * Original signature :
-//     * <code>l_int32 fprintTiffInfo(FILE*, const char*)</code><br>
-//     * <i>native declaration : allheaders.h:4618</i>
-//     */
-//    int fprintTiffInfo(PointerByReference fpout, String tiffile);
 //
-//    /**
-//     * Original signature :
-//     * <code>l_int32 fprintTiffInfo(FILE*, const char*)</code><br>
-//     * <i>native declaration : allheaders.h:4618</i>
-//     */
-//    int fprintTiffInfo(PointerByReference fpout, Pointer tiffile);
 //
-//    /**
-//     * Original signature :
-//     * <code>l_int32 tiffGetCount(FILE*, l_int32*)</code><br>
-//     * <i>native declaration : allheaders.h:4620</i>
-//     */
-//    int tiffGetCount(PointerByReference fp, IntBuffer pn);
 //
-//    /**
-//     * Original signature :
-//     * <code>l_int32 tiffGetCount(FILE*, l_int32*)</code><br>
-//     * <i>native declaration : allheaders.h:4620</i>
-//     */
-//    int tiffGetCount(PointerByReference fp, IntByReference pn);
 //
-//    /**
-//     * Original signature :
-//     * <code>l_int32 getTiffResolution(FILE*, l_int32*, l_int32*)</code><br>
-//     * <i>native declaration : allheaders.h:4622</i>
-//     */
-//    int getTiffResolution(PointerByReference fp, IntBuffer pxres, IntBuffer pyres);
 //
-//    /**
-//     * Original signature :
-//     * <code>l_int32 getTiffResolution(FILE*, l_int32*, l_int32*)</code><br>
-//     * <i>native declaration : allheaders.h:4622</i>
-//     */
-//    int getTiffResolution(PointerByReference fp, IntByReference pxres, IntByReference pyres);
+//
+//
+//
+//
+//
+//
 //
 //    /**
 //     * Original signature :
@@ -16239,19 +15599,9 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int readHeaderTiff(String filename, int n, IntBuffer pwidth, IntBuffer pheight, IntBuffer pbps, IntBuffer pspp, IntBuffer pres, IntBuffer pcmap, IntBuffer pformat);
 //
-//    /**
-//     * Original signature :
-//     * <code>l_int32 freadHeaderTiff(FILE*, l_int32, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code><br>
-//     * <i>native declaration : allheaders.h:4626</i>
-//     */
-//    int freadHeaderTiff(PointerByReference fp, int n, IntBuffer pwidth, IntBuffer pheight, IntBuffer pbps, IntBuffer pspp, IntBuffer pres, IntBuffer pcmap, IntBuffer pformat);
 //
-//    /**
-//     * Original signature :
-//     * <code>l_int32 freadHeaderTiff(FILE*, l_int32, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code><br>
-//     * <i>native declaration : allheaders.h:4626</i>
-//     */
-//    int freadHeaderTiff(PointerByReference fp, int n, IntByReference pwidth, IntByReference pheight, IntByReference pbps, IntByReference pspp, IntByReference pres, IntByReference pcmap, IntByReference pformat);
+//
+//
 //
 //    /**
 //     * Original signature :
@@ -16260,19 +15610,9 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int readHeaderMemTiff(java.nio.ByteBuffer cdata, NativeSize size, int n, IntBuffer pwidth, IntBuffer pheight, IntBuffer pbps, IntBuffer pspp, IntBuffer pres, IntBuffer pcmap, IntBuffer pformat);
 //
-//    /**
-//     * Original signature :
-//     * <code>l_int32 findTiffCompression(FILE*, l_int32*)</code><br>
-//     * <i>native declaration : allheaders.h:4630</i>
-//     */
-//    int findTiffCompression(PointerByReference fp, IntBuffer pcomptype);
 //
-//    /**
-//     * Original signature :
-//     * <code>l_int32 findTiffCompression(FILE*, l_int32*)</code><br>
-//     * <i>native declaration : allheaders.h:4630</i>
-//     */
-//    int findTiffCompression(PointerByReference fp, IntByReference pcomptype);
+//
+//
 //
 //    /**
 //     * Original signature :
@@ -16453,12 +15793,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    Pointer l_binaryRead(String filename, NativeSizeByReference pnbytes);
 //
-//    /**
-//     * Original signature :
-//     * <code>l_uint8* l_binaryReadStream(FILE*, size_t*)</code><br>
-//     * <i>native declaration : allheaders.h:4684</i>
-//     */
-//    Pointer l_binaryReadStream(PointerByReference fp, NativeSizeByReference pnbytes);
+//
 //
 //    /**
 //     * Original signature :
@@ -16467,12 +15802,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    Pointer l_binaryReadSelect(String filename, NativeSize start, NativeSize nbytes, NativeSizeByReference pnread);
 //
-//    /**
-//     * Original signature :
-//     * <code>l_uint8* l_binaryReadSelectStream(FILE*, size_t, size_t, size_t*)</code><br>
-//     * <i>native declaration : allheaders.h:4688</i>
-//     */
-//    Pointer l_binaryReadSelectStream(PointerByReference fp, NativeSize start, NativeSize nbytes, NativeSizeByReference pnread);
+//
 //
 //    /**
 //     * Original signature :
@@ -16487,11 +15817,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    NativeSize nbytesInFile(String filename);
 //
-//    /**
-//     * Original signature : <code>size_t fnbytesInFile(FILE*)</code><br>
-//     * <i>native declaration : allheaders.h:4694</i>
-//     */
-//    NativeSize fnbytesInFile(PointerByReference fp);
+//
 //
 //    /**
 //     * Original signature :
@@ -16556,31 +15882,13 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int convertOnBigEnd32(int wordin);
 //
-//    /**
-//     * Original signature : <code>FILE* fopenReadStream(const char*)</code><br>
-//     * <i>native declaration : allheaders.h:4714</i>
-//     */
-//    PointerByReference fopenReadStream(String filename);
 //
-//    /**
-//     * Original signature :
-//     * <code>FILE* fopenWriteStream(const char*, const char*)</code><br>
-//     * <i>native declaration : allheaders.h:4716</i>
-//     */
-//    PointerByReference fopenWriteStream(String filename, String modestring);
 //
-//    /**
-//     * Original signature :
-//     * <code>FILE* lept_fopen(const char*, const char*)</code><br>
-//     * <i>native declaration : allheaders.h:4718</i>
-//     */
-//    PointerByReference lept_fopen(String filename, String mode);
 //
-//    /**
-//     * Original signature : <code>l_int32 lept_fclose(FILE*)</code><br>
-//     * <i>native declaration : allheaders.h:4720</i>
-//     */
-//    int lept_fclose(PointerByReference fp);
+//
+//
+//
+//
 //
 //    /**
 //     * Original signature : <code>void* lept_calloc(size_t, size_t)</code><br>
@@ -16917,12 +16225,6 @@ public interface Leptonica extends Library, ILeptonica {
     Pix wshedRenderColors(L_WShed wshed);
 
     /**
-     * Original signature : <code>PIX* pixReadStreamWebP(FILE*)</code><br>
-     * <i>native declaration : allheaders.h:4822</i>
-     */
-    Pix pixReadStreamWebP(PointerByReference fp);
-
-    /**
      * Original signature :
      * <code>PIX* pixReadMemWebP(const l_uint8*, size_t)</code><br>
      * <i>native declaration : allheaders.h:4824</i>
@@ -16952,13 +16254,6 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixWriteStreamWebP(FILE*, PIX*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4832</i>
-     */
-    int pixWriteStreamWebP(PointerByReference fp, Pix pixs, int quality, int lossless);
-
-    /**
-     * Original signature :
      * <code>l_int32 pixWriteMemWebP(l_uint8**, size_t*, PIX*, l_int32, l_int32)</code><br>
      * <i>native declaration : allheaders.h:4834</i>
      */
@@ -16977,13 +16272,6 @@ public interface Leptonica extends Library, ILeptonica {
      * <i>native declaration : allheaders.h:4838</i>
      */
     int pixWrite(String filename, Pix pix, int format);
-
-    /**
-     * Original signature :
-     * <code>l_int32 pixWriteStream(FILE*, PIX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4840</i>
-     */
-    int pixWriteStream(PointerByReference fp, Pix pix, int format);
 
     /**
      * Original signature :
