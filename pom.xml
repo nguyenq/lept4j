@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>net.sourceforge.lept4j</groupId>
 	<artifactId>lept4j</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<packaging>jar</packaging>
 
 	<properties>
@@ -18,16 +18,17 @@
 	<description>
 		# Lept4J 
 
-        ## Description:
+                ## Description:
 
-        A Java JNA wrapper for Leptonica Image Processing library. 
+                A Java JNA wrapper for Leptonica Image Processing library. 
 
-        Lept4J is released and distributed under the Apache License, v2.0.</description>
+                Lept4J is released and distributed under the Apache License, v2.0.
+        </description>
 
 	<scm>
-		<connection>scm:svn:https://github.com/nguyenq/lept4j/trunk/</connection>
-		<developerConnection>scm:svn:https://github.com/nguyenq/lept4j/trunk/</developerConnection>
-		<url>https://github.com/nguyenq/lept4j/trunk/</url>
+		<connection>scm:svn:https://github.com/nguyenq/lept4j/tags/lept4j-1.0.0</connection>
+		<developerConnection>scm:svn:https://github.com/nguyenq/lept4j/tags/lept4j-1.0.0</developerConnection>
+		<url>https://github.com/nguyenq/lept4j/tags/lept4j-1.0.0</url>
 	</scm>
 
 	<developers>
@@ -77,14 +78,4 @@
 			<version>0.5</version>
 		</dependency>
 	</dependencies>
-        <distributionManagement>
-            <snapshotRepository>
-              <id>ossrh</id>
-              <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-            </snapshotRepository>
-            <repository>
-              <id>ossrh</id>
-              <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-            </repository>
-        </distributionManagement>
 </project>
