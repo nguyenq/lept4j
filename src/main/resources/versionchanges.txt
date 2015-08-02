@@ -1,5 +1,8 @@
 Lept4J Change Summary
 
-Version 0.1 Alpha (18 April 2015):
+Version 1.0 (25 July 2015):
 - Initial commit for Leptonica 1.71
-- Working partially due to the required huge heap size. Still under development
+- Embed Windows native resources in JAR
+- Autoload Windows native libraries
+- Change type from ByReference[] to PointerByReference
+- Add support for image conversion
