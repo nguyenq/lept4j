@@ -858,6 +858,14 @@ public interface ILeptonica {
      */
     public static final int L_SUB_ON_BIG_DIFF = 3;
     /**
+     * substitute boundary with capped min
+     */
+    public static final int L_USE_CAPPED_MIN = 4;
+    /**
+     * substitute boundary with capped max
+     */
+    public static final int L_USE_CAPPED_MAX = 5;
+    /**
      * resize to bounding region; remove smaller
      */
     public static final int L_COMBINE = 1;
@@ -865,6 +873,14 @@ public interface ILeptonica {
      * only remove smaller
      */
     public static final int L_REMOVE_SMALL = 2;
+    /**
+     * consider all boxes in the sequence
+     */
+    public static final int L_USE_ALL_BOXES = 1;
+    /**
+     * consider boxes with the same parity
+     */
+    public static final int L_USE_SAME_PARITY_BOXES = 2;
     /**
      * increasing stretch or contraction to left
      */
@@ -1107,6 +1123,58 @@ public interface ILeptonica {
     public static final int L_SUDOKU_INIT = 0;
     public static final int L_SUDOKU_STATE = 1;
     /**
+     * use histogram of barcode widths
+     */
+    public static final int L_USE_WIDTHS = 1;
+    /**
+     * find best window for decoding transitions
+     */
+    public static final int L_USE_WINDOWS = 2;
+    /**
+     * unknown format
+     */
+    public static final int L_BF_UNKNOWN = 0;
+    /**
+     * try decoding with all known formats
+     */
+    public static final int L_BF_ANY = 1;
+    /**
+     * decode with Code128 format
+     */
+    public static final int L_BF_CODE128 = 2;
+    /**
+     * decode with EAN8 format
+     */
+    public static final int L_BF_EAN8 = 3;
+    /**
+     * decode with EAN13 format
+     */
+    public static final int L_BF_EAN13 = 4;
+    /**
+     * decode with Code 2 of 5 format
+     */
+    public static final int L_BF_CODE2OF5 = 5;
+    /**
+     * decode with Interleaved 2 of 5 format
+     */
+    public static final int L_BF_CODEI2OF5 = 6;
+    /**
+     * decode with Code39 format
+     */
+    public static final int L_BF_CODE39 = 7;
+    /**
+     * decode with Code93 format
+     */
+    public static final int L_BF_CODE93 = 8;
+    /**
+     * decode with Code93 format
+     */
+    public static final int L_BF_CODABAR = 9;
+    /**
+     * decode with UPC A format
+     */
+    public static final int L_BF_UPCA = 10;
+    /**
      * -------------------------------------------------------------------------*<br>
      * Standard size of border added around images for special processing *<br>
      * -------------------------------------------------------------------------<br>
@@ -1156,6 +1224,42 @@ public interface ILeptonica {
      * copyflag value in sarrayGetString()
      */
     public static final int L_NOCOPY = 0;
+    public static final int NumSupportedBarcodeFormats = 7;
+    public static final int C25_START = 10;
+    public static final int C25_STOP = 11;
+    public static final int CI25_START = 10;
+    public static final int CI25_STOP = 11;
+    public static final int C93_START = 47;
+    public static final int C93_STOP = 47;
+    public static final int C39_START = 43;
+    public static final int C39_STOP = 43;
+    public static final int UPCA_START = 10;
+    public static final int UPCA_STOP = 11;
+    public static final int UPCA_MID = 12;
+    /**
+     * in A or B only; in C it is 96
+     */
+    public static final int C128_FUN_3 = 96;
+    /**
+     * in A or B only; in C it is 97
+     */
+    public static final int C128_FUNC_2 = 97;
+    /**
+     * in A or B only; in C it is 98
+     */
+    public static final int C128_SHIFT = 98;
+    /**
+     * in A or B only; in C it is 99
+     */
+    public static final int C128_GOTO_C = 99;
+    public static final int C128_GOTO_B = 100;
+    public static final int C128_GOTO_A = 101;
+    public static final int C128_FUNC_1 = 102;
+    public static final int C128_START_A = 103;
+    public static final int C128_START_B = 104;
+    public static final int C128_START_C = 105;
+    public static final int C128_STOP = 106;
+    public static final int C128_SYMBOL_WIDTH = 11;
     /**
      * <i>native declaration : allheaders.h</i>
      */
@@ -1163,7 +1267,7 @@ public interface ILeptonica {
     /**
      * <i>native declaration : allheaders.h</i>
      */
-    public static final int LIBLEPT_MINOR_VERSION = (int) 71;
+    public static final int LIBLEPT_MINOR_VERSION = (int) 72;
     /**
      * <i>native declaration : environ.h</i>
      */
@@ -1199,10 +1303,6 @@ public interface ILeptonica {
     /**
      * <i>native declaration : environ.h</i>
      */
-    public static final int HAVE_FMEMOPEN = (int) 0;
-    /**
-     * <i>native declaration : environ.h</i>
-     */
     public static final int USE_BMPIO = (int) 1;
     /**
      * <i>native declaration : environ.h</i>
@@ -1223,7 +1323,15 @@ public interface ILeptonica {
     /**
      * <i>native declaration : environ.h</i>
      */
+    public static final int ADD_LEPTONICA_SUBDIR = (int) 0;
+    /**
+     * <i>native declaration : environ.h</i>
+     */
     public static final int UNDEF = (int) -1;
+    /**
+     * <i>native declaration : environ.h</i>
+     */
+    public static final int NULL = (int) 0;
     /**
      * <i>native declaration : environ.h</i>
      */
@@ -1348,6 +1456,14 @@ public interface ILeptonica {
      * <i>native declaration : recog.h</i>
      */
     public static final int RECOG_VERSION_NUMBER = (int) 1;
+    /**
+     * <i>native declaration : bmfdata.h</i>
+     */
+    public static final int NUM_FONTS = (int) 9;
+    /**
+     * <i>native declaration : freetype.h</i>
+     */
+    public static final int LEPTONICA_FT_RESOLUTION = (int) 96;
 
     /**
      * <i>native declaration : allheaders.h:4875</i>

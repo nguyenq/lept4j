@@ -35,6 +35,11 @@ public class LeptonicaImpl implements Leptonica {
     }
 
     @Override
+    public Pix pixCleanBackgroundToWhite(Pix pixs, Pix pixim, Pix pixg, float gamma, int blackval, int whiteval) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
     public Pix pixBackgroundNormSimple(Pix pixs, Pix pixim, Pix pixg) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
@@ -465,11 +470,6 @@ public class LeptonicaImpl implements Leptonica {
     }
 
     @Override
-    public int bbufferBytesToWrite(net.sourceforge.lept4j.ByteBuffer bb, NativeSizeByReference pnbytes) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
     public Pix pixBilateral(Pix pixs, float spatial_stdev, float range_stdev, int ncomps, int reduction) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
@@ -750,7 +750,17 @@ public class LeptonicaImpl implements Leptonica {
     }
 
     @Override
-    public Pixa pixaGenerateFont(String dir, int size, IntBuffer pbl0, IntBuffer pbl1, IntBuffer pbl2) {
+    public Pixa pixaGenerateFontFromFile(String dir, int fontsize, IntBuffer pbl0, IntBuffer pbl1, IntBuffer pbl2) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public Pixa pixaGenerateFontFromString(int fontsize, IntBuffer pbl0, IntBuffer pbl1, IntBuffer pbl2) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public Pixa pixaGenerateFont(Pix pixs, int fontsize, IntBuffer pbl0, IntBuffer pbl1, IntBuffer pbl2) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
@@ -761,6 +771,11 @@ public class LeptonicaImpl implements Leptonica {
 
     @Override
     public int pixWriteMemBmp(PointerByReference pdata, NativeSizeByReference psize, Pix pix) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public Pointer l_bootnum_gen() {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
@@ -1245,12 +1260,12 @@ public class LeptonicaImpl implements Leptonica {
     }
 
     @Override
-    public int boxaExtractAsNuma(Boxa boxa, PointerByReference pnax, PointerByReference pnay, PointerByReference pnaw, PointerByReference pnah, int keepinvalid) {
+    public int boxaExtractAsNuma(Boxa boxa, PointerByReference pnal, PointerByReference pnat, PointerByReference pnar, PointerByReference pnab, PointerByReference pnaw, PointerByReference pnah, int keepinvalid) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
-    public int boxaExtractAsPta(Boxa boxa, PointerByReference pptal, PointerByReference pptat, PointerByReference pptar, PointerByReference pptab, int keepinvalid) {
+    public int boxaExtractAsPta(Boxa boxa, PointerByReference pptal, PointerByReference pptat, PointerByReference pptar, PointerByReference pptab, PointerByReference pptaw, PointerByReference pptah, int keepinvalid) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
@@ -1430,12 +1445,32 @@ public class LeptonicaImpl implements Leptonica {
     }
 
     @Override
-    public Boxa boxaSmoothSequence(Boxa boxas, float factor, int subflag, int maxdiff, int debug) {
+    public Pta boxConvertToPta(Box box, int ncorners) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public Box ptaConvertToBox(Pta pta) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public Boxa boxaSmoothSequenceLS(Boxa boxas, float factor, int subflag, int maxdiff, int debug) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public Boxa boxaSmoothSequenceMedian(Boxa boxas, int halfwin, int subflag, int maxdiff, int debug) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
     public Boxa boxaLinearFit(Boxa boxas, float factor, int debug) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public Boxa boxaWindowedMedian(Boxa boxas, int halfwin, int debug) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
@@ -1456,6 +1491,11 @@ public class LeptonicaImpl implements Leptonica {
 
     @Override
     public int boxaPlotSides(Boxa boxa, String plotname, PointerByReference pnal, PointerByReference pnat, PointerByReference pnar, PointerByReference pnab, int outformat) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public Boxa boxaFillSequence(Boxa boxas, int useflag, int debug) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
@@ -1795,6 +1835,11 @@ public class LeptonicaImpl implements Leptonica {
     }
 
     @Override
+    public Pix pixMaskOverColorRange(Pix pixs, int rmin, int rmax, int gmin, int gmax, int bmin, int bmax) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
     public int pixColorFraction(Pix pixs, int darkthresh, int lightthresh, int diffthresh, int factor, FloatBuffer ppixfract, FloatBuffer pcolorfract) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
@@ -1856,6 +1901,11 @@ public class LeptonicaImpl implements Leptonica {
 
     @Override
     public int pixColorGray(Pix pixs, Box box, int type, int thresh, int rval, int gval, int bval) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public Pix pixColorGrayMasked(Pix pixs, Pix pixm, int type, int thresh, int rval, int gval, int bval) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
@@ -2005,6 +2055,11 @@ public class LeptonicaImpl implements Leptonica {
     }
 
     @Override
+    public int pixcmapSetAlpha(PixColormap cmap, int index, int aval) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
     public int pixcmapGetIndex(PixColormap cmap, int rval, int gval, int bval, IntBuffer pindex) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
@@ -2016,6 +2071,11 @@ public class LeptonicaImpl implements Leptonica {
 
     @Override
     public int pixcmapIsOpaque(PixColormap cmap, IntBuffer popaque) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int pixcmapIsBlackAndWhite(PixColormap cmap, IntBuffer pblackwhite) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
@@ -2056,6 +2116,16 @@ public class LeptonicaImpl implements Leptonica {
 
     @Override
     public PixColormap pixcmapColorToGray(PixColormap cmaps, float rwt, float gwt, float bwt) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public PixColormap pixcmapRead(String filename) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int pixcmapWrite(String filename, PixColormap cmap) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
@@ -2370,6 +2440,66 @@ public class LeptonicaImpl implements Leptonica {
     }
 
     @Override
+    public FPixa pixConvertRGBToXYZ(Pix pixs) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public Pix fpixaConvertXYZToRGB(FPixa fpixa) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int convertRGBToXYZ(int rval, int gval, int bval, FloatBuffer pfxval, FloatBuffer pfyval, FloatBuffer pfzval) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int convertXYZToRGB(float fxval, float fyval, float fzval, int blackout, IntBuffer prval, IntBuffer pgval, IntBuffer pbval) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public FPixa fpixaConvertXYZToLAB(FPixa fpixas) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public FPixa fpixaConvertLABToXYZ(FPixa fpixas) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int convertXYZToLAB(float xval, float yval, float zval, FloatBuffer plval, FloatBuffer paval, FloatBuffer pbval) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int convertLABToXYZ(float lval, float aval, float bval, FloatBuffer pxval, FloatBuffer pyval, FloatBuffer pzval) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public FPixa pixConvertRGBToLAB(Pix pixs) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public Pix fpixaConvertLABToRGB(FPixa fpixa) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int convertRGBToLAB(int rval, int gval, int bval, FloatBuffer pflval, FloatBuffer pfaval, FloatBuffer pfbval) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int convertLABToRGB(float flval, float faval, float fbval, IntBuffer prval, IntBuffer pgval, IntBuffer pbval) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
     public int pixEqual(Pix pix1, Pix pix2, IntBuffer psame) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
@@ -2675,21 +2805,6 @@ public class LeptonicaImpl implements Leptonica {
     }
 
     @Override
-    public void blockconvLow(IntBuffer data, int w, int h, int wpl, IntBuffer dataa, int wpla, int wc, int hc) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public void blockconvAccumLow(IntBuffer datad, int w, int h, int wpld, IntBuffer datas, int d, int wpls) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public void blocksumLow(IntBuffer datad, int w, int h, int wpl, IntBuffer dataa, int wpla, int wc, int hc) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
     public int pixCorrelationScore(Pix pix1, Pix pix2, int area1, int area2, float delx, float dely, int maxdiffw, int maxdiffh, IntBuffer tab, FloatBuffer pscore) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
@@ -2831,6 +2946,16 @@ public class LeptonicaImpl implements Leptonica {
 
     @Override
     public int dewarpaApplyDisparity(L_Dewarpa dewa, int pageno, Pix pixs, int grayin, int x, int y, PointerByReference ppixd, Pointer debugfile) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int dewarpaApplyDisparityBoxa(L_Dewarpa dewa, int pageno, Pix pixs, Boxa boxas, int mapdir, int x, int y, PointerByReference pboxad, String debugfile) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int dewarpaApplyDisparityBoxa(L_Dewarpa dewa, int pageno, Pix pixs, Boxa boxas, int mapdir, int x, int y, PointerByReference pboxad, Pointer debugfile) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
@@ -3155,6 +3280,31 @@ public class LeptonicaImpl implements Leptonica {
     }
 
     @Override
+    public Pointer encodeBase64(ByteBuffer inarray, int insize, IntBuffer poutsize) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public Pointer decodeBase64(String inarray, int insize, IntBuffer poutsize) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public Pointer encodeAscii85(ByteBuffer inarray, int insize, IntBuffer poutsize) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public Pointer decodeAscii85(ByteBuffer inarray, int insize, IntBuffer poutsize) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public Pointer reformatPacked64(ByteBuffer inarray, int insize, int leadspace, int linechars, int addquotes, IntBuffer poutsize) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
     public Pix pixGammaTRC(Pix pixd, Pix pixs, float gamma, int minval, int maxval) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
@@ -3290,12 +3440,12 @@ public class LeptonicaImpl implements Leptonica {
     }
 
     @Override
-    public Pix pixHMTDwa_1(Pix pixd, Pix pixs, ByteBuffer selname) {
+    public Pix pixHMTDwa_1(Pix pixd, Pix pixs, String selname) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
-    public Pix pixFHMTGen_1(Pix pixd, Pix pixs, ByteBuffer selname) {
+    public Pix pixFHMTGen_1(Pix pixd, Pix pixs, String selname) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
@@ -3570,16 +3720,6 @@ public class LeptonicaImpl implements Leptonica {
     }
 
     @Override
-    public void dilateGrayLow(IntBuffer datad, int w, int h, int wpld, IntBuffer datas, int wpls, int size, int direction, ByteBuffer buffer, ByteBuffer maxarray) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public void erodeGrayLow(IntBuffer datad, int w, int h, int wpld, IntBuffer datas, int wpls, int size, int direction, ByteBuffer buffer, ByteBuffer minarray) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
     public Pix pixDitherToBinary(Pix pixs) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
@@ -3651,31 +3791,6 @@ public class LeptonicaImpl implements Leptonica {
 
     @Override
     public Pix pixThresholdGrayArb(Pix pixs, String edgevals, int outdepth, int use_average, int setblack, int setwhite) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public Pix pixGenerateMaskByDiscr32(Pix pixs, int refval1, int refval2, int distflag) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public Pix pixGrayQuantFromHisto(Pix pixd, Pix pixs, Pix pixm, float minfract, int maxsize) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public Pix pixGrayQuantFromCmap(Pix pixs, PixColormap cmap, int mindepth) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public void ditherToBinaryLow(IntBuffer datad, int w, int h, int wpld, IntBuffer datas, int wpls, IntBuffer bufs1, IntBuffer bufs2, int lowerclip, int upperclip) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public void ditherToBinaryLineLow(IntBuffer lined, int w, IntBuffer bufs1, IntBuffer bufs2, int lowerclip, int upperclip, int lastlineflag) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
@@ -5100,6 +5215,11 @@ public class LeptonicaImpl implements Leptonica {
     }
 
     @Override
+    public Numa numaWindowedMedian(Numa nas, int halfwin) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
     public Numa numaConvertToInt(Numa nas) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
@@ -5286,6 +5406,11 @@ public class LeptonicaImpl implements Leptonica {
 
     @Override
     public int pixColorGrayCmap(Pix pixs, Box box, int type, int rval, int gval, int bval) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int pixColorGrayMaskedCmap(Pix pixs, Pix pixm, int type, int rval, int gval, int bval) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
@@ -5505,7 +5630,7 @@ public class LeptonicaImpl implements Leptonica {
     }
 
     @Override
-    public L_Compressed_Data l_generateFlateDataPdf(String fname) {
+    public L_Compressed_Data l_generateFlateDataPdf(String fname, Pix pixs) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
@@ -5980,6 +6105,66 @@ public class LeptonicaImpl implements Leptonica {
     }
 
     @Override
+    public Pix pixReadWithHint(String filename, int hint) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public Pix pixReadIndexed(Sarray sa, int index) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int pixReadHeader(String filename, IntBuffer pformat, IntBuffer pw, IntBuffer ph, IntBuffer pbps, IntBuffer pspp, IntBuffer piscmap) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int findFileFormat(String filename, IntBuffer pformat) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int findFileFormatBuffer(ByteBuffer buf, IntBuffer pformat) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public Pix pixReadMem(ByteBuffer data, NativeSize size) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int pixReadHeaderMem(ByteBuffer data, NativeSize size, IntBuffer pformat, IntBuffer pw, IntBuffer ph, IntBuffer pbps, IntBuffer pspp, IntBuffer piscmap) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int ioFormatTest(String filename) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public void l_getCurrentTime(IntBuffer sec, IntBuffer usec) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public L_WallTimer startWallTimer() {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public float stopWallTimer(PointerByReference ptimer) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public Pointer l_getFormattedDate() {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
     public int pixHtmlViewer(String dirin, String dirout, String rootname, int thumbwidth, int viewwidth, int copyorig) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
@@ -6100,6 +6285,11 @@ public class LeptonicaImpl implements Leptonica {
     }
 
     @Override
+    public int pixWriteAutoFormat(String filename, Pix pix) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
     public int pixWriteImpliedFormat(String filename, Pix pix, int quality, int progressive) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
@@ -6116,6 +6306,11 @@ public class LeptonicaImpl implements Leptonica {
 
     @Override
     public int getImpliedFileFormat(String filename) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int pixGetAutoFormat(Pix pix, IntBuffer pformat) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
@@ -6167,6 +6362,286 @@ public class LeptonicaImpl implements Leptonica {
     @Override
     public int pixSaveTiledWithText(Pix pixs, Pixa pixa, int outwidth, int newrow, int space, int linewidth, L_Bmf bmf, String textstr, int val, int location) {
         throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public void l_chooseDisplayProg(int selection) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public Pointer zlibCompress(ByteBuffer datain, NativeSize nin, NativeSizeByReference pnout) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public Pointer zlibUncompress(ByteBuffer datain, NativeSize nin, NativeSizeByReference pnout) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public Pix pixDeskew(Pix pixs, int redsearch) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Pix pixFindSkewAndDeskew(Pix pixs, int redsearch, FloatBuffer pangle, FloatBuffer pconf) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Pix pixDeskewGeneral(Pix pixs, int redsweep, float sweeprange, float sweepdelta, int redsearch, int thresh, FloatBuffer pangle, FloatBuffer pconf) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public int pixFindSkew(Pix pixs, FloatBuffer pangle, FloatBuffer pconf) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public int pixFindSkewSweep(Pix pixs, FloatBuffer pangle, int reduction, float sweeprange, float sweepdelta) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public int pixFindSkewSweepAndSearch(Pix pixs, FloatBuffer pangle, FloatBuffer pconf, int redsweep, int redsearch, float sweeprange, float sweepdelta, float minbsdelta) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public int pixFindSkewSweepAndSearchScore(Pix pixs, FloatBuffer pangle, FloatBuffer pconf, FloatBuffer pendscore, int redsweep, int redsearch, float sweepcenter, float sweeprange, float sweepdelta, float minbsdelta) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public int pixFindSkewSweepAndSearchScorePivot(Pix pixs, FloatBuffer pangle, FloatBuffer pconf, FloatBuffer pendscore, int redsweep, int redsearch, float sweepcenter, float sweeprange, float sweepdelta, float minbsdelta, int pivot) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public int pixFindSkewOrthogonalRange(Pix pixs, FloatBuffer pangle, FloatBuffer pconf, int redsweep, int redsearch, float sweeprange, float sweepdelta, float minbsdelta, float confprior) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public int pixFindDifferentialSquareSum(Pix pixs, FloatBuffer psum) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public int pixFindNormalizedSquareSum(Pix pixs, FloatBuffer phratio, FloatBuffer pvratio, FloatBuffer pfract) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Pix pixScale(Pix pixs, float scalex, float scaley) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Pix pixScaleToSize(Pix pixs, int wd, int hd) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Pix pixScaleGeneral(Pix pixs, float scalex, float scaley, float sharpfract, int sharpwidth) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Pix pixScaleLI(Pix pixs, float scalex, float scaley) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Pix pixScaleColorLI(Pix pixs, float scalex, float scaley) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Pix pixScaleColor2xLI(Pix pixs) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Pix pixScaleColor4xLI(Pix pixs) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Pix pixScaleGrayLI(Pix pixs, float scalex, float scaley) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Pix pixScaleGray2xLI(Pix pixs) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Pix pixScaleGray4xLI(Pix pixs) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Pix pixScaleBySampling(Pix pixs, float scalex, float scaley) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Pix pixScaleBySamplingToSize(Pix pixs, int wd, int hd) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Pix pixScaleByIntSampling(Pix pixs, int factor) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Pix pixScaleRGBToGrayFast(Pix pixs, int factor, int color) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Pix pixScaleRGBToBinaryFast(Pix pixs, int factor, int thresh) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Pix pixScaleGrayToBinaryFast(Pix pixs, int factor, int thresh) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Pix pixScaleSmooth(Pix pix, float scalex, float scaley) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Pix pixScaleRGBToGray2(Pix pixs, float rwt, float gwt, float bwt) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Pix pixScaleAreaMap(Pix pix, float scalex, float scaley) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Pix pixScaleAreaMap2(Pix pix) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Pix pixScaleBinary(Pix pixs, float scalex, float scaley) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Pix pixScaleToGray(Pix pixs, float scalefactor) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Pix pixScaleToGrayFast(Pix pixs, float scalefactor) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Pix pixScaleToGray2(Pix pixs) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Pix pixScaleToGray3(Pix pixs) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Pix pixScaleToGray4(Pix pixs) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Pix pixScaleToGray6(Pix pixs) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Pix pixScaleToGray8(Pix pixs) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Pix pixScaleToGray16(Pix pixs) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Pix pixScaleToGrayMipmap(Pix pixs, float scalefactor) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Pix pixScaleMipmap(Pix pixs1, Pix pixs2, float scale) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Pix pixExpandReplicate(Pix pixs, int factor) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Pix pixScaleGray2xLIThresh(Pix pixs, int thresh) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Pix pixScaleGray2xLIDither(Pix pixs) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Pix pixScaleGray4xLIThresh(Pix pixs, int thresh) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Pix pixScaleGray4xLIDither(Pix pixs) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Pix pixScaleGrayMinMax(Pix pixs, int xfact, int yfact, int type) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Pix pixScaleGrayMinMax2(Pix pixs, int type) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Pix pixScaleGrayRankCascade(Pix pixs, int level1, int level2, int level3, int level4) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Pix pixScaleGrayRank2(Pix pixs, int rank) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public int pixScaleAndTransferAlpha(Pix pixd, Pix pixs, float scalex, float scaley) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Pix pixScaleWithAlpha(Pix pixs, float scalex, float scaley, Pix pixg, float fract) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }
