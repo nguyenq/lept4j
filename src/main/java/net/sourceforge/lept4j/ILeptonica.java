@@ -502,11 +502,11 @@ public interface ILeptonica {
      */
     public static final int L_SELECT_IF_GT = 2;
     /**
-     * save if value is <= to the threshold
+     * save if value is &lt;= to the threshold
      */
     public static final int L_SELECT_IF_LTE = 3;
     /**
-     * save if value is >= to the threshold
+     * save if value is &gt;= to the threshold
      */
     public static final int L_SELECT_IF_GTE = 4;
     /**
@@ -1364,15 +1364,4 @@ public interface ILeptonica {
 
         void apply(Pointer voidPtr1);
     };
-    
-//    public static class FILE extends PointerType {
-//
-//        public FILE(Pointer address) {
-//            super(address);
-//        }
-//
-//        public FILE() {
-//            super();
-//        }
-//    };
 }

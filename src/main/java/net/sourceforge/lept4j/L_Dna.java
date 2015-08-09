@@ -32,7 +32,7 @@ public class L_Dna extends Structure {
 	 */
 	public double startx;
 	/**
-	 * change in x value as i --> i + 1<br>
+	 * change in x value as i --&gt; i + 1<br>
 	 * C type : l_float64
 	 */
 	public double delx;
@@ -56,7 +56,7 @@ public class L_Dna extends Structure {
 	 * C type : l_int32<br>
 	 * @param startx x value assigned to array[0]<br>
 	 * C type : l_float64<br>
-	 * @param delx change in x value as i --> i + 1<br>
+	 * @param delx change in x value as i --&gt; i + 1<br>
 	 * C type : l_float64<br>
 	 * @param array number array<br>
 	 * C type : l_float64*

@@ -37,7 +37,7 @@ public class L_Recog extends Structure {
 	 */
 	public int setsize;
 	/**
-	 * for binarizing if depth > 1<br>
+	 * for binarizing if depth &gt; 1<br>
 	 * C type : l_int32
 	 */
 	public int threshold;

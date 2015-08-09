@@ -13,7 +13,7 @@ import java.util.List;
  *      contained in the elements of the queue.<br>
  * <br>
  *      The heap is a simple binary tree with the following constraints:<br>
- *         - the key of each node is >= the keys of the two children<br>
+ *         - the key of each node is &gt;= the keys of the two children<br>
  *         - the tree is complete, meaning that each level (1, 2, 4, ...)<br>
  *           is filled and the last level is filled from left to right<br>
  *      The tree structure is implicit in the queue array, with the<br>
