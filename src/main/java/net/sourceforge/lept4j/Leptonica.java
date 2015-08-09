@@ -13790,89 +13790,89 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    void rasteropLow(IntBuffer datad, int dpixw, int dpixh, int depth, int dwpl, int dx, int dy, int dw, int dh, int op, IntBuffer datas, int spixw, int spixh, int swpl, int sx, int sy);
 //
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixRotate(PIX*, l_float32, l_int32, l_int32, l_int32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4034</i>
-//     */
-//    Pix pixRotate(Pix pixs, float angle, int type, int incolor, int width, int height);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixEmbedForRotation(PIX*, l_float32, l_int32, l_int32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4036</i>
-//     */
-//    Pix pixEmbedForRotation(Pix pixs, float angle, int incolor, int width, int height);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixRotateBySampling(PIX*, l_int32, l_int32, l_float32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4038</i>
-//     */
-//    Pix pixRotateBySampling(Pix pixs, int xcen, int ycen, float angle, int incolor);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixRotateBinaryNice(PIX*, l_float32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4040</i>
-//     */
-//    Pix pixRotateBinaryNice(Pix pixs, float angle, int incolor);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixRotateWithAlpha(PIX*, l_float32, PIX*, l_float32)</code><br>
-//     * <i>native declaration : allheaders.h:4042</i>
-//     */
-//    Pix pixRotateWithAlpha(Pix pixs, float angle, Pix pixg, float fract);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixRotateAM(PIX*, l_float32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4044</i>
-//     */
-//    Pix pixRotateAM(Pix pixs, float angle, int incolor);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixRotateAMColor(PIX*, l_float32, l_uint32)</code><br>
-//     * <i>native declaration : allheaders.h:4046</i>
-//     */
-//    Pix pixRotateAMColor(Pix pixs, float angle, int colorval);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixRotateAMGray(PIX*, l_float32, l_uint8)</code><br>
-//     * <i>native declaration : allheaders.h:4048</i>
-//     */
-//    Pix pixRotateAMGray(Pix pixs, float angle, byte grayval);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixRotateAMCorner(PIX*, l_float32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4050</i>
-//     */
-//    Pix pixRotateAMCorner(Pix pixs, float angle, int incolor);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixRotateAMColorCorner(PIX*, l_float32, l_uint32)</code><br>
-//     * <i>native declaration : allheaders.h:4052</i>
-//     */
-//    Pix pixRotateAMColorCorner(Pix pixs, float angle, int fillval);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixRotateAMGrayCorner(PIX*, l_float32, l_uint8)</code><br>
-//     * <i>native declaration : allheaders.h:4054</i>
-//     */
-//    Pix pixRotateAMGrayCorner(Pix pixs, float angle, byte grayval);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixRotateAMColorFast(PIX*, l_float32, l_uint32)</code><br>
-//     * <i>native declaration : allheaders.h:4056</i>
-//     */
-//    Pix pixRotateAMColorFast(Pix pixs, float angle, int colorval);
+    /**
+     * Original signature :
+     * <code>PIX* pixRotate(PIX*, l_float32, l_int32, l_int32, l_int32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4034</i>
+     */
+    Pix pixRotate(Pix pixs, float angle, int type, int incolor, int width, int height);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixEmbedForRotation(PIX*, l_float32, l_int32, l_int32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4036</i>
+     */
+    Pix pixEmbedForRotation(Pix pixs, float angle, int incolor, int width, int height);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixRotateBySampling(PIX*, l_int32, l_int32, l_float32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4038</i>
+     */
+    Pix pixRotateBySampling(Pix pixs, int xcen, int ycen, float angle, int incolor);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixRotateBinaryNice(PIX*, l_float32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4040</i>
+     */
+    Pix pixRotateBinaryNice(Pix pixs, float angle, int incolor);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixRotateWithAlpha(PIX*, l_float32, PIX*, l_float32)</code><br>
+     * <i>native declaration : allheaders.h:4042</i>
+     */
+    Pix pixRotateWithAlpha(Pix pixs, float angle, Pix pixg, float fract);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixRotateAM(PIX*, l_float32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4044</i>
+     */
+    Pix pixRotateAM(Pix pixs, float angle, int incolor);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixRotateAMColor(PIX*, l_float32, l_uint32)</code><br>
+     * <i>native declaration : allheaders.h:4046</i>
+     */
+    Pix pixRotateAMColor(Pix pixs, float angle, int colorval);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixRotateAMGray(PIX*, l_float32, l_uint8)</code><br>
+     * <i>native declaration : allheaders.h:4048</i>
+     */
+    Pix pixRotateAMGray(Pix pixs, float angle, byte grayval);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixRotateAMCorner(PIX*, l_float32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4050</i>
+     */
+    Pix pixRotateAMCorner(Pix pixs, float angle, int incolor);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixRotateAMColorCorner(PIX*, l_float32, l_uint32)</code><br>
+     * <i>native declaration : allheaders.h:4052</i>
+     */
+    Pix pixRotateAMColorCorner(Pix pixs, float angle, int fillval);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixRotateAMGrayCorner(PIX*, l_float32, l_uint8)</code><br>
+     * <i>native declaration : allheaders.h:4054</i>
+     */
+    Pix pixRotateAMGrayCorner(Pix pixs, float angle, byte grayval);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixRotateAMColorFast(PIX*, l_float32, l_uint32)</code><br>
+     * <i>native declaration : allheaders.h:4056</i>
+     */
+    Pix pixRotateAMColorFast(Pix pixs, float angle, int colorval);
 //
 //    /**
 //     * Original signature :
@@ -13909,77 +13909,77 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    void rotateAMColorFastLow(IntBuffer datad, int w, int h, int wpld, IntBuffer datas, int wpls, float angle, int colorval);
 //
-//    /**
-//     * Original signature : <code>PIX* pixRotateOrth(PIX*, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4068</i>
-//     */
-//    Pix pixRotateOrth(Pix pixs, int quads);
-//
-//    /**
-//     * Original signature : <code>PIX* pixRotate180(PIX*, PIX*)</code><br>
-//     * <i>native declaration : allheaders.h:4070</i>
-//     */
-//    Pix pixRotate180(Pix pixd, Pix pixs);
-//
-//    /**
-//     * Original signature : <code>PIX* pixRotate90(PIX*, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4072</i>
-//     */
-//    Pix pixRotate90(Pix pixs, int direction);
-//
-//    /**
-//     * Original signature : <code>PIX* pixFlipLR(PIX*, PIX*)</code><br>
-//     * <i>native declaration : allheaders.h:4074</i>
-//     */
-//    Pix pixFlipLR(Pix pixd, Pix pixs);
-//
-//    /**
-//     * Original signature : <code>PIX* pixFlipTB(PIX*, PIX*)</code><br>
-//     * <i>native declaration : allheaders.h:4076</i>
-//     */
-//    Pix pixFlipTB(Pix pixd, Pix pixs);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixRotateShear(PIX*, l_int32, l_int32, l_float32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4078</i>
-//     */
-//    Pix pixRotateShear(Pix pixs, int xcen, int ycen, float angle, int incolor);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixRotate2Shear(PIX*, l_int32, l_int32, l_float32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4080</i>
-//     */
-//    Pix pixRotate2Shear(Pix pixs, int xcen, int ycen, float angle, int incolor);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixRotate3Shear(PIX*, l_int32, l_int32, l_float32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4082</i>
-//     */
-//    Pix pixRotate3Shear(Pix pixs, int xcen, int ycen, float angle, int incolor);
-//
-//    /**
-//     * Original signature :
-//     * <code>l_int32 pixRotateShearIP(PIX*, l_int32, l_int32, l_float32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4084</i>
-//     */
-//    int pixRotateShearIP(Pix pixs, int xcen, int ycen, float angle, int incolor);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixRotateShearCenter(PIX*, l_float32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4086</i>
-//     */
-//    Pix pixRotateShearCenter(Pix pixs, float angle, int incolor);
-//
-//    /**
-//     * Original signature :
-//     * <code>l_int32 pixRotateShearCenterIP(PIX*, l_float32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4088</i>
-//     */
-//    int pixRotateShearCenterIP(Pix pixs, float angle, int incolor);
+    /**
+     * Original signature : <code>PIX* pixRotateOrth(PIX*, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4068</i>
+     */
+    Pix pixRotateOrth(Pix pixs, int quads);
+
+    /**
+     * Original signature : <code>PIX* pixRotate180(PIX*, PIX*)</code><br>
+     * <i>native declaration : allheaders.h:4070</i>
+     */
+    Pix pixRotate180(Pix pixd, Pix pixs);
+
+    /**
+     * Original signature : <code>PIX* pixRotate90(PIX*, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4072</i>
+     */
+    Pix pixRotate90(Pix pixs, int direction);
+
+    /**
+     * Original signature : <code>PIX* pixFlipLR(PIX*, PIX*)</code><br>
+     * <i>native declaration : allheaders.h:4074</i>
+     */
+    Pix pixFlipLR(Pix pixd, Pix pixs);
+
+    /**
+     * Original signature : <code>PIX* pixFlipTB(PIX*, PIX*)</code><br>
+     * <i>native declaration : allheaders.h:4076</i>
+     */
+    Pix pixFlipTB(Pix pixd, Pix pixs);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixRotateShear(PIX*, l_int32, l_int32, l_float32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4078</i>
+     */
+    Pix pixRotateShear(Pix pixs, int xcen, int ycen, float angle, int incolor);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixRotate2Shear(PIX*, l_int32, l_int32, l_float32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4080</i>
+     */
+    Pix pixRotate2Shear(Pix pixs, int xcen, int ycen, float angle, int incolor);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixRotate3Shear(PIX*, l_int32, l_int32, l_float32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4082</i>
+     */
+    Pix pixRotate3Shear(Pix pixs, int xcen, int ycen, float angle, int incolor);
+
+    /**
+     * Original signature :
+     * <code>l_int32 pixRotateShearIP(PIX*, l_int32, l_int32, l_float32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4084</i>
+     */
+    int pixRotateShearIP(Pix pixs, int xcen, int ycen, float angle, int incolor);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixRotateShearCenter(PIX*, l_float32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4086</i>
+     */
+    Pix pixRotateShearCenter(Pix pixs, float angle, int incolor);
+
+    /**
+     * Original signature :
+     * <code>l_int32 pixRotateShearCenterIP(PIX*, l_float32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4088</i>
+     */
+    int pixRotateShearCenterIP(Pix pixs, float angle, int incolor);
 //
 //    /**
 //     * Original signature :
