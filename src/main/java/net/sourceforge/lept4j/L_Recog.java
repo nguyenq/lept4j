@@ -319,6 +319,7 @@ public class L_Recog extends Structure {
 	}
 	public L_Recog(Pointer peer) {
 		super(peer);
+		read();
 	}
 	public static class ByReference extends L_Recog implements Structure.ByReference {
 		

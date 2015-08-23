@@ -50,6 +50,7 @@ public class L_Dnaa extends Structure {
 	}
 	public L_Dnaa(Pointer peer) {
 		super(peer);
+		read();
 	}
 	public static class ByReference extends L_Dnaa implements Structure.ByReference {
 		

@@ -128,6 +128,7 @@ public class L_WShed extends Structure {
 	}
 	public L_WShed(Pointer peer) {
 		super(peer);
+		read();
 	}
 	public static class ByReference extends L_WShed implements Structure.ByReference {
 		

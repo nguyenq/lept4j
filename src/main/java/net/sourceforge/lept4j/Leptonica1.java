@@ -4033,24 +4033,10 @@ public class Leptonica1 implements Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 dewarpaApplyDisparity(L_DEWARPA*, l_int32, PIX*, l_int32, l_int32, l_int32, PIX**, const char*)</code><br>
-     * <i>native declaration : allheaders.h:1128</i>
-     */
-    public static native int dewarpaApplyDisparity(L_Dewarpa dewa, int pageno, Pix pixs, int grayin, int x, int y, PointerByReference ppixd, Pointer debugfile);
-
-    /**
-     * Original signature :
      * <code>l_int32 dewarpaApplyDisparityBoxa(L_DEWARPA*, l_int32, PIX*, BOXA*, l_int32, l_int32, l_int32, BOXA**, const char*)</code><br>
      * <i>native declaration : allheaders.h:628</i>
      */
     public static native int dewarpaApplyDisparityBoxa(L_Dewarpa dewa, int pageno, Pix pixs, Boxa boxas, int mapdir, int x, int y, PointerByReference pboxad, String debugfile);
-
-    /**
-     * Original signature :
-     * <code>l_int32 dewarpaApplyDisparityBoxa(L_DEWARPA*, l_int32, PIX*, BOXA*, l_int32, l_int32, l_int32, BOXA**, const char*)</code><br>
-     * <i>native declaration : allheaders.h:628</i>
-     */
-    public static native int dewarpaApplyDisparityBoxa(L_Dewarpa dewa, int pageno, Pix pixs, Boxa boxas, int mapdir, int x, int y, PointerByReference pboxad, Pointer debugfile);
 
     /**
      * Original signature : <code>l_int32 dewarpMinimize(L_DEWARP*)</code><br>

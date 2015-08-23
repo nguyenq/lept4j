@@ -74,6 +74,7 @@ public class L_StrCode extends Structure {
 	}
 	public L_StrCode(Pointer peer) {
 		super(peer);
+		read();
 	}
 	public static class ByReference extends L_StrCode implements Structure.ByReference {
 		

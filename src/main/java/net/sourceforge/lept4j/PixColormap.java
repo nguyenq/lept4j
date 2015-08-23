@@ -55,6 +55,7 @@ public class PixColormap extends Structure {
 	}
 	public PixColormap(Pointer peer) {
 		super(peer);
+		read();
 	}
 	public static class ByReference extends PixColormap implements Structure.ByReference {
 		

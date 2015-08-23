@@ -39,6 +39,7 @@ public class L_WallTimer extends Structure {
 	}
 	public L_WallTimer(Pointer peer) {
 		super(peer);
+		read();
 	}
 	public static class ByReference extends L_WallTimer implements Structure.ByReference {
 		

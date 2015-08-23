@@ -50,6 +50,7 @@ public class Numaa extends Structure {
 	}
 	public Numaa(Pointer peer) {
 		super(peer);
+		read();
 	}
 	public static class ByReference extends Numaa implements Structure.ByReference {
 		

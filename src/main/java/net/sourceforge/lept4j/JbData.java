@@ -68,6 +68,7 @@ public class JbData extends Structure {
 	}
 	public JbData(Pointer peer) {
 		super(peer);
+		read();
 	}
 	public static class ByReference extends JbData implements Structure.ByReference {
 		

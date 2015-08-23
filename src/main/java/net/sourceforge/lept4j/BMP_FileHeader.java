@@ -90,6 +90,7 @@ public class BMP_FileHeader extends Structure {
 	}
 	public BMP_FileHeader(Pointer peer) {
 		super(peer);
+		read();
 	}
 	public static class ByReference extends BMP_FileHeader implements Structure.ByReference {
 		

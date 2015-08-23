@@ -72,6 +72,7 @@ public class Numa extends Structure {
 	}
 	public Numa(Pointer peer) {
 		super(peer);
+		read();
 	}
 	public static class ByReference extends Numa implements Structure.ByReference {
 		

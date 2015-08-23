@@ -55,6 +55,7 @@ public class DoubleLinkedList extends Structure {
 	}
 	public DoubleLinkedList(Pointer peer) {
 		super(peer);
+		read();
 	}
 	public static class ByReference extends DoubleLinkedList implements Structure.ByReference {
 		

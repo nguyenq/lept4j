@@ -58,6 +58,7 @@ public class Pixaa extends Structure {
 	}
 	public Pixaa(Pointer peer) {
 		super(peer);
+		read();
 	}
 	public static class ByReference extends Pixaa implements Structure.ByReference {
 		

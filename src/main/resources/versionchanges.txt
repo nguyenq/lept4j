@@ -7,5 +7,7 @@ Version 1.0 (25 July 2015):
 - Change type from ByReference[] to PointerByReference
 - Add support for image conversion
 
-Version 1.1 Beta (9 August 2015):
+Version 1.1 (22 August 2015):
 - Upgrade to Leptonica 1.72
+- Additional use cases
+

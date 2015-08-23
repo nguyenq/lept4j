@@ -39,6 +39,7 @@ public class RGBA_Quad extends Structure {
 	}
 	public RGBA_Quad(Pointer peer) {
 		super(peer);
+		read();
 	}
 	public static class ByReference extends RGBA_Quad implements Structure.ByReference {
 		

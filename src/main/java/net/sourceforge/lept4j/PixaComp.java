@@ -68,6 +68,7 @@ public class PixaComp extends Structure {
 	}
 	public PixaComp(Pointer peer) {
 		super(peer);
+		read();
 	}
 	public static class ByReference extends PixaComp implements Structure.ByReference {
 		

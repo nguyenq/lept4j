@@ -15,14 +15,24 @@
  */
 package net.sourceforge.lept4j;
 
+import com.ochafik.lang.jnaerator.runtime.NativeSize;
+import com.ochafik.lang.jnaerator.runtime.NativeSizeByReference;
+import com.sun.jna.ptr.DoubleByReference;
+import com.sun.jna.ptr.FloatByReference;
+import com.sun.jna.ptr.IntByReference;
 import com.sun.jna.ptr.PointerByReference;
 import java.io.File;
+import java.nio.ByteBuffer;
+import java.nio.DoubleBuffer;
+import java.nio.FloatBuffer;
+import java.nio.IntBuffer;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import org.rococoa.Selector;
 
 public class Leptonica1Test {
     private final String testResourcesPath = "src/test/resources/test-data";
@@ -1543,21 +1553,6 @@ public class Leptonica1Test {
 //        NativeSizeByReference pnout = null;
 //        int expResult = 0;
 //        int result = Leptonica1.bbufferWriteStream(bb, fp, nbytes, pnout);
-//        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of bbufferBytesToWrite method, of class Leptonica1.
-//     */
-//    @Test
-//    public void testBbufferBytesToWrite() {
-//        System.out.println("bbufferBytesToWrite");
-//        net.sourceforge.lept4j.ByteBuffer bb = null;
-//        NativeSizeByReference pnbytes = null;
-//        int expResult = 0;
-//        int result = Leptonica1.bbufferBytesToWrite(bb, pnbytes);
 //        assertEquals(expResult, result);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -4871,24 +4866,6 @@ public class Leptonica1Test {
 //        int ncorners = 0;
 //        Boxa expResult = null;
 //        Boxa result = Leptonica1.ptaConvertToBoxa(pta, ncorners);
-//        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of boxaSmoothSequence method, of class Leptonica1.
-//     */
-//    @Test
-//    public void testBoxaSmoothSequence() {
-//        System.out.println("boxaSmoothSequence");
-//        Boxa boxas = null;
-//        float factor = 0.0F;
-//        int subflag = 0;
-//        int maxdiff = 0;
-//        int debug = 0;
-//        Boxa expResult = null;
-//        Boxa result = Leptonica1.boxaSmoothSequence(boxas, factor, subflag, maxdiff, debug);
 //        assertEquals(expResult, result);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -9173,62 +9150,6 @@ public class Leptonica1Test {
 //        float expResult = 0.0F;
 //        float result = Leptonica1.gaussDistribSampling();
 //        assertEquals(expResult, result, 0.0);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of blockconvLow method, of class Leptonica1.
-//     */
-//    @Test
-//    public void testBlockconvLow() {
-//        System.out.println("blockconvLow");
-//        IntBuffer data = null;
-//        int w = 0;
-//        int h = 0;
-//        int wpl = 0;
-//        IntBuffer dataa = null;
-//        int wpla = 0;
-//        int wc = 0;
-//        int hc = 0;
-//        Leptonica1.blockconvLow(data, w, h, wpl, dataa, wpla, wc, hc);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of blockconvAccumLow method, of class Leptonica1.
-//     */
-//    @Test
-//    public void testBlockconvAccumLow() {
-//        System.out.println("blockconvAccumLow");
-//        IntBuffer datad = null;
-//        int w = 0;
-//        int h = 0;
-//        int wpld = 0;
-//        IntBuffer datas = null;
-//        int d = 0;
-//        int wpls = 0;
-//        Leptonica1.blockconvAccumLow(datad, w, h, wpld, datas, d, wpls);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of blocksumLow method, of class Leptonica1.
-//     */
-//    @Test
-//    public void testBlocksumLow() {
-//        System.out.println("blocksumLow");
-//        IntBuffer datad = null;
-//        int w = 0;
-//        int h = 0;
-//        int wpl = 0;
-//        IntBuffer dataa = null;
-//        int wpla = 0;
-//        int wc = 0;
-//        int hc = 0;
-//        Leptonica1.blocksumLow(datad, w, h, wpl, dataa, wpla, wc, hc);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
 //    }
@@ -14392,48 +14313,6 @@ public class Leptonica1Test {
 //        Pix expResult = null;
 //        Pix result = Leptonica1.pixCloseGray3(pixs, hsize, vsize);
 //        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of dilateGrayLow method, of class Leptonica1.
-//     */
-//    @Test
-//    public void testDilateGrayLow() {
-//        System.out.println("dilateGrayLow");
-//        IntBuffer datad = null;
-//        int w = 0;
-//        int h = 0;
-//        int wpld = 0;
-//        IntBuffer datas = null;
-//        int wpls = 0;
-//        int size = 0;
-//        int direction = 0;
-//        ByteBuffer buffer = null;
-//        ByteBuffer maxarray = null;
-//        Leptonica1.dilateGrayLow(datad, w, h, wpld, datas, wpls, size, direction, buffer, maxarray);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of erodeGrayLow method, of class Leptonica1.
-//     */
-//    @Test
-//    public void testErodeGrayLow() {
-//        System.out.println("erodeGrayLow");
-//        IntBuffer datad = null;
-//        int w = 0;
-//        int h = 0;
-//        int wpld = 0;
-//        IntBuffer datas = null;
-//        int wpls = 0;
-//        int size = 0;
-//        int direction = 0;
-//        ByteBuffer buffer = null;
-//        ByteBuffer minarray = null;
-//        Leptonica1.erodeGrayLow(datad, w, h, wpld, datas, wpls, size, direction, buffer, minarray);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
 //    }
@@ -34051,22 +33930,6 @@ public class Leptonica1Test {
 //        float score = 0.0F;
 //        Pix expResult = null;
 //        Pix result = Leptonica1.recogShowMatch(recog, pix1, pix2, box, index, score);
-//        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of recogMakeBmf method, of class Leptonica1.
-//     */
-//    @Test
-//    public void testRecogMakeBmf() {
-//        System.out.println("recogMakeBmf");
-//        L_Recog recog = null;
-//        String fontdir = "";
-//        int size = 0;
-//        int expResult = 0;
-//        int result = Leptonica1.recogMakeBmf(recog, fontdir, size);
 //        assertEquals(expResult, result);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");

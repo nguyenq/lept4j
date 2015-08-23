@@ -41,6 +41,7 @@ public class NumaHash extends Structure {
 	}
 	public NumaHash(Pointer peer) {
 		super(peer);
+		read();
 	}
 	public static class ByReference extends NumaHash implements Structure.ByReference {
 		

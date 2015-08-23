@@ -101,6 +101,7 @@ public class L_Sudoku extends Structure {
 	}
 	public L_Sudoku(Pointer peer) {
 		super(peer);
+		read();
 	}
 	public static class ByReference extends L_Sudoku implements Structure.ByReference {
 		

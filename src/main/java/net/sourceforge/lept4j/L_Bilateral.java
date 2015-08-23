@@ -99,6 +99,7 @@ public class L_Bilateral extends Structure {
 	}
 	public L_Bilateral(Pointer peer) {
 		super(peer);
+		read();
 	}
 	public static class ByReference extends L_Bilateral implements Structure.ByReference {
 		

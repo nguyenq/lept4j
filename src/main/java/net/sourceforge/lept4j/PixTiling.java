@@ -90,6 +90,7 @@ public class PixTiling extends Structure {
 	}
 	public PixTiling(Pointer peer) {
 		super(peer);
+		read();
 	}
 	public static class ByReference extends PixTiling implements Structure.ByReference {
 		

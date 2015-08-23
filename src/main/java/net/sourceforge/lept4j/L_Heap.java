@@ -92,6 +92,7 @@ public class L_Heap extends Structure {
 	}
 	public L_Heap(Pointer peer) {
 		super(peer);
+		read();
 	}
 	public static class ByReference extends L_Heap implements Structure.ByReference {
 		

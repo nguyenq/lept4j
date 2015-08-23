@@ -56,6 +56,7 @@ public class L_Stack extends Structure {
 	}
 	public L_Stack(Pointer peer) {
 		super(peer);
+		read();
 	}
 	public static class ByReference extends L_Stack implements Structure.ByReference {
 		

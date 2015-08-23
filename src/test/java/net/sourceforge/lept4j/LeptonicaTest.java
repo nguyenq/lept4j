@@ -15,34 +15,46 @@
  */
 package net.sourceforge.lept4j;
 
+import com.ochafik.lang.jnaerator.runtime.NativeSize;
+import com.ochafik.lang.jnaerator.runtime.NativeSizeByReference;
+import com.sun.jna.Pointer;
+import com.sun.jna.ptr.DoubleByReference;
+import com.sun.jna.ptr.FloatByReference;
+import com.sun.jna.ptr.IntByReference;
 import com.sun.jna.ptr.PointerByReference;
 import java.io.File;
+import java.nio.ByteBuffer;
+import java.nio.DoubleBuffer;
+import java.nio.FloatBuffer;
+import java.nio.IntBuffer;
+import static net.sourceforge.lept4j.ILeptonica.IFF_PNG;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import org.rococoa.Selector;
 
 public class LeptonicaTest {
-
+    
     private final String testResourcesPath = "src/test/resources/test-data";
 
     public LeptonicaTest() {
     }
-
+    
     @BeforeClass
     public static void setUpClass() {
     }
-
+    
     @AfterClass
     public static void tearDownClass() {
     }
-
+    
     @Before
     public void setUp() {
     }
-
+    
     @After
     public void tearDown() {
     }
@@ -1632,22 +1644,6 @@ public class LeptonicaTest {
 //        Leptonica instance = new LeptonicaImpl();
 //        int expResult = 0;
 //        int result = instance.bbufferWriteStream(bb, fp, nbytes, pnout);
-//        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of bbufferBytesToWrite method, of class Leptonica.
-//     */
-//    @Test
-//    public void testBbufferBytesToWrite() {
-//        System.out.println("bbufferBytesToWrite");
-//        net.sourceforge.lept4j.ByteBuffer bb = null;
-//        NativeSizeByReference pnbytes = null;
-//        Leptonica instance = new LeptonicaImpl();
-//        int expResult = 0;
-//        int result = instance.bbufferBytesToWrite(bb, pnbytes);
 //        assertEquals(expResult, result);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -5160,25 +5156,6 @@ public class LeptonicaTest {
 //        Leptonica instance = new LeptonicaImpl();
 //        Boxa expResult = null;
 //        Boxa result = instance.ptaConvertToBoxa(pta, ncorners);
-//        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of boxaSmoothSequence method, of class Leptonica.
-//     */
-//    @Test
-//    public void testBoxaSmoothSequence() {
-//        System.out.println("boxaSmoothSequence");
-//        Boxa boxas = null;
-//        float factor = 0.0F;
-//        int subflag = 0;
-//        int maxdiff = 0;
-//        int debug = 0;
-//        Leptonica instance = new LeptonicaImpl();
-//        Boxa expResult = null;
-//        Boxa result = instance.boxaSmoothSequence(boxas, factor, subflag, maxdiff, debug);
 //        assertEquals(expResult, result);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -9717,65 +9694,6 @@ public class LeptonicaTest {
 //        float expResult = 0.0F;
 //        float result = instance.gaussDistribSampling();
 //        assertEquals(expResult, result, 0.0);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of blockconvLow method, of class Leptonica.
-//     */
-//    @Test
-//    public void testBlockconvLow() {
-//        System.out.println("blockconvLow");
-//        IntBuffer data = null;
-//        int w = 0;
-//        int h = 0;
-//        int wpl = 0;
-//        IntBuffer dataa = null;
-//        int wpla = 0;
-//        int wc = 0;
-//        int hc = 0;
-//        Leptonica instance = new LeptonicaImpl();
-//        instance.blockconvLow(data, w, h, wpl, dataa, wpla, wc, hc);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of blockconvAccumLow method, of class Leptonica.
-//     */
-//    @Test
-//    public void testBlockconvAccumLow() {
-//        System.out.println("blockconvAccumLow");
-//        IntBuffer datad = null;
-//        int w = 0;
-//        int h = 0;
-//        int wpld = 0;
-//        IntBuffer datas = null;
-//        int d = 0;
-//        int wpls = 0;
-//        Leptonica instance = new LeptonicaImpl();
-//        instance.blockconvAccumLow(datad, w, h, wpld, datas, d, wpls);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of blocksumLow method, of class Leptonica.
-//     */
-//    @Test
-//    public void testBlocksumLow() {
-//        System.out.println("blocksumLow");
-//        IntBuffer datad = null;
-//        int w = 0;
-//        int h = 0;
-//        int wpl = 0;
-//        IntBuffer dataa = null;
-//        int wpla = 0;
-//        int wc = 0;
-//        int hc = 0;
-//        Leptonica instance = new LeptonicaImpl();
-//        instance.blocksumLow(datad, w, h, wpl, dataa, wpla, wc, hc);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
 //    }
@@ -15256,50 +15174,6 @@ public class LeptonicaTest {
 //        Pix expResult = null;
 //        Pix result = instance.pixCloseGray3(pixs, hsize, vsize);
 //        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of dilateGrayLow method, of class Leptonica.
-//     */
-//    @Test
-//    public void testDilateGrayLow() {
-//        System.out.println("dilateGrayLow");
-//        IntBuffer datad = null;
-//        int w = 0;
-//        int h = 0;
-//        int wpld = 0;
-//        IntBuffer datas = null;
-//        int wpls = 0;
-//        int size = 0;
-//        int direction = 0;
-//        ByteBuffer buffer = null;
-//        ByteBuffer maxarray = null;
-//        Leptonica instance = new LeptonicaImpl();
-//        instance.dilateGrayLow(datad, w, h, wpld, datas, wpls, size, direction, buffer, maxarray);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of erodeGrayLow method, of class Leptonica.
-//     */
-//    @Test
-//    public void testErodeGrayLow() {
-//        System.out.println("erodeGrayLow");
-//        IntBuffer datad = null;
-//        int w = 0;
-//        int h = 0;
-//        int wpld = 0;
-//        IntBuffer datas = null;
-//        int wpls = 0;
-//        int size = 0;
-//        int direction = 0;
-//        ByteBuffer buffer = null;
-//        ByteBuffer minarray = null;
-//        Leptonica instance = new LeptonicaImpl();
-//        instance.erodeGrayLow(datad, w, h, wpld, datas, wpls, size, direction, buffer, minarray);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
 //    }
@@ -34421,6 +34295,7 @@ public class LeptonicaTest {
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
 //    }
+
     /**
      * Test of pixRead method, of class Leptonica.
      */
@@ -36110,23 +35985,6 @@ public class LeptonicaTest {
 //        Leptonica instance = new LeptonicaImpl();
 //        Pix expResult = null;
 //        Pix result = instance.recogShowMatch(recog, pix1, pix2, box, index, score);
-//        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of recogMakeBmf method, of class Leptonica.
-//     */
-//    @Test
-//    public void testRecogMakeBmf() {
-//        System.out.println("recogMakeBmf");
-//        L_Recog recog = null;
-//        String fontdir = "";
-//        int size = 0;
-//        Leptonica instance = new LeptonicaImpl();
-//        int expResult = 0;
-//        int result = instance.recogMakeBmf(recog, fontdir, size);
 //        assertEquals(expResult, result);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -40649,16 +40507,25 @@ public class LeptonicaTest {
 //    @Test
 //    public void testPixDeskew() {
 //        System.out.println("pixDeskew");
-//        Pix pixs = null;
+//        Pix pix = null;
 //        int redsearch = 0;
-//        Leptonica instance = new LeptonicaImpl();
-//        Pix expResult = null;
-//        Pix result = instance.pixDeskew(pixs, redsearch);
-//        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
+//        Leptonica instance = new LeptonicaImpl().getInstance();
+//        String filename = "eurotext_deskew.png";
+//        File image = new File(testResourcesPath, filename);
+//        pix = instance.pixRead(image.getPath());
+//        Pix pixd = instance.pixDeskew(pix, redsearch);
+//        String outputfilename = "test-results/eurotext_deskewed.png";
+//        instance.pixWrite(outputfilename, pixd, IFF_PNG);
+//        instance.pixDisplayWrite(pixd, 1);
+//        assertTrue(pixd != null);
+//        
+//        PointerByReference pRef = new PointerByReference();
+//        pRef.setValue(pix.getPointer());
+//        instance.pixDestroy(pRef);
+//        pRef.setValue(pixd.getPointer());
+//        instance.pixDestroy(pRef);
 //    }
-//
+
 //    /**
 //     * Test of pixFindSkewAndDeskew method, of class Leptonica.
 //     */
@@ -40667,8 +40534,8 @@ public class LeptonicaTest {
 //        System.out.println("pixFindSkewAndDeskew");
 //        Pix pixs = null;
 //        int redsearch = 0;
-//        FloatBuffer pangle = null;
-//        FloatBuffer pconf = null;
+//        FloatBuffer pangle = FloatBuffer.allocate(1);
+//        FloatBuffer pconf = FloatBuffer.allocate(1);
 //        Leptonica instance = new LeptonicaImpl();
 //        Pix expResult = null;
 //        Pix result = instance.pixFindSkewAndDeskew(pixs, redsearch, pangle, pconf);
@@ -40689,8 +40556,8 @@ public class LeptonicaTest {
 //        float sweepdelta = 0.0F;
 //        int redsearch = 0;
 //        int thresh = 0;
-//        FloatBuffer pangle = null;
-//        FloatBuffer pconf = null;
+//        FloatBuffer pangle = FloatBuffer.allocate(1);
+//        FloatBuffer pconf = FloatBuffer.allocate(1);
 //        Leptonica instance = new LeptonicaImpl();
 //        Pix expResult = null;
 //        Pix result = instance.pixDeskewGeneral(pixs, redsweep, sweeprange, sweepdelta, redsearch, thresh, pangle, pconf);
@@ -40699,22 +40566,40 @@ public class LeptonicaTest {
 //        fail("The test case is a prototype.");
 //    }
 //
-//    /**
-//     * Test of pixFindSkew method, of class Leptonica.
-//     */
-//    @Test
-//    public void testPixFindSkew() {
-//        System.out.println("pixFindSkew");
-//        Pix pixs = null;
-//        FloatBuffer pangle = null;
-//        FloatBuffer pconf = null;
-//        Leptonica instance = new LeptonicaImpl();
-//        int expResult = 0;
-//        int result = instance.pixFindSkew(pixs, pangle, pconf);
-//        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
+    /**
+     * Test of pixFindSkew method, of class Leptonica.
+     */
+    @Test
+    public void testPixFindSkew() {
+        System.out.println("pixFindSkew");
+        Pix pix = null;
+        FloatBuffer pangle = FloatBuffer.allocate(1);
+        FloatBuffer pconf = FloatBuffer.allocate(1);
+        String filename = "eurotext_deskew.png";
+        File image = new File(testResourcesPath, filename);
+        Leptonica instance = new LeptonicaImpl().getInstance();
+        pix = instance.pixRead(image.getPath());
+        int expResult = 0;
+        Pix pixb = instance.pixScaleRGBToBinaryFast(pix, 1, 1);
+
+        int result = instance.pixFindSkew(pixb, pangle, pconf);
+
+        if (result == 0) {
+            float angle = pangle.get();
+            float conf = pconf.get();
+            System.out.println(String.format("Confidence: %s, Angle: %s degree", conf , angle));
+            assertTrue(expResult < Math.abs(angle));
+        } else {
+            System.out.println("Need to binarize the image first");
+            assertTrue(false);
+        }
+
+        PointerByReference pRef = new PointerByReference();
+        pRef.setValue(pix.getPointer());
+        instance.pixDestroy(pRef);
+        pRef.setValue(pixb.getPointer());
+        instance.pixDestroy(pRef);
+    }
 //
 //    /**
 //     * Test of pixFindSkewSweep method, of class Leptonica.
@@ -43854,4 +43739,5 @@ public class LeptonicaTest {
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
 //    }
+
 }

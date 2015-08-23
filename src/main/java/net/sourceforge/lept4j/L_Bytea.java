@@ -48,6 +48,7 @@ public class L_Bytea extends Structure {
 	}
 	public L_Bytea(Pointer peer) {
 		super(peer);
+		read();
 	}
 	public static class ByReference extends L_Bytea implements Structure.ByReference {
 		

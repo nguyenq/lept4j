@@ -67,6 +67,7 @@ public class L_Kernel extends Structure {
 	}
 	public L_Kernel(Pointer peer) {
 		super(peer);
+		read();
 	}
 	public static class ByReference extends L_Kernel implements Structure.ByReference {
 		

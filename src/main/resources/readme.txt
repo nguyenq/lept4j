@@ -4,7 +4,7 @@ DESCRIPTION
 
 A Java JNA wrapper for Leptonica Image Processing Library. Lept4J is released and distributed under the Apache License, v2.0.
 
-The library provides support for Leptonica native types and data structures — such as Pix, Boxa, Pixa, etc. — used in Tesseract OCR API.
+The library provides support for Leptonica native types and data structures — such as Pix, Boxa, Pixa, etc. —  used in Tesseract OCR API.
 
 LIMITATIONS
 

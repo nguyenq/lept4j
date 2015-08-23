@@ -80,6 +80,7 @@ public class L_Rcha extends Structure {
 	}
 	public L_Rcha(Pointer peer) {
 		super(peer);
+		read();
 	}
 	public static class ByReference extends L_Rcha implements Structure.ByReference {
 		

@@ -72,6 +72,7 @@ public class L_Dna extends Structure {
 	}
 	public L_Dna(Pointer peer) {
 		super(peer);
+		read();
 	}
 	public static class ByReference extends L_Dna implements Structure.ByReference {
 		

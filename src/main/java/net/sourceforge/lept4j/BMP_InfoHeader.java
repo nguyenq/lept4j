@@ -76,6 +76,7 @@ public class BMP_InfoHeader extends Structure {
 	}
 	public BMP_InfoHeader(Pointer peer) {
 		super(peer);
+		read();
 	}
 	public static class ByReference extends BMP_InfoHeader implements Structure.ByReference {
 		

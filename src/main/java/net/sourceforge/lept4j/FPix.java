@@ -83,6 +83,7 @@ public class FPix extends Structure {
 	}
 	public FPix(Pointer peer) {
 		super(peer);
+		read();
 	}
 	public static class ByReference extends FPix implements Structure.ByReference {
 		

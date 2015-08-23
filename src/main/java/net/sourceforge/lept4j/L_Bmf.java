@@ -84,6 +84,7 @@ public class L_Bmf extends Structure {
 	}
 	public L_Bmf(Pointer peer) {
 		super(peer);
+		read();
 	}
 	public static class ByReference extends L_Bmf implements Structure.ByReference {
 		

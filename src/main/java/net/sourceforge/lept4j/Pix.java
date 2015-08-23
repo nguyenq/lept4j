@@ -84,6 +84,7 @@ public class Pix extends Structure {
 	}
 	public Pix(Pointer peer) {
 		super(peer);
+		read();
 	}
 	public static class ByReference extends Pix implements Structure.ByReference {
 		

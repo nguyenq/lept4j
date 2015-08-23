@@ -58,6 +58,7 @@ public class FPixa extends Structure {
 	}
 	public FPixa(Pointer peer) {
 		super(peer);
+		read();
 	}
 	public static class ByReference extends FPixa implements Structure.ByReference {
 		

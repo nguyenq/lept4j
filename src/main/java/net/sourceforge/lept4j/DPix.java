@@ -83,6 +83,7 @@ public class DPix extends Structure {
 	}
 	public DPix(Pointer peer) {
 		super(peer);
+		read();
 	}
 	public static class ByReference extends DPix implements Structure.ByReference {
 		

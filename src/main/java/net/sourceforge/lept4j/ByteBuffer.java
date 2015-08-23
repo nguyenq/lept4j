@@ -66,6 +66,7 @@ public class ByteBuffer extends Structure {
 	}
 	public ByteBuffer(Pointer peer) {
 		super(peer);
+		read();
 	}
 	public static class ByReference extends ByteBuffer implements Structure.ByReference {
 		
