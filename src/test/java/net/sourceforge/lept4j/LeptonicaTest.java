@@ -42943,6 +42943,23 @@ public class LeptonicaTest {
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
 //    }
+
+    /**
+     * Test of startWallTimer method, of class Leptonica.
+     */
+    @Test
+    public void testStartWallTimer() {
+        System.out.println("startWallTimer");
+        Leptonica instance = new LeptonicaImpl().getInstance();
+        L_WallTimer timer = instance.startWallTimer();
+        assertNotNull(timer);
+        System.out.println("stopWallTimer");
+        PointerByReference ptimer = new PointerByReference();
+        ptimer.setValue(timer.getPointer());
+        float elapsed = instance.stopWallTimer(ptimer);
+        System.out.println("Time elapsed: " + elapsed);
+    }
+
 //
 //    /**
 //     * Test of l_getFormattedDate method, of class Leptonica.

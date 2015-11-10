@@ -40460,6 +40460,22 @@ public class Leptonica1Test {
 //        fail("The test case is a prototype.");
 //    }
 //
+
+    /**
+     * Test of startWallTimer method, of class Leptonica.
+     */
+    @Test
+    public void testStartWallTimer() {
+        System.out.println("startWallTimer");
+        L_WallTimer timer = Leptonica1.startWallTimer();
+        assertNotNull(timer);
+        System.out.println("stopWallTimer");
+        PointerByReference ptimer = new PointerByReference();
+        ptimer.setValue(timer.getPointer());
+        float elapsed = Leptonica1.stopWallTimer(ptimer);
+        System.out.println("Time elapsed: " + elapsed);
+    }
+
 //    /**
 //     * Test of l_getFormattedDate method, of class Leptonica1.
 //     */
