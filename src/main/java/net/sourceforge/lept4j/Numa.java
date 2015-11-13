@@ -32,7 +32,7 @@ public class Numa extends Structure {
 	 */
 	public float startx;
 	/**
-	 * change in x value as i --> i + 1<br>
+	 * change in x value as i --&gt; i + 1<br>
 	 * C type : l_float32
 	 */
 	public float delx;
@@ -56,7 +56,7 @@ public class Numa extends Structure {
 	 * C type : l_int32<br>
 	 * @param startx x value assigned to array[0]<br>
 	 * C type : l_float32<br>
-	 * @param delx change in x value as i --> i + 1<br>
+	 * @param delx change in x value as i --&gt; i + 1<br>
 	 * C type : l_float32<br>
 	 * @param array number array<br>
 	 * C type : l_float32*
@@ -72,6 +72,7 @@ public class Numa extends Structure {
 	}
 	public Numa(Pointer peer) {
 		super(peer);
+		read();
 	}
 	public static class ByReference extends Numa implements Structure.ByReference {
 		

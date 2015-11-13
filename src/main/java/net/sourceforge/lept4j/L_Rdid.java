@@ -137,6 +137,7 @@ public class L_Rdid extends Structure {
 	}
 	public L_Rdid(Pointer peer) {
 		super(peer);
+		read();
 	}
 	public static class ByReference extends L_Rdid implements Structure.ByReference {
 		

@@ -50,6 +50,7 @@ public class Sela extends Structure {
 	}
 	public Sela(Pointer peer) {
 		super(peer);
+		read();
 	}
 	public static class ByReference extends Sela implements Structure.ByReference {
 		

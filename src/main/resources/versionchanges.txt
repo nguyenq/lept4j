@@ -6,3 +6,6 @@ Version 1.0 (25 July 2015):
 - Autoload Windows native libraries
 - Change type from ByReference[] to PointerByReference
 - Add support for image conversion
+
+Version 1.0.1 (12 November 2015):
+- Backport improvements made in 1.1

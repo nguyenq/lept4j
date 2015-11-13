@@ -1,6 +1,7 @@
 package net.sourceforge.lept4j;
 import com.sun.jna.Pointer;
 import com.sun.jna.Structure;
+import com.sun.jna.ptr.PointerByReference;
 import java.util.Arrays;
 import java.util.List;
 /**
@@ -24,12 +25,12 @@ public class L_Dewarpa extends Structure {
 	 * array of ptrs to page dewarp<br>
 	 * C type : L_Dewarp**
 	 */
-	public net.sourceforge.lept4j.L_Dewarp.ByReference[] dewarp;
+	public PointerByReference dewarp;
 	/**
 	 * array of ptrs to cached dewarps<br>
 	 * C type : L_Dewarp**
 	 */
-	public net.sourceforge.lept4j.L_Dewarp.ByReference[] dewarpcache;
+	public PointerByReference dewarpcache;
 	/**
 	 * list of page numbers for pages<br>
 	 * C type : Numa*
@@ -108,6 +109,7 @@ public class L_Dewarpa extends Structure {
 	}
 	public L_Dewarpa(Pointer peer) {
 		super(peer);
+		read();
 	}
 	public static class ByReference extends L_Dewarpa implements Structure.ByReference {
 		

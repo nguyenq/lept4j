@@ -88,6 +88,7 @@ public class GPlot extends Structure {
 	}
 	public GPlot(Pointer peer) {
 		super(peer);
+		read();
 	}
 	public static class ByReference extends GPlot implements Structure.ByReference {
 		

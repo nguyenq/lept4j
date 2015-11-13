@@ -17,6 +17,8 @@ package net.sourceforge.lept4j;
 
 import com.sun.jna.ptr.PointerByReference;
 import java.io.File;
+import java.nio.FloatBuffer;
+import static net.sourceforge.lept4j.ILeptonica.IFF_PNG;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -30,19 +32,19 @@ public class LeptonicaTest {
 
     public LeptonicaTest() {
     }
-
+    
     @BeforeClass
     public static void setUpClass() {
     }
-
+    
     @AfterClass
     public static void tearDownClass() {
     }
-
+    
     @Before
     public void setUp() {
     }
-
+    
     @After
     public void tearDown() {
     }
@@ -34421,6 +34423,7 @@ public class LeptonicaTest {
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
 //    }
+
     /**
      * Test of pixRead method, of class Leptonica.
      */
@@ -40649,14 +40652,23 @@ public class LeptonicaTest {
 //    @Test
 //    public void testPixDeskew() {
 //        System.out.println("pixDeskew");
-//        Pix pixs = null;
+//        Pix pix = null;
 //        int redsearch = 0;
-//        Leptonica instance = new LeptonicaImpl();
-//        Pix expResult = null;
-//        Pix result = instance.pixDeskew(pixs, redsearch);
-//        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
+//        Leptonica instance = new LeptonicaImpl().getInstance();
+//        String filename = "eurotext_deskew.png";
+//        File image = new File(testResourcesPath, filename);
+//        pix = instance.pixRead(image.getPath());
+//        Pix pixd = instance.pixDeskew(pix, redsearch);
+//        String outputfilename = "test/test-results/eurotext_deskewed.png";
+//        instance.pixWrite(outputfilename, pixd, IFF_PNG);
+//        instance.pixDisplayWrite(pixd, 1);
+//        assertTrue(pixd != null);
+//        
+//        PointerByReference pRef = new PointerByReference();
+//        pRef.setValue(pix.getPointer());
+//        instance.pixDestroy(pRef);
+//        pRef.setValue(pixd.getPointer());
+//        instance.pixDestroy(pRef);
 //    }
 //
 //    /**
@@ -40667,8 +40679,8 @@ public class LeptonicaTest {
 //        System.out.println("pixFindSkewAndDeskew");
 //        Pix pixs = null;
 //        int redsearch = 0;
-//        FloatBuffer pangle = null;
-//        FloatBuffer pconf = null;
+//        FloatBuffer pangle = FloatBuffer.allocate(1);
+//        FloatBuffer pconf = FloatBuffer.allocate(1);
 //        Leptonica instance = new LeptonicaImpl();
 //        Pix expResult = null;
 //        Pix result = instance.pixFindSkewAndDeskew(pixs, redsearch, pangle, pconf);
@@ -40689,8 +40701,8 @@ public class LeptonicaTest {
 //        float sweepdelta = 0.0F;
 //        int redsearch = 0;
 //        int thresh = 0;
-//        FloatBuffer pangle = null;
-//        FloatBuffer pconf = null;
+//        FloatBuffer pangle = FloatBuffer.allocate(1);
+//        FloatBuffer pconf = FloatBuffer.allocate(1);
 //        Leptonica instance = new LeptonicaImpl();
 //        Pix expResult = null;
 //        Pix result = instance.pixDeskewGeneral(pixs, redsweep, sweeprange, sweepdelta, redsearch, thresh, pangle, pconf);
@@ -40699,23 +40711,41 @@ public class LeptonicaTest {
 //        fail("The test case is a prototype.");
 //    }
 //
-//    /**
-//     * Test of pixFindSkew method, of class Leptonica.
-//     */
-//    @Test
-//    public void testPixFindSkew() {
-//        System.out.println("pixFindSkew");
-//        Pix pixs = null;
-//        FloatBuffer pangle = null;
-//        FloatBuffer pconf = null;
-//        Leptonica instance = new LeptonicaImpl();
-//        int expResult = 0;
-//        int result = instance.pixFindSkew(pixs, pangle, pconf);
-//        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
+    /**
+     * Test of pixFindSkew method, of class Leptonica.
+     */
+    @Test
+    public void testPixFindSkew() {
+        System.out.println("pixFindSkew");
+        Pix pix = null;
+        FloatBuffer pangle = FloatBuffer.allocate(1);
+        FloatBuffer pconf = FloatBuffer.allocate(1);
+        String filename = "eurotext_deskew.png";
+        File image = new File(testResourcesPath, filename);
+        Leptonica instance = new LeptonicaImpl().getInstance();
+        pix = instance.pixRead(image.getPath());
+        int expResult = 0;
+        Pix pixb = instance.pixScaleRGBToBinaryFast(pix, 1, 1);
+
+        int result = instance.pixFindSkew(pixb, pangle, pconf);
+
+        if (result == 0) {
+            float angle = pangle.get();
+            float conf = pconf.get();
+            System.out.println(String.format("Confidence: %s, Angle: %s degree", conf , angle));
+            assertTrue(expResult < Math.abs(angle));
+        } else {
+            System.out.println("Need to binarize the image first");
+            assertTrue(false);
+        }
+
+        PointerByReference pRef = new PointerByReference();
+        pRef.setValue(pix.getPointer());
+        instance.pixDestroy(pRef);
+        pRef.setValue(pixb.getPointer());
+        instance.pixDestroy(pRef);
+    }
+
 //    /**
 //     * Test of pixFindSkewSweep method, of class Leptonica.
 //     */
@@ -43854,4 +43884,5 @@ public class LeptonicaTest {
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
 //    }
+
 }

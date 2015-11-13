@@ -56,6 +56,7 @@ public class L_Ptra extends Structure {
 	}
 	public L_Ptra(Pointer peer) {
 		super(peer);
+		read();
 	}
 	public static class ByReference extends L_Ptra implements Structure.ByReference {
 		

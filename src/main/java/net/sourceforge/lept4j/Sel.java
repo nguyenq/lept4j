@@ -75,6 +75,7 @@ public class Sel extends Structure {
 	}
 	public Sel(Pointer peer) {
 		super(peer);
+		read();
 	}
 	public static class ByReference extends Sel implements Structure.ByReference {
 		

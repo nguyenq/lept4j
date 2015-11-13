@@ -97,6 +97,7 @@ public class L_Compressed_Data extends Structure {
 	}
 	public L_Compressed_Data(Pointer peer) {
 		super(peer);
+		read();
 	}
 	public static class ByReference extends L_Compressed_Data implements Structure.ByReference {
 		

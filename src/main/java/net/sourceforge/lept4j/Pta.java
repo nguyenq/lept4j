@@ -67,6 +67,7 @@ public class Pta extends Structure {
 	}
 	public Pta(Pointer peer) {
 		super(peer);
+		read();
 	}
 	public static class ByReference extends Pta implements Structure.ByReference {
 		

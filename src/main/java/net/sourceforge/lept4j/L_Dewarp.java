@@ -168,6 +168,7 @@ public class L_Dewarp extends Structure {
 	}
 	public L_Dewarp(Pointer peer) {
 		super(peer);
+		read();
 	}
 	public static class ByReference extends L_Dewarp implements Structure.ByReference {
 		

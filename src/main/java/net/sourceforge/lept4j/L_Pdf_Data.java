@@ -121,6 +121,7 @@ public class L_Pdf_Data extends Structure {
 	}
 	public L_Pdf_Data(Pointer peer) {
 		super(peer);
+		read();
 	}
 	public static class ByReference extends L_Pdf_Data implements Structure.ByReference {
 		

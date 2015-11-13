@@ -62,17 +62,17 @@ public class L_Bmf extends Structure {
 	 */
 	public int vertlinesep;
 	/**
-	 * table mapping ascii --> font index<br>
+	 * table mapping ascii --&gt; font index<br>
 	 * C type : l_int32*
 	 */
 	public IntByReference fonttab;
 	/**
-	 * table mapping ascii --> baseline offset<br>
+	 * table mapping ascii --&gt; baseline offset<br>
 	 * C type : l_int32*
 	 */
 	public IntByReference baselinetab;
 	/**
-	 * table mapping ascii --> char width<br>
+	 * table mapping ascii --&gt; char width<br>
 	 * C type : l_int32*
 	 */
 	public IntByReference widthtab;
@@ -84,6 +84,7 @@ public class L_Bmf extends Structure {
 	}
 	public L_Bmf(Pointer peer) {
 		super(peer);
+		read();
 	}
 	public static class ByReference extends L_Bmf implements Structure.ByReference {
 		

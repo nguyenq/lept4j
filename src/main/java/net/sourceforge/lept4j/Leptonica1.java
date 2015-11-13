@@ -32,11 +32,7 @@ import org.rococoa.Selector;
 
 /**
  * JNA Wrapper for <b>Leptonica Image Processing Library</b> using
- * <code>JNA Direct Mapping</code>.<br>
- * <br>
- * Note: This class may not be of use because JNA Direct Mapping requires all 
- * Leptonica API methods to be included, the number of which exceeds the limit 
- * allowed by Java (?).
+ * <code>JNA Direct Mapping</code>.
  */
 public class Leptonica1 implements Library, ILeptonica {
 

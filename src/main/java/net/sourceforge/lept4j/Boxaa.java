@@ -50,6 +50,7 @@ public class Boxaa extends Structure {
 	}
 	public Boxaa(Pointer peer) {
 		super(peer);
+		read();
 	}
 	public static class ByReference extends Boxaa implements Structure.ByReference {
 		

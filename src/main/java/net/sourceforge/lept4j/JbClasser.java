@@ -158,6 +158,7 @@ public class JbClasser extends Structure {
 	}
 	public JbClasser(Pointer peer) {
 		super(peer);
+		read();
 	}
 	public static class ByReference extends JbClasser implements Structure.ByReference {
 		

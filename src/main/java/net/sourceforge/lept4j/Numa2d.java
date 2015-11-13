@@ -56,6 +56,7 @@ public class Numa2d extends Structure {
 	}
 	public Numa2d(Pointer peer) {
 		super(peer);
+		read();
 	}
 	public static class ByReference extends Numa2d implements Structure.ByReference {
 		

@@ -104,6 +104,7 @@ public class L_Recoga extends Structure {
 	}
 	public L_Recoga(Pointer peer) {
 		super(peer);
+		read();
 	}
 	public static class ByReference extends L_Recoga implements Structure.ByReference {
 		

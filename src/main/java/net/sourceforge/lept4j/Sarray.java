@@ -56,6 +56,7 @@ public class Sarray extends Structure {
 	}
 	public Sarray(Pointer peer) {
 		super(peer);
+		read();
 	}
 	public static class ByReference extends Sarray implements Structure.ByReference {
 		

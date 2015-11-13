@@ -9252,104 +9252,104 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    void l_setAlphaMaskBorder(float val1, float val2);
 //
-//    /**
-//     * Original signature :
-//     * <code>l_int32 pixSetMasked(PIX*, PIX*, l_uint32)</code><br>
-//     * <i>native declaration : allheaders.h:2730</i>
-//     */
-//    int pixSetMasked(Pix pixd, Pix pixm, int val);
-//
-//    /**
-//     * Original signature :
-//     * <code>l_int32 pixSetMaskedGeneral(PIX*, PIX*, l_uint32, l_int32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:2732</i>
-//     */
-//    int pixSetMaskedGeneral(Pix pixd, Pix pixm, int val, int x, int y);
-//
-//    /**
-//     * Original signature :
-//     * <code>l_int32 pixCombineMasked(PIX*, PIX*, PIX*)</code><br>
-//     * <i>native declaration : allheaders.h:2734</i>
-//     */
-//    int pixCombineMasked(Pix pixd, Pix pixs, Pix pixm);
-//
-//    /**
-//     * Original signature :
-//     * <code>l_int32 pixCombineMaskedGeneral(PIX*, PIX*, PIX*, l_int32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:2736</i>
-//     */
-//    int pixCombineMaskedGeneral(Pix pixd, Pix pixs, Pix pixm, int x, int y);
-//
-//    /**
-//     * Original signature :
-//     * <code>l_int32 pixPaintThroughMask(PIX*, PIX*, l_int32, l_int32, l_uint32)</code><br>
-//     * <i>native declaration : allheaders.h:2738</i>
-//     */
-//    int pixPaintThroughMask(Pix pixd, Pix pixm, int x, int y, int val);
-//
-//    /**
-//     * Original signature :
-//     * <code>l_int32 pixPaintSelfThroughMask(PIX*, PIX*, l_int32, l_int32, l_int32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:2740</i>
-//     */
-//    int pixPaintSelfThroughMask(Pix pixd, Pix pixm, int x, int y, int tilesize, int searchdir);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixMakeMaskFromLUT(PIX*, l_int32*)</code><br>
-//     * <i>native declaration : allheaders.h:2742</i>
-//     */
-//    Pix pixMakeMaskFromLUT(Pix pixs, IntBuffer tab);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixSetUnderTransparency(PIX*, l_uint32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:2744</i>
-//     */
-//    Pix pixSetUnderTransparency(Pix pixs, int val, int debug);
-//
-//    /**
-//     * Original signature : <code>PIX* pixInvert(PIX*, PIX*)</code><br>
-//     * <i>native declaration : allheaders.h:2746</i>
-//     */
-//    Pix pixInvert(Pix pixd, Pix pixs);
-//
-//    /**
-//     * Original signature : <code>PIX* pixOr(PIX*, PIX*, PIX*)</code><br>
-//     * <i>native declaration : allheaders.h:2748</i>
-//     */
-//    Pix pixOr(Pix pixd, Pix pixs1, Pix pixs2);
-//
-//    /**
-//     * Original signature : <code>PIX* pixAnd(PIX*, PIX*, PIX*)</code><br>
-//     * <i>native declaration : allheaders.h:2750</i>
-//     */
-//    Pix pixAnd(Pix pixd, Pix pixs1, Pix pixs2);
-//
-//    /**
-//     * Original signature : <code>PIX* pixXor(PIX*, PIX*, PIX*)</code><br>
-//     * <i>native declaration : allheaders.h:2752</i>
-//     */
-//    Pix pixXor(Pix pixd, Pix pixs1, Pix pixs2);
-//
-//    /**
-//     * Original signature : <code>PIX* pixSubtract(PIX*, PIX*, PIX*)</code><br>
-//     * <i>native declaration : allheaders.h:2754</i>
-//     */
-//    Pix pixSubtract(Pix pixd, Pix pixs1, Pix pixs2);
-//
-//    /**
-//     * Original signature : <code>l_int32 pixZero(PIX*, l_int32*)</code><br>
-//     * <i>native declaration : allheaders.h:2756</i>
-//     */
-//    int pixZero(Pix pix, IntBuffer pempty);
-//
-//    /**
-//     * Original signature :
-//     * <code>l_int32 pixForegroundFraction(PIX*, l_float32*)</code><br>
-//     * <i>native declaration : allheaders.h:2758</i>
-//     */
-//    int pixForegroundFraction(Pix pix, FloatBuffer pfract);
+    /**
+     * Original signature :
+     * <code>l_int32 pixSetMasked(PIX*, PIX*, l_uint32)</code><br>
+     * <i>native declaration : allheaders.h:2730</i>
+     */
+    int pixSetMasked(Pix pixd, Pix pixm, int val);
+
+    /**
+     * Original signature :
+     * <code>l_int32 pixSetMaskedGeneral(PIX*, PIX*, l_uint32, l_int32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:2732</i>
+     */
+    int pixSetMaskedGeneral(Pix pixd, Pix pixm, int val, int x, int y);
+
+    /**
+     * Original signature :
+     * <code>l_int32 pixCombineMasked(PIX*, PIX*, PIX*)</code><br>
+     * <i>native declaration : allheaders.h:2734</i>
+     */
+    int pixCombineMasked(Pix pixd, Pix pixs, Pix pixm);
+
+    /**
+     * Original signature :
+     * <code>l_int32 pixCombineMaskedGeneral(PIX*, PIX*, PIX*, l_int32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:2736</i>
+     */
+    int pixCombineMaskedGeneral(Pix pixd, Pix pixs, Pix pixm, int x, int y);
+
+    /**
+     * Original signature :
+     * <code>l_int32 pixPaintThroughMask(PIX*, PIX*, l_int32, l_int32, l_uint32)</code><br>
+     * <i>native declaration : allheaders.h:2738</i>
+     */
+    int pixPaintThroughMask(Pix pixd, Pix pixm, int x, int y, int val);
+
+    /**
+     * Original signature :
+     * <code>l_int32 pixPaintSelfThroughMask(PIX*, PIX*, l_int32, l_int32, l_int32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:2740</i>
+     */
+    int pixPaintSelfThroughMask(Pix pixd, Pix pixm, int x, int y, int tilesize, int searchdir);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixMakeMaskFromLUT(PIX*, l_int32*)</code><br>
+     * <i>native declaration : allheaders.h:2742</i>
+     */
+    Pix pixMakeMaskFromLUT(Pix pixs, IntBuffer tab);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixSetUnderTransparency(PIX*, l_uint32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:2744</i>
+     */
+    Pix pixSetUnderTransparency(Pix pixs, int val, int debug);
+
+    /**
+     * Original signature : <code>PIX* pixInvert(PIX*, PIX*)</code><br>
+     * <i>native declaration : allheaders.h:2746</i>
+     */
+    Pix pixInvert(Pix pixd, Pix pixs);
+
+    /**
+     * Original signature : <code>PIX* pixOr(PIX*, PIX*, PIX*)</code><br>
+     * <i>native declaration : allheaders.h:2748</i>
+     */
+    Pix pixOr(Pix pixd, Pix pixs1, Pix pixs2);
+
+    /**
+     * Original signature : <code>PIX* pixAnd(PIX*, PIX*, PIX*)</code><br>
+     * <i>native declaration : allheaders.h:2750</i>
+     */
+    Pix pixAnd(Pix pixd, Pix pixs1, Pix pixs2);
+
+    /**
+     * Original signature : <code>PIX* pixXor(PIX*, PIX*, PIX*)</code><br>
+     * <i>native declaration : allheaders.h:2752</i>
+     */
+    Pix pixXor(Pix pixd, Pix pixs1, Pix pixs2);
+
+    /**
+     * Original signature : <code>PIX* pixSubtract(PIX*, PIX*, PIX*)</code><br>
+     * <i>native declaration : allheaders.h:2754</i>
+     */
+    Pix pixSubtract(Pix pixd, Pix pixs1, Pix pixs2);
+
+    /**
+     * Original signature : <code>l_int32 pixZero(PIX*, l_int32*)</code><br>
+     * <i>native declaration : allheaders.h:2756</i>
+     */
+    int pixZero(Pix pix, IntBuffer pempty);
+
+    /**
+     * Original signature :
+     * <code>l_int32 pixForegroundFraction(PIX*, l_float32*)</code><br>
+     * <i>native declaration : allheaders.h:2758</i>
+     */
+    int pixForegroundFraction(Pix pix, FloatBuffer pfract);
 //
 //    /**
 //     * Original signature : <code>NUMA* pixaCountPixels(PIXA*)</code><br>
@@ -10865,26 +10865,26 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int pixMultConstantGray(Pix pixs, float val);
 //
-//    /**
-//     * Original signature : <code>PIX* pixAddGray(PIX*, PIX*, PIX*)</code><br>
-//     * <i>native declaration : allheaders.h:3202</i>
-//     */
-//    Pix pixAddGray(Pix pixd, Pix pixs1, Pix pixs2);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixSubtractGray(PIX*, PIX*, PIX*)</code><br>
-//     * <i>native declaration : allheaders.h:3204</i>
-//     */
-//    Pix pixSubtractGray(Pix pixd, Pix pixs1, Pix pixs2);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixThresholdToValue(PIX*, PIX*, l_int32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:3206</i>
-//     */
-//    Pix pixThresholdToValue(Pix pixd, Pix pixs, int threshval, int setval);
-//
+    /**
+     * Original signature : <code>PIX* pixAddGray(PIX*, PIX*, PIX*)</code><br>
+     * <i>native declaration : allheaders.h:3202</i>
+     */
+    Pix pixAddGray(Pix pixd, Pix pixs1, Pix pixs2);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixSubtractGray(PIX*, PIX*, PIX*)</code><br>
+     * <i>native declaration : allheaders.h:3204</i>
+     */
+    Pix pixSubtractGray(Pix pixd, Pix pixs1, Pix pixs2);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixThresholdToValue(PIX*, PIX*, l_int32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:3206</i>
+     */
+    Pix pixThresholdToValue(Pix pixd, Pix pixs, int threshval, int setval);
+
 //    /**
 //     * Original signature :
 //     * <code>PIX* pixInitAccumulate(l_int32, l_int32, l_uint32)</code><br>
@@ -11236,281 +11236,281 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    Pix pixAddMinimalGrayColormap8(Pix pixs);
 //
-//    /**
-//     * Original signature : <code>PIX* pixConvertRGBToLuminance(PIX*)</code><br>
-//     * <i>native declaration : allheaders.h:3316</i>
-//     */
-//    Pix pixConvertRGBToLuminance(Pix pixs);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixConvertRGBToGray(PIX*, l_float32, l_float32, l_float32)</code><br>
-//     * <i>native declaration : allheaders.h:3318</i>
-//     */
-//    Pix pixConvertRGBToGray(Pix pixs, float rwt, float gwt, float bwt);
-//
-//    /**
-//     * Original signature : <code>PIX* pixConvertRGBToGrayFast(PIX*)</code><br>
-//     * <i>native declaration : allheaders.h:3320</i>
-//     */
-//    Pix pixConvertRGBToGrayFast(Pix pixs);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixConvertRGBToGrayMinMax(PIX*, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:3322</i>
-//     */
-//    Pix pixConvertRGBToGrayMinMax(Pix pixs, int type);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixConvertRGBToGraySatBoost(PIX*, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:3324</i>
-//     */
-//    Pix pixConvertRGBToGraySatBoost(Pix pixs, int refval);
-//
-//    /**
-//     * Original signature : <code>PIX* pixConvertGrayToColormap(PIX*)</code><br>
-//     * <i>native declaration : allheaders.h:3326</i>
-//     */
-//    Pix pixConvertGrayToColormap(Pix pixs);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixConvertGrayToColormap8(PIX*, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:3328</i>
-//     */
-//    Pix pixConvertGrayToColormap8(Pix pixs, int mindepth);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixColorizeGray(PIX*, l_uint32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:3330</i>
-//     */
-//    Pix pixColorizeGray(Pix pixs, int color, int cmapflag);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixConvertRGBToColormap(PIX*, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:3332</i>
-//     */
-//    Pix pixConvertRGBToColormap(Pix pixs, int ditherflag);
-//
-//    /**
-//     * Original signature :
-//     * <code>l_int32 pixQuantizeIfFewColors(PIX*, l_int32, l_int32, l_int32, PIX**)</code><br>
-//     * <i>native declaration : allheaders.h:3334</i>
-//     */
-//    int pixQuantizeIfFewColors(Pix pixs, int maxcolors, int mingraycolors, int octlevel, PointerByReference ppixd);
-//
-//    /**
-//     * Original signature : <code>PIX* pixConvert16To8(PIX*, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:3336</i>
-//     */
-//    Pix pixConvert16To8(Pix pixs, int type);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixConvertGrayToFalseColor(PIX*, l_float32)</code><br>
-//     * <i>native declaration : allheaders.h:3338</i>
-//     */
-//    Pix pixConvertGrayToFalseColor(Pix pixs, float gamma);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixUnpackBinary(PIX*, l_int32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:3340</i>
-//     */
-//    Pix pixUnpackBinary(Pix pixs, int depth, int invert);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixConvert1To16(PIX*, PIX*, l_uint16, l_uint16)</code><br>
-//     * <i>native declaration : allheaders.h:3342</i>
-//     */
-//    Pix pixConvert1To16(Pix pixd, Pix pixs, short val0, short val1);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixConvert1To32(PIX*, PIX*, l_uint32, l_uint32)</code><br>
-//     * <i>native declaration : allheaders.h:3344</i>
-//     */
-//    Pix pixConvert1To32(Pix pixd, Pix pixs, int val0, int val1);
-//
-//    /**
-//     * Original signature : <code>PIX* pixConvert1To2Cmap(PIX*)</code><br>
-//     * <i>native declaration : allheaders.h:3346</i>
-//     */
-//    Pix pixConvert1To2Cmap(Pix pixs);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixConvert1To2(PIX*, PIX*, l_int32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:3348</i>
-//     */
-//    Pix pixConvert1To2(Pix pixd, Pix pixs, int val0, int val1);
-//
-//    /**
-//     * Original signature : <code>PIX* pixConvert1To4Cmap(PIX*)</code><br>
-//     * <i>native declaration : allheaders.h:3350</i>
-//     */
-//    Pix pixConvert1To4Cmap(Pix pixs);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixConvert1To4(PIX*, PIX*, l_int32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:3352</i>
-//     */
-//    Pix pixConvert1To4(Pix pixd, Pix pixs, int val0, int val1);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixConvert1To8(PIX*, PIX*, l_uint8, l_uint8)</code><br>
-//     * <i>native declaration : allheaders.h:3354</i>
-//     */
-//    Pix pixConvert1To8(Pix pixd, Pix pixs, byte val0, byte val1);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixConvert2To8(PIX*, l_uint8, l_uint8, l_uint8, l_uint8, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:3356</i>
-//     */
-//    Pix pixConvert2To8(Pix pixs, byte val0, byte val1, byte val2, byte val3, int cmapflag);
-//
-//    /**
-//     * Original signature : <code>PIX* pixConvert4To8(PIX*, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:3358</i>
-//     */
-//    Pix pixConvert4To8(Pix pixs, int cmapflag);
-//
-//    /**
-//     * Original signature : <code>PIX* pixConvert8To16(PIX*, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:3360</i>
-//     */
-//    Pix pixConvert8To16(Pix pixs, int leftshift);
-//
-//    /**
-//     * Original signature : <code>PIX* pixConvertTo1(PIX*, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:3362</i>
-//     */
-//    Pix pixConvertTo1(Pix pixs, int threshold);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixConvertTo1BySampling(PIX*, l_int32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:3364</i>
-//     */
-//    Pix pixConvertTo1BySampling(Pix pixs, int factor, int threshold);
-//
-//    /**
-//     * Original signature : <code>PIX* pixConvertTo8(PIX*, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:3366</i>
-//     */
-//    Pix pixConvertTo8(Pix pixs, int cmapflag);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixConvertTo8BySampling(PIX*, l_int32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:3368</i>
-//     */
-//    Pix pixConvertTo8BySampling(Pix pixs, int factor, int cmapflag);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixConvertTo8Color(PIX*, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:3370</i>
-//     */
-//    Pix pixConvertTo8Color(Pix pixs, int dither);
-//
-//    /**
-//     * Original signature : <code>PIX* pixConvertTo16(PIX*)</code><br>
-//     * <i>native declaration : allheaders.h:3372</i>
-//     */
-//    Pix pixConvertTo16(Pix pixs);
-//
-//    /**
-//     * Original signature : <code>PIX* pixConvertTo32(PIX*)</code><br>
-//     * <i>native declaration : allheaders.h:3374</i>
-//     */
-//    Pix pixConvertTo32(Pix pixs);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixConvertTo32BySampling(PIX*, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:3376</i>
-//     */
-//    Pix pixConvertTo32BySampling(Pix pixs, int factor);
-//
-//    /**
-//     * Original signature : <code>PIX* pixConvert8To32(PIX*)</code><br>
-//     * <i>native declaration : allheaders.h:3378</i>
-//     */
-//    Pix pixConvert8To32(Pix pixs);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixConvertTo8Or32(PIX*, l_int32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:3380</i>
-//     */
-//    Pix pixConvertTo8Or32(Pix pixs, int copyflag, int warnflag);
-//
-//    /**
-//     * Original signature : <code>PIX* pixConvert24To32(PIX*)</code><br>
-//     * <i>native declaration : allheaders.h:3382</i>
-//     */
-//    Pix pixConvert24To32(Pix pixs);
-//
-//    /**
-//     * Original signature : <code>PIX* pixConvert32To24(PIX*)</code><br>
-//     * <i>native declaration : allheaders.h:3384</i>
-//     */
-//    Pix pixConvert32To24(Pix pixs);
-//
-//    /**
-//     * Original signature : <code>PIX* pixRemoveAlpha(PIX*)</code><br>
-//     * <i>native declaration : allheaders.h:3386</i>
-//     */
-//    Pix pixRemoveAlpha(Pix pixs);
-//
-//    /**
-//     * Original signature : <code>PIX* pixAddAlphaTo1bpp(PIX*, PIX*)</code><br>
-//     * <i>native declaration : allheaders.h:3388</i>
-//     */
-//    Pix pixAddAlphaTo1bpp(Pix pixd, Pix pixs);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixConvertLossless(PIX*, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:3390</i>
-//     */
-//    Pix pixConvertLossless(Pix pixs, int d);
-//
-//    /**
-//     * Original signature : <code>PIX* pixConvertForPSWrap(PIX*)</code><br>
-//     * <i>native declaration : allheaders.h:3392</i>
-//     */
-//    Pix pixConvertForPSWrap(Pix pixs);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixConvertToSubpixelRGB(PIX*, l_float32, l_float32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:3394</i>
-//     */
-//    Pix pixConvertToSubpixelRGB(Pix pixs, float scalex, float scaley, int order);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixConvertGrayToSubpixelRGB(PIX*, l_float32, l_float32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:3396</i>
-//     */
-//    Pix pixConvertGrayToSubpixelRGB(Pix pixs, float scalex, float scaley, int order);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixConvertColorToSubpixelRGB(PIX*, l_float32, l_float32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:3398</i>
-//     */
-//    Pix pixConvertColorToSubpixelRGB(Pix pixs, float scalex, float scaley, int order);
+    /**
+     * Original signature : <code>PIX* pixConvertRGBToLuminance(PIX*)</code><br>
+     * <i>native declaration : allheaders.h:3316</i>
+     */
+    Pix pixConvertRGBToLuminance(Pix pixs);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixConvertRGBToGray(PIX*, l_float32, l_float32, l_float32)</code><br>
+     * <i>native declaration : allheaders.h:3318</i>
+     */
+    Pix pixConvertRGBToGray(Pix pixs, float rwt, float gwt, float bwt);
+
+    /**
+     * Original signature : <code>PIX* pixConvertRGBToGrayFast(PIX*)</code><br>
+     * <i>native declaration : allheaders.h:3320</i>
+     */
+    Pix pixConvertRGBToGrayFast(Pix pixs);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixConvertRGBToGrayMinMax(PIX*, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:3322</i>
+     */
+    Pix pixConvertRGBToGrayMinMax(Pix pixs, int type);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixConvertRGBToGraySatBoost(PIX*, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:3324</i>
+     */
+    Pix pixConvertRGBToGraySatBoost(Pix pixs, int refval);
+
+    /**
+     * Original signature : <code>PIX* pixConvertGrayToColormap(PIX*)</code><br>
+     * <i>native declaration : allheaders.h:3326</i>
+     */
+    Pix pixConvertGrayToColormap(Pix pixs);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixConvertGrayToColormap8(PIX*, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:3328</i>
+     */
+    Pix pixConvertGrayToColormap8(Pix pixs, int mindepth);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixColorizeGray(PIX*, l_uint32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:3330</i>
+     */
+    Pix pixColorizeGray(Pix pixs, int color, int cmapflag);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixConvertRGBToColormap(PIX*, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:3332</i>
+     */
+    Pix pixConvertRGBToColormap(Pix pixs, int ditherflag);
+
+    /**
+     * Original signature :
+     * <code>l_int32 pixQuantizeIfFewColors(PIX*, l_int32, l_int32, l_int32, PIX**)</code><br>
+     * <i>native declaration : allheaders.h:3334</i>
+     */
+    int pixQuantizeIfFewColors(Pix pixs, int maxcolors, int mingraycolors, int octlevel, PointerByReference ppixd);
+
+    /**
+     * Original signature : <code>PIX* pixConvert16To8(PIX*, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:3336</i>
+     */
+    Pix pixConvert16To8(Pix pixs, int type);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixConvertGrayToFalseColor(PIX*, l_float32)</code><br>
+     * <i>native declaration : allheaders.h:3338</i>
+     */
+    Pix pixConvertGrayToFalseColor(Pix pixs, float gamma);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixUnpackBinary(PIX*, l_int32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:3340</i>
+     */
+    Pix pixUnpackBinary(Pix pixs, int depth, int invert);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixConvert1To16(PIX*, PIX*, l_uint16, l_uint16)</code><br>
+     * <i>native declaration : allheaders.h:3342</i>
+     */
+    Pix pixConvert1To16(Pix pixd, Pix pixs, short val0, short val1);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixConvert1To32(PIX*, PIX*, l_uint32, l_uint32)</code><br>
+     * <i>native declaration : allheaders.h:3344</i>
+     */
+    Pix pixConvert1To32(Pix pixd, Pix pixs, int val0, int val1);
+
+    /**
+     * Original signature : <code>PIX* pixConvert1To2Cmap(PIX*)</code><br>
+     * <i>native declaration : allheaders.h:3346</i>
+     */
+    Pix pixConvert1To2Cmap(Pix pixs);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixConvert1To2(PIX*, PIX*, l_int32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:3348</i>
+     */
+    Pix pixConvert1To2(Pix pixd, Pix pixs, int val0, int val1);
+
+    /**
+     * Original signature : <code>PIX* pixConvert1To4Cmap(PIX*)</code><br>
+     * <i>native declaration : allheaders.h:3350</i>
+     */
+    Pix pixConvert1To4Cmap(Pix pixs);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixConvert1To4(PIX*, PIX*, l_int32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:3352</i>
+     */
+    Pix pixConvert1To4(Pix pixd, Pix pixs, int val0, int val1);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixConvert1To8(PIX*, PIX*, l_uint8, l_uint8)</code><br>
+     * <i>native declaration : allheaders.h:3354</i>
+     */
+    Pix pixConvert1To8(Pix pixd, Pix pixs, byte val0, byte val1);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixConvert2To8(PIX*, l_uint8, l_uint8, l_uint8, l_uint8, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:3356</i>
+     */
+    Pix pixConvert2To8(Pix pixs, byte val0, byte val1, byte val2, byte val3, int cmapflag);
+
+    /**
+     * Original signature : <code>PIX* pixConvert4To8(PIX*, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:3358</i>
+     */
+    Pix pixConvert4To8(Pix pixs, int cmapflag);
+
+    /**
+     * Original signature : <code>PIX* pixConvert8To16(PIX*, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:3360</i>
+     */
+    Pix pixConvert8To16(Pix pixs, int leftshift);
+
+    /**
+     * Original signature : <code>PIX* pixConvertTo1(PIX*, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:3362</i>
+     */
+    Pix pixConvertTo1(Pix pixs, int threshold);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixConvertTo1BySampling(PIX*, l_int32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:3364</i>
+     */
+    Pix pixConvertTo1BySampling(Pix pixs, int factor, int threshold);
+
+    /**
+     * Original signature : <code>PIX* pixConvertTo8(PIX*, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:3366</i>
+     */
+    Pix pixConvertTo8(Pix pixs, int cmapflag);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixConvertTo8BySampling(PIX*, l_int32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:3368</i>
+     */
+    Pix pixConvertTo8BySampling(Pix pixs, int factor, int cmapflag);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixConvertTo8Color(PIX*, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:3370</i>
+     */
+    Pix pixConvertTo8Color(Pix pixs, int dither);
+
+    /**
+     * Original signature : <code>PIX* pixConvertTo16(PIX*)</code><br>
+     * <i>native declaration : allheaders.h:3372</i>
+     */
+    Pix pixConvertTo16(Pix pixs);
+
+    /**
+     * Original signature : <code>PIX* pixConvertTo32(PIX*)</code><br>
+     * <i>native declaration : allheaders.h:3374</i>
+     */
+    Pix pixConvertTo32(Pix pixs);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixConvertTo32BySampling(PIX*, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:3376</i>
+     */
+    Pix pixConvertTo32BySampling(Pix pixs, int factor);
+
+    /**
+     * Original signature : <code>PIX* pixConvert8To32(PIX*)</code><br>
+     * <i>native declaration : allheaders.h:3378</i>
+     */
+    Pix pixConvert8To32(Pix pixs);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixConvertTo8Or32(PIX*, l_int32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:3380</i>
+     */
+    Pix pixConvertTo8Or32(Pix pixs, int copyflag, int warnflag);
+
+    /**
+     * Original signature : <code>PIX* pixConvert24To32(PIX*)</code><br>
+     * <i>native declaration : allheaders.h:3382</i>
+     */
+    Pix pixConvert24To32(Pix pixs);
+
+    /**
+     * Original signature : <code>PIX* pixConvert32To24(PIX*)</code><br>
+     * <i>native declaration : allheaders.h:3384</i>
+     */
+    Pix pixConvert32To24(Pix pixs);
+
+    /**
+     * Original signature : <code>PIX* pixRemoveAlpha(PIX*)</code><br>
+     * <i>native declaration : allheaders.h:3386</i>
+     */
+    Pix pixRemoveAlpha(Pix pixs);
+
+    /**
+     * Original signature : <code>PIX* pixAddAlphaTo1bpp(PIX*, PIX*)</code><br>
+     * <i>native declaration : allheaders.h:3388</i>
+     */
+    Pix pixAddAlphaTo1bpp(Pix pixd, Pix pixs);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixConvertLossless(PIX*, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:3390</i>
+     */
+    Pix pixConvertLossless(Pix pixs, int d);
+
+    /**
+     * Original signature : <code>PIX* pixConvertForPSWrap(PIX*)</code><br>
+     * <i>native declaration : allheaders.h:3392</i>
+     */
+    Pix pixConvertForPSWrap(Pix pixs);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixConvertToSubpixelRGB(PIX*, l_float32, l_float32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:3394</i>
+     */
+    Pix pixConvertToSubpixelRGB(Pix pixs, float scalex, float scaley, int order);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixConvertGrayToSubpixelRGB(PIX*, l_float32, l_float32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:3396</i>
+     */
+    Pix pixConvertGrayToSubpixelRGB(Pix pixs, float scalex, float scaley, int order);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixConvertColorToSubpixelRGB(PIX*, l_float32, l_float32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:3398</i>
+     */
+    Pix pixConvertColorToSubpixelRGB(Pix pixs, float scalex, float scaley, int order);
 //
 //    /**
 //     * Original signature :
@@ -13656,196 +13656,196 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    void rasteropLow(IntBuffer datad, int dpixw, int dpixh, int depth, int dwpl, int dx, int dy, int dw, int dh, int op, IntBuffer datas, int spixw, int spixh, int swpl, int sx, int sy);
 //
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixRotate(PIX*, l_float32, l_int32, l_int32, l_int32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4034</i>
-//     */
-//    Pix pixRotate(Pix pixs, float angle, int type, int incolor, int width, int height);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixEmbedForRotation(PIX*, l_float32, l_int32, l_int32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4036</i>
-//     */
-//    Pix pixEmbedForRotation(Pix pixs, float angle, int incolor, int width, int height);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixRotateBySampling(PIX*, l_int32, l_int32, l_float32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4038</i>
-//     */
-//    Pix pixRotateBySampling(Pix pixs, int xcen, int ycen, float angle, int incolor);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixRotateBinaryNice(PIX*, l_float32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4040</i>
-//     */
-//    Pix pixRotateBinaryNice(Pix pixs, float angle, int incolor);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixRotateWithAlpha(PIX*, l_float32, PIX*, l_float32)</code><br>
-//     * <i>native declaration : allheaders.h:4042</i>
-//     */
-//    Pix pixRotateWithAlpha(Pix pixs, float angle, Pix pixg, float fract);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixRotateAM(PIX*, l_float32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4044</i>
-//     */
-//    Pix pixRotateAM(Pix pixs, float angle, int incolor);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixRotateAMColor(PIX*, l_float32, l_uint32)</code><br>
-//     * <i>native declaration : allheaders.h:4046</i>
-//     */
-//    Pix pixRotateAMColor(Pix pixs, float angle, int colorval);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixRotateAMGray(PIX*, l_float32, l_uint8)</code><br>
-//     * <i>native declaration : allheaders.h:4048</i>
-//     */
-//    Pix pixRotateAMGray(Pix pixs, float angle, byte grayval);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixRotateAMCorner(PIX*, l_float32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4050</i>
-//     */
-//    Pix pixRotateAMCorner(Pix pixs, float angle, int incolor);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixRotateAMColorCorner(PIX*, l_float32, l_uint32)</code><br>
-//     * <i>native declaration : allheaders.h:4052</i>
-//     */
-//    Pix pixRotateAMColorCorner(Pix pixs, float angle, int fillval);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixRotateAMGrayCorner(PIX*, l_float32, l_uint8)</code><br>
-//     * <i>native declaration : allheaders.h:4054</i>
-//     */
-//    Pix pixRotateAMGrayCorner(Pix pixs, float angle, byte grayval);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixRotateAMColorFast(PIX*, l_float32, l_uint32)</code><br>
-//     * <i>native declaration : allheaders.h:4056</i>
-//     */
-//    Pix pixRotateAMColorFast(Pix pixs, float angle, int colorval);
-//
-//    /**
-//     * Original signature :
-//     * <code>void rotateAMColorLow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_float32, l_uint32)</code><br>
-//     * <i>native declaration : allheaders.h:4058</i>
-//     */
-//    void rotateAMColorLow(IntBuffer datad, int w, int h, int wpld, IntBuffer datas, int wpls, float angle, int colorval);
-//
-//    /**
-//     * Original signature :
-//     * <code>void rotateAMGrayLow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_float32, l_uint8)</code><br>
-//     * <i>native declaration : allheaders.h:4060</i>
-//     */
-//    void rotateAMGrayLow(IntBuffer datad, int w, int h, int wpld, IntBuffer datas, int wpls, float angle, byte grayval);
-//
-//    /**
-//     * Original signature :
-//     * <code>void rotateAMColorCornerLow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_float32, l_uint32)</code><br>
-//     * <i>native declaration : allheaders.h:4062</i>
-//     */
-//    void rotateAMColorCornerLow(IntBuffer datad, int w, int h, int wpld, IntBuffer datas, int wpls, float angle, int colorval);
-//
-//    /**
-//     * Original signature :
-//     * <code>void rotateAMGrayCornerLow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_float32, l_uint8)</code><br>
-//     * <i>native declaration : allheaders.h:4064</i>
-//     */
-//    void rotateAMGrayCornerLow(IntBuffer datad, int w, int h, int wpld, IntBuffer datas, int wpls, float angle, byte grayval);
-//
-//    /**
-//     * Original signature :
-//     * <code>void rotateAMColorFastLow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_float32, l_uint32)</code><br>
-//     * <i>native declaration : allheaders.h:4066</i>
-//     */
-//    void rotateAMColorFastLow(IntBuffer datad, int w, int h, int wpld, IntBuffer datas, int wpls, float angle, int colorval);
-//
-//    /**
-//     * Original signature : <code>PIX* pixRotateOrth(PIX*, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4068</i>
-//     */
-//    Pix pixRotateOrth(Pix pixs, int quads);
-//
-//    /**
-//     * Original signature : <code>PIX* pixRotate180(PIX*, PIX*)</code><br>
-//     * <i>native declaration : allheaders.h:4070</i>
-//     */
-//    Pix pixRotate180(Pix pixd, Pix pixs);
-//
-//    /**
-//     * Original signature : <code>PIX* pixRotate90(PIX*, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4072</i>
-//     */
-//    Pix pixRotate90(Pix pixs, int direction);
-//
-//    /**
-//     * Original signature : <code>PIX* pixFlipLR(PIX*, PIX*)</code><br>
-//     * <i>native declaration : allheaders.h:4074</i>
-//     */
-//    Pix pixFlipLR(Pix pixd, Pix pixs);
-//
-//    /**
-//     * Original signature : <code>PIX* pixFlipTB(PIX*, PIX*)</code><br>
-//     * <i>native declaration : allheaders.h:4076</i>
-//     */
-//    Pix pixFlipTB(Pix pixd, Pix pixs);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixRotateShear(PIX*, l_int32, l_int32, l_float32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4078</i>
-//     */
-//    Pix pixRotateShear(Pix pixs, int xcen, int ycen, float angle, int incolor);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixRotate2Shear(PIX*, l_int32, l_int32, l_float32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4080</i>
-//     */
-//    Pix pixRotate2Shear(Pix pixs, int xcen, int ycen, float angle, int incolor);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixRotate3Shear(PIX*, l_int32, l_int32, l_float32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4082</i>
-//     */
-//    Pix pixRotate3Shear(Pix pixs, int xcen, int ycen, float angle, int incolor);
-//
-//    /**
-//     * Original signature :
-//     * <code>l_int32 pixRotateShearIP(PIX*, l_int32, l_int32, l_float32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4084</i>
-//     */
-//    int pixRotateShearIP(Pix pixs, int xcen, int ycen, float angle, int incolor);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixRotateShearCenter(PIX*, l_float32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4086</i>
-//     */
-//    Pix pixRotateShearCenter(Pix pixs, float angle, int incolor);
-//
-//    /**
-//     * Original signature :
-//     * <code>l_int32 pixRotateShearCenterIP(PIX*, l_float32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4088</i>
-//     */
-//    int pixRotateShearCenterIP(Pix pixs, float angle, int incolor);
+    /**
+     * Original signature :
+     * <code>PIX* pixRotate(PIX*, l_float32, l_int32, l_int32, l_int32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4034</i>
+     */
+    Pix pixRotate(Pix pixs, float angle, int type, int incolor, int width, int height);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixEmbedForRotation(PIX*, l_float32, l_int32, l_int32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4036</i>
+     */
+    Pix pixEmbedForRotation(Pix pixs, float angle, int incolor, int width, int height);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixRotateBySampling(PIX*, l_int32, l_int32, l_float32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4038</i>
+     */
+    Pix pixRotateBySampling(Pix pixs, int xcen, int ycen, float angle, int incolor);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixRotateBinaryNice(PIX*, l_float32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4040</i>
+     */
+    Pix pixRotateBinaryNice(Pix pixs, float angle, int incolor);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixRotateWithAlpha(PIX*, l_float32, PIX*, l_float32)</code><br>
+     * <i>native declaration : allheaders.h:4042</i>
+     */
+    Pix pixRotateWithAlpha(Pix pixs, float angle, Pix pixg, float fract);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixRotateAM(PIX*, l_float32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4044</i>
+     */
+    Pix pixRotateAM(Pix pixs, float angle, int incolor);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixRotateAMColor(PIX*, l_float32, l_uint32)</code><br>
+     * <i>native declaration : allheaders.h:4046</i>
+     */
+    Pix pixRotateAMColor(Pix pixs, float angle, int colorval);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixRotateAMGray(PIX*, l_float32, l_uint8)</code><br>
+     * <i>native declaration : allheaders.h:4048</i>
+     */
+    Pix pixRotateAMGray(Pix pixs, float angle, byte grayval);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixRotateAMCorner(PIX*, l_float32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4050</i>
+     */
+    Pix pixRotateAMCorner(Pix pixs, float angle, int incolor);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixRotateAMColorCorner(PIX*, l_float32, l_uint32)</code><br>
+     * <i>native declaration : allheaders.h:4052</i>
+     */
+    Pix pixRotateAMColorCorner(Pix pixs, float angle, int fillval);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixRotateAMGrayCorner(PIX*, l_float32, l_uint8)</code><br>
+     * <i>native declaration : allheaders.h:4054</i>
+     */
+    Pix pixRotateAMGrayCorner(Pix pixs, float angle, byte grayval);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixRotateAMColorFast(PIX*, l_float32, l_uint32)</code><br>
+     * <i>native declaration : allheaders.h:4056</i>
+     */
+    Pix pixRotateAMColorFast(Pix pixs, float angle, int colorval);
+
+    /**
+     * Original signature :
+     * <code>void rotateAMColorLow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_float32, l_uint32)</code><br>
+     * <i>native declaration : allheaders.h:4058</i>
+     */
+    void rotateAMColorLow(IntBuffer datad, int w, int h, int wpld, IntBuffer datas, int wpls, float angle, int colorval);
+
+    /**
+     * Original signature :
+     * <code>void rotateAMGrayLow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_float32, l_uint8)</code><br>
+     * <i>native declaration : allheaders.h:4060</i>
+     */
+    void rotateAMGrayLow(IntBuffer datad, int w, int h, int wpld, IntBuffer datas, int wpls, float angle, byte grayval);
+
+    /**
+     * Original signature :
+     * <code>void rotateAMColorCornerLow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_float32, l_uint32)</code><br>
+     * <i>native declaration : allheaders.h:4062</i>
+     */
+    void rotateAMColorCornerLow(IntBuffer datad, int w, int h, int wpld, IntBuffer datas, int wpls, float angle, int colorval);
+
+    /**
+     * Original signature :
+     * <code>void rotateAMGrayCornerLow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_float32, l_uint8)</code><br>
+     * <i>native declaration : allheaders.h:4064</i>
+     */
+    void rotateAMGrayCornerLow(IntBuffer datad, int w, int h, int wpld, IntBuffer datas, int wpls, float angle, byte grayval);
+
+    /**
+     * Original signature :
+     * <code>void rotateAMColorFastLow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_float32, l_uint32)</code><br>
+     * <i>native declaration : allheaders.h:4066</i>
+     */
+    void rotateAMColorFastLow(IntBuffer datad, int w, int h, int wpld, IntBuffer datas, int wpls, float angle, int colorval);
+
+    /**
+     * Original signature : <code>PIX* pixRotateOrth(PIX*, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4068</i>
+     */
+    Pix pixRotateOrth(Pix pixs, int quads);
+
+    /**
+     * Original signature : <code>PIX* pixRotate180(PIX*, PIX*)</code><br>
+     * <i>native declaration : allheaders.h:4070</i>
+     */
+    Pix pixRotate180(Pix pixd, Pix pixs);
+
+    /**
+     * Original signature : <code>PIX* pixRotate90(PIX*, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4072</i>
+     */
+    Pix pixRotate90(Pix pixs, int direction);
+
+    /**
+     * Original signature : <code>PIX* pixFlipLR(PIX*, PIX*)</code><br>
+     * <i>native declaration : allheaders.h:4074</i>
+     */
+    Pix pixFlipLR(Pix pixd, Pix pixs);
+
+    /**
+     * Original signature : <code>PIX* pixFlipTB(PIX*, PIX*)</code><br>
+     * <i>native declaration : allheaders.h:4076</i>
+     */
+    Pix pixFlipTB(Pix pixd, Pix pixs);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixRotateShear(PIX*, l_int32, l_int32, l_float32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4078</i>
+     */
+    Pix pixRotateShear(Pix pixs, int xcen, int ycen, float angle, int incolor);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixRotate2Shear(PIX*, l_int32, l_int32, l_float32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4080</i>
+     */
+    Pix pixRotate2Shear(Pix pixs, int xcen, int ycen, float angle, int incolor);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixRotate3Shear(PIX*, l_int32, l_int32, l_float32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4082</i>
+     */
+    Pix pixRotate3Shear(Pix pixs, int xcen, int ycen, float angle, int incolor);
+
+    /**
+     * Original signature :
+     * <code>l_int32 pixRotateShearIP(PIX*, l_int32, l_int32, l_float32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4084</i>
+     */
+    int pixRotateShearIP(Pix pixs, int xcen, int ycen, float angle, int incolor);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixRotateShearCenter(PIX*, l_float32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4086</i>
+     */
+    Pix pixRotateShearCenter(Pix pixs, float angle, int incolor);
+
+    /**
+     * Original signature :
+     * <code>l_int32 pixRotateShearCenterIP(PIX*, l_float32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4088</i>
+     */
+    int pixRotateShearCenterIP(Pix pixs, float angle, int incolor);
 //
 //    /**
 //     * Original signature :
@@ -14223,220 +14223,220 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    Pix pixScaleGray4xLI(Pix pixs);
 //
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixScaleBySampling(PIX*, l_float32, l_float32)</code><br>
-//     * <i>native declaration : allheaders.h:4204</i>
-//     */
-//    Pix pixScaleBySampling(Pix pixs, float scalex, float scaley);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixScaleBySamplingToSize(PIX*, l_int32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4206</i>
-//     */
-//    Pix pixScaleBySamplingToSize(Pix pixs, int wd, int hd);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixScaleByIntSampling(PIX*, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4208</i>
-//     */
-//    Pix pixScaleByIntSampling(Pix pixs, int factor);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixScaleRGBToGrayFast(PIX*, l_int32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4210</i>
-//     */
-//    Pix pixScaleRGBToGrayFast(Pix pixs, int factor, int color);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixScaleRGBToBinaryFast(PIX*, l_int32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4212</i>
-//     */
-//    Pix pixScaleRGBToBinaryFast(Pix pixs, int factor, int thresh);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixScaleGrayToBinaryFast(PIX*, l_int32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4214</i>
-//     */
-//    Pix pixScaleGrayToBinaryFast(Pix pixs, int factor, int thresh);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixScaleSmooth(PIX*, l_float32, l_float32)</code><br>
-//     * <i>native declaration : allheaders.h:4216</i>
-//     */
-//    Pix pixScaleSmooth(Pix pix, float scalex, float scaley);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixScaleRGBToGray2(PIX*, l_float32, l_float32, l_float32)</code><br>
-//     * <i>native declaration : allheaders.h:4218</i>
-//     */
-//    Pix pixScaleRGBToGray2(Pix pixs, float rwt, float gwt, float bwt);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixScaleAreaMap(PIX*, l_float32, l_float32)</code><br>
-//     * <i>native declaration : allheaders.h:4220</i>
-//     */
-//    Pix pixScaleAreaMap(Pix pix, float scalex, float scaley);
-//
-//    /**
-//     * Original signature : <code>PIX* pixScaleAreaMap2(PIX*)</code><br>
-//     * <i>native declaration : allheaders.h:4222</i>
-//     */
-//    Pix pixScaleAreaMap2(Pix pix);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixScaleBinary(PIX*, l_float32, l_float32)</code><br>
-//     * <i>native declaration : allheaders.h:4224</i>
-//     */
-//    Pix pixScaleBinary(Pix pixs, float scalex, float scaley);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixScaleToGray(PIX*, l_float32)</code><br>
-//     * <i>native declaration : allheaders.h:4226</i>
-//     */
-//    Pix pixScaleToGray(Pix pixs, float scalefactor);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixScaleToGrayFast(PIX*, l_float32)</code><br>
-//     * <i>native declaration : allheaders.h:4228</i>
-//     */
-//    Pix pixScaleToGrayFast(Pix pixs, float scalefactor);
-//
-//    /**
-//     * Original signature : <code>PIX* pixScaleToGray2(PIX*)</code><br>
-//     * <i>native declaration : allheaders.h:4230</i>
-//     */
-//    Pix pixScaleToGray2(Pix pixs);
-//
-//    /**
-//     * Original signature : <code>PIX* pixScaleToGray3(PIX*)</code><br>
-//     * <i>native declaration : allheaders.h:4232</i>
-//     */
-//    Pix pixScaleToGray3(Pix pixs);
-//
-//    /**
-//     * Original signature : <code>PIX* pixScaleToGray4(PIX*)</code><br>
-//     * <i>native declaration : allheaders.h:4234</i>
-//     */
-//    Pix pixScaleToGray4(Pix pixs);
-//
-//    /**
-//     * Original signature : <code>PIX* pixScaleToGray6(PIX*)</code><br>
-//     * <i>native declaration : allheaders.h:4236</i>
-//     */
-//    Pix pixScaleToGray6(Pix pixs);
-//
-//    /**
-//     * Original signature : <code>PIX* pixScaleToGray8(PIX*)</code><br>
-//     * <i>native declaration : allheaders.h:4238</i>
-//     */
-//    Pix pixScaleToGray8(Pix pixs);
-//
-//    /**
-//     * Original signature : <code>PIX* pixScaleToGray16(PIX*)</code><br>
-//     * <i>native declaration : allheaders.h:4240</i>
-//     */
-//    Pix pixScaleToGray16(Pix pixs);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixScaleToGrayMipmap(PIX*, l_float32)</code><br>
-//     * <i>native declaration : allheaders.h:4242</i>
-//     */
-//    Pix pixScaleToGrayMipmap(Pix pixs, float scalefactor);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixScaleMipmap(PIX*, PIX*, l_float32)</code><br>
-//     * <i>native declaration : allheaders.h:4244</i>
-//     */
-//    Pix pixScaleMipmap(Pix pixs1, Pix pixs2, float scale);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixExpandReplicate(PIX*, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4246</i>
-//     */
-//    Pix pixExpandReplicate(Pix pixs, int factor);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixScaleGray2xLIThresh(PIX*, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4248</i>
-//     */
-//    Pix pixScaleGray2xLIThresh(Pix pixs, int thresh);
-//
-//    /**
-//     * Original signature : <code>PIX* pixScaleGray2xLIDither(PIX*)</code><br>
-//     * <i>native declaration : allheaders.h:4250</i>
-//     */
-//    Pix pixScaleGray2xLIDither(Pix pixs);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixScaleGray4xLIThresh(PIX*, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4252</i>
-//     */
-//    Pix pixScaleGray4xLIThresh(Pix pixs, int thresh);
-//
-//    /**
-//     * Original signature : <code>PIX* pixScaleGray4xLIDither(PIX*)</code><br>
-//     * <i>native declaration : allheaders.h:4254</i>
-//     */
-//    Pix pixScaleGray4xLIDither(Pix pixs);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixScaleGrayMinMax(PIX*, l_int32, l_int32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4256</i>
-//     */
-//    Pix pixScaleGrayMinMax(Pix pixs, int xfact, int yfact, int type);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixScaleGrayMinMax2(PIX*, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4258</i>
-//     */
-//    Pix pixScaleGrayMinMax2(Pix pixs, int type);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixScaleGrayRankCascade(PIX*, l_int32, l_int32, l_int32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4260</i>
-//     */
-//    Pix pixScaleGrayRankCascade(Pix pixs, int level1, int level2, int level3, int level4);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixScaleGrayRank2(PIX*, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4262</i>
-//     */
-//    Pix pixScaleGrayRank2(Pix pixs, int rank);
-//
-//    /**
-//     * Original signature :
-//     * <code>l_int32 pixScaleAndTransferAlpha(PIX*, PIX*, l_float32, l_float32)</code><br>
-//     * <i>native declaration : allheaders.h:4264</i>
-//     */
-//    int pixScaleAndTransferAlpha(Pix pixd, Pix pixs, float scalex, float scaley);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixScaleWithAlpha(PIX*, l_float32, l_float32, PIX*, l_float32)</code><br>
-//     * <i>native declaration : allheaders.h:4266</i>
-//     */
-//    Pix pixScaleWithAlpha(Pix pixs, float scalex, float scaley, Pix pixg, float fract);
+    /**
+     * Original signature :
+     * <code>PIX* pixScaleBySampling(PIX*, l_float32, l_float32)</code><br>
+     * <i>native declaration : allheaders.h:4204</i>
+     */
+    Pix pixScaleBySampling(Pix pixs, float scalex, float scaley);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixScaleBySamplingToSize(PIX*, l_int32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4206</i>
+     */
+    Pix pixScaleBySamplingToSize(Pix pixs, int wd, int hd);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixScaleByIntSampling(PIX*, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4208</i>
+     */
+    Pix pixScaleByIntSampling(Pix pixs, int factor);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixScaleRGBToGrayFast(PIX*, l_int32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4210</i>
+     */
+    Pix pixScaleRGBToGrayFast(Pix pixs, int factor, int color);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixScaleRGBToBinaryFast(PIX*, l_int32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4212</i>
+     */
+    Pix pixScaleRGBToBinaryFast(Pix pixs, int factor, int thresh);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixScaleGrayToBinaryFast(PIX*, l_int32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4214</i>
+     */
+    Pix pixScaleGrayToBinaryFast(Pix pixs, int factor, int thresh);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixScaleSmooth(PIX*, l_float32, l_float32)</code><br>
+     * <i>native declaration : allheaders.h:4216</i>
+     */
+    Pix pixScaleSmooth(Pix pix, float scalex, float scaley);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixScaleRGBToGray2(PIX*, l_float32, l_float32, l_float32)</code><br>
+     * <i>native declaration : allheaders.h:4218</i>
+     */
+    Pix pixScaleRGBToGray2(Pix pixs, float rwt, float gwt, float bwt);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixScaleAreaMap(PIX*, l_float32, l_float32)</code><br>
+     * <i>native declaration : allheaders.h:4220</i>
+     */
+    Pix pixScaleAreaMap(Pix pix, float scalex, float scaley);
+
+    /**
+     * Original signature : <code>PIX* pixScaleAreaMap2(PIX*)</code><br>
+     * <i>native declaration : allheaders.h:4222</i>
+     */
+    Pix pixScaleAreaMap2(Pix pix);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixScaleBinary(PIX*, l_float32, l_float32)</code><br>
+     * <i>native declaration : allheaders.h:4224</i>
+     */
+    Pix pixScaleBinary(Pix pixs, float scalex, float scaley);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixScaleToGray(PIX*, l_float32)</code><br>
+     * <i>native declaration : allheaders.h:4226</i>
+     */
+    Pix pixScaleToGray(Pix pixs, float scalefactor);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixScaleToGrayFast(PIX*, l_float32)</code><br>
+     * <i>native declaration : allheaders.h:4228</i>
+     */
+    Pix pixScaleToGrayFast(Pix pixs, float scalefactor);
+
+    /**
+     * Original signature : <code>PIX* pixScaleToGray2(PIX*)</code><br>
+     * <i>native declaration : allheaders.h:4230</i>
+     */
+    Pix pixScaleToGray2(Pix pixs);
+
+    /**
+     * Original signature : <code>PIX* pixScaleToGray3(PIX*)</code><br>
+     * <i>native declaration : allheaders.h:4232</i>
+     */
+    Pix pixScaleToGray3(Pix pixs);
+
+    /**
+     * Original signature : <code>PIX* pixScaleToGray4(PIX*)</code><br>
+     * <i>native declaration : allheaders.h:4234</i>
+     */
+    Pix pixScaleToGray4(Pix pixs);
+
+    /**
+     * Original signature : <code>PIX* pixScaleToGray6(PIX*)</code><br>
+     * <i>native declaration : allheaders.h:4236</i>
+     */
+    Pix pixScaleToGray6(Pix pixs);
+
+    /**
+     * Original signature : <code>PIX* pixScaleToGray8(PIX*)</code><br>
+     * <i>native declaration : allheaders.h:4238</i>
+     */
+    Pix pixScaleToGray8(Pix pixs);
+
+    /**
+     * Original signature : <code>PIX* pixScaleToGray16(PIX*)</code><br>
+     * <i>native declaration : allheaders.h:4240</i>
+     */
+    Pix pixScaleToGray16(Pix pixs);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixScaleToGrayMipmap(PIX*, l_float32)</code><br>
+     * <i>native declaration : allheaders.h:4242</i>
+     */
+    Pix pixScaleToGrayMipmap(Pix pixs, float scalefactor);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixScaleMipmap(PIX*, PIX*, l_float32)</code><br>
+     * <i>native declaration : allheaders.h:4244</i>
+     */
+    Pix pixScaleMipmap(Pix pixs1, Pix pixs2, float scale);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixExpandReplicate(PIX*, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4246</i>
+     */
+    Pix pixExpandReplicate(Pix pixs, int factor);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixScaleGray2xLIThresh(PIX*, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4248</i>
+     */
+    Pix pixScaleGray2xLIThresh(Pix pixs, int thresh);
+
+    /**
+     * Original signature : <code>PIX* pixScaleGray2xLIDither(PIX*)</code><br>
+     * <i>native declaration : allheaders.h:4250</i>
+     */
+    Pix pixScaleGray2xLIDither(Pix pixs);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixScaleGray4xLIThresh(PIX*, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4252</i>
+     */
+    Pix pixScaleGray4xLIThresh(Pix pixs, int thresh);
+
+    /**
+     * Original signature : <code>PIX* pixScaleGray4xLIDither(PIX*)</code><br>
+     * <i>native declaration : allheaders.h:4254</i>
+     */
+    Pix pixScaleGray4xLIDither(Pix pixs);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixScaleGrayMinMax(PIX*, l_int32, l_int32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4256</i>
+     */
+    Pix pixScaleGrayMinMax(Pix pixs, int xfact, int yfact, int type);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixScaleGrayMinMax2(PIX*, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4258</i>
+     */
+    Pix pixScaleGrayMinMax2(Pix pixs, int type);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixScaleGrayRankCascade(PIX*, l_int32, l_int32, l_int32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4260</i>
+     */
+    Pix pixScaleGrayRankCascade(Pix pixs, int level1, int level2, int level3, int level4);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixScaleGrayRank2(PIX*, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4262</i>
+     */
+    Pix pixScaleGrayRank2(Pix pixs, int rank);
+
+    /**
+     * Original signature :
+     * <code>l_int32 pixScaleAndTransferAlpha(PIX*, PIX*, l_float32, l_float32)</code><br>
+     * <i>native declaration : allheaders.h:4264</i>
+     */
+    int pixScaleAndTransferAlpha(Pix pixd, Pix pixs, float scalex, float scaley);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixScaleWithAlpha(PIX*, l_float32, l_float32, PIX*, l_float32)</code><br>
+     * <i>native declaration : allheaders.h:4266</i>
+     */
+    Pix pixScaleWithAlpha(Pix pixs, float scalex, float scaley, Pix pixg, float fract);
 //
 //    /**
 //     * Original signature :
@@ -15252,81 +15252,81 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    Pix pixVShearLI(Pix pixs, int xloc, float radang, int incolor);
 //
-//    /**
-//     * Original signature : <code>PIX* pixDeskew(PIX*, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4514</i>
-//     */
-//    Pix pixDeskew(Pix pixs, int redsearch);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixFindSkewAndDeskew(PIX*, l_int32, l_float32*, l_float32*)</code><br>
-//     * <i>native declaration : allheaders.h:4516</i>
-//     */
-//    Pix pixFindSkewAndDeskew(Pix pixs, int redsearch, FloatBuffer pangle, FloatBuffer pconf);
-//
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixDeskewGeneral(PIX*, l_int32, l_float32, l_float32, l_int32, l_int32, l_float32*, l_float32*)</code><br>
-//     * <i>native declaration : allheaders.h:4518</i>
-//     */
-//    Pix pixDeskewGeneral(Pix pixs, int redsweep, float sweeprange, float sweepdelta, int redsearch, int thresh, FloatBuffer pangle, FloatBuffer pconf);
-//
-//    /**
-//     * Original signature :
-//     * <code>l_int32 pixFindSkew(PIX*, l_float32*, l_float32*)</code><br>
-//     * <i>native declaration : allheaders.h:4520</i>
-//     */
-//    int pixFindSkew(Pix pixs, FloatBuffer pangle, FloatBuffer pconf);
-//
-//    /**
-//     * Original signature :
-//     * <code>l_int32 pixFindSkewSweep(PIX*, l_float32*, l_int32, l_float32, l_float32)</code><br>
-//     * <i>native declaration : allheaders.h:4522</i>
-//     */
-//    int pixFindSkewSweep(Pix pixs, FloatBuffer pangle, int reduction, float sweeprange, float sweepdelta);
-//
-//    /**
-//     * Original signature :
-//     * <code>l_int32 pixFindSkewSweepAndSearch(PIX*, l_float32*, l_float32*, l_int32, l_int32, l_float32, l_float32, l_float32)</code><br>
-//     * <i>native declaration : allheaders.h:4524</i>
-//     */
-//    int pixFindSkewSweepAndSearch(Pix pixs, FloatBuffer pangle, FloatBuffer pconf, int redsweep, int redsearch, float sweeprange, float sweepdelta, float minbsdelta);
-//
-//    /**
-//     * Original signature :
-//     * <code>l_int32 pixFindSkewSweepAndSearchScore(PIX*, l_float32*, l_float32*, l_float32*, l_int32, l_int32, l_float32, l_float32, l_float32, l_float32)</code><br>
-//     * <i>native declaration : allheaders.h:4526</i>
-//     */
-//    int pixFindSkewSweepAndSearchScore(Pix pixs, FloatBuffer pangle, FloatBuffer pconf, FloatBuffer pendscore, int redsweep, int redsearch, float sweepcenter, float sweeprange, float sweepdelta, float minbsdelta);
-//
-//    /**
-//     * Original signature :
-//     * <code>l_int32 pixFindSkewSweepAndSearchScorePivot(PIX*, l_float32*, l_float32*, l_float32*, l_int32, l_int32, l_float32, l_float32, l_float32, l_float32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4528</i>
-//     */
-//    int pixFindSkewSweepAndSearchScorePivot(Pix pixs, FloatBuffer pangle, FloatBuffer pconf, FloatBuffer pendscore, int redsweep, int redsearch, float sweepcenter, float sweeprange, float sweepdelta, float minbsdelta, int pivot);
-//
-//    /**
-//     * Original signature :
-//     * <code>l_int32 pixFindSkewOrthogonalRange(PIX*, l_float32*, l_float32*, l_int32, l_int32, l_float32, l_float32, l_float32, l_float32)</code><br>
-//     * <i>native declaration : allheaders.h:4530</i>
-//     */
-//    int pixFindSkewOrthogonalRange(Pix pixs, FloatBuffer pangle, FloatBuffer pconf, int redsweep, int redsearch, float sweeprange, float sweepdelta, float minbsdelta, float confprior);
-//
-//    /**
-//     * Original signature :
-//     * <code>l_int32 pixFindDifferentialSquareSum(PIX*, l_float32*)</code><br>
-//     * <i>native declaration : allheaders.h:4532</i>
-//     */
-//    int pixFindDifferentialSquareSum(Pix pixs, FloatBuffer psum);
-//
-//    /**
-//     * Original signature :
-//     * <code>l_int32 pixFindNormalizedSquareSum(PIX*, l_float32*, l_float32*, l_float32*)</code><br>
-//     * <i>native declaration : allheaders.h:4534</i>
-//     */
-//    int pixFindNormalizedSquareSum(Pix pixs, FloatBuffer phratio, FloatBuffer pvratio, FloatBuffer pfract);
+    /**
+     * Original signature : <code>PIX* pixDeskew(PIX*, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4514</i>
+     */
+    Pix pixDeskew(Pix pixs, int redsearch);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixFindSkewAndDeskew(PIX*, l_int32, l_float32*, l_float32*)</code><br>
+     * <i>native declaration : allheaders.h:4516</i>
+     */
+    Pix pixFindSkewAndDeskew(Pix pixs, int redsearch, FloatBuffer pangle, FloatBuffer pconf);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixDeskewGeneral(PIX*, l_int32, l_float32, l_float32, l_int32, l_int32, l_float32*, l_float32*)</code><br>
+     * <i>native declaration : allheaders.h:4518</i>
+     */
+    Pix pixDeskewGeneral(Pix pixs, int redsweep, float sweeprange, float sweepdelta, int redsearch, int thresh, FloatBuffer pangle, FloatBuffer pconf);
+
+    /**
+     * Original signature :
+     * <code>l_int32 pixFindSkew(PIX*, l_float32*, l_float32*)</code><br>
+     * <i>native declaration : allheaders.h:4520</i>
+     */
+    int pixFindSkew(Pix pixs, FloatBuffer pangle, FloatBuffer pconf);
+
+    /**
+     * Original signature :
+     * <code>l_int32 pixFindSkewSweep(PIX*, l_float32*, l_int32, l_float32, l_float32)</code><br>
+     * <i>native declaration : allheaders.h:4522</i>
+     */
+    int pixFindSkewSweep(Pix pixs, FloatBuffer pangle, int reduction, float sweeprange, float sweepdelta);
+
+    /**
+     * Original signature :
+     * <code>l_int32 pixFindSkewSweepAndSearch(PIX*, l_float32*, l_float32*, l_int32, l_int32, l_float32, l_float32, l_float32)</code><br>
+     * <i>native declaration : allheaders.h:4524</i>
+     */
+    int pixFindSkewSweepAndSearch(Pix pixs, FloatBuffer pangle, FloatBuffer pconf, int redsweep, int redsearch, float sweeprange, float sweepdelta, float minbsdelta);
+
+    /**
+     * Original signature :
+     * <code>l_int32 pixFindSkewSweepAndSearchScore(PIX*, l_float32*, l_float32*, l_float32*, l_int32, l_int32, l_float32, l_float32, l_float32, l_float32)</code><br>
+     * <i>native declaration : allheaders.h:4526</i>
+     */
+    int pixFindSkewSweepAndSearchScore(Pix pixs, FloatBuffer pangle, FloatBuffer pconf, FloatBuffer pendscore, int redsweep, int redsearch, float sweepcenter, float sweeprange, float sweepdelta, float minbsdelta);
+
+    /**
+     * Original signature :
+     * <code>l_int32 pixFindSkewSweepAndSearchScorePivot(PIX*, l_float32*, l_float32*, l_float32*, l_int32, l_int32, l_float32, l_float32, l_float32, l_float32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4528</i>
+     */
+    int pixFindSkewSweepAndSearchScorePivot(Pix pixs, FloatBuffer pangle, FloatBuffer pconf, FloatBuffer pendscore, int redsweep, int redsearch, float sweepcenter, float sweeprange, float sweepdelta, float minbsdelta, int pivot);
+
+    /**
+     * Original signature :
+     * <code>l_int32 pixFindSkewOrthogonalRange(PIX*, l_float32*, l_float32*, l_int32, l_int32, l_float32, l_float32, l_float32, l_float32)</code><br>
+     * <i>native declaration : allheaders.h:4530</i>
+     */
+    int pixFindSkewOrthogonalRange(Pix pixs, FloatBuffer pangle, FloatBuffer pconf, int redsweep, int redsearch, float sweeprange, float sweepdelta, float minbsdelta, float confprior);
+
+    /**
+     * Original signature :
+     * <code>l_int32 pixFindDifferentialSquareSum(PIX*, l_float32*)</code><br>
+     * <i>native declaration : allheaders.h:4532</i>
+     */
+    int pixFindDifferentialSquareSum(Pix pixs, FloatBuffer psum);
+
+    /**
+     * Original signature :
+     * <code>l_int32 pixFindNormalizedSquareSum(PIX*, l_float32*, l_float32*, l_float32*)</code><br>
+     * <i>native declaration : allheaders.h:4534</i>
+     */
+    int pixFindNormalizedSquareSum(Pix pixs, FloatBuffer phratio, FloatBuffer pvratio, FloatBuffer pfract);
 //
 //
 //
@@ -15902,18 +15902,18 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    void lept_free(Pointer ptr);
 //
-//    /**
-//     * Original signature : <code>l_int32 lept_mkdir(const char*)</code><br>
-//     * <i>native declaration : allheaders.h:4726</i>
-//     */
-//    int lept_mkdir(String subdir);
-//
-//    /**
-//     * Original signature : <code>l_int32 lept_rmdir(const char*)</code><br>
-//     * <i>native declaration : allheaders.h:4728</i>
-//     */
-//    int lept_rmdir(String subdir);
-//
+    /**
+     * Original signature : <code>l_int32 lept_mkdir(const char*)</code><br>
+     * <i>native declaration : allheaders.h:4726</i>
+     */
+    int lept_mkdir(String subdir);
+
+    /**
+     * Original signature : <code>l_int32 lept_rmdir(const char*)</code><br>
+     * <i>native declaration : allheaders.h:4728</i>
+     */
+    int lept_rmdir(String subdir);
+
 //    /**
 //     * Original signature :
 //     * <code>void lept_direxists(const char*, l_int32*)</code><br>

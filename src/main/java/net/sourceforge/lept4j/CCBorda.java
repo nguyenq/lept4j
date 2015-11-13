@@ -74,6 +74,7 @@ public class CCBorda extends Structure {
 	}
 	public CCBorda(Pointer peer) {
 		super(peer);
+		read();
 	}
 	public static class ByReference extends CCBorda implements Structure.ByReference {
 		

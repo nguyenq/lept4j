@@ -91,6 +91,7 @@ public class L_RegParams extends Structure {
 	}
 	public L_RegParams(Pointer peer) {
 		super(peer);
+		read();
 	}
 	public static class ByReference extends L_RegParams implements Structure.ByReference {
 		

@@ -86,6 +86,7 @@ public class L_Queue extends Structure {
 	}
 	public L_Queue(Pointer peer) {
 		super(peer);
+		read();
 	}
 	public static class ByReference extends L_Queue implements Structure.ByReference {
 		
