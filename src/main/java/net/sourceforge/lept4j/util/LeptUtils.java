@@ -32,7 +32,7 @@ import javax.imageio.ImageWriter;
 import javax.imageio.metadata.IIOMetadata;
 import javax.imageio.stream.ImageOutputStream;
 
-import com.sun.media.imageio.plugins.tiff.TIFFImageWriteParam;
+import com.github.jaiimageio.plugins.tiff.TIFFImageWriteParam;
 import com.sun.jna.ptr.PointerByReference;
 
 import com.ochafik.lang.jnaerator.runtime.NativeSize;
