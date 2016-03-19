@@ -11,6 +11,10 @@ Version 1.1 (22 August 2015):
 - Upgrade to Leptonica 1.72
 - Additional use cases
 
+Version 1.1.1 (15 November 2015):
+- Update JNA 4.2.1
+- Additional test cases
+
 Version 1.1.2 (17 March 2016):
 - Update jna-4.2.2
 - Update jai-imageio-1.3.1
