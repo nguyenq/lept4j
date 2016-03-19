@@ -424,157 +424,157 @@ public interface Leptonica extends Library, ILeptonica {
      */
     Boxa boxaAffineTransform(Boxa boxas, FloatBuffer mat);
 
-    /**
-     * Original signature :
-     * <code>l_int32 l_productMatVec(l_float32*, l_float32*, l_float32*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:112</i>
-     */
-    int l_productMatVec(FloatBuffer mat, FloatBuffer vecs, FloatBuffer vecd, int size);
-
-    /**
-     * Original signature :
-     * <code>l_int32 l_productMat2(l_float32*, l_float32*, l_float32*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:114</i>
-     */
-    int l_productMat2(FloatBuffer mat1, FloatBuffer mat2, FloatBuffer matd, int size);
-
-    /**
-     * Original signature :
-     * <code>l_int32 l_productMat3(l_float32*, l_float32*, l_float32*, l_float32*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:116</i>
-     */
-    int l_productMat3(FloatBuffer mat1, FloatBuffer mat2, FloatBuffer mat3, FloatBuffer matd, int size);
-
-    /**
-     * Original signature :
-     * <code>l_int32 l_productMat4(l_float32*, l_float32*, l_float32*, l_float32*, l_float32*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:118</i>
-     */
-    int l_productMat4(FloatBuffer mat1, FloatBuffer mat2, FloatBuffer mat3, FloatBuffer mat4, FloatBuffer matd, int size);
-
-    /**
-     * Original signature :
-     * <code>l_int32 l_getDataBit(void*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:120</i>
-     */
-    int l_getDataBit(Pointer line, int n);
-
-    /**
-     * Original signature : <code>void l_setDataBit(void*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:122</i>
-     */
-    void l_setDataBit(Pointer line, int n);
-
-    /**
-     * Original signature : <code>void l_clearDataBit(void*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:124</i>
-     */
-    void l_clearDataBit(Pointer line, int n);
-
-    /**
-     * Original signature :
-     * <code>void l_setDataBitVal(void*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:126</i>
-     */
-    void l_setDataBitVal(Pointer line, int n, int val);
-
-    /**
-     * Original signature :
-     * <code>l_int32 l_getDataDibit(void*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:128</i>
-     */
-    int l_getDataDibit(Pointer line, int n);
-
-    /**
-     * Original signature :
-     * <code>void l_setDataDibit(void*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:130</i>
-     */
-    void l_setDataDibit(Pointer line, int n, int val);
-
-    /**
-     * Original signature :
-     * <code>void l_clearDataDibit(void*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:132</i>
-     */
-    void l_clearDataDibit(Pointer line, int n);
-
-    /**
-     * Original signature :
-     * <code>l_int32 l_getDataQbit(void*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:134</i>
-     */
-    int l_getDataQbit(Pointer line, int n);
-
-    /**
-     * Original signature :
-     * <code>void l_setDataQbit(void*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:136</i>
-     */
-    void l_setDataQbit(Pointer line, int n, int val);
-
-    /**
-     * Original signature :
-     * <code>void l_clearDataQbit(void*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:138</i>
-     */
-    void l_clearDataQbit(Pointer line, int n);
-
-    /**
-     * Original signature :
-     * <code>l_int32 l_getDataByte(void*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:140</i>
-     */
-    int l_getDataByte(Pointer line, int n);
-
-    /**
-     * Original signature :
-     * <code>void l_setDataByte(void*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:142</i>
-     */
-    void l_setDataByte(Pointer line, int n, int val);
-
-    /**
-     * Original signature :
-     * <code>l_int32 l_getDataTwoBytes(void*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:144</i>
-     */
-    int l_getDataTwoBytes(Pointer line, int n);
-
-    /**
-     * Original signature :
-     * <code>void l_setDataTwoBytes(void*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:146</i>
-     */
-    void l_setDataTwoBytes(Pointer line, int n, int val);
-
-    /**
-     * Original signature :
-     * <code>l_int32 l_getDataFourBytes(void*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:148</i>
-     */
-    int l_getDataFourBytes(Pointer line, int n);
-
-    /**
-     * Original signature :
-     * <code>void l_setDataFourBytes(void*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:150</i>
-     */
-    void l_setDataFourBytes(Pointer line, int n, int val);
-
-    /**
-     * Original signature :
-     * <code>char* barcodeDispatchDecoder(char*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:152</i>
-     */
-    Pointer barcodeDispatchDecoder(ByteBuffer barstr, int format, int debugflag);
-
-    /**
-     * Original signature :
-     * <code>l_int32 barcodeFormatIsSupported(l_int32)</code><br>
-     * <i>native declaration : allheaders.h:154</i>
-     */
-    int barcodeFormatIsSupported(int format);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 l_productMatVec(l_float32*, l_float32*, l_float32*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:112</i>
+//     */
+//    int l_productMatVec(FloatBuffer mat, FloatBuffer vecs, FloatBuffer vecd, int size);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 l_productMat2(l_float32*, l_float32*, l_float32*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:114</i>
+//     */
+//    int l_productMat2(FloatBuffer mat1, FloatBuffer mat2, FloatBuffer matd, int size);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 l_productMat3(l_float32*, l_float32*, l_float32*, l_float32*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:116</i>
+//     */
+//    int l_productMat3(FloatBuffer mat1, FloatBuffer mat2, FloatBuffer mat3, FloatBuffer matd, int size);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 l_productMat4(l_float32*, l_float32*, l_float32*, l_float32*, l_float32*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:118</i>
+//     */
+//    int l_productMat4(FloatBuffer mat1, FloatBuffer mat2, FloatBuffer mat3, FloatBuffer mat4, FloatBuffer matd, int size);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 l_getDataBit(void*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:120</i>
+//     */
+//    int l_getDataBit(Pointer line, int n);
+//
+//    /**
+//     * Original signature : <code>void l_setDataBit(void*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:122</i>
+//     */
+//    void l_setDataBit(Pointer line, int n);
+//
+//    /**
+//     * Original signature : <code>void l_clearDataBit(void*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:124</i>
+//     */
+//    void l_clearDataBit(Pointer line, int n);
+//
+//    /**
+//     * Original signature :
+//     * <code>void l_setDataBitVal(void*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:126</i>
+//     */
+//    void l_setDataBitVal(Pointer line, int n, int val);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 l_getDataDibit(void*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:128</i>
+//     */
+//    int l_getDataDibit(Pointer line, int n);
+//
+//    /**
+//     * Original signature :
+//     * <code>void l_setDataDibit(void*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:130</i>
+//     */
+//    void l_setDataDibit(Pointer line, int n, int val);
+//
+//    /**
+//     * Original signature :
+//     * <code>void l_clearDataDibit(void*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:132</i>
+//     */
+//    void l_clearDataDibit(Pointer line, int n);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 l_getDataQbit(void*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:134</i>
+//     */
+//    int l_getDataQbit(Pointer line, int n);
+//
+//    /**
+//     * Original signature :
+//     * <code>void l_setDataQbit(void*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:136</i>
+//     */
+//    void l_setDataQbit(Pointer line, int n, int val);
+//
+//    /**
+//     * Original signature :
+//     * <code>void l_clearDataQbit(void*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:138</i>
+//     */
+//    void l_clearDataQbit(Pointer line, int n);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 l_getDataByte(void*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:140</i>
+//     */
+//    int l_getDataByte(Pointer line, int n);
+//
+//    /**
+//     * Original signature :
+//     * <code>void l_setDataByte(void*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:142</i>
+//     */
+//    void l_setDataByte(Pointer line, int n, int val);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 l_getDataTwoBytes(void*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:144</i>
+//     */
+//    int l_getDataTwoBytes(Pointer line, int n);
+//
+//    /**
+//     * Original signature :
+//     * <code>void l_setDataTwoBytes(void*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:146</i>
+//     */
+//    void l_setDataTwoBytes(Pointer line, int n, int val);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 l_getDataFourBytes(void*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:148</i>
+//     */
+//    int l_getDataFourBytes(Pointer line, int n);
+//
+//    /**
+//     * Original signature :
+//     * <code>void l_setDataFourBytes(void*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:150</i>
+//     */
+//    void l_setDataFourBytes(Pointer line, int n, int val);
+//
+//    /**
+//     * Original signature :
+//     * <code>char* barcodeDispatchDecoder(char*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:152</i>
+//     */
+//    Pointer barcodeDispatchDecoder(ByteBuffer barstr, int format, int debugflag);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 barcodeFormatIsSupported(l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:154</i>
+//     */
+//    int barcodeFormatIsSupported(int format);
 
     /**
      * Original signature :
@@ -1173,212 +1173,212 @@ public interface Leptonica extends Library, ILeptonica {
      */
     int boxChangeRefcount(Box box, int delta);
 
-    /**
-     * Original signature : <code>l_int32 boxIsValid(BOX*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:328</i>
-     */
-    int boxIsValid(Box box, IntBuffer pvalid);
-
-    /**
-     * Original signature : <code>BOXA* boxaCreate(l_int32)</code><br>
-     * <i>native declaration : allheaders.h:330</i>
-     */
-    Boxa boxaCreate(int n);
-
-    /**
-     * Original signature : <code>BOXA* boxaCopy(BOXA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:332</i>
-     */
-    Boxa boxaCopy(Boxa boxa, int copyflag);
-
-    /**
-     * Original signature : <code>void boxaDestroy(BOXA**)</code><br>
-     * <i>native declaration : allheaders.h:334</i>
-     */
-    void boxaDestroy(PointerByReference pboxa);
-
-    /**
-     * Original signature :
-     * <code>l_int32 boxaAddBox(BOXA*, BOX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:336</i>
-     */
-    int boxaAddBox(Boxa boxa, Box box, int copyflag);
-
-    /**
-     * Original signature : <code>l_int32 boxaExtendArray(BOXA*)</code><br>
-     * <i>native declaration : allheaders.h:338</i>
-     */
-    int boxaExtendArray(Boxa boxa);
-
-    /**
-     * Original signature :
-     * <code>l_int32 boxaExtendArrayToSize(BOXA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:340</i>
-     */
-    int boxaExtendArrayToSize(Boxa boxa, int size);
-
-    /**
-     * Original signature : <code>l_int32 boxaGetCount(BOXA*)</code><br>
-     * <i>native declaration : allheaders.h:342</i>
-     */
-    int boxaGetCount(Boxa boxa);
-
-    /**
-     * Original signature : <code>l_int32 boxaGetValidCount(BOXA*)</code><br>
-     * <i>native declaration : allheaders.h:344</i>
-     */
-    int boxaGetValidCount(Boxa boxa);
-
-    /**
-     * Original signature :
-     * <code>BOX* boxaGetBox(BOXA*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:346</i>
-     */
-    Box boxaGetBox(Boxa boxa, int index, int accessflag);
-
-    /**
-     * Original signature :
-     * <code>BOX* boxaGetValidBox(BOXA*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:348</i>
-     */
-    Box boxaGetValidBox(Boxa boxa, int index, int accessflag);
-
-    /**
-     * Original signature :
-     * <code>l_int32 boxaGetBoxGeometry(BOXA*, l_int32, l_int32*, l_int32*, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:350</i>
-     */
-    int boxaGetBoxGeometry(Boxa boxa, int index, IntBuffer px, IntBuffer py, IntBuffer pw, IntBuffer ph);
-
-    /**
-     * Original signature : <code>l_int32 boxaIsFull(BOXA*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:352</i>
-     */
-    int boxaIsFull(Boxa boxa, IntBuffer pfull);
-
-    /**
-     * Original signature :
-     * <code>l_int32 boxaReplaceBox(BOXA*, l_int32, BOX*)</code><br>
-     * <i>native declaration : allheaders.h:354</i>
-     */
-    int boxaReplaceBox(Boxa boxa, int index, Box box);
-
-    /**
-     * Original signature :
-     * <code>l_int32 boxaInsertBox(BOXA*, l_int32, BOX*)</code><br>
-     * <i>native declaration : allheaders.h:356</i>
-     */
-    int boxaInsertBox(Boxa boxa, int index, Box box);
-
-    /**
-     * Original signature :
-     * <code>l_int32 boxaRemoveBox(BOXA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:358</i>
-     */
-    int boxaRemoveBox(Boxa boxa, int index);
-
-    /**
-     * Original signature :
-     * <code>l_int32 boxaRemoveBoxAndSave(BOXA*, l_int32, BOX**)</code><br>
-     * <i>native declaration : allheaders.h:360</i>
-     */
-    int boxaRemoveBoxAndSave(Boxa boxa, int index, PointerByReference pbox);
-
-    /**
-     * Original signature : <code>BOXA* boxaSaveValid(BOXA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:362</i>
-     */
-    Boxa boxaSaveValid(Boxa boxas, int copyflag);
-
-    /**
-     * Original signature : <code>l_int32 boxaInitFull(BOXA*, BOX*)</code><br>
-     * <i>native declaration : allheaders.h:364</i>
-     */
-    int boxaInitFull(Boxa boxa, Box box);
-
-    /**
-     * Original signature : <code>l_int32 boxaClear(BOXA*)</code><br>
-     * <i>native declaration : allheaders.h:366</i>
-     */
-    int boxaClear(Boxa boxa);
-
-    /**
-     * Original signature : <code>BOXAA* boxaaCreate(l_int32)</code><br>
-     * <i>native declaration : allheaders.h:368</i>
-     */
-    Boxaa boxaaCreate(int n);
-
-    /**
-     * Original signature : <code>BOXAA* boxaaCopy(BOXAA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:370</i>
-     */
-    Boxaa boxaaCopy(Boxaa baas, int copyflag);
-
-    /**
-     * Original signature : <code>void boxaaDestroy(BOXAA**)</code><br>
-     * <i>native declaration : allheaders.h:372</i>
-     */
-    void boxaaDestroy(PointerByReference pbaa);
-
-    /**
-     * Original signature :
-     * <code>l_int32 boxaaAddBoxa(BOXAA*, BOXA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:374</i>
-     */
-    int boxaaAddBoxa(Boxaa baa, Boxa ba, int copyflag);
-
-    /**
-     * Original signature : <code>l_int32 boxaaExtendArray(BOXAA*)</code><br>
-     * <i>native declaration : allheaders.h:376</i>
-     */
-    int boxaaExtendArray(Boxaa baa);
-
-    /**
-     * Original signature :
-     * <code>l_int32 boxaaExtendArrayToSize(BOXAA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:378</i>
-     */
-    int boxaaExtendArrayToSize(Boxaa baa, int size);
-
-    /**
-     * Original signature : <code>l_int32 boxaaGetCount(BOXAA*)</code><br>
-     * <i>native declaration : allheaders.h:380</i>
-     */
-    int boxaaGetCount(Boxaa baa);
-
-    /**
-     * Original signature : <code>l_int32 boxaaGetBoxCount(BOXAA*)</code><br>
-     * <i>native declaration : allheaders.h:382</i>
-     */
-    int boxaaGetBoxCount(Boxaa baa);
-
-    /**
-     * Original signature :
-     * <code>BOXA* boxaaGetBoxa(BOXAA*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:384</i>
-     */
-    Boxa boxaaGetBoxa(Boxaa baa, int index, int accessflag);
-
-    /**
-     * Original signature :
-     * <code>BOX* boxaaGetBox(BOXAA*, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:386</i>
-     */
-    Box boxaaGetBox(Boxaa baa, int iboxa, int ibox, int accessflag);
-
-    /**
-     * Original signature :
-     * <code>l_int32 boxaaInitFull(BOXAA*, BOXA*)</code><br>
-     * <i>native declaration : allheaders.h:388</i>
-     */
-    int boxaaInitFull(Boxaa baa, Boxa boxa);
-
-    /**
-     * Original signature :
-     * <code>l_int32 boxaaExtendWithInit(BOXAA*, l_int32, BOXA*)</code><br>
-     * <i>native declaration : allheaders.h:390</i>
-     */
-    int boxaaExtendWithInit(Boxaa baa, int maxindex, Boxa boxa);
+//    /**
+//     * Original signature : <code>l_int32 boxIsValid(BOX*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:328</i>
+//     */
+//    int boxIsValid(Box box, IntBuffer pvalid);
+//
+//    /**
+//     * Original signature : <code>BOXA* boxaCreate(l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:330</i>
+//     */
+//    Boxa boxaCreate(int n);
+//
+//    /**
+//     * Original signature : <code>BOXA* boxaCopy(BOXA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:332</i>
+//     */
+//    Boxa boxaCopy(Boxa boxa, int copyflag);
+//
+//    /**
+//     * Original signature : <code>void boxaDestroy(BOXA**)</code><br>
+//     * <i>native declaration : allheaders.h:334</i>
+//     */
+//    void boxaDestroy(PointerByReference pboxa);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 boxaAddBox(BOXA*, BOX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:336</i>
+//     */
+//    int boxaAddBox(Boxa boxa, Box box, int copyflag);
+//
+//    /**
+//     * Original signature : <code>l_int32 boxaExtendArray(BOXA*)</code><br>
+//     * <i>native declaration : allheaders.h:338</i>
+//     */
+//    int boxaExtendArray(Boxa boxa);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 boxaExtendArrayToSize(BOXA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:340</i>
+//     */
+//    int boxaExtendArrayToSize(Boxa boxa, int size);
+//
+//    /**
+//     * Original signature : <code>l_int32 boxaGetCount(BOXA*)</code><br>
+//     * <i>native declaration : allheaders.h:342</i>
+//     */
+//    int boxaGetCount(Boxa boxa);
+//
+//    /**
+//     * Original signature : <code>l_int32 boxaGetValidCount(BOXA*)</code><br>
+//     * <i>native declaration : allheaders.h:344</i>
+//     */
+//    int boxaGetValidCount(Boxa boxa);
+//
+//    /**
+//     * Original signature :
+//     * <code>BOX* boxaGetBox(BOXA*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:346</i>
+//     */
+//    Box boxaGetBox(Boxa boxa, int index, int accessflag);
+//
+//    /**
+//     * Original signature :
+//     * <code>BOX* boxaGetValidBox(BOXA*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:348</i>
+//     */
+//    Box boxaGetValidBox(Boxa boxa, int index, int accessflag);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 boxaGetBoxGeometry(BOXA*, l_int32, l_int32*, l_int32*, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:350</i>
+//     */
+//    int boxaGetBoxGeometry(Boxa boxa, int index, IntBuffer px, IntBuffer py, IntBuffer pw, IntBuffer ph);
+//
+//    /**
+//     * Original signature : <code>l_int32 boxaIsFull(BOXA*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:352</i>
+//     */
+//    int boxaIsFull(Boxa boxa, IntBuffer pfull);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 boxaReplaceBox(BOXA*, l_int32, BOX*)</code><br>
+//     * <i>native declaration : allheaders.h:354</i>
+//     */
+//    int boxaReplaceBox(Boxa boxa, int index, Box box);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 boxaInsertBox(BOXA*, l_int32, BOX*)</code><br>
+//     * <i>native declaration : allheaders.h:356</i>
+//     */
+//    int boxaInsertBox(Boxa boxa, int index, Box box);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 boxaRemoveBox(BOXA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:358</i>
+//     */
+//    int boxaRemoveBox(Boxa boxa, int index);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 boxaRemoveBoxAndSave(BOXA*, l_int32, BOX**)</code><br>
+//     * <i>native declaration : allheaders.h:360</i>
+//     */
+//    int boxaRemoveBoxAndSave(Boxa boxa, int index, PointerByReference pbox);
+//
+//    /**
+//     * Original signature : <code>BOXA* boxaSaveValid(BOXA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:362</i>
+//     */
+//    Boxa boxaSaveValid(Boxa boxas, int copyflag);
+//
+//    /**
+//     * Original signature : <code>l_int32 boxaInitFull(BOXA*, BOX*)</code><br>
+//     * <i>native declaration : allheaders.h:364</i>
+//     */
+//    int boxaInitFull(Boxa boxa, Box box);
+//
+//    /**
+//     * Original signature : <code>l_int32 boxaClear(BOXA*)</code><br>
+//     * <i>native declaration : allheaders.h:366</i>
+//     */
+//    int boxaClear(Boxa boxa);
+//
+//    /**
+//     * Original signature : <code>BOXAA* boxaaCreate(l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:368</i>
+//     */
+//    Boxaa boxaaCreate(int n);
+//
+//    /**
+//     * Original signature : <code>BOXAA* boxaaCopy(BOXAA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:370</i>
+//     */
+//    Boxaa boxaaCopy(Boxaa baas, int copyflag);
+//
+//    /**
+//     * Original signature : <code>void boxaaDestroy(BOXAA**)</code><br>
+//     * <i>native declaration : allheaders.h:372</i>
+//     */
+//    void boxaaDestroy(PointerByReference pbaa);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 boxaaAddBoxa(BOXAA*, BOXA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:374</i>
+//     */
+//    int boxaaAddBoxa(Boxaa baa, Boxa ba, int copyflag);
+//
+//    /**
+//     * Original signature : <code>l_int32 boxaaExtendArray(BOXAA*)</code><br>
+//     * <i>native declaration : allheaders.h:376</i>
+//     */
+//    int boxaaExtendArray(Boxaa baa);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 boxaaExtendArrayToSize(BOXAA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:378</i>
+//     */
+//    int boxaaExtendArrayToSize(Boxaa baa, int size);
+//
+//    /**
+//     * Original signature : <code>l_int32 boxaaGetCount(BOXAA*)</code><br>
+//     * <i>native declaration : allheaders.h:380</i>
+//     */
+//    int boxaaGetCount(Boxaa baa);
+//
+//    /**
+//     * Original signature : <code>l_int32 boxaaGetBoxCount(BOXAA*)</code><br>
+//     * <i>native declaration : allheaders.h:382</i>
+//     */
+//    int boxaaGetBoxCount(Boxaa baa);
+//
+//    /**
+//     * Original signature :
+//     * <code>BOXA* boxaaGetBoxa(BOXAA*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:384</i>
+//     */
+//    Boxa boxaaGetBoxa(Boxaa baa, int index, int accessflag);
+//
+//    /**
+//     * Original signature :
+//     * <code>BOX* boxaaGetBox(BOXAA*, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:386</i>
+//     */
+//    Box boxaaGetBox(Boxaa baa, int iboxa, int ibox, int accessflag);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 boxaaInitFull(BOXAA*, BOXA*)</code><br>
+//     * <i>native declaration : allheaders.h:388</i>
+//     */
+//    int boxaaInitFull(Boxaa baa, Boxa boxa);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 boxaaExtendWithInit(BOXAA*, l_int32, BOXA*)</code><br>
+//     * <i>native declaration : allheaders.h:390</i>
+//     */
+//    int boxaaExtendWithInit(Boxaa baa, int maxindex, Boxa boxa);
 
     /**
      * Original signature :
@@ -2765,264 +2765,264 @@ public interface Leptonica extends Library, ILeptonica {
      */
     Pix pixShiftByComponent(Pix pixd, Pix pixs, int srcval, int dstval);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixelShiftByComponent(l_int32, l_int32, l_int32, l_uint32, l_uint32, l_uint32*)</code><br>
-     * <i>native declaration : allheaders.h:778</i>
-     */
-    int pixelShiftByComponent(int rval, int gval, int bval, int srcval, int dstval, IntBuffer ppixel);
-
-    /**
-     * Original signature :
-     * <code>l_int32 pixelFractionalShift(l_int32, l_int32, l_int32, l_float32, l_uint32*)</code><br>
-     * <i>native declaration : allheaders.h:780</i>
-     */
-    int pixelFractionalShift(int rval, int gval, int bval, float fraction, IntBuffer ppixel);
-
-    /**
-     * Original signature : <code>PIXCMAP* pixcmapCreate(l_int32)</code><br>
-     * <i>native declaration : allheaders.h:782</i>
-     */
-    PixColormap pixcmapCreate(int depth);
-
-    /**
-     * Original signature :
-     * <code>PIXCMAP* pixcmapCreateRandom(l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:784</i>
-     */
-    PixColormap pixcmapCreateRandom(int depth, int hasblack, int haswhite);
-
-    /**
-     * Original signature :
-     * <code>PIXCMAP* pixcmapCreateLinear(l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:786</i>
-     */
-    PixColormap pixcmapCreateLinear(int d, int nlevels);
-
-    /**
-     * Original signature : <code>PIXCMAP* pixcmapCopy(PIXCMAP*)</code><br>
-     * <i>native declaration : allheaders.h:788</i>
-     */
-    PixColormap pixcmapCopy(PixColormap cmaps);
-
-    /**
-     * Original signature : <code>void pixcmapDestroy(PIXCMAP**)</code><br>
-     * <i>native declaration : allheaders.h:790</i>
-     */
-    void pixcmapDestroy(PointerByReference pcmap);
-
-    /**
-     * Original signature :
-     * <code>l_int32 pixcmapAddColor(PIXCMAP*, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:792</i>
-     */
-    int pixcmapAddColor(PixColormap cmap, int rval, int gval, int bval);
-
-    /**
-     * Original signature :
-     * <code>l_int32 pixcmapAddRGBA(PIXCMAP*, l_int32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:794</i>
-     */
-    int pixcmapAddRGBA(PixColormap cmap, int rval, int gval, int bval, int aval);
-
-    /**
-     * Original signature :
-     * <code>l_int32 pixcmapAddNewColor(PIXCMAP*, l_int32, l_int32, l_int32, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:796</i>
-     */
-    int pixcmapAddNewColor(PixColormap cmap, int rval, int gval, int bval, IntBuffer pindex);
-
-    /**
-     * Original signature :
-     * <code>l_int32 pixcmapAddNearestColor(PIXCMAP*, l_int32, l_int32, l_int32, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:798</i>
-     */
-    int pixcmapAddNearestColor(PixColormap cmap, int rval, int gval, int bval, IntBuffer pindex);
-
-    /**
-     * Original signature :
-     * <code>l_int32 pixcmapUsableColor(PIXCMAP*, l_int32, l_int32, l_int32, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:800</i>
-     */
-    int pixcmapUsableColor(PixColormap cmap, int rval, int gval, int bval, IntBuffer pusable);
-
-    /**
-     * Original signature :
-     * <code>l_int32 pixcmapAddBlackOrWhite(PIXCMAP*, l_int32, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:802</i>
-     */
-    int pixcmapAddBlackOrWhite(PixColormap cmap, int color, IntBuffer pindex);
-
-    /**
-     * Original signature :
-     * <code>l_int32 pixcmapSetBlackAndWhite(PIXCMAP*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:804</i>
-     */
-    int pixcmapSetBlackAndWhite(PixColormap cmap, int setblack, int setwhite);
-
-    /**
-     * Original signature : <code>l_int32 pixcmapGetCount(PIXCMAP*)</code><br>
-     * <i>native declaration : allheaders.h:806</i>
-     */
-    int pixcmapGetCount(PixColormap cmap);
-
-    /**
-     * Original signature :
-     * <code>l_int32 pixcmapGetFreeCount(PIXCMAP*)</code><br>
-     * <i>native declaration : allheaders.h:808</i>
-     */
-    int pixcmapGetFreeCount(PixColormap cmap);
-
-    /**
-     * Original signature : <code>l_int32 pixcmapGetDepth(PIXCMAP*)</code><br>
-     * <i>native declaration : allheaders.h:810</i>
-     */
-    int pixcmapGetDepth(PixColormap cmap);
-
-    /**
-     * Original signature :
-     * <code>l_int32 pixcmapGetMinDepth(PIXCMAP*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:812</i>
-     */
-    int pixcmapGetMinDepth(PixColormap cmap, IntBuffer pmindepth);
-
-    /**
-     * Original signature : <code>l_int32 pixcmapClear(PIXCMAP*)</code><br>
-     * <i>native declaration : allheaders.h:814</i>
-     */
-    int pixcmapClear(PixColormap cmap);
-
-    /**
-     * Original signature :
-     * <code>l_int32 pixcmapGetColor(PIXCMAP*, l_int32, l_int32*, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:816</i>
-     */
-    int pixcmapGetColor(PixColormap cmap, int index, IntBuffer prval, IntBuffer pgval, IntBuffer pbval);
-
-    /**
-     * Original signature :
-     * <code>l_int32 pixcmapGetColor32(PIXCMAP*, l_int32, l_uint32*)</code><br>
-     * <i>native declaration : allheaders.h:818</i>
-     */
-    int pixcmapGetColor32(PixColormap cmap, int index, IntBuffer pval32);
-
-    /**
-     * Original signature :
-     * <code>l_int32 pixcmapGetRGBA(PIXCMAP*, l_int32, l_int32*, l_int32*, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:820</i>
-     */
-    int pixcmapGetRGBA(PixColormap cmap, int index, IntBuffer prval, IntBuffer pgval, IntBuffer pbval, IntBuffer paval);
-
-    /**
-     * Original signature :
-     * <code>l_int32 pixcmapGetRGBA32(PIXCMAP*, l_int32, l_uint32*)</code><br>
-     * <i>native declaration : allheaders.h:822</i>
-     */
-    int pixcmapGetRGBA32(PixColormap cmap, int index, IntBuffer pval32);
-
-    /**
-     * Original signature :
-     * <code>l_int32 pixcmapResetColor(PIXCMAP*, l_int32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:824</i>
-     */
-    int pixcmapResetColor(PixColormap cmap, int index, int rval, int gval, int bval);
-
-    /**
-     * Original signature :
-     * <code>l_int32 pixcmapSetAlpha(PIXCMAP*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:826</i>
-     */
-    int pixcmapSetAlpha(PixColormap cmap, int index, int aval);
-
-    /**
-     * Original signature :
-     * <code>l_int32 pixcmapGetIndex(PIXCMAP*, l_int32, l_int32, l_int32, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:828</i>
-     */
-    int pixcmapGetIndex(PixColormap cmap, int rval, int gval, int bval, IntBuffer pindex);
-
-    /**
-     * Original signature :
-     * <code>l_int32 pixcmapHasColor(PIXCMAP*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:830</i>
-     */
-    int pixcmapHasColor(PixColormap cmap, IntBuffer pcolor);
-
-    /**
-     * Original signature :
-     * <code>l_int32 pixcmapIsOpaque(PIXCMAP*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:832</i>
-     */
-    int pixcmapIsOpaque(PixColormap cmap, IntBuffer popaque);
-
-    /**
-     * Original signature :
-     * <code>l_int32 pixcmapIsBlackAndWhite(PIXCMAP*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:834</i>
-     */
-    int pixcmapIsBlackAndWhite(PixColormap cmap, IntBuffer pblackwhite);
-
-    /**
-     * Original signature :
-     * <code>l_int32 pixcmapCountGrayColors(PIXCMAP*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:836</i>
-     */
-    int pixcmapCountGrayColors(PixColormap cmap, IntBuffer pngray);
-
-    /**
-     * Original signature :
-     * <code>l_int32 pixcmapGetRankIntensity(PIXCMAP*, l_float32, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:838</i>
-     */
-    int pixcmapGetRankIntensity(PixColormap cmap, float rankval, IntBuffer pindex);
-
-    /**
-     * Original signature :
-     * <code>l_int32 pixcmapGetNearestIndex(PIXCMAP*, l_int32, l_int32, l_int32, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:840</i>
-     */
-    int pixcmapGetNearestIndex(PixColormap cmap, int rval, int gval, int bval, IntBuffer pindex);
-
-    /**
-     * Original signature :
-     * <code>l_int32 pixcmapGetNearestGrayIndex(PIXCMAP*, l_int32, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:842</i>
-     */
-    int pixcmapGetNearestGrayIndex(PixColormap cmap, int val, IntBuffer pindex);
-
-    /**
-     * Original signature :
-     * <code>l_int32 pixcmapGetComponentRange(PIXCMAP*, l_int32, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:844</i>
-     */
-    int pixcmapGetComponentRange(PixColormap cmap, int color, IntBuffer pminval, IntBuffer pmaxval);
-
-    /**
-     * Original signature :
-     * <code>l_int32 pixcmapGetExtremeValue(PIXCMAP*, l_int32, l_int32*, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:846</i>
-     */
-    int pixcmapGetExtremeValue(PixColormap cmap, int type, IntBuffer prval, IntBuffer pgval, IntBuffer pbval);
-
-    /**
-     * Original signature :
-     * <code>PIXCMAP* pixcmapGrayToColor(l_uint32)</code><br>
-     * <i>native declaration : allheaders.h:848</i>
-     */
-    PixColormap pixcmapGrayToColor(int color);
-
-    /**
-     * Original signature :
-     * <code>PIXCMAP* pixcmapColorToGray(PIXCMAP*, l_float32, l_float32, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:850</i>
-     */
-    PixColormap pixcmapColorToGray(PixColormap cmaps, float rwt, float gwt, float bwt);
-
-    /**
-     * Original signature : <code>PIXCMAP* pixcmapRead(const char*)</code><br>
-     * <i>native declaration : allheaders.h:852</i>
-     */
-    PixColormap pixcmapRead(String filename);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixelShiftByComponent(l_int32, l_int32, l_int32, l_uint32, l_uint32, l_uint32*)</code><br>
+//     * <i>native declaration : allheaders.h:778</i>
+//     */
+//    int pixelShiftByComponent(int rval, int gval, int bval, int srcval, int dstval, IntBuffer ppixel);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixelFractionalShift(l_int32, l_int32, l_int32, l_float32, l_uint32*)</code><br>
+//     * <i>native declaration : allheaders.h:780</i>
+//     */
+//    int pixelFractionalShift(int rval, int gval, int bval, float fraction, IntBuffer ppixel);
+//
+//    /**
+//     * Original signature : <code>PIXCMAP* pixcmapCreate(l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:782</i>
+//     */
+//    PixColormap pixcmapCreate(int depth);
+//
+//    /**
+//     * Original signature :
+//     * <code>PIXCMAP* pixcmapCreateRandom(l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:784</i>
+//     */
+//    PixColormap pixcmapCreateRandom(int depth, int hasblack, int haswhite);
+//
+//    /**
+//     * Original signature :
+//     * <code>PIXCMAP* pixcmapCreateLinear(l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:786</i>
+//     */
+//    PixColormap pixcmapCreateLinear(int d, int nlevels);
+//
+//    /**
+//     * Original signature : <code>PIXCMAP* pixcmapCopy(PIXCMAP*)</code><br>
+//     * <i>native declaration : allheaders.h:788</i>
+//     */
+//    PixColormap pixcmapCopy(PixColormap cmaps);
+//
+//    /**
+//     * Original signature : <code>void pixcmapDestroy(PIXCMAP**)</code><br>
+//     * <i>native declaration : allheaders.h:790</i>
+//     */
+//    void pixcmapDestroy(PointerByReference pcmap);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixcmapAddColor(PIXCMAP*, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:792</i>
+//     */
+//    int pixcmapAddColor(PixColormap cmap, int rval, int gval, int bval);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixcmapAddRGBA(PIXCMAP*, l_int32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:794</i>
+//     */
+//    int pixcmapAddRGBA(PixColormap cmap, int rval, int gval, int bval, int aval);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixcmapAddNewColor(PIXCMAP*, l_int32, l_int32, l_int32, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:796</i>
+//     */
+//    int pixcmapAddNewColor(PixColormap cmap, int rval, int gval, int bval, IntBuffer pindex);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixcmapAddNearestColor(PIXCMAP*, l_int32, l_int32, l_int32, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:798</i>
+//     */
+//    int pixcmapAddNearestColor(PixColormap cmap, int rval, int gval, int bval, IntBuffer pindex);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixcmapUsableColor(PIXCMAP*, l_int32, l_int32, l_int32, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:800</i>
+//     */
+//    int pixcmapUsableColor(PixColormap cmap, int rval, int gval, int bval, IntBuffer pusable);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixcmapAddBlackOrWhite(PIXCMAP*, l_int32, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:802</i>
+//     */
+//    int pixcmapAddBlackOrWhite(PixColormap cmap, int color, IntBuffer pindex);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixcmapSetBlackAndWhite(PIXCMAP*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:804</i>
+//     */
+//    int pixcmapSetBlackAndWhite(PixColormap cmap, int setblack, int setwhite);
+//
+//    /**
+//     * Original signature : <code>l_int32 pixcmapGetCount(PIXCMAP*)</code><br>
+//     * <i>native declaration : allheaders.h:806</i>
+//     */
+//    int pixcmapGetCount(PixColormap cmap);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixcmapGetFreeCount(PIXCMAP*)</code><br>
+//     * <i>native declaration : allheaders.h:808</i>
+//     */
+//    int pixcmapGetFreeCount(PixColormap cmap);
+//
+//    /**
+//     * Original signature : <code>l_int32 pixcmapGetDepth(PIXCMAP*)</code><br>
+//     * <i>native declaration : allheaders.h:810</i>
+//     */
+//    int pixcmapGetDepth(PixColormap cmap);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixcmapGetMinDepth(PIXCMAP*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:812</i>
+//     */
+//    int pixcmapGetMinDepth(PixColormap cmap, IntBuffer pmindepth);
+//
+//    /**
+//     * Original signature : <code>l_int32 pixcmapClear(PIXCMAP*)</code><br>
+//     * <i>native declaration : allheaders.h:814</i>
+//     */
+//    int pixcmapClear(PixColormap cmap);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixcmapGetColor(PIXCMAP*, l_int32, l_int32*, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:816</i>
+//     */
+//    int pixcmapGetColor(PixColormap cmap, int index, IntBuffer prval, IntBuffer pgval, IntBuffer pbval);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixcmapGetColor32(PIXCMAP*, l_int32, l_uint32*)</code><br>
+//     * <i>native declaration : allheaders.h:818</i>
+//     */
+//    int pixcmapGetColor32(PixColormap cmap, int index, IntBuffer pval32);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixcmapGetRGBA(PIXCMAP*, l_int32, l_int32*, l_int32*, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:820</i>
+//     */
+//    int pixcmapGetRGBA(PixColormap cmap, int index, IntBuffer prval, IntBuffer pgval, IntBuffer pbval, IntBuffer paval);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixcmapGetRGBA32(PIXCMAP*, l_int32, l_uint32*)</code><br>
+//     * <i>native declaration : allheaders.h:822</i>
+//     */
+//    int pixcmapGetRGBA32(PixColormap cmap, int index, IntBuffer pval32);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixcmapResetColor(PIXCMAP*, l_int32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:824</i>
+//     */
+//    int pixcmapResetColor(PixColormap cmap, int index, int rval, int gval, int bval);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixcmapSetAlpha(PIXCMAP*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:826</i>
+//     */
+//    int pixcmapSetAlpha(PixColormap cmap, int index, int aval);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixcmapGetIndex(PIXCMAP*, l_int32, l_int32, l_int32, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:828</i>
+//     */
+//    int pixcmapGetIndex(PixColormap cmap, int rval, int gval, int bval, IntBuffer pindex);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixcmapHasColor(PIXCMAP*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:830</i>
+//     */
+//    int pixcmapHasColor(PixColormap cmap, IntBuffer pcolor);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixcmapIsOpaque(PIXCMAP*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:832</i>
+//     */
+//    int pixcmapIsOpaque(PixColormap cmap, IntBuffer popaque);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixcmapIsBlackAndWhite(PIXCMAP*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:834</i>
+//     */
+//    int pixcmapIsBlackAndWhite(PixColormap cmap, IntBuffer pblackwhite);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixcmapCountGrayColors(PIXCMAP*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:836</i>
+//     */
+//    int pixcmapCountGrayColors(PixColormap cmap, IntBuffer pngray);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixcmapGetRankIntensity(PIXCMAP*, l_float32, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:838</i>
+//     */
+//    int pixcmapGetRankIntensity(PixColormap cmap, float rankval, IntBuffer pindex);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixcmapGetNearestIndex(PIXCMAP*, l_int32, l_int32, l_int32, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:840</i>
+//     */
+//    int pixcmapGetNearestIndex(PixColormap cmap, int rval, int gval, int bval, IntBuffer pindex);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixcmapGetNearestGrayIndex(PIXCMAP*, l_int32, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:842</i>
+//     */
+//    int pixcmapGetNearestGrayIndex(PixColormap cmap, int val, IntBuffer pindex);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixcmapGetComponentRange(PIXCMAP*, l_int32, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:844</i>
+//     */
+//    int pixcmapGetComponentRange(PixColormap cmap, int color, IntBuffer pminval, IntBuffer pmaxval);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixcmapGetExtremeValue(PIXCMAP*, l_int32, l_int32*, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:846</i>
+//     */
+//    int pixcmapGetExtremeValue(PixColormap cmap, int type, IntBuffer prval, IntBuffer pgval, IntBuffer pbval);
+//
+//    /**
+//     * Original signature :
+//     * <code>PIXCMAP* pixcmapGrayToColor(l_uint32)</code><br>
+//     * <i>native declaration : allheaders.h:848</i>
+//     */
+//    PixColormap pixcmapGrayToColor(int color);
+//
+//    /**
+//     * Original signature :
+//     * <code>PIXCMAP* pixcmapColorToGray(PIXCMAP*, l_float32, l_float32, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:850</i>
+//     */
+//    PixColormap pixcmapColorToGray(PixColormap cmaps, float rwt, float gwt, float bwt);
+//
+//    /**
+//     * Original signature : <code>PIXCMAP* pixcmapRead(const char*)</code><br>
+//     * <i>native declaration : allheaders.h:852</i>
+//     */
+//    PixColormap pixcmapRead(String filename);
 
 //    /**
 //     * Original signature : <code>PIXCMAP* pixcmapReadStream(FILE*)</code><br>
@@ -3044,68 +3044,68 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int pixcmapWriteStream(FILE fp, PixColormap cmap);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixcmapToArrays(PIXCMAP*, l_int32**, l_int32**, l_int32**, l_int32**)</code><br>
-     * <i>native declaration : allheaders.h:860</i>
-     */
-    int pixcmapToArrays(PixColormap cmap, PointerByReference prmap, PointerByReference pgmap, PointerByReference pbmap, PointerByReference pamap);
-
-    /**
-     * Original signature :
-     * <code>l_int32 pixcmapToRGBTable(PIXCMAP*, l_uint32**, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:862</i>
-     */
-    int pixcmapToRGBTable(PixColormap cmap, PointerByReference ptab, IntBuffer pncolors);
-
-    /**
-     * Original signature :
-     * <code>l_int32 pixcmapSerializeToMemory(PIXCMAP*, l_int32, l_int32*, l_uint8**)</code><br>
-     * <i>native declaration : allheaders.h:864</i>
-     */
-    int pixcmapSerializeToMemory(PixColormap cmap, int cpc, IntBuffer pncolors, PointerByReference pdata);
-
-    /**
-     * Original signature :
-     * <code>PIXCMAP* pixcmapDeserializeFromMemory(l_uint8*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:866</i>
-     */
-    PixColormap pixcmapDeserializeFromMemory(ByteBuffer data, int cpc, int ncolors);
-
-    /**
-     * Original signature :
-     * <code>char* pixcmapConvertToHex(l_uint8*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:868</i>
-     */
-    Pointer pixcmapConvertToHex(ByteBuffer data, int ncolors);
-
-    /**
-     * Original signature :
-     * <code>l_int32 pixcmapGammaTRC(PIXCMAP*, l_float32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:870</i>
-     */
-    int pixcmapGammaTRC(PixColormap cmap, float gamma, int minval, int maxval);
-
-    /**
-     * Original signature :
-     * <code>l_int32 pixcmapContrastTRC(PIXCMAP*, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:872</i>
-     */
-    int pixcmapContrastTRC(PixColormap cmap, float factor);
-
-    /**
-     * Original signature :
-     * <code>l_int32 pixcmapShiftIntensity(PIXCMAP*, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:874</i>
-     */
-    int pixcmapShiftIntensity(PixColormap cmap, float fraction);
-
-    /**
-     * Original signature :
-     * <code>l_int32 pixcmapShiftByComponent(PIXCMAP*, l_uint32, l_uint32)</code><br>
-     * <i>native declaration : allheaders.h:876</i>
-     */
-    int pixcmapShiftByComponent(PixColormap cmap, int srcval, int dstval);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixcmapToArrays(PIXCMAP*, l_int32**, l_int32**, l_int32**, l_int32**)</code><br>
+//     * <i>native declaration : allheaders.h:860</i>
+//     */
+//    int pixcmapToArrays(PixColormap cmap, PointerByReference prmap, PointerByReference pgmap, PointerByReference pbmap, PointerByReference pamap);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixcmapToRGBTable(PIXCMAP*, l_uint32**, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:862</i>
+//     */
+//    int pixcmapToRGBTable(PixColormap cmap, PointerByReference ptab, IntBuffer pncolors);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixcmapSerializeToMemory(PIXCMAP*, l_int32, l_int32*, l_uint8**)</code><br>
+//     * <i>native declaration : allheaders.h:864</i>
+//     */
+//    int pixcmapSerializeToMemory(PixColormap cmap, int cpc, IntBuffer pncolors, PointerByReference pdata);
+//
+//    /**
+//     * Original signature :
+//     * <code>PIXCMAP* pixcmapDeserializeFromMemory(l_uint8*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:866</i>
+//     */
+//    PixColormap pixcmapDeserializeFromMemory(ByteBuffer data, int cpc, int ncolors);
+//
+//    /**
+//     * Original signature :
+//     * <code>char* pixcmapConvertToHex(l_uint8*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:868</i>
+//     */
+//    Pointer pixcmapConvertToHex(ByteBuffer data, int ncolors);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixcmapGammaTRC(PIXCMAP*, l_float32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:870</i>
+//     */
+//    int pixcmapGammaTRC(PixColormap cmap, float gamma, int minval, int maxval);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixcmapContrastTRC(PIXCMAP*, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:872</i>
+//     */
+//    int pixcmapContrastTRC(PixColormap cmap, float factor);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixcmapShiftIntensity(PIXCMAP*, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:874</i>
+//     */
+//    int pixcmapShiftIntensity(PixColormap cmap, float fraction);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixcmapShiftByComponent(PIXCMAP*, l_uint32, l_uint32)</code><br>
+//     * <i>native declaration : allheaders.h:876</i>
+//     */
+//    int pixcmapShiftByComponent(PixColormap cmap, int srcval, int dstval);
 
     /**
      * Original signature :
@@ -4049,33 +4049,33 @@ public interface Leptonica extends Library, ILeptonica {
      */
     float gaussDistribSampling();
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixCorrelationScore(PIX*, PIX*, l_int32, l_int32, l_float32, l_float32, l_int32, l_int32, l_int32*, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:1140</i>
-     */
-    int pixCorrelationScore(Pix pix1, Pix pix2, int area1, int area2, float delx, float dely, int maxdiffw, int maxdiffh, IntBuffer tab, FloatBuffer pscore);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixCorrelationScore(PIX*, PIX*, l_int32, l_int32, l_float32, l_float32, l_int32, l_int32, l_int32*, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:1140</i>
+//     */
+//    int pixCorrelationScore(Pix pix1, Pix pix2, int area1, int area2, float delx, float dely, int maxdiffw, int maxdiffh, IntBuffer tab, FloatBuffer pscore);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixCorrelationScoreThresholded(PIX*, PIX*, l_int32, l_int32, l_float32, l_float32, l_int32, l_int32, l_int32*, l_int32*, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:1142</i>
-     */
-    int pixCorrelationScoreThresholded(Pix pix1, Pix pix2, int area1, int area2, float delx, float dely, int maxdiffw, int maxdiffh, IntBuffer tab, IntBuffer downcount, float score_threshold);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixCorrelationScoreThresholded(PIX*, PIX*, l_int32, l_int32, l_float32, l_float32, l_int32, l_int32, l_int32*, l_int32*, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:1142</i>
+//     */
+//    int pixCorrelationScoreThresholded(Pix pix1, Pix pix2, int area1, int area2, float delx, float dely, int maxdiffw, int maxdiffh, IntBuffer tab, IntBuffer downcount, float score_threshold);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixCorrelationScoreSimple(PIX*, PIX*, l_int32, l_int32, l_float32, l_float32, l_int32, l_int32, l_int32*, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:1144</i>
-     */
-    int pixCorrelationScoreSimple(Pix pix1, Pix pix2, int area1, int area2, float delx, float dely, int maxdiffw, int maxdiffh, IntBuffer tab, FloatBuffer pscore);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixCorrelationScoreSimple(PIX*, PIX*, l_int32, l_int32, l_float32, l_float32, l_int32, l_int32, l_int32*, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:1144</i>
+//     */
+//    int pixCorrelationScoreSimple(Pix pix1, Pix pix2, int area1, int area2, float delx, float dely, int maxdiffw, int maxdiffh, IntBuffer tab, FloatBuffer pscore);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixCorrelationScoreShifted(PIX*, PIX*, l_int32, l_int32, l_int32, l_int32, l_int32*, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:1146</i>
-     */
-    int pixCorrelationScoreShifted(Pix pix1, Pix pix2, int area1, int area2, int delx, int dely, IntBuffer tab, FloatBuffer pscore);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixCorrelationScoreShifted(PIX*, PIX*, l_int32, l_int32, l_int32, l_int32, l_int32*, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:1146</i>
+//     */
+//    int pixCorrelationScoreShifted(Pix pix1, Pix pix2, int area1, int area2, int delx, int dely, IntBuffer tab, FloatBuffer pscore);
 
     /**
      * Original signature :
@@ -4392,178 +4392,178 @@ public interface Leptonica extends Library, ILeptonica {
      */
     int dewarpShowResults(L_Dewarpa dewa, Sarray sa, Boxa boxa, int firstpage, int lastpage, String pdfout);
 
-    /**
-     * Original signature : <code>L_DNA* l_dnaCreate(l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1236</i>
-     */
-    L_Dna l_dnaCreate(int n);
+//    /**
+//     * Original signature : <code>L_DNA* l_dnaCreate(l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1236</i>
+//     */
+//    L_Dna l_dnaCreate(int n);
 
-    /**
-     * Original signature :
-     * <code>L_DNA* l_dnaCreateFromIArray(l_int32*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1238</i>
-     */
-    L_Dna l_dnaCreateFromIArray(IntBuffer iarray, int size);
+//    /**
+//     * Original signature :
+//     * <code>L_DNA* l_dnaCreateFromIArray(l_int32*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1238</i>
+//     */
+//    L_Dna l_dnaCreateFromIArray(IntBuffer iarray, int size);
 
-    /**
-     * Original signature :
-     * <code>L_DNA* l_dnaCreateFromDArray(l_float64*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1240</i>
-     */
-    L_Dna l_dnaCreateFromDArray(DoubleBuffer darray, int size, int copyflag);
+//    /**
+//     * Original signature :
+//     * <code>L_DNA* l_dnaCreateFromDArray(l_float64*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1240</i>
+//     */
+//    L_Dna l_dnaCreateFromDArray(DoubleBuffer darray, int size, int copyflag);
 
-    /**
-     * Original signature :
-     * <code>L_DNA* l_dnaMakeSequence(l_float64, l_float64, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1242</i>
-     */
-    L_Dna l_dnaMakeSequence(double startval, double increment, int size);
+//    /**
+//     * Original signature :
+//     * <code>L_DNA* l_dnaMakeSequence(l_float64, l_float64, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1242</i>
+//     */
+//    L_Dna l_dnaMakeSequence(double startval, double increment, int size);
 
-    /**
-     * Original signature : <code>void l_dnaDestroy(L_DNA**)</code><br>
-     * <i>native declaration : allheaders.h:1244</i>
-     */
-    void l_dnaDestroy(PointerByReference pda);
+//    /**
+//     * Original signature : <code>void l_dnaDestroy(L_DNA**)</code><br>
+//     * <i>native declaration : allheaders.h:1244</i>
+//     */
+//    void l_dnaDestroy(PointerByReference pda);
 
-    /**
-     * Original signature : <code>L_DNA* l_dnaCopy(L_DNA*)</code><br>
-     * <i>native declaration : allheaders.h:1246</i>
-     */
-    L_Dna l_dnaCopy(L_Dna da);
+//    /**
+//     * Original signature : <code>L_DNA* l_dnaCopy(L_DNA*)</code><br>
+//     * <i>native declaration : allheaders.h:1246</i>
+//     */
+//    L_Dna l_dnaCopy(L_Dna da);
 
-    /**
-     * Original signature : <code>L_DNA* l_dnaClone(L_DNA*)</code><br>
-     * <i>native declaration : allheaders.h:1248</i>
-     */
-    L_Dna l_dnaClone(L_Dna da);
+//    /**
+//     * Original signature : <code>L_DNA* l_dnaClone(L_DNA*)</code><br>
+//     * <i>native declaration : allheaders.h:1248</i>
+//     */
+//    L_Dna l_dnaClone(L_Dna da);
 
-    /**
-     * Original signature : <code>l_int32 l_dnaEmpty(L_DNA*)</code><br>
-     * <i>native declaration : allheaders.h:1250</i>
-     */
-    int l_dnaEmpty(L_Dna da);
+//    /**
+//     * Original signature : <code>l_int32 l_dnaEmpty(L_DNA*)</code><br>
+//     * <i>native declaration : allheaders.h:1250</i>
+//     */
+//    int l_dnaEmpty(L_Dna da);
 
-    /**
-     * Original signature :
-     * <code>l_int32 l_dnaAddNumber(L_DNA*, l_float64)</code><br>
-     * <i>native declaration : allheaders.h:1252</i>
-     */
-    int l_dnaAddNumber(L_Dna da, double val);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 l_dnaAddNumber(L_DNA*, l_float64)</code><br>
+//     * <i>native declaration : allheaders.h:1252</i>
+//     */
+//    int l_dnaAddNumber(L_Dna da, double val);
 
-    /**
-     * Original signature :
-     * <code>l_int32 l_dnaInsertNumber(L_DNA*, l_int32, l_float64)</code><br>
-     * <i>native declaration : allheaders.h:1254</i>
-     */
-    int l_dnaInsertNumber(L_Dna da, int index, double val);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 l_dnaInsertNumber(L_DNA*, l_int32, l_float64)</code><br>
+//     * <i>native declaration : allheaders.h:1254</i>
+//     */
+//    int l_dnaInsertNumber(L_Dna da, int index, double val);
 
-    /**
-     * Original signature :
-     * <code>l_int32 l_dnaRemoveNumber(L_DNA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1256</i>
-     */
-    int l_dnaRemoveNumber(L_Dna da, int index);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 l_dnaRemoveNumber(L_DNA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1256</i>
+//     */
+//    int l_dnaRemoveNumber(L_Dna da, int index);
 
-    /**
-     * Original signature :
-     * <code>l_int32 l_dnaReplaceNumber(L_DNA*, l_int32, l_float64)</code><br>
-     * <i>native declaration : allheaders.h:1258</i>
-     */
-    int l_dnaReplaceNumber(L_Dna da, int index, double val);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 l_dnaReplaceNumber(L_DNA*, l_int32, l_float64)</code><br>
+//     * <i>native declaration : allheaders.h:1258</i>
+//     */
+//    int l_dnaReplaceNumber(L_Dna da, int index, double val);
 
-    /**
-     * Original signature : <code>l_int32 l_dnaGetCount(L_DNA*)</code><br>
-     * <i>native declaration : allheaders.h:1260</i>
-     */
-    int l_dnaGetCount(L_Dna da);
+//    /**
+//     * Original signature : <code>l_int32 l_dnaGetCount(L_DNA*)</code><br>
+//     * <i>native declaration : allheaders.h:1260</i>
+//     */
+//    int l_dnaGetCount(L_Dna da);
 
-    /**
-     * Original signature :
-     * <code>l_int32 l_dnaSetCount(L_DNA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1262</i>
-     */
-    int l_dnaSetCount(L_Dna da, int newcount);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 l_dnaSetCount(L_DNA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1262</i>
+//     */
+//    int l_dnaSetCount(L_Dna da, int newcount);
 
-    /**
-     * Original signature :
-     * <code>l_int32 l_dnaGetDValue(L_DNA*, l_int32, l_float64*)</code><br>
-     * <i>native declaration : allheaders.h:1264</i>
-     */
-    int l_dnaGetDValue(L_Dna da, int index, DoubleBuffer pval);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 l_dnaGetDValue(L_DNA*, l_int32, l_float64*)</code><br>
+//     * <i>native declaration : allheaders.h:1264</i>
+//     */
+//    int l_dnaGetDValue(L_Dna da, int index, DoubleBuffer pval);
 
-    /**
-     * Original signature :
-     * <code>l_int32 l_dnaGetIValue(L_DNA*, l_int32, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:1266</i>
-     */
-    int l_dnaGetIValue(L_Dna da, int index, IntBuffer pival);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 l_dnaGetIValue(L_DNA*, l_int32, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:1266</i>
+//     */
+//    int l_dnaGetIValue(L_Dna da, int index, IntBuffer pival);
 
-    /**
-     * Original signature :
-     * <code>l_int32 l_dnaSetValue(L_DNA*, l_int32, l_float64)</code><br>
-     * <i>native declaration : allheaders.h:1268</i>
-     */
-    int l_dnaSetValue(L_Dna da, int index, double val);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 l_dnaSetValue(L_DNA*, l_int32, l_float64)</code><br>
+//     * <i>native declaration : allheaders.h:1268</i>
+//     */
+//    int l_dnaSetValue(L_Dna da, int index, double val);
 
-    /**
-     * Original signature :
-     * <code>l_int32 l_dnaShiftValue(L_DNA*, l_int32, l_float64)</code><br>
-     * <i>native declaration : allheaders.h:1270</i>
-     */
-    int l_dnaShiftValue(L_Dna da, int index, double diff);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 l_dnaShiftValue(L_DNA*, l_int32, l_float64)</code><br>
+//     * <i>native declaration : allheaders.h:1270</i>
+//     */
+//    int l_dnaShiftValue(L_Dna da, int index, double diff);
 
-    /**
-     * Original signature : <code>l_int32* l_dnaGetIArray(L_DNA*)</code><br>
-     * <i>native declaration : allheaders.h:1272</i>
-     */
-    IntByReference l_dnaGetIArray(L_Dna da);
+//    /**
+//     * Original signature : <code>l_int32* l_dnaGetIArray(L_DNA*)</code><br>
+//     * <i>native declaration : allheaders.h:1272</i>
+//     */
+//    IntByReference l_dnaGetIArray(L_Dna da);
 
-    /**
-     * Original signature :
-     * <code>l_float64* l_dnaGetDArray(L_DNA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1274</i>
-     */
-    DoubleByReference l_dnaGetDArray(L_Dna da, int copyflag);
+//    /**
+//     * Original signature :
+//     * <code>l_float64* l_dnaGetDArray(L_DNA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1274</i>
+//     */
+//    DoubleByReference l_dnaGetDArray(L_Dna da, int copyflag);
 
-    /**
-     * Original signature : <code>l_int32 l_dnaGetRefcount(L_DNA*)</code><br>
-     * <i>native declaration : allheaders.h:1276</i>
-     */
-    int l_dnaGetRefcount(L_Dna da);
+//    /**
+//     * Original signature : <code>l_int32 l_dnaGetRefcount(L_DNA*)</code><br>
+//     * <i>native declaration : allheaders.h:1276</i>
+//     */
+//    int l_dnaGetRefcount(L_Dna da);
 
-    /**
-     * Original signature :
-     * <code>l_int32 l_dnaChangeRefcount(L_DNA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1278</i>
-     */
-    int l_dnaChangeRefcount(L_Dna da, int delta);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 l_dnaChangeRefcount(L_DNA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1278</i>
+//     */
+//    int l_dnaChangeRefcount(L_Dna da, int delta);
 
-    /**
-     * Original signature :
-     * <code>l_int32 l_dnaGetParameters(L_DNA*, l_float64*, l_float64*)</code><br>
-     * <i>native declaration : allheaders.h:1280</i>
-     */
-    int l_dnaGetParameters(L_Dna da, DoubleBuffer pstartx, DoubleBuffer pdelx);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 l_dnaGetParameters(L_DNA*, l_float64*, l_float64*)</code><br>
+//     * <i>native declaration : allheaders.h:1280</i>
+//     */
+//    int l_dnaGetParameters(L_Dna da, DoubleBuffer pstartx, DoubleBuffer pdelx);
 
-    /**
-     * Original signature :
-     * <code>l_int32 l_dnaSetParameters(L_DNA*, l_float64, l_float64)</code><br>
-     * <i>native declaration : allheaders.h:1282</i>
-     */
-    int l_dnaSetParameters(L_Dna da, double startx, double delx);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 l_dnaSetParameters(L_DNA*, l_float64, l_float64)</code><br>
+//     * <i>native declaration : allheaders.h:1282</i>
+//     */
+//    int l_dnaSetParameters(L_Dna da, double startx, double delx);
 
-    /**
-     * Original signature :
-     * <code>l_int32 l_dnaCopyParameters(L_DNA*, L_DNA*)</code><br>
-     * <i>native declaration : allheaders.h:1284</i>
-     */
-    int l_dnaCopyParameters(L_Dna dad, L_Dna das);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 l_dnaCopyParameters(L_DNA*, L_DNA*)</code><br>
+//     * <i>native declaration : allheaders.h:1284</i>
+//     */
+//    int l_dnaCopyParameters(L_Dna dad, L_Dna das);
 
-    /**
-     * Original signature : <code>L_DNA* l_dnaRead(const char*)</code><br>
-     * <i>native declaration : allheaders.h:1286</i>
-     */
-    L_Dna l_dnaRead(String filename);
+//    /**
+//     * Original signature : <code>L_DNA* l_dnaRead(const char*)</code><br>
+//     * <i>native declaration : allheaders.h:1286</i>
+//     */
+//    L_Dna l_dnaRead(String filename);
 
 //    /**
 //     * Original signature : <code>L_DNA* l_dnaReadStream(FILE*)</code><br>
@@ -4571,12 +4571,12 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    L_Dna l_dnaReadStream(FILE fp);
 
-    /**
-     * Original signature :
-     * <code>l_int32 l_dnaWrite(const char*, L_DNA*)</code><br>
-     * <i>native declaration : allheaders.h:1290</i>
-     */
-    int l_dnaWrite(String filename, L_Dna da);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 l_dnaWrite(const char*, L_DNA*)</code><br>
+//     * <i>native declaration : allheaders.h:1290</i>
+//     */
+//    int l_dnaWrite(String filename, L_Dna da);
 
 //    /**
 //     * Original signature :
@@ -4585,11 +4585,11 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int l_dnaWriteStream(FILE fp, L_Dna da);
 
-    /**
-     * Original signature : <code>L_DNAA* l_dnaaCreate(l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1294</i>
-     */
-    L_Dnaa l_dnaaCreate(int n);
+//    /**
+//     * Original signature : <code>L_DNAA* l_dnaaCreate(l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1294</i>
+//     */
+//    L_Dnaa l_dnaaCreate(int n);
 
     /**
      * Original signature :
@@ -4604,72 +4604,72 @@ public interface Leptonica extends Library, ILeptonica {
      */
     int l_dnaaTruncate(L_Dnaa daa);
 
-    /**
-     * Original signature : <code>void l_dnaaDestroy(L_DNAA**)</code><br>
-     * <i>native declaration : allheaders.h:1300</i>
-     */
-    void l_dnaaDestroy(PointerByReference pdaa);
+//    /**
+//     * Original signature : <code>void l_dnaaDestroy(L_DNAA**)</code><br>
+//     * <i>native declaration : allheaders.h:1300</i>
+//     */
+//    void l_dnaaDestroy(PointerByReference pdaa);
 
-    /**
-     * Original signature :
-     * <code>l_int32 l_dnaaAddDna(L_DNAA*, L_DNA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1302</i>
-     */
-    int l_dnaaAddDna(L_Dnaa daa, L_Dna da, int copyflag);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 l_dnaaAddDna(L_DNAA*, L_DNA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1302</i>
+//     */
+//    int l_dnaaAddDna(L_Dnaa daa, L_Dna da, int copyflag);
 
-    /**
-     * Original signature : <code>l_int32 l_dnaaGetCount(L_DNAA*)</code><br>
-     * <i>native declaration : allheaders.h:1304</i>
-     */
-    int l_dnaaGetCount(L_Dnaa daa);
+//    /**
+//     * Original signature : <code>l_int32 l_dnaaGetCount(L_DNAA*)</code><br>
+//     * <i>native declaration : allheaders.h:1304</i>
+//     */
+//    int l_dnaaGetCount(L_Dnaa daa);
 
-    /**
-     * Original signature :
-     * <code>l_int32 l_dnaaGetDnaCount(L_DNAA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1306</i>
-     */
-    int l_dnaaGetDnaCount(L_Dnaa daa, int index);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 l_dnaaGetDnaCount(L_DNAA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1306</i>
+//     */
+//    int l_dnaaGetDnaCount(L_Dnaa daa, int index);
 
-    /**
-     * Original signature :
-     * <code>l_int32 l_dnaaGetNumberCount(L_DNAA*)</code><br>
-     * <i>native declaration : allheaders.h:1308</i>
-     */
-    int l_dnaaGetNumberCount(L_Dnaa daa);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 l_dnaaGetNumberCount(L_DNAA*)</code><br>
+//     * <i>native declaration : allheaders.h:1308</i>
+//     */
+//    int l_dnaaGetNumberCount(L_Dnaa daa);
 
-    /**
-     * Original signature :
-     * <code>L_DNA* l_dnaaGetDna(L_DNAA*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1310</i>
-     */
-    L_Dna l_dnaaGetDna(L_Dnaa daa, int index, int accessflag);
+//    /**
+//     * Original signature :
+//     * <code>L_DNA* l_dnaaGetDna(L_DNAA*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1310</i>
+//     */
+//    L_Dna l_dnaaGetDna(L_Dnaa daa, int index, int accessflag);
 
-    /**
-     * Original signature :
-     * <code>l_int32 l_dnaaReplaceDna(L_DNAA*, l_int32, L_DNA*)</code><br>
-     * <i>native declaration : allheaders.h:1312</i>
-     */
-    int l_dnaaReplaceDna(L_Dnaa daa, int index, L_Dna da);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 l_dnaaReplaceDna(L_DNAA*, l_int32, L_DNA*)</code><br>
+//     * <i>native declaration : allheaders.h:1312</i>
+//     */
+//    int l_dnaaReplaceDna(L_Dnaa daa, int index, L_Dna da);
 
-    /**
-     * Original signature :
-     * <code>l_int32 l_dnaaGetValue(L_DNAA*, l_int32, l_int32, l_float64*)</code><br>
-     * <i>native declaration : allheaders.h:1314</i>
-     */
-    int l_dnaaGetValue(L_Dnaa daa, int i, int j, DoubleBuffer pval);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 l_dnaaGetValue(L_DNAA*, l_int32, l_int32, l_float64*)</code><br>
+//     * <i>native declaration : allheaders.h:1314</i>
+//     */
+//    int l_dnaaGetValue(L_Dnaa daa, int i, int j, DoubleBuffer pval);
 
-    /**
-     * Original signature :
-     * <code>l_int32 l_dnaaAddNumber(L_DNAA*, l_int32, l_float64)</code><br>
-     * <i>native declaration : allheaders.h:1316</i>
-     */
-    int l_dnaaAddNumber(L_Dnaa daa, int index, double val);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 l_dnaaAddNumber(L_DNAA*, l_int32, l_float64)</code><br>
+//     * <i>native declaration : allheaders.h:1316</i>
+//     */
+//    int l_dnaaAddNumber(L_Dnaa daa, int index, double val);
 
-    /**
-     * Original signature : <code>L_DNAA* l_dnaaRead(const char*)</code><br>
-     * <i>native declaration : allheaders.h:1318</i>
-     */
-    L_Dnaa l_dnaaRead(String filename);
+//    /**
+//     * Original signature : <code>L_DNAA* l_dnaaRead(const char*)</code><br>
+//     * <i>native declaration : allheaders.h:1318</i>
+//     */
+//    L_Dnaa l_dnaaRead(String filename);
 
 //    /**
 //     * Original signature : <code>L_DNAA* l_dnaaReadStream(FILE*)</code><br>
@@ -4677,12 +4677,12 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    L_Dnaa l_dnaaReadStream(FILE fp);
 
-    /**
-     * Original signature :
-     * <code>l_int32 l_dnaaWrite(const char*, L_DNAA*)</code><br>
-     * <i>native declaration : allheaders.h:1322</i>
-     */
-    int l_dnaaWrite(String filename, L_Dnaa daa);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 l_dnaaWrite(const char*, L_DNAA*)</code><br>
+//     * <i>native declaration : allheaders.h:1322</i>
+//     */
+//    int l_dnaaWrite(String filename, L_Dnaa daa);
 
 //    /**
 //     * Original signature :
@@ -4767,30 +4767,30 @@ public interface Leptonica extends Library, ILeptonica {
      */
     int l_dnaFindValByHash(L_Dna da, L_DnaHash dahash, double val, IntBuffer pindex);
 
-    /**
-     * Original signature : <code>L_DNA* l_dnaMakeDelta(L_DNA*)</code><br>
-     * <i>native declaration : allheaders.h:1348</i>
-     */
-    L_Dna l_dnaMakeDelta(L_Dna das);
+//    /**
+//     * Original signature : <code>L_DNA* l_dnaMakeDelta(L_DNA*)</code><br>
+//     * <i>native declaration : allheaders.h:1348</i>
+//     */
+//    L_Dna l_dnaMakeDelta(L_Dna das);
 
-    /**
-     * Original signature : <code>NUMA* l_dnaConvertToNuma(L_DNA*)</code><br>
-     * <i>native declaration : allheaders.h:1350</i>
-     */
-    Numa l_dnaConvertToNuma(L_Dna da);
+//    /**
+//     * Original signature : <code>NUMA* l_dnaConvertToNuma(L_DNA*)</code><br>
+//     * <i>native declaration : allheaders.h:1350</i>
+//     */
+//    Numa l_dnaConvertToNuma(L_Dna da);
 
-    /**
-     * Original signature : <code>L_DNA* numaConvertToDna(NUMA*)</code><br>
-     * <i>native declaration : allheaders.h:1352</i>
-     */
-    L_Dna numaConvertToDna(Numa na);
+//    /**
+//     * Original signature : <code>L_DNA* numaConvertToDna(NUMA*)</code><br>
+//     * <i>native declaration : allheaders.h:1352</i>
+//     */
+//    L_Dna numaConvertToDna(Numa na);
 
-    /**
-     * Original signature :
-     * <code>l_int32 l_dnaJoin(L_DNA*, L_DNA*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1354</i>
-     */
-    int l_dnaJoin(L_Dna dad, L_Dna das, int istart, int iend);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 l_dnaJoin(L_DNA*, L_DNA*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1354</i>
+//     */
+//    int l_dnaJoin(L_Dna dad, L_Dna das, int istart, int iend);
 
     /**
      * Original signature :
@@ -5211,339 +5211,339 @@ public interface Leptonica extends Library, ILeptonica {
      */
     Pix pixFMorphopGen_1(Pix pixd, Pix pixs, int operation, ByteBuffer selname);
 
-    /**
-     * Original signature :
-     * <code>l_int32 fmorphopgen_low_1(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1476</i>
-     */
-    int fmorphopgen_low_1(IntBuffer datad, int w, int h, int wpld, IntBuffer datas, int wpls, int index);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 fmorphopgen_low_1(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1476</i>
+//     */
+//    int fmorphopgen_low_1(IntBuffer datad, int w, int h, int wpld, IntBuffer datas, int wpls, int index);
 
-    /**
-     * Original signature : <code>FPIX* fpixCreate(l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1478</i>
-     */
-    FPix fpixCreate(int width, int height);
+//    /**
+//     * Original signature : <code>FPIX* fpixCreate(l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1478</i>
+//     */
+//    FPix fpixCreate(int width, int height);
 
-    /**
-     * Original signature : <code>FPIX* fpixCreateTemplate(FPIX*)</code><br>
-     * <i>native declaration : allheaders.h:1480</i>
-     */
-    FPix fpixCreateTemplate(FPix fpixs);
+//    /**
+//     * Original signature : <code>FPIX* fpixCreateTemplate(FPIX*)</code><br>
+//     * <i>native declaration : allheaders.h:1480</i>
+//     */
+//    FPix fpixCreateTemplate(FPix fpixs);
 
-    /**
-     * Original signature : <code>FPIX* fpixClone(FPIX*)</code><br>
-     * <i>native declaration : allheaders.h:1482</i>
-     */
-    FPix fpixClone(FPix fpix);
+//    /**
+//     * Original signature : <code>FPIX* fpixClone(FPIX*)</code><br>
+//     * <i>native declaration : allheaders.h:1482</i>
+//     */
+//    FPix fpixClone(FPix fpix);
 
-    /**
-     * Original signature : <code>FPIX* fpixCopy(FPIX*, FPIX*)</code><br>
-     * <i>native declaration : allheaders.h:1484</i>
-     */
-    FPix fpixCopy(FPix fpixd, FPix fpixs);
+//    /**
+//     * Original signature : <code>FPIX* fpixCopy(FPIX*, FPIX*)</code><br>
+//     * <i>native declaration : allheaders.h:1484</i>
+//     */
+//    FPix fpixCopy(FPix fpixd, FPix fpixs);
 
-    /**
-     * Original signature :
-     * <code>l_int32 fpixResizeImageData(FPIX*, FPIX*)</code><br>
-     * <i>native declaration : allheaders.h:1486</i>
-     */
-    int fpixResizeImageData(FPix fpixd, FPix fpixs);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 fpixResizeImageData(FPIX*, FPIX*)</code><br>
+//     * <i>native declaration : allheaders.h:1486</i>
+//     */
+//    int fpixResizeImageData(FPix fpixd, FPix fpixs);
 
-    /**
-     * Original signature : <code>void fpixDestroy(FPIX**)</code><br>
-     * <i>native declaration : allheaders.h:1488</i>
-     */
-    void fpixDestroy(PointerByReference pfpix);
+//    /**
+//     * Original signature : <code>void fpixDestroy(FPIX**)</code><br>
+//     * <i>native declaration : allheaders.h:1488</i>
+//     */
+//    void fpixDestroy(PointerByReference pfpix);
 
-    /**
-     * Original signature :
-     * <code>l_int32 fpixGetDimensions(FPIX*, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:1490</i>
-     */
-    int fpixGetDimensions(FPix fpix, IntBuffer pw, IntBuffer ph);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 fpixGetDimensions(FPIX*, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:1490</i>
+//     */
+//    int fpixGetDimensions(FPix fpix, IntBuffer pw, IntBuffer ph);
 
-    /**
-     * Original signature :
-     * <code>l_int32 fpixSetDimensions(FPIX*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1492</i>
-     */
-    int fpixSetDimensions(FPix fpix, int w, int h);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 fpixSetDimensions(FPIX*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1492</i>
+//     */
+//    int fpixSetDimensions(FPix fpix, int w, int h);
 
-    /**
-     * Original signature : <code>l_int32 fpixGetWpl(FPIX*)</code><br>
-     * <i>native declaration : allheaders.h:1494</i>
-     */
-    int fpixGetWpl(FPix fpix);
+//    /**
+//     * Original signature : <code>l_int32 fpixGetWpl(FPIX*)</code><br>
+//     * <i>native declaration : allheaders.h:1494</i>
+//     */
+//    int fpixGetWpl(FPix fpix);
 
-    /**
-     * Original signature : <code>l_int32 fpixSetWpl(FPIX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1496</i>
-     */
-    int fpixSetWpl(FPix fpix, int wpl);
+//    /**
+//     * Original signature : <code>l_int32 fpixSetWpl(FPIX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1496</i>
+//     */
+//    int fpixSetWpl(FPix fpix, int wpl);
 
-    /**
-     * Original signature : <code>l_int32 fpixGetRefcount(FPIX*)</code><br>
-     * <i>native declaration : allheaders.h:1498</i>
-     */
-    int fpixGetRefcount(FPix fpix);
+//    /**
+//     * Original signature : <code>l_int32 fpixGetRefcount(FPIX*)</code><br>
+//     * <i>native declaration : allheaders.h:1498</i>
+//     */
+//    int fpixGetRefcount(FPix fpix);
 
-    /**
-     * Original signature :
-     * <code>l_int32 fpixChangeRefcount(FPIX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1500</i>
-     */
-    int fpixChangeRefcount(FPix fpix, int delta);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 fpixChangeRefcount(FPIX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1500</i>
+//     */
+//    int fpixChangeRefcount(FPix fpix, int delta);
 
-    /**
-     * Original signature :
-     * <code>l_int32 fpixGetResolution(FPIX*, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:1502</i>
-     */
-    int fpixGetResolution(FPix fpix, IntBuffer pxres, IntBuffer pyres);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 fpixGetResolution(FPIX*, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:1502</i>
+//     */
+//    int fpixGetResolution(FPix fpix, IntBuffer pxres, IntBuffer pyres);
 
-    /**
-     * Original signature :
-     * <code>l_int32 fpixSetResolution(FPIX*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1504</i>
-     */
-    int fpixSetResolution(FPix fpix, int xres, int yres);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 fpixSetResolution(FPIX*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1504</i>
+//     */
+//    int fpixSetResolution(FPix fpix, int xres, int yres);
 
-    /**
-     * Original signature :
-     * <code>l_int32 fpixCopyResolution(FPIX*, FPIX*)</code><br>
-     * <i>native declaration : allheaders.h:1506</i>
-     */
-    int fpixCopyResolution(FPix fpixd, FPix fpixs);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 fpixCopyResolution(FPIX*, FPIX*)</code><br>
+//     * <i>native declaration : allheaders.h:1506</i>
+//     */
+//    int fpixCopyResolution(FPix fpixd, FPix fpixs);
 
-    /**
-     * Original signature : <code>l_float32* fpixGetData(FPIX*)</code><br>
-     * <i>native declaration : allheaders.h:1508</i>
-     */
-    FloatByReference fpixGetData(FPix fpix);
+//    /**
+//     * Original signature : <code>l_float32* fpixGetData(FPIX*)</code><br>
+//     * <i>native declaration : allheaders.h:1508</i>
+//     */
+//    FloatByReference fpixGetData(FPix fpix);
 
-    /**
-     * Original signature :
-     * <code>l_int32 fpixSetData(FPIX*, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:1510</i>
-     */
-    int fpixSetData(FPix fpix, FloatBuffer data);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 fpixSetData(FPIX*, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:1510</i>
+//     */
+//    int fpixSetData(FPix fpix, FloatBuffer data);
 
-    /**
-     * Original signature :
-     * <code>l_int32 fpixGetPixel(FPIX*, l_int32, l_int32, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:1512</i>
-     */
-    int fpixGetPixel(FPix fpix, int x, int y, FloatBuffer pval);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 fpixGetPixel(FPIX*, l_int32, l_int32, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:1512</i>
+//     */
+//    int fpixGetPixel(FPix fpix, int x, int y, FloatBuffer pval);
 
-    /**
-     * Original signature :
-     * <code>l_int32 fpixSetPixel(FPIX*, l_int32, l_int32, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:1514</i>
-     */
-    int fpixSetPixel(FPix fpix, int x, int y, float val);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 fpixSetPixel(FPIX*, l_int32, l_int32, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:1514</i>
+//     */
+//    int fpixSetPixel(FPix fpix, int x, int y, float val);
 
-    /**
-     * Original signature : <code>FPIXA* fpixaCreate(l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1516</i>
-     */
-    FPixa fpixaCreate(int n);
+//    /**
+//     * Original signature : <code>FPIXA* fpixaCreate(l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1516</i>
+//     */
+//    FPixa fpixaCreate(int n);
 
-    /**
-     * Original signature : <code>FPIXA* fpixaCopy(FPIXA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1518</i>
-     */
-    FPixa fpixaCopy(FPixa fpixa, int copyflag);
+//    /**
+//     * Original signature : <code>FPIXA* fpixaCopy(FPIXA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1518</i>
+//     */
+//    FPixa fpixaCopy(FPixa fpixa, int copyflag);
 
-    /**
-     * Original signature : <code>void fpixaDestroy(FPIXA**)</code><br>
-     * <i>native declaration : allheaders.h:1520</i>
-     */
-    void fpixaDestroy(PointerByReference pfpixa);
+//    /**
+//     * Original signature : <code>void fpixaDestroy(FPIXA**)</code><br>
+//     * <i>native declaration : allheaders.h:1520</i>
+//     */
+//    void fpixaDestroy(PointerByReference pfpixa);
 
-    /**
-     * Original signature :
-     * <code>l_int32 fpixaAddFPix(FPIXA*, FPIX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1522</i>
-     */
-    int fpixaAddFPix(FPixa fpixa, FPix fpix, int copyflag);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 fpixaAddFPix(FPIXA*, FPIX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1522</i>
+//     */
+//    int fpixaAddFPix(FPixa fpixa, FPix fpix, int copyflag);
 
-    /**
-     * Original signature : <code>l_int32 fpixaGetCount(FPIXA*)</code><br>
-     * <i>native declaration : allheaders.h:1524</i>
-     */
-    int fpixaGetCount(FPixa fpixa);
+//    /**
+//     * Original signature : <code>l_int32 fpixaGetCount(FPIXA*)</code><br>
+//     * <i>native declaration : allheaders.h:1524</i>
+//     */
+//    int fpixaGetCount(FPixa fpixa);
 
-    /**
-     * Original signature :
-     * <code>l_int32 fpixaChangeRefcount(FPIXA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1526</i>
-     */
-    int fpixaChangeRefcount(FPixa fpixa, int delta);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 fpixaChangeRefcount(FPIXA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1526</i>
+//     */
+//    int fpixaChangeRefcount(FPixa fpixa, int delta);
 
-    /**
-     * Original signature :
-     * <code>FPIX* fpixaGetFPix(FPIXA*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1528</i>
-     */
-    FPix fpixaGetFPix(FPixa fpixa, int index, int accesstype);
+//    /**
+//     * Original signature :
+//     * <code>FPIX* fpixaGetFPix(FPIXA*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1528</i>
+//     */
+//    FPix fpixaGetFPix(FPixa fpixa, int index, int accesstype);
 
-    /**
-     * Original signature :
-     * <code>l_int32 fpixaGetFPixDimensions(FPIXA*, l_int32, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:1530</i>
-     */
-    int fpixaGetFPixDimensions(FPixa fpixa, int index, IntBuffer pw, IntBuffer ph);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 fpixaGetFPixDimensions(FPIXA*, l_int32, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:1530</i>
+//     */
+//    int fpixaGetFPixDimensions(FPixa fpixa, int index, IntBuffer pw, IntBuffer ph);
 
-    /**
-     * Original signature :
-     * <code>l_float32* fpixaGetData(FPIXA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1532</i>
-     */
-    FloatByReference fpixaGetData(FPixa fpixa, int index);
+//    /**
+//     * Original signature :
+//     * <code>l_float32* fpixaGetData(FPIXA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1532</i>
+//     */
+//    FloatByReference fpixaGetData(FPixa fpixa, int index);
 
-    /**
-     * Original signature :
-     * <code>l_int32 fpixaGetPixel(FPIXA*, l_int32, l_int32, l_int32, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:1534</i>
-     */
-    int fpixaGetPixel(FPixa fpixa, int index, int x, int y, FloatBuffer pval);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 fpixaGetPixel(FPIXA*, l_int32, l_int32, l_int32, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:1534</i>
+//     */
+//    int fpixaGetPixel(FPixa fpixa, int index, int x, int y, FloatBuffer pval);
 
-    /**
-     * Original signature :
-     * <code>l_int32 fpixaSetPixel(FPIXA*, l_int32, l_int32, l_int32, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:1536</i>
-     */
-    int fpixaSetPixel(FPixa fpixa, int index, int x, int y, float val);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 fpixaSetPixel(FPIXA*, l_int32, l_int32, l_int32, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:1536</i>
+//     */
+//    int fpixaSetPixel(FPixa fpixa, int index, int x, int y, float val);
 
-    /**
-     * Original signature : <code>DPIX* dpixCreate(l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1538</i>
-     */
-    DPix dpixCreate(int width, int height);
+//    /**
+//     * Original signature : <code>DPIX* dpixCreate(l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1538</i>
+//     */
+//    DPix dpixCreate(int width, int height);
 
-    /**
-     * Original signature : <code>DPIX* dpixCreateTemplate(DPIX*)</code><br>
-     * <i>native declaration : allheaders.h:1540</i>
-     */
-    DPix dpixCreateTemplate(DPix dpixs);
+//    /**
+//     * Original signature : <code>DPIX* dpixCreateTemplate(DPIX*)</code><br>
+//     * <i>native declaration : allheaders.h:1540</i>
+//     */
+//    DPix dpixCreateTemplate(DPix dpixs);
 
-    /**
-     * Original signature : <code>DPIX* dpixClone(DPIX*)</code><br>
-     * <i>native declaration : allheaders.h:1542</i>
-     */
-    DPix dpixClone(DPix dpix);
+//    /**
+//     * Original signature : <code>DPIX* dpixClone(DPIX*)</code><br>
+//     * <i>native declaration : allheaders.h:1542</i>
+//     */
+//    DPix dpixClone(DPix dpix);
 
-    /**
-     * Original signature : <code>DPIX* dpixCopy(DPIX*, DPIX*)</code><br>
-     * <i>native declaration : allheaders.h:1544</i>
-     */
-    DPix dpixCopy(DPix dpixd, DPix dpixs);
+//    /**
+//     * Original signature : <code>DPIX* dpixCopy(DPIX*, DPIX*)</code><br>
+//     * <i>native declaration : allheaders.h:1544</i>
+//     */
+//    DPix dpixCopy(DPix dpixd, DPix dpixs);
 
-    /**
-     * Original signature :
-     * <code>l_int32 dpixResizeImageData(DPIX*, DPIX*)</code><br>
-     * <i>native declaration : allheaders.h:1546</i>
-     */
-    int dpixResizeImageData(DPix dpixd, DPix dpixs);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 dpixResizeImageData(DPIX*, DPIX*)</code><br>
+//     * <i>native declaration : allheaders.h:1546</i>
+//     */
+//    int dpixResizeImageData(DPix dpixd, DPix dpixs);
 
-    /**
-     * Original signature : <code>void dpixDestroy(DPIX**)</code><br>
-     * <i>native declaration : allheaders.h:1548</i>
-     */
-    void dpixDestroy(PointerByReference pdpix);
+//    /**
+//     * Original signature : <code>void dpixDestroy(DPIX**)</code><br>
+//     * <i>native declaration : allheaders.h:1548</i>
+//     */
+//    void dpixDestroy(PointerByReference pdpix);
 
-    /**
-     * Original signature :
-     * <code>l_int32 dpixGetDimensions(DPIX*, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:1550</i>
-     */
-    int dpixGetDimensions(DPix dpix, IntBuffer pw, IntBuffer ph);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 dpixGetDimensions(DPIX*, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:1550</i>
+//     */
+//    int dpixGetDimensions(DPix dpix, IntBuffer pw, IntBuffer ph);
 
-    /**
-     * Original signature :
-     * <code>l_int32 dpixSetDimensions(DPIX*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1552</i>
-     */
-    int dpixSetDimensions(DPix dpix, int w, int h);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 dpixSetDimensions(DPIX*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1552</i>
+//     */
+//    int dpixSetDimensions(DPix dpix, int w, int h);
 
-    /**
-     * Original signature : <code>l_int32 dpixGetWpl(DPIX*)</code><br>
-     * <i>native declaration : allheaders.h:1554</i>
-     */
-    int dpixGetWpl(DPix dpix);
+//    /**
+//     * Original signature : <code>l_int32 dpixGetWpl(DPIX*)</code><br>
+//     * <i>native declaration : allheaders.h:1554</i>
+//     */
+//    int dpixGetWpl(DPix dpix);
 
-    /**
-     * Original signature : <code>l_int32 dpixSetWpl(DPIX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1556</i>
-     */
-    int dpixSetWpl(DPix dpix, int wpl);
+//    /**
+//     * Original signature : <code>l_int32 dpixSetWpl(DPIX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1556</i>
+//     */
+//    int dpixSetWpl(DPix dpix, int wpl);
 
-    /**
-     * Original signature : <code>l_int32 dpixGetRefcount(DPIX*)</code><br>
-     * <i>native declaration : allheaders.h:1558</i>
-     */
-    int dpixGetRefcount(DPix dpix);
+//    /**
+//     * Original signature : <code>l_int32 dpixGetRefcount(DPIX*)</code><br>
+//     * <i>native declaration : allheaders.h:1558</i>
+//     */
+//    int dpixGetRefcount(DPix dpix);
 
-    /**
-     * Original signature :
-     * <code>l_int32 dpixChangeRefcount(DPIX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1560</i>
-     */
-    int dpixChangeRefcount(DPix dpix, int delta);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 dpixChangeRefcount(DPIX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1560</i>
+//     */
+//    int dpixChangeRefcount(DPix dpix, int delta);
 
-    /**
-     * Original signature :
-     * <code>l_int32 dpixGetResolution(DPIX*, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:1562</i>
-     */
-    int dpixGetResolution(DPix dpix, IntBuffer pxres, IntBuffer pyres);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 dpixGetResolution(DPIX*, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:1562</i>
+//     */
+//    int dpixGetResolution(DPix dpix, IntBuffer pxres, IntBuffer pyres);
 
-    /**
-     * Original signature :
-     * <code>l_int32 dpixSetResolution(DPIX*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1564</i>
-     */
-    int dpixSetResolution(DPix dpix, int xres, int yres);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 dpixSetResolution(DPIX*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1564</i>
+//     */
+//    int dpixSetResolution(DPix dpix, int xres, int yres);
 
-    /**
-     * Original signature :
-     * <code>l_int32 dpixCopyResolution(DPIX*, DPIX*)</code><br>
-     * <i>native declaration : allheaders.h:1566</i>
-     */
-    int dpixCopyResolution(DPix dpixd, DPix dpixs);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 dpixCopyResolution(DPIX*, DPIX*)</code><br>
+//     * <i>native declaration : allheaders.h:1566</i>
+//     */
+//    int dpixCopyResolution(DPix dpixd, DPix dpixs);
 
-    /**
-     * Original signature : <code>l_float64* dpixGetData(DPIX*)</code><br>
-     * <i>native declaration : allheaders.h:1568</i>
-     */
-    DoubleByReference dpixGetData(DPix dpix);
+//    /**
+//     * Original signature : <code>l_float64* dpixGetData(DPIX*)</code><br>
+//     * <i>native declaration : allheaders.h:1568</i>
+//     */
+//    DoubleByReference dpixGetData(DPix dpix);
 
-    /**
-     * Original signature :
-     * <code>l_int32 dpixSetData(DPIX*, l_float64*)</code><br>
-     * <i>native declaration : allheaders.h:1570</i>
-     */
-    int dpixSetData(DPix dpix, DoubleBuffer data);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 dpixSetData(DPIX*, l_float64*)</code><br>
+//     * <i>native declaration : allheaders.h:1570</i>
+//     */
+//    int dpixSetData(DPix dpix, DoubleBuffer data);
 
-    /**
-     * Original signature :
-     * <code>l_int32 dpixGetPixel(DPIX*, l_int32, l_int32, l_float64*)</code><br>
-     * <i>native declaration : allheaders.h:1572</i>
-     */
-    int dpixGetPixel(DPix dpix, int x, int y, DoubleBuffer pval);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 dpixGetPixel(DPIX*, l_int32, l_int32, l_float64*)</code><br>
+//     * <i>native declaration : allheaders.h:1572</i>
+//     */
+//    int dpixGetPixel(DPix dpix, int x, int y, DoubleBuffer pval);
 
-    /**
-     * Original signature :
-     * <code>l_int32 dpixSetPixel(DPIX*, l_int32, l_int32, l_float64)</code><br>
-     * <i>native declaration : allheaders.h:1574</i>
-     */
-    int dpixSetPixel(DPix dpix, int x, int y, double val);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 dpixSetPixel(DPIX*, l_int32, l_int32, l_float64)</code><br>
+//     * <i>native declaration : allheaders.h:1574</i>
+//     */
+//    int dpixSetPixel(DPix dpix, int x, int y, double val);
 
-    /**
-     * Original signature : <code>FPIX* fpixRead(const char*)</code><br>
-     * <i>native declaration : allheaders.h:1576</i>
-     */
-    FPix fpixRead(String filename);
+//    /**
+//     * Original signature : <code>FPIX* fpixRead(const char*)</code><br>
+//     * <i>native declaration : allheaders.h:1576</i>
+//     */
+//    FPix fpixRead(String filename);
 
 //    /**
 //     * Original signature : <code>FPIX* fpixReadStream(FILE*)</code><br>
@@ -5551,12 +5551,12 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    FPix fpixReadStream(FILE fp);
 
-    /**
-     * Original signature :
-     * <code>l_int32 fpixWrite(const char*, FPIX*)</code><br>
-     * <i>native declaration : allheaders.h:1580</i>
-     */
-    int fpixWrite(String filename, FPix fpix);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 fpixWrite(const char*, FPIX*)</code><br>
+//     * <i>native declaration : allheaders.h:1580</i>
+//     */
+//    int fpixWrite(String filename, FPix fpix);
 
 //    /**
 //     * Original signature :
@@ -5565,18 +5565,18 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int fpixWriteStream(FILE fp, FPix fpix);
 
-    /**
-     * Original signature :
-     * <code>FPIX* fpixEndianByteSwap(FPIX*, FPIX*)</code><br>
-     * <i>native declaration : allheaders.h:1584</i>
-     */
-    FPix fpixEndianByteSwap(FPix fpixd, FPix fpixs);
+//    /**
+//     * Original signature :
+//     * <code>FPIX* fpixEndianByteSwap(FPIX*, FPIX*)</code><br>
+//     * <i>native declaration : allheaders.h:1584</i>
+//     */
+//    FPix fpixEndianByteSwap(FPix fpixd, FPix fpixs);
 
-    /**
-     * Original signature : <code>DPIX* dpixRead(const char*)</code><br>
-     * <i>native declaration : allheaders.h:1586</i>
-     */
-    DPix dpixRead(String filename);
+//    /**
+//     * Original signature : <code>DPIX* dpixRead(const char*)</code><br>
+//     * <i>native declaration : allheaders.h:1586</i>
+//     */
+//    DPix dpixRead(String filename);
 
 //    /**
 //     * Original signature : <code>DPIX* dpixReadStream(FILE*)</code><br>
@@ -5584,12 +5584,12 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    DPix dpixReadStream(FILE fp);
 
-    /**
-     * Original signature :
-     * <code>l_int32 dpixWrite(const char*, DPIX*)</code><br>
-     * <i>native declaration : allheaders.h:1590</i>
-     */
-    int dpixWrite(String filename, DPix dpix);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 dpixWrite(const char*, DPIX*)</code><br>
+//     * <i>native declaration : allheaders.h:1590</i>
+//     */
+//    int dpixWrite(String filename, DPix dpix);
 
 //    /**
 //     * Original signature :
@@ -5598,12 +5598,12 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int dpixWriteStream(FILE fp, DPix dpix);
 
-    /**
-     * Original signature :
-     * <code>DPIX* dpixEndianByteSwap(DPIX*, DPIX*)</code><br>
-     * <i>native declaration : allheaders.h:1594</i>
-     */
-    DPix dpixEndianByteSwap(DPix dpixd, DPix dpixs);
+//    /**
+//     * Original signature :
+//     * <code>DPIX* dpixEndianByteSwap(DPIX*, DPIX*)</code><br>
+//     * <i>native declaration : allheaders.h:1594</i>
+//     */
+//    DPix dpixEndianByteSwap(DPix dpixd, DPix dpixs);
 
 //    /**
 //     * Original signature :
@@ -5612,237 +5612,237 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int fpixPrintStream(FILE fp, FPix fpix, int factor);
 
-    /**
-     * Original signature :
-     * <code>FPIX* pixConvertToFPix(PIX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1598</i>
-     */
-    FPix pixConvertToFPix(Pix pixs, int ncomps);
+//    /**
+//     * Original signature :
+//     * <code>FPIX* pixConvertToFPix(PIX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1598</i>
+//     */
+//    FPix pixConvertToFPix(Pix pixs, int ncomps);
 
-    /**
-     * Original signature :
-     * <code>DPIX* pixConvertToDPix(PIX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1600</i>
-     */
-    DPix pixConvertToDPix(Pix pixs, int ncomps);
+//    /**
+//     * Original signature :
+//     * <code>DPIX* pixConvertToDPix(PIX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1600</i>
+//     */
+//    DPix pixConvertToDPix(Pix pixs, int ncomps);
 
-    /**
-     * Original signature :
-     * <code>PIX* fpixConvertToPix(FPIX*, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1602</i>
-     */
-    Pix fpixConvertToPix(FPix fpixs, int outdepth, int negvals, int errorflag);
+//    /**
+//     * Original signature :
+//     * <code>PIX* fpixConvertToPix(FPIX*, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1602</i>
+//     */
+//    Pix fpixConvertToPix(FPix fpixs, int outdepth, int negvals, int errorflag);
 
-    /**
-     * Original signature :
-     * <code>PIX* fpixDisplayMaxDynamicRange(FPIX*)</code><br>
-     * <i>native declaration : allheaders.h:1604</i>
-     */
-    Pix fpixDisplayMaxDynamicRange(FPix fpixs);
+//    /**
+//     * Original signature :
+//     * <code>PIX* fpixDisplayMaxDynamicRange(FPIX*)</code><br>
+//     * <i>native declaration : allheaders.h:1604</i>
+//     */
+//    Pix fpixDisplayMaxDynamicRange(FPix fpixs);
 
-    /**
-     * Original signature : <code>DPIX* fpixConvertToDPix(FPIX*)</code><br>
-     * <i>native declaration : allheaders.h:1606</i>
-     */
-    DPix fpixConvertToDPix(FPix fpix);
+//    /**
+//     * Original signature : <code>DPIX* fpixConvertToDPix(FPIX*)</code><br>
+//     * <i>native declaration : allheaders.h:1606</i>
+//     */
+//    DPix fpixConvertToDPix(FPix fpix);
 
-    /**
-     * Original signature :
-     * <code>PIX* dpixConvertToPix(DPIX*, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1608</i>
-     */
-    Pix dpixConvertToPix(DPix dpixs, int outdepth, int negvals, int errorflag);
+//    /**
+//     * Original signature :
+//     * <code>PIX* dpixConvertToPix(DPIX*, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1608</i>
+//     */
+//    Pix dpixConvertToPix(DPix dpixs, int outdepth, int negvals, int errorflag);
 
-    /**
-     * Original signature : <code>FPIX* dpixConvertToFPix(DPIX*)</code><br>
-     * <i>native declaration : allheaders.h:1610</i>
-     */
-    FPix dpixConvertToFPix(DPix dpix);
+//    /**
+//     * Original signature : <code>FPIX* dpixConvertToFPix(DPIX*)</code><br>
+//     * <i>native declaration : allheaders.h:1610</i>
+//     */
+//    FPix dpixConvertToFPix(DPix dpix);
 
-    /**
-     * Original signature :
-     * <code>l_int32 fpixGetMin(FPIX*, l_float32*, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:1612</i>
-     */
-    int fpixGetMin(FPix fpix, FloatBuffer pminval, IntBuffer pxminloc, IntBuffer pyminloc);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 fpixGetMin(FPIX*, l_float32*, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:1612</i>
+//     */
+//    int fpixGetMin(FPix fpix, FloatBuffer pminval, IntBuffer pxminloc, IntBuffer pyminloc);
 
-    /**
-     * Original signature :
-     * <code>l_int32 fpixGetMax(FPIX*, l_float32*, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:1614</i>
-     */
-    int fpixGetMax(FPix fpix, FloatBuffer pmaxval, IntBuffer pxmaxloc, IntBuffer pymaxloc);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 fpixGetMax(FPIX*, l_float32*, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:1614</i>
+//     */
+//    int fpixGetMax(FPix fpix, FloatBuffer pmaxval, IntBuffer pxmaxloc, IntBuffer pymaxloc);
 
-    /**
-     * Original signature :
-     * <code>l_int32 dpixGetMin(DPIX*, l_float64*, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:1616</i>
-     */
-    int dpixGetMin(DPix dpix, DoubleBuffer pminval, IntBuffer pxminloc, IntBuffer pyminloc);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 dpixGetMin(DPIX*, l_float64*, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:1616</i>
+//     */
+//    int dpixGetMin(DPix dpix, DoubleBuffer pminval, IntBuffer pxminloc, IntBuffer pyminloc);
 
-    /**
-     * Original signature :
-     * <code>l_int32 dpixGetMax(DPIX*, l_float64*, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:1618</i>
-     */
-    int dpixGetMax(DPix dpix, DoubleBuffer pmaxval, IntBuffer pxmaxloc, IntBuffer pymaxloc);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 dpixGetMax(DPIX*, l_float64*, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:1618</i>
+//     */
+//    int dpixGetMax(DPix dpix, DoubleBuffer pmaxval, IntBuffer pxmaxloc, IntBuffer pymaxloc);
 
-    /**
-     * Original signature :
-     * <code>FPIX* fpixScaleByInteger(FPIX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1620</i>
-     */
-    FPix fpixScaleByInteger(FPix fpixs, int factor);
+//    /**
+//     * Original signature :
+//     * <code>FPIX* fpixScaleByInteger(FPIX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1620</i>
+//     */
+//    FPix fpixScaleByInteger(FPix fpixs, int factor);
 
-    /**
-     * Original signature :
-     * <code>DPIX* dpixScaleByInteger(DPIX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1622</i>
-     */
-    DPix dpixScaleByInteger(DPix dpixs, int factor);
+//    /**
+//     * Original signature :
+//     * <code>DPIX* dpixScaleByInteger(DPIX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1622</i>
+//     */
+//    DPix dpixScaleByInteger(DPix dpixs, int factor);
 
-    /**
-     * Original signature :
-     * <code>FPIX* fpixLinearCombination(FPIX*, FPIX*, FPIX*, l_float32, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:1624</i>
-     */
-    FPix fpixLinearCombination(FPix fpixd, FPix fpixs1, FPix fpixs2, float a, float b);
+//    /**
+//     * Original signature :
+//     * <code>FPIX* fpixLinearCombination(FPIX*, FPIX*, FPIX*, l_float32, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:1624</i>
+//     */
+//    FPix fpixLinearCombination(FPix fpixd, FPix fpixs1, FPix fpixs2, float a, float b);
 
-    /**
-     * Original signature :
-     * <code>l_int32 fpixAddMultConstant(FPIX*, l_float32, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:1626</i>
-     */
-    int fpixAddMultConstant(FPix fpix, float addc, float multc);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 fpixAddMultConstant(FPIX*, l_float32, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:1626</i>
+//     */
+//    int fpixAddMultConstant(FPix fpix, float addc, float multc);
 
-    /**
-     * Original signature :
-     * <code>DPIX* dpixLinearCombination(DPIX*, DPIX*, DPIX*, l_float32, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:1628</i>
-     */
-    DPix dpixLinearCombination(DPix dpixd, DPix dpixs1, DPix dpixs2, float a, float b);
+//    /**
+//     * Original signature :
+//     * <code>DPIX* dpixLinearCombination(DPIX*, DPIX*, DPIX*, l_float32, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:1628</i>
+//     */
+//    DPix dpixLinearCombination(DPix dpixd, DPix dpixs1, DPix dpixs2, float a, float b);
 
-    /**
-     * Original signature :
-     * <code>l_int32 dpixAddMultConstant(DPIX*, l_float64, l_float64)</code><br>
-     * <i>native declaration : allheaders.h:1630</i>
-     */
-    int dpixAddMultConstant(DPix dpix, double addc, double multc);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 dpixAddMultConstant(DPIX*, l_float64, l_float64)</code><br>
+//     * <i>native declaration : allheaders.h:1630</i>
+//     */
+//    int dpixAddMultConstant(DPix dpix, double addc, double multc);
 
-    /**
-     * Original signature :
-     * <code>l_int32 fpixSetAllArbitrary(FPIX*, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:1632</i>
-     */
-    int fpixSetAllArbitrary(FPix fpix, float inval);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 fpixSetAllArbitrary(FPIX*, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:1632</i>
+//     */
+//    int fpixSetAllArbitrary(FPix fpix, float inval);
 
-    /**
-     * Original signature :
-     * <code>l_int32 dpixSetAllArbitrary(DPIX*, l_float64)</code><br>
-     * <i>native declaration : allheaders.h:1634</i>
-     */
-    int dpixSetAllArbitrary(DPix dpix, double inval);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 dpixSetAllArbitrary(DPIX*, l_float64)</code><br>
+//     * <i>native declaration : allheaders.h:1634</i>
+//     */
+//    int dpixSetAllArbitrary(DPix dpix, double inval);
 
-    /**
-     * Original signature :
-     * <code>FPIX* fpixAddBorder(FPIX*, l_int32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1636</i>
-     */
-    FPix fpixAddBorder(FPix fpixs, int left, int right, int top, int bot);
+//    /**
+//     * Original signature :
+//     * <code>FPIX* fpixAddBorder(FPIX*, l_int32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1636</i>
+//     */
+//    FPix fpixAddBorder(FPix fpixs, int left, int right, int top, int bot);
 
-    /**
-     * Original signature :
-     * <code>FPIX* fpixRemoveBorder(FPIX*, l_int32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1638</i>
-     */
-    FPix fpixRemoveBorder(FPix fpixs, int left, int right, int top, int bot);
+//    /**
+//     * Original signature :
+//     * <code>FPIX* fpixRemoveBorder(FPIX*, l_int32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1638</i>
+//     */
+//    FPix fpixRemoveBorder(FPix fpixs, int left, int right, int top, int bot);
 
-    /**
-     * Original signature :
-     * <code>FPIX* fpixAddMirroredBorder(FPIX*, l_int32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1640</i>
-     */
-    FPix fpixAddMirroredBorder(FPix fpixs, int left, int right, int top, int bot);
+//    /**
+//     * Original signature :
+//     * <code>FPIX* fpixAddMirroredBorder(FPIX*, l_int32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1640</i>
+//     */
+//    FPix fpixAddMirroredBorder(FPix fpixs, int left, int right, int top, int bot);
 
-    /**
-     * Original signature :
-     * <code>FPIX* fpixAddContinuedBorder(FPIX*, l_int32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1642</i>
-     */
-    FPix fpixAddContinuedBorder(FPix fpixs, int left, int right, int top, int bot);
+//    /**
+//     * Original signature :
+//     * <code>FPIX* fpixAddContinuedBorder(FPIX*, l_int32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1642</i>
+//     */
+//    FPix fpixAddContinuedBorder(FPix fpixs, int left, int right, int top, int bot);
 
-    /**
-     * Original signature :
-     * <code>FPIX* fpixAddSlopeBorder(FPIX*, l_int32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1644</i>
-     */
-    FPix fpixAddSlopeBorder(FPix fpixs, int left, int right, int top, int bot);
+//    /**
+//     * Original signature :
+//     * <code>FPIX* fpixAddSlopeBorder(FPIX*, l_int32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1644</i>
+//     */
+//    FPix fpixAddSlopeBorder(FPix fpixs, int left, int right, int top, int bot);
 
-    /**
-     * Original signature :
-     * <code>l_int32 fpixRasterop(FPIX*, l_int32, l_int32, l_int32, l_int32, FPIX*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1646</i>
-     */
-    int fpixRasterop(FPix fpixd, int dx, int dy, int dw, int dh, FPix fpixs, int sx, int sy);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 fpixRasterop(FPIX*, l_int32, l_int32, l_int32, l_int32, FPIX*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1646</i>
+//     */
+//    int fpixRasterop(FPix fpixd, int dx, int dy, int dw, int dh, FPix fpixs, int sx, int sy);
 
-    /**
-     * Original signature :
-     * <code>FPIX* fpixRotateOrth(FPIX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1648</i>
-     */
-    FPix fpixRotateOrth(FPix fpixs, int quads);
+//    /**
+//     * Original signature :
+//     * <code>FPIX* fpixRotateOrth(FPIX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1648</i>
+//     */
+//    FPix fpixRotateOrth(FPix fpixs, int quads);
 
-    /**
-     * Original signature : <code>FPIX* fpixRotate180(FPIX*, FPIX*)</code><br>
-     * <i>native declaration : allheaders.h:1650</i>
-     */
-    FPix fpixRotate180(FPix fpixd, FPix fpixs);
+//    /**
+//     * Original signature : <code>FPIX* fpixRotate180(FPIX*, FPIX*)</code><br>
+//     * <i>native declaration : allheaders.h:1650</i>
+//     */
+//    FPix fpixRotate180(FPix fpixd, FPix fpixs);
 
-    /**
-     * Original signature : <code>FPIX* fpixRotate90(FPIX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1652</i>
-     */
-    FPix fpixRotate90(FPix fpixs, int direction);
+//    /**
+//     * Original signature : <code>FPIX* fpixRotate90(FPIX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1652</i>
+//     */
+//    FPix fpixRotate90(FPix fpixs, int direction);
 
-    /**
-     * Original signature : <code>FPIX* fpixFlipLR(FPIX*, FPIX*)</code><br>
-     * <i>native declaration : allheaders.h:1654</i>
-     */
-    FPix fpixFlipLR(FPix fpixd, FPix fpixs);
+//    /**
+//     * Original signature : <code>FPIX* fpixFlipLR(FPIX*, FPIX*)</code><br>
+//     * <i>native declaration : allheaders.h:1654</i>
+//     */
+//    FPix fpixFlipLR(FPix fpixd, FPix fpixs);
 
-    /**
-     * Original signature : <code>FPIX* fpixFlipTB(FPIX*, FPIX*)</code><br>
-     * <i>native declaration : allheaders.h:1656</i>
-     */
-    FPix fpixFlipTB(FPix fpixd, FPix fpixs);
+//    /**
+//     * Original signature : <code>FPIX* fpixFlipTB(FPIX*, FPIX*)</code><br>
+//     * <i>native declaration : allheaders.h:1656</i>
+//     */
+//    FPix fpixFlipTB(FPix fpixd, FPix fpixs);
 
-    /**
-     * Original signature :
-     * <code>FPIX* fpixAffinePta(FPIX*, PTA*, PTA*, l_int32, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:1658</i>
-     */
-    FPix fpixAffinePta(FPix fpixs, Pta ptad, Pta ptas, int border, float inval);
+//    /**
+//     * Original signature :
+//     * <code>FPIX* fpixAffinePta(FPIX*, PTA*, PTA*, l_int32, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:1658</i>
+//     */
+//    FPix fpixAffinePta(FPix fpixs, Pta ptad, Pta ptas, int border, float inval);
 
-    /**
-     * Original signature :
-     * <code>FPIX* fpixAffine(FPIX*, l_float32*, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:1660</i>
-     */
-    FPix fpixAffine(FPix fpixs, FloatBuffer vc, float inval);
+//    /**
+//     * Original signature :
+//     * <code>FPIX* fpixAffine(FPIX*, l_float32*, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:1660</i>
+//     */
+//    FPix fpixAffine(FPix fpixs, FloatBuffer vc, float inval);
 
-    /**
-     * Original signature :
-     * <code>FPIX* fpixProjectivePta(FPIX*, PTA*, PTA*, l_int32, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:1662</i>
-     */
-    FPix fpixProjectivePta(FPix fpixs, Pta ptad, Pta ptas, int border, float inval);
+//    /**
+//     * Original signature :
+//     * <code>FPIX* fpixProjectivePta(FPIX*, PTA*, PTA*, l_int32, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:1662</i>
+//     */
+//    FPix fpixProjectivePta(FPix fpixs, Pta ptad, Pta ptas, int border, float inval);
 
-    /**
-     * Original signature :
-     * <code>FPIX* fpixProjective(FPIX*, l_float32*, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:1664</i>
-     */
-    FPix fpixProjective(FPix fpixs, FloatBuffer vc, float inval);
+//    /**
+//     * Original signature :
+//     * <code>FPIX* fpixProjective(FPIX*, l_float32*, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:1664</i>
+//     */
+//    FPix fpixProjective(FPix fpixs, FloatBuffer vc, float inval);
 
     /**
      * Original signature :
@@ -5892,71 +5892,71 @@ public interface Leptonica extends Library, ILeptonica {
      */
     int pixWriteMemGif(PointerByReference pdata, NativeSizeByReference psize, Pix pix);
 
-    /**
-     * Original signature :
-     * <code>GPLOT* gplotCreate(const char*, l_int32, const char*, const char*, const char*)</code><br>
-     * <i>native declaration : allheaders.h:1680</i>
-     */
-    GPlot gplotCreate(String rootname, int outformat, String title, String xlabel, String ylabel);
+//    /**
+//     * Original signature :
+//     * <code>GPLOT* gplotCreate(const char*, l_int32, const char*, const char*, const char*)</code><br>
+//     * <i>native declaration : allheaders.h:1680</i>
+//     */
+//    GPlot gplotCreate(String rootname, int outformat, String title, String xlabel, String ylabel);
 
-    /**
-     * Original signature : <code>void gplotDestroy(GPLOT**)</code><br>
-     * <i>native declaration : allheaders.h:1682</i>
-     */
-    void gplotDestroy(PointerByReference pgplot);
+//    /**
+//     * Original signature : <code>void gplotDestroy(GPLOT**)</code><br>
+//     * <i>native declaration : allheaders.h:1682</i>
+//     */
+//    void gplotDestroy(PointerByReference pgplot);
 
-    /**
-     * Original signature :
-     * <code>l_int32 gplotAddPlot(GPLOT*, NUMA*, NUMA*, l_int32, const char*)</code><br>
-     * <i>native declaration : allheaders.h:1684</i>
-     */
-    int gplotAddPlot(GPlot gplot, Numa nax, Numa nay, int plotstyle, String plottitle);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 gplotAddPlot(GPLOT*, NUMA*, NUMA*, l_int32, const char*)</code><br>
+//     * <i>native declaration : allheaders.h:1684</i>
+//     */
+//    int gplotAddPlot(GPlot gplot, Numa nax, Numa nay, int plotstyle, String plottitle);
 
-    /**
-     * Original signature :
-     * <code>l_int32 gplotSetScaling(GPLOT*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1686</i>
-     */
-    int gplotSetScaling(GPlot gplot, int scaling);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 gplotSetScaling(GPLOT*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1686</i>
+//     */
+//    int gplotSetScaling(GPlot gplot, int scaling);
 
-    /**
-     * Original signature : <code>l_int32 gplotMakeOutput(GPLOT*)</code><br>
-     * <i>native declaration : allheaders.h:1688</i>
-     */
-    int gplotMakeOutput(GPlot gplot);
+//    /**
+//     * Original signature : <code>l_int32 gplotMakeOutput(GPLOT*)</code><br>
+//     * <i>native declaration : allheaders.h:1688</i>
+//     */
+//    int gplotMakeOutput(GPlot gplot);
 
-    /**
-     * Original signature : <code>l_int32 gplotGenCommandFile(GPLOT*)</code><br>
-     * <i>native declaration : allheaders.h:1690</i>
-     */
-    int gplotGenCommandFile(GPlot gplot);
+//    /**
+//     * Original signature : <code>l_int32 gplotGenCommandFile(GPLOT*)</code><br>
+//     * <i>native declaration : allheaders.h:1690</i>
+//     */
+//    int gplotGenCommandFile(GPlot gplot);
 
-    /**
-     * Original signature : <code>l_int32 gplotGenDataFiles(GPLOT*)</code><br>
-     * <i>native declaration : allheaders.h:1692</i>
-     */
-    int gplotGenDataFiles(GPlot gplot);
+//    /**
+//     * Original signature : <code>l_int32 gplotGenDataFiles(GPLOT*)</code><br>
+//     * <i>native declaration : allheaders.h:1692</i>
+//     */
+//    int gplotGenDataFiles(GPlot gplot);
 
-    /**
-     * Original signature :
-     * <code>l_int32 gplotSimple1(NUMA*, l_int32, const char*, const char*)</code><br>
-     * <i>native declaration : allheaders.h:1694</i>
-     */
-    int gplotSimple1(Numa na, int outformat, String outroot, String title);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 gplotSimple1(NUMA*, l_int32, const char*, const char*)</code><br>
+//     * <i>native declaration : allheaders.h:1694</i>
+//     */
+//    int gplotSimple1(Numa na, int outformat, String outroot, String title);
 
-    /**
-     * Original signature :
-     * <code>l_int32 gplotSimple2(NUMA*, NUMA*, l_int32, const char*, const char*)</code><br>
-     * <i>native declaration : allheaders.h:1696</i>
-     */
-    int gplotSimple2(Numa na1, Numa na2, int outformat, String outroot, String title);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 gplotSimple2(NUMA*, NUMA*, l_int32, const char*, const char*)</code><br>
+//     * <i>native declaration : allheaders.h:1696</i>
+//     */
+//    int gplotSimple2(Numa na1, Numa na2, int outformat, String outroot, String title);
 
-    /**
-     * Original signature :
-     * <code>l_int32 gplotSimpleN(NUMAA*, l_int32, const char*, const char*)</code><br>
-     * <i>native declaration : allheaders.h:1698</i>
-     */
-    int gplotSimpleN(Numaa naa, int outformat, String outroot, String title);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 gplotSimpleN(NUMAA*, l_int32, const char*, const char*)</code><br>
+//     * <i>native declaration : allheaders.h:1698</i>
+//     */
+//    int gplotSimpleN(Numaa naa, int outformat, String outroot, String title);
 
     /**
      * Original signature :
@@ -5979,79 +5979,79 @@ public interface Leptonica extends Library, ILeptonica {
      */
     int gplotSimpleXYN(Numa nax, Numaa naay, int plotstyle, int outformat, String outroot, String title);
 
-    /**
-     * Original signature : <code>GPLOT* gplotRead(const char*)</code><br>
-     * <i>native declaration : allheaders.h:1706</i>
-     */
-    GPlot gplotRead(String filename);
+//    /**
+//     * Original signature : <code>GPLOT* gplotRead(const char*)</code><br>
+//     * <i>native declaration : allheaders.h:1706</i>
+//     */
+//    GPlot gplotRead(String filename);
 
-    /**
-     * Original signature :
-     * <code>l_int32 gplotWrite(const char*, GPLOT*)</code><br>
-     * <i>native declaration : allheaders.h:1708</i>
-     */
-    int gplotWrite(String filename, GPlot gplot);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 gplotWrite(const char*, GPLOT*)</code><br>
+//     * <i>native declaration : allheaders.h:1708</i>
+//     */
+//    int gplotWrite(String filename, GPlot gplot);
 
-    /**
-     * Original signature :
-     * <code>PTA* generatePtaLine(l_int32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1710</i>
-     */
-    Pta generatePtaLine(int x1, int y1, int x2, int y2);
+//    /**
+//     * Original signature :
+//     * <code>PTA* generatePtaLine(l_int32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1710</i>
+//     */
+//    Pta generatePtaLine(int x1, int y1, int x2, int y2);
 
-    /**
-     * Original signature :
-     * <code>PTA* generatePtaWideLine(l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1712</i>
-     */
-    Pta generatePtaWideLine(int x1, int y1, int x2, int y2, int width);
+//    /**
+//     * Original signature :
+//     * <code>PTA* generatePtaWideLine(l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1712</i>
+//     */
+//    Pta generatePtaWideLine(int x1, int y1, int x2, int y2, int width);
 
-    /**
-     * Original signature : <code>PTA* generatePtaBox(BOX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1714</i>
-     */
-    Pta generatePtaBox(Box box, int width);
+//    /**
+//     * Original signature : <code>PTA* generatePtaBox(BOX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1714</i>
+//     */
+//    Pta generatePtaBox(Box box, int width);
 
-    /**
-     * Original signature :
-     * <code>PTA* generatePtaBoxa(BOXA*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1716</i>
-     */
-    Pta generatePtaBoxa(Boxa boxa, int width, int removedups);
+//    /**
+//     * Original signature :
+//     * <code>PTA* generatePtaBoxa(BOXA*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1716</i>
+//     */
+//    Pta generatePtaBoxa(Boxa boxa, int width, int removedups);
 
-    /**
-     * Original signature :
-     * <code>PTA* generatePtaHashBox(BOX*, l_int32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1718</i>
-     */
-    Pta generatePtaHashBox(Box box, int spacing, int width, int orient, int outline);
+//    /**
+//     * Original signature :
+//     * <code>PTA* generatePtaHashBox(BOX*, l_int32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1718</i>
+//     */
+//    Pta generatePtaHashBox(Box box, int spacing, int width, int orient, int outline);
 
-    /**
-     * Original signature :
-     * <code>PTA* generatePtaHashBoxa(BOXA*, l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1720</i>
-     */
-    Pta generatePtaHashBoxa(Boxa boxa, int spacing, int width, int orient, int outline, int removedups);
+//    /**
+//     * Original signature :
+//     * <code>PTA* generatePtaHashBoxa(BOXA*, l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1720</i>
+//     */
+//    Pta generatePtaHashBoxa(Boxa boxa, int spacing, int width, int orient, int outline, int removedups);
 
-    /**
-     * Original signature : <code>PTAA* generatePtaaBoxa(BOXA*)</code><br>
-     * <i>native declaration : allheaders.h:1722</i>
-     */
-    Ptaa generatePtaaBoxa(Boxa boxa);
+//    /**
+//     * Original signature : <code>PTAA* generatePtaaBoxa(BOXA*)</code><br>
+//     * <i>native declaration : allheaders.h:1722</i>
+//     */
+//    Ptaa generatePtaaBoxa(Boxa boxa);
 
-    /**
-     * Original signature :
-     * <code>PTAA* generatePtaaHashBoxa(BOXA*, l_int32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1724</i>
-     */
-    Ptaa generatePtaaHashBoxa(Boxa boxa, int spacing, int width, int orient, int outline);
+//    /**
+//     * Original signature :
+//     * <code>PTAA* generatePtaaHashBoxa(BOXA*, l_int32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1724</i>
+//     */
+//    Ptaa generatePtaaHashBoxa(Boxa boxa, int spacing, int width, int orient, int outline);
 
-    /**
-     * Original signature :
-     * <code>PTA* generatePtaPolyline(PTA*, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1726</i>
-     */
-    Pta generatePtaPolyline(Pta ptas, int width, int closeflag, int removedups);
+//    /**
+//     * Original signature :
+//     * <code>PTA* generatePtaPolyline(PTA*, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1726</i>
+//     */
+//    Pta generatePtaPolyline(Pta ptas, int width, int closeflag, int removedups);
 
     /**
      * Original signature :
@@ -6060,88 +6060,88 @@ public interface Leptonica extends Library, ILeptonica {
      */
     Pta generatePtaGrid(int w, int h, int nx, int ny, int width);
 
-    /**
-     * Original signature : <code>PTA* convertPtaLineTo4cc(PTA*)</code><br>
-     * <i>native declaration : allheaders.h:1730</i>
-     */
-    Pta convertPtaLineTo4cc(Pta ptas);
+//    /**
+//     * Original signature : <code>PTA* convertPtaLineTo4cc(PTA*)</code><br>
+//     * <i>native declaration : allheaders.h:1730</i>
+//     */
+//    Pta convertPtaLineTo4cc(Pta ptas);
 
-    /**
-     * Original signature :
-     * <code>PTA* generatePtaFilledCircle(l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1732</i>
-     */
-    Pta generatePtaFilledCircle(int radius);
+//    /**
+//     * Original signature :
+//     * <code>PTA* generatePtaFilledCircle(l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1732</i>
+//     */
+//    Pta generatePtaFilledCircle(int radius);
 
-    /**
-     * Original signature :
-     * <code>PTA* generatePtaFilledSquare(l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1734</i>
-     */
-    Pta generatePtaFilledSquare(int side);
+//    /**
+//     * Original signature :
+//     * <code>PTA* generatePtaFilledSquare(l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1734</i>
+//     */
+//    Pta generatePtaFilledSquare(int side);
 
-    /**
-     * Original signature :
-     * <code>PTA* generatePtaLineFromPt(l_int32, l_int32, l_float64, l_float64)</code><br>
-     * <i>native declaration : allheaders.h:1736</i>
-     */
-    Pta generatePtaLineFromPt(int x, int y, double length, double radang);
+//    /**
+//     * Original signature :
+//     * <code>PTA* generatePtaLineFromPt(l_int32, l_int32, l_float64, l_float64)</code><br>
+//     * <i>native declaration : allheaders.h:1736</i>
+//     */
+//    Pta generatePtaLineFromPt(int x, int y, double length, double radang);
 
-    /**
-     * Original signature :
-     * <code>l_int32 locatePtRadially(l_int32, l_int32, l_float64, l_float64, l_float64*, l_float64*)</code><br>
-     * <i>native declaration : allheaders.h:1738</i>
-     */
-    int locatePtRadially(int xr, int yr, double dist, double radang, DoubleBuffer px, DoubleBuffer py);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 locatePtRadially(l_int32, l_int32, l_float64, l_float64, l_float64*, l_float64*)</code><br>
+//     * <i>native declaration : allheaders.h:1738</i>
+//     */
+//    int locatePtRadially(int xr, int yr, double dist, double radang, DoubleBuffer px, DoubleBuffer py);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixRenderPlotFromNuma(PIX**, NUMA*, l_int32, l_int32, l_int32, l_uint32)</code><br>
-     * <i>native declaration : allheaders.h:1740</i>
-     */
-    int pixRenderPlotFromNuma(PointerByReference ppix, Numa na, int plotloc, int linewidth, int max, int color);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixRenderPlotFromNuma(PIX**, NUMA*, l_int32, l_int32, l_int32, l_uint32)</code><br>
+//     * <i>native declaration : allheaders.h:1740</i>
+//     */
+//    int pixRenderPlotFromNuma(PointerByReference ppix, Numa na, int plotloc, int linewidth, int max, int color);
 
-    /**
-     * Original signature :
-     * <code>PTA* makePlotPtaFromNuma(NUMA*, l_int32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1742</i>
-     */
-    Pta makePlotPtaFromNuma(Numa na, int size, int plotloc, int linewidth, int max);
+//    /**
+//     * Original signature :
+//     * <code>PTA* makePlotPtaFromNuma(NUMA*, l_int32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1742</i>
+//     */
+//    Pta makePlotPtaFromNuma(Numa na, int size, int plotloc, int linewidth, int max);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixRenderPlotFromNumaGen(PIX**, NUMA*, l_int32, l_int32, l_int32, l_int32, l_int32, l_uint32)</code><br>
-     * <i>native declaration : allheaders.h:1744</i>
-     */
-    int pixRenderPlotFromNumaGen(PointerByReference ppix, Numa na, int orient, int linewidth, int refpos, int max, int drawref, int color);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixRenderPlotFromNumaGen(PIX**, NUMA*, l_int32, l_int32, l_int32, l_int32, l_int32, l_uint32)</code><br>
+//     * <i>native declaration : allheaders.h:1744</i>
+//     */
+//    int pixRenderPlotFromNumaGen(PointerByReference ppix, Numa na, int orient, int linewidth, int refpos, int max, int drawref, int color);
 
-    /**
-     * Original signature :
-     * <code>PTA* makePlotPtaFromNumaGen(NUMA*, l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1746</i>
-     */
-    Pta makePlotPtaFromNumaGen(Numa na, int orient, int linewidth, int refpos, int max, int drawref);
+//    /**
+//     * Original signature :
+//     * <code>PTA* makePlotPtaFromNumaGen(NUMA*, l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1746</i>
+//     */
+//    Pta makePlotPtaFromNumaGen(Numa na, int orient, int linewidth, int refpos, int max, int drawref);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixRenderPta(PIX*, PTA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1748</i>
-     */
-    int pixRenderPta(Pix pix, Pta pta, int op);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixRenderPta(PIX*, PTA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1748</i>
+//     */
+//    int pixRenderPta(Pix pix, Pta pta, int op);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixRenderPtaArb(PIX*, PTA*, l_uint8, l_uint8, l_uint8)</code><br>
-     * <i>native declaration : allheaders.h:1750</i>
-     */
-    int pixRenderPtaArb(Pix pix, Pta pta, byte rval, byte gval, byte bval);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixRenderPtaArb(PIX*, PTA*, l_uint8, l_uint8, l_uint8)</code><br>
+//     * <i>native declaration : allheaders.h:1750</i>
+//     */
+//    int pixRenderPtaArb(Pix pix, Pta pta, byte rval, byte gval, byte bval);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixRenderPtaBlend(PIX*, PTA*, l_uint8, l_uint8, l_uint8, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:1752</i>
-     */
-    int pixRenderPtaBlend(Pix pix, Pta pta, byte rval, byte gval, byte bval, float fract);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixRenderPtaBlend(PIX*, PTA*, l_uint8, l_uint8, l_uint8, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:1752</i>
+//     */
+//    int pixRenderPtaBlend(Pix pix, Pta pta, byte rval, byte gval, byte bval, float fract);
 
     /**
      * Original signature :
@@ -6484,82 +6484,82 @@ public interface Leptonica extends Library, ILeptonica {
      */
     Pix pixThresholdGrayArb(Pix pixs, String edgevals, int outdepth, int use_average, int setblack, int setwhite);
 
-    /**
-     * Original signature :
-     * <code>l_int32* makeGrayQuantIndexTable(l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1852</i>
-     */
-    IntByReference makeGrayQuantIndexTable(int nlevels);
+//    /**
+//     * Original signature :
+//     * <code>l_int32* makeGrayQuantIndexTable(l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1852</i>
+//     */
+//    IntByReference makeGrayQuantIndexTable(int nlevels);
 
-    /**
-     * Original signature :
-     * <code>l_int32* makeGrayQuantTargetTable(l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1854</i>
-     */
-    IntByReference makeGrayQuantTargetTable(int nlevels, int depth);
+//    /**
+//     * Original signature :
+//     * <code>l_int32* makeGrayQuantTargetTable(l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1854</i>
+//     */
+//    IntByReference makeGrayQuantTargetTable(int nlevels, int depth);
 
-    /**
-     * Original signature :
-     * <code>l_int32 makeGrayQuantTableArb(NUMA*, l_int32, l_int32**, PIXCMAP**)</code><br>
-     * <i>native declaration : allheaders.h:1856</i>
-     */
-    int makeGrayQuantTableArb(Numa na, int outdepth, PointerByReference ptab, PointerByReference pcmap);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 makeGrayQuantTableArb(NUMA*, l_int32, l_int32**, PIXCMAP**)</code><br>
+//     * <i>native declaration : allheaders.h:1856</i>
+//     */
+//    int makeGrayQuantTableArb(Numa na, int outdepth, PointerByReference ptab, PointerByReference pcmap);
 
-    /**
-     * Original signature :
-     * <code>l_int32 makeGrayQuantColormapArb(PIX*, l_int32*, l_int32, PIXCMAP**)</code><br>
-     * <i>native declaration : allheaders.h:1858</i>
-     */
-    int makeGrayQuantColormapArb(Pix pixs, IntBuffer tab, int outdepth, PointerByReference pcmap);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 makeGrayQuantColormapArb(PIX*, l_int32*, l_int32, PIXCMAP**)</code><br>
+//     * <i>native declaration : allheaders.h:1858</i>
+//     */
+//    int makeGrayQuantColormapArb(Pix pixs, IntBuffer tab, int outdepth, PointerByReference pcmap);
 
-    /**
-     * Original signature :
-     * <code>l_int32 makeGrayQuantColormapArb(PIX*, l_int32*, l_int32, PIXCMAP**)</code><br>
-     * <i>native declaration : allheaders.h:1858</i>
-     */
-    int makeGrayQuantColormapArb(Pix pixs, IntByReference tab, int outdepth, PointerByReference pcmap);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 makeGrayQuantColormapArb(PIX*, l_int32*, l_int32, PIXCMAP**)</code><br>
+//     * <i>native declaration : allheaders.h:1858</i>
+//     */
+//    int makeGrayQuantColormapArb(Pix pixs, IntByReference tab, int outdepth, PointerByReference pcmap);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixGenerateMaskByBand32(PIX*, l_uint32, l_int32, l_int32, l_float32, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:1860</i>
-     */
-    Pix pixGenerateMaskByBand32(Pix pixs, int refval, int delm, int delp, float fractm, float fractp);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixGenerateMaskByBand32(PIX*, l_uint32, l_int32, l_int32, l_float32, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:1860</i>
+//     */
+//    Pix pixGenerateMaskByBand32(Pix pixs, int refval, int delm, int delp, float fractm, float fractp);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixGenerateMaskByDiscr32(PIX*, l_uint32, l_uint32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1862</i>
-     */
-    Pix pixGenerateMaskByDiscr32(Pix pixs, int refval1, int refval2, int distflag);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixGenerateMaskByDiscr32(PIX*, l_uint32, l_uint32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1862</i>
+//     */
+//    Pix pixGenerateMaskByDiscr32(Pix pixs, int refval1, int refval2, int distflag);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixGrayQuantFromHisto(PIX*, PIX*, PIX*, l_float32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1864</i>
-     */
-    Pix pixGrayQuantFromHisto(Pix pixd, Pix pixs, Pix pixm, float minfract, int maxsize);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixGrayQuantFromHisto(PIX*, PIX*, PIX*, l_float32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1864</i>
+//     */
+//    Pix pixGrayQuantFromHisto(Pix pixd, Pix pixs, Pix pixm, float minfract, int maxsize);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixGrayQuantFromCmap(PIX*, PIXCMAP*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1866</i>
-     */
-    Pix pixGrayQuantFromCmap(Pix pixs, PixColormap cmap, int mindepth);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixGrayQuantFromCmap(PIX*, PIXCMAP*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1866</i>
+//     */
+//    Pix pixGrayQuantFromCmap(Pix pixs, PixColormap cmap, int mindepth);
 
-    /**
-     * Original signature :
-     * <code>void ditherToBinaryLow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_uint32*, l_uint32*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1868</i>
-     */
-    void ditherToBinaryLow(IntBuffer datad, int w, int h, int wpld, IntBuffer datas, int wpls, IntBuffer bufs1, IntBuffer bufs2, int lowerclip, int upperclip);
+//    /**
+//     * Original signature :
+//     * <code>void ditherToBinaryLow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_uint32*, l_uint32*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1868</i>
+//     */
+//    void ditherToBinaryLow(IntBuffer datad, int w, int h, int wpld, IntBuffer datas, int wpls, IntBuffer bufs1, IntBuffer bufs2, int lowerclip, int upperclip);
 
-    /**
-     * Original signature :
-     * <code>void ditherToBinaryLineLow(l_uint32*, l_int32, l_uint32*, l_uint32*, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1870</i>
-     */
-    void ditherToBinaryLineLow(IntBuffer lined, int w, IntBuffer bufs1, IntBuffer bufs2, int lowerclip, int upperclip, int lastlineflag);
+//    /**
+//     * Original signature :
+//     * <code>void ditherToBinaryLineLow(l_uint32*, l_int32, l_uint32*, l_uint32*, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:1870</i>
+//     */
+//    void ditherToBinaryLineLow(IntBuffer lined, int w, IntBuffer bufs1, IntBuffer bufs2, int lowerclip, int upperclip, int lastlineflag);
 
     /**
      * Original signature :
@@ -7892,185 +7892,185 @@ public interface Leptonica extends Library, ILeptonica {
      */
     Pix pixColorMorphSequence(Pix pixs, String sequence, int dispsep, int dispy);
 
-    /**
-     * Original signature : <code>NUMA* numaCreate(l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2254</i>
-     */
-    Numa numaCreate(int n);
-
-    /**
-     * Original signature :
-     * <code>NUMA* numaCreateFromIArray(l_int32*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2256</i>
-     */
-    Numa numaCreateFromIArray(IntBuffer iarray, int size);
-
-    /**
-     * Original signature :
-     * <code>NUMA* numaCreateFromFArray(l_float32*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2258</i>
-     */
-    Numa numaCreateFromFArray(FloatBuffer farray, int size, int copyflag);
-
-    /**
-     * Original signature :
-     * <code>NUMA* numaCreateFromString(const char*)</code><br>
-     * <i>native declaration : allheaders.h:2260</i>
-     */
-    Numa numaCreateFromString(String str);
-
-    /**
-     * Original signature : <code>void numaDestroy(NUMA**)</code><br>
-     * <i>native declaration : allheaders.h:2262</i>
-     */
-    void numaDestroy(PointerByReference pna);
-
-    /**
-     * Original signature : <code>NUMA* numaCopy(NUMA*)</code><br>
-     * <i>native declaration : allheaders.h:2264</i>
-     */
-    Numa numaCopy(Numa na);
-
-    /**
-     * Original signature : <code>NUMA* numaClone(NUMA*)</code><br>
-     * <i>native declaration : allheaders.h:2266</i>
-     */
-    Numa numaClone(Numa na);
-
-    /**
-     * Original signature : <code>l_int32 numaEmpty(NUMA*)</code><br>
-     * <i>native declaration : allheaders.h:2268</i>
-     */
-    int numaEmpty(Numa na);
-
-    /**
-     * Original signature :
-     * <code>l_int32 numaAddNumber(NUMA*, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:2270</i>
-     */
-    int numaAddNumber(Numa na, float val);
-
-    /**
-     * Original signature :
-     * <code>l_int32 numaInsertNumber(NUMA*, l_int32, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:2272</i>
-     */
-    int numaInsertNumber(Numa na, int index, float val);
-
-    /**
-     * Original signature :
-     * <code>l_int32 numaRemoveNumber(NUMA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2274</i>
-     */
-    int numaRemoveNumber(Numa na, int index);
-
-    /**
-     * Original signature :
-     * <code>l_int32 numaReplaceNumber(NUMA*, l_int32, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:2276</i>
-     */
-    int numaReplaceNumber(Numa na, int index, float val);
-
-    /**
-     * Original signature : <code>l_int32 numaGetCount(NUMA*)</code><br>
-     * <i>native declaration : allheaders.h:2278</i>
-     */
-    int numaGetCount(Numa na);
-
-    /**
-     * Original signature :
-     * <code>l_int32 numaSetCount(NUMA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2280</i>
-     */
-    int numaSetCount(Numa na, int newcount);
-
-    /**
-     * Original signature :
-     * <code>l_int32 numaGetFValue(NUMA*, l_int32, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:2282</i>
-     */
-    int numaGetFValue(Numa na, int index, FloatBuffer pval);
-
-    /**
-     * Original signature :
-     * <code>l_int32 numaGetIValue(NUMA*, l_int32, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:2284</i>
-     */
-    int numaGetIValue(Numa na, int index, IntBuffer pival);
-
-    /**
-     * Original signature :
-     * <code>l_int32 numaSetValue(NUMA*, l_int32, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:2286</i>
-     */
-    int numaSetValue(Numa na, int index, float val);
-
-    /**
-     * Original signature :
-     * <code>l_int32 numaShiftValue(NUMA*, l_int32, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:2288</i>
-     */
-    int numaShiftValue(Numa na, int index, float diff);
-
-    /**
-     * Original signature : <code>l_int32* numaGetIArray(NUMA*)</code><br>
-     * <i>native declaration : allheaders.h:2290</i>
-     */
-    IntByReference numaGetIArray(Numa na);
-
-    /**
-     * Original signature :
-     * <code>l_float32* numaGetFArray(NUMA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2292</i>
-     */
-    FloatByReference numaGetFArray(Numa na, int copyflag);
-
-    /**
-     * Original signature : <code>l_int32 numaGetRefcount(NUMA*)</code><br>
-     * <i>native declaration : allheaders.h:2294</i>
-     */
-    int numaGetRefcount(Numa na);
-
-    /**
-     * Original signature :
-     * <code>l_int32 numaChangeRefcount(NUMA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2296</i>
-     */
-    int numaChangeRefcount(Numa na, int delta);
-
-    /**
-     * Original signature :
-     * <code>l_int32 numaGetParameters(NUMA*, l_float32*, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:2298</i>
-     */
-    int numaGetParameters(Numa na, FloatBuffer pstartx, FloatBuffer pdelx);
-
-    /**
-     * Original signature :
-     * <code>l_int32 numaSetParameters(NUMA*, l_float32, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:2300</i>
-     */
-    int numaSetParameters(Numa na, float startx, float delx);
-
-    /**
-     * Original signature :
-     * <code>l_int32 numaCopyParameters(NUMA*, NUMA*)</code><br>
-     * <i>native declaration : allheaders.h:2302</i>
-     */
-    int numaCopyParameters(Numa nad, Numa nas);
-
-    /**
-     * Original signature :
-     * <code>SARRAY* numaConvertToSarray(NUMA*, l_int32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2304</i>
-     */
-    Sarray numaConvertToSarray(Numa na, int size1, int size2, int addzeros, int type);
-
-    /**
-     * Original signature : <code>NUMA* numaRead(const char*)</code><br>
-     * <i>native declaration : allheaders.h:2306</i>
-     */
-    Numa numaRead(String filename);
+//    /**
+//     * Original signature : <code>NUMA* numaCreate(l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2254</i>
+//     */
+//    Numa numaCreate(int n);
+//
+//    /**
+//     * Original signature :
+//     * <code>NUMA* numaCreateFromIArray(l_int32*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2256</i>
+//     */
+//    Numa numaCreateFromIArray(IntBuffer iarray, int size);
+//
+//    /**
+//     * Original signature :
+//     * <code>NUMA* numaCreateFromFArray(l_float32*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2258</i>
+//     */
+//    Numa numaCreateFromFArray(FloatBuffer farray, int size, int copyflag);
+//
+//    /**
+//     * Original signature :
+//     * <code>NUMA* numaCreateFromString(const char*)</code><br>
+//     * <i>native declaration : allheaders.h:2260</i>
+//     */
+//    Numa numaCreateFromString(String str);
+//
+//    /**
+//     * Original signature : <code>void numaDestroy(NUMA**)</code><br>
+//     * <i>native declaration : allheaders.h:2262</i>
+//     */
+//    void numaDestroy(PointerByReference pna);
+//
+//    /**
+//     * Original signature : <code>NUMA* numaCopy(NUMA*)</code><br>
+//     * <i>native declaration : allheaders.h:2264</i>
+//     */
+//    Numa numaCopy(Numa na);
+//
+//    /**
+//     * Original signature : <code>NUMA* numaClone(NUMA*)</code><br>
+//     * <i>native declaration : allheaders.h:2266</i>
+//     */
+//    Numa numaClone(Numa na);
+//
+//    /**
+//     * Original signature : <code>l_int32 numaEmpty(NUMA*)</code><br>
+//     * <i>native declaration : allheaders.h:2268</i>
+//     */
+//    int numaEmpty(Numa na);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaAddNumber(NUMA*, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:2270</i>
+//     */
+//    int numaAddNumber(Numa na, float val);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaInsertNumber(NUMA*, l_int32, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:2272</i>
+//     */
+//    int numaInsertNumber(Numa na, int index, float val);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaRemoveNumber(NUMA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2274</i>
+//     */
+//    int numaRemoveNumber(Numa na, int index);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaReplaceNumber(NUMA*, l_int32, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:2276</i>
+//     */
+//    int numaReplaceNumber(Numa na, int index, float val);
+//
+//    /**
+//     * Original signature : <code>l_int32 numaGetCount(NUMA*)</code><br>
+//     * <i>native declaration : allheaders.h:2278</i>
+//     */
+//    int numaGetCount(Numa na);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaSetCount(NUMA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2280</i>
+//     */
+//    int numaSetCount(Numa na, int newcount);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaGetFValue(NUMA*, l_int32, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:2282</i>
+//     */
+//    int numaGetFValue(Numa na, int index, FloatBuffer pval);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaGetIValue(NUMA*, l_int32, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:2284</i>
+//     */
+//    int numaGetIValue(Numa na, int index, IntBuffer pival);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaSetValue(NUMA*, l_int32, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:2286</i>
+//     */
+//    int numaSetValue(Numa na, int index, float val);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaShiftValue(NUMA*, l_int32, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:2288</i>
+//     */
+//    int numaShiftValue(Numa na, int index, float diff);
+//
+//    /**
+//     * Original signature : <code>l_int32* numaGetIArray(NUMA*)</code><br>
+//     * <i>native declaration : allheaders.h:2290</i>
+//     */
+//    IntByReference numaGetIArray(Numa na);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_float32* numaGetFArray(NUMA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2292</i>
+//     */
+//    FloatByReference numaGetFArray(Numa na, int copyflag);
+//
+//    /**
+//     * Original signature : <code>l_int32 numaGetRefcount(NUMA*)</code><br>
+//     * <i>native declaration : allheaders.h:2294</i>
+//     */
+//    int numaGetRefcount(Numa na);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaChangeRefcount(NUMA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2296</i>
+//     */
+//    int numaChangeRefcount(Numa na, int delta);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaGetParameters(NUMA*, l_float32*, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:2298</i>
+//     */
+//    int numaGetParameters(Numa na, FloatBuffer pstartx, FloatBuffer pdelx);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaSetParameters(NUMA*, l_float32, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:2300</i>
+//     */
+//    int numaSetParameters(Numa na, float startx, float delx);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaCopyParameters(NUMA*, NUMA*)</code><br>
+//     * <i>native declaration : allheaders.h:2302</i>
+//     */
+//    int numaCopyParameters(Numa nad, Numa nas);
+//
+//    /**
+//     * Original signature :
+//     * <code>SARRAY* numaConvertToSarray(NUMA*, l_int32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2304</i>
+//     */
+//    Sarray numaConvertToSarray(Numa na, int size1, int size2, int addzeros, int type);
+//
+//    /**
+//     * Original signature : <code>NUMA* numaRead(const char*)</code><br>
+//     * <i>native declaration : allheaders.h:2306</i>
+//     */
+//    Numa numaRead(String filename);
 
 //    /**
 //     * Original signature : <code>NUMA* numaReadStream(FILE*)</code><br>
@@ -8143,45 +8143,45 @@ public interface Leptonica extends Library, ILeptonica {
      */
     int numaaGetNumberCount(Numaa naa);
 
-    /**
-     * Original signature : <code>NUMA** numaaGetPtrArray(NUMAA*)</code><br>
-     * <i>native declaration : allheaders.h:2330</i>
-     */
-    PointerByReference numaaGetPtrArray(Numaa naa);
+//    /**
+//     * Original signature : <code>NUMA** numaaGetPtrArray(NUMAA*)</code><br>
+//     * <i>native declaration : allheaders.h:2330</i>
+//     */
+//    PointerByReference numaaGetPtrArray(Numaa naa);
 
-    /**
-     * Original signature :
-     * <code>NUMA* numaaGetNuma(NUMAA*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2332</i>
-     */
-    Numa numaaGetNuma(Numaa naa, int index, int accessflag);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* numaaGetNuma(NUMAA*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2332</i>
+//     */
+//    Numa numaaGetNuma(Numaa naa, int index, int accessflag);
 
-    /**
-     * Original signature :
-     * <code>l_int32 numaaReplaceNuma(NUMAA*, l_int32, NUMA*)</code><br>
-     * <i>native declaration : allheaders.h:2334</i>
-     */
-    int numaaReplaceNuma(Numaa naa, int index, Numa na);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaaReplaceNuma(NUMAA*, l_int32, NUMA*)</code><br>
+//     * <i>native declaration : allheaders.h:2334</i>
+//     */
+//    int numaaReplaceNuma(Numaa naa, int index, Numa na);
 
-    /**
-     * Original signature :
-     * <code>l_int32 numaaGetValue(NUMAA*, l_int32, l_int32, l_float32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:2336</i>
-     */
-    int numaaGetValue(Numaa naa, int i, int j, FloatBuffer pfval, IntBuffer pival);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaaGetValue(NUMAA*, l_int32, l_int32, l_float32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:2336</i>
+//     */
+//    int numaaGetValue(Numaa naa, int i, int j, FloatBuffer pfval, IntBuffer pival);
 
-    /**
-     * Original signature :
-     * <code>l_int32 numaaAddNumber(NUMAA*, l_int32, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:2338</i>
-     */
-    int numaaAddNumber(Numaa naa, int index, float val);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaaAddNumber(NUMAA*, l_int32, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:2338</i>
+//     */
+//    int numaaAddNumber(Numaa naa, int index, float val);
 
-    /**
-     * Original signature : <code>NUMAA* numaaRead(const char*)</code><br>
-     * <i>native declaration : allheaders.h:2340</i>
-     */
-    Numaa numaaRead(String filename);
+//    /**
+//     * Original signature : <code>NUMAA* numaaRead(const char*)</code><br>
+//     * <i>native declaration : allheaders.h:2340</i>
+//     */
+//    Numaa numaaRead(String filename);
 
 //    /**
 //     * Original signature : <code>NUMAA* numaaReadStream(FILE*)</code><br>
@@ -8189,12 +8189,12 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    Numaa numaaReadStream(FILE fp);
 
-    /**
-     * Original signature :
-     * <code>l_int32 numaaWrite(const char*, NUMAA*)</code><br>
-     * <i>native declaration : allheaders.h:2344</i>
-     */
-    int numaaWrite(String filename, Numaa naa);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaaWrite(const char*, NUMAA*)</code><br>
+//     * <i>native declaration : allheaders.h:2344</i>
+//     */
+//    int numaaWrite(String filename, Numaa naa);
 
 //    /**
 //     * Original signature :
@@ -8203,401 +8203,401 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int numaaWriteStream(FILE fp, Numaa naa);
 
-    /**
-     * Original signature :
-     * <code>NUMA* numaArithOp(NUMA*, NUMA*, NUMA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2348</i>
-     */
-    Numa numaArithOp(Numa nad, Numa na1, Numa na2, int op);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* numaArithOp(NUMA*, NUMA*, NUMA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2348</i>
+//     */
+//    Numa numaArithOp(Numa nad, Numa na1, Numa na2, int op);
 
-    /**
-     * Original signature :
-     * <code>NUMA* numaLogicalOp(NUMA*, NUMA*, NUMA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2350</i>
-     */
-    Numa numaLogicalOp(Numa nad, Numa na1, Numa na2, int op);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* numaLogicalOp(NUMA*, NUMA*, NUMA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2350</i>
+//     */
+//    Numa numaLogicalOp(Numa nad, Numa na1, Numa na2, int op);
 
-    /**
-     * Original signature : <code>NUMA* numaInvert(NUMA*, NUMA*)</code><br>
-     * <i>native declaration : allheaders.h:2352</i>
-     */
-    Numa numaInvert(Numa nad, Numa nas);
+//    /**
+//     * Original signature : <code>NUMA* numaInvert(NUMA*, NUMA*)</code><br>
+//     * <i>native declaration : allheaders.h:2352</i>
+//     */
+//    Numa numaInvert(Numa nad, Numa nas);
 
-    /**
-     * Original signature :
-     * <code>l_int32 numaSimilar(NUMA*, NUMA*, l_float32, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:2354</i>
-     */
-    int numaSimilar(Numa na1, Numa na2, float maxdiff, IntBuffer psimilar);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaSimilar(NUMA*, NUMA*, l_float32, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:2354</i>
+//     */
+//    int numaSimilar(Numa na1, Numa na2, float maxdiff, IntBuffer psimilar);
 
-    /**
-     * Original signature :
-     * <code>l_int32 numaAddToNumber(NUMA*, l_int32, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:2356</i>
-     */
-    int numaAddToNumber(Numa na, int index, float val);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaAddToNumber(NUMA*, l_int32, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:2356</i>
+//     */
+//    int numaAddToNumber(Numa na, int index, float val);
 
-    /**
-     * Original signature :
-     * <code>l_int32 numaGetMin(NUMA*, l_float32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:2358</i>
-     */
-    int numaGetMin(Numa na, FloatBuffer pminval, IntBuffer piminloc);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaGetMin(NUMA*, l_float32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:2358</i>
+//     */
+//    int numaGetMin(Numa na, FloatBuffer pminval, IntBuffer piminloc);
 
-    /**
-     * Original signature :
-     * <code>l_int32 numaGetMax(NUMA*, l_float32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:2360</i>
-     */
-    int numaGetMax(Numa na, FloatBuffer pmaxval, IntBuffer pimaxloc);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaGetMax(NUMA*, l_float32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:2360</i>
+//     */
+//    int numaGetMax(Numa na, FloatBuffer pmaxval, IntBuffer pimaxloc);
 
-    /**
-     * Original signature :
-     * <code>l_int32 numaGetSum(NUMA*, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:2362</i>
-     */
-    int numaGetSum(Numa na, FloatBuffer psum);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaGetSum(NUMA*, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:2362</i>
+//     */
+//    int numaGetSum(Numa na, FloatBuffer psum);
 
-    /**
-     * Original signature : <code>NUMA* numaGetPartialSums(NUMA*)</code><br>
-     * <i>native declaration : allheaders.h:2364</i>
-     */
-    Numa numaGetPartialSums(Numa na);
+//    /**
+//     * Original signature : <code>NUMA* numaGetPartialSums(NUMA*)</code><br>
+//     * <i>native declaration : allheaders.h:2364</i>
+//     */
+//    Numa numaGetPartialSums(Numa na);
 
-    /**
-     * Original signature :
-     * <code>l_int32 numaGetSumOnInterval(NUMA*, l_int32, l_int32, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:2366</i>
-     */
-    int numaGetSumOnInterval(Numa na, int first, int last, FloatBuffer psum);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaGetSumOnInterval(NUMA*, l_int32, l_int32, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:2366</i>
+//     */
+//    int numaGetSumOnInterval(Numa na, int first, int last, FloatBuffer psum);
 
-    /**
-     * Original signature :
-     * <code>l_int32 numaHasOnlyIntegers(NUMA*, l_int32, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:2368</i>
-     */
-    int numaHasOnlyIntegers(Numa na, int maxsamples, IntBuffer pallints);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaHasOnlyIntegers(NUMA*, l_int32, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:2368</i>
+//     */
+//    int numaHasOnlyIntegers(Numa na, int maxsamples, IntBuffer pallints);
 
-    /**
-     * Original signature : <code>NUMA* numaSubsample(NUMA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2370</i>
-     */
-    Numa numaSubsample(Numa nas, int subfactor);
+//    /**
+//     * Original signature : <code>NUMA* numaSubsample(NUMA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2370</i>
+//     */
+//    Numa numaSubsample(Numa nas, int subfactor);
 
-    /**
-     * Original signature : <code>NUMA* numaMakeDelta(NUMA*)</code><br>
-     * <i>native declaration : allheaders.h:2372</i>
-     */
-    Numa numaMakeDelta(Numa nas);
+//    /**
+//     * Original signature : <code>NUMA* numaMakeDelta(NUMA*)</code><br>
+//     * <i>native declaration : allheaders.h:2372</i>
+//     */
+//    Numa numaMakeDelta(Numa nas);
 
-    /**
-     * Original signature :
-     * <code>NUMA* numaMakeSequence(l_float32, l_float32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2374</i>
-     */
-    Numa numaMakeSequence(float startval, float increment, int size);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* numaMakeSequence(l_float32, l_float32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2374</i>
+//     */
+//    Numa numaMakeSequence(float startval, float increment, int size);
 
-    /**
-     * Original signature :
-     * <code>NUMA* numaMakeConstant(l_float32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2376</i>
-     */
-    Numa numaMakeConstant(float val, int size);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* numaMakeConstant(l_float32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2376</i>
+//     */
+//    Numa numaMakeConstant(float val, int size);
 
-    /**
-     * Original signature :
-     * <code>NUMA* numaMakeAbsValue(NUMA*, NUMA*)</code><br>
-     * <i>native declaration : allheaders.h:2378</i>
-     */
-    Numa numaMakeAbsValue(Numa nad, Numa nas);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* numaMakeAbsValue(NUMA*, NUMA*)</code><br>
+//     * <i>native declaration : allheaders.h:2378</i>
+//     */
+//    Numa numaMakeAbsValue(Numa nad, Numa nas);
 
-    /**
-     * Original signature :
-     * <code>NUMA* numaAddBorder(NUMA*, l_int32, l_int32, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:2380</i>
-     */
-    Numa numaAddBorder(Numa nas, int left, int right, float val);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* numaAddBorder(NUMA*, l_int32, l_int32, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:2380</i>
+//     */
+//    Numa numaAddBorder(Numa nas, int left, int right, float val);
 
-    /**
-     * Original signature :
-     * <code>NUMA* numaAddSpecifiedBorder(NUMA*, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2382</i>
-     */
-    Numa numaAddSpecifiedBorder(Numa nas, int left, int right, int type);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* numaAddSpecifiedBorder(NUMA*, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2382</i>
+//     */
+//    Numa numaAddSpecifiedBorder(Numa nas, int left, int right, int type);
 
-    /**
-     * Original signature :
-     * <code>NUMA* numaRemoveBorder(NUMA*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2384</i>
-     */
-    Numa numaRemoveBorder(Numa nas, int left, int right);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* numaRemoveBorder(NUMA*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2384</i>
+//     */
+//    Numa numaRemoveBorder(Numa nas, int left, int right);
 
-    /**
-     * Original signature :
-     * <code>l_int32 numaGetNonzeroRange(NUMA*, l_float32, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:2386</i>
-     */
-    int numaGetNonzeroRange(Numa na, float eps, IntBuffer pfirst, IntBuffer plast);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaGetNonzeroRange(NUMA*, l_float32, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:2386</i>
+//     */
+//    int numaGetNonzeroRange(Numa na, float eps, IntBuffer pfirst, IntBuffer plast);
 
-    /**
-     * Original signature :
-     * <code>l_int32 numaGetCountRelativeToZero(NUMA*, l_int32, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:2388</i>
-     */
-    int numaGetCountRelativeToZero(Numa na, int type, IntBuffer pcount);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaGetCountRelativeToZero(NUMA*, l_int32, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:2388</i>
+//     */
+//    int numaGetCountRelativeToZero(Numa na, int type, IntBuffer pcount);
 
-    /**
-     * Original signature :
-     * <code>NUMA* numaClipToInterval(NUMA*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2390</i>
-     */
-    Numa numaClipToInterval(Numa nas, int first, int last);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* numaClipToInterval(NUMA*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2390</i>
+//     */
+//    Numa numaClipToInterval(Numa nas, int first, int last);
 
-    /**
-     * Original signature :
-     * <code>NUMA* numaMakeThresholdIndicator(NUMA*, l_float32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2392</i>
-     */
-    Numa numaMakeThresholdIndicator(Numa nas, float thresh, int type);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* numaMakeThresholdIndicator(NUMA*, l_float32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2392</i>
+//     */
+//    Numa numaMakeThresholdIndicator(Numa nas, float thresh, int type);
 
-    /**
-     * Original signature :
-     * <code>NUMA* numaUniformSampling(NUMA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2394</i>
-     */
-    Numa numaUniformSampling(Numa nas, int nsamp);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* numaUniformSampling(NUMA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2394</i>
+//     */
+//    Numa numaUniformSampling(Numa nas, int nsamp);
 
-    /**
-     * Original signature : <code>NUMA* numaReverse(NUMA*, NUMA*)</code><br>
-     * <i>native declaration : allheaders.h:2396</i>
-     */
-    Numa numaReverse(Numa nad, Numa nas);
+//    /**
+//     * Original signature : <code>NUMA* numaReverse(NUMA*, NUMA*)</code><br>
+//     * <i>native declaration : allheaders.h:2396</i>
+//     */
+//    Numa numaReverse(Numa nad, Numa nas);
 
-    /**
-     * Original signature :
-     * <code>NUMA* numaLowPassIntervals(NUMA*, l_float32, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:2398</i>
-     */
-    Numa numaLowPassIntervals(Numa nas, float thresh, float maxn);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* numaLowPassIntervals(NUMA*, l_float32, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:2398</i>
+//     */
+//    Numa numaLowPassIntervals(Numa nas, float thresh, float maxn);
 
-    /**
-     * Original signature :
-     * <code>NUMA* numaThresholdEdges(NUMA*, l_float32, l_float32, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:2400</i>
-     */
-    Numa numaThresholdEdges(Numa nas, float thresh1, float thresh2, float maxn);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* numaThresholdEdges(NUMA*, l_float32, l_float32, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:2400</i>
+//     */
+//    Numa numaThresholdEdges(Numa nas, float thresh1, float thresh2, float maxn);
 
-    /**
-     * Original signature :
-     * <code>l_int32 numaGetSpanValues(NUMA*, l_int32, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:2402</i>
-     */
-    int numaGetSpanValues(Numa na, int span, IntBuffer pstart, IntBuffer pend);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaGetSpanValues(NUMA*, l_int32, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:2402</i>
+//     */
+//    int numaGetSpanValues(Numa na, int span, IntBuffer pstart, IntBuffer pend);
 
-    /**
-     * Original signature :
-     * <code>l_int32 numaGetEdgeValues(NUMA*, l_int32, l_int32*, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:2404</i>
-     */
-    int numaGetEdgeValues(Numa na, int edge, IntBuffer pstart, IntBuffer pend, IntBuffer psign);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaGetEdgeValues(NUMA*, l_int32, l_int32*, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:2404</i>
+//     */
+//    int numaGetEdgeValues(Numa na, int edge, IntBuffer pstart, IntBuffer pend, IntBuffer psign);
 
-    /**
-     * Original signature :
-     * <code>l_int32 numaInterpolateEqxVal(l_float32, l_float32, NUMA*, l_int32, l_float32, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:2406</i>
-     */
-    int numaInterpolateEqxVal(float startx, float deltax, Numa nay, int type, float xval, FloatBuffer pyval);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaInterpolateEqxVal(l_float32, l_float32, NUMA*, l_int32, l_float32, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:2406</i>
+//     */
+//    int numaInterpolateEqxVal(float startx, float deltax, Numa nay, int type, float xval, FloatBuffer pyval);
 
-    /**
-     * Original signature :
-     * <code>l_int32 numaInterpolateArbxVal(NUMA*, NUMA*, l_int32, l_float32, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:2408</i>
-     */
-    int numaInterpolateArbxVal(Numa nax, Numa nay, int type, float xval, FloatBuffer pyval);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaInterpolateArbxVal(NUMA*, NUMA*, l_int32, l_float32, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:2408</i>
+//     */
+//    int numaInterpolateArbxVal(Numa nax, Numa nay, int type, float xval, FloatBuffer pyval);
 
-    /**
-     * Original signature :
-     * <code>l_int32 numaInterpolateEqxInterval(l_float32, l_float32, NUMA*, l_int32, l_float32, l_float32, l_int32, NUMA**, NUMA**)</code><br>
-     * <i>native declaration : allheaders.h:2410</i>
-     */
-    int numaInterpolateEqxInterval(float startx, float deltax, Numa nasy, int type, float x0, float x1, int npts, PointerByReference pnax, PointerByReference pnay);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaInterpolateEqxInterval(l_float32, l_float32, NUMA*, l_int32, l_float32, l_float32, l_int32, NUMA**, NUMA**)</code><br>
+//     * <i>native declaration : allheaders.h:2410</i>
+//     */
+//    int numaInterpolateEqxInterval(float startx, float deltax, Numa nasy, int type, float x0, float x1, int npts, PointerByReference pnax, PointerByReference pnay);
 
-    /**
-     * Original signature :
-     * <code>l_int32 numaInterpolateArbxInterval(NUMA*, NUMA*, l_int32, l_float32, l_float32, l_int32, NUMA**, NUMA**)</code><br>
-     * <i>native declaration : allheaders.h:2412</i>
-     */
-    int numaInterpolateArbxInterval(Numa nax, Numa nay, int type, float x0, float x1, int npts, PointerByReference pnadx, PointerByReference pnady);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaInterpolateArbxInterval(NUMA*, NUMA*, l_int32, l_float32, l_float32, l_int32, NUMA**, NUMA**)</code><br>
+//     * <i>native declaration : allheaders.h:2412</i>
+//     */
+//    int numaInterpolateArbxInterval(Numa nax, Numa nay, int type, float x0, float x1, int npts, PointerByReference pnadx, PointerByReference pnady);
 
-    /**
-     * Original signature :
-     * <code>l_int32 numaFitMax(NUMA*, l_float32*, NUMA*, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:2414</i>
-     */
-    int numaFitMax(Numa na, FloatBuffer pmaxval, Numa naloc, FloatBuffer pmaxloc);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaFitMax(NUMA*, l_float32*, NUMA*, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:2414</i>
+//     */
+//    int numaFitMax(Numa na, FloatBuffer pmaxval, Numa naloc, FloatBuffer pmaxloc);
 
-    /**
-     * Original signature :
-     * <code>l_int32 numaDifferentiateInterval(NUMA*, NUMA*, l_float32, l_float32, l_int32, NUMA**, NUMA**)</code><br>
-     * <i>native declaration : allheaders.h:2416</i>
-     */
-    int numaDifferentiateInterval(Numa nax, Numa nay, float x0, float x1, int npts, PointerByReference pnadx, PointerByReference pnady);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaDifferentiateInterval(NUMA*, NUMA*, l_float32, l_float32, l_int32, NUMA**, NUMA**)</code><br>
+//     * <i>native declaration : allheaders.h:2416</i>
+//     */
+//    int numaDifferentiateInterval(Numa nax, Numa nay, float x0, float x1, int npts, PointerByReference pnadx, PointerByReference pnady);
 
-    /**
-     * Original signature :
-     * <code>l_int32 numaIntegrateInterval(NUMA*, NUMA*, l_float32, l_float32, l_int32, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:2418</i>
-     */
-    int numaIntegrateInterval(Numa nax, Numa nay, float x0, float x1, int npts, FloatBuffer psum);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaIntegrateInterval(NUMA*, NUMA*, l_float32, l_float32, l_int32, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:2418</i>
+//     */
+//    int numaIntegrateInterval(Numa nax, Numa nay, float x0, float x1, int npts, FloatBuffer psum);
 
-    /**
-     * Original signature :
-     * <code>l_int32 numaSortGeneral(NUMA*, NUMA**, NUMA**, NUMA**, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2420</i>
-     */
-    int numaSortGeneral(Numa na, PointerByReference pnasort, PointerByReference pnaindex, PointerByReference pnainvert, int sortorder, int sorttype);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaSortGeneral(NUMA*, NUMA**, NUMA**, NUMA**, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2420</i>
+//     */
+//    int numaSortGeneral(Numa na, PointerByReference pnasort, PointerByReference pnaindex, PointerByReference pnainvert, int sortorder, int sorttype);
 
-    /**
-     * Original signature :
-     * <code>NUMA* numaSortAutoSelect(NUMA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2422</i>
-     */
-    Numa numaSortAutoSelect(Numa nas, int sortorder);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* numaSortAutoSelect(NUMA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2422</i>
+//     */
+//    Numa numaSortAutoSelect(Numa nas, int sortorder);
 
-    /**
-     * Original signature :
-     * <code>NUMA* numaSortIndexAutoSelect(NUMA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2424</i>
-     */
-    Numa numaSortIndexAutoSelect(Numa nas, int sortorder);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* numaSortIndexAutoSelect(NUMA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2424</i>
+//     */
+//    Numa numaSortIndexAutoSelect(Numa nas, int sortorder);
 
-    /**
-     * Original signature : <code>l_int32 numaChooseSortType(NUMA*)</code><br>
-     * <i>native declaration : allheaders.h:2426</i>
-     */
-    int numaChooseSortType(Numa nas);
+//    /**
+//     * Original signature : <code>l_int32 numaChooseSortType(NUMA*)</code><br>
+//     * <i>native declaration : allheaders.h:2426</i>
+//     */
+//    int numaChooseSortType(Numa nas);
 
-    /**
-     * Original signature :
-     * <code>NUMA* numaSort(NUMA*, NUMA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2428</i>
-     */
-    Numa numaSort(Numa naout, Numa nain, int sortorder);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* numaSort(NUMA*, NUMA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2428</i>
+//     */
+//    Numa numaSort(Numa naout, Numa nain, int sortorder);
 
-    /**
-     * Original signature : <code>NUMA* numaBinSort(NUMA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2430</i>
-     */
-    Numa numaBinSort(Numa nas, int sortorder);
+//    /**
+//     * Original signature : <code>NUMA* numaBinSort(NUMA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2430</i>
+//     */
+//    Numa numaBinSort(Numa nas, int sortorder);
 
-    /**
-     * Original signature :
-     * <code>NUMA* numaGetSortIndex(NUMA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2432</i>
-     */
-    Numa numaGetSortIndex(Numa na, int sortorder);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* numaGetSortIndex(NUMA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2432</i>
+//     */
+//    Numa numaGetSortIndex(Numa na, int sortorder);
 
-    /**
-     * Original signature :
-     * <code>NUMA* numaGetBinSortIndex(NUMA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2434</i>
-     */
-    Numa numaGetBinSortIndex(Numa nas, int sortorder);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* numaGetBinSortIndex(NUMA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2434</i>
+//     */
+//    Numa numaGetBinSortIndex(Numa nas, int sortorder);
 
-    /**
-     * Original signature : <code>NUMA* numaSortByIndex(NUMA*, NUMA*)</code><br>
-     * <i>native declaration : allheaders.h:2436</i>
-     */
-    Numa numaSortByIndex(Numa nas, Numa naindex);
+//    /**
+//     * Original signature : <code>NUMA* numaSortByIndex(NUMA*, NUMA*)</code><br>
+//     * <i>native declaration : allheaders.h:2436</i>
+//     */
+//    Numa numaSortByIndex(Numa nas, Numa naindex);
 
-    /**
-     * Original signature :
-     * <code>l_int32 numaIsSorted(NUMA*, l_int32, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:2438</i>
-     */
-    int numaIsSorted(Numa nas, int sortorder, IntBuffer psorted);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaIsSorted(NUMA*, l_int32, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:2438</i>
+//     */
+//    int numaIsSorted(Numa nas, int sortorder, IntBuffer psorted);
 
-    /**
-     * Original signature :
-     * <code>l_int32 numaSortPair(NUMA*, NUMA*, l_int32, NUMA**, NUMA**)</code><br>
-     * <i>native declaration : allheaders.h:2440</i>
-     */
-    int numaSortPair(Numa nax, Numa nay, int sortorder, PointerByReference pnasx, PointerByReference pnasy);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaSortPair(NUMA*, NUMA*, l_int32, NUMA**, NUMA**)</code><br>
+//     * <i>native declaration : allheaders.h:2440</i>
+//     */
+//    int numaSortPair(Numa nax, Numa nay, int sortorder, PointerByReference pnasx, PointerByReference pnasy);
 
-    /**
-     * Original signature : <code>NUMA* numaInvertMap(NUMA*)</code><br>
-     * <i>native declaration : allheaders.h:2442</i>
-     */
-    Numa numaInvertMap(Numa nas);
+//    /**
+//     * Original signature : <code>NUMA* numaInvertMap(NUMA*)</code><br>
+//     * <i>native declaration : allheaders.h:2442</i>
+//     */
+//    Numa numaInvertMap(Numa nas);
 
-    /**
-     * Original signature :
-     * <code>NUMA* numaPseudorandomSequence(l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2444</i>
-     */
-    Numa numaPseudorandomSequence(int size, int seed);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* numaPseudorandomSequence(l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2444</i>
+//     */
+//    Numa numaPseudorandomSequence(int size, int seed);
 
-    /**
-     * Original signature :
-     * <code>NUMA* numaRandomPermutation(NUMA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2446</i>
-     */
-    Numa numaRandomPermutation(Numa nas, int seed);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* numaRandomPermutation(NUMA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2446</i>
+//     */
+//    Numa numaRandomPermutation(Numa nas, int seed);
 
-    /**
-     * Original signature :
-     * <code>l_int32 numaGetRankValue(NUMA*, l_float32, NUMA*, l_int32, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:2448</i>
-     */
-    int numaGetRankValue(Numa na, float fract, Numa nasort, int usebins, FloatBuffer pval);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaGetRankValue(NUMA*, l_float32, NUMA*, l_int32, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:2448</i>
+//     */
+//    int numaGetRankValue(Numa na, float fract, Numa nasort, int usebins, FloatBuffer pval);
 
-    /**
-     * Original signature :
-     * <code>l_int32 numaGetMedian(NUMA*, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:2450</i>
-     */
-    int numaGetMedian(Numa na, FloatBuffer pval);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaGetMedian(NUMA*, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:2450</i>
+//     */
+//    int numaGetMedian(Numa na, FloatBuffer pval);
 
-    /**
-     * Original signature :
-     * <code>l_int32 numaGetBinnedMedian(NUMA*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:2452</i>
-     */
-    int numaGetBinnedMedian(Numa na, IntBuffer pval);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaGetBinnedMedian(NUMA*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:2452</i>
+//     */
+//    int numaGetBinnedMedian(Numa na, IntBuffer pval);
 
-    /**
-     * Original signature :
-     * <code>l_int32 numaGetMode(NUMA*, l_float32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:2454</i>
-     */
-    int numaGetMode(Numa na, FloatBuffer pval, IntBuffer pcount);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaGetMode(NUMA*, l_float32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:2454</i>
+//     */
+//    int numaGetMode(Numa na, FloatBuffer pval, IntBuffer pcount);
 
-    /**
-     * Original signature :
-     * <code>l_int32 numaGetMedianVariation(NUMA*, l_float32*, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:2456</i>
-     */
-    int numaGetMedianVariation(Numa na, FloatBuffer pmedval, FloatBuffer pmedvar);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaGetMedianVariation(NUMA*, l_float32*, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:2456</i>
+//     */
+//    int numaGetMedianVariation(Numa na, FloatBuffer pmedval, FloatBuffer pmedvar);
 
-    /**
-     * Original signature :
-     * <code>l_int32 numaJoin(NUMA*, NUMA*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2458</i>
-     */
-    int numaJoin(Numa nad, Numa nas, int istart, int iend);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaJoin(NUMA*, NUMA*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2458</i>
+//     */
+//    int numaJoin(Numa nad, Numa nas, int istart, int iend);
 
-    /**
-     * Original signature :
-     * <code>l_int32 numaaJoin(NUMAA*, NUMAA*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2460</i>
-     */
-    int numaaJoin(Numaa naad, Numaa naas, int istart, int iend);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaaJoin(NUMAA*, NUMAA*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2460</i>
+//     */
+//    int numaaJoin(Numaa naad, Numaa naas, int istart, int iend);
 
-    /**
-     * Original signature : <code>NUMA* numaaFlattenToNuma(NUMAA*)</code><br>
-     * <i>native declaration : allheaders.h:2462</i>
-     */
-    Numa numaaFlattenToNuma(Numaa naa);
+//    /**
+//     * Original signature : <code>NUMA* numaaFlattenToNuma(NUMAA*)</code><br>
+//     * <i>native declaration : allheaders.h:2462</i>
+//     */
+//    Numa numaaFlattenToNuma(Numaa naa);
 
     /**
      * Original signature : <code>NUMA* numaUnionByAset(NUMA*, NUMA*)</code><br>
@@ -8624,36 +8624,36 @@ public interface Leptonica extends Library, ILeptonica {
      */
     L_Rbtree l_asetCreateFromNuma(Numa na);
 
-    /**
-     * Original signature : <code>NUMA* numaErode(NUMA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2472</i>
-     */
-    Numa numaErode(Numa nas, int size);
+//    /**
+//     * Original signature : <code>NUMA* numaErode(NUMA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2472</i>
+//     */
+//    Numa numaErode(Numa nas, int size);
 
-    /**
-     * Original signature : <code>NUMA* numaDilate(NUMA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2474</i>
-     */
-    Numa numaDilate(Numa nas, int size);
+//    /**
+//     * Original signature : <code>NUMA* numaDilate(NUMA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2474</i>
+//     */
+//    Numa numaDilate(Numa nas, int size);
 
-    /**
-     * Original signature : <code>NUMA* numaOpen(NUMA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2476</i>
-     */
-    Numa numaOpen(Numa nas, int size);
+//    /**
+//     * Original signature : <code>NUMA* numaOpen(NUMA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2476</i>
+//     */
+//    Numa numaOpen(Numa nas, int size);
 
-    /**
-     * Original signature : <code>NUMA* numaClose(NUMA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2478</i>
-     */
-    Numa numaClose(Numa nas, int size);
+//    /**
+//     * Original signature : <code>NUMA* numaClose(NUMA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2478</i>
+//     */
+//    Numa numaClose(Numa nas, int size);
 
-    /**
-     * Original signature :
-     * <code>NUMA* numaTransform(NUMA*, l_float32, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:2480</i>
-     */
-    Numa numaTransform(Numa nas, float shift, float scale);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* numaTransform(NUMA*, l_float32, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:2480</i>
+//     */
+//    Numa numaTransform(Numa nas, float shift, float scale);
 
     /**
      * Original signature :
@@ -8662,158 +8662,158 @@ public interface Leptonica extends Library, ILeptonica {
      */
     int numaSimpleStats(Numa na, int first, int last, FloatBuffer pmean, FloatBuffer pvar, FloatBuffer prvar);
 
-    /**
-     * Original signature :
-     * <code>l_int32 numaWindowedStats(NUMA*, l_int32, NUMA**, NUMA**, NUMA**, NUMA**)</code><br>
-     * <i>native declaration : allheaders.h:2484</i>
-     */
-    int numaWindowedStats(Numa nas, int wc, PointerByReference pnam, PointerByReference pnams, PointerByReference pnav, PointerByReference pnarv);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaWindowedStats(NUMA*, l_int32, NUMA**, NUMA**, NUMA**, NUMA**)</code><br>
+//     * <i>native declaration : allheaders.h:2484</i>
+//     */
+//    int numaWindowedStats(Numa nas, int wc, PointerByReference pnam, PointerByReference pnams, PointerByReference pnav, PointerByReference pnarv);
 
-    /**
-     * Original signature :
-     * <code>NUMA* numaWindowedMean(NUMA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2486</i>
-     */
-    Numa numaWindowedMean(Numa nas, int wc);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* numaWindowedMean(NUMA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2486</i>
+//     */
+//    Numa numaWindowedMean(Numa nas, int wc);
 
-    /**
-     * Original signature :
-     * <code>NUMA* numaWindowedMeanSquare(NUMA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2488</i>
-     */
-    Numa numaWindowedMeanSquare(Numa nas, int wc);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* numaWindowedMeanSquare(NUMA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2488</i>
+//     */
+//    Numa numaWindowedMeanSquare(Numa nas, int wc);
 
-    /**
-     * Original signature :
-     * <code>l_int32 numaWindowedVariance(NUMA*, NUMA*, NUMA**, NUMA**)</code><br>
-     * <i>native declaration : allheaders.h:2490</i>
-     */
-    int numaWindowedVariance(Numa nam, Numa nams, PointerByReference pnav, PointerByReference pnarv);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaWindowedVariance(NUMA*, NUMA*, NUMA**, NUMA**)</code><br>
+//     * <i>native declaration : allheaders.h:2490</i>
+//     */
+//    int numaWindowedVariance(Numa nam, Numa nams, PointerByReference pnav, PointerByReference pnarv);
 
-    /**
-     * Original signature :
-     * <code>NUMA* numaWindowedMedian(NUMA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2492</i>
-     */
-    Numa numaWindowedMedian(Numa nas, int halfwin);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* numaWindowedMedian(NUMA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2492</i>
+//     */
+//    Numa numaWindowedMedian(Numa nas, int halfwin);
 
-    /**
-     * Original signature : <code>NUMA* numaConvertToInt(NUMA*)</code><br>
-     * <i>native declaration : allheaders.h:2494</i>
-     */
-    Numa numaConvertToInt(Numa nas);
+//    /**
+//     * Original signature : <code>NUMA* numaConvertToInt(NUMA*)</code><br>
+//     * <i>native declaration : allheaders.h:2494</i>
+//     */
+//    Numa numaConvertToInt(Numa nas);
 
-    /**
-     * Original signature :
-     * <code>NUMA* numaMakeHistogram(NUMA*, l_int32, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:2496</i>
-     */
-    Numa numaMakeHistogram(Numa na, int maxbins, IntBuffer pbinsize, IntBuffer pbinstart);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* numaMakeHistogram(NUMA*, l_int32, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:2496</i>
+//     */
+//    Numa numaMakeHistogram(Numa na, int maxbins, IntBuffer pbinsize, IntBuffer pbinstart);
 
-    /**
-     * Original signature :
-     * <code>NUMA* numaMakeHistogramAuto(NUMA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2498</i>
-     */
-    Numa numaMakeHistogramAuto(Numa na, int maxbins);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* numaMakeHistogramAuto(NUMA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2498</i>
+//     */
+//    Numa numaMakeHistogramAuto(Numa na, int maxbins);
 
-    /**
-     * Original signature :
-     * <code>NUMA* numaMakeHistogramClipped(NUMA*, l_float32, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:2500</i>
-     */
-    Numa numaMakeHistogramClipped(Numa na, float binsize, float maxsize);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* numaMakeHistogramClipped(NUMA*, l_float32, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:2500</i>
+//     */
+//    Numa numaMakeHistogramClipped(Numa na, float binsize, float maxsize);
 
-    /**
-     * Original signature :
-     * <code>NUMA* numaRebinHistogram(NUMA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2502</i>
-     */
-    Numa numaRebinHistogram(Numa nas, int newsize);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* numaRebinHistogram(NUMA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2502</i>
+//     */
+//    Numa numaRebinHistogram(Numa nas, int newsize);
 
-    /**
-     * Original signature :
-     * <code>NUMA* numaNormalizeHistogram(NUMA*, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:2504</i>
-     */
-    Numa numaNormalizeHistogram(Numa nas, float tsum);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* numaNormalizeHistogram(NUMA*, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:2504</i>
+//     */
+//    Numa numaNormalizeHistogram(Numa nas, float tsum);
 
-    /**
-     * Original signature :
-     * <code>l_int32 numaGetStatsUsingHistogram(NUMA*, l_int32, l_float32*, l_float32*, l_float32*, l_float32*, l_float32*, l_float32, l_float32*, NUMA**)</code><br>
-     * <i>native declaration : allheaders.h:2506</i>
-     */
-    int numaGetStatsUsingHistogram(Numa na, int maxbins, FloatBuffer pmin, FloatBuffer pmax, FloatBuffer pmean, FloatBuffer pvariance, FloatBuffer pmedian, float rank, FloatBuffer prval, PointerByReference phisto);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaGetStatsUsingHistogram(NUMA*, l_int32, l_float32*, l_float32*, l_float32*, l_float32*, l_float32*, l_float32, l_float32*, NUMA**)</code><br>
+//     * <i>native declaration : allheaders.h:2506</i>
+//     */
+//    int numaGetStatsUsingHistogram(Numa na, int maxbins, FloatBuffer pmin, FloatBuffer pmax, FloatBuffer pmean, FloatBuffer pvariance, FloatBuffer pmedian, float rank, FloatBuffer prval, PointerByReference phisto);
 
-    /**
-     * Original signature :
-     * <code>l_int32 numaGetStatsUsingHistogram(NUMA*, l_int32, l_float32*, l_float32*, l_float32*, l_float32*, l_float32*, l_float32, l_float32*, NUMA**)</code><br>
-     * <i>native declaration : allheaders.h:2506</i>
-     */
-    int numaGetStatsUsingHistogram(Numa na, int maxbins, FloatByReference pmin, FloatByReference pmax, FloatByReference pmean, FloatByReference pvariance, FloatByReference pmedian, float rank, FloatByReference prval, PointerByReference phisto);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaGetStatsUsingHistogram(NUMA*, l_int32, l_float32*, l_float32*, l_float32*, l_float32*, l_float32*, l_float32, l_float32*, NUMA**)</code><br>
+//     * <i>native declaration : allheaders.h:2506</i>
+//     */
+//    int numaGetStatsUsingHistogram(Numa na, int maxbins, FloatByReference pmin, FloatByReference pmax, FloatByReference pmean, FloatByReference pvariance, FloatByReference pmedian, float rank, FloatByReference prval, PointerByReference phisto);
 
-    /**
-     * Original signature :
-     * <code>l_int32 numaGetHistogramStats(NUMA*, l_float32, l_float32, l_float32*, l_float32*, l_float32*, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:2508</i>
-     */
-    int numaGetHistogramStats(Numa nahisto, float startx, float deltax, FloatBuffer pxmean, FloatBuffer pxmedian, FloatBuffer pxmode, FloatBuffer pxvariance);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaGetHistogramStats(NUMA*, l_float32, l_float32, l_float32*, l_float32*, l_float32*, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:2508</i>
+//     */
+//    int numaGetHistogramStats(Numa nahisto, float startx, float deltax, FloatBuffer pxmean, FloatBuffer pxmedian, FloatBuffer pxmode, FloatBuffer pxvariance);
 
-    /**
-     * Original signature :
-     * <code>l_int32 numaGetHistogramStatsOnInterval(NUMA*, l_float32, l_float32, l_int32, l_int32, l_float32*, l_float32*, l_float32*, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:2510</i>
-     */
-    int numaGetHistogramStatsOnInterval(Numa nahisto, float startx, float deltax, int ifirst, int ilast, FloatBuffer pxmean, FloatBuffer pxmedian, FloatBuffer pxmode, FloatBuffer pxvariance);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaGetHistogramStatsOnInterval(NUMA*, l_float32, l_float32, l_int32, l_int32, l_float32*, l_float32*, l_float32*, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:2510</i>
+//     */
+//    int numaGetHistogramStatsOnInterval(Numa nahisto, float startx, float deltax, int ifirst, int ilast, FloatBuffer pxmean, FloatBuffer pxmedian, FloatBuffer pxmode, FloatBuffer pxvariance);
 
-    /**
-     * Original signature :
-     * <code>l_int32 numaMakeRankFromHistogram(l_float32, l_float32, NUMA*, l_int32, NUMA**, NUMA**)</code><br>
-     * <i>native declaration : allheaders.h:2512</i>
-     */
-    int numaMakeRankFromHistogram(float startx, float deltax, Numa nasy, int npts, PointerByReference pnax, PointerByReference pnay);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaMakeRankFromHistogram(l_float32, l_float32, NUMA*, l_int32, NUMA**, NUMA**)</code><br>
+//     * <i>native declaration : allheaders.h:2512</i>
+//     */
+//    int numaMakeRankFromHistogram(float startx, float deltax, Numa nasy, int npts, PointerByReference pnax, PointerByReference pnay);
 
-    /**
-     * Original signature :
-     * <code>l_int32 numaHistogramGetRankFromVal(NUMA*, l_float32, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:2514</i>
-     */
-    int numaHistogramGetRankFromVal(Numa na, float rval, FloatBuffer prank);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaHistogramGetRankFromVal(NUMA*, l_float32, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:2514</i>
+//     */
+//    int numaHistogramGetRankFromVal(Numa na, float rval, FloatBuffer prank);
 
-    /**
-     * Original signature :
-     * <code>l_int32 numaHistogramGetValFromRank(NUMA*, l_float32, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:2516</i>
-     */
-    int numaHistogramGetValFromRank(Numa na, float rank, FloatBuffer prval);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaHistogramGetValFromRank(NUMA*, l_float32, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:2516</i>
+//     */
+//    int numaHistogramGetValFromRank(Numa na, float rank, FloatBuffer prval);
 
-    /**
-     * Original signature :
-     * <code>l_int32 numaDiscretizeRankAndIntensity(NUMA*, l_int32, NUMA**, NUMA**, NUMA**, NUMA**)</code><br>
-     * <i>native declaration : allheaders.h:2518</i>
-     */
-    int numaDiscretizeRankAndIntensity(Numa na, int nbins, PointerByReference pnarbin, PointerByReference pnam, PointerByReference pnar, PointerByReference pnabb);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaDiscretizeRankAndIntensity(NUMA*, l_int32, NUMA**, NUMA**, NUMA**, NUMA**)</code><br>
+//     * <i>native declaration : allheaders.h:2518</i>
+//     */
+//    int numaDiscretizeRankAndIntensity(Numa na, int nbins, PointerByReference pnarbin, PointerByReference pnam, PointerByReference pnar, PointerByReference pnabb);
 
-    /**
-     * Original signature :
-     * <code>l_int32 numaGetRankBinValues(NUMA*, l_int32, NUMA**, NUMA**)</code><br>
-     * <i>native declaration : allheaders.h:2520</i>
-     */
-    int numaGetRankBinValues(Numa na, int nbins, PointerByReference pnarbin, PointerByReference pnam);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaGetRankBinValues(NUMA*, l_int32, NUMA**, NUMA**)</code><br>
+//     * <i>native declaration : allheaders.h:2520</i>
+//     */
+//    int numaGetRankBinValues(Numa na, int nbins, PointerByReference pnarbin, PointerByReference pnam);
 
-    /**
-     * Original signature :
-     * <code>l_int32 numaSplitDistribution(NUMA*, l_float32, l_int32*, l_float32*, l_float32*, l_float32*, l_float32*, NUMA**)</code><br>
-     * <i>native declaration : allheaders.h:2522</i>
-     */
-    int numaSplitDistribution(Numa na, float scorefract, IntBuffer psplitindex, FloatBuffer pave1, FloatBuffer pave2, FloatBuffer pnum1, FloatBuffer pnum2, PointerByReference pnascore);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaSplitDistribution(NUMA*, l_float32, l_int32*, l_float32*, l_float32*, l_float32*, l_float32*, NUMA**)</code><br>
+//     * <i>native declaration : allheaders.h:2522</i>
+//     */
+//    int numaSplitDistribution(Numa na, float scorefract, IntBuffer psplitindex, FloatBuffer pave1, FloatBuffer pave2, FloatBuffer pnum1, FloatBuffer pnum2, PointerByReference pnascore);
 
-    /**
-     * Original signature :
-     * <code>l_int32 numaSplitDistribution(NUMA*, l_float32, l_int32*, l_float32*, l_float32*, l_float32*, l_float32*, NUMA**)</code><br>
-     * <i>native declaration : allheaders.h:2522</i>
-     */
-    int numaSplitDistribution(Numa na, float scorefract, IntByReference psplitindex, FloatByReference pave1, FloatByReference pave2, FloatByReference pnum1, FloatByReference pnum2, PointerByReference pnascore);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaSplitDistribution(NUMA*, l_float32, l_int32*, l_float32*, l_float32*, l_float32*, l_float32*, NUMA**)</code><br>
+//     * <i>native declaration : allheaders.h:2522</i>
+//     */
+//    int numaSplitDistribution(Numa na, float scorefract, IntByReference psplitindex, FloatByReference pave1, FloatByReference pave2, FloatByReference pnum1, FloatByReference pnum2, PointerByReference pnascore);
 
     /**
      * Original signature :
@@ -8822,12 +8822,12 @@ public interface Leptonica extends Library, ILeptonica {
      */
     int grayHistogramsToEMD(Numaa naa1, Numaa naa2, PointerByReference pnad);
 
-    /**
-     * Original signature :
-     * <code>l_int32 numaEarthMoverDistance(NUMA*, NUMA*, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:2526</i>
-     */
-    int numaEarthMoverDistance(Numa na1, Numa na2, FloatBuffer pdist);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaEarthMoverDistance(NUMA*, NUMA*, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:2526</i>
+//     */
+//    int numaEarthMoverDistance(Numa na1, Numa na2, FloatBuffer pdist);
 
     /**
      * Original signature :
@@ -8836,61 +8836,61 @@ public interface Leptonica extends Library, ILeptonica {
      */
     int grayInterHistogramStats(Numaa naa, int wc, PointerByReference pnam, PointerByReference pnams, PointerByReference pnav, PointerByReference pnarv);
 
-    /**
-     * Original signature :
-     * <code>NUMA* numaFindPeaks(NUMA*, l_int32, l_float32, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:2530</i>
-     */
-    Numa numaFindPeaks(Numa nas, int nmax, float fract1, float fract2);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* numaFindPeaks(NUMA*, l_int32, l_float32, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:2530</i>
+//     */
+//    Numa numaFindPeaks(Numa nas, int nmax, float fract1, float fract2);
 
-    /**
-     * Original signature :
-     * <code>NUMA* numaFindExtrema(NUMA*, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:2532</i>
-     */
-    Numa numaFindExtrema(Numa nas, float delta);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* numaFindExtrema(NUMA*, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:2532</i>
+//     */
+//    Numa numaFindExtrema(Numa nas, float delta);
 
-    /**
-     * Original signature :
-     * <code>l_int32 numaCountReversals(NUMA*, l_float32, l_int32*, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:2534</i>
-     */
-    int numaCountReversals(Numa nas, float minreversal, IntBuffer pnr, FloatBuffer pnrpl);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaCountReversals(NUMA*, l_float32, l_int32*, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:2534</i>
+//     */
+//    int numaCountReversals(Numa nas, float minreversal, IntBuffer pnr, FloatBuffer pnrpl);
 
-    /**
-     * Original signature :
-     * <code>l_int32 numaSelectCrossingThreshold(NUMA*, NUMA*, l_float32, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:2536</i>
-     */
-    int numaSelectCrossingThreshold(Numa nax, Numa nay, float estthresh, FloatBuffer pbestthresh);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaSelectCrossingThreshold(NUMA*, NUMA*, l_float32, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:2536</i>
+//     */
+//    int numaSelectCrossingThreshold(Numa nax, Numa nay, float estthresh, FloatBuffer pbestthresh);
 
-    /**
-     * Original signature :
-     * <code>NUMA* numaCrossingsByThreshold(NUMA*, NUMA*, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:2538</i>
-     */
-    Numa numaCrossingsByThreshold(Numa nax, Numa nay, float thresh);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* numaCrossingsByThreshold(NUMA*, NUMA*, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:2538</i>
+//     */
+//    Numa numaCrossingsByThreshold(Numa nax, Numa nay, float thresh);
 
-    /**
-     * Original signature :
-     * <code>NUMA* numaCrossingsByPeaks(NUMA*, NUMA*, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:2540</i>
-     */
-    Numa numaCrossingsByPeaks(Numa nax, Numa nay, float delta);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* numaCrossingsByPeaks(NUMA*, NUMA*, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:2540</i>
+//     */
+//    Numa numaCrossingsByPeaks(Numa nax, Numa nay, float delta);
 
-    /**
-     * Original signature :
-     * <code>l_int32 numaEvalBestHaarParameters(NUMA*, l_float32, l_int32, l_int32, l_float32, l_float32, l_float32*, l_float32*, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:2542</i>
-     */
-    int numaEvalBestHaarParameters(Numa nas, float relweight, int nwidth, int nshift, float minwidth, float maxwidth, FloatBuffer pbestwidth, FloatBuffer pbestshift, FloatBuffer pbestscore);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaEvalBestHaarParameters(NUMA*, l_float32, l_int32, l_int32, l_float32, l_float32, l_float32*, l_float32*, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:2542</i>
+//     */
+//    int numaEvalBestHaarParameters(Numa nas, float relweight, int nwidth, int nshift, float minwidth, float maxwidth, FloatBuffer pbestwidth, FloatBuffer pbestshift, FloatBuffer pbestscore);
 
-    /**
-     * Original signature :
-     * <code>l_int32 numaEvalHaarSum(NUMA*, l_float32, l_float32, l_float32, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:2544</i>
-     */
-    int numaEvalHaarSum(Numa nas, float width, float shift, float relweight, FloatBuffer pscore);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 numaEvalHaarSum(NUMA*, l_float32, l_float32, l_float32, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:2544</i>
+//     */
+//    int numaEvalHaarSum(Numa nas, float width, float shift, float relweight, FloatBuffer pscore);
 
     /**
      * Original signature :
@@ -9939,144 +9939,144 @@ public interface Leptonica extends Library, ILeptonica {
      */
     Pix pixAddBlackOrWhiteBorder(Pix pixs, int left, int right, int top, int bot, int op);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixAddBorderGeneral(PIX*, l_int32, l_int32, l_int32, l_int32, l_uint32)</code><br>
-     * <i>native declaration : allheaders.h:2836</i>
-     */
-    Pix pixAddBorderGeneral(Pix pixs, int left, int right, int top, int bot, int val);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixAddBorderGeneral(PIX*, l_int32, l_int32, l_int32, l_int32, l_uint32)</code><br>
+//     * <i>native declaration : allheaders.h:2836</i>
+//     */
+//    Pix pixAddBorderGeneral(Pix pixs, int left, int right, int top, int bot, int val);
 
-    /**
-     * Original signature : <code>PIX* pixRemoveBorder(PIX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2838</i>
-     */
-    Pix pixRemoveBorder(Pix pixs, int npix);
+//    /**
+//     * Original signature : <code>PIX* pixRemoveBorder(PIX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2838</i>
+//     */
+//    Pix pixRemoveBorder(Pix pixs, int npix);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixRemoveBorderGeneral(PIX*, l_int32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2840</i>
-     */
-    Pix pixRemoveBorderGeneral(Pix pixs, int left, int right, int top, int bot);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixRemoveBorderGeneral(PIX*, l_int32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2840</i>
+//     */
+//    Pix pixRemoveBorderGeneral(Pix pixs, int left, int right, int top, int bot);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixRemoveBorderToSize(PIX*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2842</i>
-     */
-    Pix pixRemoveBorderToSize(Pix pixs, int wd, int hd);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixRemoveBorderToSize(PIX*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2842</i>
+//     */
+//    Pix pixRemoveBorderToSize(Pix pixs, int wd, int hd);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixAddMirroredBorder(PIX*, l_int32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2844</i>
-     */
-    Pix pixAddMirroredBorder(Pix pixs, int left, int right, int top, int bot);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixAddMirroredBorder(PIX*, l_int32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2844</i>
+//     */
+//    Pix pixAddMirroredBorder(Pix pixs, int left, int right, int top, int bot);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixAddRepeatedBorder(PIX*, l_int32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2846</i>
-     */
-    Pix pixAddRepeatedBorder(Pix pixs, int left, int right, int top, int bot);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixAddRepeatedBorder(PIX*, l_int32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2846</i>
+//     */
+//    Pix pixAddRepeatedBorder(Pix pixs, int left, int right, int top, int bot);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixAddMixedBorder(PIX*, l_int32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2848</i>
-     */
-    Pix pixAddMixedBorder(Pix pixs, int left, int right, int top, int bot);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixAddMixedBorder(PIX*, l_int32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2848</i>
+//     */
+//    Pix pixAddMixedBorder(Pix pixs, int left, int right, int top, int bot);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixAddContinuedBorder(PIX*, l_int32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2850</i>
-     */
-    Pix pixAddContinuedBorder(Pix pixs, int left, int right, int top, int bot);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixAddContinuedBorder(PIX*, l_int32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2850</i>
+//     */
+//    Pix pixAddContinuedBorder(Pix pixs, int left, int right, int top, int bot);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixShiftAndTransferAlpha(PIX*, PIX*, l_float32, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:2852</i>
-     */
-    int pixShiftAndTransferAlpha(Pix pixd, Pix pixs, float shiftx, float shifty);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixShiftAndTransferAlpha(PIX*, PIX*, l_float32, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:2852</i>
+//     */
+//    int pixShiftAndTransferAlpha(Pix pixd, Pix pixs, float shiftx, float shifty);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixDisplayLayersRGBA(PIX*, l_uint32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2854</i>
-     */
-    Pix pixDisplayLayersRGBA(Pix pixs, int val, int maxw);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixDisplayLayersRGBA(PIX*, l_uint32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2854</i>
+//     */
+//    Pix pixDisplayLayersRGBA(Pix pixs, int val, int maxw);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixCreateRGBImage(PIX*, PIX*, PIX*)</code><br>
-     * <i>native declaration : allheaders.h:2856</i>
-     */
-    Pix pixCreateRGBImage(Pix pixr, Pix pixg, Pix pixb);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixCreateRGBImage(PIX*, PIX*, PIX*)</code><br>
+//     * <i>native declaration : allheaders.h:2856</i>
+//     */
+//    Pix pixCreateRGBImage(Pix pixr, Pix pixg, Pix pixb);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixGetRGBComponent(PIX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2858</i>
-     */
-    Pix pixGetRGBComponent(Pix pixs, int comp);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixGetRGBComponent(PIX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2858</i>
+//     */
+//    Pix pixGetRGBComponent(Pix pixs, int comp);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixSetRGBComponent(PIX*, PIX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2860</i>
-     */
-    int pixSetRGBComponent(Pix pixd, Pix pixs, int comp);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixSetRGBComponent(PIX*, PIX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2860</i>
+//     */
+//    int pixSetRGBComponent(Pix pixd, Pix pixs, int comp);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixGetRGBComponentCmap(PIX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2862</i>
-     */
-    Pix pixGetRGBComponentCmap(Pix pixs, int comp);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixGetRGBComponentCmap(PIX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2862</i>
+//     */
+//    Pix pixGetRGBComponentCmap(Pix pixs, int comp);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixCopyRGBComponent(PIX*, PIX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2864</i>
-     */
-    int pixCopyRGBComponent(Pix pixd, Pix pixs, int comp);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixCopyRGBComponent(PIX*, PIX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2864</i>
+//     */
+//    int pixCopyRGBComponent(Pix pixd, Pix pixs, int comp);
 
-    /**
-     * Original signature :
-     * <code>l_int32 composeRGBPixel(l_int32, l_int32, l_int32, l_uint32*)</code><br>
-     * <i>native declaration : allheaders.h:2866</i>
-     */
-    int composeRGBPixel(int rval, int gval, int bval, IntBuffer ppixel);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 composeRGBPixel(l_int32, l_int32, l_int32, l_uint32*)</code><br>
+//     * <i>native declaration : allheaders.h:2866</i>
+//     */
+//    int composeRGBPixel(int rval, int gval, int bval, IntBuffer ppixel);
 
-    /**
-     * Original signature :
-     * <code>l_int32 composeRGBAPixel(l_int32, l_int32, l_int32, l_int32, l_uint32*)</code><br>
-     * <i>native declaration : allheaders.h:2868</i>
-     */
-    int composeRGBAPixel(int rval, int gval, int bval, int aval, IntBuffer ppixel);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 composeRGBAPixel(l_int32, l_int32, l_int32, l_int32, l_uint32*)</code><br>
+//     * <i>native declaration : allheaders.h:2868</i>
+//     */
+//    int composeRGBAPixel(int rval, int gval, int bval, int aval, IntBuffer ppixel);
 
-    /**
-     * Original signature :
-     * <code>void extractRGBValues(l_uint32, l_int32*, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:2870</i>
-     */
-    void extractRGBValues(int pixel, IntBuffer prval, IntBuffer pgval, IntBuffer pbval);
+//    /**
+//     * Original signature :
+//     * <code>void extractRGBValues(l_uint32, l_int32*, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:2870</i>
+//     */
+//    void extractRGBValues(int pixel, IntBuffer prval, IntBuffer pgval, IntBuffer pbval);
 
-    /**
-     * Original signature :
-     * <code>void extractRGBAValues(l_uint32, l_int32*, l_int32*, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:2872</i>
-     */
-    void extractRGBAValues(int pixel, IntBuffer prval, IntBuffer pgval, IntBuffer pbval, IntBuffer paval);
+//    /**
+//     * Original signature :
+//     * <code>void extractRGBAValues(l_uint32, l_int32*, l_int32*, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:2872</i>
+//     */
+//    void extractRGBAValues(int pixel, IntBuffer prval, IntBuffer pgval, IntBuffer pbval, IntBuffer paval);
 
-    /**
-     * Original signature :
-     * <code>l_int32 extractMinMaxComponent(l_uint32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2874</i>
-     */
-    int extractMinMaxComponent(int pixel, int type);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 extractMinMaxComponent(l_uint32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2874</i>
+//     */
+//    int extractMinMaxComponent(int pixel, int type);
 
     /**
      * Original signature :
@@ -10130,26 +10130,26 @@ public interface Leptonica extends Library, ILeptonica {
      */
     int pixAlphaIsOpaque(Pix pix, IntBuffer popaque);
 
-    /**
-     * Original signature :
-     * <code>l_uint8** pixSetupByteProcessing(PIX*, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:2892</i>
-     */
-    PointerByReference pixSetupByteProcessing(Pix pix, IntBuffer pw, IntBuffer ph);
+//    /**
+//     * Original signature :
+//     * <code>l_uint8** pixSetupByteProcessing(PIX*, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:2892</i>
+//     */
+//    PointerByReference pixSetupByteProcessing(Pix pix, IntBuffer pw, IntBuffer ph);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixCleanupByteProcessing(PIX*, l_uint8**)</code><br>
-     * <i>native declaration : allheaders.h:2894</i>
-     */
-    int pixCleanupByteProcessing(Pix pix, PointerByReference lineptrs);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixCleanupByteProcessing(PIX*, l_uint8**)</code><br>
+//     * <i>native declaration : allheaders.h:2894</i>
+//     */
+//    int pixCleanupByteProcessing(Pix pix, PointerByReference lineptrs);
 
-    /**
-     * Original signature :
-     * <code>void l_setAlphaMaskBorder(l_float32, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:2896</i>
-     */
-    void l_setAlphaMaskBorder(float val1, float val2);
+//    /**
+//     * Original signature :
+//     * <code>void l_setAlphaMaskBorder(l_float32, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:2896</i>
+//     */
+//    void l_setAlphaMaskBorder(float val1, float val2);
 
     /**
      * Original signature :
@@ -10264,186 +10264,186 @@ public interface Leptonica extends Library, ILeptonica {
      */
     int pixForegroundFraction(Pix pix, FloatBuffer pfract);
 
-    /**
-     * Original signature : <code>NUMA* pixaCountPixels(PIXA*)</code><br>
-     * <i>native declaration : allheaders.h:2932</i>
-     */
-    Numa pixaCountPixels(Pixa pixa);
+//    /**
+//     * Original signature : <code>NUMA* pixaCountPixels(PIXA*)</code><br>
+//     * <i>native declaration : allheaders.h:2932</i>
+//     */
+//    Numa pixaCountPixels(Pixa pixa);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixCountPixels(PIX*, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:2934</i>
-     */
-    int pixCountPixels(Pix pix, IntBuffer pcount, IntBuffer tab8);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixCountPixels(PIX*, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:2934</i>
+//     */
+//    int pixCountPixels(Pix pix, IntBuffer pcount, IntBuffer tab8);
 
-    /**
-     * Original signature : <code>NUMA* pixCountByRow(PIX*, BOX*)</code><br>
-     * <i>native declaration : allheaders.h:2936</i>
-     */
-    Numa pixCountByRow(Pix pix, Box box);
+//    /**
+//     * Original signature : <code>NUMA* pixCountByRow(PIX*, BOX*)</code><br>
+//     * <i>native declaration : allheaders.h:2936</i>
+//     */
+//    Numa pixCountByRow(Pix pix, Box box);
 
-    /**
-     * Original signature : <code>NUMA* pixCountByColumn(PIX*, BOX*)</code><br>
-     * <i>native declaration : allheaders.h:2938</i>
-     */
-    Numa pixCountByColumn(Pix pix, Box box);
+//    /**
+//     * Original signature : <code>NUMA* pixCountByColumn(PIX*, BOX*)</code><br>
+//     * <i>native declaration : allheaders.h:2938</i>
+//     */
+//    Numa pixCountByColumn(Pix pix, Box box);
 
-    /**
-     * Original signature :
-     * <code>NUMA* pixCountPixelsByRow(PIX*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:2940</i>
-     */
-    Numa pixCountPixelsByRow(Pix pix, IntBuffer tab8);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* pixCountPixelsByRow(PIX*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:2940</i>
+//     */
+//    Numa pixCountPixelsByRow(Pix pix, IntBuffer tab8);
 
-    /**
-     * Original signature : <code>NUMA* pixCountPixelsByColumn(PIX*)</code><br>
-     * <i>native declaration : allheaders.h:2942</i>
-     */
-    Numa pixCountPixelsByColumn(Pix pix);
+//    /**
+//     * Original signature : <code>NUMA* pixCountPixelsByColumn(PIX*)</code><br>
+//     * <i>native declaration : allheaders.h:2942</i>
+//     */
+//    Numa pixCountPixelsByColumn(Pix pix);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixCountPixelsInRow(PIX*, l_int32, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:2944</i>
-     */
-    int pixCountPixelsInRow(Pix pix, int row, IntBuffer pcount, IntBuffer tab8);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixCountPixelsInRow(PIX*, l_int32, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:2944</i>
+//     */
+//    int pixCountPixelsInRow(Pix pix, int row, IntBuffer pcount, IntBuffer tab8);
 
-    /**
-     * Original signature :
-     * <code>NUMA* pixGetMomentByColumn(PIX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2946</i>
-     */
-    Numa pixGetMomentByColumn(Pix pix, int order);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* pixGetMomentByColumn(PIX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2946</i>
+//     */
+//    Numa pixGetMomentByColumn(Pix pix, int order);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixThresholdPixelSum(PIX*, l_int32, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:2948</i>
-     */
-    int pixThresholdPixelSum(Pix pix, int thresh, IntBuffer pabove, IntBuffer tab8);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixThresholdPixelSum(PIX*, l_int32, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:2948</i>
+//     */
+//    int pixThresholdPixelSum(Pix pix, int thresh, IntBuffer pabove, IntBuffer tab8);
 
-    /**
-     * Original signature : <code>l_int32* makePixelSumTab8()</code><br>
-     * <i>native declaration : allheaders.h:2950</i>
-     */
-    IntByReference makePixelSumTab8();
+//    /**
+//     * Original signature : <code>l_int32* makePixelSumTab8()</code><br>
+//     * <i>native declaration : allheaders.h:2950</i>
+//     */
+//    IntByReference makePixelSumTab8();
 
-    /**
-     * Original signature : <code>l_int32* makePixelCentroidTab8()</code><br>
-     * <i>native declaration : allheaders.h:2952</i>
-     */
-    IntByReference makePixelCentroidTab8();
+//    /**
+//     * Original signature : <code>l_int32* makePixelCentroidTab8()</code><br>
+//     * <i>native declaration : allheaders.h:2952</i>
+//     */
+//    IntByReference makePixelCentroidTab8();
 
-    /**
-     * Original signature :
-     * <code>NUMA* pixAverageByRow(PIX*, BOX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2954</i>
-     */
-    Numa pixAverageByRow(Pix pix, Box box, int type);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* pixAverageByRow(PIX*, BOX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2954</i>
+//     */
+//    Numa pixAverageByRow(Pix pix, Box box, int type);
 
-    /**
-     * Original signature :
-     * <code>NUMA* pixAverageByColumn(PIX*, BOX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2956</i>
-     */
-    Numa pixAverageByColumn(Pix pix, Box box, int type);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* pixAverageByColumn(PIX*, BOX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2956</i>
+//     */
+//    Numa pixAverageByColumn(Pix pix, Box box, int type);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixAverageInRect(PIX*, BOX*, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:2958</i>
-     */
-    int pixAverageInRect(Pix pix, Box box, FloatBuffer pave);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixAverageInRect(PIX*, BOX*, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:2958</i>
+//     */
+//    int pixAverageInRect(Pix pix, Box box, FloatBuffer pave);
 
-    /**
-     * Original signature : <code>NUMA* pixVarianceByRow(PIX*, BOX*)</code><br>
-     * <i>native declaration : allheaders.h:2960</i>
-     */
-    Numa pixVarianceByRow(Pix pix, Box box);
+//    /**
+//     * Original signature : <code>NUMA* pixVarianceByRow(PIX*, BOX*)</code><br>
+//     * <i>native declaration : allheaders.h:2960</i>
+//     */
+//    Numa pixVarianceByRow(Pix pix, Box box);
 
-    /**
-     * Original signature :
-     * <code>NUMA* pixVarianceByColumn(PIX*, BOX*)</code><br>
-     * <i>native declaration : allheaders.h:2962</i>
-     */
-    Numa pixVarianceByColumn(Pix pix, Box box);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* pixVarianceByColumn(PIX*, BOX*)</code><br>
+//     * <i>native declaration : allheaders.h:2962</i>
+//     */
+//    Numa pixVarianceByColumn(Pix pix, Box box);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixVarianceInRect(PIX*, BOX*, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:2964</i>
-     */
-    int pixVarianceInRect(Pix pix, Box box, FloatBuffer prootvar);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixVarianceInRect(PIX*, BOX*, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:2964</i>
+//     */
+//    int pixVarianceInRect(Pix pix, Box box, FloatBuffer prootvar);
 
-    /**
-     * Original signature : <code>NUMA* pixAbsDiffByRow(PIX*, BOX*)</code><br>
-     * <i>native declaration : allheaders.h:2966</i>
-     */
-    Numa pixAbsDiffByRow(Pix pix, Box box);
+//    /**
+//     * Original signature : <code>NUMA* pixAbsDiffByRow(PIX*, BOX*)</code><br>
+//     * <i>native declaration : allheaders.h:2966</i>
+//     */
+//    Numa pixAbsDiffByRow(Pix pix, Box box);
 
-    /**
-     * Original signature :
-     * <code>NUMA* pixAbsDiffByColumn(PIX*, BOX*)</code><br>
-     * <i>native declaration : allheaders.h:2968</i>
-     */
-    Numa pixAbsDiffByColumn(Pix pix, Box box);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* pixAbsDiffByColumn(PIX*, BOX*)</code><br>
+//     * <i>native declaration : allheaders.h:2968</i>
+//     */
+//    Numa pixAbsDiffByColumn(Pix pix, Box box);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixAbsDiffInRect(PIX*, BOX*, l_int32, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:2970</i>
-     */
-    int pixAbsDiffInRect(Pix pix, Box box, int dir, FloatBuffer pabsdiff);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixAbsDiffInRect(PIX*, BOX*, l_int32, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:2970</i>
+//     */
+//    int pixAbsDiffInRect(Pix pix, Box box, int dir, FloatBuffer pabsdiff);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixAbsDiffOnLine(PIX*, l_int32, l_int32, l_int32, l_int32, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:2972</i>
-     */
-    int pixAbsDiffOnLine(Pix pix, int x1, int y1, int x2, int y2, FloatBuffer pabsdiff);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixAbsDiffOnLine(PIX*, l_int32, l_int32, l_int32, l_int32, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:2972</i>
+//     */
+//    int pixAbsDiffOnLine(Pix pix, int x1, int y1, int x2, int y2, FloatBuffer pabsdiff);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixCountArbInRect(PIX*, BOX*, l_int32, l_int32, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:2974</i>
-     */
-    int pixCountArbInRect(Pix pixs, Box box, int val, int factor, IntBuffer pcount);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixCountArbInRect(PIX*, BOX*, l_int32, l_int32, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:2974</i>
+//     */
+//    int pixCountArbInRect(Pix pixs, Box box, int val, int factor, IntBuffer pcount);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixMirroredTiling(PIX*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2976</i>
-     */
-    Pix pixMirroredTiling(Pix pixs, int w, int h);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixMirroredTiling(PIX*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2976</i>
+//     */
+//    Pix pixMirroredTiling(Pix pixs, int w, int h);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixFindRepCloseTile(PIX*, BOX*, l_int32, l_int32, l_int32, l_int32, BOX**, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2978</i>
-     */
-    int pixFindRepCloseTile(Pix pixs, Box box, int searchdir, int mindist, int tsize, int ntiles, PointerByReference pboxtile, int debug);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixFindRepCloseTile(PIX*, BOX*, l_int32, l_int32, l_int32, l_int32, BOX**, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2978</i>
+//     */
+//    int pixFindRepCloseTile(Pix pixs, Box box, int searchdir, int mindist, int tsize, int ntiles, PointerByReference pboxtile, int debug);
 
-    /**
-     * Original signature :
-     * <code>NUMA* pixGetGrayHistogram(PIX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2980</i>
-     */
-    Numa pixGetGrayHistogram(Pix pixs, int factor);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* pixGetGrayHistogram(PIX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2980</i>
+//     */
+//    Numa pixGetGrayHistogram(Pix pixs, int factor);
 
-    /**
-     * Original signature :
-     * <code>NUMA* pixGetGrayHistogramMasked(PIX*, PIX*, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2982</i>
-     */
-    Numa pixGetGrayHistogramMasked(Pix pixs, Pix pixm, int x, int y, int factor);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* pixGetGrayHistogramMasked(PIX*, PIX*, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2982</i>
+//     */
+//    Numa pixGetGrayHistogramMasked(Pix pixs, Pix pixm, int x, int y, int factor);
 
-    /**
-     * Original signature :
-     * <code>NUMA* pixGetGrayHistogramInRect(PIX*, BOX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2984</i>
-     */
-    Numa pixGetGrayHistogramInRect(Pix pixs, Box box, int factor);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* pixGetGrayHistogramInRect(PIX*, BOX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2984</i>
+//     */
+//    Numa pixGetGrayHistogramInRect(Pix pixs, Box box, int factor);
 
     /**
      * Original signature :
@@ -10452,138 +10452,138 @@ public interface Leptonica extends Library, ILeptonica {
      */
     Numaa pixGetGrayHistogramTiled(Pix pixs, int factor, int nx, int ny);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixGetColorHistogram(PIX*, l_int32, NUMA**, NUMA**, NUMA**)</code><br>
-     * <i>native declaration : allheaders.h:2988</i>
-     */
-    int pixGetColorHistogram(Pix pixs, int factor, PointerByReference pnar, PointerByReference pnag, PointerByReference pnab);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixGetColorHistogram(PIX*, l_int32, NUMA**, NUMA**, NUMA**)</code><br>
+//     * <i>native declaration : allheaders.h:2988</i>
+//     */
+//    int pixGetColorHistogram(Pix pixs, int factor, PointerByReference pnar, PointerByReference pnag, PointerByReference pnab);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixGetColorHistogramMasked(PIX*, PIX*, l_int32, l_int32, l_int32, NUMA**, NUMA**, NUMA**)</code><br>
-     * <i>native declaration : allheaders.h:2990</i>
-     */
-    int pixGetColorHistogramMasked(Pix pixs, Pix pixm, int x, int y, int factor, PointerByReference pnar, PointerByReference pnag, PointerByReference pnab);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixGetColorHistogramMasked(PIX*, PIX*, l_int32, l_int32, l_int32, NUMA**, NUMA**, NUMA**)</code><br>
+//     * <i>native declaration : allheaders.h:2990</i>
+//     */
+//    int pixGetColorHistogramMasked(Pix pixs, Pix pixm, int x, int y, int factor, PointerByReference pnar, PointerByReference pnag, PointerByReference pnab);
 
-    /**
-     * Original signature :
-     * <code>NUMA* pixGetCmapHistogram(PIX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2992</i>
-     */
-    Numa pixGetCmapHistogram(Pix pixs, int factor);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* pixGetCmapHistogram(PIX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2992</i>
+//     */
+//    Numa pixGetCmapHistogram(Pix pixs, int factor);
 
-    /**
-     * Original signature :
-     * <code>NUMA* pixGetCmapHistogramMasked(PIX*, PIX*, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2994</i>
-     */
-    Numa pixGetCmapHistogramMasked(Pix pixs, Pix pixm, int x, int y, int factor);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* pixGetCmapHistogramMasked(PIX*, PIX*, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2994</i>
+//     */
+//    Numa pixGetCmapHistogramMasked(Pix pixs, Pix pixm, int x, int y, int factor);
 
-    /**
-     * Original signature :
-     * <code>NUMA* pixGetCmapHistogramInRect(PIX*, BOX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:2996</i>
-     */
-    Numa pixGetCmapHistogramInRect(Pix pixs, Box box, int factor);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* pixGetCmapHistogramInRect(PIX*, BOX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:2996</i>
+//     */
+//    Numa pixGetCmapHistogramInRect(Pix pixs, Box box, int factor);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixGetRankValue(PIX*, l_int32, l_float32, l_uint32*)</code><br>
-     * <i>native declaration : allheaders.h:2998</i>
-     */
-    int pixGetRankValue(Pix pixs, int factor, float rank, IntBuffer pvalue);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixGetRankValue(PIX*, l_int32, l_float32, l_uint32*)</code><br>
+//     * <i>native declaration : allheaders.h:2998</i>
+//     */
+//    int pixGetRankValue(Pix pixs, int factor, float rank, IntBuffer pvalue);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixGetRankValueMaskedRGB(PIX*, PIX*, l_int32, l_int32, l_int32, l_float32, l_float32*, l_float32*, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:3000</i>
-     */
-    int pixGetRankValueMaskedRGB(Pix pixs, Pix pixm, int x, int y, int factor, float rank, FloatBuffer prval, FloatBuffer pgval, FloatBuffer pbval);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixGetRankValueMaskedRGB(PIX*, PIX*, l_int32, l_int32, l_int32, l_float32, l_float32*, l_float32*, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:3000</i>
+//     */
+//    int pixGetRankValueMaskedRGB(Pix pixs, Pix pixm, int x, int y, int factor, float rank, FloatBuffer prval, FloatBuffer pgval, FloatBuffer pbval);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixGetRankValueMasked(PIX*, PIX*, l_int32, l_int32, l_int32, l_float32, l_float32*, NUMA**)</code><br>
-     * <i>native declaration : allheaders.h:3002</i>
-     */
-    int pixGetRankValueMasked(Pix pixs, Pix pixm, int x, int y, int factor, float rank, FloatBuffer pval, PointerByReference pna);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixGetRankValueMasked(PIX*, PIX*, l_int32, l_int32, l_int32, l_float32, l_float32*, NUMA**)</code><br>
+//     * <i>native declaration : allheaders.h:3002</i>
+//     */
+//    int pixGetRankValueMasked(Pix pixs, Pix pixm, int x, int y, int factor, float rank, FloatBuffer pval, PointerByReference pna);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixGetRankValueMasked(PIX*, PIX*, l_int32, l_int32, l_int32, l_float32, l_float32*, NUMA**)</code><br>
-     * <i>native declaration : allheaders.h:3002</i>
-     */
-    int pixGetRankValueMasked(Pix pixs, Pix pixm, int x, int y, int factor, float rank, FloatByReference pval, PointerByReference pna);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixGetRankValueMasked(PIX*, PIX*, l_int32, l_int32, l_int32, l_float32, l_float32*, NUMA**)</code><br>
+//     * <i>native declaration : allheaders.h:3002</i>
+//     */
+//    int pixGetRankValueMasked(Pix pixs, Pix pixm, int x, int y, int factor, float rank, FloatByReference pval, PointerByReference pna);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixGetAverageValue(PIX*, l_int32, l_int32, l_uint32*)</code><br>
-     * <i>native declaration : allheaders.h:3004</i>
-     */
-    int pixGetAverageValue(Pix pixs, int factor, int type, IntBuffer pvalue);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixGetAverageValue(PIX*, l_int32, l_int32, l_uint32*)</code><br>
+//     * <i>native declaration : allheaders.h:3004</i>
+//     */
+//    int pixGetAverageValue(Pix pixs, int factor, int type, IntBuffer pvalue);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixGetAverageMaskedRGB(PIX*, PIX*, l_int32, l_int32, l_int32, l_int32, l_float32*, l_float32*, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:3006</i>
-     */
-    int pixGetAverageMaskedRGB(Pix pixs, Pix pixm, int x, int y, int factor, int type, FloatBuffer prval, FloatBuffer pgval, FloatBuffer pbval);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixGetAverageMaskedRGB(PIX*, PIX*, l_int32, l_int32, l_int32, l_int32, l_float32*, l_float32*, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:3006</i>
+//     */
+//    int pixGetAverageMaskedRGB(Pix pixs, Pix pixm, int x, int y, int factor, int type, FloatBuffer prval, FloatBuffer pgval, FloatBuffer pbval);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixGetAverageMasked(PIX*, PIX*, l_int32, l_int32, l_int32, l_int32, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:3008</i>
-     */
-    int pixGetAverageMasked(Pix pixs, Pix pixm, int x, int y, int factor, int type, FloatBuffer pval);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixGetAverageMasked(PIX*, PIX*, l_int32, l_int32, l_int32, l_int32, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:3008</i>
+//     */
+//    int pixGetAverageMasked(Pix pixs, Pix pixm, int x, int y, int factor, int type, FloatBuffer pval);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixGetAverageTiledRGB(PIX*, l_int32, l_int32, l_int32, PIX**, PIX**, PIX**)</code><br>
-     * <i>native declaration : allheaders.h:3010</i>
-     */
-    int pixGetAverageTiledRGB(Pix pixs, int sx, int sy, int type, PointerByReference ppixr, PointerByReference ppixg, PointerByReference ppixb);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixGetAverageTiledRGB(PIX*, l_int32, l_int32, l_int32, PIX**, PIX**, PIX**)</code><br>
+//     * <i>native declaration : allheaders.h:3010</i>
+//     */
+//    int pixGetAverageTiledRGB(Pix pixs, int sx, int sy, int type, PointerByReference ppixr, PointerByReference ppixg, PointerByReference ppixb);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixGetAverageTiled(PIX*, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3012</i>
-     */
-    Pix pixGetAverageTiled(Pix pixs, int sx, int sy, int type);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixGetAverageTiled(PIX*, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3012</i>
+//     */
+//    Pix pixGetAverageTiled(Pix pixs, int sx, int sy, int type);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixRowStats(PIX*, BOX*, NUMA**, NUMA**, NUMA**, NUMA**, NUMA**, NUMA**)</code><br>
-     * <i>native declaration : allheaders.h:3014</i>
-     */
-    int pixRowStats(Pix pixs, Box box, PointerByReference pnamean, PointerByReference pnamedian, PointerByReference pnamode, PointerByReference pnamodecount, PointerByReference pnavar, PointerByReference pnarootvar);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixRowStats(PIX*, BOX*, NUMA**, NUMA**, NUMA**, NUMA**, NUMA**, NUMA**)</code><br>
+//     * <i>native declaration : allheaders.h:3014</i>
+//     */
+//    int pixRowStats(Pix pixs, Box box, PointerByReference pnamean, PointerByReference pnamedian, PointerByReference pnamode, PointerByReference pnamodecount, PointerByReference pnavar, PointerByReference pnarootvar);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixColumnStats(PIX*, BOX*, NUMA**, NUMA**, NUMA**, NUMA**, NUMA**, NUMA**)</code><br>
-     * <i>native declaration : allheaders.h:3016</i>
-     */
-    int pixColumnStats(Pix pixs, Box box, PointerByReference pnamean, PointerByReference pnamedian, PointerByReference pnamode, PointerByReference pnamodecount, PointerByReference pnavar, PointerByReference pnarootvar);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixColumnStats(PIX*, BOX*, NUMA**, NUMA**, NUMA**, NUMA**, NUMA**, NUMA**)</code><br>
+//     * <i>native declaration : allheaders.h:3016</i>
+//     */
+//    int pixColumnStats(Pix pixs, Box box, PointerByReference pnamean, PointerByReference pnamedian, PointerByReference pnamode, PointerByReference pnamodecount, PointerByReference pnavar, PointerByReference pnarootvar);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixGetComponentRange(PIX*, l_int32, l_int32, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:3018</i>
-     */
-    int pixGetComponentRange(Pix pixs, int factor, int color, IntBuffer pminval, IntBuffer pmaxval);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixGetComponentRange(PIX*, l_int32, l_int32, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:3018</i>
+//     */
+//    int pixGetComponentRange(Pix pixs, int factor, int color, IntBuffer pminval, IntBuffer pmaxval);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixGetExtremeValue(PIX*, l_int32, l_int32, l_int32*, l_int32*, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:3020</i>
-     */
-    int pixGetExtremeValue(Pix pixs, int factor, int type, IntBuffer prval, IntBuffer pgval, IntBuffer pbval, IntBuffer pgrayval);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixGetExtremeValue(PIX*, l_int32, l_int32, l_int32*, l_int32*, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:3020</i>
+//     */
+//    int pixGetExtremeValue(Pix pixs, int factor, int type, IntBuffer prval, IntBuffer pgval, IntBuffer pbval, IntBuffer pgrayval);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixGetMaxValueInRect(PIX*, BOX*, l_uint32*, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:3022</i>
-     */
-    int pixGetMaxValueInRect(Pix pixs, Box box, IntBuffer pmaxval, IntBuffer pxmax, IntBuffer pymax);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixGetMaxValueInRect(PIX*, BOX*, l_uint32*, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:3022</i>
+//     */
+//    int pixGetMaxValueInRect(Pix pixs, Box box, IntBuffer pmaxval, IntBuffer pxmax, IntBuffer pymax);
 
     /**
      * Original signature :
@@ -10599,12 +10599,12 @@ public interface Leptonica extends Library, ILeptonica {
      */
     int pixGetRankColorArray(Pix pixs, int nbins, int type, int factor, PointerByReference pcarray, int debugflag, int fontsize);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixGetBinnedColor(PIX*, PIX*, l_int32, l_int32, NUMA*, l_uint32**, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3028</i>
-     */
-    int pixGetBinnedColor(Pix pixs, Pix pixg, int factor, int nbins, Numa nalut, PointerByReference pcarray, int debugflag);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixGetBinnedColor(PIX*, PIX*, l_int32, l_int32, NUMA*, l_uint32**, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3028</i>
+//     */
+//    int pixGetBinnedColor(Pix pixs, Pix pixg, int factor, int nbins, Numa nalut, PointerByReference pcarray, int debugflag);
 
     /**
      * Original signature :
@@ -10613,213 +10613,213 @@ public interface Leptonica extends Library, ILeptonica {
      */
     Pix pixDisplayColorArray(IntBuffer carray, int ncolors, int side, int ncols, int fontsize);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixRankBinByStrip(PIX*, l_int32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3032</i>
-     */
-    Pix pixRankBinByStrip(Pix pixs, int direction, int size, int nbins, int type);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixRankBinByStrip(PIX*, l_int32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3032</i>
+//     */
+//    Pix pixRankBinByStrip(Pix pixs, int direction, int size, int nbins, int type);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixaGetAlignedStats(PIXA*, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3034</i>
-     */
-    Pix pixaGetAlignedStats(Pixa pixa, int type, int nbins, int thresh);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixaGetAlignedStats(PIXA*, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3034</i>
+//     */
+//    Pix pixaGetAlignedStats(Pixa pixa, int type, int nbins, int thresh);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixaExtractColumnFromEachPix(PIXA*, l_int32, PIX*)</code><br>
-     * <i>native declaration : allheaders.h:3036</i>
-     */
-    int pixaExtractColumnFromEachPix(Pixa pixa, int col, Pix pixd);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixaExtractColumnFromEachPix(PIXA*, l_int32, PIX*)</code><br>
+//     * <i>native declaration : allheaders.h:3036</i>
+//     */
+//    int pixaExtractColumnFromEachPix(Pixa pixa, int col, Pix pixd);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixGetRowStats(PIX*, l_int32, l_int32, l_int32, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:3038</i>
-     */
-    int pixGetRowStats(Pix pixs, int type, int nbins, int thresh, FloatBuffer colvect);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixGetRowStats(PIX*, l_int32, l_int32, l_int32, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:3038</i>
+//     */
+//    int pixGetRowStats(Pix pixs, int type, int nbins, int thresh, FloatBuffer colvect);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixGetColumnStats(PIX*, l_int32, l_int32, l_int32, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:3040</i>
-     */
-    int pixGetColumnStats(Pix pixs, int type, int nbins, int thresh, FloatBuffer rowvect);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixGetColumnStats(PIX*, l_int32, l_int32, l_int32, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:3040</i>
+//     */
+//    int pixGetColumnStats(Pix pixs, int type, int nbins, int thresh, FloatBuffer rowvect);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixSetPixelColumn(PIX*, l_int32, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:3042</i>
-     */
-    int pixSetPixelColumn(Pix pix, int col, FloatBuffer colvect);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixSetPixelColumn(PIX*, l_int32, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:3042</i>
+//     */
+//    int pixSetPixelColumn(Pix pix, int col, FloatBuffer colvect);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixThresholdForFgBg(PIX*, l_int32, l_int32, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:3044</i>
-     */
-    int pixThresholdForFgBg(Pix pixs, int factor, int thresh, IntBuffer pfgval, IntBuffer pbgval);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixThresholdForFgBg(PIX*, l_int32, l_int32, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:3044</i>
+//     */
+//    int pixThresholdForFgBg(Pix pixs, int factor, int thresh, IntBuffer pfgval, IntBuffer pbgval);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixSplitDistributionFgBg(PIX*, l_float32, l_int32, l_int32*, l_int32*, l_int32*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3046</i>
-     */
-    int pixSplitDistributionFgBg(Pix pixs, float scorefract, int factor, IntBuffer pthresh, IntBuffer pfgval, IntBuffer pbgval, int debugflag);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixSplitDistributionFgBg(PIX*, l_float32, l_int32, l_int32*, l_int32*, l_int32*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3046</i>
+//     */
+//    int pixSplitDistributionFgBg(Pix pixs, float scorefract, int factor, IntBuffer pthresh, IntBuffer pfgval, IntBuffer pbgval, int debugflag);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixaFindDimensions(PIXA*, NUMA**, NUMA**)</code><br>
-     * <i>native declaration : allheaders.h:3048</i>
-     */
-    int pixaFindDimensions(Pixa pixa, PointerByReference pnaw, PointerByReference pnah);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixaFindDimensions(PIXA*, NUMA**, NUMA**)</code><br>
+//     * <i>native declaration : allheaders.h:3048</i>
+//     */
+//    int pixaFindDimensions(Pixa pixa, PointerByReference pnaw, PointerByReference pnah);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixFindAreaPerimRatio(PIX*, l_int32*, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:3050</i>
-     */
-    int pixFindAreaPerimRatio(Pix pixs, IntBuffer tab, FloatBuffer pfract);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixFindAreaPerimRatio(PIX*, l_int32*, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:3050</i>
+//     */
+//    int pixFindAreaPerimRatio(Pix pixs, IntBuffer tab, FloatBuffer pfract);
 
-    /**
-     * Original signature :
-     * <code>NUMA* pixaFindPerimToAreaRatio(PIXA*)</code><br>
-     * <i>native declaration : allheaders.h:3052</i>
-     */
-    Numa pixaFindPerimToAreaRatio(Pixa pixa);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* pixaFindPerimToAreaRatio(PIXA*)</code><br>
+//     * <i>native declaration : allheaders.h:3052</i>
+//     */
+//    Numa pixaFindPerimToAreaRatio(Pixa pixa);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixFindPerimToAreaRatio(PIX*, l_int32*, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:3054</i>
-     */
-    int pixFindPerimToAreaRatio(Pix pixs, IntBuffer tab, FloatBuffer pfract);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixFindPerimToAreaRatio(PIX*, l_int32*, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:3054</i>
+//     */
+//    int pixFindPerimToAreaRatio(Pix pixs, IntBuffer tab, FloatBuffer pfract);
 
-    /**
-     * Original signature : <code>NUMA* pixaFindPerimSizeRatio(PIXA*)</code><br>
-     * <i>native declaration : allheaders.h:3056</i>
-     */
-    Numa pixaFindPerimSizeRatio(Pixa pixa);
+//    /**
+//     * Original signature : <code>NUMA* pixaFindPerimSizeRatio(PIXA*)</code><br>
+//     * <i>native declaration : allheaders.h:3056</i>
+//     */
+//    Numa pixaFindPerimSizeRatio(Pixa pixa);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixFindPerimSizeRatio(PIX*, l_int32*, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:3058</i>
-     */
-    int pixFindPerimSizeRatio(Pix pixs, IntBuffer tab, FloatBuffer pratio);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixFindPerimSizeRatio(PIX*, l_int32*, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:3058</i>
+//     */
+//    int pixFindPerimSizeRatio(Pix pixs, IntBuffer tab, FloatBuffer pratio);
 
-    /**
-     * Original signature : <code>NUMA* pixaFindAreaFraction(PIXA*)</code><br>
-     * <i>native declaration : allheaders.h:3060</i>
-     */
-    Numa pixaFindAreaFraction(Pixa pixa);
+//    /**
+//     * Original signature : <code>NUMA* pixaFindAreaFraction(PIXA*)</code><br>
+//     * <i>native declaration : allheaders.h:3060</i>
+//     */
+//    Numa pixaFindAreaFraction(Pixa pixa);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixFindAreaFraction(PIX*, l_int32*, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:3062</i>
-     */
-    int pixFindAreaFraction(Pix pixs, IntBuffer tab, FloatBuffer pfract);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixFindAreaFraction(PIX*, l_int32*, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:3062</i>
+//     */
+//    int pixFindAreaFraction(Pix pixs, IntBuffer tab, FloatBuffer pfract);
 
-    /**
-     * Original signature :
-     * <code>NUMA* pixaFindAreaFractionMasked(PIXA*, PIX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3064</i>
-     */
-    Numa pixaFindAreaFractionMasked(Pixa pixa, Pix pixm, int debug);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* pixaFindAreaFractionMasked(PIXA*, PIX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3064</i>
+//     */
+//    Numa pixaFindAreaFractionMasked(Pixa pixa, Pix pixm, int debug);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixFindAreaFractionMasked(PIX*, BOX*, PIX*, l_int32*, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:3066</i>
-     */
-    int pixFindAreaFractionMasked(Pix pixs, Box box, Pix pixm, IntBuffer tab, FloatBuffer pfract);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixFindAreaFractionMasked(PIX*, BOX*, PIX*, l_int32*, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:3066</i>
+//     */
+//    int pixFindAreaFractionMasked(Pix pixs, Box box, Pix pixm, IntBuffer tab, FloatBuffer pfract);
 
-    /**
-     * Original signature :
-     * <code>NUMA* pixaFindWidthHeightRatio(PIXA*)</code><br>
-     * <i>native declaration : allheaders.h:3068</i>
-     */
-    Numa pixaFindWidthHeightRatio(Pixa pixa);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* pixaFindWidthHeightRatio(PIXA*)</code><br>
+//     * <i>native declaration : allheaders.h:3068</i>
+//     */
+//    Numa pixaFindWidthHeightRatio(Pixa pixa);
 
-    /**
-     * Original signature :
-     * <code>NUMA* pixaFindWidthHeightProduct(PIXA*)</code><br>
-     * <i>native declaration : allheaders.h:3070</i>
-     */
-    Numa pixaFindWidthHeightProduct(Pixa pixa);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* pixaFindWidthHeightProduct(PIXA*)</code><br>
+//     * <i>native declaration : allheaders.h:3070</i>
+//     */
+//    Numa pixaFindWidthHeightProduct(Pixa pixa);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixFindOverlapFraction(PIX*, PIX*, l_int32, l_int32, l_int32*, l_float32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:3072</i>
-     */
-    int pixFindOverlapFraction(Pix pixs1, Pix pixs2, int x2, int y2, IntBuffer tab, FloatBuffer pratio, IntBuffer pnoverlap);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixFindOverlapFraction(PIX*, PIX*, l_int32, l_int32, l_int32*, l_float32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:3072</i>
+//     */
+//    int pixFindOverlapFraction(Pix pixs1, Pix pixs2, int x2, int y2, IntBuffer tab, FloatBuffer pratio, IntBuffer pnoverlap);
 
-    /**
-     * Original signature :
-     * <code>BOXA* pixFindRectangleComps(PIX*, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3074</i>
-     */
-    Boxa pixFindRectangleComps(Pix pixs, int dist, int minw, int minh);
+//    /**
+//     * Original signature :
+//     * <code>BOXA* pixFindRectangleComps(PIX*, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3074</i>
+//     */
+//    Boxa pixFindRectangleComps(Pix pixs, int dist, int minw, int minh);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixConformsToRectangle(PIX*, BOX*, l_int32, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:3076</i>
-     */
-    int pixConformsToRectangle(Pix pixs, Box box, int dist, IntBuffer pconforms);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixConformsToRectangle(PIX*, BOX*, l_int32, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:3076</i>
+//     */
+//    int pixConformsToRectangle(Pix pixs, Box box, int dist, IntBuffer pconforms);
 
-    /**
-     * Original signature :
-     * <code>PIXA* pixClipRectangles(PIX*, BOXA*)</code><br>
-     * <i>native declaration : allheaders.h:3078</i>
-     */
-    Pixa pixClipRectangles(Pix pixs, Boxa boxa);
+//    /**
+//     * Original signature :
+//     * <code>PIXA* pixClipRectangles(PIX*, BOXA*)</code><br>
+//     * <i>native declaration : allheaders.h:3078</i>
+//     */
+//    Pixa pixClipRectangles(Pix pixs, Boxa boxa);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixClipRectangle(PIX*, BOX*, BOX**)</code><br>
-     * <i>native declaration : allheaders.h:3080</i>
-     */
-    Pix pixClipRectangle(Pix pixs, Box box, PointerByReference pboxc);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixClipRectangle(PIX*, BOX*, BOX**)</code><br>
+//     * <i>native declaration : allheaders.h:3080</i>
+//     */
+//    Pix pixClipRectangle(Pix pixs, Box box, PointerByReference pboxc);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixClipMasked(PIX*, PIX*, l_int32, l_int32, l_uint32)</code><br>
-     * <i>native declaration : allheaders.h:3082</i>
-     */
-    Pix pixClipMasked(Pix pixs, Pix pixm, int x, int y, int outval);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixClipMasked(PIX*, PIX*, l_int32, l_int32, l_uint32)</code><br>
+//     * <i>native declaration : allheaders.h:3082</i>
+//     */
+//    Pix pixClipMasked(Pix pixs, Pix pixm, int x, int y, int outval);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixCropToMatch(PIX*, PIX*, PIX**, PIX**)</code><br>
-     * <i>native declaration : allheaders.h:3084</i>
-     */
-    int pixCropToMatch(Pix pixs1, Pix pixs2, PointerByReference ppixd1, PointerByReference ppixd2);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixCropToMatch(PIX*, PIX*, PIX**, PIX**)</code><br>
+//     * <i>native declaration : allheaders.h:3084</i>
+//     */
+//    int pixCropToMatch(Pix pixs1, Pix pixs2, PointerByReference ppixd1, PointerByReference ppixd2);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixCropToSize(PIX*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3086</i>
-     */
-    Pix pixCropToSize(Pix pixs, int w, int h);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixCropToSize(PIX*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3086</i>
+//     */
+//    Pix pixCropToSize(Pix pixs, int w, int h);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixResizeToMatch(PIX*, PIX*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3088</i>
-     */
-    Pix pixResizeToMatch(Pix pixs, Pix pixt, int w, int h);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixResizeToMatch(PIX*, PIX*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3088</i>
+//     */
+//    Pix pixResizeToMatch(Pix pixs, Pix pixt, int w, int h);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixMakeFrameMask(l_int32, l_int32, l_float32, l_float32, l_float32, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:3090</i>
-     */
-    Pix pixMakeFrameMask(int w, int h, float hf1, float hf2, float vf1, float vf2);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixMakeFrameMask(l_int32, l_int32, l_float32, l_float32, l_float32, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:3090</i>
+//     */
+//    Pix pixMakeFrameMask(int w, int h, float hf1, float hf2, float vf1, float vf2);
 
     /**
      * Original signature :
@@ -10828,262 +10828,262 @@ public interface Leptonica extends Library, ILeptonica {
      */
     int pixFractionFgInMask(Pix pix1, Pix pix2, FloatBuffer pfract);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixClipToForeground(PIX*, PIX**, BOX**)</code><br>
-     * <i>native declaration : allheaders.h:3094</i>
-     */
-    int pixClipToForeground(Pix pixs, PointerByReference ppixd, PointerByReference pbox);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixClipToForeground(PIX*, PIX**, BOX**)</code><br>
+//     * <i>native declaration : allheaders.h:3094</i>
+//     */
+//    int pixClipToForeground(Pix pixs, PointerByReference ppixd, PointerByReference pbox);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixTestClipToForeground(PIX*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:3096</i>
-     */
-    int pixTestClipToForeground(Pix pixs, IntBuffer pcanclip);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixTestClipToForeground(PIX*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:3096</i>
+//     */
+//    int pixTestClipToForeground(Pix pixs, IntBuffer pcanclip);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixClipBoxToForeground(PIX*, BOX*, PIX**, BOX**)</code><br>
-     * <i>native declaration : allheaders.h:3098</i>
-     */
-    int pixClipBoxToForeground(Pix pixs, Box boxs, PointerByReference ppixd, PointerByReference pboxd);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixClipBoxToForeground(PIX*, BOX*, PIX**, BOX**)</code><br>
+//     * <i>native declaration : allheaders.h:3098</i>
+//     */
+//    int pixClipBoxToForeground(Pix pixs, Box boxs, PointerByReference ppixd, PointerByReference pboxd);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixScanForForeground(PIX*, BOX*, l_int32, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:3100</i>
-     */
-    int pixScanForForeground(Pix pixs, Box box, int scanflag, IntBuffer ploc);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixScanForForeground(PIX*, BOX*, l_int32, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:3100</i>
+//     */
+//    int pixScanForForeground(Pix pixs, Box box, int scanflag, IntBuffer ploc);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixClipBoxToEdges(PIX*, BOX*, l_int32, l_int32, l_int32, l_int32, PIX**, BOX**)</code><br>
-     * <i>native declaration : allheaders.h:3102</i>
-     */
-    int pixClipBoxToEdges(Pix pixs, Box boxs, int lowthresh, int highthresh, int maxwidth, int factor, PointerByReference ppixd, PointerByReference pboxd);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixClipBoxToEdges(PIX*, BOX*, l_int32, l_int32, l_int32, l_int32, PIX**, BOX**)</code><br>
+//     * <i>native declaration : allheaders.h:3102</i>
+//     */
+//    int pixClipBoxToEdges(Pix pixs, Box boxs, int lowthresh, int highthresh, int maxwidth, int factor, PointerByReference ppixd, PointerByReference pboxd);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixScanForEdge(PIX*, BOX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:3104</i>
-     */
-    int pixScanForEdge(Pix pixs, Box box, int lowthresh, int highthresh, int maxwidth, int factor, int scanflag, IntBuffer ploc);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixScanForEdge(PIX*, BOX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:3104</i>
+//     */
+//    int pixScanForEdge(Pix pixs, Box box, int lowthresh, int highthresh, int maxwidth, int factor, int scanflag, IntBuffer ploc);
 
-    /**
-     * Original signature :
-     * <code>NUMA* pixExtractOnLine(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3106</i>
-     */
-    Numa pixExtractOnLine(Pix pixs, int x1, int y1, int x2, int y2, int factor);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* pixExtractOnLine(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3106</i>
+//     */
+//    Numa pixExtractOnLine(Pix pixs, int x1, int y1, int x2, int y2, int factor);
 
-    /**
-     * Original signature :
-     * <code>l_float32 pixAverageOnLine(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3108</i>
-     */
-    float pixAverageOnLine(Pix pixs, int x1, int y1, int x2, int y2, int factor);
+//    /**
+//     * Original signature :
+//     * <code>l_float32 pixAverageOnLine(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3108</i>
+//     */
+//    float pixAverageOnLine(Pix pixs, int x1, int y1, int x2, int y2, int factor);
 
-    /**
-     * Original signature :
-     * <code>NUMA* pixAverageIntensityProfile(PIX*, l_float32, l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3110</i>
-     */
-    Numa pixAverageIntensityProfile(Pix pixs, float fract, int dir, int first, int last, int factor1, int factor2);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* pixAverageIntensityProfile(PIX*, l_float32, l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3110</i>
+//     */
+//    Numa pixAverageIntensityProfile(Pix pixs, float fract, int dir, int first, int last, int factor1, int factor2);
 
-    /**
-     * Original signature :
-     * <code>NUMA* pixReversalProfile(PIX*, l_float32, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3112</i>
-     */
-    Numa pixReversalProfile(Pix pixs, float fract, int dir, int first, int last, int minreversal, int factor1, int factor2);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* pixReversalProfile(PIX*, l_float32, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3112</i>
+//     */
+//    Numa pixReversalProfile(Pix pixs, float fract, int dir, int first, int last, int minreversal, int factor1, int factor2);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixWindowedVarianceOnLine(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, NUMA**)</code><br>
-     * <i>native declaration : allheaders.h:3114</i>
-     */
-    int pixWindowedVarianceOnLine(Pix pixs, int dir, int loc, int c1, int c2, int size, PointerByReference pnad);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixWindowedVarianceOnLine(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, NUMA**)</code><br>
+//     * <i>native declaration : allheaders.h:3114</i>
+//     */
+//    int pixWindowedVarianceOnLine(Pix pixs, int dir, int loc, int c1, int c2, int size, PointerByReference pnad);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixMinMaxNearLine(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, NUMA**, NUMA**, l_float32*, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:3116</i>
-     */
-    int pixMinMaxNearLine(Pix pixs, int x1, int y1, int x2, int y2, int dist, int direction, PointerByReference pnamin, PointerByReference pnamax, FloatBuffer pminave, FloatBuffer pmaxave);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixMinMaxNearLine(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, NUMA**, NUMA**, l_float32*, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:3116</i>
+//     */
+//    int pixMinMaxNearLine(Pix pixs, int x1, int y1, int x2, int y2, int dist, int direction, PointerByReference pnamin, PointerByReference pnamax, FloatBuffer pminave, FloatBuffer pmaxave);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixMinMaxNearLine(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, NUMA**, NUMA**, l_float32*, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:3116</i>
-     */
-    int pixMinMaxNearLine(Pix pixs, int x1, int y1, int x2, int y2, int dist, int direction, PointerByReference pnamin, PointerByReference pnamax, FloatByReference pminave, FloatByReference pmaxave);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixMinMaxNearLine(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, NUMA**, NUMA**, l_float32*, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:3116</i>
+//     */
+//    int pixMinMaxNearLine(Pix pixs, int x1, int y1, int x2, int y2, int dist, int direction, PointerByReference pnamin, PointerByReference pnamax, FloatByReference pminave, FloatByReference pmaxave);
 
-    /**
-     * Original signature : <code>PIX* pixRankRowTransform(PIX*)</code><br>
-     * <i>native declaration : allheaders.h:3118</i>
-     */
-    Pix pixRankRowTransform(Pix pixs);
+//    /**
+//     * Original signature : <code>PIX* pixRankRowTransform(PIX*)</code><br>
+//     * <i>native declaration : allheaders.h:3118</i>
+//     */
+//    Pix pixRankRowTransform(Pix pixs);
 
-    /**
-     * Original signature : <code>PIX* pixRankColumnTransform(PIX*)</code><br>
-     * <i>native declaration : allheaders.h:3120</i>
-     */
-    Pix pixRankColumnTransform(Pix pixs);
+//    /**
+//     * Original signature : <code>PIX* pixRankColumnTransform(PIX*)</code><br>
+//     * <i>native declaration : allheaders.h:3120</i>
+//     */
+//    Pix pixRankColumnTransform(Pix pixs);
 
-    /**
-     * Original signature : <code>PIXA* pixaCreate(l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3122</i>
-     */
-    Pixa pixaCreate(int n);
+//    /**
+//     * Original signature : <code>PIXA* pixaCreate(l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3122</i>
+//     */
+//    Pixa pixaCreate(int n);
 
-    /**
-     * Original signature :
-     * <code>PIXA* pixaCreateFromPix(PIX*, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3124</i>
-     */
-    Pixa pixaCreateFromPix(Pix pixs, int n, int cellw, int cellh);
+//    /**
+//     * Original signature :
+//     * <code>PIXA* pixaCreateFromPix(PIX*, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3124</i>
+//     */
+//    Pixa pixaCreateFromPix(Pix pixs, int n, int cellw, int cellh);
 
-    /**
-     * Original signature :
-     * <code>PIXA* pixaCreateFromBoxa(PIX*, BOXA*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:3126</i>
-     */
-    Pixa pixaCreateFromBoxa(Pix pixs, Boxa boxa, IntBuffer pcropwarn);
+//    /**
+//     * Original signature :
+//     * <code>PIXA* pixaCreateFromBoxa(PIX*, BOXA*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:3126</i>
+//     */
+//    Pixa pixaCreateFromBoxa(Pix pixs, Boxa boxa, IntBuffer pcropwarn);
 
-    /**
-     * Original signature :
-     * <code>PIXA* pixaSplitPix(PIX*, l_int32, l_int32, l_int32, l_uint32)</code><br>
-     * <i>native declaration : allheaders.h:3128</i>
-     */
-    Pixa pixaSplitPix(Pix pixs, int nx, int ny, int borderwidth, int bordercolor);
+//    /**
+//     * Original signature :
+//     * <code>PIXA* pixaSplitPix(PIX*, l_int32, l_int32, l_int32, l_uint32)</code><br>
+//     * <i>native declaration : allheaders.h:3128</i>
+//     */
+//    Pixa pixaSplitPix(Pix pixs, int nx, int ny, int borderwidth, int bordercolor);
 
-    /**
-     * Original signature : <code>void pixaDestroy(PIXA**)</code><br>
-     * <i>native declaration : allheaders.h:3130</i>
-     */
-    void pixaDestroy(PointerByReference ppixa);
+//    /**
+//     * Original signature : <code>void pixaDestroy(PIXA**)</code><br>
+//     * <i>native declaration : allheaders.h:3130</i>
+//     */
+//    void pixaDestroy(PointerByReference ppixa);
 
-    /**
-     * Original signature : <code>PIXA* pixaCopy(PIXA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3132</i>
-     */
-    Pixa pixaCopy(Pixa pixa, int copyflag);
+//    /**
+//     * Original signature : <code>PIXA* pixaCopy(PIXA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3132</i>
+//     */
+//    Pixa pixaCopy(Pixa pixa, int copyflag);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixaAddPix(PIXA*, PIX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3134</i>
-     */
-    int pixaAddPix(Pixa pixa, Pix pix, int copyflag);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixaAddPix(PIXA*, PIX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3134</i>
+//     */
+//    int pixaAddPix(Pixa pixa, Pix pix, int copyflag);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixaAddBox(PIXA*, BOX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3136</i>
-     */
-    int pixaAddBox(Pixa pixa, Box box, int copyflag);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixaAddBox(PIXA*, BOX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3136</i>
+//     */
+//    int pixaAddBox(Pixa pixa, Box box, int copyflag);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixaExtendArrayToSize(PIXA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3138</i>
-     */
-    int pixaExtendArrayToSize(Pixa pixa, int size);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixaExtendArrayToSize(PIXA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3138</i>
+//     */
+//    int pixaExtendArrayToSize(Pixa pixa, int size);
 
-    /**
-     * Original signature : <code>l_int32 pixaGetCount(PIXA*)</code><br>
-     * <i>native declaration : allheaders.h:3140</i>
-     */
-    int pixaGetCount(Pixa pixa);
+//    /**
+//     * Original signature : <code>l_int32 pixaGetCount(PIXA*)</code><br>
+//     * <i>native declaration : allheaders.h:3140</i>
+//     */
+//    int pixaGetCount(Pixa pixa);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixaChangeRefcount(PIXA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3142</i>
-     */
-    int pixaChangeRefcount(Pixa pixa, int delta);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixaChangeRefcount(PIXA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3142</i>
+//     */
+//    int pixaChangeRefcount(Pixa pixa, int delta);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixaGetPix(PIXA*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3144</i>
-     */
-    Pix pixaGetPix(Pixa pixa, int index, int accesstype);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixaGetPix(PIXA*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3144</i>
+//     */
+//    Pix pixaGetPix(Pixa pixa, int index, int accesstype);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixaGetPixDimensions(PIXA*, l_int32, l_int32*, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:3146</i>
-     */
-    int pixaGetPixDimensions(Pixa pixa, int index, IntBuffer pw, IntBuffer ph, IntBuffer pd);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixaGetPixDimensions(PIXA*, l_int32, l_int32*, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:3146</i>
+//     */
+//    int pixaGetPixDimensions(Pixa pixa, int index, IntBuffer pw, IntBuffer ph, IntBuffer pd);
 
-    /**
-     * Original signature : <code>BOXA* pixaGetBoxa(PIXA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3148</i>
-     */
-    Boxa pixaGetBoxa(Pixa pixa, int accesstype);
+//    /**
+//     * Original signature : <code>BOXA* pixaGetBoxa(PIXA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3148</i>
+//     */
+//    Boxa pixaGetBoxa(Pixa pixa, int accesstype);
 
-    /**
-     * Original signature : <code>l_int32 pixaGetBoxaCount(PIXA*)</code><br>
-     * <i>native declaration : allheaders.h:3150</i>
-     */
-    int pixaGetBoxaCount(Pixa pixa);
+//    /**
+//     * Original signature : <code>l_int32 pixaGetBoxaCount(PIXA*)</code><br>
+//     * <i>native declaration : allheaders.h:3150</i>
+//     */
+//    int pixaGetBoxaCount(Pixa pixa);
 
-    /**
-     * Original signature :
-     * <code>BOX* pixaGetBox(PIXA*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3152</i>
-     */
-    Box pixaGetBox(Pixa pixa, int index, int accesstype);
+//    /**
+//     * Original signature :
+//     * <code>BOX* pixaGetBox(PIXA*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3152</i>
+//     */
+//    Box pixaGetBox(Pixa pixa, int index, int accesstype);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixaGetBoxGeometry(PIXA*, l_int32, l_int32*, l_int32*, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:3154</i>
-     */
-    int pixaGetBoxGeometry(Pixa pixa, int index, IntBuffer px, IntBuffer py, IntBuffer pw, IntBuffer ph);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixaGetBoxGeometry(PIXA*, l_int32, l_int32*, l_int32*, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:3154</i>
+//     */
+//    int pixaGetBoxGeometry(Pixa pixa, int index, IntBuffer px, IntBuffer py, IntBuffer pw, IntBuffer ph);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixaSetBoxa(PIXA*, BOXA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3156</i>
-     */
-    int pixaSetBoxa(Pixa pixa, Boxa boxa, int accesstype);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixaSetBoxa(PIXA*, BOXA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3156</i>
+//     */
+//    int pixaSetBoxa(Pixa pixa, Boxa boxa, int accesstype);
 
-    /**
-     * Original signature : <code>PIX** pixaGetPixArray(PIXA*)</code><br>
-     * <i>native declaration : allheaders.h:3158</i>
-     */
-    PointerByReference pixaGetPixArray(Pixa pixa);
+//    /**
+//     * Original signature : <code>PIX** pixaGetPixArray(PIXA*)</code><br>
+//     * <i>native declaration : allheaders.h:3158</i>
+//     */
+//    PointerByReference pixaGetPixArray(Pixa pixa);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixaVerifyDepth(PIXA*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:3160</i>
-     */
-    int pixaVerifyDepth(Pixa pixa, IntBuffer pmaxdepth);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixaVerifyDepth(PIXA*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:3160</i>
+//     */
+//    int pixaVerifyDepth(Pixa pixa, IntBuffer pmaxdepth);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixaIsFull(PIXA*, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:3162</i>
-     */
-    int pixaIsFull(Pixa pixa, IntBuffer pfullpa, IntBuffer pfullba);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixaIsFull(PIXA*, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:3162</i>
+//     */
+//    int pixaIsFull(Pixa pixa, IntBuffer pfullpa, IntBuffer pfullba);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixaCountText(PIXA*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:3164</i>
-     */
-    int pixaCountText(Pixa pixa, IntBuffer pntext);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixaCountText(PIXA*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:3164</i>
+//     */
+//    int pixaCountText(Pixa pixa, IntBuffer pntext);
 
-    /**
-     * Original signature :
-     * <code>void*** pixaGetLinePtrs(PIXA*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:3166</i>
-     */
-    PointerByReference pixaGetLinePtrs(Pixa pixa, IntBuffer psize);
+//    /**
+//     * Original signature :
+//     * <code>void*** pixaGetLinePtrs(PIXA*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:3166</i>
+//     */
+//    PointerByReference pixaGetLinePtrs(Pixa pixa, IntBuffer psize);
 
 //    /**
 //     * Original signature :
@@ -11092,179 +11092,179 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int pixaWriteStreamInfo(FILE fp, Pixa pixa);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixaReplacePix(PIXA*, l_int32, PIX*, BOX*)</code><br>
-     * <i>native declaration : allheaders.h:3170</i>
-     */
-    int pixaReplacePix(Pixa pixa, int index, Pix pix, Box box);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixaReplacePix(PIXA*, l_int32, PIX*, BOX*)</code><br>
+//     * <i>native declaration : allheaders.h:3170</i>
+//     */
+//    int pixaReplacePix(Pixa pixa, int index, Pix pix, Box box);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixaInsertPix(PIXA*, l_int32, PIX*, BOX*)</code><br>
-     * <i>native declaration : allheaders.h:3172</i>
-     */
-    int pixaInsertPix(Pixa pixa, int index, Pix pixs, Box box);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixaInsertPix(PIXA*, l_int32, PIX*, BOX*)</code><br>
+//     * <i>native declaration : allheaders.h:3172</i>
+//     */
+//    int pixaInsertPix(Pixa pixa, int index, Pix pixs, Box box);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixaRemovePix(PIXA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3174</i>
-     */
-    int pixaRemovePix(Pixa pixa, int index);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixaRemovePix(PIXA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3174</i>
+//     */
+//    int pixaRemovePix(Pixa pixa, int index);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixaRemovePixAndSave(PIXA*, l_int32, PIX**, BOX**)</code><br>
-     * <i>native declaration : allheaders.h:3176</i>
-     */
-    int pixaRemovePixAndSave(Pixa pixa, int index, PointerByReference ppix, PointerByReference pbox);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixaRemovePixAndSave(PIXA*, l_int32, PIX**, BOX**)</code><br>
+//     * <i>native declaration : allheaders.h:3176</i>
+//     */
+//    int pixaRemovePixAndSave(Pixa pixa, int index, PointerByReference ppix, PointerByReference pbox);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixaInitFull(PIXA*, PIX*, BOX*)</code><br>
-     * <i>native declaration : allheaders.h:3178</i>
-     */
-    int pixaInitFull(Pixa pixa, Pix pix, Box box);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixaInitFull(PIXA*, PIX*, BOX*)</code><br>
+//     * <i>native declaration : allheaders.h:3178</i>
+//     */
+//    int pixaInitFull(Pixa pixa, Pix pix, Box box);
 
-    /**
-     * Original signature : <code>l_int32 pixaClear(PIXA*)</code><br>
-     * <i>native declaration : allheaders.h:3180</i>
-     */
-    int pixaClear(Pixa pixa);
+//    /**
+//     * Original signature : <code>l_int32 pixaClear(PIXA*)</code><br>
+//     * <i>native declaration : allheaders.h:3180</i>
+//     */
+//    int pixaClear(Pixa pixa);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixaJoin(PIXA*, PIXA*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3182</i>
-     */
-    int pixaJoin(Pixa pixad, Pixa pixas, int istart, int iend);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixaJoin(PIXA*, PIXA*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3182</i>
+//     */
+//    int pixaJoin(Pixa pixad, Pixa pixas, int istart, int iend);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixaaJoin(PIXAA*, PIXAA*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3184</i>
-     */
-    int pixaaJoin(Pixaa paad, Pixaa paas, int istart, int iend);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixaaJoin(PIXAA*, PIXAA*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3184</i>
+//     */
+//    int pixaaJoin(Pixaa paad, Pixaa paas, int istart, int iend);
 
-    /**
-     * Original signature : <code>PIXAA* pixaaCreate(l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3186</i>
-     */
-    Pixaa pixaaCreate(int n);
+//    /**
+//     * Original signature : <code>PIXAA* pixaaCreate(l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3186</i>
+//     */
+//    Pixaa pixaaCreate(int n);
 
-    /**
-     * Original signature :
-     * <code>PIXAA* pixaaCreateFromPixa(PIXA*, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3188</i>
-     */
-    Pixaa pixaaCreateFromPixa(Pixa pixa, int n, int type, int copyflag);
+//    /**
+//     * Original signature :
+//     * <code>PIXAA* pixaaCreateFromPixa(PIXA*, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3188</i>
+//     */
+//    Pixaa pixaaCreateFromPixa(Pixa pixa, int n, int type, int copyflag);
 
-    /**
-     * Original signature : <code>void pixaaDestroy(PIXAA**)</code><br>
-     * <i>native declaration : allheaders.h:3190</i>
-     */
-    void pixaaDestroy(PointerByReference ppaa);
+//    /**
+//     * Original signature : <code>void pixaaDestroy(PIXAA**)</code><br>
+//     * <i>native declaration : allheaders.h:3190</i>
+//     */
+//    void pixaaDestroy(PointerByReference ppaa);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixaaAddPixa(PIXAA*, PIXA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3192</i>
-     */
-    int pixaaAddPixa(Pixaa paa, Pixa pixa, int copyflag);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixaaAddPixa(PIXAA*, PIXA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3192</i>
+//     */
+//    int pixaaAddPixa(Pixaa paa, Pixa pixa, int copyflag);
 
-    /**
-     * Original signature : <code>l_int32 pixaaExtendArray(PIXAA*)</code><br>
-     * <i>native declaration : allheaders.h:3194</i>
-     */
-    int pixaaExtendArray(Pixaa paa);
+//    /**
+//     * Original signature : <code>l_int32 pixaaExtendArray(PIXAA*)</code><br>
+//     * <i>native declaration : allheaders.h:3194</i>
+//     */
+//    int pixaaExtendArray(Pixaa paa);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixaaAddPix(PIXAA*, l_int32, PIX*, BOX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3196</i>
-     */
-    int pixaaAddPix(Pixaa paa, int index, Pix pix, Box box, int copyflag);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixaaAddPix(PIXAA*, l_int32, PIX*, BOX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3196</i>
+//     */
+//    int pixaaAddPix(Pixaa paa, int index, Pix pix, Box box, int copyflag);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixaaAddBox(PIXAA*, BOX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3198</i>
-     */
-    int pixaaAddBox(Pixaa paa, Box box, int copyflag);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixaaAddBox(PIXAA*, BOX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3198</i>
+//     */
+//    int pixaaAddBox(Pixaa paa, Box box, int copyflag);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixaaGetCount(PIXAA*, NUMA**)</code><br>
-     * <i>native declaration : allheaders.h:3200</i>
-     */
-    int pixaaGetCount(Pixaa paa, PointerByReference pna);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixaaGetCount(PIXAA*, NUMA**)</code><br>
+//     * <i>native declaration : allheaders.h:3200</i>
+//     */
+//    int pixaaGetCount(Pixaa paa, PointerByReference pna);
 
-    /**
-     * Original signature :
-     * <code>PIXA* pixaaGetPixa(PIXAA*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3202</i>
-     */
-    Pixa pixaaGetPixa(Pixaa paa, int index, int accesstype);
+//    /**
+//     * Original signature :
+//     * <code>PIXA* pixaaGetPixa(PIXAA*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3202</i>
+//     */
+//    Pixa pixaaGetPixa(Pixaa paa, int index, int accesstype);
 
-    /**
-     * Original signature : <code>BOXA* pixaaGetBoxa(PIXAA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3204</i>
-     */
-    Boxa pixaaGetBoxa(Pixaa paa, int accesstype);
+//    /**
+//     * Original signature : <code>BOXA* pixaaGetBoxa(PIXAA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3204</i>
+//     */
+//    Boxa pixaaGetBoxa(Pixaa paa, int accesstype);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixaaGetPix(PIXAA*, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3206</i>
-     */
-    Pix pixaaGetPix(Pixaa paa, int index, int ipix, int accessflag);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixaaGetPix(PIXAA*, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3206</i>
+//     */
+//    Pix pixaaGetPix(Pixaa paa, int index, int ipix, int accessflag);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixaaVerifyDepth(PIXAA*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:3208</i>
-     */
-    int pixaaVerifyDepth(Pixaa paa, IntBuffer pmaxdepth);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixaaVerifyDepth(PIXAA*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:3208</i>
+//     */
+//    int pixaaVerifyDepth(Pixaa paa, IntBuffer pmaxdepth);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixaaIsFull(PIXAA*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:3210</i>
-     */
-    int pixaaIsFull(Pixaa paa, IntBuffer pfull);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixaaIsFull(PIXAA*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:3210</i>
+//     */
+//    int pixaaIsFull(Pixaa paa, IntBuffer pfull);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixaaInitFull(PIXAA*, PIXA*)</code><br>
-     * <i>native declaration : allheaders.h:3212</i>
-     */
-    int pixaaInitFull(Pixaa paa, Pixa pixa);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixaaInitFull(PIXAA*, PIXA*)</code><br>
+//     * <i>native declaration : allheaders.h:3212</i>
+//     */
+//    int pixaaInitFull(Pixaa paa, Pixa pixa);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixaaReplacePixa(PIXAA*, l_int32, PIXA*)</code><br>
-     * <i>native declaration : allheaders.h:3214</i>
-     */
-    int pixaaReplacePixa(Pixaa paa, int index, Pixa pixa);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixaaReplacePixa(PIXAA*, l_int32, PIXA*)</code><br>
+//     * <i>native declaration : allheaders.h:3214</i>
+//     */
+//    int pixaaReplacePixa(Pixaa paa, int index, Pixa pixa);
 
-    /**
-     * Original signature : <code>l_int32 pixaaClear(PIXAA*)</code><br>
-     * <i>native declaration : allheaders.h:3216</i>
-     */
-    int pixaaClear(Pixaa paa);
+//    /**
+//     * Original signature : <code>l_int32 pixaaClear(PIXAA*)</code><br>
+//     * <i>native declaration : allheaders.h:3216</i>
+//     */
+//    int pixaaClear(Pixaa paa);
 
-    /**
-     * Original signature : <code>l_int32 pixaaTruncate(PIXAA*)</code><br>
-     * <i>native declaration : allheaders.h:3218</i>
-     */
-    int pixaaTruncate(Pixaa paa);
+//    /**
+//     * Original signature : <code>l_int32 pixaaTruncate(PIXAA*)</code><br>
+//     * <i>native declaration : allheaders.h:3218</i>
+//     */
+//    int pixaaTruncate(Pixaa paa);
 
-    /**
-     * Original signature : <code>PIXA* pixaRead(const char*)</code><br>
-     * <i>native declaration : allheaders.h:3220</i>
-     */
-    Pixa pixaRead(String filename);
+//    /**
+//     * Original signature : <code>PIXA* pixaRead(const char*)</code><br>
+//     * <i>native declaration : allheaders.h:3220</i>
+//     */
+//    Pixa pixaRead(String filename);
 
 //    /**
 //     * Original signature : <code>PIXA* pixaReadStream(FILE*)</code><br>
@@ -11272,12 +11272,12 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    Pixa pixaReadStream(FILE fp);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixaWrite(const char*, PIXA*)</code><br>
-     * <i>native declaration : allheaders.h:3224</i>
-     */
-    int pixaWrite(String filename, Pixa pixa);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixaWrite(const char*, PIXA*)</code><br>
+//     * <i>native declaration : allheaders.h:3224</i>
+//     */
+//    int pixaWrite(String filename, Pixa pixa);
 
 //    /**
 //     * Original signature :
@@ -11286,18 +11286,18 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int pixaWriteStream(FILE fp, Pixa pixa);
 
-    /**
-     * Original signature :
-     * <code>PIXAA* pixaaReadFromFiles(const char*, const char*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3228</i>
-     */
-    Pixaa pixaaReadFromFiles(String dirname, String substr, int first, int nfiles);
+//    /**
+//     * Original signature :
+//     * <code>PIXAA* pixaaReadFromFiles(const char*, const char*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3228</i>
+//     */
+//    Pixaa pixaaReadFromFiles(String dirname, String substr, int first, int nfiles);
 
-    /**
-     * Original signature : <code>PIXAA* pixaaRead(const char*)</code><br>
-     * <i>native declaration : allheaders.h:3230</i>
-     */
-    Pixaa pixaaRead(String filename);
+//    /**
+//     * Original signature : <code>PIXAA* pixaaRead(const char*)</code><br>
+//     * <i>native declaration : allheaders.h:3230</i>
+//     */
+//    Pixaa pixaaRead(String filename);
 
 //    /**
 //     * Original signature : <code>PIXAA* pixaaReadStream(FILE*)</code><br>
@@ -11305,12 +11305,12 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    Pixaa pixaaReadStream(FILE fp);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixaaWrite(const char*, PIXAA*)</code><br>
-     * <i>native declaration : allheaders.h:3234</i>
-     */
-    int pixaaWrite(String filename, Pixaa paa);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixaaWrite(const char*, PIXAA*)</code><br>
+//     * <i>native declaration : allheaders.h:3234</i>
+//     */
+//    int pixaaWrite(String filename, Pixaa paa);
 
 //    /**
 //     * Original signature :
@@ -11319,168 +11319,168 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int pixaaWriteStream(FILE fp, Pixaa paa);
 
-    /**
-     * Original signature :
-     * <code>PIXACC* pixaccCreate(l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3238</i>
-     */
-    Pixacc pixaccCreate(int w, int h, int negflag);
+//    /**
+//     * Original signature :
+//     * <code>PIXACC* pixaccCreate(l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3238</i>
+//     */
+//    Pixacc pixaccCreate(int w, int h, int negflag);
 
-    /**
-     * Original signature :
-     * <code>PIXACC* pixaccCreateFromPix(PIX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3240</i>
-     */
-    Pixacc pixaccCreateFromPix(Pix pix, int negflag);
+//    /**
+//     * Original signature :
+//     * <code>PIXACC* pixaccCreateFromPix(PIX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3240</i>
+//     */
+//    Pixacc pixaccCreateFromPix(Pix pix, int negflag);
 
-    /**
-     * Original signature : <code>void pixaccDestroy(PIXACC**)</code><br>
-     * <i>native declaration : allheaders.h:3242</i>
-     */
-    void pixaccDestroy(PointerByReference ppixacc);
+//    /**
+//     * Original signature : <code>void pixaccDestroy(PIXACC**)</code><br>
+//     * <i>native declaration : allheaders.h:3242</i>
+//     */
+//    void pixaccDestroy(PointerByReference ppixacc);
 
-    /**
-     * Original signature : <code>PIX* pixaccFinal(PIXACC*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3244</i>
-     */
-    Pix pixaccFinal(Pixacc pixacc, int outdepth);
+//    /**
+//     * Original signature : <code>PIX* pixaccFinal(PIXACC*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3244</i>
+//     */
+//    Pix pixaccFinal(Pixacc pixacc, int outdepth);
 
-    /**
-     * Original signature : <code>PIX* pixaccGetPix(PIXACC*)</code><br>
-     * <i>native declaration : allheaders.h:3246</i>
-     */
-    Pix pixaccGetPix(Pixacc pixacc);
+//    /**
+//     * Original signature : <code>PIX* pixaccGetPix(PIXACC*)</code><br>
+//     * <i>native declaration : allheaders.h:3246</i>
+//     */
+//    Pix pixaccGetPix(Pixacc pixacc);
 
-    /**
-     * Original signature : <code>l_int32 pixaccGetOffset(PIXACC*)</code><br>
-     * <i>native declaration : allheaders.h:3248</i>
-     */
-    int pixaccGetOffset(Pixacc pixacc);
+//    /**
+//     * Original signature : <code>l_int32 pixaccGetOffset(PIXACC*)</code><br>
+//     * <i>native declaration : allheaders.h:3248</i>
+//     */
+//    int pixaccGetOffset(Pixacc pixacc);
 
-    /**
-     * Original signature : <code>l_int32 pixaccAdd(PIXACC*, PIX*)</code><br>
-     * <i>native declaration : allheaders.h:3250</i>
-     */
-    int pixaccAdd(Pixacc pixacc, Pix pix);
+//    /**
+//     * Original signature : <code>l_int32 pixaccAdd(PIXACC*, PIX*)</code><br>
+//     * <i>native declaration : allheaders.h:3250</i>
+//     */
+//    int pixaccAdd(Pixacc pixacc, Pix pix);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixaccSubtract(PIXACC*, PIX*)</code><br>
-     * <i>native declaration : allheaders.h:3252</i>
-     */
-    int pixaccSubtract(Pixacc pixacc, Pix pix);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixaccSubtract(PIXACC*, PIX*)</code><br>
+//     * <i>native declaration : allheaders.h:3252</i>
+//     */
+//    int pixaccSubtract(Pixacc pixacc, Pix pix);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixaccMultConst(PIXACC*, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:3254</i>
-     */
-    int pixaccMultConst(Pixacc pixacc, float factor);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixaccMultConst(PIXACC*, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:3254</i>
+//     */
+//    int pixaccMultConst(Pixacc pixacc, float factor);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixaccMultConstAccumulate(PIXACC*, PIX*, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:3256</i>
-     */
-    int pixaccMultConstAccumulate(Pixacc pixacc, Pix pix, float factor);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixaccMultConstAccumulate(PIXACC*, PIX*, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:3256</i>
+//     */
+//    int pixaccMultConstAccumulate(Pixacc pixacc, Pix pix, float factor);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixSelectBySize(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:3258</i>
-     */
-    Pix pixSelectBySize(Pix pixs, int width, int height, int connectivity, int type, int relation, IntBuffer pchanged);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixSelectBySize(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:3258</i>
+//     */
+//    Pix pixSelectBySize(Pix pixs, int width, int height, int connectivity, int type, int relation, IntBuffer pchanged);
 
-    /**
-     * Original signature :
-     * <code>PIXA* pixaSelectBySize(PIXA*, l_int32, l_int32, l_int32, l_int32, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:3260</i>
-     */
-    Pixa pixaSelectBySize(Pixa pixas, int width, int height, int type, int relation, IntBuffer pchanged);
+//    /**
+//     * Original signature :
+//     * <code>PIXA* pixaSelectBySize(PIXA*, l_int32, l_int32, l_int32, l_int32, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:3260</i>
+//     */
+//    Pixa pixaSelectBySize(Pixa pixas, int width, int height, int type, int relation, IntBuffer pchanged);
 
-    /**
-     * Original signature :
-     * <code>NUMA* pixaMakeSizeIndicator(PIXA*, l_int32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3262</i>
-     */
-    Numa pixaMakeSizeIndicator(Pixa pixa, int width, int height, int type, int relation);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* pixaMakeSizeIndicator(PIXA*, l_int32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3262</i>
+//     */
+//    Numa pixaMakeSizeIndicator(Pixa pixa, int width, int height, int type, int relation);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixSelectByPerimToAreaRatio(PIX*, l_float32, l_int32, l_int32, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:3264</i>
-     */
-    Pix pixSelectByPerimToAreaRatio(Pix pixs, float thresh, int connectivity, int type, IntBuffer pchanged);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixSelectByPerimToAreaRatio(PIX*, l_float32, l_int32, l_int32, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:3264</i>
+//     */
+//    Pix pixSelectByPerimToAreaRatio(Pix pixs, float thresh, int connectivity, int type, IntBuffer pchanged);
 
-    /**
-     * Original signature :
-     * <code>PIXA* pixaSelectByPerimToAreaRatio(PIXA*, l_float32, l_int32, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:3266</i>
-     */
-    Pixa pixaSelectByPerimToAreaRatio(Pixa pixas, float thresh, int type, IntBuffer pchanged);
+//    /**
+//     * Original signature :
+//     * <code>PIXA* pixaSelectByPerimToAreaRatio(PIXA*, l_float32, l_int32, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:3266</i>
+//     */
+//    Pixa pixaSelectByPerimToAreaRatio(Pixa pixas, float thresh, int type, IntBuffer pchanged);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixSelectByPerimSizeRatio(PIX*, l_float32, l_int32, l_int32, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:3268</i>
-     */
-    Pix pixSelectByPerimSizeRatio(Pix pixs, float thresh, int connectivity, int type, IntBuffer pchanged);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixSelectByPerimSizeRatio(PIX*, l_float32, l_int32, l_int32, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:3268</i>
+//     */
+//    Pix pixSelectByPerimSizeRatio(Pix pixs, float thresh, int connectivity, int type, IntBuffer pchanged);
 
-    /**
-     * Original signature :
-     * <code>PIXA* pixaSelectByPerimSizeRatio(PIXA*, l_float32, l_int32, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:3270</i>
-     */
-    Pixa pixaSelectByPerimSizeRatio(Pixa pixas, float thresh, int type, IntBuffer pchanged);
+//    /**
+//     * Original signature :
+//     * <code>PIXA* pixaSelectByPerimSizeRatio(PIXA*, l_float32, l_int32, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:3270</i>
+//     */
+//    Pixa pixaSelectByPerimSizeRatio(Pixa pixas, float thresh, int type, IntBuffer pchanged);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixSelectByAreaFraction(PIX*, l_float32, l_int32, l_int32, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:3272</i>
-     */
-    Pix pixSelectByAreaFraction(Pix pixs, float thresh, int connectivity, int type, IntBuffer pchanged);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixSelectByAreaFraction(PIX*, l_float32, l_int32, l_int32, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:3272</i>
+//     */
+//    Pix pixSelectByAreaFraction(Pix pixs, float thresh, int connectivity, int type, IntBuffer pchanged);
 
-    /**
-     * Original signature :
-     * <code>PIXA* pixaSelectByAreaFraction(PIXA*, l_float32, l_int32, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:3274</i>
-     */
-    Pixa pixaSelectByAreaFraction(Pixa pixas, float thresh, int type, IntBuffer pchanged);
+//    /**
+//     * Original signature :
+//     * <code>PIXA* pixaSelectByAreaFraction(PIXA*, l_float32, l_int32, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:3274</i>
+//     */
+//    Pixa pixaSelectByAreaFraction(Pixa pixas, float thresh, int type, IntBuffer pchanged);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixSelectByWidthHeightRatio(PIX*, l_float32, l_int32, l_int32, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:3276</i>
-     */
-    Pix pixSelectByWidthHeightRatio(Pix pixs, float thresh, int connectivity, int type, IntBuffer pchanged);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixSelectByWidthHeightRatio(PIX*, l_float32, l_int32, l_int32, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:3276</i>
+//     */
+//    Pix pixSelectByWidthHeightRatio(Pix pixs, float thresh, int connectivity, int type, IntBuffer pchanged);
 
-    /**
-     * Original signature :
-     * <code>PIXA* pixaSelectByWidthHeightRatio(PIXA*, l_float32, l_int32, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:3278</i>
-     */
-    Pixa pixaSelectByWidthHeightRatio(Pixa pixas, float thresh, int type, IntBuffer pchanged);
+//    /**
+//     * Original signature :
+//     * <code>PIXA* pixaSelectByWidthHeightRatio(PIXA*, l_float32, l_int32, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:3278</i>
+//     */
+//    Pixa pixaSelectByWidthHeightRatio(Pixa pixas, float thresh, int type, IntBuffer pchanged);
 
-    /**
-     * Original signature :
-     * <code>PIXA* pixaSelectWithIndicator(PIXA*, NUMA*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:3280</i>
-     */
-    Pixa pixaSelectWithIndicator(Pixa pixas, Numa na, IntBuffer pchanged);
+//    /**
+//     * Original signature :
+//     * <code>PIXA* pixaSelectWithIndicator(PIXA*, NUMA*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:3280</i>
+//     */
+//    Pixa pixaSelectWithIndicator(Pixa pixas, Numa na, IntBuffer pchanged);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixRemoveWithIndicator(PIX*, PIXA*, NUMA*)</code><br>
-     * <i>native declaration : allheaders.h:3282</i>
-     */
-    int pixRemoveWithIndicator(Pix pixs, Pixa pixa, Numa na);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixRemoveWithIndicator(PIX*, PIXA*, NUMA*)</code><br>
+//     * <i>native declaration : allheaders.h:3282</i>
+//     */
+//    int pixRemoveWithIndicator(Pix pixs, Pixa pixa, Numa na);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixAddWithIndicator(PIX*, PIXA*, NUMA*)</code><br>
-     * <i>native declaration : allheaders.h:3284</i>
-     */
-    int pixAddWithIndicator(Pix pixs, Pixa pixa, Numa na);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixAddWithIndicator(PIX*, PIXA*, NUMA*)</code><br>
+//     * <i>native declaration : allheaders.h:3284</i>
+//     */
+//    int pixAddWithIndicator(Pix pixs, Pixa pixa, Numa na);
 
     /**
      * Original signature :
@@ -11489,157 +11489,157 @@ public interface Leptonica extends Library, ILeptonica {
      */
     Pixa pixaSelectWithString(Pixa pixas, String str, IntBuffer perror);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixaRenderComponent(PIX*, PIXA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3288</i>
-     */
-    Pix pixaRenderComponent(Pix pixs, Pixa pixa, int index);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixaRenderComponent(PIX*, PIXA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3288</i>
+//     */
+//    Pix pixaRenderComponent(Pix pixs, Pixa pixa, int index);
 
-    /**
-     * Original signature :
-     * <code>PIXA* pixaSort(PIXA*, l_int32, l_int32, NUMA**, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3290</i>
-     */
-    Pixa pixaSort(Pixa pixas, int sorttype, int sortorder, PointerByReference pnaindex, int copyflag);
+//    /**
+//     * Original signature :
+//     * <code>PIXA* pixaSort(PIXA*, l_int32, l_int32, NUMA**, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3290</i>
+//     */
+//    Pixa pixaSort(Pixa pixas, int sorttype, int sortorder, PointerByReference pnaindex, int copyflag);
 
-    /**
-     * Original signature :
-     * <code>PIXA* pixaBinSort(PIXA*, l_int32, l_int32, NUMA**, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3292</i>
-     */
-    Pixa pixaBinSort(Pixa pixas, int sorttype, int sortorder, PointerByReference pnaindex, int copyflag);
+//    /**
+//     * Original signature :
+//     * <code>PIXA* pixaBinSort(PIXA*, l_int32, l_int32, NUMA**, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3292</i>
+//     */
+//    Pixa pixaBinSort(Pixa pixas, int sorttype, int sortorder, PointerByReference pnaindex, int copyflag);
 
-    /**
-     * Original signature :
-     * <code>PIXA* pixaSortByIndex(PIXA*, NUMA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3294</i>
-     */
-    Pixa pixaSortByIndex(Pixa pixas, Numa naindex, int copyflag);
+//    /**
+//     * Original signature :
+//     * <code>PIXA* pixaSortByIndex(PIXA*, NUMA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3294</i>
+//     */
+//    Pixa pixaSortByIndex(Pixa pixas, Numa naindex, int copyflag);
 
-    /**
-     * Original signature :
-     * <code>PIXAA* pixaSort2dByIndex(PIXA*, NUMAA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3296</i>
-     */
-    Pixaa pixaSort2dByIndex(Pixa pixas, Numaa naa, int copyflag);
+//    /**
+//     * Original signature :
+//     * <code>PIXAA* pixaSort2dByIndex(PIXA*, NUMAA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3296</i>
+//     */
+//    Pixaa pixaSort2dByIndex(Pixa pixas, Numaa naa, int copyflag);
 
-    /**
-     * Original signature :
-     * <code>PIXA* pixaSelectRange(PIXA*, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3298</i>
-     */
-    Pixa pixaSelectRange(Pixa pixas, int first, int last, int copyflag);
+//    /**
+//     * Original signature :
+//     * <code>PIXA* pixaSelectRange(PIXA*, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3298</i>
+//     */
+//    Pixa pixaSelectRange(Pixa pixas, int first, int last, int copyflag);
 
-    /**
-     * Original signature :
-     * <code>PIXAA* pixaaSelectRange(PIXAA*, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3300</i>
-     */
-    Pixaa pixaaSelectRange(Pixaa paas, int first, int last, int copyflag);
+//    /**
+//     * Original signature :
+//     * <code>PIXAA* pixaaSelectRange(PIXAA*, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3300</i>
+//     */
+//    Pixaa pixaaSelectRange(Pixaa paas, int first, int last, int copyflag);
 
-    /**
-     * Original signature :
-     * <code>PIXAA* pixaaScaleToSize(PIXAA*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3302</i>
-     */
-    Pixaa pixaaScaleToSize(Pixaa paas, int wd, int hd);
+//    /**
+//     * Original signature :
+//     * <code>PIXAA* pixaaScaleToSize(PIXAA*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3302</i>
+//     */
+//    Pixaa pixaaScaleToSize(Pixaa paas, int wd, int hd);
 
-    /**
-     * Original signature :
-     * <code>PIXAA* pixaaScaleToSizeVar(PIXAA*, NUMA*, NUMA*)</code><br>
-     * <i>native declaration : allheaders.h:3304</i>
-     */
-    Pixaa pixaaScaleToSizeVar(Pixaa paas, Numa nawd, Numa nahd);
+//    /**
+//     * Original signature :
+//     * <code>PIXAA* pixaaScaleToSizeVar(PIXAA*, NUMA*, NUMA*)</code><br>
+//     * <i>native declaration : allheaders.h:3304</i>
+//     */
+//    Pixaa pixaaScaleToSizeVar(Pixaa paas, Numa nawd, Numa nahd);
 
-    /**
-     * Original signature :
-     * <code>PIXA* pixaScaleToSize(PIXA*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3306</i>
-     */
-    Pixa pixaScaleToSize(Pixa pixas, int wd, int hd);
+//    /**
+//     * Original signature :
+//     * <code>PIXA* pixaScaleToSize(PIXA*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3306</i>
+//     */
+//    Pixa pixaScaleToSize(Pixa pixas, int wd, int hd);
 
-    /**
-     * Original signature :
-     * <code>PIXA* pixaAddBorderGeneral(PIXA*, PIXA*, l_int32, l_int32, l_int32, l_int32, l_uint32)</code><br>
-     * <i>native declaration : allheaders.h:3308</i>
-     */
-    Pixa pixaAddBorderGeneral(Pixa pixad, Pixa pixas, int left, int right, int top, int bot, int val);
+//    /**
+//     * Original signature :
+//     * <code>PIXA* pixaAddBorderGeneral(PIXA*, PIXA*, l_int32, l_int32, l_int32, l_int32, l_uint32)</code><br>
+//     * <i>native declaration : allheaders.h:3308</i>
+//     */
+//    Pixa pixaAddBorderGeneral(Pixa pixad, Pixa pixas, int left, int right, int top, int bot, int val);
 
-    /**
-     * Original signature :
-     * <code>PIXA* pixaaFlattenToPixa(PIXAA*, NUMA**, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3310</i>
-     */
-    Pixa pixaaFlattenToPixa(Pixaa paa, PointerByReference pnaindex, int copyflag);
+//    /**
+//     * Original signature :
+//     * <code>PIXA* pixaaFlattenToPixa(PIXAA*, NUMA**, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3310</i>
+//     */
+//    Pixa pixaaFlattenToPixa(Pixaa paa, PointerByReference pnaindex, int copyflag);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixaaSizeRange(PIXAA*, l_int32*, l_int32*, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:3312</i>
-     */
-    int pixaaSizeRange(Pixaa paa, IntBuffer pminw, IntBuffer pminh, IntBuffer pmaxw, IntBuffer pmaxh);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixaaSizeRange(PIXAA*, l_int32*, l_int32*, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:3312</i>
+//     */
+//    int pixaaSizeRange(Pixaa paa, IntBuffer pminw, IntBuffer pminh, IntBuffer pmaxw, IntBuffer pmaxh);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixaSizeRange(PIXA*, l_int32*, l_int32*, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:3314</i>
-     */
-    int pixaSizeRange(Pixa pixa, IntBuffer pminw, IntBuffer pminh, IntBuffer pmaxw, IntBuffer pmaxh);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixaSizeRange(PIXA*, l_int32*, l_int32*, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:3314</i>
+//     */
+//    int pixaSizeRange(Pixa pixa, IntBuffer pminw, IntBuffer pminh, IntBuffer pmaxw, IntBuffer pmaxh);
 
-    /**
-     * Original signature : <code>PIXA* pixaClipToPix(PIXA*, PIX*)</code><br>
-     * <i>native declaration : allheaders.h:3316</i>
-     */
-    Pixa pixaClipToPix(Pixa pixas, Pix pixs);
+//    /**
+//     * Original signature : <code>PIXA* pixaClipToPix(PIXA*, PIX*)</code><br>
+//     * <i>native declaration : allheaders.h:3316</i>
+//     */
+//    Pixa pixaClipToPix(Pixa pixas, Pix pixs);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixaGetRenderingDepth(PIXA*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:3318</i>
-     */
-    int pixaGetRenderingDepth(Pixa pixa, IntBuffer pdepth);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixaGetRenderingDepth(PIXA*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:3318</i>
+//     */
+//    int pixaGetRenderingDepth(Pixa pixa, IntBuffer pdepth);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixaHasColor(PIXA*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:3320</i>
-     */
-    int pixaHasColor(Pixa pixa, IntBuffer phascolor);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixaHasColor(PIXA*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:3320</i>
+//     */
+//    int pixaHasColor(Pixa pixa, IntBuffer phascolor);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixaAnyColormaps(PIXA*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:3322</i>
-     */
-    int pixaAnyColormaps(Pixa pixa, IntBuffer phascmap);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixaAnyColormaps(PIXA*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:3322</i>
+//     */
+//    int pixaAnyColormaps(Pixa pixa, IntBuffer phascmap);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixaGetDepthInfo(PIXA*, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:3324</i>
-     */
-    int pixaGetDepthInfo(Pixa pixa, IntBuffer pmaxdepth, IntBuffer psame);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixaGetDepthInfo(PIXA*, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:3324</i>
+//     */
+//    int pixaGetDepthInfo(Pixa pixa, IntBuffer pmaxdepth, IntBuffer psame);
 
-    /**
-     * Original signature : <code>PIXA* pixaConvertToSameDepth(PIXA*)</code><br>
-     * <i>native declaration : allheaders.h:3326</i>
-     */
-    Pixa pixaConvertToSameDepth(Pixa pixas);
+//    /**
+//     * Original signature : <code>PIXA* pixaConvertToSameDepth(PIXA*)</code><br>
+//     * <i>native declaration : allheaders.h:3326</i>
+//     */
+//    Pixa pixaConvertToSameDepth(Pixa pixas);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixaEqual(PIXA*, PIXA*, l_int32, NUMA**, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:3328</i>
-     */
-    int pixaEqual(Pixa pixa1, Pixa pixa2, int maxdist, PointerByReference pnaindex, IntBuffer psame);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixaEqual(PIXA*, PIXA*, l_int32, NUMA**, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:3328</i>
+//     */
+//    int pixaEqual(Pixa pixa1, Pixa pixa2, int maxdist, PointerByReference pnaindex, IntBuffer psame);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixaEqual(PIXA*, PIXA*, l_int32, NUMA**, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:3328</i>
-     */
-    int pixaEqual(Pixa pixa1, Pixa pixa2, int maxdist, PointerByReference pnaindex, IntByReference psame);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixaEqual(PIXA*, PIXA*, l_int32, NUMA**, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:3328</i>
+//     */
+//    int pixaEqual(Pixa pixa1, Pixa pixa2, int maxdist, PointerByReference pnaindex, IntByReference psame);
 
     /**
      * Original signature :
@@ -11648,75 +11648,75 @@ public interface Leptonica extends Library, ILeptonica {
      */
     Pixa pixaRotateOrth(Pixa pixas, int rotation);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixaDisplay(PIXA*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3332</i>
-     */
-    Pix pixaDisplay(Pixa pixa, int w, int h);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixaDisplay(PIXA*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3332</i>
+//     */
+//    Pix pixaDisplay(Pixa pixa, int w, int h);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixaDisplayOnColor(PIXA*, l_int32, l_int32, l_uint32)</code><br>
-     * <i>native declaration : allheaders.h:3334</i>
-     */
-    Pix pixaDisplayOnColor(Pixa pixa, int w, int h, int bgcolor);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixaDisplayOnColor(PIXA*, l_int32, l_int32, l_uint32)</code><br>
+//     * <i>native declaration : allheaders.h:3334</i>
+//     */
+//    Pix pixaDisplayOnColor(Pixa pixa, int w, int h, int bgcolor);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixaDisplayRandomCmap(PIXA*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3336</i>
-     */
-    Pix pixaDisplayRandomCmap(Pixa pixa, int w, int h);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixaDisplayRandomCmap(PIXA*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3336</i>
+//     */
+//    Pix pixaDisplayRandomCmap(Pixa pixa, int w, int h);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixaDisplayLinearly(PIXA*, l_int32, l_float32, l_int32, l_int32, l_int32, BOXA**)</code><br>
-     * <i>native declaration : allheaders.h:3338</i>
-     */
-    Pix pixaDisplayLinearly(Pixa pixas, int direction, float scalefactor, int background, int spacing, int border, PointerByReference pboxa);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixaDisplayLinearly(PIXA*, l_int32, l_float32, l_int32, l_int32, l_int32, BOXA**)</code><br>
+//     * <i>native declaration : allheaders.h:3338</i>
+//     */
+//    Pix pixaDisplayLinearly(Pixa pixas, int direction, float scalefactor, int background, int spacing, int border, PointerByReference pboxa);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixaDisplayOnLattice(PIXA*, l_int32, l_int32, l_int32*, BOXA**)</code><br>
-     * <i>native declaration : allheaders.h:3340</i>
-     */
-    Pix pixaDisplayOnLattice(Pixa pixa, int cellw, int cellh, IntBuffer pncols, PointerByReference pboxa);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixaDisplayOnLattice(PIXA*, l_int32, l_int32, l_int32*, BOXA**)</code><br>
+//     * <i>native declaration : allheaders.h:3340</i>
+//     */
+//    Pix pixaDisplayOnLattice(Pixa pixa, int cellw, int cellh, IntBuffer pncols, PointerByReference pboxa);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixaDisplayOnLattice(PIXA*, l_int32, l_int32, l_int32*, BOXA**)</code><br>
-     * <i>native declaration : allheaders.h:3340</i>
-     */
-    Pix pixaDisplayOnLattice(Pixa pixa, int cellw, int cellh, IntByReference pncols, PointerByReference pboxa);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixaDisplayOnLattice(PIXA*, l_int32, l_int32, l_int32*, BOXA**)</code><br>
+//     * <i>native declaration : allheaders.h:3340</i>
+//     */
+//    Pix pixaDisplayOnLattice(Pixa pixa, int cellw, int cellh, IntByReference pncols, PointerByReference pboxa);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixaDisplayUnsplit(PIXA*, l_int32, l_int32, l_int32, l_uint32)</code><br>
-     * <i>native declaration : allheaders.h:3342</i>
-     */
-    Pix pixaDisplayUnsplit(Pixa pixa, int nx, int ny, int borderwidth, int bordercolor);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixaDisplayUnsplit(PIXA*, l_int32, l_int32, l_int32, l_uint32)</code><br>
+//     * <i>native declaration : allheaders.h:3342</i>
+//     */
+//    Pix pixaDisplayUnsplit(Pixa pixa, int nx, int ny, int borderwidth, int bordercolor);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixaDisplayTiled(PIXA*, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3344</i>
-     */
-    Pix pixaDisplayTiled(Pixa pixa, int maxwidth, int background, int spacing);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixaDisplayTiled(PIXA*, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3344</i>
+//     */
+//    Pix pixaDisplayTiled(Pixa pixa, int maxwidth, int background, int spacing);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixaDisplayTiledInRows(PIXA*, l_int32, l_int32, l_float32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3346</i>
-     */
-    Pix pixaDisplayTiledInRows(Pixa pixa, int outdepth, int maxwidth, float scalefactor, int background, int spacing, int border);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixaDisplayTiledInRows(PIXA*, l_int32, l_int32, l_float32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3346</i>
+//     */
+//    Pix pixaDisplayTiledInRows(Pixa pixa, int outdepth, int maxwidth, float scalefactor, int background, int spacing, int border);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixaDisplayTiledAndScaled(PIXA*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3348</i>
-     */
-    Pix pixaDisplayTiledAndScaled(Pixa pixa, int outdepth, int tilewidth, int ncols, int background, int spacing, int border);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixaDisplayTiledAndScaled(PIXA*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3348</i>
+//     */
+//    Pix pixaDisplayTiledAndScaled(Pixa pixa, int outdepth, int tilewidth, int ncols, int background, int spacing, int border);
 
     /**
      * Original signature :
@@ -11732,118 +11732,118 @@ public interface Leptonica extends Library, ILeptonica {
      */
     Pix pixaDisplayTiledByIndex(Pixa pixa, Numa na, int width, int spacing, int border, int fontsize, int textcolor);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixaaDisplay(PIXAA*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3354</i>
-     */
-    Pix pixaaDisplay(Pixaa paa, int w, int h);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixaaDisplay(PIXAA*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3354</i>
+//     */
+//    Pix pixaaDisplay(Pixaa paa, int w, int h);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixaaDisplayByPixa(PIXAA*, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3356</i>
-     */
-    Pix pixaaDisplayByPixa(Pixaa paa, int xspace, int yspace, int maxw);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixaaDisplayByPixa(PIXAA*, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3356</i>
+//     */
+//    Pix pixaaDisplayByPixa(Pixaa paa, int xspace, int yspace, int maxw);
 
-    /**
-     * Original signature :
-     * <code>PIXA* pixaaDisplayTiledAndScaled(PIXAA*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3358</i>
-     */
-    Pixa pixaaDisplayTiledAndScaled(Pixaa paa, int outdepth, int tilewidth, int ncols, int background, int spacing, int border);
+//    /**
+//     * Original signature :
+//     * <code>PIXA* pixaaDisplayTiledAndScaled(PIXAA*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3358</i>
+//     */
+//    Pixa pixaaDisplayTiledAndScaled(Pixaa paa, int outdepth, int tilewidth, int ncols, int background, int spacing, int border);
 
-    /**
-     * Original signature :
-     * <code>PIXA* pixaConvertTo1(PIXA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3360</i>
-     */
-    Pixa pixaConvertTo1(Pixa pixas, int thresh);
+//    /**
+//     * Original signature :
+//     * <code>PIXA* pixaConvertTo1(PIXA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3360</i>
+//     */
+//    Pixa pixaConvertTo1(Pixa pixas, int thresh);
 
-    /**
-     * Original signature :
-     * <code>PIXA* pixaConvertTo8(PIXA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3362</i>
-     */
-    Pixa pixaConvertTo8(Pixa pixas, int cmapflag);
+//    /**
+//     * Original signature :
+//     * <code>PIXA* pixaConvertTo8(PIXA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3362</i>
+//     */
+//    Pixa pixaConvertTo8(Pixa pixas, int cmapflag);
 
-    /**
-     * Original signature :
-     * <code>PIXA* pixaConvertTo8Color(PIXA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3364</i>
-     */
-    Pixa pixaConvertTo8Color(Pixa pixas, int dither);
+//    /**
+//     * Original signature :
+//     * <code>PIXA* pixaConvertTo8Color(PIXA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3364</i>
+//     */
+//    Pixa pixaConvertTo8Color(Pixa pixas, int dither);
 
-    /**
-     * Original signature : <code>PIXA* pixaConvertTo32(PIXA*)</code><br>
-     * <i>native declaration : allheaders.h:3366</i>
-     */
-    Pixa pixaConvertTo32(Pixa pixas);
+//    /**
+//     * Original signature : <code>PIXA* pixaConvertTo32(PIXA*)</code><br>
+//     * <i>native declaration : allheaders.h:3366</i>
+//     */
+//    Pixa pixaConvertTo32(Pixa pixas);
 
-    /**
-     * Original signature :
-     * <code>l_int32 convertToNUpFiles(const char*, const char*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, const char*)</code><br>
-     * <i>native declaration : allheaders.h:3368</i>
-     */
-    int convertToNUpFiles(String dir, String substr, int nx, int ny, int tw, int spacing, int border, int fontsize, String outdir);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 convertToNUpFiles(const char*, const char*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, const char*)</code><br>
+//     * <i>native declaration : allheaders.h:3368</i>
+//     */
+//    int convertToNUpFiles(String dir, String substr, int nx, int ny, int tw, int spacing, int border, int fontsize, String outdir);
 
-    /**
-     * Original signature :
-     * <code>PIXA* convertToNUpPixa(const char*, const char*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3370</i>
-     */
-    Pixa convertToNUpPixa(String dir, String substr, int nx, int ny, int tw, int spacing, int border, int fontsize);
+//    /**
+//     * Original signature :
+//     * <code>PIXA* convertToNUpPixa(const char*, const char*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3370</i>
+//     */
+//    Pixa convertToNUpPixa(String dir, String substr, int nx, int ny, int tw, int spacing, int border, int fontsize);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pmsCreate(size_t, size_t, NUMA*, const char*)</code><br>
-     * <i>native declaration : allheaders.h:3372</i>
-     */
-    int pmsCreate(NativeSize minsize, NativeSize smallest, Numa numalloc, String logfile);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pmsCreate(size_t, size_t, NUMA*, const char*)</code><br>
+//     * <i>native declaration : allheaders.h:3372</i>
+//     */
+//    int pmsCreate(NativeSize minsize, NativeSize smallest, Numa numalloc, String logfile);
 
-    /**
-     * Original signature : <code>void pmsDestroy()</code><br>
-     * <i>native declaration : allheaders.h:3374</i>
-     */
-    void pmsDestroy();
+//    /**
+//     * Original signature : <code>void pmsDestroy()</code><br>
+//     * <i>native declaration : allheaders.h:3374</i>
+//     */
+//    void pmsDestroy();
 
-    /**
-     * Original signature : <code>void* pmsCustomAlloc(size_t)</code><br>
-     * <i>native declaration : allheaders.h:3376</i>
-     */
-    Pointer pmsCustomAlloc(NativeSize nbytes);
+//    /**
+//     * Original signature : <code>void* pmsCustomAlloc(size_t)</code><br>
+//     * <i>native declaration : allheaders.h:3376</i>
+//     */
+//    Pointer pmsCustomAlloc(NativeSize nbytes);
 
-    /**
-     * Original signature : <code>void pmsCustomDealloc(void*)</code><br>
-     * <i>native declaration : allheaders.h:3378</i>
-     */
-    void pmsCustomDealloc(Pointer data);
+//    /**
+//     * Original signature : <code>void pmsCustomDealloc(void*)</code><br>
+//     * <i>native declaration : allheaders.h:3378</i>
+//     */
+//    void pmsCustomDealloc(Pointer data);
 
-    /**
-     * Original signature : <code>void* pmsGetAlloc(size_t)</code><br>
-     * <i>native declaration : allheaders.h:3380</i>
-     */
-    Pointer pmsGetAlloc(NativeSize nbytes);
+//    /**
+//     * Original signature : <code>void* pmsGetAlloc(size_t)</code><br>
+//     * <i>native declaration : allheaders.h:3380</i>
+//     */
+//    Pointer pmsGetAlloc(NativeSize nbytes);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pmsGetLevelForAlloc(size_t, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:3382</i>
-     */
-    int pmsGetLevelForAlloc(NativeSize nbytes, IntBuffer plevel);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pmsGetLevelForAlloc(size_t, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:3382</i>
+//     */
+//    int pmsGetLevelForAlloc(NativeSize nbytes, IntBuffer plevel);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pmsGetLevelForDealloc(void*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:3384</i>
-     */
-    int pmsGetLevelForDealloc(Pointer data, IntBuffer plevel);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pmsGetLevelForDealloc(void*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:3384</i>
+//     */
+//    int pmsGetLevelForDealloc(Pointer data, IntBuffer plevel);
 
-    /**
-     * Original signature : <code>void pmsLogInfo()</code><br>
-     * <i>native declaration : allheaders.h:3386</i>
-     */
-    void pmsLogInfo();
+//    /**
+//     * Original signature : <code>void pmsLogInfo()</code><br>
+//     * <i>native declaration : allheaders.h:3386</i>
+//     */
+//    void pmsLogInfo();
 
     /**
      * Original signature :
@@ -11940,25 +11940,25 @@ public interface Leptonica extends Library, ILeptonica {
      */
     Pix pixMaxDynamicRange(Pix pixs, int type);
 
-    /**
-     * Original signature : <code>l_float32* makeLogBase2Tab()</code><br>
-     * <i>native declaration : allheaders.h:3416</i>
-     */
-    FloatByReference makeLogBase2Tab();
+//    /**
+//     * Original signature : <code>l_float32* makeLogBase2Tab()</code><br>
+//     * <i>native declaration : allheaders.h:3416</i>
+//     */
+//    FloatByReference makeLogBase2Tab();
 
-    /**
-     * Original signature :
-     * <code>l_float32 getLogBase2(l_int32, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:3418</i>
-     */
-    float getLogBase2(int val, FloatBuffer logtab);
+//    /**
+//     * Original signature :
+//     * <code>l_float32 getLogBase2(l_int32, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:3418</i>
+//     */
+//    float getLogBase2(int val, FloatBuffer logtab);
 
-    /**
-     * Original signature :
-     * <code>PIXC* pixcompCreateFromPix(PIX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3420</i>
-     */
-    PixComp pixcompCreateFromPix(Pix pix, int comptype);
+//    /**
+//     * Original signature :
+//     * <code>PIXC* pixcompCreateFromPix(PIX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3420</i>
+//     */
+//    PixComp pixcompCreateFromPix(Pix pix, int comptype);
 
     /**
      * Original signature :
@@ -11967,194 +11967,194 @@ public interface Leptonica extends Library, ILeptonica {
      */
     PixComp pixcompCreateFromString(ByteBuffer data, NativeSize size, int copyflag);
 
-    /**
-     * Original signature :
-     * <code>PIXC* pixcompCreateFromFile(const char*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3424</i>
-     */
-    PixComp pixcompCreateFromFile(String filename, int comptype);
+//    /**
+//     * Original signature :
+//     * <code>PIXC* pixcompCreateFromFile(const char*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3424</i>
+//     */
+//    PixComp pixcompCreateFromFile(String filename, int comptype);
 
-    /**
-     * Original signature : <code>void pixcompDestroy(PIXC**)</code><br>
-     * <i>native declaration : allheaders.h:3426</i>
-     */
-    void pixcompDestroy(PointerByReference ppixc);
+//    /**
+//     * Original signature : <code>void pixcompDestroy(PIXC**)</code><br>
+//     * <i>native declaration : allheaders.h:3426</i>
+//     */
+//    void pixcompDestroy(PointerByReference ppixc);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixcompGetDimensions(PIXC*, l_int32*, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:3428</i>
-     */
-    int pixcompGetDimensions(PixComp pixc, IntBuffer pw, IntBuffer ph, IntBuffer pd);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixcompGetDimensions(PIXC*, l_int32*, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:3428</i>
+//     */
+//    int pixcompGetDimensions(PixComp pixc, IntBuffer pw, IntBuffer ph, IntBuffer pd);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixcompDetermineFormat(l_int32, l_int32, l_int32, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:3430</i>
-     */
-    int pixcompDetermineFormat(int comptype, int d, int cmapflag, IntBuffer pformat);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixcompDetermineFormat(l_int32, l_int32, l_int32, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:3430</i>
+//     */
+//    int pixcompDetermineFormat(int comptype, int d, int cmapflag, IntBuffer pformat);
 
-    /**
-     * Original signature : <code>PIX* pixCreateFromPixcomp(PIXC*)</code><br>
-     * <i>native declaration : allheaders.h:3432</i>
-     */
-    Pix pixCreateFromPixcomp(PixComp pixc);
+//    /**
+//     * Original signature : <code>PIX* pixCreateFromPixcomp(PIXC*)</code><br>
+//     * <i>native declaration : allheaders.h:3432</i>
+//     */
+//    Pix pixCreateFromPixcomp(PixComp pixc);
 
-    /**
-     * Original signature : <code>PIXAC* pixacompCreate(l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3434</i>
-     */
-    PixaComp pixacompCreate(int n);
+//    /**
+//     * Original signature : <code>PIXAC* pixacompCreate(l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3434</i>
+//     */
+//    PixaComp pixacompCreate(int n);
 
-    /**
-     * Original signature :
-     * <code>PIXAC* pixacompCreateWithInit(l_int32, l_int32, PIX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3436</i>
-     */
-    PixaComp pixacompCreateWithInit(int n, int offset, Pix pix, int comptype);
+//    /**
+//     * Original signature :
+//     * <code>PIXAC* pixacompCreateWithInit(l_int32, l_int32, PIX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3436</i>
+//     */
+//    PixaComp pixacompCreateWithInit(int n, int offset, Pix pix, int comptype);
 
-    /**
-     * Original signature :
-     * <code>PIXAC* pixacompCreateFromPixa(PIXA*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3438</i>
-     */
-    PixaComp pixacompCreateFromPixa(Pixa pixa, int comptype, int accesstype);
+//    /**
+//     * Original signature :
+//     * <code>PIXAC* pixacompCreateFromPixa(PIXA*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3438</i>
+//     */
+//    PixaComp pixacompCreateFromPixa(Pixa pixa, int comptype, int accesstype);
 
-    /**
-     * Original signature :
-     * <code>PIXAC* pixacompCreateFromFiles(const char*, const char*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3440</i>
-     */
-    PixaComp pixacompCreateFromFiles(String dirname, String substr, int comptype);
+//    /**
+//     * Original signature :
+//     * <code>PIXAC* pixacompCreateFromFiles(const char*, const char*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3440</i>
+//     */
+//    PixaComp pixacompCreateFromFiles(String dirname, String substr, int comptype);
 
-    /**
-     * Original signature :
-     * <code>PIXAC* pixacompCreateFromSA(SARRAY*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3442</i>
-     */
-    PixaComp pixacompCreateFromSA(Sarray sa, int comptype);
+//    /**
+//     * Original signature :
+//     * <code>PIXAC* pixacompCreateFromSA(SARRAY*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3442</i>
+//     */
+//    PixaComp pixacompCreateFromSA(Sarray sa, int comptype);
 
-    /**
-     * Original signature : <code>void pixacompDestroy(PIXAC**)</code><br>
-     * <i>native declaration : allheaders.h:3444</i>
-     */
-    void pixacompDestroy(PointerByReference ppixac);
+//    /**
+//     * Original signature : <code>void pixacompDestroy(PIXAC**)</code><br>
+//     * <i>native declaration : allheaders.h:3444</i>
+//     */
+//    void pixacompDestroy(PointerByReference ppixac);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixacompAddPix(PIXAC*, PIX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3446</i>
-     */
-    int pixacompAddPix(PixaComp pixac, Pix pix, int comptype);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixacompAddPix(PIXAC*, PIX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3446</i>
+//     */
+//    int pixacompAddPix(PixaComp pixac, Pix pix, int comptype);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixacompAddPixcomp(PIXAC*, PIXC*)</code><br>
-     * <i>native declaration : allheaders.h:3448</i>
-     */
-    int pixacompAddPixcomp(PixaComp pixac, PixComp pixc);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixacompAddPixcomp(PIXAC*, PIXC*)</code><br>
+//     * <i>native declaration : allheaders.h:3448</i>
+//     */
+//    int pixacompAddPixcomp(PixaComp pixac, PixComp pixc);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixacompReplacePix(PIXAC*, l_int32, PIX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3450</i>
-     */
-    int pixacompReplacePix(PixaComp pixac, int index, Pix pix, int comptype);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixacompReplacePix(PIXAC*, l_int32, PIX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3450</i>
+//     */
+//    int pixacompReplacePix(PixaComp pixac, int index, Pix pix, int comptype);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixacompReplacePixcomp(PIXAC*, l_int32, PIXC*)</code><br>
-     * <i>native declaration : allheaders.h:3452</i>
-     */
-    int pixacompReplacePixcomp(PixaComp pixac, int index, PixComp pixc);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixacompReplacePixcomp(PIXAC*, l_int32, PIXC*)</code><br>
+//     * <i>native declaration : allheaders.h:3452</i>
+//     */
+//    int pixacompReplacePixcomp(PixaComp pixac, int index, PixComp pixc);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixacompAddBox(PIXAC*, BOX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3454</i>
-     */
-    int pixacompAddBox(PixaComp pixac, Box box, int copyflag);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixacompAddBox(PIXAC*, BOX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3454</i>
+//     */
+//    int pixacompAddBox(PixaComp pixac, Box box, int copyflag);
 
-    /**
-     * Original signature : <code>l_int32 pixacompGetCount(PIXAC*)</code><br>
-     * <i>native declaration : allheaders.h:3456</i>
-     */
-    int pixacompGetCount(PixaComp pixac);
+//    /**
+//     * Original signature : <code>l_int32 pixacompGetCount(PIXAC*)</code><br>
+//     * <i>native declaration : allheaders.h:3456</i>
+//     */
+//    int pixacompGetCount(PixaComp pixac);
 
-    /**
-     * Original signature :
-     * <code>PIXC* pixacompGetPixcomp(PIXAC*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3458</i>
-     */
-    PixComp pixacompGetPixcomp(PixaComp pixac, int index);
+//    /**
+//     * Original signature :
+//     * <code>PIXC* pixacompGetPixcomp(PIXAC*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3458</i>
+//     */
+//    PixComp pixacompGetPixcomp(PixaComp pixac, int index);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixacompGetPix(PIXAC*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3460</i>
-     */
-    Pix pixacompGetPix(PixaComp pixac, int index);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixacompGetPix(PIXAC*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3460</i>
+//     */
+//    Pix pixacompGetPix(PixaComp pixac, int index);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixacompGetPixDimensions(PIXAC*, l_int32, l_int32*, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:3462</i>
-     */
-    int pixacompGetPixDimensions(PixaComp pixac, int index, IntBuffer pw, IntBuffer ph, IntBuffer pd);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixacompGetPixDimensions(PIXAC*, l_int32, l_int32*, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:3462</i>
+//     */
+//    int pixacompGetPixDimensions(PixaComp pixac, int index, IntBuffer pw, IntBuffer ph, IntBuffer pd);
 
-    /**
-     * Original signature :
-     * <code>BOXA* pixacompGetBoxa(PIXAC*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3464</i>
-     */
-    Boxa pixacompGetBoxa(PixaComp pixac, int accesstype);
+//    /**
+//     * Original signature :
+//     * <code>BOXA* pixacompGetBoxa(PIXAC*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3464</i>
+//     */
+//    Boxa pixacompGetBoxa(PixaComp pixac, int accesstype);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixacompGetBoxaCount(PIXAC*)</code><br>
-     * <i>native declaration : allheaders.h:3466</i>
-     */
-    int pixacompGetBoxaCount(PixaComp pixac);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixacompGetBoxaCount(PIXAC*)</code><br>
+//     * <i>native declaration : allheaders.h:3466</i>
+//     */
+//    int pixacompGetBoxaCount(PixaComp pixac);
 
-    /**
-     * Original signature :
-     * <code>BOX* pixacompGetBox(PIXAC*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3468</i>
-     */
-    Box pixacompGetBox(PixaComp pixac, int index, int accesstype);
+//    /**
+//     * Original signature :
+//     * <code>BOX* pixacompGetBox(PIXAC*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3468</i>
+//     */
+//    Box pixacompGetBox(PixaComp pixac, int index, int accesstype);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixacompGetBoxGeometry(PIXAC*, l_int32, l_int32*, l_int32*, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:3470</i>
-     */
-    int pixacompGetBoxGeometry(PixaComp pixac, int index, IntBuffer px, IntBuffer py, IntBuffer pw, IntBuffer ph);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixacompGetBoxGeometry(PIXAC*, l_int32, l_int32*, l_int32*, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:3470</i>
+//     */
+//    int pixacompGetBoxGeometry(PixaComp pixac, int index, IntBuffer px, IntBuffer py, IntBuffer pw, IntBuffer ph);
 
-    /**
-     * Original signature : <code>l_int32 pixacompGetOffset(PIXAC*)</code><br>
-     * <i>native declaration : allheaders.h:3472</i>
-     */
-    int pixacompGetOffset(PixaComp pixac);
+//    /**
+//     * Original signature : <code>l_int32 pixacompGetOffset(PIXAC*)</code><br>
+//     * <i>native declaration : allheaders.h:3472</i>
+//     */
+//    int pixacompGetOffset(PixaComp pixac);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixacompSetOffset(PIXAC*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3474</i>
-     */
-    int pixacompSetOffset(PixaComp pixac, int offset);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixacompSetOffset(PIXAC*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3474</i>
+//     */
+//    int pixacompSetOffset(PixaComp pixac, int offset);
 
-    /**
-     * Original signature :
-     * <code>PIXA* pixaCreateFromPixacomp(PIXAC*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3476</i>
-     */
-    Pixa pixaCreateFromPixacomp(PixaComp pixac, int accesstype);
+//    /**
+//     * Original signature :
+//     * <code>PIXA* pixaCreateFromPixacomp(PIXAC*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3476</i>
+//     */
+//    Pixa pixaCreateFromPixacomp(PixaComp pixac, int accesstype);
 
-    /**
-     * Original signature : <code>PIXAC* pixacompRead(const char*)</code><br>
-     * <i>native declaration : allheaders.h:3478</i>
-     */
-    PixaComp pixacompRead(String filename);
+//    /**
+//     * Original signature : <code>PIXAC* pixacompRead(const char*)</code><br>
+//     * <i>native declaration : allheaders.h:3478</i>
+//     */
+//    PixaComp pixacompRead(String filename);
 
 //    /**
 //     * Original signature : <code>PIXAC* pixacompReadStream(FILE*)</code><br>
@@ -12162,12 +12162,12 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    PixaComp pixacompReadStream(FILE fp);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixacompWrite(const char*, PIXAC*)</code><br>
-     * <i>native declaration : allheaders.h:3482</i>
-     */
-    int pixacompWrite(String filename, PixaComp pixac);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixacompWrite(const char*, PIXAC*)</code><br>
+//     * <i>native declaration : allheaders.h:3482</i>
+//     */
+//    int pixacompWrite(String filename, PixaComp pixac);
 
 //    /**
 //     * Original signature :
@@ -12176,19 +12176,19 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int pixacompWriteStream(FILE fp, PixaComp pixac);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixacompConvertToPdf(PIXAC*, l_int32, l_float32, l_int32, l_int32, const char*, const char*)</code><br>
-     * <i>native declaration : allheaders.h:3486</i>
-     */
-    int pixacompConvertToPdf(PixaComp pixac, int res, float scalefactor, int type, int quality, String title, String fileout);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixacompConvertToPdf(PIXAC*, l_int32, l_float32, l_int32, l_int32, const char*, const char*)</code><br>
+//     * <i>native declaration : allheaders.h:3486</i>
+//     */
+//    int pixacompConvertToPdf(PixaComp pixac, int res, float scalefactor, int type, int quality, String title, String fileout);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixacompConvertToPdfData(PIXAC*, l_int32, l_float32, l_int32, l_int32, const char*, l_uint8**, size_t*)</code><br>
-     * <i>native declaration : allheaders.h:3488</i>
-     */
-    int pixacompConvertToPdfData(PixaComp pixac, int res, float scalefactor, int type, int quality, String title, PointerByReference pdata, NativeSizeByReference pnbytes);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixacompConvertToPdfData(PIXAC*, l_int32, l_float32, l_int32, l_int32, const char*, l_uint8**, size_t*)</code><br>
+//     * <i>native declaration : allheaders.h:3488</i>
+//     */
+//    int pixacompConvertToPdfData(PixaComp pixac, int res, float scalefactor, int type, int quality, String title, PointerByReference pdata, NativeSizeByReference pnbytes);
 
 //    /**
 //     * Original signature :
@@ -12204,12 +12204,12 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int pixcompWriteStreamInfo(FILE fp, PixComp pixc, String text);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixacompDisplayTiledAndScaled(PIXAC*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3494</i>
-     */
-    Pix pixacompDisplayTiledAndScaled(PixaComp pixac, int outdepth, int tilewidth, int ncols, int background, int spacing, int border);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixacompDisplayTiledAndScaled(PIXAC*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3494</i>
+//     */
+//    Pix pixacompDisplayTiledAndScaled(PixaComp pixac, int outdepth, int tilewidth, int ncols, int background, int spacing, int border);
 
     /**
      * Original signature :
@@ -12541,19 +12541,19 @@ public interface Leptonica extends Library, ILeptonica {
      */
     Pix pixConvertColorToSubpixelRGB(Pix pixs, float scalex, float scaley, int order);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixConnCompTransform(PIX*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3596</i>
-     */
-    Pix pixConnCompTransform(Pix pixs, int connect, int depth);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixConnCompTransform(PIX*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3596</i>
+//     */
+//    Pix pixConnCompTransform(Pix pixs, int connect, int depth);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixConnCompAreaTransform(PIX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3598</i>
-     */
-    Pix pixConnCompAreaTransform(Pix pixs, int connect);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixConnCompAreaTransform(PIX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3598</i>
+//     */
+//    Pix pixConnCompAreaTransform(Pix pixs, int connect);
 
     /**
      * Original signature :
@@ -12583,59 +12583,59 @@ public interface Leptonica extends Library, ILeptonica {
      */
     int pixGetSortedNeighborValues(Pix pixs, int x, int y, int conn, PointerByReference pneigh, IntBuffer pnvals);
 
-    /**
-     * Original signature : <code>PIX* pixLocToColorTransform(PIX*)</code><br>
-     * <i>native declaration : allheaders.h:3606</i>
-     */
-    Pix pixLocToColorTransform(Pix pixs);
+//    /**
+//     * Original signature : <code>PIX* pixLocToColorTransform(PIX*)</code><br>
+//     * <i>native declaration : allheaders.h:3606</i>
+//     */
+//    Pix pixLocToColorTransform(Pix pixs);
 
-    /**
-     * Original signature :
-     * <code>PIXTILING* pixTilingCreate(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3608</i>
-     */
-    PixTiling pixTilingCreate(Pix pixs, int nx, int ny, int w, int h, int xoverlap, int yoverlap);
+//    /**
+//     * Original signature :
+//     * <code>PIXTILING* pixTilingCreate(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3608</i>
+//     */
+//    PixTiling pixTilingCreate(Pix pixs, int nx, int ny, int w, int h, int xoverlap, int yoverlap);
 
-    /**
-     * Original signature : <code>void pixTilingDestroy(PIXTILING**)</code><br>
-     * <i>native declaration : allheaders.h:3610</i>
-     */
-    void pixTilingDestroy(PointerByReference ppt);
+//    /**
+//     * Original signature : <code>void pixTilingDestroy(PIXTILING**)</code><br>
+//     * <i>native declaration : allheaders.h:3610</i>
+//     */
+//    void pixTilingDestroy(PointerByReference ppt);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixTilingGetCount(PIXTILING*, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:3612</i>
-     */
-    int pixTilingGetCount(PixTiling pt, IntBuffer pnx, IntBuffer pny);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixTilingGetCount(PIXTILING*, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:3612</i>
+//     */
+//    int pixTilingGetCount(PixTiling pt, IntBuffer pnx, IntBuffer pny);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixTilingGetSize(PIXTILING*, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:3614</i>
-     */
-    int pixTilingGetSize(PixTiling pt, IntBuffer pw, IntBuffer ph);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixTilingGetSize(PIXTILING*, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:3614</i>
+//     */
+//    int pixTilingGetSize(PixTiling pt, IntBuffer pw, IntBuffer ph);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixTilingGetTile(PIXTILING*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3616</i>
-     */
-    Pix pixTilingGetTile(PixTiling pt, int i, int j);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixTilingGetTile(PIXTILING*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3616</i>
+//     */
+//    Pix pixTilingGetTile(PixTiling pt, int i, int j);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixTilingNoStripOnPaint(PIXTILING*)</code><br>
-     * <i>native declaration : allheaders.h:3618</i>
-     */
-    int pixTilingNoStripOnPaint(PixTiling pt);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixTilingNoStripOnPaint(PIXTILING*)</code><br>
+//     * <i>native declaration : allheaders.h:3618</i>
+//     */
+//    int pixTilingNoStripOnPaint(PixTiling pt);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixTilingPaintTile(PIX*, l_int32, l_int32, PIX*, PIXTILING*)</code><br>
-     * <i>native declaration : allheaders.h:3620</i>
-     */
-    int pixTilingPaintTile(Pix pixd, int i, int j, Pix pixs, PixTiling pt);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixTilingPaintTile(PIX*, l_int32, l_int32, PIX*, PIXTILING*)</code><br>
+//     * <i>native declaration : allheaders.h:3620</i>
+//     */
+//    int pixTilingPaintTile(Pix pixd, int i, int j, Pix pixs, PixTiling pt);
 
 //    /**
 //     * Original signature : <code>PIX* pixReadStreamPng(FILE*)</code><br>
@@ -12643,12 +12643,12 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    Pix pixReadStreamPng(FILE fp);
 
-    /**
-     * Original signature :
-     * <code>l_int32 readHeaderPng(const char*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:3624</i>
-     */
-    int readHeaderPng(String filename, IntBuffer pw, IntBuffer ph, IntBuffer pbps, IntBuffer pspp, IntBuffer piscmap);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 readHeaderPng(const char*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:3624</i>
+//     */
+//    int readHeaderPng(String filename, IntBuffer pw, IntBuffer ph, IntBuffer pbps, IntBuffer pspp, IntBuffer piscmap);
 
 //    /**
 //     * Original signature :
@@ -12671,12 +12671,12 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int fgetPngResolution(FILE fp, IntBuffer pxres, IntBuffer pyres);
 
-    /**
-     * Original signature :
-     * <code>l_int32 isPngInterlaced(const char*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:3632</i>
-     */
-    int isPngInterlaced(String filename, IntBuffer pinterlaced);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 isPngInterlaced(const char*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:3632</i>
+//     */
+//    int isPngInterlaced(String filename, IntBuffer pinterlaced);
 
 //    /**
 //     * Original signature :
@@ -12692,12 +12692,12 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int fgetPngColormapInfo(FILE fp, PointerByReference pcmap, IntByReference ptransparency);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixWritePng(const char*, PIX*, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:3636</i>
-     */
-    int pixWritePng(String filename, Pix pix, float gamma);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixWritePng(const char*, PIX*, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:3636</i>
+//     */
+//    int pixWritePng(String filename, Pix pix, float gamma);
 
 //    /**
 //     * Original signature :
@@ -12706,19 +12706,19 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int pixWriteStreamPng(FILE fp, Pix pix, float gamma);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixSetZlibCompression(PIX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3640</i>
-     */
-    int pixSetZlibCompression(Pix pix, int compval);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixSetZlibCompression(PIX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3640</i>
+//     */
+//    int pixSetZlibCompression(Pix pix, int compval);
 
-    /**
-     * Original signature :
-     * <code>void l_pngSetReadStrip16To8(l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3642</i>
-     */
-    void l_pngSetReadStrip16To8(int flag);
+//    /**
+//     * Original signature :
+//     * <code>void l_pngSetReadStrip16To8(l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3642</i>
+//     */
+//    void l_pngSetReadStrip16To8(int flag);
 
     /**
      * Original signature :
@@ -12727,12 +12727,12 @@ public interface Leptonica extends Library, ILeptonica {
      */
     Pix pixReadMemPng(ByteBuffer cdata, NativeSize size);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixWriteMemPng(l_uint8**, size_t*, PIX*, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:3646</i>
-     */
-    int pixWriteMemPng(PointerByReference pdata, NativeSizeByReference psize, Pix pix, float gamma);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixWriteMemPng(l_uint8**, size_t*, PIX*, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:3646</i>
+//     */
+//    int pixWriteMemPng(PointerByReference pdata, NativeSizeByReference psize, Pix pix, float gamma);
 
 //    /**
 //     * Original signature : <code>PIX* pixReadStreamPnm(FILE*)</code><br>
@@ -12740,12 +12740,12 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    Pix pixReadStreamPnm(FILE fp);
 
-    /**
-     * Original signature :
-     * <code>l_int32 readHeaderPnm(const char*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:3650</i>
-     */
-    int readHeaderPnm(String filename, IntBuffer pw, IntBuffer ph, IntBuffer pd, IntBuffer ptype, IntBuffer pbps, IntBuffer pspp);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 readHeaderPnm(const char*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:3650</i>
+//     */
+//    int readHeaderPnm(String filename, IntBuffer pw, IntBuffer ph, IntBuffer pd, IntBuffer ptype, IntBuffer pbps, IntBuffer pspp);
 
 //    /**
 //     * Original signature :
@@ -12782,173 +12782,173 @@ public interface Leptonica extends Library, ILeptonica {
      */
     int readHeaderMemPnm(ByteBuffer cdata, NativeSize size, IntBuffer pw, IntBuffer ph, IntBuffer pd, IntBuffer ptype, IntBuffer pbps, IntBuffer pspp);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixWriteMemPnm(l_uint8**, size_t*, PIX*)</code><br>
-     * <i>native declaration : allheaders.h:3662</i>
-     */
-    int pixWriteMemPnm(PointerByReference pdata, NativeSizeByReference psize, Pix pix);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixWriteMemPnm(l_uint8**, size_t*, PIX*)</code><br>
+//     * <i>native declaration : allheaders.h:3662</i>
+//     */
+//    int pixWriteMemPnm(PointerByReference pdata, NativeSizeByReference psize, Pix pix);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixProjectiveSampledPta(PIX*, PTA*, PTA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3664</i>
-     */
-    Pix pixProjectiveSampledPta(Pix pixs, Pta ptad, Pta ptas, int incolor);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixProjectiveSampledPta(PIX*, PTA*, PTA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3664</i>
+//     */
+//    Pix pixProjectiveSampledPta(Pix pixs, Pta ptad, Pta ptas, int incolor);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixProjectiveSampled(PIX*, l_float32*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3666</i>
-     */
-    Pix pixProjectiveSampled(Pix pixs, FloatBuffer vc, int incolor);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixProjectiveSampled(PIX*, l_float32*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3666</i>
+//     */
+//    Pix pixProjectiveSampled(Pix pixs, FloatBuffer vc, int incolor);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixProjectivePta(PIX*, PTA*, PTA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3668</i>
-     */
-    Pix pixProjectivePta(Pix pixs, Pta ptad, Pta ptas, int incolor);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixProjectivePta(PIX*, PTA*, PTA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3668</i>
+//     */
+//    Pix pixProjectivePta(Pix pixs, Pta ptad, Pta ptas, int incolor);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixProjective(PIX*, l_float32*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3670</i>
-     */
-    Pix pixProjective(Pix pixs, FloatBuffer vc, int incolor);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixProjective(PIX*, l_float32*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3670</i>
+//     */
+//    Pix pixProjective(Pix pixs, FloatBuffer vc, int incolor);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixProjectivePtaColor(PIX*, PTA*, PTA*, l_uint32)</code><br>
-     * <i>native declaration : allheaders.h:3672</i>
-     */
-    Pix pixProjectivePtaColor(Pix pixs, Pta ptad, Pta ptas, int colorval);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixProjectivePtaColor(PIX*, PTA*, PTA*, l_uint32)</code><br>
+//     * <i>native declaration : allheaders.h:3672</i>
+//     */
+//    Pix pixProjectivePtaColor(Pix pixs, Pta ptad, Pta ptas, int colorval);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixProjectiveColor(PIX*, l_float32*, l_uint32)</code><br>
-     * <i>native declaration : allheaders.h:3674</i>
-     */
-    Pix pixProjectiveColor(Pix pixs, FloatBuffer vc, int colorval);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixProjectiveColor(PIX*, l_float32*, l_uint32)</code><br>
+//     * <i>native declaration : allheaders.h:3674</i>
+//     */
+//    Pix pixProjectiveColor(Pix pixs, FloatBuffer vc, int colorval);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixProjectivePtaGray(PIX*, PTA*, PTA*, l_uint8)</code><br>
-     * <i>native declaration : allheaders.h:3676</i>
-     */
-    Pix pixProjectivePtaGray(Pix pixs, Pta ptad, Pta ptas, byte grayval);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixProjectivePtaGray(PIX*, PTA*, PTA*, l_uint8)</code><br>
+//     * <i>native declaration : allheaders.h:3676</i>
+//     */
+//    Pix pixProjectivePtaGray(Pix pixs, Pta ptad, Pta ptas, byte grayval);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixProjectiveGray(PIX*, l_float32*, l_uint8)</code><br>
-     * <i>native declaration : allheaders.h:3678</i>
-     */
-    Pix pixProjectiveGray(Pix pixs, FloatBuffer vc, byte grayval);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixProjectiveGray(PIX*, l_float32*, l_uint8)</code><br>
+//     * <i>native declaration : allheaders.h:3678</i>
+//     */
+//    Pix pixProjectiveGray(Pix pixs, FloatBuffer vc, byte grayval);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixProjectivePtaWithAlpha(PIX*, PTA*, PTA*, PIX*, l_float32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3680</i>
-     */
-    Pix pixProjectivePtaWithAlpha(Pix pixs, Pta ptad, Pta ptas, Pix pixg, float fract, int border);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixProjectivePtaWithAlpha(PIX*, PTA*, PTA*, PIX*, l_float32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3680</i>
+//     */
+//    Pix pixProjectivePtaWithAlpha(Pix pixs, Pta ptad, Pta ptas, Pix pixg, float fract, int border);
 
-    /**
-     * Original signature :
-     * <code>l_int32 getProjectiveXformCoeffs(PTA*, PTA*, l_float32**)</code><br>
-     * <i>native declaration : allheaders.h:3682</i>
-     */
-    int getProjectiveXformCoeffs(Pta ptas, Pta ptad, PointerByReference pvc);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 getProjectiveXformCoeffs(PTA*, PTA*, l_float32**)</code><br>
+//     * <i>native declaration : allheaders.h:3682</i>
+//     */
+//    int getProjectiveXformCoeffs(Pta ptas, Pta ptad, PointerByReference pvc);
 
-    /**
-     * Original signature :
-     * <code>l_int32 projectiveXformSampledPt(l_float32*, l_int32, l_int32, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:3684</i>
-     */
-    int projectiveXformSampledPt(FloatBuffer vc, int x, int y, IntBuffer pxp, IntBuffer pyp);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 projectiveXformSampledPt(l_float32*, l_int32, l_int32, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:3684</i>
+//     */
+//    int projectiveXformSampledPt(FloatBuffer vc, int x, int y, IntBuffer pxp, IntBuffer pyp);
 
-    /**
-     * Original signature :
-     * <code>l_int32 projectiveXformPt(l_float32*, l_int32, l_int32, l_float32*, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:3686</i>
-     */
-    int projectiveXformPt(FloatBuffer vc, int x, int y, FloatBuffer pxp, FloatBuffer pyp);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 projectiveXformPt(l_float32*, l_int32, l_int32, l_float32*, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:3686</i>
+//     */
+//    int projectiveXformPt(FloatBuffer vc, int x, int y, FloatBuffer pxp, FloatBuffer pyp);
 
-    /**
-     * Original signature :
-     * <code>l_int32 convertFilesToPS(const char*, const char*, l_int32, const char*)</code><br>
-     * <i>native declaration : allheaders.h:3688</i>
-     */
-    int convertFilesToPS(String dirin, String substr, int res, String fileout);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 convertFilesToPS(const char*, const char*, l_int32, const char*)</code><br>
+//     * <i>native declaration : allheaders.h:3688</i>
+//     */
+//    int convertFilesToPS(String dirin, String substr, int res, String fileout);
 
-    /**
-     * Original signature :
-     * <code>l_int32 sarrayConvertFilesToPS(SARRAY*, l_int32, const char*)</code><br>
-     * <i>native declaration : allheaders.h:3690</i>
-     */
-    int sarrayConvertFilesToPS(Sarray sa, int res, String fileout);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 sarrayConvertFilesToPS(SARRAY*, l_int32, const char*)</code><br>
+//     * <i>native declaration : allheaders.h:3690</i>
+//     */
+//    int sarrayConvertFilesToPS(Sarray sa, int res, String fileout);
 
-    /**
-     * Original signature :
-     * <code>l_int32 convertFilesFittedToPS(const char*, const char*, l_float32, l_float32, const char*)</code><br>
-     * <i>native declaration : allheaders.h:3692</i>
-     */
-    int convertFilesFittedToPS(String dirin, String substr, float xpts, float ypts, String fileout);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 convertFilesFittedToPS(const char*, const char*, l_float32, l_float32, const char*)</code><br>
+//     * <i>native declaration : allheaders.h:3692</i>
+//     */
+//    int convertFilesFittedToPS(String dirin, String substr, float xpts, float ypts, String fileout);
 
-    /**
-     * Original signature :
-     * <code>l_int32 sarrayConvertFilesFittedToPS(SARRAY*, l_float32, l_float32, const char*)</code><br>
-     * <i>native declaration : allheaders.h:3694</i>
-     */
-    int sarrayConvertFilesFittedToPS(Sarray sa, float xpts, float ypts, String fileout);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 sarrayConvertFilesFittedToPS(SARRAY*, l_float32, l_float32, const char*)</code><br>
+//     * <i>native declaration : allheaders.h:3694</i>
+//     */
+//    int sarrayConvertFilesFittedToPS(Sarray sa, float xpts, float ypts, String fileout);
 
-    /**
-     * Original signature :
-     * <code>l_int32 writeImageCompressedToPSFile(const char*, const char*, l_int32, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:3696</i>
-     */
-    int writeImageCompressedToPSFile(String filein, String fileout, int res, IntBuffer pfirstfile, IntBuffer pindex);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 writeImageCompressedToPSFile(const char*, const char*, l_int32, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:3696</i>
+//     */
+//    int writeImageCompressedToPSFile(String filein, String fileout, int res, IntBuffer pfirstfile, IntBuffer pindex);
 
-    /**
-     * Original signature :
-     * <code>l_int32 convertSegmentedPagesToPS(const char*, const char*, l_int32, const char*, const char*, l_int32, l_int32, l_int32, l_float32, l_float32, l_int32, const char*)</code><br>
-     * <i>native declaration : allheaders.h:3698</i>
-     */
-    int convertSegmentedPagesToPS(String pagedir, String pagestr, int page_numpre, String maskdir, String maskstr, int mask_numpre, int numpost, int maxnum, float textscale, float imagescale, int threshold, String fileout);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 convertSegmentedPagesToPS(const char*, const char*, l_int32, const char*, const char*, l_int32, l_int32, l_int32, l_float32, l_float32, l_int32, const char*)</code><br>
+//     * <i>native declaration : allheaders.h:3698</i>
+//     */
+//    int convertSegmentedPagesToPS(String pagedir, String pagestr, int page_numpre, String maskdir, String maskstr, int mask_numpre, int numpost, int maxnum, float textscale, float imagescale, int threshold, String fileout);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixWriteSegmentedPageToPS(PIX*, PIX*, l_float32, l_float32, l_int32, l_int32, const char*)</code><br>
-     * <i>native declaration : allheaders.h:3700</i>
-     */
-    int pixWriteSegmentedPageToPS(Pix pixs, Pix pixm, float textscale, float imagescale, int threshold, int pageno, String fileout);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixWriteSegmentedPageToPS(PIX*, PIX*, l_float32, l_float32, l_int32, l_int32, const char*)</code><br>
+//     * <i>native declaration : allheaders.h:3700</i>
+//     */
+//    int pixWriteSegmentedPageToPS(Pix pixs, Pix pixm, float textscale, float imagescale, int threshold, int pageno, String fileout);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixWriteMixedToPS(PIX*, PIX*, l_float32, l_int32, const char*)</code><br>
-     * <i>native declaration : allheaders.h:3702</i>
-     */
-    int pixWriteMixedToPS(Pix pixb, Pix pixc, float scale, int pageno, String fileout);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixWriteMixedToPS(PIX*, PIX*, l_float32, l_int32, const char*)</code><br>
+//     * <i>native declaration : allheaders.h:3702</i>
+//     */
+//    int pixWriteMixedToPS(Pix pixb, Pix pixc, float scale, int pageno, String fileout);
 
-    /**
-     * Original signature :
-     * <code>l_int32 convertToPSEmbed(const char*, const char*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3704</i>
-     */
-    int convertToPSEmbed(String filein, String fileout, int level);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 convertToPSEmbed(const char*, const char*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3704</i>
+//     */
+//    int convertToPSEmbed(String filein, String fileout, int level);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixaWriteCompressedToPS(PIXA*, const char*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3706</i>
-     */
-    int pixaWriteCompressedToPS(Pixa pixa, String fileout, int res, int level);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixaWriteCompressedToPS(PIXA*, const char*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3706</i>
+//     */
+//    int pixaWriteCompressedToPS(Pixa pixa, String fileout, int res, int level);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixWritePSEmbed(const char*, const char*)</code><br>
-     * <i>native declaration : allheaders.h:3708</i>
-     */
-    int pixWritePSEmbed(String filein, String fileout);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixWritePSEmbed(const char*, const char*)</code><br>
+//     * <i>native declaration : allheaders.h:3708</i>
+//     */
+//    int pixWritePSEmbed(String filein, String fileout);
 
 //    /**
 //     * Original signature :
@@ -12957,12 +12957,12 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int pixWriteStreamPS(FILE fp, Pix pix, Box box, int res, float scale);
 
-    /**
-     * Original signature :
-     * <code>char* pixWriteStringPS(PIX*, BOX*, l_int32, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:3712</i>
-     */
-    Pointer pixWriteStringPS(Pix pixs, Box box, int res, float scale);
+//    /**
+//     * Original signature :
+//     * <code>char* pixWriteStringPS(PIX*, BOX*, l_int32, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:3712</i>
+//     */
+//    Pointer pixWriteStringPS(Pix pixs, Box box, int res, float scale);
 
     /**
      * Original signature :
@@ -12971,12 +12971,12 @@ public interface Leptonica extends Library, ILeptonica {
      */
     Pointer generateUncompressedPS(ByteBuffer hexdata, int w, int h, int d, int psbpl, int bps, float xpt, float ypt, float wpt, float hpt, int boxflag);
 
-    /**
-     * Original signature :
-     * <code>void getScaledParametersPS(BOX*, l_int32, l_int32, l_int32, l_float32, l_float32*, l_float32*, l_float32*, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:3716</i>
-     */
-    void getScaledParametersPS(Box box, int wpix, int hpix, int res, float scale, FloatBuffer pxpt, FloatBuffer pypt, FloatBuffer pwpt, FloatBuffer phpt);
+//    /**
+//     * Original signature :
+//     * <code>void getScaledParametersPS(BOX*, l_int32, l_int32, l_int32, l_float32, l_float32*, l_float32*, l_float32*, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:3716</i>
+//     */
+//    void getScaledParametersPS(Box box, int wpix, int hpix, int res, float scale, FloatBuffer pxpt, FloatBuffer pypt, FloatBuffer pwpt, FloatBuffer phpt);
 
     /**
      * Original signature :
@@ -12985,240 +12985,240 @@ public interface Leptonica extends Library, ILeptonica {
      */
     void convertByteToHexAscii(byte byteval, ByteBuffer pnib1, ByteBuffer pnib2);
 
-    /**
-     * Original signature :
-     * <code>l_int32 convertJpegToPSEmbed(const char*, const char*)</code><br>
-     * <i>native declaration : allheaders.h:3720</i>
-     */
-    int convertJpegToPSEmbed(String filein, String fileout);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 convertJpegToPSEmbed(const char*, const char*)</code><br>
+//     * <i>native declaration : allheaders.h:3720</i>
+//     */
+//    int convertJpegToPSEmbed(String filein, String fileout);
 
-    /**
-     * Original signature :
-     * <code>l_int32 convertJpegToPS(const char*, const char*, const char*, l_int32, l_int32, l_int32, l_float32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3722</i>
-     */
-    int convertJpegToPS(String filein, String fileout, String operation, int x, int y, int res, float scale, int pageno, int endpage);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 convertJpegToPS(const char*, const char*, const char*, l_int32, l_int32, l_int32, l_float32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3722</i>
+//     */
+//    int convertJpegToPS(String filein, String fileout, String operation, int x, int y, int res, float scale, int pageno, int endpage);
 
-    /**
-     * Original signature :
-     * <code>l_int32 convertJpegToPSString(const char*, char**, l_int32*, l_int32, l_int32, l_int32, l_float32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3724</i>
-     */
-    int convertJpegToPSString(String filein, PointerByReference poutstr, IntBuffer pnbytes, int x, int y, int res, float scale, int pageno, int endpage);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 convertJpegToPSString(const char*, char**, l_int32*, l_int32, l_int32, l_int32, l_float32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3724</i>
+//     */
+//    int convertJpegToPSString(String filein, PointerByReference poutstr, IntBuffer pnbytes, int x, int y, int res, float scale, int pageno, int endpage);
 
-    /**
-     * Original signature :
-     * <code>char* generateJpegPS(const char*, L_COMP_DATA*, l_float32, l_float32, l_float32, l_float32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3726</i>
-     */
-    Pointer generateJpegPS(String filein, L_Compressed_Data cid, float xpt, float ypt, float wpt, float hpt, int pageno, int endpage);
+//    /**
+//     * Original signature :
+//     * <code>char* generateJpegPS(const char*, L_COMP_DATA*, l_float32, l_float32, l_float32, l_float32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3726</i>
+//     */
+//    Pointer generateJpegPS(String filein, L_Compressed_Data cid, float xpt, float ypt, float wpt, float hpt, int pageno, int endpage);
 
-    /**
-     * Original signature :
-     * <code>l_int32 convertG4ToPSEmbed(const char*, const char*)</code><br>
-     * <i>native declaration : allheaders.h:3728</i>
-     */
-    int convertG4ToPSEmbed(String filein, String fileout);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 convertG4ToPSEmbed(const char*, const char*)</code><br>
+//     * <i>native declaration : allheaders.h:3728</i>
+//     */
+//    int convertG4ToPSEmbed(String filein, String fileout);
 
-    /**
-     * Original signature :
-     * <code>l_int32 convertG4ToPS(const char*, const char*, const char*, l_int32, l_int32, l_int32, l_float32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3730</i>
-     */
-    int convertG4ToPS(String filein, String fileout, String operation, int x, int y, int res, float scale, int pageno, int maskflag, int endpage);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 convertG4ToPS(const char*, const char*, const char*, l_int32, l_int32, l_int32, l_float32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3730</i>
+//     */
+//    int convertG4ToPS(String filein, String fileout, String operation, int x, int y, int res, float scale, int pageno, int maskflag, int endpage);
 
-    /**
-     * Original signature :
-     * <code>l_int32 convertG4ToPSString(const char*, char**, l_int32*, l_int32, l_int32, l_int32, l_float32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3732</i>
-     */
-    int convertG4ToPSString(String filein, PointerByReference poutstr, IntBuffer pnbytes, int x, int y, int res, float scale, int pageno, int maskflag, int endpage);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 convertG4ToPSString(const char*, char**, l_int32*, l_int32, l_int32, l_int32, l_float32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3732</i>
+//     */
+//    int convertG4ToPSString(String filein, PointerByReference poutstr, IntBuffer pnbytes, int x, int y, int res, float scale, int pageno, int maskflag, int endpage);
 
-    /**
-     * Original signature :
-     * <code>char* generateG4PS(const char*, L_COMP_DATA*, l_float32, l_float32, l_float32, l_float32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3734</i>
-     */
-    Pointer generateG4PS(String filein, L_Compressed_Data cid, float xpt, float ypt, float wpt, float hpt, int maskflag, int pageno, int endpage);
+//    /**
+//     * Original signature :
+//     * <code>char* generateG4PS(const char*, L_COMP_DATA*, l_float32, l_float32, l_float32, l_float32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3734</i>
+//     */
+//    Pointer generateG4PS(String filein, L_Compressed_Data cid, float xpt, float ypt, float wpt, float hpt, int maskflag, int pageno, int endpage);
 
-    /**
-     * Original signature :
-     * <code>l_int32 convertTiffMultipageToPS(const char*, const char*, const char*, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:3736</i>
-     */
-    int convertTiffMultipageToPS(String filein, String fileout, String tempfile, float fillfract);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 convertTiffMultipageToPS(const char*, const char*, const char*, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:3736</i>
+//     */
+//    int convertTiffMultipageToPS(String filein, String fileout, String tempfile, float fillfract);
 
-    /**
-     * Original signature :
-     * <code>l_int32 convertFlateToPSEmbed(const char*, const char*)</code><br>
-     * <i>native declaration : allheaders.h:3738</i>
-     */
-    int convertFlateToPSEmbed(String filein, String fileout);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 convertFlateToPSEmbed(const char*, const char*)</code><br>
+//     * <i>native declaration : allheaders.h:3738</i>
+//     */
+//    int convertFlateToPSEmbed(String filein, String fileout);
 
-    /**
-     * Original signature :
-     * <code>l_int32 convertFlateToPS(const char*, const char*, const char*, l_int32, l_int32, l_int32, l_float32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3740</i>
-     */
-    int convertFlateToPS(String filein, String fileout, String operation, int x, int y, int res, float scale, int pageno, int endpage);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 convertFlateToPS(const char*, const char*, const char*, l_int32, l_int32, l_int32, l_float32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3740</i>
+//     */
+//    int convertFlateToPS(String filein, String fileout, String operation, int x, int y, int res, float scale, int pageno, int endpage);
 
-    /**
-     * Original signature :
-     * <code>l_int32 convertFlateToPSString(const char*, char**, l_int32*, l_int32, l_int32, l_int32, l_float32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3742</i>
-     */
-    int convertFlateToPSString(String filein, PointerByReference poutstr, IntBuffer pnbytes, int x, int y, int res, float scale, int pageno, int endpage);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 convertFlateToPSString(const char*, char**, l_int32*, l_int32, l_int32, l_int32, l_float32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3742</i>
+//     */
+//    int convertFlateToPSString(String filein, PointerByReference poutstr, IntBuffer pnbytes, int x, int y, int res, float scale, int pageno, int endpage);
 
-    /**
-     * Original signature :
-     * <code>char* generateFlatePS(const char*, L_COMP_DATA*, l_float32, l_float32, l_float32, l_float32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3744</i>
-     */
-    Pointer generateFlatePS(String filein, L_Compressed_Data cid, float xpt, float ypt, float wpt, float hpt, int pageno, int endpage);
+//    /**
+//     * Original signature :
+//     * <code>char* generateFlatePS(const char*, L_COMP_DATA*, l_float32, l_float32, l_float32, l_float32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3744</i>
+//     */
+//    Pointer generateFlatePS(String filein, L_Compressed_Data cid, float xpt, float ypt, float wpt, float hpt, int pageno, int endpage);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixWriteMemPS(l_uint8**, size_t*, PIX*, BOX*, l_int32, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:3746</i>
-     */
-    int pixWriteMemPS(PointerByReference pdata, NativeSizeByReference psize, Pix pix, Box box, int res, float scale);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixWriteMemPS(l_uint8**, size_t*, PIX*, BOX*, l_int32, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:3746</i>
+//     */
+//    int pixWriteMemPS(PointerByReference pdata, NativeSizeByReference psize, Pix pix, Box box, int res, float scale);
 
-    /**
-     * Original signature :
-     * <code>l_int32 getResLetterPage(l_int32, l_int32, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:3748</i>
-     */
-    int getResLetterPage(int w, int h, float fillfract);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 getResLetterPage(l_int32, l_int32, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:3748</i>
+//     */
+//    int getResLetterPage(int w, int h, float fillfract);
 
-    /**
-     * Original signature :
-     * <code>l_int32 getResA4Page(l_int32, l_int32, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:3750</i>
-     */
-    int getResA4Page(int w, int h, float fillfract);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 getResA4Page(l_int32, l_int32, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:3750</i>
+//     */
+//    int getResA4Page(int w, int h, float fillfract);
 
-    /**
-     * Original signature : <code>void l_psWriteBoundingBox(l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3752</i>
-     */
-    void l_psWriteBoundingBox(int flag);
+//    /**
+//     * Original signature : <code>void l_psWriteBoundingBox(l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3752</i>
+//     */
+//    void l_psWriteBoundingBox(int flag);
 
-    /**
-     * Original signature : <code>PTA* ptaCreate(l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3754</i>
-     */
-    Pta ptaCreate(int n);
+//    /**
+//     * Original signature : <code>PTA* ptaCreate(l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3754</i>
+//     */
+//    Pta ptaCreate(int n);
 
-    /**
-     * Original signature :
-     * <code>PTA* ptaCreateFromNuma(NUMA*, NUMA*)</code><br>
-     * <i>native declaration : allheaders.h:3756</i>
-     */
-    Pta ptaCreateFromNuma(Numa nax, Numa nay);
+//    /**
+//     * Original signature :
+//     * <code>PTA* ptaCreateFromNuma(NUMA*, NUMA*)</code><br>
+//     * <i>native declaration : allheaders.h:3756</i>
+//     */
+//    Pta ptaCreateFromNuma(Numa nax, Numa nay);
 
-    /**
-     * Original signature : <code>void ptaDestroy(PTA**)</code><br>
-     * <i>native declaration : allheaders.h:3758</i>
-     */
-    void ptaDestroy(PointerByReference ppta);
+//    /**
+//     * Original signature : <code>void ptaDestroy(PTA**)</code><br>
+//     * <i>native declaration : allheaders.h:3758</i>
+//     */
+//    void ptaDestroy(PointerByReference ppta);
 
-    /**
-     * Original signature : <code>PTA* ptaCopy(PTA*)</code><br>
-     * <i>native declaration : allheaders.h:3760</i>
-     */
-    Pta ptaCopy(Pta pta);
+//    /**
+//     * Original signature : <code>PTA* ptaCopy(PTA*)</code><br>
+//     * <i>native declaration : allheaders.h:3760</i>
+//     */
+//    Pta ptaCopy(Pta pta);
 
-    /**
-     * Original signature :
-     * <code>PTA* ptaCopyRange(PTA*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3762</i>
-     */
-    Pta ptaCopyRange(Pta ptas, int istart, int iend);
+//    /**
+//     * Original signature :
+//     * <code>PTA* ptaCopyRange(PTA*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3762</i>
+//     */
+//    Pta ptaCopyRange(Pta ptas, int istart, int iend);
 
-    /**
-     * Original signature : <code>PTA* ptaClone(PTA*)</code><br>
-     * <i>native declaration : allheaders.h:3764</i>
-     */
-    Pta ptaClone(Pta pta);
+//    /**
+//     * Original signature : <code>PTA* ptaClone(PTA*)</code><br>
+//     * <i>native declaration : allheaders.h:3764</i>
+//     */
+//    Pta ptaClone(Pta pta);
 
-    /**
-     * Original signature : <code>l_int32 ptaEmpty(PTA*)</code><br>
-     * <i>native declaration : allheaders.h:3766</i>
-     */
-    int ptaEmpty(Pta pta);
+//    /**
+//     * Original signature : <code>l_int32 ptaEmpty(PTA*)</code><br>
+//     * <i>native declaration : allheaders.h:3766</i>
+//     */
+//    int ptaEmpty(Pta pta);
 
-    /**
-     * Original signature :
-     * <code>l_int32 ptaAddPt(PTA*, l_float32, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:3768</i>
-     */
-    int ptaAddPt(Pta pta, float x, float y);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 ptaAddPt(PTA*, l_float32, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:3768</i>
+//     */
+//    int ptaAddPt(Pta pta, float x, float y);
 
-    /**
-     * Original signature :
-     * <code>l_int32 ptaInsertPt(PTA*, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3770</i>
-     */
-    int ptaInsertPt(Pta pta, int index, int x, int y);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 ptaInsertPt(PTA*, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3770</i>
+//     */
+//    int ptaInsertPt(Pta pta, int index, int x, int y);
 
-    /**
-     * Original signature : <code>l_int32 ptaRemovePt(PTA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3772</i>
-     */
-    int ptaRemovePt(Pta pta, int index);
+//    /**
+//     * Original signature : <code>l_int32 ptaRemovePt(PTA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3772</i>
+//     */
+//    int ptaRemovePt(Pta pta, int index);
 
-    /**
-     * Original signature : <code>l_int32 ptaGetRefcount(PTA*)</code><br>
-     * <i>native declaration : allheaders.h:3774</i>
-     */
-    int ptaGetRefcount(Pta pta);
+//    /**
+//     * Original signature : <code>l_int32 ptaGetRefcount(PTA*)</code><br>
+//     * <i>native declaration : allheaders.h:3774</i>
+//     */
+//    int ptaGetRefcount(Pta pta);
 
-    /**
-     * Original signature :
-     * <code>l_int32 ptaChangeRefcount(PTA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3776</i>
-     */
-    int ptaChangeRefcount(Pta pta, int delta);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 ptaChangeRefcount(PTA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3776</i>
+//     */
+//    int ptaChangeRefcount(Pta pta, int delta);
 
-    /**
-     * Original signature : <code>l_int32 ptaGetCount(PTA*)</code><br>
-     * <i>native declaration : allheaders.h:3778</i>
-     */
-    int ptaGetCount(Pta pta);
+//    /**
+//     * Original signature : <code>l_int32 ptaGetCount(PTA*)</code><br>
+//     * <i>native declaration : allheaders.h:3778</i>
+//     */
+//    int ptaGetCount(Pta pta);
 
-    /**
-     * Original signature :
-     * <code>l_int32 ptaGetPt(PTA*, l_int32, l_float32*, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:3780</i>
-     */
-    int ptaGetPt(Pta pta, int index, FloatBuffer px, FloatBuffer py);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 ptaGetPt(PTA*, l_int32, l_float32*, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:3780</i>
+//     */
+//    int ptaGetPt(Pta pta, int index, FloatBuffer px, FloatBuffer py);
 
-    /**
-     * Original signature :
-     * <code>l_int32 ptaGetIPt(PTA*, l_int32, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:3782</i>
-     */
-    int ptaGetIPt(Pta pta, int index, IntBuffer px, IntBuffer py);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 ptaGetIPt(PTA*, l_int32, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:3782</i>
+//     */
+//    int ptaGetIPt(Pta pta, int index, IntBuffer px, IntBuffer py);
 
-    /**
-     * Original signature :
-     * <code>l_int32 ptaSetPt(PTA*, l_int32, l_float32, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:3784</i>
-     */
-    int ptaSetPt(Pta pta, int index, float x, float y);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 ptaSetPt(PTA*, l_int32, l_float32, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:3784</i>
+//     */
+//    int ptaSetPt(Pta pta, int index, float x, float y);
 
-    /**
-     * Original signature :
-     * <code>l_int32 ptaGetArrays(PTA*, NUMA**, NUMA**)</code><br>
-     * <i>native declaration : allheaders.h:3786</i>
-     */
-    int ptaGetArrays(Pta pta, PointerByReference pnax, PointerByReference pnay);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 ptaGetArrays(PTA*, NUMA**, NUMA**)</code><br>
+//     * <i>native declaration : allheaders.h:3786</i>
+//     */
+//    int ptaGetArrays(Pta pta, PointerByReference pnax, PointerByReference pnay);
 
-    /**
-     * Original signature : <code>PTA* ptaRead(const char*)</code><br>
-     * <i>native declaration : allheaders.h:3788</i>
-     */
-    Pta ptaRead(String filename);
+//    /**
+//     * Original signature : <code>PTA* ptaRead(const char*)</code><br>
+//     * <i>native declaration : allheaders.h:3788</i>
+//     */
+//    Pta ptaRead(String filename);
 
 //    /**
 //     * Original signature : <code>PTA* ptaReadStream(FILE*)</code><br>
@@ -13226,12 +13226,12 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    Pta ptaReadStream(FILE fp);
 
-    /**
-     * Original signature :
-     * <code>l_int32 ptaWrite(const char*, PTA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3792</i>
-     */
-    int ptaWrite(String filename, Pta pta, int type);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 ptaWrite(const char*, PTA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3792</i>
+//     */
+//    int ptaWrite(String filename, Pta pta, int type);
 
 //    /**
 //     * Original signature :
@@ -13240,76 +13240,76 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int ptaWriteStream(FILE fp, Pta pta, int type);
 
-    /**
-     * Original signature : <code>PTAA* ptaaCreate(l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3796</i>
-     */
-    Ptaa ptaaCreate(int n);
+//    /**
+//     * Original signature : <code>PTAA* ptaaCreate(l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3796</i>
+//     */
+//    Ptaa ptaaCreate(int n);
 
-    /**
-     * Original signature : <code>void ptaaDestroy(PTAA**)</code><br>
-     * <i>native declaration : allheaders.h:3798</i>
-     */
-    void ptaaDestroy(PointerByReference pptaa);
+//    /**
+//     * Original signature : <code>void ptaaDestroy(PTAA**)</code><br>
+//     * <i>native declaration : allheaders.h:3798</i>
+//     */
+//    void ptaaDestroy(PointerByReference pptaa);
 
-    /**
-     * Original signature :
-     * <code>l_int32 ptaaAddPta(PTAA*, PTA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3800</i>
-     */
-    int ptaaAddPta(Ptaa ptaa, Pta pta, int copyflag);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 ptaaAddPta(PTAA*, PTA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3800</i>
+//     */
+//    int ptaaAddPta(Ptaa ptaa, Pta pta, int copyflag);
 
-    /**
-     * Original signature : <code>l_int32 ptaaGetCount(PTAA*)</code><br>
-     * <i>native declaration : allheaders.h:3802</i>
-     */
-    int ptaaGetCount(Ptaa ptaa);
+//    /**
+//     * Original signature : <code>l_int32 ptaaGetCount(PTAA*)</code><br>
+//     * <i>native declaration : allheaders.h:3802</i>
+//     */
+//    int ptaaGetCount(Ptaa ptaa);
 
-    /**
-     * Original signature :
-     * <code>PTA* ptaaGetPta(PTAA*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3804</i>
-     */
-    Pta ptaaGetPta(Ptaa ptaa, int index, int accessflag);
+//    /**
+//     * Original signature :
+//     * <code>PTA* ptaaGetPta(PTAA*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3804</i>
+//     */
+//    Pta ptaaGetPta(Ptaa ptaa, int index, int accessflag);
 
-    /**
-     * Original signature :
-     * <code>l_int32 ptaaGetPt(PTAA*, l_int32, l_int32, l_float32*, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:3806</i>
-     */
-    int ptaaGetPt(Ptaa ptaa, int ipta, int jpt, FloatBuffer px, FloatBuffer py);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 ptaaGetPt(PTAA*, l_int32, l_int32, l_float32*, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:3806</i>
+//     */
+//    int ptaaGetPt(Ptaa ptaa, int ipta, int jpt, FloatBuffer px, FloatBuffer py);
 
-    /**
-     * Original signature : <code>l_int32 ptaaInitFull(PTAA*, PTA*)</code><br>
-     * <i>native declaration : allheaders.h:3808</i>
-     */
-    int ptaaInitFull(Ptaa ptaa, Pta pta);
+//    /**
+//     * Original signature : <code>l_int32 ptaaInitFull(PTAA*, PTA*)</code><br>
+//     * <i>native declaration : allheaders.h:3808</i>
+//     */
+//    int ptaaInitFull(Ptaa ptaa, Pta pta);
 
-    /**
-     * Original signature :
-     * <code>l_int32 ptaaReplacePta(PTAA*, l_int32, PTA*)</code><br>
-     * <i>native declaration : allheaders.h:3810</i>
-     */
-    int ptaaReplacePta(Ptaa ptaa, int index, Pta pta);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 ptaaReplacePta(PTAA*, l_int32, PTA*)</code><br>
+//     * <i>native declaration : allheaders.h:3810</i>
+//     */
+//    int ptaaReplacePta(Ptaa ptaa, int index, Pta pta);
 
-    /**
-     * Original signature :
-     * <code>l_int32 ptaaAddPt(PTAA*, l_int32, l_float32, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:3812</i>
-     */
-    int ptaaAddPt(Ptaa ptaa, int ipta, float x, float y);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 ptaaAddPt(PTAA*, l_int32, l_float32, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:3812</i>
+//     */
+//    int ptaaAddPt(Ptaa ptaa, int ipta, float x, float y);
 
-    /**
-     * Original signature : <code>l_int32 ptaaTruncate(PTAA*)</code><br>
-     * <i>native declaration : allheaders.h:3814</i>
-     */
-    int ptaaTruncate(Ptaa ptaa);
+//    /**
+//     * Original signature : <code>l_int32 ptaaTruncate(PTAA*)</code><br>
+//     * <i>native declaration : allheaders.h:3814</i>
+//     */
+//    int ptaaTruncate(Ptaa ptaa);
 
-    /**
-     * Original signature : <code>PTAA* ptaaRead(const char*)</code><br>
-     * <i>native declaration : allheaders.h:3816</i>
-     */
-    Ptaa ptaaRead(String filename);
+//    /**
+//     * Original signature : <code>PTAA* ptaaRead(const char*)</code><br>
+//     * <i>native declaration : allheaders.h:3816</i>
+//     */
+//    Ptaa ptaaRead(String filename);
 
 //    /**
 //     * Original signature : <code>PTAA* ptaaReadStream(FILE*)</code><br>
@@ -13317,12 +13317,12 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    Ptaa ptaaReadStream(FILE fp);
 
-    /**
-     * Original signature :
-     * <code>l_int32 ptaaWrite(const char*, PTAA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3820</i>
-     */
-    int ptaaWrite(String filename, Ptaa ptaa, int type);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 ptaaWrite(const char*, PTAA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3820</i>
+//     */
+//    int ptaaWrite(String filename, Ptaa ptaa, int type);
 
 //    /**
 //     * Original signature :
@@ -13331,70 +13331,70 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int ptaaWriteStream(FILE fp, Ptaa ptaa, int type);
 
-    /**
-     * Original signature : <code>PTA* ptaSubsample(PTA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3824</i>
-     */
-    Pta ptaSubsample(Pta ptas, int subfactor);
+//    /**
+//     * Original signature : <code>PTA* ptaSubsample(PTA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3824</i>
+//     */
+//    Pta ptaSubsample(Pta ptas, int subfactor);
 
-    /**
-     * Original signature :
-     * <code>l_int32 ptaJoin(PTA*, PTA*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3826</i>
-     */
-    int ptaJoin(Pta ptad, Pta ptas, int istart, int iend);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 ptaJoin(PTA*, PTA*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3826</i>
+//     */
+//    int ptaJoin(Pta ptad, Pta ptas, int istart, int iend);
 
-    /**
-     * Original signature :
-     * <code>l_int32 ptaaJoin(PTAA*, PTAA*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3828</i>
-     */
-    int ptaaJoin(Ptaa ptaad, Ptaa ptaas, int istart, int iend);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 ptaaJoin(PTAA*, PTAA*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3828</i>
+//     */
+//    int ptaaJoin(Ptaa ptaad, Ptaa ptaas, int istart, int iend);
 
-    /**
-     * Original signature : <code>PTA* ptaReverse(PTA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3830</i>
-     */
-    Pta ptaReverse(Pta ptas, int type);
+//    /**
+//     * Original signature : <code>PTA* ptaReverse(PTA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3830</i>
+//     */
+//    Pta ptaReverse(Pta ptas, int type);
 
-    /**
-     * Original signature : <code>PTA* ptaTranspose(PTA*)</code><br>
-     * <i>native declaration : allheaders.h:3832</i>
-     */
-    Pta ptaTranspose(Pta ptas);
+//    /**
+//     * Original signature : <code>PTA* ptaTranspose(PTA*)</code><br>
+//     * <i>native declaration : allheaders.h:3832</i>
+//     */
+//    Pta ptaTranspose(Pta ptas);
 
-    /**
-     * Original signature :
-     * <code>PTA* ptaCyclicPerm(PTA*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3834</i>
-     */
-    Pta ptaCyclicPerm(Pta ptas, int xs, int ys);
+//    /**
+//     * Original signature :
+//     * <code>PTA* ptaCyclicPerm(PTA*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3834</i>
+//     */
+//    Pta ptaCyclicPerm(Pta ptas, int xs, int ys);
 
-    /**
-     * Original signature :
-     * <code>PTA* ptaSort(PTA*, l_int32, l_int32, NUMA**)</code><br>
-     * <i>native declaration : allheaders.h:3836</i>
-     */
-    Pta ptaSort(Pta ptas, int sorttype, int sortorder, PointerByReference pnaindex);
+//    /**
+//     * Original signature :
+//     * <code>PTA* ptaSort(PTA*, l_int32, l_int32, NUMA**)</code><br>
+//     * <i>native declaration : allheaders.h:3836</i>
+//     */
+//    Pta ptaSort(Pta ptas, int sorttype, int sortorder, PointerByReference pnaindex);
 
-    /**
-     * Original signature :
-     * <code>l_int32 ptaGetSortIndex(PTA*, l_int32, l_int32, NUMA**)</code><br>
-     * <i>native declaration : allheaders.h:3838</i>
-     */
-    int ptaGetSortIndex(Pta ptas, int sorttype, int sortorder, PointerByReference pnaindex);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 ptaGetSortIndex(PTA*, l_int32, l_int32, NUMA**)</code><br>
+//     * <i>native declaration : allheaders.h:3838</i>
+//     */
+//    int ptaGetSortIndex(Pta ptas, int sorttype, int sortorder, PointerByReference pnaindex);
 
-    /**
-     * Original signature : <code>PTA* ptaSortByIndex(PTA*, NUMA*)</code><br>
-     * <i>native declaration : allheaders.h:3840</i>
-     */
-    Pta ptaSortByIndex(Pta ptas, Numa naindex);
+//    /**
+//     * Original signature : <code>PTA* ptaSortByIndex(PTA*, NUMA*)</code><br>
+//     * <i>native declaration : allheaders.h:3840</i>
+//     */
+//    Pta ptaSortByIndex(Pta ptas, Numa naindex);
 
-    /**
-     * Original signature : <code>PTAA* ptaaSortByIndex(PTAA*, NUMA*)</code><br>
-     * <i>native declaration : allheaders.h:3842</i>
-     */
-    Ptaa ptaaSortByIndex(Ptaa ptaas, Numa naindex);
+//    /**
+//     * Original signature : <code>PTAA* ptaaSortByIndex(PTAA*, NUMA*)</code><br>
+//     * <i>native declaration : allheaders.h:3842</i>
+//     */
+//    Ptaa ptaaSortByIndex(Ptaa ptaas, Numa naindex);
 
     /**
      * Original signature : <code>PTA* ptaUnionByAset(PTA*, PTA*)</code><br>
@@ -13455,212 +13455,212 @@ public interface Leptonica extends Library, ILeptonica {
      */
     L_DnaHash l_dnaHashCreateFromPta(Pta pta);
 
-    /**
-     * Original signature : <code>BOX* ptaGetBoundingRegion(PTA*)</code><br>
-     * <i>native declaration : allheaders.h:3862</i>
-     */
-    Box ptaGetBoundingRegion(Pta pta);
+//    /**
+//     * Original signature : <code>BOX* ptaGetBoundingRegion(PTA*)</code><br>
+//     * <i>native declaration : allheaders.h:3862</i>
+//     */
+//    Box ptaGetBoundingRegion(Pta pta);
 
-    /**
-     * Original signature :
-     * <code>l_int32 ptaGetRange(PTA*, l_float32*, l_float32*, l_float32*, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:3864</i>
-     */
-    int ptaGetRange(Pta pta, FloatBuffer pminx, FloatBuffer pmaxx, FloatBuffer pminy, FloatBuffer pmaxy);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 ptaGetRange(PTA*, l_float32*, l_float32*, l_float32*, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:3864</i>
+//     */
+//    int ptaGetRange(Pta pta, FloatBuffer pminx, FloatBuffer pmaxx, FloatBuffer pminy, FloatBuffer pmaxy);
 
-    /**
-     * Original signature : <code>PTA* ptaGetInsideBox(PTA*, BOX*)</code><br>
-     * <i>native declaration : allheaders.h:3866</i>
-     */
-    Pta ptaGetInsideBox(Pta ptas, Box box);
+//    /**
+//     * Original signature : <code>PTA* ptaGetInsideBox(PTA*, BOX*)</code><br>
+//     * <i>native declaration : allheaders.h:3866</i>
+//     */
+//    Pta ptaGetInsideBox(Pta ptas, Box box);
 
-    /**
-     * Original signature : <code>PTA* pixFindCornerPixels(PIX*)</code><br>
-     * <i>native declaration : allheaders.h:3868</i>
-     */
-    Pta pixFindCornerPixels(Pix pixs);
+//    /**
+//     * Original signature : <code>PTA* pixFindCornerPixels(PIX*)</code><br>
+//     * <i>native declaration : allheaders.h:3868</i>
+//     */
+//    Pta pixFindCornerPixels(Pix pixs);
 
-    /**
-     * Original signature :
-     * <code>l_int32 ptaContainsPt(PTA*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3870</i>
-     */
-    int ptaContainsPt(Pta pta, int x, int y);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 ptaContainsPt(PTA*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3870</i>
+//     */
+//    int ptaContainsPt(Pta pta, int x, int y);
 
-    /**
-     * Original signature :
-     * <code>l_int32 ptaTestIntersection(PTA*, PTA*)</code><br>
-     * <i>native declaration : allheaders.h:3872</i>
-     */
-    int ptaTestIntersection(Pta pta1, Pta pta2);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 ptaTestIntersection(PTA*, PTA*)</code><br>
+//     * <i>native declaration : allheaders.h:3872</i>
+//     */
+//    int ptaTestIntersection(Pta pta1, Pta pta2);
 
-    /**
-     * Original signature :
-     * <code>PTA* ptaTransform(PTA*, l_int32, l_int32, l_float32, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:3874</i>
-     */
-    Pta ptaTransform(Pta ptas, int shiftx, int shifty, float scalex, float scaley);
+//    /**
+//     * Original signature :
+//     * <code>PTA* ptaTransform(PTA*, l_int32, l_int32, l_float32, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:3874</i>
+//     */
+//    Pta ptaTransform(Pta ptas, int shiftx, int shifty, float scalex, float scaley);
 
-    /**
-     * Original signature :
-     * <code>l_int32 ptaPtInsidePolygon(PTA*, l_float32, l_float32, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:3876</i>
-     */
-    int ptaPtInsidePolygon(Pta pta, float x, float y, IntBuffer pinside);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 ptaPtInsidePolygon(PTA*, l_float32, l_float32, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:3876</i>
+//     */
+//    int ptaPtInsidePolygon(Pta pta, float x, float y, IntBuffer pinside);
 
-    /**
-     * Original signature :
-     * <code>l_float32 l_angleBetweenVectors(l_float32, l_float32, l_float32, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:3878</i>
-     */
-    float l_angleBetweenVectors(float x1, float y1, float x2, float y2);
+//    /**
+//     * Original signature :
+//     * <code>l_float32 l_angleBetweenVectors(l_float32, l_float32, l_float32, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:3878</i>
+//     */
+//    float l_angleBetweenVectors(float x1, float y1, float x2, float y2);
 
-    /**
-     * Original signature :
-     * <code>l_int32 ptaGetLinearLSF(PTA*, l_float32*, l_float32*, NUMA**)</code><br>
-     * <i>native declaration : allheaders.h:3880</i>
-     */
-    int ptaGetLinearLSF(Pta pta, FloatBuffer pa, FloatBuffer pb, PointerByReference pnafit);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 ptaGetLinearLSF(PTA*, l_float32*, l_float32*, NUMA**)</code><br>
+//     * <i>native declaration : allheaders.h:3880</i>
+//     */
+//    int ptaGetLinearLSF(Pta pta, FloatBuffer pa, FloatBuffer pb, PointerByReference pnafit);
 
-    /**
-     * Original signature :
-     * <code>l_int32 ptaGetLinearLSF(PTA*, l_float32*, l_float32*, NUMA**)</code><br>
-     * <i>native declaration : allheaders.h:3880</i>
-     */
-    int ptaGetLinearLSF(Pta pta, FloatByReference pa, FloatByReference pb, PointerByReference pnafit);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 ptaGetLinearLSF(PTA*, l_float32*, l_float32*, NUMA**)</code><br>
+//     * <i>native declaration : allheaders.h:3880</i>
+//     */
+//    int ptaGetLinearLSF(Pta pta, FloatByReference pa, FloatByReference pb, PointerByReference pnafit);
 
-    /**
-     * Original signature :
-     * <code>l_int32 ptaGetQuadraticLSF(PTA*, l_float32*, l_float32*, l_float32*, NUMA**)</code><br>
-     * <i>native declaration : allheaders.h:3882</i>
-     */
-    int ptaGetQuadraticLSF(Pta pta, FloatBuffer pa, FloatBuffer pb, FloatBuffer pc, PointerByReference pnafit);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 ptaGetQuadraticLSF(PTA*, l_float32*, l_float32*, l_float32*, NUMA**)</code><br>
+//     * <i>native declaration : allheaders.h:3882</i>
+//     */
+//    int ptaGetQuadraticLSF(Pta pta, FloatBuffer pa, FloatBuffer pb, FloatBuffer pc, PointerByReference pnafit);
 
-    /**
-     * Original signature :
-     * <code>l_int32 ptaGetQuadraticLSF(PTA*, l_float32*, l_float32*, l_float32*, NUMA**)</code><br>
-     * <i>native declaration : allheaders.h:3882</i>
-     */
-    int ptaGetQuadraticLSF(Pta pta, FloatByReference pa, FloatByReference pb, FloatByReference pc, PointerByReference pnafit);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 ptaGetQuadraticLSF(PTA*, l_float32*, l_float32*, l_float32*, NUMA**)</code><br>
+//     * <i>native declaration : allheaders.h:3882</i>
+//     */
+//    int ptaGetQuadraticLSF(Pta pta, FloatByReference pa, FloatByReference pb, FloatByReference pc, PointerByReference pnafit);
 
-    /**
-     * Original signature :
-     * <code>l_int32 ptaGetCubicLSF(PTA*, l_float32*, l_float32*, l_float32*, l_float32*, NUMA**)</code><br>
-     * <i>native declaration : allheaders.h:3884</i>
-     */
-    int ptaGetCubicLSF(Pta pta, FloatBuffer pa, FloatBuffer pb, FloatBuffer pc, FloatBuffer pd, PointerByReference pnafit);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 ptaGetCubicLSF(PTA*, l_float32*, l_float32*, l_float32*, l_float32*, NUMA**)</code><br>
+//     * <i>native declaration : allheaders.h:3884</i>
+//     */
+//    int ptaGetCubicLSF(Pta pta, FloatBuffer pa, FloatBuffer pb, FloatBuffer pc, FloatBuffer pd, PointerByReference pnafit);
 
-    /**
-     * Original signature :
-     * <code>l_int32 ptaGetCubicLSF(PTA*, l_float32*, l_float32*, l_float32*, l_float32*, NUMA**)</code><br>
-     * <i>native declaration : allheaders.h:3884</i>
-     */
-    int ptaGetCubicLSF(Pta pta, FloatByReference pa, FloatByReference pb, FloatByReference pc, FloatByReference pd, PointerByReference pnafit);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 ptaGetCubicLSF(PTA*, l_float32*, l_float32*, l_float32*, l_float32*, NUMA**)</code><br>
+//     * <i>native declaration : allheaders.h:3884</i>
+//     */
+//    int ptaGetCubicLSF(Pta pta, FloatByReference pa, FloatByReference pb, FloatByReference pc, FloatByReference pd, PointerByReference pnafit);
 
-    /**
-     * Original signature :
-     * <code>l_int32 ptaGetQuarticLSF(PTA*, l_float32*, l_float32*, l_float32*, l_float32*, l_float32*, NUMA**)</code><br>
-     * <i>native declaration : allheaders.h:3886</i>
-     */
-    int ptaGetQuarticLSF(Pta pta, FloatBuffer pa, FloatBuffer pb, FloatBuffer pc, FloatBuffer pd, FloatBuffer pe, PointerByReference pnafit);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 ptaGetQuarticLSF(PTA*, l_float32*, l_float32*, l_float32*, l_float32*, l_float32*, NUMA**)</code><br>
+//     * <i>native declaration : allheaders.h:3886</i>
+//     */
+//    int ptaGetQuarticLSF(Pta pta, FloatBuffer pa, FloatBuffer pb, FloatBuffer pc, FloatBuffer pd, FloatBuffer pe, PointerByReference pnafit);
 
-    /**
-     * Original signature :
-     * <code>l_int32 ptaGetQuarticLSF(PTA*, l_float32*, l_float32*, l_float32*, l_float32*, l_float32*, NUMA**)</code><br>
-     * <i>native declaration : allheaders.h:3886</i>
-     */
-    int ptaGetQuarticLSF(Pta pta, FloatByReference pa, FloatByReference pb, FloatByReference pc, FloatByReference pd, FloatByReference pe, PointerByReference pnafit);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 ptaGetQuarticLSF(PTA*, l_float32*, l_float32*, l_float32*, l_float32*, l_float32*, NUMA**)</code><br>
+//     * <i>native declaration : allheaders.h:3886</i>
+//     */
+//    int ptaGetQuarticLSF(Pta pta, FloatByReference pa, FloatByReference pb, FloatByReference pc, FloatByReference pd, FloatByReference pe, PointerByReference pnafit);
 
-    /**
-     * Original signature :
-     * <code>l_int32 ptaNoisyLinearLSF(PTA*, l_float32, PTA**, l_float32*, l_float32*, l_float32*, NUMA**)</code><br>
-     * <i>native declaration : allheaders.h:3888</i>
-     */
-    int ptaNoisyLinearLSF(Pta pta, float factor, PointerByReference pptad, FloatBuffer pa, FloatBuffer pb, FloatBuffer pmederr, PointerByReference pnafit);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 ptaNoisyLinearLSF(PTA*, l_float32, PTA**, l_float32*, l_float32*, l_float32*, NUMA**)</code><br>
+//     * <i>native declaration : allheaders.h:3888</i>
+//     */
+//    int ptaNoisyLinearLSF(Pta pta, float factor, PointerByReference pptad, FloatBuffer pa, FloatBuffer pb, FloatBuffer pmederr, PointerByReference pnafit);
 
-    /**
-     * Original signature :
-     * <code>l_int32 ptaNoisyLinearLSF(PTA*, l_float32, PTA**, l_float32*, l_float32*, l_float32*, NUMA**)</code><br>
-     * <i>native declaration : allheaders.h:3888</i>
-     */
-    int ptaNoisyLinearLSF(Pta pta, float factor, PointerByReference pptad, FloatByReference pa, FloatByReference pb, FloatByReference pmederr, PointerByReference pnafit);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 ptaNoisyLinearLSF(PTA*, l_float32, PTA**, l_float32*, l_float32*, l_float32*, NUMA**)</code><br>
+//     * <i>native declaration : allheaders.h:3888</i>
+//     */
+//    int ptaNoisyLinearLSF(Pta pta, float factor, PointerByReference pptad, FloatByReference pa, FloatByReference pb, FloatByReference pmederr, PointerByReference pnafit);
 
-    /**
-     * Original signature :
-     * <code>l_int32 ptaNoisyQuadraticLSF(PTA*, l_float32, PTA**, l_float32*, l_float32*, l_float32*, l_float32*, NUMA**)</code><br>
-     * <i>native declaration : allheaders.h:3890</i>
-     */
-    int ptaNoisyQuadraticLSF(Pta pta, float factor, PointerByReference pptad, FloatBuffer pa, FloatBuffer pb, FloatBuffer pc, FloatBuffer pmederr, PointerByReference pnafit);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 ptaNoisyQuadraticLSF(PTA*, l_float32, PTA**, l_float32*, l_float32*, l_float32*, l_float32*, NUMA**)</code><br>
+//     * <i>native declaration : allheaders.h:3890</i>
+//     */
+//    int ptaNoisyQuadraticLSF(Pta pta, float factor, PointerByReference pptad, FloatBuffer pa, FloatBuffer pb, FloatBuffer pc, FloatBuffer pmederr, PointerByReference pnafit);
 
-    /**
-     * Original signature :
-     * <code>l_int32 ptaNoisyQuadraticLSF(PTA*, l_float32, PTA**, l_float32*, l_float32*, l_float32*, l_float32*, NUMA**)</code><br>
-     * <i>native declaration : allheaders.h:3890</i>
-     */
-    int ptaNoisyQuadraticLSF(Pta pta, float factor, PointerByReference pptad, FloatByReference pa, FloatByReference pb, FloatByReference pc, FloatByReference pmederr, PointerByReference pnafit);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 ptaNoisyQuadraticLSF(PTA*, l_float32, PTA**, l_float32*, l_float32*, l_float32*, l_float32*, NUMA**)</code><br>
+//     * <i>native declaration : allheaders.h:3890</i>
+//     */
+//    int ptaNoisyQuadraticLSF(Pta pta, float factor, PointerByReference pptad, FloatByReference pa, FloatByReference pb, FloatByReference pc, FloatByReference pmederr, PointerByReference pnafit);
 
-    /**
-     * Original signature :
-     * <code>l_int32 applyLinearFit(l_float32, l_float32, l_float32, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:3892</i>
-     */
-    int applyLinearFit(float a, float b, float x, FloatBuffer py);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 applyLinearFit(l_float32, l_float32, l_float32, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:3892</i>
+//     */
+//    int applyLinearFit(float a, float b, float x, FloatBuffer py);
 
-    /**
-     * Original signature :
-     * <code>l_int32 applyQuadraticFit(l_float32, l_float32, l_float32, l_float32, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:3894</i>
-     */
-    int applyQuadraticFit(float a, float b, float c, float x, FloatBuffer py);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 applyQuadraticFit(l_float32, l_float32, l_float32, l_float32, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:3894</i>
+//     */
+//    int applyQuadraticFit(float a, float b, float c, float x, FloatBuffer py);
 
-    /**
-     * Original signature :
-     * <code>l_int32 applyCubicFit(l_float32, l_float32, l_float32, l_float32, l_float32, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:3896</i>
-     */
-    int applyCubicFit(float a, float b, float c, float d, float x, FloatBuffer py);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 applyCubicFit(l_float32, l_float32, l_float32, l_float32, l_float32, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:3896</i>
+//     */
+//    int applyCubicFit(float a, float b, float c, float d, float x, FloatBuffer py);
 
-    /**
-     * Original signature :
-     * <code>l_int32 applyQuarticFit(l_float32, l_float32, l_float32, l_float32, l_float32, l_float32, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:3898</i>
-     */
-    int applyQuarticFit(float a, float b, float c, float d, float e, float x, FloatBuffer py);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 applyQuarticFit(l_float32, l_float32, l_float32, l_float32, l_float32, l_float32, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:3898</i>
+//     */
+//    int applyQuarticFit(float a, float b, float c, float d, float e, float x, FloatBuffer py);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixPlotAlongPta(PIX*, PTA*, l_int32, const char*)</code><br>
-     * <i>native declaration : allheaders.h:3900</i>
-     */
-    int pixPlotAlongPta(Pix pixs, Pta pta, int outformat, String title);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixPlotAlongPta(PIX*, PTA*, l_int32, const char*)</code><br>
+//     * <i>native declaration : allheaders.h:3900</i>
+//     */
+//    int pixPlotAlongPta(Pix pixs, Pta pta, int outformat, String title);
 
-    /**
-     * Original signature :
-     * <code>PTA* ptaGetPixelsFromPix(PIX*, BOX*)</code><br>
-     * <i>native declaration : allheaders.h:3902</i>
-     */
-    Pta ptaGetPixelsFromPix(Pix pixs, Box box);
+//    /**
+//     * Original signature :
+//     * <code>PTA* ptaGetPixelsFromPix(PIX*, BOX*)</code><br>
+//     * <i>native declaration : allheaders.h:3902</i>
+//     */
+//    Pta ptaGetPixelsFromPix(Pix pixs, Box box);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixGenerateFromPta(PTA*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3904</i>
-     */
-    Pix pixGenerateFromPta(Pta pta, int w, int h);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixGenerateFromPta(PTA*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3904</i>
+//     */
+//    Pix pixGenerateFromPta(Pta pta, int w, int h);
 
-    /**
-     * Original signature :
-     * <code>PTA* ptaGetBoundaryPixels(PIX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3906</i>
-     */
-    Pta ptaGetBoundaryPixels(Pix pixs, int type);
+//    /**
+//     * Original signature :
+//     * <code>PTA* ptaGetBoundaryPixels(PIX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3906</i>
+//     */
+//    Pta ptaGetBoundaryPixels(Pix pixs, int type);
 
-    /**
-     * Original signature :
-     * <code>PTAA* ptaaGetBoundaryPixels(PIX*, l_int32, l_int32, BOXA**, PIXA**)</code><br>
-     * <i>native declaration : allheaders.h:3908</i>
-     */
-    Ptaa ptaaGetBoundaryPixels(Pix pixs, int type, int connectivity, PointerByReference pboxa, PointerByReference ppixa);
+//    /**
+//     * Original signature :
+//     * <code>PTAA* ptaaGetBoundaryPixels(PIX*, l_int32, l_int32, BOXA**, PIXA**)</code><br>
+//     * <i>native declaration : allheaders.h:3908</i>
+//     */
+//    Ptaa ptaaGetBoundaryPixels(Pix pixs, int type, int connectivity, PointerByReference pboxa, PointerByReference ppixa);
 
     /**
      * Original signature :
@@ -13676,266 +13676,266 @@ public interface Leptonica extends Library, ILeptonica {
      */
     Pta ptaGetNeighborPixLocs(Pix pixs, int x, int y, int conn);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixDisplayPta(PIX*, PIX*, PTA*)</code><br>
-     * <i>native declaration : allheaders.h:3914</i>
-     */
-    Pix pixDisplayPta(Pix pixd, Pix pixs, Pta pta);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixDisplayPta(PIX*, PIX*, PTA*)</code><br>
+//     * <i>native declaration : allheaders.h:3914</i>
+//     */
+//    Pix pixDisplayPta(Pix pixd, Pix pixs, Pta pta);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixDisplayPtaaPattern(PIX*, PIX*, PTAA*, PIX*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3916</i>
-     */
-    Pix pixDisplayPtaaPattern(Pix pixd, Pix pixs, Ptaa ptaa, Pix pixp, int cx, int cy);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixDisplayPtaaPattern(PIX*, PIX*, PTAA*, PIX*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3916</i>
+//     */
+//    Pix pixDisplayPtaaPattern(Pix pixd, Pix pixs, Ptaa ptaa, Pix pixp, int cx, int cy);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixDisplayPtaPattern(PIX*, PIX*, PTA*, PIX*, l_int32, l_int32, l_uint32)</code><br>
-     * <i>native declaration : allheaders.h:3918</i>
-     */
-    Pix pixDisplayPtaPattern(Pix pixd, Pix pixs, Pta pta, Pix pixp, int cx, int cy, int color);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixDisplayPtaPattern(PIX*, PIX*, PTA*, PIX*, l_int32, l_int32, l_uint32)</code><br>
+//     * <i>native declaration : allheaders.h:3918</i>
+//     */
+//    Pix pixDisplayPtaPattern(Pix pixd, Pix pixs, Pta pta, Pix pixp, int cx, int cy, int color);
 
-    /**
-     * Original signature :
-     * <code>PTA* ptaReplicatePattern(PTA*, PIX*, PTA*, l_int32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3920</i>
-     */
-    Pta ptaReplicatePattern(Pta ptas, Pix pixp, Pta ptap, int cx, int cy, int w, int h);
+//    /**
+//     * Original signature :
+//     * <code>PTA* ptaReplicatePattern(PTA*, PIX*, PTA*, l_int32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3920</i>
+//     */
+//    Pta ptaReplicatePattern(Pta ptas, Pix pixp, Pta ptap, int cx, int cy, int w, int h);
 
-    /**
-     * Original signature : <code>PIX* pixDisplayPtaa(PIX*, PTAA*)</code><br>
-     * <i>native declaration : allheaders.h:3922</i>
-     */
-    Pix pixDisplayPtaa(Pix pixs, Ptaa ptaa);
+//    /**
+//     * Original signature : <code>PIX* pixDisplayPtaa(PIX*, PTAA*)</code><br>
+//     * <i>native declaration : allheaders.h:3922</i>
+//     */
+//    Pix pixDisplayPtaa(Pix pixs, Ptaa ptaa);
 
-    /**
-     * Original signature : <code>L_PTRA* ptraCreate(l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3924</i>
-     */
-    L_Ptra ptraCreate(int n);
+//    /**
+//     * Original signature : <code>L_PTRA* ptraCreate(l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3924</i>
+//     */
+//    L_Ptra ptraCreate(int n);
 
-    /**
-     * Original signature :
-     * <code>void ptraDestroy(L_PTRA**, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3926</i>
-     */
-    void ptraDestroy(PointerByReference ppa, int freeflag, int warnflag);
+//    /**
+//     * Original signature :
+//     * <code>void ptraDestroy(L_PTRA**, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3926</i>
+//     */
+//    void ptraDestroy(PointerByReference ppa, int freeflag, int warnflag);
 
-    /**
-     * Original signature : <code>l_int32 ptraAdd(L_PTRA*, void*)</code><br>
-     * <i>native declaration : allheaders.h:3928</i>
-     */
-    int ptraAdd(L_Ptra pa, Pointer item);
+//    /**
+//     * Original signature : <code>l_int32 ptraAdd(L_PTRA*, void*)</code><br>
+//     * <i>native declaration : allheaders.h:3928</i>
+//     */
+//    int ptraAdd(L_Ptra pa, Pointer item);
 
-    /**
-     * Original signature :
-     * <code>l_int32 ptraInsert(L_PTRA*, l_int32, void*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3930</i>
-     */
-    int ptraInsert(L_Ptra pa, int index, Pointer item, int shiftflag);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 ptraInsert(L_PTRA*, l_int32, void*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3930</i>
+//     */
+//    int ptraInsert(L_Ptra pa, int index, Pointer item, int shiftflag);
 
-    /**
-     * Original signature :
-     * <code>void* ptraRemove(L_PTRA*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3932</i>
-     */
-    Pointer ptraRemove(L_Ptra pa, int index, int flag);
+//    /**
+//     * Original signature :
+//     * <code>void* ptraRemove(L_PTRA*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3932</i>
+//     */
+//    Pointer ptraRemove(L_Ptra pa, int index, int flag);
 
-    /**
-     * Original signature : <code>void* ptraRemoveLast(L_PTRA*)</code><br>
-     * <i>native declaration : allheaders.h:3934</i>
-     */
-    Pointer ptraRemoveLast(L_Ptra pa);
+//    /**
+//     * Original signature : <code>void* ptraRemoveLast(L_PTRA*)</code><br>
+//     * <i>native declaration : allheaders.h:3934</i>
+//     */
+//    Pointer ptraRemoveLast(L_Ptra pa);
 
-    /**
-     * Original signature :
-     * <code>void* ptraReplace(L_PTRA*, l_int32, void*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3936</i>
-     */
-    Pointer ptraReplace(L_Ptra pa, int index, Pointer item, int freeflag);
+//    /**
+//     * Original signature :
+//     * <code>void* ptraReplace(L_PTRA*, l_int32, void*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3936</i>
+//     */
+//    Pointer ptraReplace(L_Ptra pa, int index, Pointer item, int freeflag);
 
-    /**
-     * Original signature :
-     * <code>l_int32 ptraSwap(L_PTRA*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3938</i>
-     */
-    int ptraSwap(L_Ptra pa, int index1, int index2);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 ptraSwap(L_PTRA*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3938</i>
+//     */
+//    int ptraSwap(L_Ptra pa, int index1, int index2);
 
-    /**
-     * Original signature : <code>l_int32 ptraCompactArray(L_PTRA*)</code><br>
-     * <i>native declaration : allheaders.h:3940</i>
-     */
-    int ptraCompactArray(L_Ptra pa);
+//    /**
+//     * Original signature : <code>l_int32 ptraCompactArray(L_PTRA*)</code><br>
+//     * <i>native declaration : allheaders.h:3940</i>
+//     */
+//    int ptraCompactArray(L_Ptra pa);
 
-    /**
-     * Original signature : <code>l_int32 ptraReverse(L_PTRA*)</code><br>
-     * <i>native declaration : allheaders.h:3942</i>
-     */
-    int ptraReverse(L_Ptra pa);
+//    /**
+//     * Original signature : <code>l_int32 ptraReverse(L_PTRA*)</code><br>
+//     * <i>native declaration : allheaders.h:3942</i>
+//     */
+//    int ptraReverse(L_Ptra pa);
 
-    /**
-     * Original signature : <code>l_int32 ptraJoin(L_PTRA*, L_PTRA*)</code><br>
-     * <i>native declaration : allheaders.h:3944</i>
-     */
-    int ptraJoin(L_Ptra pa1, L_Ptra pa2);
+//    /**
+//     * Original signature : <code>l_int32 ptraJoin(L_PTRA*, L_PTRA*)</code><br>
+//     * <i>native declaration : allheaders.h:3944</i>
+//     */
+//    int ptraJoin(L_Ptra pa1, L_Ptra pa2);
 
-    /**
-     * Original signature :
-     * <code>l_int32 ptraGetMaxIndex(L_PTRA*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:3946</i>
-     */
-    int ptraGetMaxIndex(L_Ptra pa, IntBuffer pmaxindex);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 ptraGetMaxIndex(L_PTRA*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:3946</i>
+//     */
+//    int ptraGetMaxIndex(L_Ptra pa, IntBuffer pmaxindex);
 
-    /**
-     * Original signature :
-     * <code>l_int32 ptraGetActualCount(L_PTRA*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:3948</i>
-     */
-    int ptraGetActualCount(L_Ptra pa, IntBuffer pcount);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 ptraGetActualCount(L_PTRA*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:3948</i>
+//     */
+//    int ptraGetActualCount(L_Ptra pa, IntBuffer pcount);
 
-    /**
-     * Original signature :
-     * <code>void* ptraGetPtrToItem(L_PTRA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3950</i>
-     */
-    Pointer ptraGetPtrToItem(L_Ptra pa, int index);
+//    /**
+//     * Original signature :
+//     * <code>void* ptraGetPtrToItem(L_PTRA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3950</i>
+//     */
+//    Pointer ptraGetPtrToItem(L_Ptra pa, int index);
 
-    /**
-     * Original signature : <code>L_PTRAA* ptraaCreate(l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3952</i>
-     */
-    L_Ptraa ptraaCreate(int n);
+//    /**
+//     * Original signature : <code>L_PTRAA* ptraaCreate(l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3952</i>
+//     */
+//    L_Ptraa ptraaCreate(int n);
 
-    /**
-     * Original signature :
-     * <code>void ptraaDestroy(L_PTRAA**, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3954</i>
-     */
-    void ptraaDestroy(PointerByReference ppaa, int freeflag, int warnflag);
+//    /**
+//     * Original signature :
+//     * <code>void ptraaDestroy(L_PTRAA**, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3954</i>
+//     */
+//    void ptraaDestroy(PointerByReference ppaa, int freeflag, int warnflag);
 
-    /**
-     * Original signature :
-     * <code>l_int32 ptraaGetSize(L_PTRAA*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:3956</i>
-     */
-    int ptraaGetSize(L_Ptraa paa, IntBuffer psize);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 ptraaGetSize(L_PTRAA*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:3956</i>
+//     */
+//    int ptraaGetSize(L_Ptraa paa, IntBuffer psize);
 
-    /**
-     * Original signature :
-     * <code>l_int32 ptraaInsertPtra(L_PTRAA*, l_int32, L_PTRA*)</code><br>
-     * <i>native declaration : allheaders.h:3958</i>
-     */
-    int ptraaInsertPtra(L_Ptraa paa, int index, L_Ptra pa);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 ptraaInsertPtra(L_PTRAA*, l_int32, L_PTRA*)</code><br>
+//     * <i>native declaration : allheaders.h:3958</i>
+//     */
+//    int ptraaInsertPtra(L_Ptraa paa, int index, L_Ptra pa);
 
-    /**
-     * Original signature :
-     * <code>L_PTRA* ptraaGetPtra(L_PTRAA*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3960</i>
-     */
-    L_Ptra ptraaGetPtra(L_Ptraa paa, int index, int accessflag);
+//    /**
+//     * Original signature :
+//     * <code>L_PTRA* ptraaGetPtra(L_PTRAA*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3960</i>
+//     */
+//    L_Ptra ptraaGetPtra(L_Ptraa paa, int index, int accessflag);
 
-    /**
-     * Original signature :
-     * <code>L_PTRA* ptraaFlattenToPtra(L_PTRAA*)</code><br>
-     * <i>native declaration : allheaders.h:3962</i>
-     */
-    L_Ptra ptraaFlattenToPtra(L_Ptraa paa);
+//    /**
+//     * Original signature :
+//     * <code>L_PTRA* ptraaFlattenToPtra(L_PTRAA*)</code><br>
+//     * <i>native declaration : allheaders.h:3962</i>
+//     */
+//    L_Ptra ptraaFlattenToPtra(L_Ptraa paa);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixQuadtreeMean(PIX*, l_int32, PIX*, FPIXA**)</code><br>
-     * <i>native declaration : allheaders.h:3964</i>
-     */
-    int pixQuadtreeMean(Pix pixs, int nlevels, Pix pix_ma, PointerByReference pfpixa);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixQuadtreeMean(PIX*, l_int32, PIX*, FPIXA**)</code><br>
+//     * <i>native declaration : allheaders.h:3964</i>
+//     */
+//    int pixQuadtreeMean(Pix pixs, int nlevels, Pix pix_ma, PointerByReference pfpixa);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixQuadtreeVariance(PIX*, l_int32, PIX*, DPIX*, FPIXA**, FPIXA**)</code><br>
-     * <i>native declaration : allheaders.h:3966</i>
-     */
-    int pixQuadtreeVariance(Pix pixs, int nlevels, Pix pix_ma, DPix dpix_msa, PointerByReference pfpixa_v, PointerByReference pfpixa_rv);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixQuadtreeVariance(PIX*, l_int32, PIX*, DPIX*, FPIXA**, FPIXA**)</code><br>
+//     * <i>native declaration : allheaders.h:3966</i>
+//     */
+//    int pixQuadtreeVariance(Pix pixs, int nlevels, Pix pix_ma, DPix dpix_msa, PointerByReference pfpixa_v, PointerByReference pfpixa_rv);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixMeanInRectangle(PIX*, BOX*, PIX*, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:3968</i>
-     */
-    int pixMeanInRectangle(Pix pixs, Box box, Pix pixma, FloatBuffer pval);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixMeanInRectangle(PIX*, BOX*, PIX*, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:3968</i>
+//     */
+//    int pixMeanInRectangle(Pix pixs, Box box, Pix pixma, FloatBuffer pval);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixVarianceInRectangle(PIX*, BOX*, PIX*, DPIX*, l_float32*, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:3970</i>
-     */
-    int pixVarianceInRectangle(Pix pixs, Box box, Pix pix_ma, DPix dpix_msa, FloatBuffer pvar, FloatBuffer prvar);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixVarianceInRectangle(PIX*, BOX*, PIX*, DPIX*, l_float32*, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:3970</i>
+//     */
+//    int pixVarianceInRectangle(Pix pixs, Box box, Pix pix_ma, DPix dpix_msa, FloatBuffer pvar, FloatBuffer prvar);
 
-    /**
-     * Original signature :
-     * <code>BOXAA* boxaaQuadtreeRegions(l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3972</i>
-     */
-    Boxaa boxaaQuadtreeRegions(int w, int h, int nlevels);
+//    /**
+//     * Original signature :
+//     * <code>BOXAA* boxaaQuadtreeRegions(l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3972</i>
+//     */
+//    Boxaa boxaaQuadtreeRegions(int w, int h, int nlevels);
 
-    /**
-     * Original signature :
-     * <code>l_int32 quadtreeGetParent(FPIXA*, l_int32, l_int32, l_int32, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:3974</i>
-     */
-    int quadtreeGetParent(FPixa fpixa, int level, int x, int y, FloatBuffer pval);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 quadtreeGetParent(FPIXA*, l_int32, l_int32, l_int32, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:3974</i>
+//     */
+//    int quadtreeGetParent(FPixa fpixa, int level, int x, int y, FloatBuffer pval);
 
-    /**
-     * Original signature :
-     * <code>l_int32 quadtreeGetChildren(FPIXA*, l_int32, l_int32, l_int32, l_float32*, l_float32*, l_float32*, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:3976</i>
-     */
-    int quadtreeGetChildren(FPixa fpixa, int level, int x, int y, FloatBuffer pval00, FloatBuffer pval10, FloatBuffer pval01, FloatBuffer pval11);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 quadtreeGetChildren(FPIXA*, l_int32, l_int32, l_int32, l_float32*, l_float32*, l_float32*, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:3976</i>
+//     */
+//    int quadtreeGetChildren(FPixa fpixa, int level, int x, int y, FloatBuffer pval00, FloatBuffer pval10, FloatBuffer pval01, FloatBuffer pval11);
 
-    /**
-     * Original signature :
-     * <code>l_int32 quadtreeMaxLevels(l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3978</i>
-     */
-    int quadtreeMaxLevels(int w, int h);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 quadtreeMaxLevels(l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3978</i>
+//     */
+//    int quadtreeMaxLevels(int w, int h);
 
-    /**
-     * Original signature :
-     * <code>PIX* fpixaDisplayQuadtree(FPIXA*, l_int32, const char*)</code><br>
-     * <i>native declaration : allheaders.h:3980</i>
-     */
-    Pix fpixaDisplayQuadtree(FPixa fpixa, int factor, String fontdir);
+//    /**
+//     * Original signature :
+//     * <code>PIX* fpixaDisplayQuadtree(FPIXA*, l_int32, const char*)</code><br>
+//     * <i>native declaration : allheaders.h:3980</i>
+//     */
+//    Pix fpixaDisplayQuadtree(FPixa fpixa, int factor, String fontdir);
 
-    /**
-     * Original signature : <code>L_QUEUE* lqueueCreate(l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3982</i>
-     */
-    L_Queue lqueueCreate(int nalloc);
+//    /**
+//     * Original signature : <code>L_QUEUE* lqueueCreate(l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3982</i>
+//     */
+//    L_Queue lqueueCreate(int nalloc);
 
-    /**
-     * Original signature :
-     * <code>void lqueueDestroy(L_QUEUE**, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3984</i>
-     */
-    void lqueueDestroy(PointerByReference plq, int freeflag);
+//    /**
+//     * Original signature :
+//     * <code>void lqueueDestroy(L_QUEUE**, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:3984</i>
+//     */
+//    void lqueueDestroy(PointerByReference plq, int freeflag);
 
-    /**
-     * Original signature : <code>l_int32 lqueueAdd(L_QUEUE*, void*)</code><br>
-     * <i>native declaration : allheaders.h:3986</i>
-     */
-    int lqueueAdd(L_Queue lq, Pointer item);
+//    /**
+//     * Original signature : <code>l_int32 lqueueAdd(L_QUEUE*, void*)</code><br>
+//     * <i>native declaration : allheaders.h:3986</i>
+//     */
+//    int lqueueAdd(L_Queue lq, Pointer item);
 
-    /**
-     * Original signature : <code>void* lqueueRemove(L_QUEUE*)</code><br>
-     * <i>native declaration : allheaders.h:3988</i>
-     */
-    Pointer lqueueRemove(L_Queue lq);
+//    /**
+//     * Original signature : <code>void* lqueueRemove(L_QUEUE*)</code><br>
+//     * <i>native declaration : allheaders.h:3988</i>
+//     */
+//    Pointer lqueueRemove(L_Queue lq);
 
-    /**
-     * Original signature : <code>l_int32 lqueueGetCount(L_QUEUE*)</code><br>
-     * <i>native declaration : allheaders.h:3990</i>
-     */
-    int lqueueGetCount(L_Queue lq);
+//    /**
+//     * Original signature : <code>l_int32 lqueueGetCount(L_QUEUE*)</code><br>
+//     * <i>native declaration : allheaders.h:3990</i>
+//     */
+//    int lqueueGetCount(L_Queue lq);
 
 //    /**
 //     * Original signature :
@@ -13944,107 +13944,107 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int lqueuePrint(FILE fp, L_Queue lq);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixRankFilter(PIX*, l_int32, l_int32, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:3994</i>
-     */
-    Pix pixRankFilter(Pix pixs, int wf, int hf, float rank);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixRankFilter(PIX*, l_int32, l_int32, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:3994</i>
+//     */
+//    Pix pixRankFilter(Pix pixs, int wf, int hf, float rank);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixRankFilterRGB(PIX*, l_int32, l_int32, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:3996</i>
-     */
-    Pix pixRankFilterRGB(Pix pixs, int wf, int hf, float rank);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixRankFilterRGB(PIX*, l_int32, l_int32, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:3996</i>
+//     */
+//    Pix pixRankFilterRGB(Pix pixs, int wf, int hf, float rank);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixRankFilterGray(PIX*, l_int32, l_int32, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:3998</i>
-     */
-    Pix pixRankFilterGray(Pix pixs, int wf, int hf, float rank);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixRankFilterGray(PIX*, l_int32, l_int32, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:3998</i>
+//     */
+//    Pix pixRankFilterGray(Pix pixs, int wf, int hf, float rank);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixMedianFilter(PIX*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4000</i>
-     */
-    Pix pixMedianFilter(Pix pixs, int wf, int hf);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixMedianFilter(PIX*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4000</i>
+//     */
+//    Pix pixMedianFilter(Pix pixs, int wf, int hf);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixRankFilterWithScaling(PIX*, l_int32, l_int32, l_float32, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:4002</i>
-     */
-    Pix pixRankFilterWithScaling(Pix pixs, int wf, int hf, float rank, float scalefactor);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixRankFilterWithScaling(PIX*, l_int32, l_int32, l_float32, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:4002</i>
+//     */
+//    Pix pixRankFilterWithScaling(Pix pixs, int wf, int hf, float rank, float scalefactor);
 
-    /**
-     * Original signature : <code>L_RBTREE* l_rbtreeCreate(l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4004</i>
-     */
-    L_Rbtree l_rbtreeCreate(int keytype);
-
-    /**
-     * Original signature :
-     * <code>RB_TYPE* l_rbtreeLookup(L_RBTREE*, RB_TYPE)</code><br>
-     * <i>native declaration : allheaders.h:4006</i>
-     */
-    Rb_Type l_rbtreeLookup(L_Rbtree t, Rb_Type.ByValue key);
-
-    /**
-     * Original signature :
-     * <code>void l_rbtreeInsert(L_RBTREE*, RB_TYPE, RB_TYPE)</code><br>
-     * <i>native declaration : allheaders.h:4008</i>
-     */
-    void l_rbtreeInsert(L_Rbtree t, Rb_Type.ByValue key, Rb_Type.ByValue value);
-
-    /**
-     * Original signature :
-     * <code>void l_rbtreeDelete(L_RBTREE*, RB_TYPE)</code><br>
-     * <i>native declaration : allheaders.h:4010</i>
-     */
-    void l_rbtreeDelete(L_Rbtree t, Rb_Type.ByValue key);
-
-    /**
-     * Original signature : <code>void l_rbtreeDestroy(L_RBTREE**)</code><br>
-     * <i>native declaration : allheaders.h:4012</i>
-     */
-    void l_rbtreeDestroy(PointerByReference pt);
-
-    /**
-     * Original signature :
-     * <code>L_RBTREE_NODE* l_rbtreeGetFirst(L_RBTREE*)</code><br>
-     * <i>native declaration : allheaders.h:4014</i>
-     */
-    L_Rbtree_Node l_rbtreeGetFirst(L_Rbtree t);
-
-    /**
-     * Original signature :
-     * <code>L_RBTREE_NODE* l_rbtreeGetNext(L_RBTREE_NODE*)</code><br>
-     * <i>native declaration : allheaders.h:4016</i>
-     */
-    L_Rbtree_Node l_rbtreeGetNext(L_Rbtree_Node n);
-
-    /**
-     * Original signature :
-     * <code>L_RBTREE_NODE* l_rbtreeGetLast(L_RBTREE*)</code><br>
-     * <i>native declaration : allheaders.h:4018</i>
-     */
-    L_Rbtree_Node l_rbtreeGetLast(L_Rbtree t);
-
-    /**
-     * Original signature :
-     * <code>L_RBTREE_NODE* l_rbtreeGetPrev(L_RBTREE_NODE*)</code><br>
-     * <i>native declaration : allheaders.h:4020</i>
-     */
-    L_Rbtree_Node l_rbtreeGetPrev(L_Rbtree_Node n);
-
-    /**
-     * Original signature : <code>l_int32 l_rbtreeGetCount(L_RBTREE*)</code><br>
-     * <i>native declaration : allheaders.h:4022</i>
-     */
-    int l_rbtreeGetCount(L_Rbtree t);
+//    /**
+//     * Original signature : <code>L_RBTREE* l_rbtreeCreate(l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4004</i>
+//     */
+//    L_Rbtree l_rbtreeCreate(int keytype);
+//
+//    /**
+//     * Original signature :
+//     * <code>RB_TYPE* l_rbtreeLookup(L_RBTREE*, RB_TYPE)</code><br>
+//     * <i>native declaration : allheaders.h:4006</i>
+//     */
+//    Rb_Type l_rbtreeLookup(L_Rbtree t, Rb_Type.ByValue key);
+//
+//    /**
+//     * Original signature :
+//     * <code>void l_rbtreeInsert(L_RBTREE*, RB_TYPE, RB_TYPE)</code><br>
+//     * <i>native declaration : allheaders.h:4008</i>
+//     */
+//    void l_rbtreeInsert(L_Rbtree t, Rb_Type.ByValue key, Rb_Type.ByValue value);
+//
+//    /**
+//     * Original signature :
+//     * <code>void l_rbtreeDelete(L_RBTREE*, RB_TYPE)</code><br>
+//     * <i>native declaration : allheaders.h:4010</i>
+//     */
+//    void l_rbtreeDelete(L_Rbtree t, Rb_Type.ByValue key);
+//
+//    /**
+//     * Original signature : <code>void l_rbtreeDestroy(L_RBTREE**)</code><br>
+//     * <i>native declaration : allheaders.h:4012</i>
+//     */
+//    void l_rbtreeDestroy(PointerByReference pt);
+//
+//    /**
+//     * Original signature :
+//     * <code>L_RBTREE_NODE* l_rbtreeGetFirst(L_RBTREE*)</code><br>
+//     * <i>native declaration : allheaders.h:4014</i>
+//     */
+//    L_Rbtree_Node l_rbtreeGetFirst(L_Rbtree t);
+//
+//    /**
+//     * Original signature :
+//     * <code>L_RBTREE_NODE* l_rbtreeGetNext(L_RBTREE_NODE*)</code><br>
+//     * <i>native declaration : allheaders.h:4016</i>
+//     */
+//    L_Rbtree_Node l_rbtreeGetNext(L_Rbtree_Node n);
+//
+//    /**
+//     * Original signature :
+//     * <code>L_RBTREE_NODE* l_rbtreeGetLast(L_RBTREE*)</code><br>
+//     * <i>native declaration : allheaders.h:4018</i>
+//     */
+//    L_Rbtree_Node l_rbtreeGetLast(L_Rbtree t);
+//
+//    /**
+//     * Original signature :
+//     * <code>L_RBTREE_NODE* l_rbtreeGetPrev(L_RBTREE_NODE*)</code><br>
+//     * <i>native declaration : allheaders.h:4020</i>
+//     */
+//    L_Rbtree_Node l_rbtreeGetPrev(L_Rbtree_Node n);
+//
+//    /**
+//     * Original signature : <code>l_int32 l_rbtreeGetCount(L_RBTREE*)</code><br>
+//     * <i>native declaration : allheaders.h:4022</i>
+//     */
+//    int l_rbtreeGetCount(L_Rbtree t);
 
 //    /**
 //     * Original signature :
@@ -14053,103 +14053,103 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    void l_rbtreePrint(FILE fp, L_Rbtree t);
 
-    /**
-     * Original signature :
-     * <code>l_int32 l_compareKeys(l_int32, RB_TYPE, RB_TYPE)</code><br>
-     * <i>native declaration : allheaders.h:4026</i>
-     */
-    int l_compareKeys(int keytype, Rb_Type.ByValue left, Rb_Type.ByValue right);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 l_compareKeys(l_int32, RB_TYPE, RB_TYPE)</code><br>
+//     * <i>native declaration : allheaders.h:4026</i>
+//     */
+//    int l_compareKeys(int keytype, Rb_Type.ByValue left, Rb_Type.ByValue right);
 
-    /**
-     * Original signature :
-     * <code>SARRAY* pixProcessBarcodes(PIX*, l_int32, l_int32, SARRAY**, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4028</i>
-     */
-    Sarray pixProcessBarcodes(Pix pixs, int format, int method, PointerByReference psaw, int debugflag);
+//    /**
+//     * Original signature :
+//     * <code>SARRAY* pixProcessBarcodes(PIX*, l_int32, l_int32, SARRAY**, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4028</i>
+//     */
+//    Sarray pixProcessBarcodes(Pix pixs, int format, int method, PointerByReference psaw, int debugflag);
 
-    /**
-     * Original signature :
-     * <code>PIXA* pixExtractBarcodes(PIX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4030</i>
-     */
-    Pixa pixExtractBarcodes(Pix pixs, int debugflag);
+//    /**
+//     * Original signature :
+//     * <code>PIXA* pixExtractBarcodes(PIX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4030</i>
+//     */
+//    Pixa pixExtractBarcodes(Pix pixs, int debugflag);
 
-    /**
-     * Original signature :
-     * <code>SARRAY* pixReadBarcodes(PIXA*, l_int32, l_int32, SARRAY**, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4032</i>
-     */
-    Sarray pixReadBarcodes(Pixa pixa, int format, int method, PointerByReference psaw, int debugflag);
+//    /**
+//     * Original signature :
+//     * <code>SARRAY* pixReadBarcodes(PIXA*, l_int32, l_int32, SARRAY**, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4032</i>
+//     */
+//    Sarray pixReadBarcodes(Pixa pixa, int format, int method, PointerByReference psaw, int debugflag);
 
-    /**
-     * Original signature :
-     * <code>NUMA* pixReadBarcodeWidths(PIX*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4034</i>
-     */
-    Numa pixReadBarcodeWidths(Pix pixs, int method, int debugflag);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* pixReadBarcodeWidths(PIX*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4034</i>
+//     */
+//    Numa pixReadBarcodeWidths(Pix pixs, int method, int debugflag);
 
-    /**
-     * Original signature :
-     * <code>BOXA* pixLocateBarcodes(PIX*, l_int32, PIX**, PIX**)</code><br>
-     * <i>native declaration : allheaders.h:4036</i>
-     */
-    Boxa pixLocateBarcodes(Pix pixs, int thresh, PointerByReference ppixb, PointerByReference ppixm);
+//    /**
+//     * Original signature :
+//     * <code>BOXA* pixLocateBarcodes(PIX*, l_int32, PIX**, PIX**)</code><br>
+//     * <i>native declaration : allheaders.h:4036</i>
+//     */
+//    Boxa pixLocateBarcodes(Pix pixs, int thresh, PointerByReference ppixb, PointerByReference ppixm);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixDeskewBarcode(PIX*, PIX*, BOX*, l_int32, l_int32, l_float32*, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:4038</i>
-     */
-    Pix pixDeskewBarcode(Pix pixs, Pix pixb, Box box, int margin, int threshold, FloatBuffer pangle, FloatBuffer pconf);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixDeskewBarcode(PIX*, PIX*, BOX*, l_int32, l_int32, l_float32*, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:4038</i>
+//     */
+//    Pix pixDeskewBarcode(Pix pixs, Pix pixb, Box box, int margin, int threshold, FloatBuffer pangle, FloatBuffer pconf);
 
-    /**
-     * Original signature :
-     * <code>NUMA* pixExtractBarcodeWidths1(PIX*, l_float32, l_float32, NUMA**, NUMA**, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4040</i>
-     */
-    Numa pixExtractBarcodeWidths1(Pix pixs, float thresh, float binfract, PointerByReference pnaehist, PointerByReference pnaohist, int debugflag);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* pixExtractBarcodeWidths1(PIX*, l_float32, l_float32, NUMA**, NUMA**, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4040</i>
+//     */
+//    Numa pixExtractBarcodeWidths1(Pix pixs, float thresh, float binfract, PointerByReference pnaehist, PointerByReference pnaohist, int debugflag);
 
-    /**
-     * Original signature :
-     * <code>NUMA* pixExtractBarcodeWidths2(PIX*, l_float32, l_float32*, NUMA**, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4042</i>
-     */
-    Numa pixExtractBarcodeWidths2(Pix pixs, float thresh, FloatBuffer pwidth, PointerByReference pnac, int debugflag);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* pixExtractBarcodeWidths2(PIX*, l_float32, l_float32*, NUMA**, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4042</i>
+//     */
+//    Numa pixExtractBarcodeWidths2(Pix pixs, float thresh, FloatBuffer pwidth, PointerByReference pnac, int debugflag);
 
-    /**
-     * Original signature :
-     * <code>NUMA* pixExtractBarcodeWidths2(PIX*, l_float32, l_float32*, NUMA**, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4042</i>
-     */
-    Numa pixExtractBarcodeWidths2(Pix pixs, float thresh, FloatByReference pwidth, PointerByReference pnac, int debugflag);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* pixExtractBarcodeWidths2(PIX*, l_float32, l_float32*, NUMA**, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4042</i>
+//     */
+//    Numa pixExtractBarcodeWidths2(Pix pixs, float thresh, FloatByReference pwidth, PointerByReference pnac, int debugflag);
 
-    /**
-     * Original signature :
-     * <code>NUMA* pixExtractBarcodeCrossings(PIX*, l_float32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4044</i>
-     */
-    Numa pixExtractBarcodeCrossings(Pix pixs, float thresh, int debugflag);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* pixExtractBarcodeCrossings(PIX*, l_float32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4044</i>
+//     */
+//    Numa pixExtractBarcodeCrossings(Pix pixs, float thresh, int debugflag);
 
-    /**
-     * Original signature :
-     * <code>NUMA* numaQuantizeCrossingsByWidth(NUMA*, l_float32, NUMA**, NUMA**, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4046</i>
-     */
-    Numa numaQuantizeCrossingsByWidth(Numa nas, float binfract, PointerByReference pnaehist, PointerByReference pnaohist, int debugflag);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* numaQuantizeCrossingsByWidth(NUMA*, l_float32, NUMA**, NUMA**, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4046</i>
+//     */
+//    Numa numaQuantizeCrossingsByWidth(Numa nas, float binfract, PointerByReference pnaehist, PointerByReference pnaohist, int debugflag);
 
-    /**
-     * Original signature :
-     * <code>NUMA* numaQuantizeCrossingsByWindow(NUMA*, l_float32, l_float32*, l_float32*, NUMA**, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4048</i>
-     */
-    Numa numaQuantizeCrossingsByWindow(Numa nas, float ratio, FloatBuffer pwidth, FloatBuffer pfirstloc, PointerByReference pnac, int debugflag);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* numaQuantizeCrossingsByWindow(NUMA*, l_float32, l_float32*, l_float32*, NUMA**, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4048</i>
+//     */
+//    Numa numaQuantizeCrossingsByWindow(Numa nas, float ratio, FloatBuffer pwidth, FloatBuffer pfirstloc, PointerByReference pnac, int debugflag);
 
-    /**
-     * Original signature :
-     * <code>NUMA* numaQuantizeCrossingsByWindow(NUMA*, l_float32, l_float32*, l_float32*, NUMA**, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4048</i>
-     */
-    Numa numaQuantizeCrossingsByWindow(Numa nas, float ratio, FloatByReference pwidth, FloatByReference pfirstloc, PointerByReference pnac, int debugflag);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* numaQuantizeCrossingsByWindow(NUMA*, l_float32, l_float32*, l_float32*, NUMA**, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4048</i>
+//     */
+//    Numa numaQuantizeCrossingsByWindow(Numa nas, float ratio, FloatByReference pwidth, FloatByReference pfirstloc, PointerByReference pnac, int debugflag);
 
     /**
      * Original signature :
@@ -14244,151 +14244,151 @@ public interface Leptonica extends Library, ILeptonica {
      */
     int ioFormatTest(String filename);
 
-    /**
-     * Original signature :
-     * <code>L_RECOGA* recogaCreateFromRecog(L_RECOG*)</code><br>
-     * <i>native declaration : allheaders.h:4078</i>
-     */
-    L_Recoga recogaCreateFromRecog(L_Recog recog);
+//    /**
+//     * Original signature :
+//     * <code>L_RECOGA* recogaCreateFromRecog(L_RECOG*)</code><br>
+//     * <i>native declaration : allheaders.h:4078</i>
+//     */
+//    L_Recoga recogaCreateFromRecog(L_Recog recog);
 
-    /**
-     * Original signature :
-     * <code>L_RECOGA* recogaCreateFromPixaa(PIXAA*, l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4080</i>
-     */
-    L_Recoga recogaCreateFromPixaa(Pixaa paa, int scalew, int scaleh, int templ_type, int threshold, int maxyshift);
+//    /**
+//     * Original signature :
+//     * <code>L_RECOGA* recogaCreateFromPixaa(PIXAA*, l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4080</i>
+//     */
+//    L_Recoga recogaCreateFromPixaa(Pixaa paa, int scalew, int scaleh, int templ_type, int threshold, int maxyshift);
 
-    /**
-     * Original signature : <code>L_RECOGA* recogaCreate(l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4082</i>
-     */
-    L_Recoga recogaCreate(int n);
+//    /**
+//     * Original signature : <code>L_RECOGA* recogaCreate(l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4082</i>
+//     */
+//    L_Recoga recogaCreate(int n);
 
-    /**
-     * Original signature : <code>void recogaDestroy(L_RECOGA**)</code><br>
-     * <i>native declaration : allheaders.h:4084</i>
-     */
-    void recogaDestroy(PointerByReference precoga);
+//    /**
+//     * Original signature : <code>void recogaDestroy(L_RECOGA**)</code><br>
+//     * <i>native declaration : allheaders.h:4084</i>
+//     */
+//    void recogaDestroy(PointerByReference precoga);
 
-    /**
-     * Original signature :
-     * <code>l_int32 recogaAddRecog(L_RECOGA*, L_RECOG*)</code><br>
-     * <i>native declaration : allheaders.h:4086</i>
-     */
-    int recogaAddRecog(L_Recoga recoga, L_Recog recog);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 recogaAddRecog(L_RECOGA*, L_RECOG*)</code><br>
+//     * <i>native declaration : allheaders.h:4086</i>
+//     */
+//    int recogaAddRecog(L_Recoga recoga, L_Recog recog);
 
-    /**
-     * Original signature :
-     * <code>l_int32 recogReplaceInRecoga(L_RECOG**, L_RECOG*)</code><br>
-     * <i>native declaration : allheaders.h:4088</i>
-     */
-    int recogReplaceInRecoga(PointerByReference precog1, L_Recog recog2);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 recogReplaceInRecoga(L_RECOG**, L_RECOG*)</code><br>
+//     * <i>native declaration : allheaders.h:4088</i>
+//     */
+//    int recogReplaceInRecoga(PointerByReference precog1, L_Recog recog2);
 
-    /**
-     * Original signature :
-     * <code>L_RECOG* recogaGetRecog(L_RECOGA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4090</i>
-     */
-    L_Recog recogaGetRecog(L_Recoga recoga, int index);
+//    /**
+//     * Original signature :
+//     * <code>L_RECOG* recogaGetRecog(L_RECOGA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4090</i>
+//     */
+//    L_Recog recogaGetRecog(L_Recoga recoga, int index);
 
-    /**
-     * Original signature : <code>l_int32 recogaGetCount(L_RECOGA*)</code><br>
-     * <i>native declaration : allheaders.h:4092</i>
-     */
-    int recogaGetCount(L_Recoga recoga);
+//    /**
+//     * Original signature : <code>l_int32 recogaGetCount(L_RECOGA*)</code><br>
+//     * <i>native declaration : allheaders.h:4092</i>
+//     */
+//    int recogaGetCount(L_Recoga recoga);
 
-    /**
-     * Original signature : <code>l_int32 recogGetCount(L_RECOG*)</code><br>
-     * <i>native declaration : allheaders.h:4094</i>
-     */
-    int recogGetCount(L_Recog recog);
+//    /**
+//     * Original signature : <code>l_int32 recogGetCount(L_RECOG*)</code><br>
+//     * <i>native declaration : allheaders.h:4094</i>
+//     */
+//    int recogGetCount(L_Recog recog);
 
-    /**
-     * Original signature :
-     * <code>l_int32 recogGetIndex(L_RECOG*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:4096</i>
-     */
-    int recogGetIndex(L_Recog recog, IntBuffer pindex);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 recogGetIndex(L_RECOG*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:4096</i>
+//     */
+//    int recogGetIndex(L_Recog recog, IntBuffer pindex);
 
-    /**
-     * Original signature : <code>L_RECOGA* recogGetParent(L_RECOG*)</code><br>
-     * <i>native declaration : allheaders.h:4098</i>
-     */
-    L_Recoga recogGetParent(L_Recog recog);
+//    /**
+//     * Original signature : <code>L_RECOGA* recogGetParent(L_RECOG*)</code><br>
+//     * <i>native declaration : allheaders.h:4098</i>
+//     */
+//    L_Recoga recogGetParent(L_Recog recog);
 
-    /**
-     * Original signature : <code>l_int32 recogSetBootflag(L_RECOG*)</code><br>
-     * <i>native declaration : allheaders.h:4100</i>
-     */
-    int recogSetBootflag(L_Recog recog);
+//    /**
+//     * Original signature : <code>l_int32 recogSetBootflag(L_RECOG*)</code><br>
+//     * <i>native declaration : allheaders.h:4100</i>
+//     */
+//    int recogSetBootflag(L_Recog recog);
 
-    /**
-     * Original signature :
-     * <code>L_RECOG* recogCreateFromRecog(L_RECOG*, l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4102</i>
-     */
-    L_Recog recogCreateFromRecog(L_Recog recs, int scalew, int scaleh, int templ_type, int threshold, int maxyshift);
+//    /**
+//     * Original signature :
+//     * <code>L_RECOG* recogCreateFromRecog(L_RECOG*, l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4102</i>
+//     */
+//    L_Recog recogCreateFromRecog(L_Recog recs, int scalew, int scaleh, int templ_type, int threshold, int maxyshift);
 
-    /**
-     * Original signature :
-     * <code>L_RECOG* recogCreateFromPixa(PIXA*, l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4104</i>
-     */
-    L_Recog recogCreateFromPixa(Pixa pixa, int scalew, int scaleh, int templ_type, int threshold, int maxyshift);
+//    /**
+//     * Original signature :
+//     * <code>L_RECOG* recogCreateFromPixa(PIXA*, l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4104</i>
+//     */
+//    L_Recog recogCreateFromPixa(Pixa pixa, int scalew, int scaleh, int templ_type, int threshold, int maxyshift);
 
-    /**
-     * Original signature :
-     * <code>L_RECOG* recogCreate(l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4106</i>
-     */
-    L_Recog recogCreate(int scalew, int scaleh, int templ_type, int threshold, int maxyshift);
+//    /**
+//     * Original signature :
+//     * <code>L_RECOG* recogCreate(l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4106</i>
+//     */
+//    L_Recog recogCreate(int scalew, int scaleh, int templ_type, int threshold, int maxyshift);
 
-    /**
-     * Original signature : <code>void recogDestroy(L_RECOG**)</code><br>
-     * <i>native declaration : allheaders.h:4108</i>
-     */
-    void recogDestroy(PointerByReference precog);
+//    /**
+//     * Original signature : <code>void recogDestroy(L_RECOG**)</code><br>
+//     * <i>native declaration : allheaders.h:4108</i>
+//     */
+//    void recogDestroy(PointerByReference precog);
 
-    /**
-     * Original signature :
-     * <code>l_int32 recogAppend(L_RECOG*, L_RECOG*)</code><br>
-     * <i>native declaration : allheaders.h:4110</i>
-     */
-    int recogAppend(L_Recog recog1, L_Recog recog2);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 recogAppend(L_RECOG*, L_RECOG*)</code><br>
+//     * <i>native declaration : allheaders.h:4110</i>
+//     */
+//    int recogAppend(L_Recog recog1, L_Recog recog2);
 
-    /**
-     * Original signature :
-     * <code>l_int32 recogGetClassIndex(L_RECOG*, l_int32, char*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:4112</i>
-     */
-    int recogGetClassIndex(L_Recog recog, int val, ByteBuffer text, IntBuffer pindex);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 recogGetClassIndex(L_RECOG*, l_int32, char*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:4112</i>
+//     */
+//    int recogGetClassIndex(L_Recog recog, int val, ByteBuffer text, IntBuffer pindex);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 recogStringToIndex(L_RECOG*, char*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:4114</i>
+//     */
+//    int recogStringToIndex(L_Recog recog, ByteBuffer text, IntBuffer pindex);
 
-    /**
-     * Original signature :
-     * <code>l_int32 recogStringToIndex(L_RECOG*, char*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:4114</i>
-     */
-    int recogStringToIndex(L_Recog recog, ByteBuffer text, IntBuffer pindex);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 recogGetClassString(L_RECOG*, l_int32, char**)</code><br>
+//     * <i>native declaration : allheaders.h:4116</i>
+//     */
+//    int recogGetClassString(L_Recog recog, int index, PointerByReference pcharstr);
 
-    /**
-     * Original signature :
-     * <code>l_int32 recogGetClassString(L_RECOG*, l_int32, char**)</code><br>
-     * <i>native declaration : allheaders.h:4116</i>
-     */
-    int recogGetClassString(L_Recog recog, int index, PointerByReference pcharstr);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 l_convertCharstrToInt(const char*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:4118</i>
+//     */
+//    int l_convertCharstrToInt(String str, IntBuffer pval);
 
-    /**
-     * Original signature :
-     * <code>l_int32 l_convertCharstrToInt(const char*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:4118</i>
-     */
-    int l_convertCharstrToInt(String str, IntBuffer pval);
-
-    /**
-     * Original signature : <code>L_RECOGA* recogaRead(const char*)</code><br>
-     * <i>native declaration : allheaders.h:4120</i>
-     */
-    L_Recoga recogaRead(String filename);
+//    /**
+//     * Original signature : <code>L_RECOGA* recogaRead(const char*)</code><br>
+//     * <i>native declaration : allheaders.h:4120</i>
+//     */
+//    L_Recoga recogaRead(String filename);
 
 //    /**
 //     * Original signature : <code>L_RECOGA* recogaReadStream(FILE*)</code><br>
@@ -14396,12 +14396,12 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    L_Recoga recogaReadStream(FILE fp);
 
-    /**
-     * Original signature :
-     * <code>l_int32 recogaWrite(const char*, L_RECOGA*)</code><br>
-     * <i>native declaration : allheaders.h:4124</i>
-     */
-    int recogaWrite(String filename, L_Recoga recoga);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 recogaWrite(const char*, L_RECOGA*)</code><br>
+//     * <i>native declaration : allheaders.h:4124</i>
+//     */
+//    int recogaWrite(String filename, L_Recoga recoga);
 
 //    /**
 //     * Original signature :
@@ -14410,18 +14410,18 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int recogaWriteStream(FILE fp, L_Recoga recoga, String filename);
 
-    /**
-     * Original signature :
-     * <code>l_int32 recogaWritePixaa(const char*, L_RECOGA*)</code><br>
-     * <i>native declaration : allheaders.h:4128</i>
-     */
-    int recogaWritePixaa(String filename, L_Recoga recoga);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 recogaWritePixaa(const char*, L_RECOGA*)</code><br>
+//     * <i>native declaration : allheaders.h:4128</i>
+//     */
+//    int recogaWritePixaa(String filename, L_Recoga recoga);
 
-    /**
-     * Original signature : <code>L_RECOG* recogRead(const char*)</code><br>
-     * <i>native declaration : allheaders.h:4130</i>
-     */
-    L_Recog recogRead(String filename);
+//    /**
+//     * Original signature : <code>L_RECOG* recogRead(const char*)</code><br>
+//     * <i>native declaration : allheaders.h:4130</i>
+//     */
+//    L_Recog recogRead(String filename);
 
 //    /**
 //     * Original signature : <code>L_RECOG* recogReadStream(FILE*)</code><br>
@@ -14429,12 +14429,12 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    L_Recog recogReadStream(FILE fp);
 
-    /**
-     * Original signature :
-     * <code>l_int32 recogWrite(const char*, L_RECOG*)</code><br>
-     * <i>native declaration : allheaders.h:4134</i>
-     */
-    int recogWrite(String filename, L_Recog recog);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 recogWrite(const char*, L_RECOG*)</code><br>
+//     * <i>native declaration : allheaders.h:4134</i>
+//     */
+//    int recogWrite(String filename, L_Recog recog);
 
 //    /**
 //     * Original signature :
@@ -14443,160 +14443,160 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int recogWriteStream(FILE fp, L_Recog recog, String filename);
 
-    /**
-     * Original signature :
-     * <code>l_int32 recogWritePixa(const char*, L_RECOG*)</code><br>
-     * <i>native declaration : allheaders.h:4138</i>
-     */
-    int recogWritePixa(String filename, L_Recog recog);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 recogWritePixa(const char*, L_RECOG*)</code><br>
+//     * <i>native declaration : allheaders.h:4138</i>
+//     */
+//    int recogWritePixa(String filename, L_Recog recog);
 
-    /**
-     * Original signature :
-     * <code>l_int32 recogDecode(L_RECOG*, PIX*, l_int32, PIX**)</code><br>
-     * <i>native declaration : allheaders.h:4140</i>
-     */
-    int recogDecode(L_Recog recog, Pix pixs, int nlevels, PointerByReference ppixdb);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 recogDecode(L_RECOG*, PIX*, l_int32, PIX**)</code><br>
+//     * <i>native declaration : allheaders.h:4140</i>
+//     */
+//    int recogDecode(L_Recog recog, Pix pixs, int nlevels, PointerByReference ppixdb);
 
-    /**
-     * Original signature :
-     * <code>l_int32 recogMakeDecodingArrays(L_RECOG*, PIX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4142</i>
-     */
-    int recogMakeDecodingArrays(L_Recog recog, Pix pixs, int debug);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 recogMakeDecodingArrays(L_RECOG*, PIX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4142</i>
+//     */
+//    int recogMakeDecodingArrays(L_Recog recog, Pix pixs, int debug);
 
-    /**
-     * Original signature :
-     * <code>l_int32 recogRunViterbi(L_RECOG*, PIX**)</code><br>
-     * <i>native declaration : allheaders.h:4144</i>
-     */
-    int recogRunViterbi(L_Recog recog, PointerByReference ppixdb);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 recogRunViterbi(L_RECOG*, PIX**)</code><br>
+//     * <i>native declaration : allheaders.h:4144</i>
+//     */
+//    int recogRunViterbi(L_Recog recog, PointerByReference ppixdb);
 
-    /**
-     * Original signature :
-     * <code>l_int32 recogCreateDid(L_RECOG*, PIX*)</code><br>
-     * <i>native declaration : allheaders.h:4146</i>
-     */
-    int recogCreateDid(L_Recog recog, Pix pixs);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 recogCreateDid(L_RECOG*, PIX*)</code><br>
+//     * <i>native declaration : allheaders.h:4146</i>
+//     */
+//    int recogCreateDid(L_Recog recog, Pix pixs);
 
-    /**
-     * Original signature : <code>l_int32 recogDestroyDid(L_RECOG*)</code><br>
-     * <i>native declaration : allheaders.h:4148</i>
-     */
-    int recogDestroyDid(L_Recog recog);
+//    /**
+//     * Original signature : <code>l_int32 recogDestroyDid(L_RECOG*)</code><br>
+//     * <i>native declaration : allheaders.h:4148</i>
+//     */
+//    int recogDestroyDid(L_Recog recog);
 
-    /**
-     * Original signature : <code>l_int32 recogDidExists(L_RECOG*)</code><br>
-     * <i>native declaration : allheaders.h:4150</i>
-     */
-    int recogDidExists(L_Recog recog);
+//    /**
+//     * Original signature : <code>l_int32 recogDidExists(L_RECOG*)</code><br>
+//     * <i>native declaration : allheaders.h:4150</i>
+//     */
+//    int recogDidExists(L_Recog recog);
 
-    /**
-     * Original signature : <code>L_RDID* recogGetDid(L_RECOG*)</code><br>
-     * <i>native declaration : allheaders.h:4152</i>
-     */
-    L_Rdid recogGetDid(L_Recog recog);
+//    /**
+//     * Original signature : <code>L_RDID* recogGetDid(L_RECOG*)</code><br>
+//     * <i>native declaration : allheaders.h:4152</i>
+//     */
+//    L_Rdid recogGetDid(L_Recog recog);
 
-    /**
-     * Original signature :
-     * <code>l_int32 recogSetChannelParams(L_RECOG*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4154</i>
-     */
-    int recogSetChannelParams(L_Recog recog, int nlevels);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 recogSetChannelParams(L_RECOG*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4154</i>
+//     */
+//    int recogSetChannelParams(L_Recog recog, int nlevels);
 
-    /**
-     * Original signature :
-     * <code>l_int32 recogaIdentifyMultiple(L_RECOGA*, PIX*, l_int32, l_int32, l_int32, BOXA**, PIXA**, PIX**, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4156</i>
-     */
-    int recogaIdentifyMultiple(L_Recoga recoga, Pix pixs, int nitems, int minw, int minh, PointerByReference pboxa, PointerByReference ppixa, PointerByReference ppixdb, int debugsplit);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 recogaIdentifyMultiple(L_RECOGA*, PIX*, l_int32, l_int32, l_int32, BOXA**, PIXA**, PIX**, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4156</i>
+//     */
+//    int recogaIdentifyMultiple(L_Recoga recoga, Pix pixs, int nitems, int minw, int minh, PointerByReference pboxa, PointerByReference ppixa, PointerByReference ppixdb, int debugsplit);
 
-    /**
-     * Original signature :
-     * <code>l_int32 recogSplitIntoCharacters(L_RECOG*, PIX*, l_int32, l_int32, BOXA**, PIXA**, NUMA**, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4158</i>
-     */
-    int recogSplitIntoCharacters(L_Recog recog, Pix pixs, int minw, int minh, PointerByReference pboxa, PointerByReference ppixa, PointerByReference pnaid, int debug);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 recogSplitIntoCharacters(L_RECOG*, PIX*, l_int32, l_int32, BOXA**, PIXA**, NUMA**, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4158</i>
+//     */
+//    int recogSplitIntoCharacters(L_Recog recog, Pix pixs, int minw, int minh, PointerByReference pboxa, PointerByReference ppixa, PointerByReference pnaid, int debug);
 
-    /**
-     * Original signature :
-     * <code>l_int32 recogCorrelationBestRow(L_RECOG*, PIX*, BOXA**, NUMA**, NUMA**, SARRAY**, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4160</i>
-     */
-    int recogCorrelationBestRow(L_Recog recog, Pix pixs, PointerByReference pboxa, PointerByReference pnascore, PointerByReference pnaindex, PointerByReference psachar, int debug);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 recogCorrelationBestRow(L_RECOG*, PIX*, BOXA**, NUMA**, NUMA**, SARRAY**, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4160</i>
+//     */
+//    int recogCorrelationBestRow(L_Recog recog, Pix pixs, PointerByReference pboxa, PointerByReference pnascore, PointerByReference pnaindex, PointerByReference psachar, int debug);
 
-    /**
-     * Original signature :
-     * <code>l_int32 recogCorrelationBestChar(L_RECOG*, PIX*, BOX**, l_float32*, l_int32*, char**, PIX**)</code><br>
-     * <i>native declaration : allheaders.h:4162</i>
-     */
-    int recogCorrelationBestChar(L_Recog recog, Pix pixs, PointerByReference pbox, FloatBuffer pscore, IntBuffer pindex, PointerByReference pcharstr, PointerByReference ppixdb);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 recogCorrelationBestChar(L_RECOG*, PIX*, BOX**, l_float32*, l_int32*, char**, PIX**)</code><br>
+//     * <i>native declaration : allheaders.h:4162</i>
+//     */
+//    int recogCorrelationBestChar(L_Recog recog, Pix pixs, PointerByReference pbox, FloatBuffer pscore, IntBuffer pindex, PointerByReference pcharstr, PointerByReference ppixdb);
 
-    /**
-     * Original signature :
-     * <code>l_int32 recogCorrelationBestChar(L_RECOG*, PIX*, BOX**, l_float32*, l_int32*, char**, PIX**)</code><br>
-     * <i>native declaration : allheaders.h:4162</i>
-     */
-    int recogCorrelationBestChar(L_Recog recog, Pix pixs, PointerByReference pbox, FloatByReference pscore, IntByReference pindex, PointerByReference pcharstr, PointerByReference ppixdb);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 recogCorrelationBestChar(L_RECOG*, PIX*, BOX**, l_float32*, l_int32*, char**, PIX**)</code><br>
+//     * <i>native declaration : allheaders.h:4162</i>
+//     */
+//    int recogCorrelationBestChar(L_Recog recog, Pix pixs, PointerByReference pbox, FloatByReference pscore, IntByReference pindex, PointerByReference pcharstr, PointerByReference ppixdb);
 
-    /**
-     * Original signature :
-     * <code>l_int32 recogaIdentifyPixa(L_RECOGA*, PIXA*, NUMA*, PIX**)</code><br>
-     * <i>native declaration : allheaders.h:4164</i>
-     */
-    int recogaIdentifyPixa(L_Recoga recoga, Pixa pixa, Numa naid, PointerByReference ppixdb);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 recogaIdentifyPixa(L_RECOGA*, PIXA*, NUMA*, PIX**)</code><br>
+//     * <i>native declaration : allheaders.h:4164</i>
+//     */
+//    int recogaIdentifyPixa(L_Recoga recoga, Pixa pixa, Numa naid, PointerByReference ppixdb);
 
-    /**
-     * Original signature :
-     * <code>l_int32 recogIdentifyPixa(L_RECOG*, PIXA*, NUMA*, PIX**)</code><br>
-     * <i>native declaration : allheaders.h:4166</i>
-     */
-    int recogIdentifyPixa(L_Recog recog, Pixa pixa, Numa naid, PointerByReference ppixdb);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 recogIdentifyPixa(L_RECOG*, PIXA*, NUMA*, PIX**)</code><br>
+//     * <i>native declaration : allheaders.h:4166</i>
+//     */
+//    int recogIdentifyPixa(L_Recog recog, Pixa pixa, Numa naid, PointerByReference ppixdb);
 
-    /**
-     * Original signature :
-     * <code>l_int32 recogIdentifyPix(L_RECOG*, PIX*, PIX**)</code><br>
-     * <i>native declaration : allheaders.h:4168</i>
-     */
-    int recogIdentifyPix(L_Recog recog, Pix pixs, PointerByReference ppixdb);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 recogIdentifyPix(L_RECOG*, PIX*, PIX**)</code><br>
+//     * <i>native declaration : allheaders.h:4168</i>
+//     */
+//    int recogIdentifyPix(L_Recog recog, Pix pixs, PointerByReference ppixdb);
 
-    /**
-     * Original signature : <code>l_int32 recogSkipIdentify(L_RECOG*)</code><br>
-     * <i>native declaration : allheaders.h:4170</i>
-     */
-    int recogSkipIdentify(L_Recog recog);
+//    /**
+//     * Original signature : <code>l_int32 recogSkipIdentify(L_RECOG*)</code><br>
+//     * <i>native declaration : allheaders.h:4170</i>
+//     */
+//    int recogSkipIdentify(L_Recog recog);
 
-    /**
-     * Original signature : <code>void rchaDestroy(L_RCHA**)</code><br>
-     * <i>native declaration : allheaders.h:4172</i>
-     */
-    void rchaDestroy(PointerByReference prcha);
+//    /**
+//     * Original signature : <code>void rchaDestroy(L_RCHA**)</code><br>
+//     * <i>native declaration : allheaders.h:4172</i>
+//     */
+//    void rchaDestroy(PointerByReference prcha);
 
-    /**
-     * Original signature : <code>void rchDestroy(L_RCH**)</code><br>
-     * <i>native declaration : allheaders.h:4174</i>
-     */
-    void rchDestroy(PointerByReference prch);
+//    /**
+//     * Original signature : <code>void rchDestroy(L_RCH**)</code><br>
+//     * <i>native declaration : allheaders.h:4174</i>
+//     */
+//    void rchDestroy(PointerByReference prch);
 
-    /**
-     * Original signature :
-     * <code>l_int32 rchaExtract(L_RCHA*, NUMA**, NUMA**, SARRAY**, NUMA**, NUMA**, NUMA**, NUMA**)</code><br>
-     * <i>native declaration : allheaders.h:4176</i>
-     */
-    int rchaExtract(L_Rcha rcha, PointerByReference pnaindex, PointerByReference pnascore, PointerByReference psatext, PointerByReference pnasample, PointerByReference pnaxloc, PointerByReference pnayloc, PointerByReference pnawidth);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 rchaExtract(L_RCHA*, NUMA**, NUMA**, SARRAY**, NUMA**, NUMA**, NUMA**, NUMA**)</code><br>
+//     * <i>native declaration : allheaders.h:4176</i>
+//     */
+//    int rchaExtract(L_Rcha rcha, PointerByReference pnaindex, PointerByReference pnascore, PointerByReference psatext, PointerByReference pnasample, PointerByReference pnaxloc, PointerByReference pnayloc, PointerByReference pnawidth);
 
-    /**
-     * Original signature :
-     * <code>l_int32 rchExtract(L_RCH*, l_int32*, l_float32*, char**, l_int32*, l_int32*, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:4178</i>
-     */
-    int rchExtract(L_Rch rch, IntBuffer pindex, FloatBuffer pscore, PointerByReference ptext, IntBuffer psample, IntBuffer pxloc, IntBuffer pyloc, IntBuffer pwidth);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 rchExtract(L_RCH*, l_int32*, l_float32*, char**, l_int32*, l_int32*, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:4178</i>
+//     */
+//    int rchExtract(L_Rch rch, IntBuffer pindex, FloatBuffer pscore, PointerByReference ptext, IntBuffer psample, IntBuffer pxloc, IntBuffer pyloc, IntBuffer pwidth);
 
-    /**
-     * Original signature :
-     * <code>PIX* recogProcessToIdentify(L_RECOG*, PIX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4180</i>
-     */
-    Pix recogProcessToIdentify(L_Recog recog, Pix pixs, int pad);
+//    /**
+//     * Original signature :
+//     * <code>PIX* recogProcessToIdentify(L_RECOG*, PIX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4180</i>
+//     */
+//    Pix recogProcessToIdentify(L_Recog recog, Pix pixs, int pad);
 
     /**
      * Original signature :
@@ -14612,26 +14612,26 @@ public interface Leptonica extends Library, ILeptonica {
      */
     int recogSplittingFilter(L_Recog recog, Pix pixs, float maxasp, float minaf, IntBuffer premove, int debug);
 
-    /**
-     * Original signature :
-     * <code>SARRAY* recogaExtractNumbers(L_RECOGA*, BOXA*, l_float32, l_int32, BOXAA**, NUMAA**)</code><br>
-     * <i>native declaration : allheaders.h:4186</i>
-     */
-    Sarray recogaExtractNumbers(L_Recoga recoga, Boxa boxas, float scorethresh, int spacethresh, PointerByReference pbaa, PointerByReference pnaa);
+//    /**
+//     * Original signature :
+//     * <code>SARRAY* recogaExtractNumbers(L_RECOGA*, BOXA*, l_float32, l_int32, BOXAA**, NUMAA**)</code><br>
+//     * <i>native declaration : allheaders.h:4186</i>
+//     */
+//    Sarray recogaExtractNumbers(L_Recoga recoga, Boxa boxas, float scorethresh, int spacethresh, PointerByReference pbaa, PointerByReference pnaa);
 
-    /**
-     * Original signature :
-     * <code>l_int32 recogSetTemplateType(L_RECOG*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4188</i>
-     */
-    int recogSetTemplateType(L_Recog recog, int templ_type);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 recogSetTemplateType(L_RECOG*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4188</i>
+//     */
+//    int recogSetTemplateType(L_Recog recog, int templ_type);
 
-    /**
-     * Original signature :
-     * <code>l_int32 recogSetScaling(L_RECOG*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4190</i>
-     */
-    int recogSetScaling(L_Recog recog, int scalew, int scaleh);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 recogSetScaling(L_RECOG*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4190</i>
+//     */
+//    int recogSetScaling(L_Recog recog, int scalew, int scaleh);
 
     /**
      * Original signature :
@@ -14647,12 +14647,12 @@ public interface Leptonica extends Library, ILeptonica {
      */
     int recogProcessMultLabelled(L_Recog recog, Pix pixs, Box box, ByteBuffer text, PointerByReference ppixa, int debug);
 
-    /**
-     * Original signature :
-     * <code>l_int32 recogProcessMultLabelled(L_RECOG*, PIX*, BOX*, char*, PIXA**, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4194</i>
-     */
-    int recogProcessMultLabelled(L_Recog recog, Pix pixs, Box box, Pointer text, PointerByReference ppixa, int debug);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 recogProcessMultLabelled(L_RECOG*, PIX*, BOX*, char*, PIXA**, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4194</i>
+//     */
+//    int recogProcessMultLabelled(L_Recog recog, Pix pixs, Box box, Pointer text, PointerByReference ppixa, int debug);
 
     /**
      * Original signature :
@@ -14661,89 +14661,89 @@ public interface Leptonica extends Library, ILeptonica {
      */
     int recogProcessSingleLabelled(L_Recog recog, Pix pixs, Box box, ByteBuffer text, PointerByReference ppixa);
 
-    /**
-     * Original signature :
-     * <code>l_int32 recogProcessSingleLabelled(L_RECOG*, PIX*, BOX*, char*, PIXA**)</code><br>
-     * <i>native declaration : allheaders.h:4196</i>
-     */
-    int recogProcessSingleLabelled(L_Recog recog, Pix pixs, Box box, Pointer text, PointerByReference ppixa);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 recogProcessSingleLabelled(L_RECOG*, PIX*, BOX*, char*, PIXA**)</code><br>
+//     * <i>native declaration : allheaders.h:4196</i>
+//     */
+//    int recogProcessSingleLabelled(L_Recog recog, Pix pixs, Box box, Pointer text, PointerByReference ppixa);
 
-    /**
-     * Original signature :
-     * <code>l_int32 recogAddSamples(L_RECOG*, PIXA*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4198</i>
-     */
-    int recogAddSamples(L_Recog recog, Pixa pixa, int classindex, int debug);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 recogAddSamples(L_RECOG*, PIXA*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4198</i>
+//     */
+//    int recogAddSamples(L_Recog recog, Pixa pixa, int classindex, int debug);
 
-    /**
-     * Original signature :
-     * <code>PIX* recogScaleCharacter(L_RECOG*, PIX*)</code><br>
-     * <i>native declaration : allheaders.h:4200</i>
-     */
-    Pix recogScaleCharacter(L_Recog recog, Pix pixs);
+//    /**
+//     * Original signature :
+//     * <code>PIX* recogScaleCharacter(L_RECOG*, PIX*)</code><br>
+//     * <i>native declaration : allheaders.h:4200</i>
+//     */
+//    Pix recogScaleCharacter(L_Recog recog, Pix pixs);
 
-    /**
-     * Original signature :
-     * <code>l_int32 recogAverageSamples(L_RECOG*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4202</i>
-     */
-    int recogAverageSamples(L_Recog recog, int debug);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 recogAverageSamples(L_RECOG*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4202</i>
+//     */
+//    int recogAverageSamples(L_Recog recog, int debug);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixaAccumulateSamples(PIXA*, PTA*, PIX**, l_float32*, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:4204</i>
-     */
-    int pixaAccumulateSamples(Pixa pixa, Pta pta, PointerByReference ppixd, FloatBuffer px, FloatBuffer py);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixaAccumulateSamples(PIXA*, PTA*, PIX**, l_float32*, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:4204</i>
+//     */
+//    int pixaAccumulateSamples(Pixa pixa, Pta pta, PointerByReference ppixd, FloatBuffer px, FloatBuffer py);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixaAccumulateSamples(PIXA*, PTA*, PIX**, l_float32*, l_float32*)</code><br>
-     * <i>native declaration : allheaders.h:4204</i>
-     */
-    int pixaAccumulateSamples(Pixa pixa, Pta pta, PointerByReference ppixd, FloatByReference px, FloatByReference py);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixaAccumulateSamples(PIXA*, PTA*, PIX**, l_float32*, l_float32*)</code><br>
+//     * <i>native declaration : allheaders.h:4204</i>
+//     */
+//    int pixaAccumulateSamples(Pixa pixa, Pta pta, PointerByReference ppixd, FloatByReference px, FloatByReference py);
 
-    /**
-     * Original signature :
-     * <code>l_int32 recogTrainingFinished(L_RECOG*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4206</i>
-     */
-    int recogTrainingFinished(L_Recog recog, int debug);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 recogTrainingFinished(L_RECOG*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4206</i>
+//     */
+//    int recogTrainingFinished(L_Recog recog, int debug);
 
-    /**
-     * Original signature :
-     * <code>l_int32 recogRemoveOutliers(L_RECOG*, l_float32, l_float32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4208</i>
-     */
-    int recogRemoveOutliers(L_Recog recog, float targetscore, float minfract, int debug);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 recogRemoveOutliers(L_RECOG*, l_float32, l_float32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4208</i>
+//     */
+//    int recogRemoveOutliers(L_Recog recog, float targetscore, float minfract, int debug);
 
-    /**
-     * Original signature :
-     * <code>l_int32 recogaTrainingDone(L_RECOGA*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:4210</i>
-     */
-    int recogaTrainingDone(L_Recoga recoga, IntBuffer pdone);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 recogaTrainingDone(L_RECOGA*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:4210</i>
+//     */
+//    int recogaTrainingDone(L_Recoga recoga, IntBuffer pdone);
 
-    /**
-     * Original signature :
-     * <code>l_int32 recogaFinishAveraging(L_RECOGA*)</code><br>
-     * <i>native declaration : allheaders.h:4212</i>
-     */
-    int recogaFinishAveraging(L_Recoga recoga);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 recogaFinishAveraging(L_RECOGA*)</code><br>
+//     * <i>native declaration : allheaders.h:4212</i>
+//     */
+//    int recogaFinishAveraging(L_Recoga recoga);
 
-    /**
-     * Original signature :
-     * <code>l_int32 recogTrainUnlabelled(L_RECOG*, L_RECOG*, PIX*, BOX*, l_int32, l_float32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4214</i>
-     */
-    int recogTrainUnlabelled(L_Recog recog, L_Recog recogboot, Pix pixs, Box box, int singlechar, float minscore, int debug);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 recogTrainUnlabelled(L_RECOG*, L_RECOG*, PIX*, BOX*, l_int32, l_float32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4214</i>
+//     */
+//    int recogTrainUnlabelled(L_Recog recog, L_Recog recogboot, Pix pixs, Box box, int singlechar, float minscore, int debug);
 
-    /**
-     * Original signature :
-     * <code>l_int32 recogPadTrainingSet(L_RECOG**, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4216</i>
-     */
-    int recogPadTrainingSet(PointerByReference precog, int debug);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 recogPadTrainingSet(L_RECOG**, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4216</i>
+//     */
+//    int recogPadTrainingSet(PointerByReference precog, int debug);
 
     /**
      * Original signature :
@@ -14780,180 +14780,180 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int recogShowContent(FILE fp, L_Recog recog, int display);
 
-    /**
-     * Original signature :
-     * <code>l_int32 recogDebugAverages(L_RECOG*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4228</i>
-     */
-    int recogDebugAverages(L_Recog recog, int debug);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 recogDebugAverages(L_RECOG*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4228</i>
+//     */
+//    int recogDebugAverages(L_Recog recog, int debug);
 
-    /**
-     * Original signature :
-     * <code>l_int32 recogShowAverageTemplates(L_RECOG*)</code><br>
-     * <i>native declaration : allheaders.h:4230</i>
-     */
-    int recogShowAverageTemplates(L_Recog recog);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 recogShowAverageTemplates(L_RECOG*)</code><br>
+//     * <i>native declaration : allheaders.h:4230</i>
+//     */
+//    int recogShowAverageTemplates(L_Recog recog);
 
-    /**
-     * Original signature :
-     * <code>l_int32 recogShowMatchesInRange(L_RECOG*, PIXA*, l_float32, l_float32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4232</i>
-     */
-    int recogShowMatchesInRange(L_Recog recog, Pixa pixa, float minscore, float maxscore, int display);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 recogShowMatchesInRange(L_RECOG*, PIXA*, l_float32, l_float32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4232</i>
+//     */
+//    int recogShowMatchesInRange(L_Recog recog, Pixa pixa, float minscore, float maxscore, int display);
 
-    /**
-     * Original signature :
-     * <code>PIX* recogShowMatch(L_RECOG*, PIX*, PIX*, BOX*, l_int32, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:4234</i>
-     */
-    Pix recogShowMatch(L_Recog recog, Pix pix1, Pix pix2, Box box, int index, float score);
+//    /**
+//     * Original signature :
+//     * <code>PIX* recogShowMatch(L_RECOG*, PIX*, PIX*, BOX*, l_int32, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:4234</i>
+//     */
+//    Pix recogShowMatch(L_Recog recog, Pix pix1, Pix pix2, Box box, int index, float score);
 
-    /**
-     * Original signature :
-     * <code>l_int32 recogResetBmf(L_RECOG*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4236</i>
-     */
-    int recogResetBmf(L_Recog recog, int size);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 recogResetBmf(L_RECOG*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4236</i>
+//     */
+//    int recogResetBmf(L_Recog recog, int size);
 
-    /**
-     * Original signature :
-     * <code>l_int32 regTestSetup(l_int32, char**, L_REGPARAMS**)</code><br>
-     * <i>native declaration : allheaders.h:4238</i>
-     */
-    int regTestSetup(int argc, PointerByReference argv, PointerByReference prp);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 regTestSetup(l_int32, char**, L_REGPARAMS**)</code><br>
+//     * <i>native declaration : allheaders.h:4238</i>
+//     */
+//    int regTestSetup(int argc, PointerByReference argv, PointerByReference prp);
 
-    /**
-     * Original signature :
-     * <code>l_int32 regTestCleanup(L_REGPARAMS*)</code><br>
-     * <i>native declaration : allheaders.h:4240</i>
-     */
-    int regTestCleanup(L_RegParams rp);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 regTestCleanup(L_REGPARAMS*)</code><br>
+//     * <i>native declaration : allheaders.h:4240</i>
+//     */
+//    int regTestCleanup(L_RegParams rp);
 
-    /**
-     * Original signature :
-     * <code>l_int32 regTestCompareValues(L_REGPARAMS*, l_float32, l_float32, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:4242</i>
-     */
-    int regTestCompareValues(L_RegParams rp, float val1, float val2, float delta);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 regTestCompareValues(L_REGPARAMS*, l_float32, l_float32, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:4242</i>
+//     */
+//    int regTestCompareValues(L_RegParams rp, float val1, float val2, float delta);
 
-    /**
-     * Original signature :
-     * <code>l_int32 regTestCompareStrings(L_REGPARAMS*, l_uint8*, size_t, l_uint8*, size_t)</code><br>
-     * <i>native declaration : allheaders.h:4244</i>
-     */
-    int regTestCompareStrings(L_RegParams rp, ByteBuffer string1, NativeSize bytes1, ByteBuffer string2, NativeSize bytes2);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 regTestCompareStrings(L_REGPARAMS*, l_uint8*, size_t, l_uint8*, size_t)</code><br>
+//     * <i>native declaration : allheaders.h:4244</i>
+//     */
+//    int regTestCompareStrings(L_RegParams rp, ByteBuffer string1, NativeSize bytes1, ByteBuffer string2, NativeSize bytes2);
 
-    /**
-     * Original signature :
-     * <code>l_int32 regTestComparePix(L_REGPARAMS*, PIX*, PIX*)</code><br>
-     * <i>native declaration : allheaders.h:4246</i>
-     */
-    int regTestComparePix(L_RegParams rp, Pix pix1, Pix pix2);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 regTestComparePix(L_REGPARAMS*, PIX*, PIX*)</code><br>
+//     * <i>native declaration : allheaders.h:4246</i>
+//     */
+//    int regTestComparePix(L_RegParams rp, Pix pix1, Pix pix2);
 
-    /**
-     * Original signature :
-     * <code>l_int32 regTestCompareSimilarPix(L_REGPARAMS*, PIX*, PIX*, l_int32, l_float32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4248</i>
-     */
-    int regTestCompareSimilarPix(L_RegParams rp, Pix pix1, Pix pix2, int mindiff, float maxfract, int printstats);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 regTestCompareSimilarPix(L_REGPARAMS*, PIX*, PIX*, l_int32, l_float32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4248</i>
+//     */
+//    int regTestCompareSimilarPix(L_RegParams rp, Pix pix1, Pix pix2, int mindiff, float maxfract, int printstats);
 
-    /**
-     * Original signature :
-     * <code>l_int32 regTestCheckFile(L_REGPARAMS*, const char*)</code><br>
-     * <i>native declaration : allheaders.h:4250</i>
-     */
-    int regTestCheckFile(L_RegParams rp, String localname);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 regTestCheckFile(L_REGPARAMS*, const char*)</code><br>
+//     * <i>native declaration : allheaders.h:4250</i>
+//     */
+//    int regTestCheckFile(L_RegParams rp, String localname);
 
-    /**
-     * Original signature :
-     * <code>l_int32 regTestCompareFiles(L_REGPARAMS*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4252</i>
-     */
-    int regTestCompareFiles(L_RegParams rp, int index1, int index2);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 regTestCompareFiles(L_REGPARAMS*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4252</i>
+//     */
+//    int regTestCompareFiles(L_RegParams rp, int index1, int index2);
 
-    /**
-     * Original signature :
-     * <code>l_int32 regTestWritePixAndCheck(L_REGPARAMS*, PIX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4254</i>
-     */
-    int regTestWritePixAndCheck(L_RegParams rp, Pix pix, int format);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 regTestWritePixAndCheck(L_REGPARAMS*, PIX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4254</i>
+//     */
+//    int regTestWritePixAndCheck(L_RegParams rp, Pix pix, int format);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixRasterop(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, PIX*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4256</i>
-     */
-    int pixRasterop(Pix pixd, int dx, int dy, int dw, int dh, int op, Pix pixs, int sx, int sy);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixRasterop(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, PIX*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4256</i>
+//     */
+//    int pixRasterop(Pix pixd, int dx, int dy, int dw, int dh, int op, Pix pixs, int sx, int sy);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixRasteropVip(PIX*, l_int32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4258</i>
-     */
-    int pixRasteropVip(Pix pixd, int bx, int bw, int vshift, int incolor);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixRasteropVip(PIX*, l_int32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4258</i>
+//     */
+//    int pixRasteropVip(Pix pixd, int bx, int bw, int vshift, int incolor);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixRasteropHip(PIX*, l_int32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4260</i>
-     */
-    int pixRasteropHip(Pix pixd, int by, int bh, int hshift, int incolor);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixRasteropHip(PIX*, l_int32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4260</i>
+//     */
+//    int pixRasteropHip(Pix pixd, int by, int bh, int hshift, int incolor);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixTranslate(PIX*, PIX*, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4262</i>
-     */
-    Pix pixTranslate(Pix pixd, Pix pixs, int hshift, int vshift, int incolor);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixTranslate(PIX*, PIX*, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4262</i>
+//     */
+//    Pix pixTranslate(Pix pixd, Pix pixs, int hshift, int vshift, int incolor);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixRasteropIP(PIX*, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4264</i>
-     */
-    int pixRasteropIP(Pix pixd, int hshift, int vshift, int incolor);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixRasteropIP(PIX*, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4264</i>
+//     */
+//    int pixRasteropIP(Pix pixd, int hshift, int vshift, int incolor);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixRasteropFullImage(PIX*, PIX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4266</i>
-     */
-    int pixRasteropFullImage(Pix pixd, Pix pixs, int op);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixRasteropFullImage(PIX*, PIX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4266</i>
+//     */
+//    int pixRasteropFullImage(Pix pixd, Pix pixs, int op);
 
-    /**
-     * Original signature :
-     * <code>void rasteropVipLow(l_uint32*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4268</i>
-     */
-    void rasteropVipLow(IntBuffer data, int pixw, int pixh, int depth, int wpl, int x, int w, int shift);
+//    /**
+//     * Original signature :
+//     * <code>void rasteropVipLow(l_uint32*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4268</i>
+//     */
+//    void rasteropVipLow(IntBuffer data, int pixw, int pixh, int depth, int wpl, int x, int w, int shift);
 
-    /**
-     * Original signature :
-     * <code>void rasteropHipLow(l_uint32*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4270</i>
-     */
-    void rasteropHipLow(IntBuffer data, int pixh, int depth, int wpl, int y, int h, int shift);
+//    /**
+//     * Original signature :
+//     * <code>void rasteropHipLow(l_uint32*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4270</i>
+//     */
+//    void rasteropHipLow(IntBuffer data, int pixh, int depth, int wpl, int y, int h, int shift);
 
-    /**
-     * Original signature :
-     * <code>void shiftDataHorizontalLow(l_uint32*, l_int32, l_uint32*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4272</i>
-     */
-    void shiftDataHorizontalLow(IntBuffer datad, int wpld, IntBuffer datas, int wpls, int shift);
+//    /**
+//     * Original signature :
+//     * <code>void shiftDataHorizontalLow(l_uint32*, l_int32, l_uint32*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4272</i>
+//     */
+//    void shiftDataHorizontalLow(IntBuffer datad, int wpld, IntBuffer datas, int wpls, int shift);
 
-    /**
-     * Original signature :
-     * <code>void rasteropUniLow(l_uint32*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4274</i>
-     */
-    void rasteropUniLow(IntBuffer datad, int dpixw, int dpixh, int depth, int dwpl, int dx, int dy, int dw, int dh, int op);
+//    /**
+//     * Original signature :
+//     * <code>void rasteropUniLow(l_uint32*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4274</i>
+//     */
+//    void rasteropUniLow(IntBuffer datad, int dpixw, int dpixh, int depth, int dwpl, int dx, int dy, int dw, int dh, int op);
 
-    /**
-     * Original signature :
-     * <code>void rasteropLow(l_uint32*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4276</i>
-     */
-    void rasteropLow(IntBuffer datad, int dpixw, int dpixh, int depth, int dwpl, int dx, int dy, int dw, int dh, int op, IntBuffer datas, int spixw, int spixh, int swpl, int sx, int sy);
+//    /**
+//     * Original signature :
+//     * <code>void rasteropLow(l_uint32*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4276</i>
+//     */
+//    void rasteropLow(IntBuffer datad, int dpixw, int dpixh, int depth, int dwpl, int dx, int dy, int dw, int dh, int op, IntBuffer datas, int spixw, int spixh, int swpl, int sx, int sy);
 
     /**
      * Original signature :
@@ -15039,40 +15039,40 @@ public interface Leptonica extends Library, ILeptonica {
      */
     Pix pixRotateAMColorFast(Pix pixs, float angle, int colorval);
 
-    /**
-     * Original signature :
-     * <code>void rotateAMColorLow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_float32, l_uint32)</code><br>
-     * <i>native declaration : allheaders.h:4302</i>
-     */
-    void rotateAMColorLow(IntBuffer datad, int w, int h, int wpld, IntBuffer datas, int wpls, float angle, int colorval);
+//    /**
+//     * Original signature :
+//     * <code>void rotateAMColorLow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_float32, l_uint32)</code><br>
+//     * <i>native declaration : allheaders.h:4302</i>
+//     */
+//    void rotateAMColorLow(IntBuffer datad, int w, int h, int wpld, IntBuffer datas, int wpls, float angle, int colorval);
 
-    /**
-     * Original signature :
-     * <code>void rotateAMGrayLow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_float32, l_uint8)</code><br>
-     * <i>native declaration : allheaders.h:4304</i>
-     */
-    void rotateAMGrayLow(IntBuffer datad, int w, int h, int wpld, IntBuffer datas, int wpls, float angle, byte grayval);
+//    /**
+//     * Original signature :
+//     * <code>void rotateAMGrayLow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_float32, l_uint8)</code><br>
+//     * <i>native declaration : allheaders.h:4304</i>
+//     */
+//    void rotateAMGrayLow(IntBuffer datad, int w, int h, int wpld, IntBuffer datas, int wpls, float angle, byte grayval);
 
-    /**
-     * Original signature :
-     * <code>void rotateAMColorCornerLow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_float32, l_uint32)</code><br>
-     * <i>native declaration : allheaders.h:4306</i>
-     */
-    void rotateAMColorCornerLow(IntBuffer datad, int w, int h, int wpld, IntBuffer datas, int wpls, float angle, int colorval);
+//    /**
+//     * Original signature :
+//     * <code>void rotateAMColorCornerLow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_float32, l_uint32)</code><br>
+//     * <i>native declaration : allheaders.h:4306</i>
+//     */
+//    void rotateAMColorCornerLow(IntBuffer datad, int w, int h, int wpld, IntBuffer datas, int wpls, float angle, int colorval);
 
-    /**
-     * Original signature :
-     * <code>void rotateAMGrayCornerLow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_float32, l_uint8)</code><br>
-     * <i>native declaration : allheaders.h:4308</i>
-     */
-    void rotateAMGrayCornerLow(IntBuffer datad, int w, int h, int wpld, IntBuffer datas, int wpls, float angle, byte grayval);
+//    /**
+//     * Original signature :
+//     * <code>void rotateAMGrayCornerLow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_float32, l_uint8)</code><br>
+//     * <i>native declaration : allheaders.h:4308</i>
+//     */
+//    void rotateAMGrayCornerLow(IntBuffer datad, int w, int h, int wpld, IntBuffer datas, int wpls, float angle, byte grayval);
 
-    /**
-     * Original signature :
-     * <code>void rotateAMColorFastLow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_float32, l_uint32)</code><br>
-     * <i>native declaration : allheaders.h:4310</i>
-     */
-    void rotateAMColorFastLow(IntBuffer datad, int w, int h, int wpld, IntBuffer datas, int wpls, float angle, int colorval);
+//    /**
+//     * Original signature :
+//     * <code>void rotateAMColorFastLow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_float32, l_uint32)</code><br>
+//     * <i>native declaration : allheaders.h:4310</i>
+//     */
+//    void rotateAMColorFastLow(IntBuffer datad, int w, int h, int wpld, IntBuffer datas, int wpls, float angle, int colorval);
 
     /**
      * Original signature : <code>PIX* pixRotateOrth(PIX*, l_int32)</code><br>
@@ -15146,73 +15146,73 @@ public interface Leptonica extends Library, ILeptonica {
      */
     int pixRotateShearCenterIP(Pix pixs, float angle, int incolor);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixStrokeWidthTransform(PIX*, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4334</i>
-     */
-    Pix pixStrokeWidthTransform(Pix pixs, int color, int depth, int nangles);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixStrokeWidthTransform(PIX*, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4334</i>
+//     */
+//    Pix pixStrokeWidthTransform(Pix pixs, int color, int depth, int nangles);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixRunlengthTransform(PIX*, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4336</i>
-     */
-    Pix pixRunlengthTransform(Pix pixs, int color, int direction, int depth);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixRunlengthTransform(PIX*, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4336</i>
+//     */
+//    Pix pixRunlengthTransform(Pix pixs, int color, int direction, int depth);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixFindHorizontalRuns(PIX*, l_int32, l_int32*, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:4338</i>
-     */
-    int pixFindHorizontalRuns(Pix pix, int y, IntBuffer xstart, IntBuffer xend, IntBuffer pn);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixFindHorizontalRuns(PIX*, l_int32, l_int32*, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:4338</i>
+//     */
+//    int pixFindHorizontalRuns(Pix pix, int y, IntBuffer xstart, IntBuffer xend, IntBuffer pn);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixFindVerticalRuns(PIX*, l_int32, l_int32*, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:4340</i>
-     */
-    int pixFindVerticalRuns(Pix pix, int x, IntBuffer ystart, IntBuffer yend, IntBuffer pn);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixFindVerticalRuns(PIX*, l_int32, l_int32*, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:4340</i>
+//     */
+//    int pixFindVerticalRuns(Pix pix, int x, IntBuffer ystart, IntBuffer yend, IntBuffer pn);
 
-    /**
-     * Original signature :
-     * <code>NUMA* pixFindMaxRuns(PIX*, l_int32, NUMA**)</code><br>
-     * <i>native declaration : allheaders.h:4342</i>
-     */
-    Numa pixFindMaxRuns(Pix pix, int direction, PointerByReference pnastart);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* pixFindMaxRuns(PIX*, l_int32, NUMA**)</code><br>
+//     * <i>native declaration : allheaders.h:4342</i>
+//     */
+//    Numa pixFindMaxRuns(Pix pix, int direction, PointerByReference pnastart);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixFindMaxHorizontalRunOnLine(PIX*, l_int32, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:4344</i>
-     */
-    int pixFindMaxHorizontalRunOnLine(Pix pix, int y, IntBuffer pxstart, IntBuffer psize);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixFindMaxHorizontalRunOnLine(PIX*, l_int32, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:4344</i>
+//     */
+//    int pixFindMaxHorizontalRunOnLine(Pix pix, int y, IntBuffer pxstart, IntBuffer psize);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixFindMaxVerticalRunOnLine(PIX*, l_int32, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:4346</i>
-     */
-    int pixFindMaxVerticalRunOnLine(Pix pix, int x, IntBuffer pystart, IntBuffer psize);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixFindMaxVerticalRunOnLine(PIX*, l_int32, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:4346</i>
+//     */
+//    int pixFindMaxVerticalRunOnLine(Pix pix, int x, IntBuffer pystart, IntBuffer psize);
 
-    /**
-     * Original signature :
-     * <code>l_int32 runlengthMembershipOnLine(l_int32*, l_int32, l_int32, l_int32*, l_int32*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4348</i>
-     */
-    int runlengthMembershipOnLine(IntBuffer buffer, int size, int depth, IntBuffer start, IntBuffer end, int n);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 runlengthMembershipOnLine(l_int32*, l_int32, l_int32, l_int32*, l_int32*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4348</i>
+//     */
+//    int runlengthMembershipOnLine(IntBuffer buffer, int size, int depth, IntBuffer start, IntBuffer end, int n);
 
-    /**
-     * Original signature : <code>l_int32* makeMSBitLocTab(l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4350</i>
-     */
-    IntByReference makeMSBitLocTab(int bitval);
+//    /**
+//     * Original signature : <code>l_int32* makeMSBitLocTab(l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4350</i>
+//     */
+//    IntByReference makeMSBitLocTab(int bitval);
 
-    /**
-     * Original signature : <code>SARRAY* sarrayCreate(l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4352</i>
-     */
-    Sarray sarrayCreate(int n);
+//    /**
+//     * Original signature : <code>SARRAY* sarrayCreate(l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4352</i>
+//     */
+//    Sarray sarrayCreate(int n);
 
     /**
      * Original signature :
@@ -15221,12 +15221,12 @@ public interface Leptonica extends Library, ILeptonica {
      */
     Sarray sarrayCreateInitialized(int n, ByteBuffer initstr);
 
-    /**
-     * Original signature :
-     * <code>SARRAY* sarrayCreateWordsFromString(const char*)</code><br>
-     * <i>native declaration : allheaders.h:4356</i>
-     */
-    Sarray sarrayCreateWordsFromString(String string);
+//    /**
+//     * Original signature :
+//     * <code>SARRAY* sarrayCreateWordsFromString(const char*)</code><br>
+//     * <i>native declaration : allheaders.h:4356</i>
+//     */
+//    Sarray sarrayCreateWordsFromString(String string);
 
     /**
      * Original signature :
@@ -15235,23 +15235,23 @@ public interface Leptonica extends Library, ILeptonica {
      */
     Sarray sarrayCreateLinesFromString(String string, int blankflag);
 
-    /**
-     * Original signature : <code>void sarrayDestroy(SARRAY**)</code><br>
-     * <i>native declaration : allheaders.h:4360</i>
-     */
-    void sarrayDestroy(PointerByReference psa);
+//    /**
+//     * Original signature : <code>void sarrayDestroy(SARRAY**)</code><br>
+//     * <i>native declaration : allheaders.h:4360</i>
+//     */
+//    void sarrayDestroy(PointerByReference psa);
 
-    /**
-     * Original signature : <code>SARRAY* sarrayCopy(SARRAY*)</code><br>
-     * <i>native declaration : allheaders.h:4362</i>
-     */
-    Sarray sarrayCopy(Sarray sa);
+//    /**
+//     * Original signature : <code>SARRAY* sarrayCopy(SARRAY*)</code><br>
+//     * <i>native declaration : allheaders.h:4362</i>
+//     */
+//    Sarray sarrayCopy(Sarray sa);
 
-    /**
-     * Original signature : <code>SARRAY* sarrayClone(SARRAY*)</code><br>
-     * <i>native declaration : allheaders.h:4364</i>
-     */
-    Sarray sarrayClone(Sarray sa);
+//    /**
+//     * Original signature : <code>SARRAY* sarrayClone(SARRAY*)</code><br>
+//     * <i>native declaration : allheaders.h:4364</i>
+//     */
+//    Sarray sarrayClone(Sarray sa);
 
     /**
      * Original signature :
@@ -15260,12 +15260,12 @@ public interface Leptonica extends Library, ILeptonica {
      */
     int sarrayAddString(Sarray sa, ByteBuffer string, int copyflag);
 
-    /**
-     * Original signature :
-     * <code>char* sarrayRemoveString(SARRAY*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4368</i>
-     */
-    Pointer sarrayRemoveString(Sarray sa, int index);
+//    /**
+//     * Original signature :
+//     * <code>char* sarrayRemoveString(SARRAY*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4368</i>
+//     */
+//    Pointer sarrayRemoveString(Sarray sa, int index);
 
     /**
      * Original signature :
@@ -15274,58 +15274,58 @@ public interface Leptonica extends Library, ILeptonica {
      */
     int sarrayReplaceString(Sarray sa, int index, ByteBuffer newstr, int copyflag);
 
-    /**
-     * Original signature : <code>l_int32 sarrayClear(SARRAY*)</code><br>
-     * <i>native declaration : allheaders.h:4372</i>
-     */
-    int sarrayClear(Sarray sa);
+//    /**
+//     * Original signature : <code>l_int32 sarrayClear(SARRAY*)</code><br>
+//     * <i>native declaration : allheaders.h:4372</i>
+//     */
+//    int sarrayClear(Sarray sa);
 
-    /**
-     * Original signature : <code>l_int32 sarrayGetCount(SARRAY*)</code><br>
-     * <i>native declaration : allheaders.h:4374</i>
-     */
-    int sarrayGetCount(Sarray sa);
+//    /**
+//     * Original signature : <code>l_int32 sarrayGetCount(SARRAY*)</code><br>
+//     * <i>native declaration : allheaders.h:4374</i>
+//     */
+//    int sarrayGetCount(Sarray sa);
 
-    /**
-     * Original signature :
-     * <code>char** sarrayGetArray(SARRAY*, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:4376</i>
-     */
-    PointerByReference sarrayGetArray(Sarray sa, IntBuffer pnalloc, IntBuffer pn);
+//    /**
+//     * Original signature :
+//     * <code>char** sarrayGetArray(SARRAY*, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:4376</i>
+//     */
+//    PointerByReference sarrayGetArray(Sarray sa, IntBuffer pnalloc, IntBuffer pn);
 
-    /**
-     * Original signature :
-     * <code>char* sarrayGetString(SARRAY*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4378</i>
-     */
-    Pointer sarrayGetString(Sarray sa, int index, int copyflag);
+//    /**
+//     * Original signature :
+//     * <code>char* sarrayGetString(SARRAY*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4378</i>
+//     */
+//    Pointer sarrayGetString(Sarray sa, int index, int copyflag);
 
-    /**
-     * Original signature : <code>l_int32 sarrayGetRefcount(SARRAY*)</code><br>
-     * <i>native declaration : allheaders.h:4380</i>
-     */
-    int sarrayGetRefcount(Sarray sa);
+//    /**
+//     * Original signature : <code>l_int32 sarrayGetRefcount(SARRAY*)</code><br>
+//     * <i>native declaration : allheaders.h:4380</i>
+//     */
+//    int sarrayGetRefcount(Sarray sa);
 
-    /**
-     * Original signature :
-     * <code>l_int32 sarrayChangeRefcount(SARRAY*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4382</i>
-     */
-    int sarrayChangeRefcount(Sarray sa, int delta);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 sarrayChangeRefcount(SARRAY*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4382</i>
+//     */
+//    int sarrayChangeRefcount(Sarray sa, int delta);
 
-    /**
-     * Original signature :
-     * <code>char* sarrayToString(SARRAY*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4384</i>
-     */
-    Pointer sarrayToString(Sarray sa, int addnlflag);
+//    /**
+//     * Original signature :
+//     * <code>char* sarrayToString(SARRAY*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4384</i>
+//     */
+//    Pointer sarrayToString(Sarray sa, int addnlflag);
 
-    /**
-     * Original signature :
-     * <code>char* sarrayToStringRange(SARRAY*, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4386</i>
-     */
-    Pointer sarrayToStringRange(Sarray sa, int first, int nstrings, int addnlflag);
+//    /**
+//     * Original signature :
+//     * <code>char* sarrayToStringRange(SARRAY*, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4386</i>
+//     */
+//    Pointer sarrayToStringRange(Sarray sa, int first, int nstrings, int addnlflag);
 
     /**
      * Original signature :
@@ -15334,12 +15334,12 @@ public interface Leptonica extends Library, ILeptonica {
      */
     int sarrayJoin(Sarray sa1, Sarray sa2);
 
-    /**
-     * Original signature :
-     * <code>l_int32 sarrayAppendRange(SARRAY*, SARRAY*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4390</i>
-     */
-    int sarrayAppendRange(Sarray sa1, Sarray sa2, int start, int end);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 sarrayAppendRange(SARRAY*, SARRAY*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4390</i>
+//     */
+//    int sarrayAppendRange(Sarray sa1, Sarray sa2, int start, int end);
 
     /**
      * Original signature :
@@ -15348,61 +15348,61 @@ public interface Leptonica extends Library, ILeptonica {
      */
     int sarrayPadToSameSize(Sarray sa1, Sarray sa2, ByteBuffer padstring);
 
-    /**
-     * Original signature :
-     * <code>SARRAY* sarrayConvertWordsToLines(SARRAY*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4394</i>
-     */
-    Sarray sarrayConvertWordsToLines(Sarray sa, int linesize);
+//    /**
+//     * Original signature :
+//     * <code>SARRAY* sarrayConvertWordsToLines(SARRAY*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4394</i>
+//     */
+//    Sarray sarrayConvertWordsToLines(Sarray sa, int linesize);
 
-    /**
-     * Original signature :
-     * <code>l_int32 sarraySplitString(SARRAY*, const char*, const char*)</code><br>
-     * <i>native declaration : allheaders.h:4396</i>
-     */
-    int sarraySplitString(Sarray sa, String str, String separators);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 sarraySplitString(SARRAY*, const char*, const char*)</code><br>
+//     * <i>native declaration : allheaders.h:4396</i>
+//     */
+//    int sarraySplitString(Sarray sa, String str, String separators);
 
-    /**
-     * Original signature :
-     * <code>SARRAY* sarraySelectBySubstring(SARRAY*, const char*)</code><br>
-     * <i>native declaration : allheaders.h:4398</i>
-     */
-    Sarray sarraySelectBySubstring(Sarray sain, String substr);
+//    /**
+//     * Original signature :
+//     * <code>SARRAY* sarraySelectBySubstring(SARRAY*, const char*)</code><br>
+//     * <i>native declaration : allheaders.h:4398</i>
+//     */
+//    Sarray sarraySelectBySubstring(Sarray sain, String substr);
 
-    /**
-     * Original signature :
-     * <code>SARRAY* sarraySelectByRange(SARRAY*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4400</i>
-     */
-    Sarray sarraySelectByRange(Sarray sain, int first, int last);
+//    /**
+//     * Original signature :
+//     * <code>SARRAY* sarraySelectByRange(SARRAY*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4400</i>
+//     */
+//    Sarray sarraySelectByRange(Sarray sain, int first, int last);
 
-    /**
-     * Original signature :
-     * <code>l_int32 sarrayParseRange(SARRAY*, l_int32, l_int32*, l_int32*, l_int32*, const char*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4402</i>
-     */
-    int sarrayParseRange(Sarray sa, int start, IntBuffer pactualstart, IntBuffer pend, IntBuffer pnewstart, String substr, int loc);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 sarrayParseRange(SARRAY*, l_int32, l_int32*, l_int32*, l_int32*, const char*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4402</i>
+//     */
+//    int sarrayParseRange(Sarray sa, int start, IntBuffer pactualstart, IntBuffer pend, IntBuffer pnewstart, String substr, int loc);
 
-    /**
-     * Original signature :
-     * <code>SARRAY* sarraySort(SARRAY*, SARRAY*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4404</i>
-     */
-    Sarray sarraySort(Sarray saout, Sarray sain, int sortorder);
+//    /**
+//     * Original signature :
+//     * <code>SARRAY* sarraySort(SARRAY*, SARRAY*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4404</i>
+//     */
+//    Sarray sarraySort(Sarray saout, Sarray sain, int sortorder);
 
-    /**
-     * Original signature :
-     * <code>SARRAY* sarraySortByIndex(SARRAY*, NUMA*)</code><br>
-     * <i>native declaration : allheaders.h:4406</i>
-     */
-    Sarray sarraySortByIndex(Sarray sain, Numa naindex);
+//    /**
+//     * Original signature :
+//     * <code>SARRAY* sarraySortByIndex(SARRAY*, NUMA*)</code><br>
+//     * <i>native declaration : allheaders.h:4406</i>
+//     */
+//    Sarray sarraySortByIndex(Sarray sain, Numa naindex);
 
-    /**
-     * Original signature :
-     * <code>l_int32 stringCompareLexical(const char*, const char*)</code><br>
-     * <i>native declaration : allheaders.h:4408</i>
-     */
-    int stringCompareLexical(String str1, String str2);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 stringCompareLexical(const char*, const char*)</code><br>
+//     * <i>native declaration : allheaders.h:4408</i>
+//     */
+//    int stringCompareLexical(String str1, String str2);
 
     /**
      * Original signature :
@@ -15460,11 +15460,11 @@ public interface Leptonica extends Library, ILeptonica {
      */
     L_DnaHash l_dnaHashCreateFromSarray(Sarray sa);
 
-    /**
-     * Original signature : <code>SARRAY* sarrayRead(const char*)</code><br>
-     * <i>native declaration : allheaders.h:4426</i>
-     */
-    Sarray sarrayRead(String filename);
+//    /**
+//     * Original signature : <code>SARRAY* sarrayRead(const char*)</code><br>
+//     * <i>native declaration : allheaders.h:4426</i>
+//     */
+//    Sarray sarrayRead(String filename);
 
 //    /**
 //     * Original signature : <code>SARRAY* sarrayReadStream(FILE*)</code><br>
@@ -15472,12 +15472,12 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    Sarray sarrayReadStream(FILE fp);
 
-    /**
-     * Original signature :
-     * <code>l_int32 sarrayWrite(const char*, SARRAY*)</code><br>
-     * <i>native declaration : allheaders.h:4430</i>
-     */
-    int sarrayWrite(String filename, Sarray sa);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 sarrayWrite(const char*, SARRAY*)</code><br>
+//     * <i>native declaration : allheaders.h:4430</i>
+//     */
+//    int sarrayWrite(String filename, Sarray sa);
 
 //    /**
 //     * Original signature :
@@ -15486,40 +15486,40 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int sarrayWriteStream(FILE fp, Sarray sa);
 
-    /**
-     * Original signature :
-     * <code>l_int32 sarrayAppend(const char*, SARRAY*)</code><br>
-     * <i>native declaration : allheaders.h:4434</i>
-     */
-    int sarrayAppend(String filename, Sarray sa);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 sarrayAppend(const char*, SARRAY*)</code><br>
+//     * <i>native declaration : allheaders.h:4434</i>
+//     */
+//    int sarrayAppend(String filename, Sarray sa);
 
-    /**
-     * Original signature :
-     * <code>SARRAY* getNumberedPathnamesInDirectory(const char*, const char*, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4436</i>
-     */
-    Sarray getNumberedPathnamesInDirectory(String dirname, String substr, int numpre, int numpost, int maxnum);
+//    /**
+//     * Original signature :
+//     * <code>SARRAY* getNumberedPathnamesInDirectory(const char*, const char*, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4436</i>
+//     */
+//    Sarray getNumberedPathnamesInDirectory(String dirname, String substr, int numpre, int numpost, int maxnum);
 
-    /**
-     * Original signature :
-     * <code>SARRAY* getSortedPathnamesInDirectory(const char*, const char*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4438</i>
-     */
-    Sarray getSortedPathnamesInDirectory(String dirname, String substr, int first, int nfiles);
+//    /**
+//     * Original signature :
+//     * <code>SARRAY* getSortedPathnamesInDirectory(const char*, const char*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4438</i>
+//     */
+//    Sarray getSortedPathnamesInDirectory(String dirname, String substr, int first, int nfiles);
 
-    /**
-     * Original signature :
-     * <code>SARRAY* convertSortedToNumberedPathnames(SARRAY*, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4440</i>
-     */
-    Sarray convertSortedToNumberedPathnames(Sarray sa, int numpre, int numpost, int maxnum);
+//    /**
+//     * Original signature :
+//     * <code>SARRAY* convertSortedToNumberedPathnames(SARRAY*, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4440</i>
+//     */
+//    Sarray convertSortedToNumberedPathnames(Sarray sa, int numpre, int numpost, int maxnum);
 
-    /**
-     * Original signature :
-     * <code>SARRAY* getFilenamesInDirectory(const char*)</code><br>
-     * <i>native declaration : allheaders.h:4442</i>
-     */
-    Sarray getFilenamesInDirectory(String dirname);
+//    /**
+//     * Original signature :
+//     * <code>SARRAY* getFilenamesInDirectory(const char*)</code><br>
+//     * <i>native declaration : allheaders.h:4442</i>
+//     */
+//    Sarray getFilenamesInDirectory(String dirname);
 
     /**
      * Original signature :
@@ -15802,110 +15802,110 @@ public interface Leptonica extends Library, ILeptonica {
      */
     Pix pixScaleWithAlpha(Pix pixs, float scalex, float scaley, Pix pixg, float fract);
 
-    /**
-     * Original signature :
-     * <code>void scaleColorLILow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4528</i>
-     */
-    void scaleColorLILow(IntBuffer datad, int wd, int hd, int wpld, IntBuffer datas, int ws, int hs, int wpls);
+//    /**
+//     * Original signature :
+//     * <code>void scaleColorLILow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4528</i>
+//     */
+//    void scaleColorLILow(IntBuffer datad, int wd, int hd, int wpld, IntBuffer datas, int ws, int hs, int wpls);
 
-    /**
-     * Original signature :
-     * <code>void scaleGrayLILow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4530</i>
-     */
-    void scaleGrayLILow(IntBuffer datad, int wd, int hd, int wpld, IntBuffer datas, int ws, int hs, int wpls);
+//    /**
+//     * Original signature :
+//     * <code>void scaleGrayLILow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4530</i>
+//     */
+//    void scaleGrayLILow(IntBuffer datad, int wd, int hd, int wpld, IntBuffer datas, int ws, int hs, int wpls);
 
-    /**
-     * Original signature :
-     * <code>void scaleColor2xLILow(l_uint32*, l_int32, l_uint32*, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4532</i>
-     */
-    void scaleColor2xLILow(IntBuffer datad, int wpld, IntBuffer datas, int ws, int hs, int wpls);
+//    /**
+//     * Original signature :
+//     * <code>void scaleColor2xLILow(l_uint32*, l_int32, l_uint32*, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4532</i>
+//     */
+//    void scaleColor2xLILow(IntBuffer datad, int wpld, IntBuffer datas, int ws, int hs, int wpls);
 
-    /**
-     * Original signature :
-     * <code>void scaleColor2xLILineLow(l_uint32*, l_int32, l_uint32*, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4534</i>
-     */
-    void scaleColor2xLILineLow(IntBuffer lined, int wpld, IntBuffer lines, int ws, int wpls, int lastlineflag);
+//    /**
+//     * Original signature :
+//     * <code>void scaleColor2xLILineLow(l_uint32*, l_int32, l_uint32*, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4534</i>
+//     */
+//    void scaleColor2xLILineLow(IntBuffer lined, int wpld, IntBuffer lines, int ws, int wpls, int lastlineflag);
 
-    /**
-     * Original signature :
-     * <code>void scaleGray2xLILow(l_uint32*, l_int32, l_uint32*, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4536</i>
-     */
-    void scaleGray2xLILow(IntBuffer datad, int wpld, IntBuffer datas, int ws, int hs, int wpls);
+//    /**
+//     * Original signature :
+//     * <code>void scaleGray2xLILow(l_uint32*, l_int32, l_uint32*, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4536</i>
+//     */
+//    void scaleGray2xLILow(IntBuffer datad, int wpld, IntBuffer datas, int ws, int hs, int wpls);
 
-    /**
-     * Original signature :
-     * <code>void scaleGray2xLILineLow(l_uint32*, l_int32, l_uint32*, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4538</i>
-     */
-    void scaleGray2xLILineLow(IntBuffer lined, int wpld, IntBuffer lines, int ws, int wpls, int lastlineflag);
+//    /**
+//     * Original signature :
+//     * <code>void scaleGray2xLILineLow(l_uint32*, l_int32, l_uint32*, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4538</i>
+//     */
+//    void scaleGray2xLILineLow(IntBuffer lined, int wpld, IntBuffer lines, int ws, int wpls, int lastlineflag);
 
-    /**
-     * Original signature :
-     * <code>void scaleGray4xLILow(l_uint32*, l_int32, l_uint32*, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4540</i>
-     */
-    void scaleGray4xLILow(IntBuffer datad, int wpld, IntBuffer datas, int ws, int hs, int wpls);
+//    /**
+//     * Original signature :
+//     * <code>void scaleGray4xLILow(l_uint32*, l_int32, l_uint32*, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4540</i>
+//     */
+//    void scaleGray4xLILow(IntBuffer datad, int wpld, IntBuffer datas, int ws, int hs, int wpls);
 
-    /**
-     * Original signature :
-     * <code>void scaleGray4xLILineLow(l_uint32*, l_int32, l_uint32*, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4542</i>
-     */
-    void scaleGray4xLILineLow(IntBuffer lined, int wpld, IntBuffer lines, int ws, int wpls, int lastlineflag);
+//    /**
+//     * Original signature :
+//     * <code>void scaleGray4xLILineLow(l_uint32*, l_int32, l_uint32*, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4542</i>
+//     */
+//    void scaleGray4xLILineLow(IntBuffer lined, int wpld, IntBuffer lines, int ws, int wpls, int lastlineflag);
 
-    /**
-     * Original signature :
-     * <code>l_int32 scaleBySamplingLow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4544</i>
-     */
-    int scaleBySamplingLow(IntBuffer datad, int wd, int hd, int wpld, IntBuffer datas, int ws, int hs, int d, int wpls);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 scaleBySamplingLow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4544</i>
+//     */
+//    int scaleBySamplingLow(IntBuffer datad, int wd, int hd, int wpld, IntBuffer datas, int ws, int hs, int d, int wpls);
 
-    /**
-     * Original signature :
-     * <code>l_int32 scaleSmoothLow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4546</i>
-     */
-    int scaleSmoothLow(IntBuffer datad, int wd, int hd, int wpld, IntBuffer datas, int ws, int hs, int d, int wpls, int size);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 scaleSmoothLow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4546</i>
+//     */
+//    int scaleSmoothLow(IntBuffer datad, int wd, int hd, int wpld, IntBuffer datas, int ws, int hs, int d, int wpls, int size);
 
-    /**
-     * Original signature :
-     * <code>void scaleRGBToGray2Low(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_float32, l_float32, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:4548</i>
-     */
-    void scaleRGBToGray2Low(IntBuffer datad, int wd, int hd, int wpld, IntBuffer datas, int wpls, float rwt, float gwt, float bwt);
+//    /**
+//     * Original signature :
+//     * <code>void scaleRGBToGray2Low(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_float32, l_float32, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:4548</i>
+//     */
+//    void scaleRGBToGray2Low(IntBuffer datad, int wd, int hd, int wpld, IntBuffer datas, int wpls, float rwt, float gwt, float bwt);
 
-    /**
-     * Original signature :
-     * <code>void scaleColorAreaMapLow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4550</i>
-     */
-    void scaleColorAreaMapLow(IntBuffer datad, int wd, int hd, int wpld, IntBuffer datas, int ws, int hs, int wpls);
+//    /**
+//     * Original signature :
+//     * <code>void scaleColorAreaMapLow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4550</i>
+//     */
+//    void scaleColorAreaMapLow(IntBuffer datad, int wd, int hd, int wpld, IntBuffer datas, int ws, int hs, int wpls);
 
-    /**
-     * Original signature :
-     * <code>void scaleGrayAreaMapLow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4552</i>
-     */
-    void scaleGrayAreaMapLow(IntBuffer datad, int wd, int hd, int wpld, IntBuffer datas, int ws, int hs, int wpls);
+//    /**
+//     * Original signature :
+//     * <code>void scaleGrayAreaMapLow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4552</i>
+//     */
+//    void scaleGrayAreaMapLow(IntBuffer datad, int wd, int hd, int wpld, IntBuffer datas, int ws, int hs, int wpls);
 
-    /**
-     * Original signature :
-     * <code>void scaleAreaMapLow2(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4554</i>
-     */
-    void scaleAreaMapLow2(IntBuffer datad, int wd, int hd, int wpld, IntBuffer datas, int d, int wpls);
+//    /**
+//     * Original signature :
+//     * <code>void scaleAreaMapLow2(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4554</i>
+//     */
+//    void scaleAreaMapLow2(IntBuffer datad, int wd, int hd, int wpld, IntBuffer datas, int d, int wpls);
 
-    /**
-     * Original signature :
-     * <code>l_int32 scaleBinaryLow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4556</i>
-     */
-    int scaleBinaryLow(IntBuffer datad, int wd, int hd, int wpld, IntBuffer datas, int ws, int hs, int wpls);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 scaleBinaryLow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4556</i>
+//     */
+//    int scaleBinaryLow(IntBuffer datad, int wd, int hd, int wpld, IntBuffer datas, int ws, int hs, int wpls);
 
     /**
      * Original signature :
@@ -15914,17 +15914,17 @@ public interface Leptonica extends Library, ILeptonica {
      */
     void scaleToGray2Low(IntBuffer datad, int wd, int hd, int wpld, IntBuffer datas, int wpls, IntBuffer sumtab, ByteBuffer valtab);
 
-    /**
-     * Original signature : <code>l_uint32* makeSumTabSG2()</code><br>
-     * <i>native declaration : allheaders.h:4560</i>
-     */
-    IntByReference makeSumTabSG2();
+//    /**
+//     * Original signature : <code>l_uint32* makeSumTabSG2()</code><br>
+//     * <i>native declaration : allheaders.h:4560</i>
+//     */
+//    IntByReference makeSumTabSG2();
 
-    /**
-     * Original signature : <code>l_uint8* makeValTabSG2()</code><br>
-     * <i>native declaration : allheaders.h:4562</i>
-     */
-    Pointer makeValTabSG2();
+//    /**
+//     * Original signature : <code>l_uint8* makeValTabSG2()</code><br>
+//     * <i>native declaration : allheaders.h:4562</i>
+//     */
+//    Pointer makeValTabSG2();
 
     /**
      * Original signature :
@@ -15933,17 +15933,17 @@ public interface Leptonica extends Library, ILeptonica {
      */
     void scaleToGray3Low(IntBuffer datad, int wd, int hd, int wpld, IntBuffer datas, int wpls, IntBuffer sumtab, ByteBuffer valtab);
 
-    /**
-     * Original signature : <code>l_uint32* makeSumTabSG3()</code><br>
-     * <i>native declaration : allheaders.h:4566</i>
-     */
-    IntByReference makeSumTabSG3();
+//    /**
+//     * Original signature : <code>l_uint32* makeSumTabSG3()</code><br>
+//     * <i>native declaration : allheaders.h:4566</i>
+//     */
+//    IntByReference makeSumTabSG3();
 
-    /**
-     * Original signature : <code>l_uint8* makeValTabSG3()</code><br>
-     * <i>native declaration : allheaders.h:4568</i>
-     */
-    Pointer makeValTabSG3();
+//    /**
+//     * Original signature : <code>l_uint8* makeValTabSG3()</code><br>
+//     * <i>native declaration : allheaders.h:4568</i>
+//     */
+//    Pointer makeValTabSG3();
 
     /**
      * Original signature :
@@ -15952,17 +15952,17 @@ public interface Leptonica extends Library, ILeptonica {
      */
     void scaleToGray4Low(IntBuffer datad, int wd, int hd, int wpld, IntBuffer datas, int wpls, IntBuffer sumtab, ByteBuffer valtab);
 
-    /**
-     * Original signature : <code>l_uint32* makeSumTabSG4()</code><br>
-     * <i>native declaration : allheaders.h:4572</i>
-     */
-    IntByReference makeSumTabSG4();
+//    /**
+//     * Original signature : <code>l_uint32* makeSumTabSG4()</code><br>
+//     * <i>native declaration : allheaders.h:4572</i>
+//     */
+//    IntByReference makeSumTabSG4();
 
-    /**
-     * Original signature : <code>l_uint8* makeValTabSG4()</code><br>
-     * <i>native declaration : allheaders.h:4574</i>
-     */
-    Pointer makeValTabSG4();
+//    /**
+//     * Original signature : <code>l_uint8* makeValTabSG4()</code><br>
+//     * <i>native declaration : allheaders.h:4574</i>
+//     */
+//    Pointer makeValTabSG4();
 
     /**
      * Original signature :
@@ -15971,11 +15971,11 @@ public interface Leptonica extends Library, ILeptonica {
      */
     void scaleToGray6Low(IntBuffer datad, int wd, int hd, int wpld, IntBuffer datas, int wpls, IntBuffer tab8, ByteBuffer valtab);
 
-    /**
-     * Original signature : <code>l_uint8* makeValTabSG6()</code><br>
-     * <i>native declaration : allheaders.h:4578</i>
-     */
-    Pointer makeValTabSG6();
+//    /**
+//     * Original signature : <code>l_uint8* makeValTabSG6()</code><br>
+//     * <i>native declaration : allheaders.h:4578</i>
+//     */
+//    Pointer makeValTabSG6();
 
     /**
      * Original signature :
@@ -15984,384 +15984,384 @@ public interface Leptonica extends Library, ILeptonica {
      */
     void scaleToGray8Low(IntBuffer datad, int wd, int hd, int wpld, IntBuffer datas, int wpls, IntBuffer tab8, ByteBuffer valtab);
 
-    /**
-     * Original signature : <code>l_uint8* makeValTabSG8()</code><br>
-     * <i>native declaration : allheaders.h:4582</i>
-     */
-    Pointer makeValTabSG8();
+//    /**
+//     * Original signature : <code>l_uint8* makeValTabSG8()</code><br>
+//     * <i>native declaration : allheaders.h:4582</i>
+//     */
+//    Pointer makeValTabSG8();
 
-    /**
-     * Original signature :
-     * <code>void scaleToGray16Low(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:4584</i>
-     */
-    void scaleToGray16Low(IntBuffer datad, int wd, int hd, int wpld, IntBuffer datas, int wpls, IntBuffer tab8);
+//    /**
+//     * Original signature :
+//     * <code>void scaleToGray16Low(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:4584</i>
+//     */
+//    void scaleToGray16Low(IntBuffer datad, int wd, int hd, int wpld, IntBuffer datas, int wpls, IntBuffer tab8);
 
-    /**
-     * Original signature :
-     * <code>l_int32 scaleMipmapLow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_uint32*, l_int32, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:4586</i>
-     */
-    int scaleMipmapLow(IntBuffer datad, int wd, int hd, int wpld, IntBuffer datas1, int wpls1, IntBuffer datas2, int wpls2, float red);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 scaleMipmapLow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_uint32*, l_int32, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:4586</i>
+//     */
+//    int scaleMipmapLow(IntBuffer datad, int wd, int hd, int wpld, IntBuffer datas1, int wpls1, IntBuffer datas2, int wpls2, float red);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixSeedfillBinary(PIX*, PIX*, PIX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4588</i>
-     */
-    Pix pixSeedfillBinary(Pix pixd, Pix pixs, Pix pixm, int connectivity);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixSeedfillBinary(PIX*, PIX*, PIX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4588</i>
+//     */
+//    Pix pixSeedfillBinary(Pix pixd, Pix pixs, Pix pixm, int connectivity);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixSeedfillBinaryRestricted(PIX*, PIX*, PIX*, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4590</i>
-     */
-    Pix pixSeedfillBinaryRestricted(Pix pixd, Pix pixs, Pix pixm, int connectivity, int xmax, int ymax);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixSeedfillBinaryRestricted(PIX*, PIX*, PIX*, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4590</i>
+//     */
+//    Pix pixSeedfillBinaryRestricted(Pix pixd, Pix pixs, Pix pixm, int connectivity, int xmax, int ymax);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixHolesByFilling(PIX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4592</i>
-     */
-    Pix pixHolesByFilling(Pix pixs, int connectivity);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixHolesByFilling(PIX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4592</i>
+//     */
+//    Pix pixHolesByFilling(Pix pixs, int connectivity);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixFillClosedBorders(PIX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4594</i>
-     */
-    Pix pixFillClosedBorders(Pix pixs, int connectivity);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixFillClosedBorders(PIX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4594</i>
+//     */
+//    Pix pixFillClosedBorders(Pix pixs, int connectivity);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixExtractBorderConnComps(PIX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4596</i>
-     */
-    Pix pixExtractBorderConnComps(Pix pixs, int connectivity);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixExtractBorderConnComps(PIX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4596</i>
+//     */
+//    Pix pixExtractBorderConnComps(Pix pixs, int connectivity);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixRemoveBorderConnComps(PIX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4598</i>
-     */
-    Pix pixRemoveBorderConnComps(Pix pixs, int connectivity);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixRemoveBorderConnComps(PIX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4598</i>
+//     */
+//    Pix pixRemoveBorderConnComps(Pix pixs, int connectivity);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixFillBgFromBorder(PIX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4600</i>
-     */
-    Pix pixFillBgFromBorder(Pix pixs, int connectivity);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixFillBgFromBorder(PIX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4600</i>
+//     */
+//    Pix pixFillBgFromBorder(Pix pixs, int connectivity);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixFillHolesToBoundingRect(PIX*, l_int32, l_float32, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:4602</i>
-     */
-    Pix pixFillHolesToBoundingRect(Pix pixs, int minsize, float maxhfract, float minfgfract);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixFillHolesToBoundingRect(PIX*, l_int32, l_float32, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:4602</i>
+//     */
+//    Pix pixFillHolesToBoundingRect(Pix pixs, int minsize, float maxhfract, float minfgfract);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixSeedfillGray(PIX*, PIX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4604</i>
-     */
-    int pixSeedfillGray(Pix pixs, Pix pixm, int connectivity);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixSeedfillGray(PIX*, PIX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4604</i>
+//     */
+//    int pixSeedfillGray(Pix pixs, Pix pixm, int connectivity);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixSeedfillGrayInv(PIX*, PIX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4606</i>
-     */
-    int pixSeedfillGrayInv(Pix pixs, Pix pixm, int connectivity);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixSeedfillGrayInv(PIX*, PIX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4606</i>
+//     */
+//    int pixSeedfillGrayInv(Pix pixs, Pix pixm, int connectivity);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixSeedfillGraySimple(PIX*, PIX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4608</i>
-     */
-    int pixSeedfillGraySimple(Pix pixs, Pix pixm, int connectivity);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixSeedfillGraySimple(PIX*, PIX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4608</i>
+//     */
+//    int pixSeedfillGraySimple(Pix pixs, Pix pixm, int connectivity);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixSeedfillGrayInvSimple(PIX*, PIX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4610</i>
-     */
-    int pixSeedfillGrayInvSimple(Pix pixs, Pix pixm, int connectivity);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixSeedfillGrayInvSimple(PIX*, PIX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4610</i>
+//     */
+//    int pixSeedfillGrayInvSimple(Pix pixs, Pix pixm, int connectivity);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixSeedfillGrayBasin(PIX*, PIX*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4612</i>
-     */
-    Pix pixSeedfillGrayBasin(Pix pixb, Pix pixm, int delta, int connectivity);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixSeedfillGrayBasin(PIX*, PIX*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4612</i>
+//     */
+//    Pix pixSeedfillGrayBasin(Pix pixb, Pix pixm, int delta, int connectivity);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixDistanceFunction(PIX*, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4614</i>
-     */
-    Pix pixDistanceFunction(Pix pixs, int connectivity, int outdepth, int boundcond);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixDistanceFunction(PIX*, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4614</i>
+//     */
+//    Pix pixDistanceFunction(Pix pixs, int connectivity, int outdepth, int boundcond);
 
-    /**
-     * Original signature : <code>PIX* pixSeedspread(PIX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4616</i>
-     */
-    Pix pixSeedspread(Pix pixs, int connectivity);
+//    /**
+//     * Original signature : <code>PIX* pixSeedspread(PIX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4616</i>
+//     */
+//    Pix pixSeedspread(Pix pixs, int connectivity);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixLocalExtrema(PIX*, l_int32, l_int32, PIX**, PIX**)</code><br>
-     * <i>native declaration : allheaders.h:4618</i>
-     */
-    int pixLocalExtrema(Pix pixs, int maxmin, int minmax, PointerByReference ppixmin, PointerByReference ppixmax);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixLocalExtrema(PIX*, l_int32, l_int32, PIX**, PIX**)</code><br>
+//     * <i>native declaration : allheaders.h:4618</i>
+//     */
+//    int pixLocalExtrema(Pix pixs, int maxmin, int minmax, PointerByReference ppixmin, PointerByReference ppixmax);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixSelectedLocalExtrema(PIX*, l_int32, PIX**, PIX**)</code><br>
-     * <i>native declaration : allheaders.h:4620</i>
-     */
-    int pixSelectedLocalExtrema(Pix pixs, int mindist, PointerByReference ppixmin, PointerByReference ppixmax);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixSelectedLocalExtrema(PIX*, l_int32, PIX**, PIX**)</code><br>
+//     * <i>native declaration : allheaders.h:4620</i>
+//     */
+//    int pixSelectedLocalExtrema(Pix pixs, int mindist, PointerByReference ppixmin, PointerByReference ppixmax);
 
-    /**
-     * Original signature : <code>PIX* pixFindEqualValues(PIX*, PIX*)</code><br>
-     * <i>native declaration : allheaders.h:4622</i>
-     */
-    Pix pixFindEqualValues(Pix pixs1, Pix pixs2);
+//    /**
+//     * Original signature : <code>PIX* pixFindEqualValues(PIX*, PIX*)</code><br>
+//     * <i>native declaration : allheaders.h:4622</i>
+//     */
+//    Pix pixFindEqualValues(Pix pixs1, Pix pixs2);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixSelectMinInConnComp(PIX*, PIX*, PTA**, NUMA**)</code><br>
-     * <i>native declaration : allheaders.h:4624</i>
-     */
-    int pixSelectMinInConnComp(Pix pixs, Pix pixm, PointerByReference ppta, PointerByReference pnav);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixSelectMinInConnComp(PIX*, PIX*, PTA**, NUMA**)</code><br>
+//     * <i>native declaration : allheaders.h:4624</i>
+//     */
+//    int pixSelectMinInConnComp(Pix pixs, Pix pixm, PointerByReference ppta, PointerByReference pnav);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixRemoveSeededComponents(PIX*, PIX*, PIX*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4626</i>
-     */
-    Pix pixRemoveSeededComponents(Pix pixd, Pix pixs, Pix pixm, int connectivity, int bordersize);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixRemoveSeededComponents(PIX*, PIX*, PIX*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4626</i>
+//     */
+//    Pix pixRemoveSeededComponents(Pix pixd, Pix pixs, Pix pixm, int connectivity, int bordersize);
 
-    /**
-     * Original signature :
-     * <code>void seedfillBinaryLow(l_uint32*, l_int32, l_int32, l_uint32*, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4628</i>
-     */
-    void seedfillBinaryLow(IntBuffer datas, int hs, int wpls, IntBuffer datam, int hm, int wplm, int connectivity);
+//    /**
+//     * Original signature :
+//     * <code>void seedfillBinaryLow(l_uint32*, l_int32, l_int32, l_uint32*, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4628</i>
+//     */
+//    void seedfillBinaryLow(IntBuffer datas, int hs, int wpls, IntBuffer datam, int hm, int wplm, int connectivity);
 
-    /**
-     * Original signature :
-     * <code>void seedfillGrayLow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4630</i>
-     */
-    void seedfillGrayLow(IntBuffer datas, int w, int h, int wpls, IntBuffer datam, int wplm, int connectivity);
+//    /**
+//     * Original signature :
+//     * <code>void seedfillGrayLow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4630</i>
+//     */
+//    void seedfillGrayLow(IntBuffer datas, int w, int h, int wpls, IntBuffer datam, int wplm, int connectivity);
 
-    /**
-     * Original signature :
-     * <code>void seedfillGrayInvLow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4632</i>
-     */
-    void seedfillGrayInvLow(IntBuffer datas, int w, int h, int wpls, IntBuffer datam, int wplm, int connectivity);
+//    /**
+//     * Original signature :
+//     * <code>void seedfillGrayInvLow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4632</i>
+//     */
+//    void seedfillGrayInvLow(IntBuffer datas, int w, int h, int wpls, IntBuffer datam, int wplm, int connectivity);
 
-    /**
-     * Original signature :
-     * <code>void seedfillGrayLowSimple(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4634</i>
-     */
-    void seedfillGrayLowSimple(IntBuffer datas, int w, int h, int wpls, IntBuffer datam, int wplm, int connectivity);
+//    /**
+//     * Original signature :
+//     * <code>void seedfillGrayLowSimple(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4634</i>
+//     */
+//    void seedfillGrayLowSimple(IntBuffer datas, int w, int h, int wpls, IntBuffer datam, int wplm, int connectivity);
 
-    /**
-     * Original signature :
-     * <code>void seedfillGrayInvLowSimple(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4636</i>
-     */
-    void seedfillGrayInvLowSimple(IntBuffer datas, int w, int h, int wpls, IntBuffer datam, int wplm, int connectivity);
+//    /**
+//     * Original signature :
+//     * <code>void seedfillGrayInvLowSimple(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4636</i>
+//     */
+//    void seedfillGrayInvLowSimple(IntBuffer datas, int w, int h, int wpls, IntBuffer datam, int wplm, int connectivity);
 
-    /**
-     * Original signature :
-     * <code>void distanceFunctionLow(l_uint32*, l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4638</i>
-     */
-    void distanceFunctionLow(IntBuffer datad, int w, int h, int d, int wpld, int connectivity);
+//    /**
+//     * Original signature :
+//     * <code>void distanceFunctionLow(l_uint32*, l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4638</i>
+//     */
+//    void distanceFunctionLow(IntBuffer datad, int w, int h, int d, int wpld, int connectivity);
 
-    /**
-     * Original signature :
-     * <code>void seedspreadLow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4640</i>
-     */
-    void seedspreadLow(IntBuffer datad, int w, int h, int wpld, IntBuffer datat, int wplt, int connectivity);
+//    /**
+//     * Original signature :
+//     * <code>void seedspreadLow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4640</i>
+//     */
+//    void seedspreadLow(IntBuffer datad, int w, int h, int wpld, IntBuffer datat, int wplt, int connectivity);
 
-    /**
-     * Original signature : <code>SELA* selaCreate(l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4642</i>
-     */
-    Sela selaCreate(int n);
+//    /**
+//     * Original signature : <code>SELA* selaCreate(l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4642</i>
+//     */
+//    Sela selaCreate(int n);
 
-    /**
-     * Original signature : <code>void selaDestroy(SELA**)</code><br>
-     * <i>native declaration : allheaders.h:4644</i>
-     */
-    void selaDestroy(PointerByReference psela);
+//    /**
+//     * Original signature : <code>void selaDestroy(SELA**)</code><br>
+//     * <i>native declaration : allheaders.h:4644</i>
+//     */
+//    void selaDestroy(PointerByReference psela);
 
-    /**
-     * Original signature :
-     * <code>SEL* selCreate(l_int32, l_int32, const char*)</code><br>
-     * <i>native declaration : allheaders.h:4646</i>
-     */
-    Selector selCreate(int height, int width, String name);
+//    /**
+//     * Original signature :
+//     * <code>SEL* selCreate(l_int32, l_int32, const char*)</code><br>
+//     * <i>native declaration : allheaders.h:4646</i>
+//     */
+//    Selector selCreate(int height, int width, String name);
 
-    /**
-     * Original signature : <code>void selDestroy(SEL**)</code><br>
-     * <i>native declaration : allheaders.h:4648</i>
-     */
-    void selDestroy(PointerByReference psel);
+//    /**
+//     * Original signature : <code>void selDestroy(SEL**)</code><br>
+//     * <i>native declaration : allheaders.h:4648</i>
+//     */
+//    void selDestroy(PointerByReference psel);
 
-    /**
-     * Original signature : <code>SEL* selCopy(SEL*)</code><br>
-     * <i>native declaration : allheaders.h:4650</i>
-     */
-    Selector selCopy(Pointer sel);
+//    /**
+//     * Original signature : <code>SEL* selCopy(SEL*)</code><br>
+//     * <i>native declaration : allheaders.h:4650</i>
+//     */
+//    Selector selCopy(Pointer sel);
 
-    /**
-     * Original signature :
-     * <code>SEL* selCreateBrick(l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4652</i>
-     */
-    Selector selCreateBrick(int h, int w, int cy, int cx, int type);
+//    /**
+//     * Original signature :
+//     * <code>SEL* selCreateBrick(l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4652</i>
+//     */
+//    Selector selCreateBrick(int h, int w, int cy, int cx, int type);
 
-    /**
-     * Original signature :
-     * <code>SEL* selCreateComb(l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4654</i>
-     */
-    Selector selCreateComb(int factor1, int factor2, int direction);
+//    /**
+//     * Original signature :
+//     * <code>SEL* selCreateComb(l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4654</i>
+//     */
+//    Selector selCreateComb(int factor1, int factor2, int direction);
 
-    /**
-     * Original signature :
-     * <code>l_int32** create2dIntArray(l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4656</i>
-     */
-    PointerByReference create2dIntArray(int sy, int sx);
+//    /**
+//     * Original signature :
+//     * <code>l_int32** create2dIntArray(l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4656</i>
+//     */
+//    PointerByReference create2dIntArray(int sy, int sx);
 
-    /**
-     * Original signature :
-     * <code>l_int32 selaAddSel(SELA*, SEL*, const char*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4658</i>
-     */
-    int selaAddSel(Sela sela, Pointer sel, String selname, int copyflag);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 selaAddSel(SELA*, SEL*, const char*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4658</i>
+//     */
+//    int selaAddSel(Sela sela, Pointer sel, String selname, int copyflag);
 
-    /**
-     * Original signature : <code>l_int32 selaGetCount(SELA*)</code><br>
-     * <i>native declaration : allheaders.h:4660</i>
-     */
-    int selaGetCount(Sela sela);
+//    /**
+//     * Original signature : <code>l_int32 selaGetCount(SELA*)</code><br>
+//     * <i>native declaration : allheaders.h:4660</i>
+//     */
+//    int selaGetCount(Sela sela);
 
-    /**
-     * Original signature : <code>SEL* selaGetSel(SELA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4662</i>
-     */
-    Selector selaGetSel(Sela sela, int i);
+//    /**
+//     * Original signature : <code>SEL* selaGetSel(SELA*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4662</i>
+//     */
+//    Selector selaGetSel(Sela sela, int i);
 
-    /**
-     * Original signature : <code>char* selGetName(SEL*)</code><br>
-     * <i>native declaration : allheaders.h:4664</i>
-     */
-    Pointer selGetName(Pointer sel);
+//    /**
+//     * Original signature : <code>char* selGetName(SEL*)</code><br>
+//     * <i>native declaration : allheaders.h:4664</i>
+//     */
+//    Pointer selGetName(Pointer sel);
 
-    /**
-     * Original signature :
-     * <code>l_int32 selSetName(SEL*, const char*)</code><br>
-     * <i>native declaration : allheaders.h:4666</i>
-     */
-    int selSetName(Pointer sel, String name);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 selSetName(SEL*, const char*)</code><br>
+//     * <i>native declaration : allheaders.h:4666</i>
+//     */
+//    int selSetName(Pointer sel, String name);
 
-    /**
-     * Original signature :
-     * <code>l_int32 selaFindSelByName(SELA*, const char*, l_int32*, SEL**)</code><br>
-     * <i>native declaration : allheaders.h:4668</i>
-     */
-    int selaFindSelByName(Sela sela, String name, IntBuffer pindex, PointerByReference psel);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 selaFindSelByName(SELA*, const char*, l_int32*, SEL**)</code><br>
+//     * <i>native declaration : allheaders.h:4668</i>
+//     */
+//    int selaFindSelByName(Sela sela, String name, IntBuffer pindex, PointerByReference psel);
 
-    /**
-     * Original signature :
-     * <code>l_int32 selGetElement(SEL*, l_int32, l_int32, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:4670</i>
-     */
-    int selGetElement(Pointer sel, int row, int col, IntBuffer ptype);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 selGetElement(SEL*, l_int32, l_int32, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:4670</i>
+//     */
+//    int selGetElement(Pointer sel, int row, int col, IntBuffer ptype);
 
-    /**
-     * Original signature :
-     * <code>l_int32 selSetElement(SEL*, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4672</i>
-     */
-    int selSetElement(Pointer sel, int row, int col, int type);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 selSetElement(SEL*, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4672</i>
+//     */
+//    int selSetElement(Pointer sel, int row, int col, int type);
 
-    /**
-     * Original signature :
-     * <code>l_int32 selGetParameters(SEL*, l_int32*, l_int32*, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:4674</i>
-     */
-    int selGetParameters(Pointer sel, IntBuffer psy, IntBuffer psx, IntBuffer pcy, IntBuffer pcx);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 selGetParameters(SEL*, l_int32*, l_int32*, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:4674</i>
+//     */
+//    int selGetParameters(Pointer sel, IntBuffer psy, IntBuffer psx, IntBuffer pcy, IntBuffer pcx);
 
-    /**
-     * Original signature :
-     * <code>l_int32 selSetOrigin(SEL*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4676</i>
-     */
-    int selSetOrigin(Pointer sel, int cy, int cx);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 selSetOrigin(SEL*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4676</i>
+//     */
+//    int selSetOrigin(Pointer sel, int cy, int cx);
 
-    /**
-     * Original signature :
-     * <code>l_int32 selGetTypeAtOrigin(SEL*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:4678</i>
-     */
-    int selGetTypeAtOrigin(Pointer sel, IntBuffer ptype);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 selGetTypeAtOrigin(SEL*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:4678</i>
+//     */
+//    int selGetTypeAtOrigin(Pointer sel, IntBuffer ptype);
 
-    /**
-     * Original signature :
-     * <code>char* selaGetBrickName(SELA*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4680</i>
-     */
-    Pointer selaGetBrickName(Sela sela, int hsize, int vsize);
+//    /**
+//     * Original signature :
+//     * <code>char* selaGetBrickName(SELA*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4680</i>
+//     */
+//    Pointer selaGetBrickName(Sela sela, int hsize, int vsize);
 
-    /**
-     * Original signature :
-     * <code>char* selaGetCombName(SELA*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4682</i>
-     */
-    Pointer selaGetCombName(Sela sela, int size, int direction);
+//    /**
+//     * Original signature :
+//     * <code>char* selaGetCombName(SELA*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4682</i>
+//     */
+//    Pointer selaGetCombName(Sela sela, int size, int direction);
 
-    /**
-     * Original signature :
-     * <code>l_int32 getCompositeParameters(l_int32, l_int32*, l_int32*, char**, char**, char**, char**)</code><br>
-     * <i>native declaration : allheaders.h:4684</i>
-     */
-    int getCompositeParameters(int size, IntBuffer psize1, IntBuffer psize2, PointerByReference pnameh1, PointerByReference pnameh2, PointerByReference pnamev1, PointerByReference pnamev2);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 getCompositeParameters(l_int32, l_int32*, l_int32*, char**, char**, char**, char**)</code><br>
+//     * <i>native declaration : allheaders.h:4684</i>
+//     */
+//    int getCompositeParameters(int size, IntBuffer psize1, IntBuffer psize2, PointerByReference pnameh1, PointerByReference pnameh2, PointerByReference pnamev1, PointerByReference pnamev2);
 
-    /**
-     * Original signature : <code>SARRAY* selaGetSelnames(SELA*)</code><br>
-     * <i>native declaration : allheaders.h:4686</i>
-     */
-    Sarray selaGetSelnames(Sela sela);
+//    /**
+//     * Original signature : <code>SARRAY* selaGetSelnames(SELA*)</code><br>
+//     * <i>native declaration : allheaders.h:4686</i>
+//     */
+//    Sarray selaGetSelnames(Sela sela);
 
-    /**
-     * Original signature :
-     * <code>l_int32 selFindMaxTranslations(SEL*, l_int32*, l_int32*, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:4688</i>
-     */
-    int selFindMaxTranslations(Pointer sel, IntBuffer pxp, IntBuffer pyp, IntBuffer pxn, IntBuffer pyn);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 selFindMaxTranslations(SEL*, l_int32*, l_int32*, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:4688</i>
+//     */
+//    int selFindMaxTranslations(Pointer sel, IntBuffer pxp, IntBuffer pyp, IntBuffer pxn, IntBuffer pyn);
 
-    /**
-     * Original signature : <code>SEL* selRotateOrth(SEL*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4690</i>
-     */
-    Selector selRotateOrth(Pointer sel, int quads);
+//    /**
+//     * Original signature : <code>SEL* selRotateOrth(SEL*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4690</i>
+//     */
+//    Selector selRotateOrth(Pointer sel, int quads);
 
-    /**
-     * Original signature : <code>SELA* selaRead(const char*)</code><br>
-     * <i>native declaration : allheaders.h:4692</i>
-     */
-    Sela selaRead(String fname);
+//    /**
+//     * Original signature : <code>SELA* selaRead(const char*)</code><br>
+//     * <i>native declaration : allheaders.h:4692</i>
+//     */
+//    Sela selaRead(String fname);
 
 //    /**
 //     * Original signature : <code>SELA* selaReadStream(FILE*)</code><br>
@@ -16369,11 +16369,11 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    Sela selaReadStream(FILE fp);
 
-    /**
-     * Original signature : <code>SEL* selRead(const char*)</code><br>
-     * <i>native declaration : allheaders.h:4696</i>
-     */
-    Selector selRead(String fname);
+//    /**
+//     * Original signature : <code>SEL* selRead(const char*)</code><br>
+//     * <i>native declaration : allheaders.h:4696</i>
+//     */
+//    Selector selRead(String fname);
 
 //    /**
 //     * Original signature : <code>SEL* selReadStream(FILE*)</code><br>
@@ -16381,12 +16381,12 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    Selector selReadStream(FILE fp);
 
-    /**
-     * Original signature :
-     * <code>l_int32 selaWrite(const char*, SELA*)</code><br>
-     * <i>native declaration : allheaders.h:4700</i>
-     */
-    int selaWrite(String fname, Sela sela);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 selaWrite(const char*, SELA*)</code><br>
+//     * <i>native declaration : allheaders.h:4700</i>
+//     */
+//    int selaWrite(String fname, Sela sela);
 
 //    /**
 //     * Original signature :
@@ -16395,11 +16395,11 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int selaWriteStream(FILE fp, Sela sela);
 
-    /**
-     * Original signature : <code>l_int32 selWrite(const char*, SEL*)</code><br>
-     * <i>native declaration : allheaders.h:4704</i>
-     */
-    int selWrite(String fname, Pointer sel);
+//    /**
+//     * Original signature : <code>l_int32 selWrite(const char*, SEL*)</code><br>
+//     * <i>native declaration : allheaders.h:4704</i>
+//     */
+//    int selWrite(String fname, Pointer sel);
 
 //    /**
 //     * Original signature : <code>l_int32 selWriteStream(FILE*, SEL*)</code><br>
@@ -16407,231 +16407,231 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int selWriteStream(FILE fp, Pointer sel);
 
-    /**
-     * Original signature :
-     * <code>SEL* selCreateFromString(const char*, l_int32, l_int32, const char*)</code><br>
-     * <i>native declaration : allheaders.h:4708</i>
-     */
-    Selector selCreateFromString(String text, int h, int w, String name);
+//    /**
+//     * Original signature :
+//     * <code>SEL* selCreateFromString(const char*, l_int32, l_int32, const char*)</code><br>
+//     * <i>native declaration : allheaders.h:4708</i>
+//     */
+//    Selector selCreateFromString(String text, int h, int w, String name);
 
-    /**
-     * Original signature : <code>char* selPrintToString(SEL*)</code><br>
-     * <i>native declaration : allheaders.h:4710</i>
-     */
-    Pointer selPrintToString(Pointer sel);
+//    /**
+//     * Original signature : <code>char* selPrintToString(SEL*)</code><br>
+//     * <i>native declaration : allheaders.h:4710</i>
+//     */
+//    Pointer selPrintToString(Pointer sel);
 
-    /**
-     * Original signature :
-     * <code>SELA* selaCreateFromFile(const char*)</code><br>
-     * <i>native declaration : allheaders.h:4712</i>
-     */
-    Sela selaCreateFromFile(String filename);
+//    /**
+//     * Original signature :
+//     * <code>SELA* selaCreateFromFile(const char*)</code><br>
+//     * <i>native declaration : allheaders.h:4712</i>
+//     */
+//    Sela selaCreateFromFile(String filename);
 
-    /**
-     * Original signature :
-     * <code>SEL* selCreateFromPta(PTA*, l_int32, l_int32, const char*)</code><br>
-     * <i>native declaration : allheaders.h:4714</i>
-     */
-    Selector selCreateFromPta(Pta pta, int cy, int cx, String name);
+//    /**
+//     * Original signature :
+//     * <code>SEL* selCreateFromPta(PTA*, l_int32, l_int32, const char*)</code><br>
+//     * <i>native declaration : allheaders.h:4714</i>
+//     */
+//    Selector selCreateFromPta(Pta pta, int cy, int cx, String name);
 
-    /**
-     * Original signature :
-     * <code>SEL* selCreateFromPix(PIX*, l_int32, l_int32, const char*)</code><br>
-     * <i>native declaration : allheaders.h:4716</i>
-     */
-    Selector selCreateFromPix(Pix pix, int cy, int cx, String name);
+//    /**
+//     * Original signature :
+//     * <code>SEL* selCreateFromPix(PIX*, l_int32, l_int32, const char*)</code><br>
+//     * <i>native declaration : allheaders.h:4716</i>
+//     */
+//    Selector selCreateFromPix(Pix pix, int cy, int cx, String name);
 
-    /**
-     * Original signature :
-     * <code>SEL* selReadFromColorImage(const char*)</code><br>
-     * <i>native declaration : allheaders.h:4718</i>
-     */
-    Selector selReadFromColorImage(String pathname);
+//    /**
+//     * Original signature :
+//     * <code>SEL* selReadFromColorImage(const char*)</code><br>
+//     * <i>native declaration : allheaders.h:4718</i>
+//     */
+//    Selector selReadFromColorImage(String pathname);
 
-    /**
-     * Original signature :
-     * <code>SEL* selCreateFromColorPix(PIX*, char*)</code><br>
-     * <i>native declaration : allheaders.h:4720</i>
-     */
-    Selector selCreateFromColorPix(Pix pixs, ByteBuffer selname);
+//    /**
+//     * Original signature :
+//     * <code>SEL* selCreateFromColorPix(PIX*, char*)</code><br>
+//     * <i>native declaration : allheaders.h:4720</i>
+//     */
+//    Selector selCreateFromColorPix(Pix pixs, ByteBuffer selname);
 
-    /**
-     * Original signature :
-     * <code>PIX* selDisplayInPix(SEL*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4722</i>
-     */
-    Pix selDisplayInPix(Pointer sel, int size, int gthick);
+//    /**
+//     * Original signature :
+//     * <code>PIX* selDisplayInPix(SEL*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4722</i>
+//     */
+//    Pix selDisplayInPix(Pointer sel, int size, int gthick);
 
-    /**
-     * Original signature :
-     * <code>PIX* selaDisplayInPix(SELA*, l_int32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4724</i>
-     */
-    Pix selaDisplayInPix(Sela sela, int size, int gthick, int spacing, int ncols);
+//    /**
+//     * Original signature :
+//     * <code>PIX* selaDisplayInPix(SELA*, l_int32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4724</i>
+//     */
+//    Pix selaDisplayInPix(Sela sela, int size, int gthick, int spacing, int ncols);
 
-    /**
-     * Original signature : <code>SELA* selaAddBasic(SELA*)</code><br>
-     * <i>native declaration : allheaders.h:4726</i>
-     */
-    Sela selaAddBasic(Sela sela);
+//    /**
+//     * Original signature : <code>SELA* selaAddBasic(SELA*)</code><br>
+//     * <i>native declaration : allheaders.h:4726</i>
+//     */
+//    Sela selaAddBasic(Sela sela);
 
-    /**
-     * Original signature : <code>SELA* selaAddHitMiss(SELA*)</code><br>
-     * <i>native declaration : allheaders.h:4728</i>
-     */
-    Sela selaAddHitMiss(Sela sela);
+//    /**
+//     * Original signature : <code>SELA* selaAddHitMiss(SELA*)</code><br>
+//     * <i>native declaration : allheaders.h:4728</i>
+//     */
+//    Sela selaAddHitMiss(Sela sela);
 
-    /**
-     * Original signature : <code>SELA* selaAddDwaLinear(SELA*)</code><br>
-     * <i>native declaration : allheaders.h:4730</i>
-     */
-    Sela selaAddDwaLinear(Sela sela);
+//    /**
+//     * Original signature : <code>SELA* selaAddDwaLinear(SELA*)</code><br>
+//     * <i>native declaration : allheaders.h:4730</i>
+//     */
+//    Sela selaAddDwaLinear(Sela sela);
 
-    /**
-     * Original signature : <code>SELA* selaAddDwaCombs(SELA*)</code><br>
-     * <i>native declaration : allheaders.h:4732</i>
-     */
-    Sela selaAddDwaCombs(Sela sela);
+//    /**
+//     * Original signature : <code>SELA* selaAddDwaCombs(SELA*)</code><br>
+//     * <i>native declaration : allheaders.h:4732</i>
+//     */
+//    Sela selaAddDwaCombs(Sela sela);
 
-    /**
-     * Original signature :
-     * <code>SELA* selaAddCrossJunctions(SELA*, l_float32, l_float32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4734</i>
-     */
-    Sela selaAddCrossJunctions(Sela sela, float hlsize, float mdist, int norient, int debugflag);
+//    /**
+//     * Original signature :
+//     * <code>SELA* selaAddCrossJunctions(SELA*, l_float32, l_float32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4734</i>
+//     */
+//    Sela selaAddCrossJunctions(Sela sela, float hlsize, float mdist, int norient, int debugflag);
 
-    /**
-     * Original signature :
-     * <code>SELA* selaAddTJunctions(SELA*, l_float32, l_float32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4736</i>
-     */
-    Sela selaAddTJunctions(Sela sela, float hlsize, float mdist, int norient, int debugflag);
+//    /**
+//     * Original signature :
+//     * <code>SELA* selaAddTJunctions(SELA*, l_float32, l_float32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4736</i>
+//     */
+//    Sela selaAddTJunctions(Sela sela, float hlsize, float mdist, int norient, int debugflag);
 
-    /**
-     * Original signature :
-     * <code>SEL* pixGenerateSelWithRuns(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, PIX**)</code><br>
-     * <i>native declaration : allheaders.h:4738</i>
-     */
-    Selector pixGenerateSelWithRuns(Pix pixs, int nhlines, int nvlines, int distance, int minlength, int toppix, int botpix, int leftpix, int rightpix, PointerByReference ppixe);
+//    /**
+//     * Original signature :
+//     * <code>SEL* pixGenerateSelWithRuns(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, PIX**)</code><br>
+//     * <i>native declaration : allheaders.h:4738</i>
+//     */
+//    Selector pixGenerateSelWithRuns(Pix pixs, int nhlines, int nvlines, int distance, int minlength, int toppix, int botpix, int leftpix, int rightpix, PointerByReference ppixe);
 
-    /**
-     * Original signature :
-     * <code>SEL* pixGenerateSelRandom(PIX*, l_float32, l_float32, l_int32, l_int32, l_int32, l_int32, l_int32, PIX**)</code><br>
-     * <i>native declaration : allheaders.h:4740</i>
-     */
-    Selector pixGenerateSelRandom(Pix pixs, float hitfract, float missfract, int distance, int toppix, int botpix, int leftpix, int rightpix, PointerByReference ppixe);
+//    /**
+//     * Original signature :
+//     * <code>SEL* pixGenerateSelRandom(PIX*, l_float32, l_float32, l_int32, l_int32, l_int32, l_int32, l_int32, PIX**)</code><br>
+//     * <i>native declaration : allheaders.h:4740</i>
+//     */
+//    Selector pixGenerateSelRandom(Pix pixs, float hitfract, float missfract, int distance, int toppix, int botpix, int leftpix, int rightpix, PointerByReference ppixe);
 
-    /**
-     * Original signature :
-     * <code>SEL* pixGenerateSelBoundary(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, PIX**)</code><br>
-     * <i>native declaration : allheaders.h:4742</i>
-     */
-    Selector pixGenerateSelBoundary(Pix pixs, int hitdist, int missdist, int hitskip, int missskip, int topflag, int botflag, int leftflag, int rightflag, PointerByReference ppixe);
+//    /**
+//     * Original signature :
+//     * <code>SEL* pixGenerateSelBoundary(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, PIX**)</code><br>
+//     * <i>native declaration : allheaders.h:4742</i>
+//     */
+//    Selector pixGenerateSelBoundary(Pix pixs, int hitdist, int missdist, int hitskip, int missskip, int topflag, int botflag, int leftflag, int rightflag, PointerByReference ppixe);
 
-    /**
-     * Original signature :
-     * <code>NUMA* pixGetRunCentersOnLine(PIX*, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4744</i>
-     */
-    Numa pixGetRunCentersOnLine(Pix pixs, int x, int y, int minlength);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* pixGetRunCentersOnLine(PIX*, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4744</i>
+//     */
+//    Numa pixGetRunCentersOnLine(Pix pixs, int x, int y, int minlength);
 
-    /**
-     * Original signature :
-     * <code>NUMA* pixGetRunsOnLine(PIX*, l_int32, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4746</i>
-     */
-    Numa pixGetRunsOnLine(Pix pixs, int x1, int y1, int x2, int y2);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* pixGetRunsOnLine(PIX*, l_int32, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4746</i>
+//     */
+//    Numa pixGetRunsOnLine(Pix pixs, int x1, int y1, int x2, int y2);
 
-    /**
-     * Original signature :
-     * <code>PTA* pixSubsampleBoundaryPixels(PIX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4748</i>
-     */
-    Pta pixSubsampleBoundaryPixels(Pix pixs, int skip);
+//    /**
+//     * Original signature :
+//     * <code>PTA* pixSubsampleBoundaryPixels(PIX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4748</i>
+//     */
+//    Pta pixSubsampleBoundaryPixels(Pix pixs, int skip);
 
-    /**
-     * Original signature :
-     * <code>l_int32 adjacentOnPixelInRaster(PIX*, l_int32, l_int32, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:4750</i>
-     */
-    int adjacentOnPixelInRaster(Pix pixs, int x, int y, IntBuffer pxa, IntBuffer pya);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 adjacentOnPixelInRaster(PIX*, l_int32, l_int32, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:4750</i>
+//     */
+//    int adjacentOnPixelInRaster(Pix pixs, int x, int y, IntBuffer pxa, IntBuffer pya);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixDisplayHitMissSel(PIX*, SEL*, l_int32, l_uint32, l_uint32)</code><br>
-     * <i>native declaration : allheaders.h:4752</i>
-     */
-    Pix pixDisplayHitMissSel(Pix pixs, Pointer sel, int scalefactor, int hitcolor, int misscolor);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixDisplayHitMissSel(PIX*, SEL*, l_int32, l_uint32, l_uint32)</code><br>
+//     * <i>native declaration : allheaders.h:4752</i>
+//     */
+//    Pix pixDisplayHitMissSel(Pix pixs, Pointer sel, int scalefactor, int hitcolor, int misscolor);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixHShear(PIX*, PIX*, l_int32, l_float32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4754</i>
-     */
-    Pix pixHShear(Pix pixd, Pix pixs, int yloc, float radang, int incolor);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixHShear(PIX*, PIX*, l_int32, l_float32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4754</i>
+//     */
+//    Pix pixHShear(Pix pixd, Pix pixs, int yloc, float radang, int incolor);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixVShear(PIX*, PIX*, l_int32, l_float32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4756</i>
-     */
-    Pix pixVShear(Pix pixd, Pix pixs, int xloc, float radang, int incolor);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixVShear(PIX*, PIX*, l_int32, l_float32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4756</i>
+//     */
+//    Pix pixVShear(Pix pixd, Pix pixs, int xloc, float radang, int incolor);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixHShearCorner(PIX*, PIX*, l_float32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4758</i>
-     */
-    Pix pixHShearCorner(Pix pixd, Pix pixs, float radang, int incolor);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixHShearCorner(PIX*, PIX*, l_float32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4758</i>
+//     */
+//    Pix pixHShearCorner(Pix pixd, Pix pixs, float radang, int incolor);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixVShearCorner(PIX*, PIX*, l_float32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4760</i>
-     */
-    Pix pixVShearCorner(Pix pixd, Pix pixs, float radang, int incolor);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixVShearCorner(PIX*, PIX*, l_float32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4760</i>
+//     */
+//    Pix pixVShearCorner(Pix pixd, Pix pixs, float radang, int incolor);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixHShearCenter(PIX*, PIX*, l_float32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4762</i>
-     */
-    Pix pixHShearCenter(Pix pixd, Pix pixs, float radang, int incolor);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixHShearCenter(PIX*, PIX*, l_float32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4762</i>
+//     */
+//    Pix pixHShearCenter(Pix pixd, Pix pixs, float radang, int incolor);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixVShearCenter(PIX*, PIX*, l_float32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4764</i>
-     */
-    Pix pixVShearCenter(Pix pixd, Pix pixs, float radang, int incolor);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixVShearCenter(PIX*, PIX*, l_float32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4764</i>
+//     */
+//    Pix pixVShearCenter(Pix pixd, Pix pixs, float radang, int incolor);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixHShearIP(PIX*, l_int32, l_float32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4766</i>
-     */
-    int pixHShearIP(Pix pixs, int yloc, float radang, int incolor);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixHShearIP(PIX*, l_int32, l_float32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4766</i>
+//     */
+//    int pixHShearIP(Pix pixs, int yloc, float radang, int incolor);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixVShearIP(PIX*, l_int32, l_float32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4768</i>
-     */
-    int pixVShearIP(Pix pixs, int xloc, float radang, int incolor);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixVShearIP(PIX*, l_int32, l_float32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4768</i>
+//     */
+//    int pixVShearIP(Pix pixs, int xloc, float radang, int incolor);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixHShearLI(PIX*, l_int32, l_float32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4770</i>
-     */
-    Pix pixHShearLI(Pix pixs, int yloc, float radang, int incolor);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixHShearLI(PIX*, l_int32, l_float32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4770</i>
+//     */
+//    Pix pixHShearLI(Pix pixs, int yloc, float radang, int incolor);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixVShearLI(PIX*, l_int32, l_float32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4772</i>
-     */
-    Pix pixVShearLI(Pix pixs, int xloc, float radang, int incolor);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixVShearLI(PIX*, l_int32, l_float32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4772</i>
+//     */
+//    Pix pixVShearLI(Pix pixs, int xloc, float radang, int incolor);
 
     /**
      * Original signature : <code>PIX* pixDeskew(PIX*, l_int32)</code><br>
@@ -16715,12 +16715,12 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    Pix pixReadStreamSpix(FILE fp);
 
-    /**
-     * Original signature :
-     * <code>l_int32 readHeaderSpix(const char*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:4798</i>
-     */
-    int readHeaderSpix(String filename, IntBuffer pwidth, IntBuffer pheight, IntBuffer pbps, IntBuffer pspp, IntBuffer piscmap);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 readHeaderSpix(const char*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:4798</i>
+//     */
+//    int readHeaderSpix(String filename, IntBuffer pwidth, IntBuffer pheight, IntBuffer pbps, IntBuffer pspp, IntBuffer piscmap);
 
 //    /**
 //     * Original signature :
@@ -16729,12 +16729,12 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int freadHeaderSpix(FILE fp, IntBuffer pwidth, IntBuffer pheight, IntBuffer pbps, IntBuffer pspp, IntBuffer piscmap);
 
-    /**
-     * Original signature :
-     * <code>l_int32 sreadHeaderSpix(const l_uint32*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:4802</i>
-     */
-    int sreadHeaderSpix(IntBuffer data, IntBuffer pwidth, IntBuffer pheight, IntBuffer pbps, IntBuffer pspp, IntBuffer piscmap);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 sreadHeaderSpix(const l_uint32*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:4802</i>
+//     */
+//    int sreadHeaderSpix(IntBuffer data, IntBuffer pwidth, IntBuffer pheight, IntBuffer pbps, IntBuffer pspp, IntBuffer piscmap);
 
 //    /**
 //     * Original signature :
@@ -16750,57 +16750,57 @@ public interface Leptonica extends Library, ILeptonica {
      */
     Pix pixReadMemSpix(ByteBuffer data, NativeSize size);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixWriteMemSpix(l_uint8**, size_t*, PIX*)</code><br>
-     * <i>native declaration : allheaders.h:4808</i>
-     */
-    int pixWriteMemSpix(PointerByReference pdata, NativeSizeByReference psize, Pix pix);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixWriteMemSpix(l_uint8**, size_t*, PIX*)</code><br>
+//     * <i>native declaration : allheaders.h:4808</i>
+//     */
+//    int pixWriteMemSpix(PointerByReference pdata, NativeSizeByReference psize, Pix pix);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixSerializeToMemory(PIX*, l_uint32**, size_t*)</code><br>
-     * <i>native declaration : allheaders.h:4810</i>
-     */
-    int pixSerializeToMemory(Pix pixs, PointerByReference pdata, NativeSizeByReference pnbytes);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixSerializeToMemory(PIX*, l_uint32**, size_t*)</code><br>
+//     * <i>native declaration : allheaders.h:4810</i>
+//     */
+//    int pixSerializeToMemory(Pix pixs, PointerByReference pdata, NativeSizeByReference pnbytes);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixDeserializeFromMemory(const l_uint32*, size_t)</code><br>
-     * <i>native declaration : allheaders.h:4812</i>
-     */
-    Pix pixDeserializeFromMemory(IntBuffer data, NativeSize nbytes);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixDeserializeFromMemory(const l_uint32*, size_t)</code><br>
+//     * <i>native declaration : allheaders.h:4812</i>
+//     */
+//    Pix pixDeserializeFromMemory(IntBuffer data, NativeSize nbytes);
 
-    /**
-     * Original signature : <code>L_STACK* lstackCreate(l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4814</i>
-     */
-    L_Stack lstackCreate(int nalloc);
+//    /**
+//     * Original signature : <code>L_STACK* lstackCreate(l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4814</i>
+//     */
+//    L_Stack lstackCreate(int nalloc);
 
-    /**
-     * Original signature :
-     * <code>void lstackDestroy(L_STACK**, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4816</i>
-     */
-    void lstackDestroy(PointerByReference plstack, int freeflag);
+//    /**
+//     * Original signature :
+//     * <code>void lstackDestroy(L_STACK**, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4816</i>
+//     */
+//    void lstackDestroy(PointerByReference plstack, int freeflag);
 
-    /**
-     * Original signature : <code>l_int32 lstackAdd(L_STACK*, void*)</code><br>
-     * <i>native declaration : allheaders.h:4818</i>
-     */
-    int lstackAdd(L_Stack lstack, Pointer item);
+//    /**
+//     * Original signature : <code>l_int32 lstackAdd(L_STACK*, void*)</code><br>
+//     * <i>native declaration : allheaders.h:4818</i>
+//     */
+//    int lstackAdd(L_Stack lstack, Pointer item);
 
-    /**
-     * Original signature : <code>void* lstackRemove(L_STACK*)</code><br>
-     * <i>native declaration : allheaders.h:4820</i>
-     */
-    Pointer lstackRemove(L_Stack lstack);
+//    /**
+//     * Original signature : <code>void* lstackRemove(L_STACK*)</code><br>
+//     * <i>native declaration : allheaders.h:4820</i>
+//     */
+//    Pointer lstackRemove(L_Stack lstack);
 
-    /**
-     * Original signature : <code>l_int32 lstackGetCount(L_STACK*)</code><br>
-     * <i>native declaration : allheaders.h:4822</i>
-     */
-    int lstackGetCount(L_Stack lstack);
+//    /**
+//     * Original signature : <code>l_int32 lstackGetCount(L_STACK*)</code><br>
+//     * <i>native declaration : allheaders.h:4822</i>
+//     */
+//    int lstackGetCount(L_Stack lstack);
 
 //    /**
 //     * Original signature :
@@ -16809,32 +16809,32 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int lstackPrint(FILE fp, L_Stack lstack);
 
-    /**
-     * Original signature : <code>L_STRCODE* strcodeCreate(l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4826</i>
-     */
-    L_StrCode strcodeCreate(int fileno);
+//    /**
+//     * Original signature : <code>L_STRCODE* strcodeCreate(l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4826</i>
+//     */
+//    L_StrCode strcodeCreate(int fileno);
 
-    /**
-     * Original signature :
-     * <code>l_int32 strcodeCreateFromFile(const char*, l_int32, const char*)</code><br>
-     * <i>native declaration : allheaders.h:4828</i>
-     */
-    int strcodeCreateFromFile(String filein, int fileno, String outdir);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 strcodeCreateFromFile(const char*, l_int32, const char*)</code><br>
+//     * <i>native declaration : allheaders.h:4828</i>
+//     */
+//    int strcodeCreateFromFile(String filein, int fileno, String outdir);
 
-    /**
-     * Original signature :
-     * <code>l_int32 strcodeGenerate(L_STRCODE*, const char*, const char*)</code><br>
-     * <i>native declaration : allheaders.h:4830</i>
-     */
-    int strcodeGenerate(L_StrCode strcode, String filein, String type);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 strcodeGenerate(L_STRCODE*, const char*, const char*)</code><br>
+//     * <i>native declaration : allheaders.h:4830</i>
+//     */
+//    int strcodeGenerate(L_StrCode strcode, String filein, String type);
 
-    /**
-     * Original signature :
-     * <code>l_int32 strcodeFinalize(L_STRCODE**, const char*)</code><br>
-     * <i>native declaration : allheaders.h:4832</i>
-     */
-    int strcodeFinalize(PointerByReference pstrcode, String outdir);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 strcodeFinalize(L_STRCODE**, const char*)</code><br>
+//     * <i>native declaration : allheaders.h:4832</i>
+//     */
+//    int strcodeFinalize(PointerByReference pstrcode, String outdir);
 
     /**
      * Original signature :
@@ -16850,65 +16850,65 @@ public interface Leptonica extends Library, ILeptonica {
      */
     int l_getStructnameFromFile(String filename, PointerByReference psn);
 
-    /**
-     * Original signature :
-     * <code>l_int32* sudokuReadFile(const char*)</code><br>
-     * <i>native declaration : allheaders.h:4836</i>
-     */
-    IntByReference sudokuReadFile(String filename);
+//    /**
+//     * Original signature :
+//     * <code>l_int32* sudokuReadFile(const char*)</code><br>
+//     * <i>native declaration : allheaders.h:4836</i>
+//     */
+//    IntByReference sudokuReadFile(String filename);
 
-    /**
-     * Original signature :
-     * <code>l_int32* sudokuReadString(const char*)</code><br>
-     * <i>native declaration : allheaders.h:4838</i>
-     */
-    IntByReference sudokuReadString(String str);
+//    /**
+//     * Original signature :
+//     * <code>l_int32* sudokuReadString(const char*)</code><br>
+//     * <i>native declaration : allheaders.h:4838</i>
+//     */
+//    IntByReference sudokuReadString(String str);
 
-    /**
-     * Original signature : <code>L_SUDOKU* sudokuCreate(l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:4840</i>
-     */
-    L_Sudoku sudokuCreate(IntBuffer array);
+//    /**
+//     * Original signature : <code>L_SUDOKU* sudokuCreate(l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:4840</i>
+//     */
+//    L_Sudoku sudokuCreate(IntBuffer array);
 
-    /**
-     * Original signature : <code>void sudokuDestroy(L_SUDOKU**)</code><br>
-     * <i>native declaration : allheaders.h:4842</i>
-     */
-    void sudokuDestroy(PointerByReference psud);
+//    /**
+//     * Original signature : <code>void sudokuDestroy(L_SUDOKU**)</code><br>
+//     * <i>native declaration : allheaders.h:4842</i>
+//     */
+//    void sudokuDestroy(PointerByReference psud);
 
-    /**
-     * Original signature : <code>l_int32 sudokuSolve(L_SUDOKU*)</code><br>
-     * <i>native declaration : allheaders.h:4844</i>
-     */
-    int sudokuSolve(L_Sudoku sud);
+//    /**
+//     * Original signature : <code>l_int32 sudokuSolve(L_SUDOKU*)</code><br>
+//     * <i>native declaration : allheaders.h:4844</i>
+//     */
+//    int sudokuSolve(L_Sudoku sud);
 
-    /**
-     * Original signature :
-     * <code>l_int32 sudokuTestUniqueness(l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:4846</i>
-     */
-    int sudokuTestUniqueness(IntBuffer array, IntBuffer punique);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 sudokuTestUniqueness(l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:4846</i>
+//     */
+//    int sudokuTestUniqueness(IntBuffer array, IntBuffer punique);
 
-    /**
-     * Original signature :
-     * <code>L_SUDOKU* sudokuGenerate(l_int32*, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4848</i>
-     */
-    L_Sudoku sudokuGenerate(IntBuffer array, int seed, int minelems, int maxtries);
+//    /**
+//     * Original signature :
+//     * <code>L_SUDOKU* sudokuGenerate(l_int32*, l_int32, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4848</i>
+//     */
+//    L_Sudoku sudokuGenerate(IntBuffer array, int seed, int minelems, int maxtries);
 
-    /**
-     * Original signature :
-     * <code>l_int32 sudokuOutput(L_SUDOKU*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4850</i>
-     */
-    int sudokuOutput(L_Sudoku sud, int arraytype);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 sudokuOutput(L_SUDOKU*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4850</i>
+//     */
+//    int sudokuOutput(L_Sudoku sud, int arraytype);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixAddSingleTextblock(PIX*, L_BMF*, const char*, l_uint32, l_int32, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:4852</i>
-     */
-    Pix pixAddSingleTextblock(Pix pixs, L_Bmf bmf, String textstr, int val, int location, IntBuffer poverflow);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixAddSingleTextblock(PIX*, L_BMF*, const char*, l_uint32, l_int32, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:4852</i>
+//     */
+//    Pix pixAddSingleTextblock(Pix pixs, L_Bmf bmf, String textstr, int val, int location, IntBuffer poverflow);
 
     /**
      * Original signature :
@@ -16917,26 +16917,26 @@ public interface Leptonica extends Library, ILeptonica {
      */
     Pix pixAddTextlines(Pix pixs, L_Bmf bmf, String textstr, int val, int location);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixSetTextblock(PIX*, L_BMF*, const char*, l_uint32, l_int32, l_int32, l_int32, l_int32, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:4856</i>
-     */
-    int pixSetTextblock(Pix pixs, L_Bmf bmf, String textstr, int val, int x0, int y0, int wtext, int firstindent, IntBuffer poverflow);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixSetTextblock(PIX*, L_BMF*, const char*, l_uint32, l_int32, l_int32, l_int32, l_int32, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:4856</i>
+//     */
+//    int pixSetTextblock(Pix pixs, L_Bmf bmf, String textstr, int val, int x0, int y0, int wtext, int firstindent, IntBuffer poverflow);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixSetTextline(PIX*, L_BMF*, const char*, l_uint32, l_int32, l_int32, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:4858</i>
-     */
-    int pixSetTextline(Pix pixs, L_Bmf bmf, String textstr, int val, int x0, int y0, IntBuffer pwidth, IntBuffer poverflow);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixSetTextline(PIX*, L_BMF*, const char*, l_uint32, l_int32, l_int32, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:4858</i>
+//     */
+//    int pixSetTextline(Pix pixs, L_Bmf bmf, String textstr, int val, int x0, int y0, IntBuffer pwidth, IntBuffer poverflow);
 
-    /**
-     * Original signature :
-     * <code>PIXA* pixaAddTextNumber(PIXA*, L_BMF*, NUMA*, l_uint32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4860</i>
-     */
-    Pixa pixaAddTextNumber(Pixa pixas, L_Bmf bmf, Numa na, int val, int location);
+//    /**
+//     * Original signature :
+//     * <code>PIXA* pixaAddTextNumber(PIXA*, L_BMF*, NUMA*, l_uint32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4860</i>
+//     */
+//    Pixa pixaAddTextNumber(Pixa pixas, L_Bmf bmf, Numa na, int val, int location);
 
     /**
      * Original signature :
@@ -16952,26 +16952,26 @@ public interface Leptonica extends Library, ILeptonica {
      */
     int pixaAddPixWithText(Pixa pixa, Pix pixs, int reduction, L_Bmf bmf, String textstr, int val, int location);
 
-    /**
-     * Original signature :
-     * <code>SARRAY* bmfGetLineStrings(L_BMF*, const char*, l_int32, l_int32, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:4866</i>
-     */
-    Sarray bmfGetLineStrings(L_Bmf bmf, String textstr, int maxw, int firstindent, IntBuffer ph);
+//    /**
+//     * Original signature :
+//     * <code>SARRAY* bmfGetLineStrings(L_BMF*, const char*, l_int32, l_int32, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:4866</i>
+//     */
+//    Sarray bmfGetLineStrings(L_Bmf bmf, String textstr, int maxw, int firstindent, IntBuffer ph);
 
-    /**
-     * Original signature :
-     * <code>NUMA* bmfGetWordWidths(L_BMF*, const char*, SARRAY*)</code><br>
-     * <i>native declaration : allheaders.h:4868</i>
-     */
-    Numa bmfGetWordWidths(L_Bmf bmf, String textstr, Sarray sa);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* bmfGetWordWidths(L_BMF*, const char*, SARRAY*)</code><br>
+//     * <i>native declaration : allheaders.h:4868</i>
+//     */
+//    Numa bmfGetWordWidths(L_Bmf bmf, String textstr, Sarray sa);
 
-    /**
-     * Original signature :
-     * <code>l_int32 bmfGetStringWidth(L_BMF*, const char*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:4870</i>
-     */
-    int bmfGetStringWidth(L_Bmf bmf, String textstr, IntBuffer pw);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 bmfGetStringWidth(L_BMF*, const char*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:4870</i>
+//     */
+//    int bmfGetStringWidth(L_Bmf bmf, String textstr, IntBuffer pw);
 
     /**
      * Original signature :
@@ -16980,12 +16980,12 @@ public interface Leptonica extends Library, ILeptonica {
      */
     Sarray splitStringToParagraphs(ByteBuffer textstr, int splitflag);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixReadTiff(const char*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4874</i>
-     */
-    Pix pixReadTiff(String filename, int n);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixReadTiff(const char*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4874</i>
+//     */
+//    Pix pixReadTiff(String filename, int n);
 
 //    /**
 //     * Original signature :
@@ -16994,19 +16994,19 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    Pix pixReadStreamTiff(FILE fp, int n);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixWriteTiff(const char*, PIX*, l_int32, const char*)</code><br>
-     * <i>native declaration : allheaders.h:4878</i>
-     */
-    int pixWriteTiff(String filename, Pix pix, int comptype, String modestring);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixWriteTiff(const char*, PIX*, l_int32, const char*)</code><br>
+//     * <i>native declaration : allheaders.h:4878</i>
+//     */
+//    int pixWriteTiff(String filename, Pix pix, int comptype, String modestring);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixWriteTiffCustom(const char*, PIX*, l_int32, const char*, NUMA*, SARRAY*, SARRAY*, NUMA*)</code><br>
-     * <i>native declaration : allheaders.h:4880</i>
-     */
-    int pixWriteTiffCustom(String filename, Pix pix, int comptype, String modestring, Numa natags, Sarray savals, Sarray satypes, Numa nasizes);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixWriteTiffCustom(const char*, PIX*, l_int32, const char*, NUMA*, SARRAY*, SARRAY*, NUMA*)</code><br>
+//     * <i>native declaration : allheaders.h:4880</i>
+//     */
+//    int pixWriteTiffCustom(String filename, Pix pix, int comptype, String modestring, Numa natags, Sarray savals, Sarray satypes, Numa nasizes);
 
 //    /**
 //     * Original signature :
@@ -17015,26 +17015,26 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int pixWriteStreamTiff(FILE fp, Pix pix, int comptype);
 
-    /**
-     * Original signature :
-     * <code>PIXA* pixaReadMultipageTiff(const char*)</code><br>
-     * <i>native declaration : allheaders.h:4884</i>
-     */
-    Pixa pixaReadMultipageTiff(String filename);
+//    /**
+//     * Original signature :
+//     * <code>PIXA* pixaReadMultipageTiff(const char*)</code><br>
+//     * <i>native declaration : allheaders.h:4884</i>
+//     */
+//    Pixa pixaReadMultipageTiff(String filename);
 
-    /**
-     * Original signature :
-     * <code>l_int32 writeMultipageTiff(const char*, const char*, const char*)</code><br>
-     * <i>native declaration : allheaders.h:4886</i>
-     */
-    int writeMultipageTiff(String dirin, String substr, String fileout);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 writeMultipageTiff(const char*, const char*, const char*)</code><br>
+//     * <i>native declaration : allheaders.h:4886</i>
+//     */
+//    int writeMultipageTiff(String dirin, String substr, String fileout);
 
-    /**
-     * Original signature :
-     * <code>l_int32 writeMultipageTiffSA(SARRAY*, const char*)</code><br>
-     * <i>native declaration : allheaders.h:4888</i>
-     */
-    int writeMultipageTiffSA(Sarray sa, String fileout);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 writeMultipageTiffSA(SARRAY*, const char*)</code><br>
+//     * <i>native declaration : allheaders.h:4888</i>
+//     */
+//    int writeMultipageTiffSA(Sarray sa, String fileout);
 
 //    /**
 //     * Original signature :
@@ -17057,12 +17057,12 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int getTiffResolution(FILE fp, IntBuffer pxres, IntBuffer pyres);
 
-    /**
-     * Original signature :
-     * <code>l_int32 readHeaderTiff(const char*, l_int32, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:4896</i>
-     */
-    int readHeaderTiff(String filename, int n, IntBuffer pwidth, IntBuffer pheight, IntBuffer pbps, IntBuffer pspp, IntBuffer pres, IntBuffer pcmap, IntBuffer pformat);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 readHeaderTiff(const char*, l_int32, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:4896</i>
+//     */
+//    int readHeaderTiff(String filename, int n, IntBuffer pwidth, IntBuffer pheight, IntBuffer pbps, IntBuffer pspp, IntBuffer pres, IntBuffer pcmap, IntBuffer pformat);
 
 //    /**
 //     * Original signature :
@@ -17085,12 +17085,12 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int findTiffCompression(FILE fp, IntBuffer pcomptype);
 
-    /**
-     * Original signature :
-     * <code>l_int32 extractG4DataFromFile(const char*, l_uint8**, size_t*, l_int32*, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:4904</i>
-     */
-    int extractG4DataFromFile(String filein, PointerByReference pdata, NativeSizeByReference pnbytes, IntBuffer pw, IntBuffer ph, IntBuffer pminisblack);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 extractG4DataFromFile(const char*, l_uint8**, size_t*, l_int32*, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:4904</i>
+//     */
+//    int extractG4DataFromFile(String filein, PointerByReference pdata, NativeSizeByReference pnbytes, IntBuffer pw, IntBuffer ph, IntBuffer pminisblack);
 
     /**
      * Original signature :
@@ -17099,52 +17099,52 @@ public interface Leptonica extends Library, ILeptonica {
      */
     Pix pixReadMemTiff(ByteBuffer cdata, NativeSize size, int n);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixWriteMemTiff(l_uint8**, size_t*, PIX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4908</i>
-     */
-    int pixWriteMemTiff(PointerByReference pdata, NativeSizeByReference psize, Pix pix, int comptype);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixWriteMemTiff(l_uint8**, size_t*, PIX*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4908</i>
+//     */
+//    int pixWriteMemTiff(PointerByReference pdata, NativeSizeByReference psize, Pix pix, int comptype);
 
-    /**
-     * Original signature :
-     * <code>l_int32 pixWriteMemTiffCustom(l_uint8**, size_t*, PIX*, l_int32, NUMA*, SARRAY*, SARRAY*, NUMA*)</code><br>
-     * <i>native declaration : allheaders.h:4910</i>
-     */
-    int pixWriteMemTiffCustom(PointerByReference pdata, NativeSizeByReference psize, Pix pix, int comptype, Numa natags, Sarray savals, Sarray satypes, Numa nasizes);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 pixWriteMemTiffCustom(l_uint8**, size_t*, PIX*, l_int32, NUMA*, SARRAY*, SARRAY*, NUMA*)</code><br>
+//     * <i>native declaration : allheaders.h:4910</i>
+//     */
+//    int pixWriteMemTiffCustom(PointerByReference pdata, NativeSizeByReference psize, Pix pix, int comptype, Numa natags, Sarray savals, Sarray satypes, Numa nasizes);
 
-    /**
-     * Original signature : <code>l_int32 setMsgSeverity(l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4912</i>
-     */
-    int setMsgSeverity(int newsev);
+//    /**
+//     * Original signature : <code>l_int32 setMsgSeverity(l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4912</i>
+//     */
+//    int setMsgSeverity(int newsev);
 
-    /**
-     * Original signature :
-     * <code>l_int32 returnErrorInt(const char*, const char*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4914</i>
-     */
-    int returnErrorInt(String msg, String procname, int ival);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 returnErrorInt(const char*, const char*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4914</i>
+//     */
+//    int returnErrorInt(String msg, String procname, int ival);
 
-    /**
-     * Original signature :
-     * <code>l_float32 returnErrorFloat(const char*, const char*, l_float32)</code><br>
-     * <i>native declaration : allheaders.h:4916</i>
-     */
-    float returnErrorFloat(String msg, String procname, float fval);
+//    /**
+//     * Original signature :
+//     * <code>l_float32 returnErrorFloat(const char*, const char*, l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:4916</i>
+//     */
+//    float returnErrorFloat(String msg, String procname, float fval);
 
-    /**
-     * Original signature :
-     * <code>void* returnErrorPtr(const char*, const char*, void*)</code><br>
-     * <i>native declaration : allheaders.h:4918</i>
-     */
-    Pointer returnErrorPtr(String msg, String procname, Pointer pval);
+//    /**
+//     * Original signature :
+//     * <code>void* returnErrorPtr(const char*, const char*, void*)</code><br>
+//     * <i>native declaration : allheaders.h:4918</i>
+//     */
+//    Pointer returnErrorPtr(String msg, String procname, Pointer pval);
 
-    /**
-     * Original signature : <code>char* stringNew(const char*)</code><br>
-     * <i>native declaration : allheaders.h:4920</i>
-     */
-    Pointer stringNew(String src);
+//    /**
+//     * Original signature : <code>char* stringNew(const char*)</code><br>
+//     * <i>native declaration : allheaders.h:4920</i>
+//     */
+//    Pointer stringNew(String src);
 
     /**
      * Original signature :
@@ -17153,19 +17153,19 @@ public interface Leptonica extends Library, ILeptonica {
      */
     int stringCopy(ByteBuffer dest, String src, int n);
 
-    /**
-     * Original signature :
-     * <code>l_int32 stringReplace(char**, const char*)</code><br>
-     * <i>native declaration : allheaders.h:4924</i>
-     */
-    int stringReplace(PointerByReference pdest, String src);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 stringReplace(char**, const char*)</code><br>
+//     * <i>native declaration : allheaders.h:4924</i>
+//     */
+//    int stringReplace(PointerByReference pdest, String src);
 
-    /**
-     * Original signature :
-     * <code>l_int32 stringLength(const char*, size_t)</code><br>
-     * <i>native declaration : allheaders.h:4926</i>
-     */
-    int stringLength(String src, NativeSize size);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 stringLength(const char*, size_t)</code><br>
+//     * <i>native declaration : allheaders.h:4926</i>
+//     */
+//    int stringLength(String src, NativeSize size);
 
     /**
      * Original signature :
@@ -17181,25 +17181,25 @@ public interface Leptonica extends Library, ILeptonica {
      */
     Pointer stringConcatNew(String first, PointerByReference varArgs);
 
-    /**
-     * Original signature :
-     * <code>char* stringJoin(const char*, const char*)</code><br>
-     * <i>native declaration : allheaders.h:4932</i>
-     */
-    Pointer stringJoin(String src1, String src2);
+//    /**
+//     * Original signature :
+//     * <code>char* stringJoin(const char*, const char*)</code><br>
+//     * <i>native declaration : allheaders.h:4932</i>
+//     */
+//    Pointer stringJoin(String src1, String src2);
 
-    /**
-     * Original signature :
-     * <code>l_int32 stringJoinIP(char**, const char*)</code><br>
-     * <i>native declaration : allheaders.h:4934</i>
-     */
-    int stringJoinIP(PointerByReference psrc1, String src2);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 stringJoinIP(char**, const char*)</code><br>
+//     * <i>native declaration : allheaders.h:4934</i>
+//     */
+//    int stringJoinIP(PointerByReference psrc1, String src2);
 
-    /**
-     * Original signature : <code>char* stringReverse(const char*)</code><br>
-     * <i>native declaration : allheaders.h:4936</i>
-     */
-    Pointer stringReverse(String src);
+//    /**
+//     * Original signature : <code>char* stringReverse(const char*)</code><br>
+//     * <i>native declaration : allheaders.h:4936</i>
+//     */
+//    Pointer stringReverse(String src);
 
     /**
      * Original signature :
@@ -17215,33 +17215,33 @@ public interface Leptonica extends Library, ILeptonica {
      */
     int stringSplitOnToken(ByteBuffer cstr, String seps, PointerByReference phead, PointerByReference ptail);
 
-    /**
-     * Original signature :
-     * <code>char* stringRemoveChars(const char*, const char*)</code><br>
-     * <i>native declaration : allheaders.h:4942</i>
-     */
-    Pointer stringRemoveChars(String src, String remchars);
+//    /**
+//     * Original signature :
+//     * <code>char* stringRemoveChars(const char*, const char*)</code><br>
+//     * <i>native declaration : allheaders.h:4942</i>
+//     */
+//    Pointer stringRemoveChars(String src, String remchars);
 
-    /**
-     * Original signature :
-     * <code>l_int32 stringFindSubstr(const char*, const char*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:4944</i>
-     */
-    int stringFindSubstr(String src, String sub, IntBuffer ploc);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 stringFindSubstr(const char*, const char*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:4944</i>
+//     */
+//    int stringFindSubstr(String src, String sub, IntBuffer ploc);
 
-    /**
-     * Original signature :
-     * <code>char* stringReplaceSubstr(const char*, const char*, const char*, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:4946</i>
-     */
-    Pointer stringReplaceSubstr(String src, String sub1, String sub2, IntBuffer pfound, IntBuffer ploc);
+//    /**
+//     * Original signature :
+//     * <code>char* stringReplaceSubstr(const char*, const char*, const char*, l_int32*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:4946</i>
+//     */
+//    Pointer stringReplaceSubstr(String src, String sub1, String sub2, IntBuffer pfound, IntBuffer ploc);
 
-    /**
-     * Original signature :
-     * <code>char* stringReplaceEachSubstr(const char*, const char*, const char*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:4948</i>
-     */
-    Pointer stringReplaceEachSubstr(String src, String sub1, String sub2, IntBuffer pcount);
+//    /**
+//     * Original signature :
+//     * <code>char* stringReplaceEachSubstr(const char*, const char*, const char*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:4948</i>
+//     */
+//    Pointer stringReplaceEachSubstr(String src, String sub1, String sub2, IntBuffer pcount);
 
     /**
      * Original signature :
@@ -17257,19 +17257,19 @@ public interface Leptonica extends Library, ILeptonica {
      */
     int arrayFindSequence(ByteBuffer data, NativeSize datalen, ByteBuffer sequence, NativeSize seqlen, IntBuffer poffset, IntBuffer pfound);
 
-    /**
-     * Original signature :
-     * <code>void* reallocNew(void**, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4954</i>
-     */
-    Pointer reallocNew(PointerByReference pindata, int oldsize, int newsize);
+//    /**
+//     * Original signature :
+//     * <code>void* reallocNew(void**, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4954</i>
+//     */
+//    Pointer reallocNew(PointerByReference pindata, int oldsize, int newsize);
 
-    /**
-     * Original signature :
-     * <code>l_uint8* l_binaryRead(const char*, size_t*)</code><br>
-     * <i>native declaration : allheaders.h:4956</i>
-     */
-    Pointer l_binaryRead(String filename, NativeSizeByReference pnbytes);
+//    /**
+//     * Original signature :
+//     * <code>l_uint8* l_binaryRead(const char*, size_t*)</code><br>
+//     * <i>native declaration : allheaders.h:4956</i>
+//     */
+//    Pointer l_binaryRead(String filename, NativeSizeByReference pnbytes);
 
 //    /**
 //     * Original signature :
@@ -17278,12 +17278,12 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    Pointer l_binaryReadStream(FILE fp, NativeSizeByReference pnbytes);
 
-    /**
-     * Original signature :
-     * <code>l_uint8* l_binaryReadSelect(const char*, size_t, size_t, size_t*)</code><br>
-     * <i>native declaration : allheaders.h:4960</i>
-     */
-    Pointer l_binaryReadSelect(String filename, NativeSize start, NativeSize nbytes, NativeSizeByReference pnread);
+//    /**
+//     * Original signature :
+//     * <code>l_uint8* l_binaryReadSelect(const char*, size_t, size_t, size_t*)</code><br>
+//     * <i>native declaration : allheaders.h:4960</i>
+//     */
+//    Pointer l_binaryReadSelect(String filename, NativeSize start, NativeSize nbytes, NativeSizeByReference pnread);
 
 //    /**
 //     * Original signature :
@@ -17292,18 +17292,18 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    Pointer l_binaryReadSelectStream(FILE fp, NativeSize start, NativeSize nbytes, NativeSizeByReference pnread);
 
-    /**
-     * Original signature :
-     * <code>l_int32 l_binaryWrite(const char*, const char*, void*, size_t)</code><br>
-     * <i>native declaration : allheaders.h:4964</i>
-     */
-    int l_binaryWrite(String filename, String operation, Pointer data, NativeSize nbytes);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 l_binaryWrite(const char*, const char*, void*, size_t)</code><br>
+//     * <i>native declaration : allheaders.h:4964</i>
+//     */
+//    int l_binaryWrite(String filename, String operation, Pointer data, NativeSize nbytes);
 
-    /**
-     * Original signature : <code>size_t nbytesInFile(const char*)</code><br>
-     * <i>native declaration : allheaders.h:4966</i>
-     */
-    NativeSize nbytesInFile(String filename);
+//    /**
+//     * Original signature : <code>size_t nbytesInFile(const char*)</code><br>
+//     * <i>native declaration : allheaders.h:4966</i>
+//     */
+//    NativeSize nbytesInFile(String filename);
 
 //    /**
 //     * Original signature : <code>size_t fnbytesInFile(FILE*)</code><br>
@@ -17318,61 +17318,61 @@ public interface Leptonica extends Library, ILeptonica {
      */
     Pointer l_binaryCopy(ByteBuffer datas, NativeSize size);
 
-    /**
-     * Original signature :
-     * <code>l_int32 fileCopy(const char*, const char*)</code><br>
-     * <i>native declaration : allheaders.h:4972</i>
-     */
-    int fileCopy(String srcfile, String newfile);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 fileCopy(const char*, const char*)</code><br>
+//     * <i>native declaration : allheaders.h:4972</i>
+//     */
+//    int fileCopy(String srcfile, String newfile);
 
-    /**
-     * Original signature :
-     * <code>l_int32 fileConcatenate(const char*, const char*)</code><br>
-     * <i>native declaration : allheaders.h:4974</i>
-     */
-    int fileConcatenate(String srcfile, String destfile);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 fileConcatenate(const char*, const char*)</code><br>
+//     * <i>native declaration : allheaders.h:4974</i>
+//     */
+//    int fileConcatenate(String srcfile, String destfile);
 
-    /**
-     * Original signature :
-     * <code>l_int32 fileAppendString(const char*, const char*)</code><br>
-     * <i>native declaration : allheaders.h:4976</i>
-     */
-    int fileAppendString(String filename, String str);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 fileAppendString(const char*, const char*)</code><br>
+//     * <i>native declaration : allheaders.h:4976</i>
+//     */
+//    int fileAppendString(String filename, String str);
 
-    /**
-     * Original signature :
-     * <code>l_int32 filesAreIdentical(const char*, const char*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:4978</i>
-     */
-    int filesAreIdentical(String fname1, String fname2, IntBuffer psame);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 filesAreIdentical(const char*, const char*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:4978</i>
+//     */
+//    int filesAreIdentical(String fname1, String fname2, IntBuffer psame);
 
-    /**
-     * Original signature :
-     * <code>l_uint16 convertOnLittleEnd16(l_uint16)</code><br>
-     * <i>native declaration : allheaders.h:4980</i>
-     */
-    short convertOnLittleEnd16(short shortin);
+//    /**
+//     * Original signature :
+//     * <code>l_uint16 convertOnLittleEnd16(l_uint16)</code><br>
+//     * <i>native declaration : allheaders.h:4980</i>
+//     */
+//    short convertOnLittleEnd16(short shortin);
 
-    /**
-     * Original signature :
-     * <code>l_uint16 convertOnBigEnd16(l_uint16)</code><br>
-     * <i>native declaration : allheaders.h:4982</i>
-     */
-    short convertOnBigEnd16(short shortin);
+//    /**
+//     * Original signature :
+//     * <code>l_uint16 convertOnBigEnd16(l_uint16)</code><br>
+//     * <i>native declaration : allheaders.h:4982</i>
+//     */
+//    short convertOnBigEnd16(short shortin);
 
-    /**
-     * Original signature :
-     * <code>l_uint32 convertOnLittleEnd32(l_uint32)</code><br>
-     * <i>native declaration : allheaders.h:4984</i>
-     */
-    int convertOnLittleEnd32(int wordin);
+//    /**
+//     * Original signature :
+//     * <code>l_uint32 convertOnLittleEnd32(l_uint32)</code><br>
+//     * <i>native declaration : allheaders.h:4984</i>
+//     */
+//    int convertOnLittleEnd32(int wordin);
 
-    /**
-     * Original signature :
-     * <code>l_uint32 convertOnBigEnd32(l_uint32)</code><br>
-     * <i>native declaration : allheaders.h:4986</i>
-     */
-    int convertOnBigEnd32(int wordin);
+//    /**
+//     * Original signature :
+//     * <code>l_uint32 convertOnBigEnd32(l_uint32)</code><br>
+//     * <i>native declaration : allheaders.h:4986</i>
+//     */
+//    int convertOnBigEnd32(int wordin);
 
 //    /**
 //     * Original signature : <code>FILE* fopenReadStream(const char*)</code><br>
@@ -17400,11 +17400,11 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int lept_fclose(FILE fp);
 
-    /**
-     * Original signature : <code>void* lept_calloc(size_t, size_t)</code><br>
-     * <i>native declaration : allheaders.h:4996</i>
-     */
-    Pointer lept_calloc(NativeSize nmemb, NativeSize size);
+//    /**
+//     * Original signature : <code>void* lept_calloc(size_t, size_t)</code><br>
+//     * <i>native declaration : allheaders.h:4996</i>
+//     */
+//    Pointer lept_calloc(NativeSize nmemb, NativeSize size);
 
     /**
      * Original signature : <code>void lept_free(void*)</code><br>
@@ -17431,60 +17431,60 @@ public interface Leptonica extends Library, ILeptonica {
      */
     void lept_direxists(String dir, IntBuffer pexists);
 
-    /**
-     * Original signature :
-     * <code>l_int32 lept_rm_match(const char*, const char*)</code><br>
-     * <i>native declaration : allheaders.h:5006</i>
-     */
-    int lept_rm_match(String subdir, String substr);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 lept_rm_match(const char*, const char*)</code><br>
+//     * <i>native declaration : allheaders.h:5006</i>
+//     */
+//    int lept_rm_match(String subdir, String substr);
 
-    /**
-     * Original signature :
-     * <code>l_int32 lept_rm(const char*, const char*)</code><br>
-     * <i>native declaration : allheaders.h:5008</i>
-     */
-    int lept_rm(String subdir, String tail);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 lept_rm(const char*, const char*)</code><br>
+//     * <i>native declaration : allheaders.h:5008</i>
+//     */
+//    int lept_rm(String subdir, String tail);
 
-    /**
-     * Original signature : <code>l_int32 lept_rmfile(const char*)</code><br>
-     * <i>native declaration : allheaders.h:5010</i>
-     */
-    int lept_rmfile(String filepath);
+//    /**
+//     * Original signature : <code>l_int32 lept_rmfile(const char*)</code><br>
+//     * <i>native declaration : allheaders.h:5010</i>
+//     */
+//    int lept_rmfile(String filepath);
 
-    /**
-     * Original signature :
-     * <code>l_int32 lept_mv(const char*, const char*, const char*, char**)</code><br>
-     * <i>native declaration : allheaders.h:5012</i>
-     */
-    int lept_mv(String srcfile, String newdir, String newtail, PointerByReference pnewpath);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 lept_mv(const char*, const char*, const char*, char**)</code><br>
+//     * <i>native declaration : allheaders.h:5012</i>
+//     */
+//    int lept_mv(String srcfile, String newdir, String newtail, PointerByReference pnewpath);
 
-    /**
-     * Original signature :
-     * <code>l_int32 lept_cp(const char*, const char*, const char*, char**)</code><br>
-     * <i>native declaration : allheaders.h:5014</i>
-     */
-    int lept_cp(String srcfile, String newdir, String newtail, PointerByReference pnewpath);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 lept_cp(const char*, const char*, const char*, char**)</code><br>
+//     * <i>native declaration : allheaders.h:5014</i>
+//     */
+//    int lept_cp(String srcfile, String newdir, String newtail, PointerByReference pnewpath);
 
-    /**
-     * Original signature :
-     * <code>l_int32 splitPathAtDirectory(const char*, char**, char**)</code><br>
-     * <i>native declaration : allheaders.h:5016</i>
-     */
-    int splitPathAtDirectory(String pathname, PointerByReference pdir, PointerByReference ptail);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 splitPathAtDirectory(const char*, char**, char**)</code><br>
+//     * <i>native declaration : allheaders.h:5016</i>
+//     */
+//    int splitPathAtDirectory(String pathname, PointerByReference pdir, PointerByReference ptail);
 
-    /**
-     * Original signature :
-     * <code>l_int32 splitPathAtExtension(const char*, char**, char**)</code><br>
-     * <i>native declaration : allheaders.h:5018</i>
-     */
-    int splitPathAtExtension(String pathname, PointerByReference pbasename, PointerByReference pextension);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 splitPathAtExtension(const char*, char**, char**)</code><br>
+//     * <i>native declaration : allheaders.h:5018</i>
+//     */
+//    int splitPathAtExtension(String pathname, PointerByReference pbasename, PointerByReference pextension);
 
-    /**
-     * Original signature :
-     * <code>char* pathJoin(const char*, const char*)</code><br>
-     * <i>native declaration : allheaders.h:5020</i>
-     */
-    Pointer pathJoin(String dir, String fname);
+//    /**
+//     * Original signature :
+//     * <code>char* pathJoin(const char*, const char*)</code><br>
+//     * <i>native declaration : allheaders.h:5020</i>
+//     */
+//    Pointer pathJoin(String dir, String fname);
 
     /**
      * Original signature :
@@ -17500,12 +17500,12 @@ public interface Leptonica extends Library, ILeptonica {
      */
     int convertSepCharsInPath(ByteBuffer path, int type);
 
-    /**
-     * Original signature :
-     * <code>char* genPathname(const char*, const char*)</code><br>
-     * <i>native declaration : allheaders.h:5026</i>
-     */
-    Pointer genPathname(String dir, String fname);
+//    /**
+//     * Original signature :
+//     * <code>char* genPathname(const char*, const char*)</code><br>
+//     * <i>native declaration : allheaders.h:5026</i>
+//     */
+//    Pointer genPathname(String dir, String fname);
 
     /**
      * Original signature :
@@ -17521,102 +17521,102 @@ public interface Leptonica extends Library, ILeptonica {
      */
     int modifyTrailingSlash(ByteBuffer path, NativeSize nbytes, int flag);
 
-    /**
-     * Original signature :
-     * <code>char* genTempFilename(const char*, const char*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:5032</i>
-     */
-    Pointer genTempFilename(String dir, String tail, int usetime, int usepid);
+//    /**
+//     * Original signature :
+//     * <code>char* genTempFilename(const char*, const char*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:5032</i>
+//     */
+//    Pointer genTempFilename(String dir, String tail, int usetime, int usepid);
 
-    /**
-     * Original signature :
-     * <code>l_int32 extractNumberFromFilename(const char*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:5034</i>
-     */
-    int extractNumberFromFilename(String fname, int numpre, int numpost);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 extractNumberFromFilename(const char*, l_int32, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:5034</i>
+//     */
+//    int extractNumberFromFilename(String fname, int numpre, int numpost);
 
-    /**
-     * Original signature :
-     * <code>l_int32 fileCorruptByDeletion(const char*, l_float32, l_float32, const char*)</code><br>
-     * <i>native declaration : allheaders.h:5036</i>
-     */
-    int fileCorruptByDeletion(String filein, float loc, float size, String fileout);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 fileCorruptByDeletion(const char*, l_float32, l_float32, const char*)</code><br>
+//     * <i>native declaration : allheaders.h:5036</i>
+//     */
+//    int fileCorruptByDeletion(String filein, float loc, float size, String fileout);
 
-    /**
-     * Original signature :
-     * <code>l_int32 fileCorruptByMutation(const char*, l_float32, l_float32, const char*)</code><br>
-     * <i>native declaration : allheaders.h:5038</i>
-     */
-    int fileCorruptByMutation(String filein, float loc, float size, String fileout);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 fileCorruptByMutation(const char*, l_float32, l_float32, const char*)</code><br>
+//     * <i>native declaration : allheaders.h:5038</i>
+//     */
+//    int fileCorruptByMutation(String filein, float loc, float size, String fileout);
 
-    /**
-     * Original signature :
-     * <code>l_int32 genRandomIntegerInRange(l_int32, l_int32, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:5040</i>
-     */
-    int genRandomIntegerInRange(int range, int seed, IntBuffer pval);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 genRandomIntegerInRange(l_int32, l_int32, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:5040</i>
+//     */
+//    int genRandomIntegerInRange(int range, int seed, IntBuffer pval);
 
-    /**
-     * Original signature : <code>l_int32 lept_roundftoi(l_float32)</code><br>
-     * <i>native declaration : allheaders.h:5042</i>
-     */
-    int lept_roundftoi(float fval);
+//    /**
+//     * Original signature : <code>l_int32 lept_roundftoi(l_float32)</code><br>
+//     * <i>native declaration : allheaders.h:5042</i>
+//     */
+//    int lept_roundftoi(float fval);
 
-    /**
-     * Original signature :
-     * <code>l_int32 l_hashStringToUint64(const char*, l_uint64*)</code><br>
-     * <i>native declaration : allheaders.h:5044</i>
-     */
-    int l_hashStringToUint64(String str, LongBuffer phash);
+//    /**
+//     * Original signature :
+//     * <code>l_int32 l_hashStringToUint64(const char*, l_uint64*)</code><br>
+//     * <i>native declaration : allheaders.h:5044</i>
+//     */
+//    int l_hashStringToUint64(String str, LongBuffer phash);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 l_hashPtToUint64(l_int32, l_int32, l_uint64*)</code><br>
+//     * <i>native declaration : allheaders.h:5046</i>
+//     */
+//    int l_hashPtToUint64(int x, int y, LongBuffer phash);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 l_hashPtToUint64Fast(l_int32, l_int32, l_int32, l_uint64*)</code><br>
+//     * <i>native declaration : allheaders.h:5048</i>
+//     */
+//    int l_hashPtToUint64Fast(int nbuckets, int x, int y, LongBuffer phash);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 l_hashFloat64ToUint64(l_int32, l_float64, l_uint64*)</code><br>
+//     * <i>native declaration : allheaders.h:5050</i>
+//     */
+//    int l_hashFloat64ToUint64(int nbuckets, double val, LongBuffer phash);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 findNextLargerPrime(l_int32, l_uint32*)</code><br>
+//     * <i>native declaration : allheaders.h:5052</i>
+//     */
+//    int findNextLargerPrime(int start, IntBuffer pprime);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 lept_isPrime(l_uint64, l_int32*, l_uint32*)</code><br>
+//     * <i>native declaration : allheaders.h:5054</i>
+//     */
+//    int lept_isPrime(long n, IntBuffer pis_prime, IntBuffer pfactor);
 
-    /**
-     * Original signature :
-     * <code>l_int32 l_hashPtToUint64(l_int32, l_int32, l_uint64*)</code><br>
-     * <i>native declaration : allheaders.h:5046</i>
-     */
-    int l_hashPtToUint64(int x, int y, LongBuffer phash);
+//    /**
+//     * Original signature :
+//     * <code>l_uint32 convertBinaryToGrayCode(l_uint32)</code><br>
+//     * <i>native declaration : allheaders.h:5056</i>
+//     */
+//    int convertBinaryToGrayCode(int val);
 
-    /**
-     * Original signature :
-     * <code>l_int32 l_hashPtToUint64Fast(l_int32, l_int32, l_int32, l_uint64*)</code><br>
-     * <i>native declaration : allheaders.h:5048</i>
-     */
-    int l_hashPtToUint64Fast(int nbuckets, int x, int y, LongBuffer phash);
-
-    /**
-     * Original signature :
-     * <code>l_int32 l_hashFloat64ToUint64(l_int32, l_float64, l_uint64*)</code><br>
-     * <i>native declaration : allheaders.h:5050</i>
-     */
-    int l_hashFloat64ToUint64(int nbuckets, double val, LongBuffer phash);
-
-    /**
-     * Original signature :
-     * <code>l_int32 findNextLargerPrime(l_int32, l_uint32*)</code><br>
-     * <i>native declaration : allheaders.h:5052</i>
-     */
-    int findNextLargerPrime(int start, IntBuffer pprime);
-
-    /**
-     * Original signature :
-     * <code>l_int32 lept_isPrime(l_uint64, l_int32*, l_uint32*)</code><br>
-     * <i>native declaration : allheaders.h:5054</i>
-     */
-    int lept_isPrime(long n, IntBuffer pis_prime, IntBuffer pfactor);
-
-    /**
-     * Original signature :
-     * <code>l_uint32 convertBinaryToGrayCode(l_uint32)</code><br>
-     * <i>native declaration : allheaders.h:5056</i>
-     */
-    int convertBinaryToGrayCode(int val);
-
-    /**
-     * Original signature :
-     * <code>l_uint32 convertGrayCodeToBinary(l_uint32)</code><br>
-     * <i>native declaration : allheaders.h:5058</i>
-     */
-    int convertGrayCodeToBinary(int val);
+//    /**
+//     * Original signature :
+//     * <code>l_uint32 convertGrayCodeToBinary(l_uint32)</code><br>
+//     * <i>native declaration : allheaders.h:5058</i>
+//     */
+//    int convertGrayCodeToBinary(int val);
 
     /**
      * Original signature : <code>char* getLeptonicaVersion()</code><br>
@@ -17624,29 +17624,29 @@ public interface Leptonica extends Library, ILeptonica {
      */
     Pointer getLeptonicaVersion();
 
-    /**
-     * Original signature : <code>void startTimer()</code><br>
-     * <i>native declaration : allheaders.h:5062</i>
-     */
-    void startTimer();
+//    /**
+//     * Original signature : <code>void startTimer()</code><br>
+//     * <i>native declaration : allheaders.h:5062</i>
+//     */
+//    void startTimer();
 
-    /**
-     * Original signature : <code>l_float32 stopTimer()</code><br>
-     * <i>native declaration : allheaders.h:5064</i>
-     */
-    float stopTimer();
+//    /**
+//     * Original signature : <code>l_float32 stopTimer()</code><br>
+//     * <i>native declaration : allheaders.h:5064</i>
+//     */
+//    float stopTimer();
 
-    /**
-     * Original signature : <code>L_TIMER startTimerNested()</code><br>
-     * <i>native declaration : allheaders.h:5066</i>
-     */
-    Pointer startTimerNested();
+//    /**
+//     * Original signature : <code>L_TIMER startTimerNested()</code><br>
+//     * <i>native declaration : allheaders.h:5066</i>
+//     */
+//    Pointer startTimerNested();
 
-    /**
-     * Original signature : <code>l_float32 stopTimerNested(L_TIMER)</code><br>
-     * <i>native declaration : allheaders.h:5068</i>
-     */
-    float stopTimerNested(Pointer rusage_start);
+//    /**
+//     * Original signature : <code>l_float32 stopTimerNested(L_TIMER)</code><br>
+//     * <i>native declaration : allheaders.h:5068</i>
+//     */
+//    float stopTimerNested(Pointer rusage_start);
 
     /**
      * Original signature :

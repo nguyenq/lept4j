@@ -42861,17 +42861,17 @@ public class LeptonicaTest {
 //        fail("The test case is a prototype.");
 //    }
 //
-    /**
-     * Test of getLeptonicaVersion method, of class Leptonica.
-     */
-    @Test
-    public void testGetLeptonicaVersion() {
-        System.out.println("getLeptonicaVersion");
-        Leptonica instance = new LeptonicaImpl();
-        String expResult = "leptonica-1.73";
-        Pointer result = instance.getLeptonicaVersion();
-        assertTrue(result.getString(0).startsWith(expResult));
-    }
+//    /**
+//     * Test of getLeptonicaVersion method, of class Leptonica.
+//     */
+//    @Test
+//    public void testGetLeptonicaVersion() {
+//        System.out.println("getLeptonicaVersion");
+//        Leptonica instance = new LeptonicaImpl();
+//        String expResult = "leptonica-1.73";
+//        Pointer result = instance.getLeptonicaVersion();
+//        assertTrue(result.getString(0).startsWith(expResult));
+//    }
 //
 //    /**
 //     * Test of startTimer method, of class Leptonica.
