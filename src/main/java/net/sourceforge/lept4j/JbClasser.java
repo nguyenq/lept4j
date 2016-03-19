@@ -112,9 +112,9 @@ public class JbClasser extends Structure {
 	public net.sourceforge.lept4j.Pixa.ByReference pixatd;
 	/**
 	 * Hash table to find templates by size<br>
-	 * C type : NumaHash*
+	 * C type : L_DnaHash*
 	 */
-	public net.sourceforge.lept4j.NumaHash.ByReference nahash;
+	public net.sourceforge.lept4j.L_DnaHash.ByReference dahash;
 	/**
 	 * fg areas of undilated templates;<br>
 	 * C type : Numa*
@@ -154,7 +154,7 @@ public class JbClasser extends Structure {
 		super();
 	}
 	protected List<? > getFieldOrder() {
-		return Arrays.asList("safiles", "method", "components", "maxwidth", "maxheight", "npages", "baseindex", "nacomps", "sizehaus", "rankhaus", "thresh", "weightfactor", "naarea", "w", "h", "nclass", "keep_pixaa", "pixaa", "pixat", "pixatd", "nahash", "nafgt", "ptac", "ptact", "naclass", "napage", "ptaul", "ptall");
+		return Arrays.asList("safiles", "method", "components", "maxwidth", "maxheight", "npages", "baseindex", "nacomps", "sizehaus", "rankhaus", "thresh", "weightfactor", "naarea", "w", "h", "nclass", "keep_pixaa", "pixaa", "pixat", "pixatd", "dahash", "nafgt", "ptac", "ptact", "naclass", "napage", "ptaul", "ptall");
 	}
 	public JbClasser(Pointer peer) {
 		super(peer);

@@ -96,7 +96,7 @@ public class L_Recoga extends Structure {
 	public L_Recoga(int n, int nalloc, PointerByReference recog, net.sourceforge.lept4j.L_Rcha.ByReference rcha) {
 		super();
 		this.n = n;
-//		this.nalloc = nalloc;
+		this.nalloc = nalloc;
 //		if ((recog.length != this.recog.length)) 
 //			throw new IllegalArgumentException("Wrong array size !");
 		this.recog = recog;

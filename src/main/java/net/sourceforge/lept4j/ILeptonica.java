@@ -18,6 +18,7 @@ package net.sourceforge.lept4j;
 import com.ochafik.lang.jnaerator.runtime.NativeSize;
 import com.sun.jna.Callback;
 import com.sun.jna.Pointer;
+import com.sun.jna.PointerType;
 
 public interface ILeptonica {
 
@@ -109,6 +110,9 @@ public interface ILeptonica {
      * caller owns; destroy or save in L_Ptraa
      */
     public static final int L_REMOVE = 1;
+    public static final int L_INT_TYPE = 1;
+    public static final int L_UINT_TYPE = 2;
+    public static final int L_FLOAT_TYPE = 3;
     /**
      * tab or space at beginning of line
      */
@@ -248,6 +252,10 @@ public interface ILeptonica {
      * don't return possibly damaged pix
      */
     public static final int L_JPEG_FAIL_ON_BAD_DATA = 2;
+    /**
+     * use default encoding based on image
+     */
+    public static final int L_DEFAULT_ENCODE = 0;
     /**
      * use dct encoding: 8 and 32 bpp, no cmap
      */
@@ -536,15 +544,27 @@ public interface ILeptonica {
     /**
      * use LSB
      */
-    public static final int L_LS_BYTE = 0;
+    public static final int L_LS_BYTE = 1;
     /**
      * use MSB
      */
-    public static final int L_MS_BYTE = 1;
+    public static final int L_MS_BYTE = 2;
     /**
      * use max(val, 255)
      */
-    public static final int L_CLIP_TO_255 = 2;
+    public static final int L_CLIP_TO_FF = 3;
+    /**
+     * use two LSB
+     */
+    public static final int L_LS_TWO_BYTES = 4;
+    /**
+     * use two MSB
+     */
+    public static final int L_MS_TWO_BYTES = 5;
+    /**
+     * use max(val, 65535)
+     */
+    public static final int L_CLIP_TO_FFFF = 6;
     /**
      * use area map rotation, if possible
      */
@@ -1267,7 +1287,7 @@ public interface ILeptonica {
     /**
      * <i>native declaration : allheaders.h</i>
      */
-    public static final int LIBLEPT_MINOR_VERSION = (int) 72;
+    public static final int LIBLEPT_MINOR_VERSION = (int) 73;
     /**
      * <i>native declaration : environ.h</i>
      */
@@ -1320,10 +1340,6 @@ public interface ILeptonica {
      * <i>native declaration : environ.h</i>
      */
     public static final int USE_PSIO = (int) 1;
-    /**
-     * <i>native declaration : environ.h</i>
-     */
-    public static final int ADD_LEPTONICA_SUBDIR = (int) 0;
     /**
      * <i>native declaration : environ.h</i>
      */
@@ -1391,35 +1407,35 @@ public interface ILeptonica {
     /**
      * <i>native declaration : pix.h</i>
      */
-    public static final int PIX_SRC = (int) (0xc << 1);
+    public static final int PIX_SRC = (int) (0xc);
     /**
      * <i>native declaration : pix.h</i>
      */
-    public static final int PIX_DST = (int) (0xa << 1);
+    public static final int PIX_DST = (int) (0xa);
     /**
      * <i>native declaration : pix.h</i>
      */
-    public static final int PIX_CLR = (int) (0x0 << 1);
+    public static final int PIX_CLR = (int) (0x0);
     /**
      * <i>native declaration : pix.h</i>
      */
-    public static final int PIX_SET = (int) (0xf << 1);
+    public static final int PIX_SET = (int) (0xf);
     /**
      * <i>native declaration : pix.h</i>
      */
-    public static final int PIX_PAINT = (int) ((0xc << 1) | (0xa << 1));
+    public static final int PIX_PAINT = (int) ((0xc) | (0xa));
     /**
      * <i>native declaration : pix.h</i>
      */
-    public static final int PIX_MASK = (int) ((0xc << 1) & (0xa << 1));
+    public static final int PIX_MASK = (int) ((0xc) & (0xa));
     /**
      * <i>native declaration : pix.h</i>
      */
-    public static final int PIX_SUBTRACT = (int) ((0xa << 1) & ((0xc << 1) ^ 0x1e));
+    public static final int PIX_SUBTRACT = (int) ((0xa) & ((0xc) ^ 0x0f));
     /**
      * <i>native declaration : pix.h</i>
      */
-    public static final int PIX_XOR = (int) ((0xc << 1) ^ (0xa << 1));
+    public static final int PIX_XOR = (int) ((0xc) ^ (0xa));
     /**
      * <i>native declaration : pix.h</i>
      */
@@ -1466,7 +1482,7 @@ public interface ILeptonica {
     public static final int LEPTONICA_FT_RESOLUTION = (int) 96;
 
     /**
-     * <i>native declaration : allheaders.h:4875</i>
+     * <i>native declaration : allheaders.h:5169</i>
      */
     public interface setPixMemoryManager_allocator_callback extends Callback {
 
@@ -1474,10 +1490,28 @@ public interface ILeptonica {
     };
 
     /**
-     * <i>native declaration : allheaders.h:4876</i>
+     * <i>native declaration : allheaders.h:5170</i>
      */
     public interface setPixMemoryManager_deallocator_callback extends Callback {
 
         void apply(Pointer voidPtr1);
+    };
+    
+    public static class HBITMAP extends PointerType {
+            public HBITMAP(Pointer address) {
+                    super(address);
+            }
+            public HBITMAP() {
+                    super();
+            }
+    };
+    
+    public static class FILE extends PointerType {
+            public FILE(Pointer address) {
+                    super(address);
+            }
+            public FILE() {
+                    super();
+            }
     };
 }

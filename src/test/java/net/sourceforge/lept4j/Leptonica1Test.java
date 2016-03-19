@@ -15,24 +15,15 @@
  */
 package net.sourceforge.lept4j;
 
-import com.ochafik.lang.jnaerator.runtime.NativeSize;
-import com.ochafik.lang.jnaerator.runtime.NativeSizeByReference;
-import com.sun.jna.ptr.DoubleByReference;
-import com.sun.jna.ptr.FloatByReference;
-import com.sun.jna.ptr.IntByReference;
+import com.sun.jna.Pointer;
 import com.sun.jna.ptr.PointerByReference;
 import java.io.File;
-import java.nio.ByteBuffer;
-import java.nio.DoubleBuffer;
-import java.nio.FloatBuffer;
-import java.nio.IntBuffer;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
-import org.rococoa.Selector;
 
 public class Leptonica1Test {
     private final String testResourcesPath = "src/test/resources/test-data";
@@ -40383,18 +40374,16 @@ public class Leptonica1Test {
 //        fail("The test case is a prototype.");
 //    }
 //
-//    /**
-//     * Test of getLeptonicaVersion method, of class Leptonica1.
-//     */
-//    @Test
-//    public void testGetLeptonicaVersion() {
-//        System.out.println("getLeptonicaVersion");
-//        Pointer expResult = null;
-//        Pointer result = Leptonica1.getLeptonicaVersion();
-//        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
+    /**
+     * Test of getLeptonicaVersion method, of class Leptonica1.
+     */
+    @Test
+    public void testGetLeptonicaVersion() {
+        System.out.println("getLeptonicaVersion");
+        String expResult = "leptonica-1.73";
+        Pointer result = Leptonica1.getLeptonicaVersion();
+        assertTrue(result.getString(0).startsWith(expResult));
+    }
 //
 //    /**
 //     * Test of startTimer method, of class Leptonica1.
