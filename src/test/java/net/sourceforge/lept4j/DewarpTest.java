@@ -216,6 +216,9 @@ public class DewarpTest {
      * @param pix
      */
     void pixDestroy(Pix pix) {
+        if (pix == null) {
+            return;
+        }
         PointerByReference pRef = new PointerByReference();
         pRef.setValue(pix.getPointer());
         instance.pixDestroy(pRef);

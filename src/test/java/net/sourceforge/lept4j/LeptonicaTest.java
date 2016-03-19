@@ -39,6 +39,8 @@ import org.rococoa.Selector;
 public class LeptonicaTest {
     
     private final String testResourcesPath = "src/test/resources/test-data";
+    
+    Leptonica instance;
 
     public LeptonicaTest() {
     }
@@ -53,6 +55,7 @@ public class LeptonicaTest {
     
     @Before
     public void setUp() {
+        instance = new LeptonicaImpl().getInstance();
     }
     
     @After
@@ -68,7 +71,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        Pix pixim = null;
 //        Pix pixg = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixBackgroundNormSimple(pixs, pixim, pixg);
 //        assertEquals(expResult, result);
@@ -92,7 +95,7 @@ public class LeptonicaTest {
 //        int bgval = 0;
 //        int smoothx = 0;
 //        int smoothy = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixBackgroundNorm(pixs, pixim, pixg, sx, sy, thresh, mincount, bgval, smoothx, smoothy);
 //        assertEquals(expResult, result);
@@ -111,7 +114,7 @@ public class LeptonicaTest {
 //        int reduction = 0;
 //        int size = 0;
 //        int bgval = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixBackgroundNormMorph(pixs, pixim, reduction, size, bgval);
 //        assertEquals(expResult, result);
@@ -135,7 +138,7 @@ public class LeptonicaTest {
 //        int smoothx = 0;
 //        int smoothy = 0;
 //        Pix.ByReference[] ppixd = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixBackgroundNormGrayArray(pixs, pixim, sx, sy, thresh, mincount, bgval, smoothx, smoothy, ppixd);
 //        assertEquals(expResult, result);
@@ -162,7 +165,7 @@ public class LeptonicaTest {
 //        Pix.ByReference[] ppixr = null;
 //        Pix.ByReference[] ppixg = null;
 //        Pix.ByReference[] ppixb = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixBackgroundNormRGBArrays(pixs, pixim, pixg, sx, sy, thresh, mincount, bgval, smoothx, smoothy, ppixr, ppixg, ppixb);
 //        assertEquals(expResult, result);
@@ -182,7 +185,7 @@ public class LeptonicaTest {
 //        int size = 0;
 //        int bgval = 0;
 //        Pix.ByReference[] ppixd = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixBackgroundNormGrayArrayMorph(pixs, pixim, reduction, size, bgval, ppixd);
 //        assertEquals(expResult, result);
@@ -204,7 +207,7 @@ public class LeptonicaTest {
 //        Pix.ByReference[] ppixr = null;
 //        Pix.ByReference[] ppixg = null;
 //        Pix.ByReference[] ppixb = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixBackgroundNormRGBArraysMorph(pixs, pixim, reduction, size, bgval, ppixr, ppixg, ppixb);
 //        assertEquals(expResult, result);
@@ -225,7 +228,7 @@ public class LeptonicaTest {
 //        int thresh = 0;
 //        int mincount = 0;
 //        Pix.ByReference[] ppixd = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixGetBackgroundGrayMap(pixs, pixim, sx, sy, thresh, mincount, ppixd);
 //        assertEquals(expResult, result);
@@ -249,7 +252,7 @@ public class LeptonicaTest {
 //        Pix.ByReference[] ppixmr = null;
 //        Pix.ByReference[] ppixmg = null;
 //        Pix.ByReference[] ppixmb = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixGetBackgroundRGBMap(pixs, pixim, pixg, sx, sy, thresh, mincount, ppixmr, ppixmg, ppixmb);
 //        assertEquals(expResult, result);
@@ -268,7 +271,7 @@ public class LeptonicaTest {
 //        int reduction = 0;
 //        int size = 0;
 //        Pix.ByReference[] ppixm = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixGetBackgroundGrayMapMorph(pixs, pixim, reduction, size, ppixm);
 //        assertEquals(expResult, result);
@@ -289,7 +292,7 @@ public class LeptonicaTest {
 //        Pix.ByReference[] ppixmr = null;
 //        Pix.ByReference[] ppixmg = null;
 //        Pix.ByReference[] ppixmb = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixGetBackgroundRGBMapMorph(pixs, pixim, reduction, size, ppixmr, ppixmg, ppixmb);
 //        assertEquals(expResult, result);
@@ -307,7 +310,7 @@ public class LeptonicaTest {
 //        int nx = 0;
 //        int ny = 0;
 //        int filltype = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixFillMapHoles(pix, nx, ny, filltype);
 //        assertEquals(expResult, result);
@@ -324,7 +327,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int addw = 0;
 //        int addh = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixExtendByReplication(pixs, addw, addh);
 //        assertEquals(expResult, result);
@@ -341,7 +344,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        Pix pixm = null;
 //        int factor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixSmoothConnectedRegions(pixs, pixm, factor);
 //        assertEquals(expResult, result);
@@ -359,7 +362,7 @@ public class LeptonicaTest {
 //        int bgval = 0;
 //        int smoothx = 0;
 //        int smoothy = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixGetInvBackgroundMap(pixs, bgval, smoothx, smoothy);
 //        assertEquals(expResult, result);
@@ -377,7 +380,7 @@ public class LeptonicaTest {
 //        Pix pixm = null;
 //        int sx = 0;
 //        int sy = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixApplyInvBackgroundGrayMap(pixs, pixm, sx, sy);
 //        assertEquals(expResult, result);
@@ -397,7 +400,7 @@ public class LeptonicaTest {
 //        Pix pixmb = null;
 //        int sx = 0;
 //        int sy = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixApplyInvBackgroundRGBMap(pixs, pixmr, pixmg, pixmb, sx, sy);
 //        assertEquals(expResult, result);
@@ -414,7 +417,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        Pix pixg = null;
 //        int target = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixApplyVariableGrayMap(pixs, pixg, target);
 //        assertEquals(expResult, result);
@@ -434,7 +437,7 @@ public class LeptonicaTest {
 //        int gval = 0;
 //        int bval = 0;
 //        int mapval = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixGlobalNormRGB(pixd, pixs, rval, gval, bval, mapval);
 //        assertEquals(expResult, result);
@@ -455,7 +458,7 @@ public class LeptonicaTest {
 //        int bval = 0;
 //        int factor = 0;
 //        float rank = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixGlobalNormNoSatRGB(pixd, pixs, rval, gval, bval, factor, rank);
 //        assertEquals(expResult, result);
@@ -481,7 +484,7 @@ public class LeptonicaTest {
 //        Pix.ByReference[] ppixth = null;
 //        Pix.ByReference[] ppixb = null;
 //        Pix.ByReference[] ppixd = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixThresholdSpreadNorm(pixs, filtertype, edgethresh, smoothx, smoothy, gamma, minval, maxval, targetthresh, ppixth, ppixb, ppixd);
 //        assertEquals(expResult, result);
@@ -501,7 +504,7 @@ public class LeptonicaTest {
 //        int smoothx = 0;
 //        int smoothy = 0;
 //        int delta = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixBackgroundNormFlex(pixs, sx, sy, smoothx, smoothy, delta);
 //        assertEquals(expResult, result);
@@ -522,7 +525,7 @@ public class LeptonicaTest {
 //        int mindiff = 0;
 //        int smoothx = 0;
 //        int smoothy = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixContrastNorm(pixd, pixs, sx, sy, mindiff, smoothx, smoothy);
 //        assertEquals(expResult, result);
@@ -544,7 +547,7 @@ public class LeptonicaTest {
 //        int smoothy = 0;
 //        Pix.ByReference[] ppixmin = null;
 //        Pix.ByReference[] ppixmax = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixMinMaxTiles(pixs, sx, sy, mindiff, smoothx, smoothy, ppixmin, ppixmax);
 //        assertEquals(expResult, result);
@@ -561,7 +564,7 @@ public class LeptonicaTest {
 //        Pix pixs1 = null;
 //        Pix pixs2 = null;
 //        int mindiff = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixSetLowContrast(pixs1, pixs2, mindiff);
 //        assertEquals(expResult, result);
@@ -581,7 +584,7 @@ public class LeptonicaTest {
 //        int sy = 0;
 //        Pix pixmin = null;
 //        Pix pixmax = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixLinearTRCTiled(pixd, pixs, sx, sy, pixmin, pixmax);
 //        assertEquals(expResult, result);
@@ -599,7 +602,7 @@ public class LeptonicaTest {
 //        Pta ptad = null;
 //        Pta ptas = null;
 //        int incolor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixAffineSampledPta(pixs, ptad, ptas, incolor);
 //        assertEquals(expResult, result);
@@ -616,7 +619,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        FloatBuffer vc = null;
 //        int incolor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixAffineSampled(pixs, vc, incolor);
 //        assertEquals(expResult, result);
@@ -634,7 +637,7 @@ public class LeptonicaTest {
 //        Pta ptad = null;
 //        Pta ptas = null;
 //        int incolor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixAffinePta(pixs, ptad, ptas, incolor);
 //        assertEquals(expResult, result);
@@ -651,7 +654,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        FloatBuffer vc = null;
 //        int incolor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixAffine(pixs, vc, incolor);
 //        assertEquals(expResult, result);
@@ -669,7 +672,7 @@ public class LeptonicaTest {
 //        Pta ptad = null;
 //        Pta ptas = null;
 //        int colorval = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixAffinePtaColor(pixs, ptad, ptas, colorval);
 //        assertEquals(expResult, result);
@@ -686,7 +689,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        FloatBuffer vc = null;
 //        int colorval = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixAffineColor(pixs, vc, colorval);
 //        assertEquals(expResult, result);
@@ -704,7 +707,7 @@ public class LeptonicaTest {
 //        Pta ptad = null;
 //        Pta ptas = null;
 //        byte grayval = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixAffinePtaGray(pixs, ptad, ptas, grayval);
 //        assertEquals(expResult, result);
@@ -721,7 +724,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        FloatBuffer vc = null;
 //        byte grayval = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixAffineGray(pixs, vc, grayval);
 //        assertEquals(expResult, result);
@@ -741,7 +744,7 @@ public class LeptonicaTest {
 //        Pix pixg = null;
 //        float fract = 0.0F;
 //        int border = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixAffinePtaWithAlpha(pixs, ptad, ptas, pixg, fract, border);
 //        assertEquals(expResult, result);
@@ -758,7 +761,7 @@ public class LeptonicaTest {
 //        Pta ptas = null;
 //        Pta ptad = null;
 //        PointerByReference pvc = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.getAffineXformCoeffs(ptas, ptad, pvc);
 //        assertEquals(expResult, result);
@@ -774,7 +777,7 @@ public class LeptonicaTest {
 //        System.out.println("affineInvertXform");
 //        FloatBuffer vc = null;
 //        PointerByReference pvci = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.affineInvertXform(vc, pvci);
 //        assertEquals(expResult, result);
@@ -793,7 +796,7 @@ public class LeptonicaTest {
 //        int y = 0;
 //        IntBuffer pxp = null;
 //        IntBuffer pyp = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.affineXformSampledPt(vc, x, y, pxp, pyp);
 //        assertEquals(expResult, result);
@@ -812,7 +815,7 @@ public class LeptonicaTest {
 //        int y = 0;
 //        FloatBuffer pxp = null;
 //        FloatBuffer pyp = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.affineXformPt(vc, x, y, pxp, pyp);
 //        assertEquals(expResult, result);
@@ -834,7 +837,7 @@ public class LeptonicaTest {
 //        float y = 0.0F;
 //        int colorval = 0;
 //        IntBuffer pval = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.linearInterpolatePixelColor(datas, wpls, w, h, x, y, colorval, pval);
 //        assertEquals(expResult, result);
@@ -856,7 +859,7 @@ public class LeptonicaTest {
 //        float y = 0.0F;
 //        int grayval = 0;
 //        IntBuffer pval = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.linearInterpolatePixelGray(datas, wpls, w, h, x, y, grayval, pval);
 //        assertEquals(expResult, result);
@@ -873,7 +876,7 @@ public class LeptonicaTest {
 //        PointerByReference a = null;
 //        FloatBuffer b = null;
 //        int n = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.gaussjordan(a, b, n);
 //        assertEquals(expResult, result);
@@ -892,7 +895,7 @@ public class LeptonicaTest {
 //        Pta ptas = null;
 //        int bw = 0;
 //        int bh = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixAffineSequential(pixs, ptad, ptas, bw, bh);
 //        assertEquals(expResult, result);
@@ -908,7 +911,7 @@ public class LeptonicaTest {
 //        System.out.println("createMatrix2dTranslate");
 //        float transx = 0.0F;
 //        float transy = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        FloatByReference expResult = null;
 //        FloatByReference result = instance.createMatrix2dTranslate(transx, transy);
 //        assertEquals(expResult, result);
@@ -924,7 +927,7 @@ public class LeptonicaTest {
 //        System.out.println("createMatrix2dScale");
 //        float scalex = 0.0F;
 //        float scaley = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        FloatByReference expResult = null;
 //        FloatByReference result = instance.createMatrix2dScale(scalex, scaley);
 //        assertEquals(expResult, result);
@@ -941,7 +944,7 @@ public class LeptonicaTest {
 //        float xc = 0.0F;
 //        float yc = 0.0F;
 //        float angle = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        FloatByReference expResult = null;
 //        FloatByReference result = instance.createMatrix2dRotate(xc, yc, angle);
 //        assertEquals(expResult, result);
@@ -958,7 +961,7 @@ public class LeptonicaTest {
 //        Pta ptas = null;
 //        float transx = 0.0F;
 //        float transy = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pta expResult = null;
 //        Pta result = instance.ptaTranslate(ptas, transx, transy);
 //        assertEquals(expResult, result);
@@ -975,7 +978,7 @@ public class LeptonicaTest {
 //        Pta ptas = null;
 //        float scalex = 0.0F;
 //        float scaley = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pta expResult = null;
 //        Pta result = instance.ptaScale(ptas, scalex, scaley);
 //        assertEquals(expResult, result);
@@ -993,7 +996,7 @@ public class LeptonicaTest {
 //        float xc = 0.0F;
 //        float yc = 0.0F;
 //        float angle = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pta expResult = null;
 //        Pta result = instance.ptaRotate(ptas, xc, yc, angle);
 //        assertEquals(expResult, result);
@@ -1010,7 +1013,7 @@ public class LeptonicaTest {
 //        Boxa boxas = null;
 //        float transx = 0.0F;
 //        float transy = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxa expResult = null;
 //        Boxa result = instance.boxaTranslate(boxas, transx, transy);
 //        assertEquals(expResult, result);
@@ -1027,7 +1030,7 @@ public class LeptonicaTest {
 //        Boxa boxas = null;
 //        float scalex = 0.0F;
 //        float scaley = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxa expResult = null;
 //        Boxa result = instance.boxaScale(boxas, scalex, scaley);
 //        assertEquals(expResult, result);
@@ -1045,7 +1048,7 @@ public class LeptonicaTest {
 //        float xc = 0.0F;
 //        float yc = 0.0F;
 //        float angle = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxa expResult = null;
 //        Boxa result = instance.boxaRotate(boxas, xc, yc, angle);
 //        assertEquals(expResult, result);
@@ -1061,7 +1064,7 @@ public class LeptonicaTest {
 //        System.out.println("ptaAffineTransform");
 //        Pta ptas = null;
 //        FloatBuffer mat = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pta expResult = null;
 //        Pta result = instance.ptaAffineTransform(ptas, mat);
 //        assertEquals(expResult, result);
@@ -1077,7 +1080,7 @@ public class LeptonicaTest {
 //        System.out.println("boxaAffineTransform");
 //        Boxa boxas = null;
 //        FloatBuffer mat = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxa expResult = null;
 //        Boxa result = instance.boxaAffineTransform(boxas, mat);
 //        assertEquals(expResult, result);
@@ -1095,7 +1098,7 @@ public class LeptonicaTest {
 //        FloatBuffer vecs = null;
 //        FloatBuffer vecd = null;
 //        int size = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.l_productMatVec(mat, vecs, vecd, size);
 //        assertEquals(expResult, result);
@@ -1113,7 +1116,7 @@ public class LeptonicaTest {
 //        FloatBuffer mat2 = null;
 //        FloatBuffer matd = null;
 //        int size = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.l_productMat2(mat1, mat2, matd, size);
 //        assertEquals(expResult, result);
@@ -1132,7 +1135,7 @@ public class LeptonicaTest {
 //        FloatBuffer mat3 = null;
 //        FloatBuffer matd = null;
 //        int size = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.l_productMat3(mat1, mat2, mat3, matd, size);
 //        assertEquals(expResult, result);
@@ -1152,7 +1155,7 @@ public class LeptonicaTest {
 //        FloatBuffer mat4 = null;
 //        FloatBuffer matd = null;
 //        int size = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.l_productMat4(mat1, mat2, mat3, mat4, matd, size);
 //        assertEquals(expResult, result);
@@ -1168,7 +1171,7 @@ public class LeptonicaTest {
 //        System.out.println("l_getDataBit");
 //        Pointer line = null;
 //        int n = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.l_getDataBit(line, n);
 //        assertEquals(expResult, result);
@@ -1184,7 +1187,7 @@ public class LeptonicaTest {
 //        System.out.println("l_setDataBit");
 //        Pointer line = null;
 //        int n = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.l_setDataBit(line, n);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -1198,7 +1201,7 @@ public class LeptonicaTest {
 //        System.out.println("l_clearDataBit");
 //        Pointer line = null;
 //        int n = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.l_clearDataBit(line, n);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -1213,7 +1216,7 @@ public class LeptonicaTest {
 //        Pointer line = null;
 //        int n = 0;
 //        int val = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.l_setDataBitVal(line, n, val);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -1227,7 +1230,7 @@ public class LeptonicaTest {
 //        System.out.println("l_getDataDibit");
 //        Pointer line = null;
 //        int n = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.l_getDataDibit(line, n);
 //        assertEquals(expResult, result);
@@ -1244,7 +1247,7 @@ public class LeptonicaTest {
 //        Pointer line = null;
 //        int n = 0;
 //        int val = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.l_setDataDibit(line, n, val);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -1258,7 +1261,7 @@ public class LeptonicaTest {
 //        System.out.println("l_clearDataDibit");
 //        Pointer line = null;
 //        int n = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.l_clearDataDibit(line, n);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -1272,7 +1275,7 @@ public class LeptonicaTest {
 //        System.out.println("l_getDataQbit");
 //        Pointer line = null;
 //        int n = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.l_getDataQbit(line, n);
 //        assertEquals(expResult, result);
@@ -1289,7 +1292,7 @@ public class LeptonicaTest {
 //        Pointer line = null;
 //        int n = 0;
 //        int val = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.l_setDataQbit(line, n, val);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -1303,7 +1306,7 @@ public class LeptonicaTest {
 //        System.out.println("l_clearDataQbit");
 //        Pointer line = null;
 //        int n = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.l_clearDataQbit(line, n);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -1317,7 +1320,7 @@ public class LeptonicaTest {
 //        System.out.println("l_getDataByte");
 //        Pointer line = null;
 //        int n = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.l_getDataByte(line, n);
 //        assertEquals(expResult, result);
@@ -1334,7 +1337,7 @@ public class LeptonicaTest {
 //        Pointer line = null;
 //        int n = 0;
 //        int val = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.l_setDataByte(line, n, val);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -1348,7 +1351,7 @@ public class LeptonicaTest {
 //        System.out.println("l_getDataTwoBytes");
 //        Pointer line = null;
 //        int n = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.l_getDataTwoBytes(line, n);
 //        assertEquals(expResult, result);
@@ -1365,7 +1368,7 @@ public class LeptonicaTest {
 //        Pointer line = null;
 //        int n = 0;
 //        int val = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.l_setDataTwoBytes(line, n, val);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -1379,7 +1382,7 @@ public class LeptonicaTest {
 //        System.out.println("l_getDataFourBytes");
 //        Pointer line = null;
 //        int n = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.l_getDataFourBytes(line, n);
 //        assertEquals(expResult, result);
@@ -1396,7 +1399,7 @@ public class LeptonicaTest {
 //        Pointer line = null;
 //        int n = 0;
 //        int val = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.l_setDataFourBytes(line, n, val);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -1411,7 +1414,7 @@ public class LeptonicaTest {
 //        ByteBuffer barstr = null;
 //        int format = 0;
 //        int debugflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.barcodeDispatchDecoder(barstr, format, debugflag);
 //        assertEquals(expResult, result);
@@ -1426,7 +1429,7 @@ public class LeptonicaTest {
 //    public void testBarcodeFormatIsSupported() {
 //        System.out.println("barcodeFormatIsSupported");
 //        int format = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.barcodeFormatIsSupported(format);
 //        assertEquals(expResult, result);
@@ -1443,7 +1446,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        Pta.ByReference[] ppta = null;
 //        int debug = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.pixFindBaselines(pixs, ppta, debug);
 //        assertEquals(expResult, result);
@@ -1464,7 +1467,7 @@ public class LeptonicaTest {
 //        float sweeprange = 0.0F;
 //        float sweepdelta = 0.0F;
 //        float minbsdelta = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixDeskewLocal(pixs, nslices, redsweep, redsearch, sweeprange, sweepdelta, minbsdelta);
 //        assertEquals(expResult, result);
@@ -1487,7 +1490,7 @@ public class LeptonicaTest {
 //        float minbsdelta = 0.0F;
 //        Pta.ByReference[] pptas = null;
 //        Pta.ByReference[] pptad = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixGetLocalSkewTransform(pixs, nslices, redsweep, redsearch, sweeprange, sweepdelta, minbsdelta, pptas, pptad);
 //        assertEquals(expResult, result);
@@ -1510,7 +1513,7 @@ public class LeptonicaTest {
 //        float minbsdelta = 0.0F;
 //        FloatBuffer pa = null;
 //        FloatBuffer pb = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.pixGetLocalSkewAngles(pixs, nslices, redsweep, redsearch, sweeprange, sweepdelta, minbsdelta, pa, pb);
 //        assertEquals(expResult, result);
@@ -1526,7 +1529,7 @@ public class LeptonicaTest {
 //        System.out.println("bbufferCreate");
 //        ByteBuffer indata = null;
 //        int nalloc = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        net.sourceforge.lept4j.ByteBuffer expResult = null;
 //        net.sourceforge.lept4j.ByteBuffer result = instance.bbufferCreate(indata, nalloc);
 //        assertEquals(expResult, result);
@@ -1541,7 +1544,7 @@ public class LeptonicaTest {
 //    public void testBbufferDestroy() {
 //        System.out.println("bbufferDestroy");
 //        net.sourceforge.lept4j.ByteBuffer.ByReference[] pbb = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.bbufferDestroy(pbb);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -1555,7 +1558,7 @@ public class LeptonicaTest {
 //        System.out.println("bbufferDestroyAndSaveData");
 //        net.sourceforge.lept4j.ByteBuffer.ByReference[] pbb = null;
 //        NativeSizeByReference pnbytes = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.bbufferDestroyAndSaveData(pbb, pnbytes);
 //        assertEquals(expResult, result);
@@ -1572,7 +1575,7 @@ public class LeptonicaTest {
 //        net.sourceforge.lept4j.ByteBuffer bb = null;
 //        ByteBuffer src = null;
 //        int nbytes = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.bbufferRead(bb, src, nbytes);
 //        assertEquals(expResult, result);
@@ -1589,7 +1592,7 @@ public class LeptonicaTest {
 //        net.sourceforge.lept4j.ByteBuffer bb = null;
 //        PointerByReference fp = null;
 //        int nbytes = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.bbufferReadStream(bb, fp, nbytes);
 //        assertEquals(expResult, result);
@@ -1605,7 +1608,7 @@ public class LeptonicaTest {
 //        System.out.println("bbufferExtendArray");
 //        net.sourceforge.lept4j.ByteBuffer bb = null;
 //        int nbytes = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.bbufferExtendArray(bb, nbytes);
 //        assertEquals(expResult, result);
@@ -1623,7 +1626,7 @@ public class LeptonicaTest {
 //        ByteBuffer dest = null;
 //        NativeSize nbytes = null;
 //        NativeSizeByReference pnout = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.bbufferWrite(bb, dest, nbytes, pnout);
 //        assertEquals(expResult, result);
@@ -1641,7 +1644,7 @@ public class LeptonicaTest {
 //        PointerByReference fp = null;
 //        NativeSize nbytes = null;
 //        NativeSizeByReference pnout = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.bbufferWriteStream(bb, fp, nbytes, pnout);
 //        assertEquals(expResult, result);
@@ -1660,7 +1663,7 @@ public class LeptonicaTest {
 //        float range_stdev = 0.0F;
 //        int ncomps = 0;
 //        int reduction = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixBilateral(pixs, spatial_stdev, range_stdev, ncomps, reduction);
 //        assertEquals(expResult, result);
@@ -1679,7 +1682,7 @@ public class LeptonicaTest {
 //        float range_stdev = 0.0F;
 //        int ncomps = 0;
 //        int reduction = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixBilateralGray(pixs, spatial_stdev, range_stdev, ncomps, reduction);
 //        assertEquals(expResult, result);
@@ -1696,7 +1699,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        L_Kernel spatial_kel = null;
 //        L_Kernel range_kel = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixBilateralExact(pixs, spatial_kel, range_kel);
 //        assertEquals(expResult, result);
@@ -1713,7 +1716,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        L_Kernel spatial_kel = null;
 //        L_Kernel range_kel = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixBilateralGrayExact(pixs, spatial_kel, range_kel);
 //        assertEquals(expResult, result);
@@ -1730,7 +1733,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        float spatial_stdev = 0.0F;
 //        float range_stdev = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixBlockBilateralExact(pixs, spatial_stdev, range_stdev);
 //        assertEquals(expResult, result);
@@ -1745,7 +1748,7 @@ public class LeptonicaTest {
 //    public void testMakeRangeKernel() {
 //        System.out.println("makeRangeKernel");
 //        float range_stdev = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Kernel expResult = null;
 //        L_Kernel result = instance.makeRangeKernel(range_stdev);
 //        assertEquals(expResult, result);
@@ -1763,7 +1766,7 @@ public class LeptonicaTest {
 //        Pta ptad = null;
 //        Pta ptas = null;
 //        int incolor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixBilinearSampledPta(pixs, ptad, ptas, incolor);
 //        assertEquals(expResult, result);
@@ -1780,7 +1783,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        FloatBuffer vc = null;
 //        int incolor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixBilinearSampled(pixs, vc, incolor);
 //        assertEquals(expResult, result);
@@ -1798,7 +1801,7 @@ public class LeptonicaTest {
 //        Pta ptad = null;
 //        Pta ptas = null;
 //        int incolor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixBilinearPta(pixs, ptad, ptas, incolor);
 //        assertEquals(expResult, result);
@@ -1815,7 +1818,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        FloatBuffer vc = null;
 //        int incolor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixBilinear(pixs, vc, incolor);
 //        assertEquals(expResult, result);
@@ -1833,7 +1836,7 @@ public class LeptonicaTest {
 //        Pta ptad = null;
 //        Pta ptas = null;
 //        int colorval = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixBilinearPtaColor(pixs, ptad, ptas, colorval);
 //        assertEquals(expResult, result);
@@ -1850,7 +1853,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        FloatBuffer vc = null;
 //        int colorval = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixBilinearColor(pixs, vc, colorval);
 //        assertEquals(expResult, result);
@@ -1868,7 +1871,7 @@ public class LeptonicaTest {
 //        Pta ptad = null;
 //        Pta ptas = null;
 //        byte grayval = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixBilinearPtaGray(pixs, ptad, ptas, grayval);
 //        assertEquals(expResult, result);
@@ -1885,7 +1888,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        FloatBuffer vc = null;
 //        byte grayval = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixBilinearGray(pixs, vc, grayval);
 //        assertEquals(expResult, result);
@@ -1905,7 +1908,7 @@ public class LeptonicaTest {
 //        Pix pixg = null;
 //        float fract = 0.0F;
 //        int border = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixBilinearPtaWithAlpha(pixs, ptad, ptas, pixg, fract, border);
 //        assertEquals(expResult, result);
@@ -1922,7 +1925,7 @@ public class LeptonicaTest {
 //        Pta ptas = null;
 //        Pta ptad = null;
 //        PointerByReference pvc = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.getBilinearXformCoeffs(ptas, ptad, pvc);
 //        assertEquals(expResult, result);
@@ -1941,7 +1944,7 @@ public class LeptonicaTest {
 //        int y = 0;
 //        IntBuffer pxp = null;
 //        IntBuffer pyp = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.bilinearXformSampledPt(vc, x, y, pxp, pyp);
 //        assertEquals(expResult, result);
@@ -1960,7 +1963,7 @@ public class LeptonicaTest {
 //        int y = 0;
 //        FloatBuffer pxp = null;
 //        FloatBuffer pyp = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.bilinearXformPt(vc, x, y, pxp, pyp);
 //        assertEquals(expResult, result);
@@ -1982,7 +1985,7 @@ public class LeptonicaTest {
 //        float scorefract = 0.0F;
 //        Pix.ByReference[] ppixth = null;
 //        Pix.ByReference[] ppixd = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixOtsuAdaptiveThreshold(pixs, sx, sy, smoothx, smoothy, scorefract, ppixth, ppixd);
 //        assertEquals(expResult, result);
@@ -2007,7 +2010,7 @@ public class LeptonicaTest {
 //        int smoothy = 0;
 //        float scorefract = 0.0F;
 //        IntBuffer pthresh = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixOtsuThreshOnBackgroundNorm(pixs, pixim, sx, sy, thresh, mincount, bgval, smoothx, smoothy, scorefract, pthresh);
 //        assertEquals(expResult, result);
@@ -2031,7 +2034,7 @@ public class LeptonicaTest {
 //        int smoothy = 0;
 //        float scorefract = 0.0F;
 //        IntBuffer pthresh = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixMaskedThreshOnBackgroundNorm(pixs, pixim, sx, sy, thresh, mincount, smoothx, smoothy, scorefract, pthresh);
 //        assertEquals(expResult, result);
@@ -2052,7 +2055,7 @@ public class LeptonicaTest {
 //        int ny = 0;
 //        Pix.ByReference[] ppixth = null;
 //        Pix.ByReference[] ppixd = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixSauvolaBinarizeTiled(pixs, whsize, factor, nx, ny, ppixth, ppixd);
 //        assertEquals(expResult, result);
@@ -2074,7 +2077,7 @@ public class LeptonicaTest {
 //        Pix.ByReference[] ppixsd = null;
 //        Pix.ByReference[] ppixth = null;
 //        Pix.ByReference[] ppixd = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixSauvolaBinarize(pixs, whsize, factor, addborder, ppixm, ppixsd, ppixth, ppixd);
 //        assertEquals(expResult, result);
@@ -2092,7 +2095,7 @@ public class LeptonicaTest {
 //        Pix pixms = null;
 //        float factor = 0.0F;
 //        Pix.ByReference[] ppixsd = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixSauvolaGetThreshold(pixm, pixms, factor, ppixsd);
 //        assertEquals(expResult, result);
@@ -2109,7 +2112,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        Pix pixth = null;
 //        int redfactor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixApplyLocalThreshold(pixs, pixth, redfactor);
 //        assertEquals(expResult, result);
@@ -2133,7 +2136,7 @@ public class LeptonicaTest {
 //        IntBuffer pglobthresh = null;
 //        Pix.ByReference[] ppixd = null;
 //        int debugflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixThresholdByConnComp(pixs, pixm, start, end, incr, thresh48, threshdiff, pglobthresh, ppixd, debugflag);
 //        assertEquals(expResult, result);
@@ -2157,7 +2160,7 @@ public class LeptonicaTest {
 //        IntByReference pglobthresh = null;
 //        Pix.ByReference[] ppixd = null;
 //        int debugflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixThresholdByConnComp(pixs, pixm, start, end, incr, thresh48, threshdiff, pglobthresh, ppixd, debugflag);
 //        assertEquals(expResult, result);
@@ -2173,7 +2176,7 @@ public class LeptonicaTest {
 //        System.out.println("pixExpandBinaryReplicate");
 //        Pix pixs = null;
 //        int factor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixExpandBinaryReplicate(pixs, factor);
 //        assertEquals(expResult, result);
@@ -2189,7 +2192,7 @@ public class LeptonicaTest {
 //        System.out.println("pixExpandBinaryPower2");
 //        Pix pixs = null;
 //        int factor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixExpandBinaryPower2(pixs, factor);
 //        assertEquals(expResult, result);
@@ -2205,7 +2208,7 @@ public class LeptonicaTest {
 //        System.out.println("pixReduceBinary2");
 //        Pix pixs = null;
 //        ByteBuffer intab = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixReduceBinary2(pixs, intab);
 //        assertEquals(expResult, result);
@@ -2224,7 +2227,7 @@ public class LeptonicaTest {
 //        int level2 = 0;
 //        int level3 = 0;
 //        int level4 = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixReduceRankBinaryCascade(pixs, level1, level2, level3, level4);
 //        assertEquals(expResult, result);
@@ -2241,7 +2244,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int level = 0;
 //        ByteBuffer intab = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixReduceRankBinary2(pixs, level, intab);
 //        assertEquals(expResult, result);
@@ -2255,7 +2258,7 @@ public class LeptonicaTest {
 //    @Test
 //    public void testMakeSubsampleTab2x() {
 //        System.out.println("makeSubsampleTab2x");
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.makeSubsampleTab2x();
 //        assertEquals(expResult, result);
@@ -2274,7 +2277,7 @@ public class LeptonicaTest {
 //        int x = 0;
 //        int y = 0;
 //        float fract = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixBlend(pixs1, pixs2, x, y, fract);
 //        assertEquals(expResult, result);
@@ -2295,7 +2298,7 @@ public class LeptonicaTest {
 //        int y = 0;
 //        float fract = 0.0F;
 //        int type = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixBlendMask(pixd, pixs1, pixs2, x, y, fract, type);
 //        assertEquals(expResult, result);
@@ -2318,7 +2321,7 @@ public class LeptonicaTest {
 //        int type = 0;
 //        int transparent = 0;
 //        int transpix = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixBlendGray(pixd, pixs1, pixs2, x, y, fract, type, transparent, transpix);
 //        assertEquals(expResult, result);
@@ -2338,7 +2341,7 @@ public class LeptonicaTest {
 //        int x = 0;
 //        int y = 0;
 //        float fract = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixBlendGrayInverse(pixd, pixs1, pixs2, x, y, fract);
 //        assertEquals(expResult, result);
@@ -2360,7 +2363,7 @@ public class LeptonicaTest {
 //        float fract = 0.0F;
 //        int transparent = 0;
 //        int transpix = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixBlendColor(pixd, pixs1, pixs2, x, y, fract, transparent, transpix);
 //        assertEquals(expResult, result);
@@ -2384,7 +2387,7 @@ public class LeptonicaTest {
 //        float bfract = 0.0F;
 //        int transparent = 0;
 //        int transpix = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixBlendColorByChannel(pixd, pixs1, pixs2, x, y, rfract, gfract, bfract, transparent, transpix);
 //        assertEquals(expResult, result);
@@ -2405,7 +2408,7 @@ public class LeptonicaTest {
 //        int y = 0;
 //        float fract = 0.0F;
 //        int shift = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixBlendGrayAdapt(pixd, pixs1, pixs2, x, y, fract, shift);
 //        assertEquals(expResult, result);
@@ -2423,7 +2426,7 @@ public class LeptonicaTest {
 //        Pix pixb = null;
 //        float factor = 0.0F;
 //        int type = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixFadeWithGray(pixs, pixb, factor, type);
 //        assertEquals(expResult, result);
@@ -2443,7 +2446,7 @@ public class LeptonicaTest {
 //        int x = 0;
 //        int y = 0;
 //        float fract = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixBlendHardLight(pixd, pixs1, pixs2, x, y, fract);
 //        assertEquals(expResult, result);
@@ -2462,7 +2465,7 @@ public class LeptonicaTest {
 //        int x = 0;
 //        int y = 0;
 //        int sindex = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixBlendCmap(pixs, pixb, x, y, sindex);
 //        assertEquals(expResult, result);
@@ -2481,7 +2484,7 @@ public class LeptonicaTest {
 //        Pix pixg = null;
 //        int x = 0;
 //        int y = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixBlendWithGrayMask(pixs1, pixs2, pixg, x, y);
 //        assertEquals(expResult, result);
@@ -2502,7 +2505,7 @@ public class LeptonicaTest {
 //        float gamma = 0.0F;
 //        int minval = 0;
 //        int maxval = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixBlendBackgroundToColor(pixd, pixs, box, color, gamma, minval, maxval);
 //        assertEquals(expResult, result);
@@ -2520,7 +2523,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        Box box = null;
 //        int color = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixMultiplyByColor(pixd, pixs, box, color);
 //        assertEquals(expResult, result);
@@ -2536,7 +2539,7 @@ public class LeptonicaTest {
 //        System.out.println("pixAlphaBlendUniform");
 //        Pix pixs = null;
 //        int color = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixAlphaBlendUniform(pixs, color);
 //        assertEquals(expResult, result);
@@ -2553,7 +2556,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        float fract = 0.0F;
 //        int invert = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixAddAlphaToBlend(pixs, fract, invert);
 //        assertEquals(expResult, result);
@@ -2568,7 +2571,7 @@ public class LeptonicaTest {
 //    public void testPixSetAlphaOverWhite() {
 //        System.out.println("pixSetAlphaOverWhite");
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixSetAlphaOverWhite(pixs);
 //        assertEquals(expResult, result);
@@ -2584,7 +2587,7 @@ public class LeptonicaTest {
 //        System.out.println("bmfCreate");
 //        String dir = "";
 //        int size = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Bmf expResult = null;
 //        L_Bmf result = instance.bmfCreate(dir, size);
 //        assertEquals(expResult, result);
@@ -2599,7 +2602,7 @@ public class LeptonicaTest {
 //    public void testBmfDestroy() {
 //        System.out.println("bmfDestroy");
 //        L_Bmf.ByReference[] pbmf = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.bmfDestroy(pbmf);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -2613,7 +2616,7 @@ public class LeptonicaTest {
 //        System.out.println("bmfGetPix");
 //        L_Bmf bmf = null;
 //        byte chr = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.bmfGetPix(bmf, chr);
 //        assertEquals(expResult, result);
@@ -2630,7 +2633,7 @@ public class LeptonicaTest {
 //        L_Bmf bmf = null;
 //        byte chr = 0;
 //        IntBuffer pw = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.bmfGetWidth(bmf, chr, pw);
 //        assertEquals(expResult, result);
@@ -2647,7 +2650,7 @@ public class LeptonicaTest {
 //        L_Bmf bmf = null;
 //        byte chr = 0;
 //        IntBuffer pbaseline = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.bmfGetBaseline(bmf, chr, pbaseline);
 //        assertEquals(expResult, result);
@@ -2666,7 +2669,7 @@ public class LeptonicaTest {
 //        IntBuffer pbl0 = null;
 //        IntBuffer pbl1 = null;
 //        IntBuffer pbl2 = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pixa expResult = null;
 //        Pixa result = instance.pixaGetFont(dir, size, pbl0, pbl1, pbl2);
 //        assertEquals(expResult, result);
@@ -2683,7 +2686,7 @@ public class LeptonicaTest {
 //        String indir = "";
 //        String outdir = "";
 //        int size = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixaSaveFont(indir, outdir, size);
 //        assertEquals(expResult, result);
@@ -2702,7 +2705,7 @@ public class LeptonicaTest {
 //        IntBuffer pbl0 = null;
 //        IntBuffer pbl1 = null;
 //        IntBuffer pbl2 = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pixa expResult = null;
 //        Pixa result = instance.pixaGenerateFont(dir, size, pbl0, pbl1, pbl2);
 //        assertEquals(expResult, result);
@@ -2717,7 +2720,7 @@ public class LeptonicaTest {
 //    public void testPixReadStreamBmp() {
 //        System.out.println("pixReadStreamBmp");
 //        PointerByReference fp = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixReadStreamBmp(fp);
 //        assertEquals(expResult, result);
@@ -2733,7 +2736,7 @@ public class LeptonicaTest {
 //        System.out.println("pixWriteStreamBmp");
 //        PointerByReference fp = null;
 //        Pix pix = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixWriteStreamBmp(fp, pix);
 //        assertEquals(expResult, result);
@@ -2749,7 +2752,7 @@ public class LeptonicaTest {
 //        System.out.println("pixReadMemBmp");
 //        ByteBuffer cdata = null;
 //        NativeSize size = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixReadMemBmp(cdata, size);
 //        assertEquals(expResult, result);
@@ -2766,7 +2769,7 @@ public class LeptonicaTest {
 //        PointerByReference pdata = null;
 //        NativeSizeByReference psize = null;
 //        Pix pix = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixWriteMemBmp(pdata, psize, pix);
 //        assertEquals(expResult, result);
@@ -2784,7 +2787,7 @@ public class LeptonicaTest {
 //        int y = 0;
 //        int w = 0;
 //        int h = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Box expResult = null;
 //        Box result = instance.boxCreate(x, y, w, h);
 //        assertEquals(expResult, result);
@@ -2802,7 +2805,7 @@ public class LeptonicaTest {
 //        int y = 0;
 //        int w = 0;
 //        int h = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Box expResult = null;
 //        Box result = instance.boxCreateValid(x, y, w, h);
 //        assertEquals(expResult, result);
@@ -2817,7 +2820,7 @@ public class LeptonicaTest {
 //    public void testBoxCopy() {
 //        System.out.println("boxCopy");
 //        Box box = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Box expResult = null;
 //        Box result = instance.boxCopy(box);
 //        assertEquals(expResult, result);
@@ -2832,7 +2835,7 @@ public class LeptonicaTest {
 //    public void testBoxClone() {
 //        System.out.println("boxClone");
 //        Box box = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Box expResult = null;
 //        Box result = instance.boxClone(box);
 //        assertEquals(expResult, result);
@@ -2847,7 +2850,7 @@ public class LeptonicaTest {
 //    public void testBoxDestroy() {
 //        System.out.println("boxDestroy");
 //        Box.ByReference[] pbox = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.boxDestroy(pbox);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -2864,7 +2867,7 @@ public class LeptonicaTest {
 //        IntBuffer py = null;
 //        IntBuffer pw = null;
 //        IntBuffer ph = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxGetGeometry(box, px, py, pw, ph);
 //        assertEquals(expResult, result);
@@ -2883,7 +2886,7 @@ public class LeptonicaTest {
 //        int y = 0;
 //        int w = 0;
 //        int h = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxSetGeometry(box, x, y, w, h);
 //        assertEquals(expResult, result);
@@ -2900,7 +2903,7 @@ public class LeptonicaTest {
 //        Box box = null;
 //        int side = 0;
 //        IntBuffer ploc = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxGetSideLocation(box, side, ploc);
 //        assertEquals(expResult, result);
@@ -2915,7 +2918,7 @@ public class LeptonicaTest {
 //    public void testBoxGetRefcount() {
 //        System.out.println("boxGetRefcount");
 //        Box box = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxGetRefcount(box);
 //        assertEquals(expResult, result);
@@ -2931,7 +2934,7 @@ public class LeptonicaTest {
 //        System.out.println("boxChangeRefcount");
 //        Box box = null;
 //        int delta = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxChangeRefcount(box, delta);
 //        assertEquals(expResult, result);
@@ -2947,7 +2950,7 @@ public class LeptonicaTest {
 //        System.out.println("boxIsValid");
 //        Box box = null;
 //        IntBuffer pvalid = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxIsValid(box, pvalid);
 //        assertEquals(expResult, result);
@@ -2962,7 +2965,7 @@ public class LeptonicaTest {
 //    public void testBoxaCreate() {
 //        System.out.println("boxaCreate");
 //        int n = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxa expResult = null;
 //        Boxa result = instance.boxaCreate(n);
 //        assertEquals(expResult, result);
@@ -2978,7 +2981,7 @@ public class LeptonicaTest {
 //        System.out.println("boxaCopy");
 //        Boxa boxa = null;
 //        int copyflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxa expResult = null;
 //        Boxa result = instance.boxaCopy(boxa, copyflag);
 //        assertEquals(expResult, result);
@@ -2993,7 +2996,7 @@ public class LeptonicaTest {
 //    public void testBoxaDestroy() {
 //        System.out.println("boxaDestroy");
 //        Boxa.ByReference[] pboxa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.boxaDestroy(pboxa);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -3008,7 +3011,7 @@ public class LeptonicaTest {
 //        Boxa boxa = null;
 //        Box box = null;
 //        int copyflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxaAddBox(boxa, box, copyflag);
 //        assertEquals(expResult, result);
@@ -3023,7 +3026,7 @@ public class LeptonicaTest {
 //    public void testBoxaExtendArray() {
 //        System.out.println("boxaExtendArray");
 //        Boxa boxa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxaExtendArray(boxa);
 //        assertEquals(expResult, result);
@@ -3039,7 +3042,7 @@ public class LeptonicaTest {
 //        System.out.println("boxaExtendArrayToSize");
 //        Boxa boxa = null;
 //        int size = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxaExtendArrayToSize(boxa, size);
 //        assertEquals(expResult, result);
@@ -3054,7 +3057,7 @@ public class LeptonicaTest {
 //    public void testBoxaGetCount() {
 //        System.out.println("boxaGetCount");
 //        Boxa boxa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxaGetCount(boxa);
 //        assertEquals(expResult, result);
@@ -3069,7 +3072,7 @@ public class LeptonicaTest {
 //    public void testBoxaGetValidCount() {
 //        System.out.println("boxaGetValidCount");
 //        Boxa boxa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxaGetValidCount(boxa);
 //        assertEquals(expResult, result);
@@ -3086,7 +3089,7 @@ public class LeptonicaTest {
 //        Boxa boxa = null;
 //        int index = 0;
 //        int accessflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Box expResult = null;
 //        Box result = instance.boxaGetBox(boxa, index, accessflag);
 //        assertEquals(expResult, result);
@@ -3103,7 +3106,7 @@ public class LeptonicaTest {
 //        Boxa boxa = null;
 //        int index = 0;
 //        int accessflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Box expResult = null;
 //        Box result = instance.boxaGetValidBox(boxa, index, accessflag);
 //        assertEquals(expResult, result);
@@ -3123,7 +3126,7 @@ public class LeptonicaTest {
 //        IntBuffer py = null;
 //        IntBuffer pw = null;
 //        IntBuffer ph = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxaGetBoxGeometry(boxa, index, px, py, pw, ph);
 //        assertEquals(expResult, result);
@@ -3139,7 +3142,7 @@ public class LeptonicaTest {
 //        System.out.println("boxaIsFull");
 //        Boxa boxa = null;
 //        IntBuffer pfull = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxaIsFull(boxa, pfull);
 //        assertEquals(expResult, result);
@@ -3156,7 +3159,7 @@ public class LeptonicaTest {
 //        Boxa boxa = null;
 //        int index = 0;
 //        Box box = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxaReplaceBox(boxa, index, box);
 //        assertEquals(expResult, result);
@@ -3173,7 +3176,7 @@ public class LeptonicaTest {
 //        Boxa boxa = null;
 //        int index = 0;
 //        Box box = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxaInsertBox(boxa, index, box);
 //        assertEquals(expResult, result);
@@ -3189,7 +3192,7 @@ public class LeptonicaTest {
 //        System.out.println("boxaRemoveBox");
 //        Boxa boxa = null;
 //        int index = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxaRemoveBox(boxa, index);
 //        assertEquals(expResult, result);
@@ -3206,7 +3209,7 @@ public class LeptonicaTest {
 //        Boxa boxa = null;
 //        int index = 0;
 //        Box.ByReference[] pbox = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxaRemoveBoxAndSave(boxa, index, pbox);
 //        assertEquals(expResult, result);
@@ -3222,7 +3225,7 @@ public class LeptonicaTest {
 //        System.out.println("boxaSaveValid");
 //        Boxa boxas = null;
 //        int copyflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxa expResult = null;
 //        Boxa result = instance.boxaSaveValid(boxas, copyflag);
 //        assertEquals(expResult, result);
@@ -3238,7 +3241,7 @@ public class LeptonicaTest {
 //        System.out.println("boxaInitFull");
 //        Boxa boxa = null;
 //        Box box = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxaInitFull(boxa, box);
 //        assertEquals(expResult, result);
@@ -3253,7 +3256,7 @@ public class LeptonicaTest {
 //    public void testBoxaClear() {
 //        System.out.println("boxaClear");
 //        Boxa boxa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxaClear(boxa);
 //        assertEquals(expResult, result);
@@ -3268,7 +3271,7 @@ public class LeptonicaTest {
 //    public void testBoxaaCreate() {
 //        System.out.println("boxaaCreate");
 //        int n = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxaa expResult = null;
 //        Boxaa result = instance.boxaaCreate(n);
 //        assertEquals(expResult, result);
@@ -3284,7 +3287,7 @@ public class LeptonicaTest {
 //        System.out.println("boxaaCopy");
 //        Boxaa baas = null;
 //        int copyflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxaa expResult = null;
 //        Boxaa result = instance.boxaaCopy(baas, copyflag);
 //        assertEquals(expResult, result);
@@ -3299,7 +3302,7 @@ public class LeptonicaTest {
 //    public void testBoxaaDestroy() {
 //        System.out.println("boxaaDestroy");
 //        Boxaa.ByReference[] pbaa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.boxaaDestroy(pbaa);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -3314,7 +3317,7 @@ public class LeptonicaTest {
 //        Boxaa baa = null;
 //        Boxa ba = null;
 //        int copyflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxaaAddBoxa(baa, ba, copyflag);
 //        assertEquals(expResult, result);
@@ -3329,7 +3332,7 @@ public class LeptonicaTest {
 //    public void testBoxaaExtendArray() {
 //        System.out.println("boxaaExtendArray");
 //        Boxaa baa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxaaExtendArray(baa);
 //        assertEquals(expResult, result);
@@ -3345,7 +3348,7 @@ public class LeptonicaTest {
 //        System.out.println("boxaaExtendArrayToSize");
 //        Boxaa baa = null;
 //        int size = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxaaExtendArrayToSize(baa, size);
 //        assertEquals(expResult, result);
@@ -3360,7 +3363,7 @@ public class LeptonicaTest {
 //    public void testBoxaaGetCount() {
 //        System.out.println("boxaaGetCount");
 //        Boxaa baa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxaaGetCount(baa);
 //        assertEquals(expResult, result);
@@ -3375,7 +3378,7 @@ public class LeptonicaTest {
 //    public void testBoxaaGetBoxCount() {
 //        System.out.println("boxaaGetBoxCount");
 //        Boxaa baa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxaaGetBoxCount(baa);
 //        assertEquals(expResult, result);
@@ -3392,7 +3395,7 @@ public class LeptonicaTest {
 //        Boxaa baa = null;
 //        int index = 0;
 //        int accessflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxa expResult = null;
 //        Boxa result = instance.boxaaGetBoxa(baa, index, accessflag);
 //        assertEquals(expResult, result);
@@ -3410,7 +3413,7 @@ public class LeptonicaTest {
 //        int iboxa = 0;
 //        int ibox = 0;
 //        int accessflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Box expResult = null;
 //        Box result = instance.boxaaGetBox(baa, iboxa, ibox, accessflag);
 //        assertEquals(expResult, result);
@@ -3426,7 +3429,7 @@ public class LeptonicaTest {
 //        System.out.println("boxaaInitFull");
 //        Boxaa baa = null;
 //        Boxa boxa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxaaInitFull(baa, boxa);
 //        assertEquals(expResult, result);
@@ -3443,7 +3446,7 @@ public class LeptonicaTest {
 //        Boxaa baa = null;
 //        int maxindex = 0;
 //        Boxa boxa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxaaExtendWithInit(baa, maxindex, boxa);
 //        assertEquals(expResult, result);
@@ -3460,7 +3463,7 @@ public class LeptonicaTest {
 //        Boxaa baa = null;
 //        int index = 0;
 //        Boxa boxa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxaaReplaceBoxa(baa, index, boxa);
 //        assertEquals(expResult, result);
@@ -3477,7 +3480,7 @@ public class LeptonicaTest {
 //        Boxaa baa = null;
 //        int index = 0;
 //        Boxa boxa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxaaInsertBoxa(baa, index, boxa);
 //        assertEquals(expResult, result);
@@ -3493,7 +3496,7 @@ public class LeptonicaTest {
 //        System.out.println("boxaaRemoveBoxa");
 //        Boxaa baa = null;
 //        int index = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxaaRemoveBoxa(baa, index);
 //        assertEquals(expResult, result);
@@ -3511,7 +3514,7 @@ public class LeptonicaTest {
 //        int index = 0;
 //        Box box = null;
 //        int accessflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxaaAddBox(baa, index, box, accessflag);
 //        assertEquals(expResult, result);
@@ -3529,7 +3532,7 @@ public class LeptonicaTest {
 //        String substr = "";
 //        int first = 0;
 //        int nfiles = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxaa expResult = null;
 //        Boxaa result = instance.boxaaReadFromFiles(dirname, substr, first, nfiles);
 //        assertEquals(expResult, result);
@@ -3544,7 +3547,7 @@ public class LeptonicaTest {
 //    public void testBoxaaRead() {
 //        System.out.println("boxaaRead");
 //        String filename = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxaa expResult = null;
 //        Boxaa result = instance.boxaaRead(filename);
 //        assertEquals(expResult, result);
@@ -3559,7 +3562,7 @@ public class LeptonicaTest {
 //    public void testBoxaaReadStream() {
 //        System.out.println("boxaaReadStream");
 //        PointerByReference fp = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxaa expResult = null;
 //        Boxaa result = instance.boxaaReadStream(fp);
 //        assertEquals(expResult, result);
@@ -3575,7 +3578,7 @@ public class LeptonicaTest {
 //        System.out.println("boxaaWrite");
 //        String filename = "";
 //        Boxaa baa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxaaWrite(filename, baa);
 //        assertEquals(expResult, result);
@@ -3591,7 +3594,7 @@ public class LeptonicaTest {
 //        System.out.println("boxaaWriteStream");
 //        PointerByReference fp = null;
 //        Boxaa baa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxaaWriteStream(fp, baa);
 //        assertEquals(expResult, result);
@@ -3606,7 +3609,7 @@ public class LeptonicaTest {
 //    public void testBoxaRead() {
 //        System.out.println("boxaRead");
 //        String filename = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxa expResult = null;
 //        Boxa result = instance.boxaRead(filename);
 //        assertEquals(expResult, result);
@@ -3621,7 +3624,7 @@ public class LeptonicaTest {
 //    public void testBoxaReadStream() {
 //        System.out.println("boxaReadStream");
 //        PointerByReference fp = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxa expResult = null;
 //        Boxa result = instance.boxaReadStream(fp);
 //        assertEquals(expResult, result);
@@ -3637,7 +3640,7 @@ public class LeptonicaTest {
 //        System.out.println("boxaReadMem");
 //        ByteBuffer data = null;
 //        NativeSize size = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxa expResult = null;
 //        Boxa result = instance.boxaReadMem(data, size);
 //        assertEquals(expResult, result);
@@ -3653,7 +3656,7 @@ public class LeptonicaTest {
 //        System.out.println("boxaWrite");
 //        String filename = "";
 //        Boxa boxa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxaWrite(filename, boxa);
 //        assertEquals(expResult, result);
@@ -3669,7 +3672,7 @@ public class LeptonicaTest {
 //        System.out.println("boxaWriteStream");
 //        PointerByReference fp = null;
 //        Boxa boxa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxaWriteStream(fp, boxa);
 //        assertEquals(expResult, result);
@@ -3686,7 +3689,7 @@ public class LeptonicaTest {
 //        PointerByReference pdata = null;
 //        NativeSizeByReference psize = null;
 //        Boxa boxa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxaWriteMem(pdata, psize, boxa);
 //        assertEquals(expResult, result);
@@ -3702,7 +3705,7 @@ public class LeptonicaTest {
 //        System.out.println("boxPrintStreamInfo");
 //        PointerByReference fp = null;
 //        Box box = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxPrintStreamInfo(fp, box);
 //        assertEquals(expResult, result);
@@ -3719,7 +3722,7 @@ public class LeptonicaTest {
 //        Box box1 = null;
 //        Box box2 = null;
 //        IntBuffer presult = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxContains(box1, box2, presult);
 //        assertEquals(expResult, result);
@@ -3736,7 +3739,7 @@ public class LeptonicaTest {
 //        Box box1 = null;
 //        Box box2 = null;
 //        IntBuffer presult = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxIntersects(box1, box2, presult);
 //        assertEquals(expResult, result);
@@ -3752,7 +3755,7 @@ public class LeptonicaTest {
 //        System.out.println("boxaContainedInBox");
 //        Boxa boxas = null;
 //        Box box = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxa expResult = null;
 //        Boxa result = instance.boxaContainedInBox(boxas, box);
 //        assertEquals(expResult, result);
@@ -3768,7 +3771,7 @@ public class LeptonicaTest {
 //        System.out.println("boxaIntersectsBox");
 //        Boxa boxas = null;
 //        Box box = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxa expResult = null;
 //        Boxa result = instance.boxaIntersectsBox(boxas, box);
 //        assertEquals(expResult, result);
@@ -3784,7 +3787,7 @@ public class LeptonicaTest {
 //        System.out.println("boxaClipToBox");
 //        Boxa boxas = null;
 //        Box box = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxa expResult = null;
 //        Boxa result = instance.boxaClipToBox(boxas, box);
 //        assertEquals(expResult, result);
@@ -3799,7 +3802,7 @@ public class LeptonicaTest {
 //    public void testBoxaCombineOverlaps() {
 //        System.out.println("boxaCombineOverlaps");
 //        Boxa boxas = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxa expResult = null;
 //        Boxa result = instance.boxaCombineOverlaps(boxas);
 //        assertEquals(expResult, result);
@@ -3815,7 +3818,7 @@ public class LeptonicaTest {
 //        System.out.println("boxOverlapRegion");
 //        Box box1 = null;
 //        Box box2 = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Box expResult = null;
 //        Box result = instance.boxOverlapRegion(box1, box2);
 //        assertEquals(expResult, result);
@@ -3831,7 +3834,7 @@ public class LeptonicaTest {
 //        System.out.println("boxBoundingRegion");
 //        Box box1 = null;
 //        Box box2 = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Box expResult = null;
 //        Box result = instance.boxBoundingRegion(box1, box2);
 //        assertEquals(expResult, result);
@@ -3848,7 +3851,7 @@ public class LeptonicaTest {
 //        Box box1 = null;
 //        Box box2 = null;
 //        FloatBuffer pfract = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxOverlapFraction(box1, box2, pfract);
 //        assertEquals(expResult, result);
@@ -3865,7 +3868,7 @@ public class LeptonicaTest {
 //        Box box1 = null;
 //        Box box2 = null;
 //        IntBuffer parea = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxOverlapArea(box1, box2, parea);
 //        assertEquals(expResult, result);
@@ -3885,7 +3888,7 @@ public class LeptonicaTest {
 //        float min_overlap = 0.0F;
 //        float max_ratio = 0.0F;
 //        Numa.ByReference[] pnamap = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxa expResult = null;
 //        Boxa result = instance.boxaHandleOverlaps(boxas, op, range, min_overlap, max_ratio, pnamap);
 //        assertEquals(expResult, result);
@@ -3903,7 +3906,7 @@ public class LeptonicaTest {
 //        Box box2 = null;
 //        IntBuffer ph_sep = null;
 //        IntBuffer pv_sep = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxSeparationDistance(box1, box2, ph_sep, pv_sep);
 //        assertEquals(expResult, result);
@@ -3921,7 +3924,7 @@ public class LeptonicaTest {
 //        float x = 0.0F;
 //        float y = 0.0F;
 //        IntBuffer pcontains = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxContainsPt(box, x, y, pcontains);
 //        assertEquals(expResult, result);
@@ -3938,7 +3941,7 @@ public class LeptonicaTest {
 //        Boxa boxa = null;
 //        int x = 0;
 //        int y = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Box expResult = null;
 //        Box result = instance.boxaGetNearestToPt(boxa, x, y);
 //        assertEquals(expResult, result);
@@ -3955,7 +3958,7 @@ public class LeptonicaTest {
 //        Box box = null;
 //        FloatBuffer pcx = null;
 //        FloatBuffer pcy = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxGetCenter(box, pcx, pcy);
 //        assertEquals(expResult, result);
@@ -3978,7 +3981,7 @@ public class LeptonicaTest {
 //        IntBuffer px2 = null;
 //        IntBuffer py2 = null;
 //        IntBuffer pn = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxIntersectByLine(box, x, y, slope, px1, py1, px2, py2, pn);
 //        assertEquals(expResult, result);
@@ -3995,7 +3998,7 @@ public class LeptonicaTest {
 //        Box box = null;
 //        int wi = 0;
 //        int hi = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Box expResult = null;
 //        Box result = instance.boxClipToRectangle(box, wi, hi);
 //        assertEquals(expResult, result);
@@ -4018,7 +4021,7 @@ public class LeptonicaTest {
 //        IntBuffer pyend = null;
 //        IntBuffer pbw = null;
 //        IntBuffer pbh = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxClipToRectangleParams(box, w, h, pxstart, pystart, pxend, pyend, pbw, pbh);
 //        assertEquals(expResult, result);
@@ -4036,7 +4039,7 @@ public class LeptonicaTest {
 //        Box boxs = null;
 //        int loc = 0;
 //        int sideflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Box expResult = null;
 //        Box result = instance.boxRelocateOneSide(boxd, boxs, loc, sideflag);
 //        assertEquals(expResult, result);
@@ -4056,7 +4059,7 @@ public class LeptonicaTest {
 //        int delright = 0;
 //        int deltop = 0;
 //        int delbot = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Box expResult = null;
 //        Box result = instance.boxAdjustSides(boxd, boxs, delleft, delright, deltop, delbot);
 //        assertEquals(expResult, result);
@@ -4075,7 +4078,7 @@ public class LeptonicaTest {
 //        int side = 0;
 //        int val = 0;
 //        int thresh = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxa expResult = null;
 //        Boxa result = instance.boxaSetSide(boxad, boxas, side, val, thresh);
 //        assertEquals(expResult, result);
@@ -4094,7 +4097,7 @@ public class LeptonicaTest {
 //        int sides = 0;
 //        int target = 0;
 //        int thresh = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxa expResult = null;
 //        Boxa result = instance.boxaAdjustWidthToTarget(boxad, boxas, sides, target, thresh);
 //        assertEquals(expResult, result);
@@ -4113,7 +4116,7 @@ public class LeptonicaTest {
 //        int sides = 0;
 //        int target = 0;
 //        int thresh = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxa expResult = null;
 //        Boxa result = instance.boxaAdjustHeightToTarget(boxad, boxas, sides, target, thresh);
 //        assertEquals(expResult, result);
@@ -4130,7 +4133,7 @@ public class LeptonicaTest {
 //        Box box1 = null;
 //        Box box2 = null;
 //        IntBuffer psame = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxEqual(box1, box2, psame);
 //        assertEquals(expResult, result);
@@ -4149,7 +4152,7 @@ public class LeptonicaTest {
 //        int maxdist = 0;
 //        Numa.ByReference[] pnaindex = null;
 //        IntBuffer psame = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxaEqual(boxa1, boxa2, maxdist, pnaindex, psame);
 //        assertEquals(expResult, result);
@@ -4168,7 +4171,7 @@ public class LeptonicaTest {
 //        int maxdist = 0;
 //        Numa.ByReference[] pnaindex = null;
 //        IntByReference psame = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxaEqual(boxa1, boxa2, maxdist, pnaindex, psame);
 //        assertEquals(expResult, result);
@@ -4189,7 +4192,7 @@ public class LeptonicaTest {
 //        int topdiff = 0;
 //        int botdiff = 0;
 //        IntBuffer psimilar = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxSimilar(box1, box2, leftdiff, rightdiff, topdiff, botdiff, psimilar);
 //        assertEquals(expResult, result);
@@ -4211,7 +4214,7 @@ public class LeptonicaTest {
 //        int botdiff = 0;
 //        int debugflag = 0;
 //        IntBuffer psimilar = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxaSimilar(boxa1, boxa2, leftdiff, rightdiff, topdiff, botdiff, debugflag, psimilar);
 //        assertEquals(expResult, result);
@@ -4229,7 +4232,7 @@ public class LeptonicaTest {
 //        Boxa boxas = null;
 //        int istart = 0;
 //        int iend = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxaJoin(boxad, boxas, istart, iend);
 //        assertEquals(expResult, result);
@@ -4247,7 +4250,7 @@ public class LeptonicaTest {
 //        Boxaa baas = null;
 //        int istart = 0;
 //        int iend = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxaaJoin(baad, baas, istart, iend);
 //        assertEquals(expResult, result);
@@ -4265,7 +4268,7 @@ public class LeptonicaTest {
 //        int fillflag = 0;
 //        Boxa.ByReference[] pboxae = null;
 //        Boxa.ByReference[] pboxao = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxaSplitEvenOdd(boxa, fillflag, pboxae, pboxao);
 //        assertEquals(expResult, result);
@@ -4282,7 +4285,7 @@ public class LeptonicaTest {
 //        Boxa boxae = null;
 //        Boxa boxao = null;
 //        int fillflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxa expResult = null;
 //        Boxa result = instance.boxaMergeEvenOdd(boxae, boxao, fillflag);
 //        assertEquals(expResult, result);
@@ -4301,7 +4304,7 @@ public class LeptonicaTest {
 //        int shifty = 0;
 //        float scalex = 0.0F;
 //        float scaley = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxa expResult = null;
 //        Boxa result = instance.boxaTransform(boxas, shiftx, shifty, scalex, scaley);
 //        assertEquals(expResult, result);
@@ -4320,7 +4323,7 @@ public class LeptonicaTest {
 //        int shifty = 0;
 //        float scalex = 0.0F;
 //        float scaley = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Box expResult = null;
 //        Box result = instance.boxTransform(box, shiftx, shifty, scalex, scaley);
 //        assertEquals(expResult, result);
@@ -4343,7 +4346,7 @@ public class LeptonicaTest {
 //        int ycen = 0;
 //        float angle = 0.0F;
 //        int order = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxa expResult = null;
 //        Boxa result = instance.boxaTransformOrdered(boxas, shiftx, shifty, scalex, scaley, xcen, ycen, angle, order);
 //        assertEquals(expResult, result);
@@ -4366,7 +4369,7 @@ public class LeptonicaTest {
 //        int ycen = 0;
 //        float angle = 0.0F;
 //        int order = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Box expResult = null;
 //        Box result = instance.boxTransformOrdered(boxs, shiftx, shifty, scalex, scaley, xcen, ycen, angle, order);
 //        assertEquals(expResult, result);
@@ -4384,7 +4387,7 @@ public class LeptonicaTest {
 //        int w = 0;
 //        int h = 0;
 //        int rotation = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxa expResult = null;
 //        Boxa result = instance.boxaRotateOrth(boxas, w, h, rotation);
 //        assertEquals(expResult, result);
@@ -4402,7 +4405,7 @@ public class LeptonicaTest {
 //        int w = 0;
 //        int h = 0;
 //        int rotation = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Box expResult = null;
 //        Box result = instance.boxRotateOrth(box, w, h, rotation);
 //        assertEquals(expResult, result);
@@ -4420,7 +4423,7 @@ public class LeptonicaTest {
 //        int sorttype = 0;
 //        int sortorder = 0;
 //        Numa.ByReference[] pnaindex = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxa expResult = null;
 //        Boxa result = instance.boxaSort(boxas, sorttype, sortorder, pnaindex);
 //        assertEquals(expResult, result);
@@ -4438,7 +4441,7 @@ public class LeptonicaTest {
 //        int sorttype = 0;
 //        int sortorder = 0;
 //        Numa.ByReference[] pnaindex = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxa expResult = null;
 //        Boxa result = instance.boxaBinSort(boxas, sorttype, sortorder, pnaindex);
 //        assertEquals(expResult, result);
@@ -4454,7 +4457,7 @@ public class LeptonicaTest {
 //        System.out.println("boxaSortByIndex");
 //        Boxa boxas = null;
 //        Numa naindex = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxa expResult = null;
 //        Boxa result = instance.boxaSortByIndex(boxas, naindex);
 //        assertEquals(expResult, result);
@@ -4473,7 +4476,7 @@ public class LeptonicaTest {
 //        int delta1 = 0;
 //        int delta2 = 0;
 //        int minh1 = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxaa expResult = null;
 //        Boxaa result = instance.boxaSort2d(boxas, pnaad, delta1, delta2, minh1);
 //        assertEquals(expResult, result);
@@ -4489,7 +4492,7 @@ public class LeptonicaTest {
 //        System.out.println("boxaSort2dByIndex");
 //        Boxa boxas = null;
 //        Numaa naa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxaa expResult = null;
 //        Boxaa result = instance.boxaSort2dByIndex(boxas, naa);
 //        assertEquals(expResult, result);
@@ -4509,7 +4512,7 @@ public class LeptonicaTest {
 //        Numa.ByReference[] pnaw = null;
 //        Numa.ByReference[] pnah = null;
 //        int keepinvalid = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxaExtractAsNuma(boxa, pnax, pnay, pnaw, pnah, keepinvalid);
 //        assertEquals(expResult, result);
@@ -4529,7 +4532,7 @@ public class LeptonicaTest {
 //        Pta.ByReference[] pptar = null;
 //        Pta.ByReference[] pptab = null;
 //        int keepinvalid = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxaExtractAsPta(boxa, pptal, pptat, pptar, pptab, keepinvalid);
 //        assertEquals(expResult, result);
@@ -4545,7 +4548,7 @@ public class LeptonicaTest {
 //        System.out.println("boxaGetRankSize");
 //        Boxa boxa = null;
 //        float fract = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Box expResult = null;
 //        Box result = instance.boxaGetRankSize(boxa, fract);
 //        assertEquals(expResult, result);
@@ -4560,7 +4563,7 @@ public class LeptonicaTest {
 //    public void testBoxaGetMedian() {
 //        System.out.println("boxaGetMedian");
 //        Boxa boxa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Box expResult = null;
 //        Box result = instance.boxaGetMedian(boxa);
 //        assertEquals(expResult, result);
@@ -4577,7 +4580,7 @@ public class LeptonicaTest {
 //        Boxa boxa = null;
 //        FloatBuffer pw = null;
 //        FloatBuffer ph = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxaGetAverageSize(boxa, pw, ph);
 //        assertEquals(expResult, result);
@@ -4596,7 +4599,7 @@ public class LeptonicaTest {
 //        IntBuffer ph = null;
 //        Box.ByReference[] pbox = null;
 //        Boxa.ByReference[] pboxa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxaaGetExtent(baa, pw, ph, pbox, pboxa);
 //        assertEquals(expResult, result);
@@ -4615,7 +4618,7 @@ public class LeptonicaTest {
 //        IntByReference ph = null;
 //        Box.ByReference[] pbox = null;
 //        Boxa.ByReference[] pboxa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxaaGetExtent(baa, pw, ph, pbox, pboxa);
 //        assertEquals(expResult, result);
@@ -4632,7 +4635,7 @@ public class LeptonicaTest {
 //        Boxaa baa = null;
 //        Numa.ByReference[] pnaindex = null;
 //        int copyflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxa expResult = null;
 //        Boxa result = instance.boxaaFlattenToBoxa(baa, pnaindex, copyflag);
 //        assertEquals(expResult, result);
@@ -4650,7 +4653,7 @@ public class LeptonicaTest {
 //        int num = 0;
 //        Box fillerbox = null;
 //        int copyflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxa expResult = null;
 //        Boxa result = instance.boxaaFlattenAligned(baa, num, fillerbox, copyflag);
 //        assertEquals(expResult, result);
@@ -4667,7 +4670,7 @@ public class LeptonicaTest {
 //        Boxa boxa = null;
 //        int num = 0;
 //        int copyflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxaa expResult = null;
 //        Boxaa result = instance.boxaEncapsulateAligned(boxa, num, copyflag);
 //        assertEquals(expResult, result);
@@ -4685,7 +4688,7 @@ public class LeptonicaTest {
 //        Box box = null;
 //        int delta = 0;
 //        IntBuffer pindex = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxaaAlignBox(baa, box, delta, pindex);
 //        assertEquals(expResult, result);
@@ -4702,7 +4705,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int connectivity = 0;
 //        Boxa.ByReference[] pboxa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixMaskConnComp(pixs, connectivity, pboxa);
 //        assertEquals(expResult, result);
@@ -4720,7 +4723,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        Boxa boxa = null;
 //        int op = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixMaskBoxa(pixd, pixs, boxa, op);
 //        assertEquals(expResult, result);
@@ -4737,7 +4740,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        Boxa boxa = null;
 //        int val = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixPaintBoxa(pixs, boxa, val);
 //        assertEquals(expResult, result);
@@ -4754,7 +4757,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        Boxa boxa = null;
 //        int op = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixSetBlackOrWhiteBoxa(pixs, boxa, op);
 //        assertEquals(expResult, result);
@@ -4770,7 +4773,7 @@ public class LeptonicaTest {
 //        System.out.println("pixPaintBoxaRandom");
 //        Pix pixs = null;
 //        Boxa boxa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixPaintBoxaRandom(pixs, boxa);
 //        assertEquals(expResult, result);
@@ -4787,7 +4790,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        Boxa boxa = null;
 //        float fract = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixBlendBoxaRandom(pixs, boxa, fract);
 //        assertEquals(expResult, result);
@@ -4805,7 +4808,7 @@ public class LeptonicaTest {
 //        Boxa boxa = null;
 //        int width = 0;
 //        int val = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixDrawBoxa(pixs, boxa, width, val);
 //        assertEquals(expResult, result);
@@ -4822,7 +4825,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        Boxa boxa = null;
 //        int width = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixDrawBoxaRandom(pixs, boxa, width);
 //        assertEquals(expResult, result);
@@ -4843,7 +4846,7 @@ public class LeptonicaTest {
 //        int colorb = 0;
 //        int w = 0;
 //        int h = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.boxaaDisplay(baa, linewba, linewb, colorba, colorb, w, h);
 //        assertEquals(expResult, result);
@@ -4864,7 +4867,7 @@ public class LeptonicaTest {
 //        int maxbg = 0;
 //        int maxcomps = 0;
 //        int remainder = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxa expResult = null;
 //        Boxa result = instance.pixSplitIntoBoxa(pixs, minsum, skipdist, delta, maxbg, maxcomps, remainder);
 //        assertEquals(expResult, result);
@@ -4886,7 +4889,7 @@ public class LeptonicaTest {
 //        int maxbg = 0;
 //        int maxcomps = 0;
 //        int remainder = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxa expResult = null;
 //        Boxa result = instance.pixSplitComponentIntoBoxa(pix, box, minsum, skipdist, delta, maxbg, maxcomps, remainder);
 //        assertEquals(expResult, result);
@@ -4904,7 +4907,7 @@ public class LeptonicaTest {
 //        int h = 0;
 //        int direction = 0;
 //        int size = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxa expResult = null;
 //        Boxa result = instance.makeMosaicStrips(w, h, direction, size);
 //        assertEquals(expResult, result);
@@ -4925,7 +4928,7 @@ public class LeptonicaTest {
 //        FloatBuffer pdiffarea = null;
 //        FloatBuffer pdiffxor = null;
 //        Pix.ByReference[] ppixdb = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxaCompareRegions(boxa1, boxa2, areathresh, pnsame, pdiffarea, pdiffxor, ppixdb);
 //        assertEquals(expResult, result);
@@ -4946,7 +4949,7 @@ public class LeptonicaTest {
 //        FloatByReference pdiffarea = null;
 //        FloatByReference pdiffxor = null;
 //        Pix.ByReference[] ppixdb = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxaCompareRegions(boxa1, boxa2, areathresh, pnsame, pdiffarea, pdiffxor, ppixdb);
 //        assertEquals(expResult, result);
@@ -4964,7 +4967,7 @@ public class LeptonicaTest {
 //        int first = 0;
 //        int last = 0;
 //        int copyflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxa expResult = null;
 //        Boxa result = instance.boxaSelectRange(boxas, first, last, copyflag);
 //        assertEquals(expResult, result);
@@ -4982,7 +4985,7 @@ public class LeptonicaTest {
 //        int first = 0;
 //        int last = 0;
 //        int copyflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxaa expResult = null;
 //        Boxaa result = instance.boxaaSelectRange(baas, first, last, copyflag);
 //        assertEquals(expResult, result);
@@ -5002,7 +5005,7 @@ public class LeptonicaTest {
 //        int type = 0;
 //        int relation = 0;
 //        IntBuffer pchanged = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxa expResult = null;
 //        Boxa result = instance.boxaSelectBySize(boxas, width, height, type, relation, pchanged);
 //        assertEquals(expResult, result);
@@ -5021,7 +5024,7 @@ public class LeptonicaTest {
 //        int height = 0;
 //        int type = 0;
 //        int relation = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.boxaMakeSizeIndicator(boxa, width, height, type, relation);
 //        assertEquals(expResult, result);
@@ -5039,7 +5042,7 @@ public class LeptonicaTest {
 //        int area = 0;
 //        int relation = 0;
 //        IntBuffer pchanged = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxa expResult = null;
 //        Boxa result = instance.boxaSelectByArea(boxas, area, relation, pchanged);
 //        assertEquals(expResult, result);
@@ -5056,7 +5059,7 @@ public class LeptonicaTest {
 //        Boxa boxa = null;
 //        int area = 0;
 //        int relation = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.boxaMakeAreaIndicator(boxa, area, relation);
 //        assertEquals(expResult, result);
@@ -5073,7 +5076,7 @@ public class LeptonicaTest {
 //        Boxa boxas = null;
 //        Numa na = null;
 //        IntBuffer pchanged = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxa expResult = null;
 //        Boxa result = instance.boxaSelectWithIndicator(boxas, na, pchanged);
 //        assertEquals(expResult, result);
@@ -5088,7 +5091,7 @@ public class LeptonicaTest {
 //    public void testBoxaPermutePseudorandom() {
 //        System.out.println("boxaPermutePseudorandom");
 //        Boxa boxas = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxa expResult = null;
 //        Boxa result = instance.boxaPermutePseudorandom(boxas);
 //        assertEquals(expResult, result);
@@ -5104,7 +5107,7 @@ public class LeptonicaTest {
 //        System.out.println("boxaPermuteRandom");
 //        Boxa boxad = null;
 //        Boxa boxas = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxa expResult = null;
 //        Boxa result = instance.boxaPermuteRandom(boxad, boxas);
 //        assertEquals(expResult, result);
@@ -5121,7 +5124,7 @@ public class LeptonicaTest {
 //        Boxa boxa = null;
 //        int i = 0;
 //        int j = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxaSwapBoxes(boxa, i, j);
 //        assertEquals(expResult, result);
@@ -5137,7 +5140,7 @@ public class LeptonicaTest {
 //        System.out.println("boxaConvertToPta");
 //        Boxa boxa = null;
 //        int ncorners = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pta expResult = null;
 //        Pta result = instance.boxaConvertToPta(boxa, ncorners);
 //        assertEquals(expResult, result);
@@ -5153,7 +5156,7 @@ public class LeptonicaTest {
 //        System.out.println("ptaConvertToBoxa");
 //        Pta pta = null;
 //        int ncorners = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxa expResult = null;
 //        Boxa result = instance.ptaConvertToBoxa(pta, ncorners);
 //        assertEquals(expResult, result);
@@ -5170,7 +5173,7 @@ public class LeptonicaTest {
 //        Boxa boxas = null;
 //        float factor = 0.0F;
 //        int debug = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxa expResult = null;
 //        Boxa result = instance.boxaLinearFit(boxas, factor, debug);
 //        assertEquals(expResult, result);
@@ -5188,7 +5191,7 @@ public class LeptonicaTest {
 //        Boxa boxam = null;
 //        int subflag = 0;
 //        int maxdiff = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxa expResult = null;
 //        Boxa result = instance.boxaModifyWithBoxa(boxas, boxam, subflag, maxdiff);
 //        assertEquals(expResult, result);
@@ -5207,7 +5210,7 @@ public class LeptonicaTest {
 //        int widthflag = 0;
 //        int height = 0;
 //        int heightflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxa expResult = null;
 //        Boxa result = instance.boxaConstrainSize(boxas, width, widthflag, height, heightflag);
 //        assertEquals(expResult, result);
@@ -5226,7 +5229,7 @@ public class LeptonicaTest {
 //        int delh = 0;
 //        int op = 0;
 //        float factor = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxa expResult = null;
 //        Boxa result = instance.boxaReconcileEvenOddHeight(boxas, sides, delh, op, factor);
 //        assertEquals(expResult, result);
@@ -5247,7 +5250,7 @@ public class LeptonicaTest {
 //        Numa.ByReference[] pnar = null;
 //        Numa.ByReference[] pnab = null;
 //        int outformat = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxaPlotSides(boxa, plotname, pnal, pnat, pnar, pnab, outformat);
 //        assertEquals(expResult, result);
@@ -5268,7 +5271,7 @@ public class LeptonicaTest {
 //        Numa.ByReference[] pnar = null;
 //        Numa.ByReference[] pnab = null;
 //        int outformat = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxaPlotSides(boxa, plotname, pnal, pnat, pnar, pnab, outformat);
 //        assertEquals(expResult, result);
@@ -5286,7 +5289,7 @@ public class LeptonicaTest {
 //        IntBuffer pw = null;
 //        IntBuffer ph = null;
 //        Box.ByReference[] pbox = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxaGetExtent(boxa, pw, ph, pbox);
 //        assertEquals(expResult, result);
@@ -5304,7 +5307,7 @@ public class LeptonicaTest {
 //        IntByReference pw = null;
 //        IntByReference ph = null;
 //        Box.ByReference[] pbox = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxaGetExtent(boxa, pw, ph, pbox);
 //        assertEquals(expResult, result);
@@ -5323,7 +5326,7 @@ public class LeptonicaTest {
 //        int hc = 0;
 //        int exactflag = 0;
 //        FloatBuffer pfract = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxaGetCoverage(boxa, wc, hc, exactflag, pfract);
 //        assertEquals(expResult, result);
@@ -5342,7 +5345,7 @@ public class LeptonicaTest {
 //        IntBuffer pminh = null;
 //        IntBuffer pmaxw = null;
 //        IntBuffer pmaxh = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxaaSizeRange(baa, pminw, pminh, pmaxw, pmaxh);
 //        assertEquals(expResult, result);
@@ -5361,7 +5364,7 @@ public class LeptonicaTest {
 //        IntBuffer pminh = null;
 //        IntBuffer pmaxw = null;
 //        IntBuffer pmaxh = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxaSizeRange(boxa, pminw, pminh, pmaxw, pmaxh);
 //        assertEquals(expResult, result);
@@ -5380,7 +5383,7 @@ public class LeptonicaTest {
 //        IntBuffer pminy = null;
 //        IntBuffer pmaxx = null;
 //        IntBuffer pmaxy = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxaLocationRange(boxa, pminx, pminy, pmaxx, pmaxy);
 //        assertEquals(expResult, result);
@@ -5396,7 +5399,7 @@ public class LeptonicaTest {
 //        System.out.println("boxaGetArea");
 //        Boxa boxa = null;
 //        IntBuffer parea = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.boxaGetArea(boxa, parea);
 //        assertEquals(expResult, result);
@@ -5419,7 +5422,7 @@ public class LeptonicaTest {
 //        int spacing = 0;
 //        int border = 0;
 //        String fontdir = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.boxaDisplayTiled(boxas, pixa, maxwidth, linewidth, scalefactor, background, spacing, border, fontdir);
 //        assertEquals(expResult, result);
@@ -5434,7 +5437,7 @@ public class LeptonicaTest {
 //    public void testL_byteaCreate() {
 //        System.out.println("l_byteaCreate");
 //        NativeSize nbytes = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Bytea expResult = null;
 //        L_Bytea result = instance.l_byteaCreate(nbytes);
 //        assertEquals(expResult, result);
@@ -5450,7 +5453,7 @@ public class LeptonicaTest {
 //        System.out.println("l_byteaInitFromMem");
 //        ByteBuffer data = null;
 //        NativeSize size = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Bytea expResult = null;
 //        L_Bytea result = instance.l_byteaInitFromMem(data, size);
 //        assertEquals(expResult, result);
@@ -5465,7 +5468,7 @@ public class LeptonicaTest {
 //    public void testL_byteaInitFromFile() {
 //        System.out.println("l_byteaInitFromFile");
 //        String fname = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Bytea expResult = null;
 //        L_Bytea result = instance.l_byteaInitFromFile(fname);
 //        assertEquals(expResult, result);
@@ -5480,7 +5483,7 @@ public class LeptonicaTest {
 //    public void testL_byteaInitFromStream() {
 //        System.out.println("l_byteaInitFromStream");
 //        PointerByReference fp = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Bytea expResult = null;
 //        L_Bytea result = instance.l_byteaInitFromStream(fp);
 //        assertEquals(expResult, result);
@@ -5496,7 +5499,7 @@ public class LeptonicaTest {
 //        System.out.println("l_byteaCopy");
 //        L_Bytea bas = null;
 //        int copyflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Bytea expResult = null;
 //        L_Bytea result = instance.l_byteaCopy(bas, copyflag);
 //        assertEquals(expResult, result);
@@ -5511,7 +5514,7 @@ public class LeptonicaTest {
 //    public void testL_byteaDestroy() {
 //        System.out.println("l_byteaDestroy");
 //        L_Bytea.ByReference[] pba = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.l_byteaDestroy(pba);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -5524,7 +5527,7 @@ public class LeptonicaTest {
 //    public void testL_byteaGetSize() {
 //        System.out.println("l_byteaGetSize");
 //        L_Bytea ba = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        NativeSize expResult = null;
 //        NativeSize result = instance.l_byteaGetSize(ba);
 //        assertEquals(expResult, result);
@@ -5540,7 +5543,7 @@ public class LeptonicaTest {
 //        System.out.println("l_byteaGetData");
 //        L_Bytea ba = null;
 //        NativeSizeByReference psize = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.l_byteaGetData(ba, psize);
 //        assertEquals(expResult, result);
@@ -5556,7 +5559,7 @@ public class LeptonicaTest {
 //        System.out.println("l_byteaCopyData");
 //        L_Bytea ba = null;
 //        NativeSizeByReference psize = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.l_byteaCopyData(ba, psize);
 //        assertEquals(expResult, result);
@@ -5573,7 +5576,7 @@ public class LeptonicaTest {
 //        L_Bytea ba = null;
 //        ByteBuffer newdata = null;
 //        NativeSize newbytes = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.l_byteaAppendData(ba, newdata, newbytes);
 //        assertEquals(expResult, result);
@@ -5589,7 +5592,7 @@ public class LeptonicaTest {
 //        System.out.println("l_byteaAppendString");
 //        L_Bytea ba = null;
 //        ByteBuffer str = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.l_byteaAppendString(ba, str);
 //        assertEquals(expResult, result);
@@ -5605,7 +5608,7 @@ public class LeptonicaTest {
 //        System.out.println("l_byteaJoin");
 //        L_Bytea ba1 = null;
 //        L_Bytea.ByReference[] pba2 = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.l_byteaJoin(ba1, pba2);
 //        assertEquals(expResult, result);
@@ -5622,7 +5625,7 @@ public class LeptonicaTest {
 //        L_Bytea ba1 = null;
 //        NativeSize splitloc = null;
 //        L_Bytea.ByReference[] pba2 = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.l_byteaSplit(ba1, splitloc, pba2);
 //        assertEquals(expResult, result);
@@ -5640,7 +5643,7 @@ public class LeptonicaTest {
 //        ByteBuffer sequence = null;
 //        int seqlen = 0;
 //        L_Dna.ByReference[] pda = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.l_byteaFindEachSequence(ba, sequence, seqlen, pda);
 //        assertEquals(expResult, result);
@@ -5658,7 +5661,7 @@ public class LeptonicaTest {
 //        Pointer sequence = null;
 //        int seqlen = 0;
 //        L_Dna.ByReference[] pda = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.l_byteaFindEachSequence(ba, sequence, seqlen, pda);
 //        assertEquals(expResult, result);
@@ -5676,7 +5679,7 @@ public class LeptonicaTest {
 //        L_Bytea ba = null;
 //        NativeSize startloc = null;
 //        NativeSize endloc = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.l_byteaWrite(fname, ba, startloc, endloc);
 //        assertEquals(expResult, result);
@@ -5694,7 +5697,7 @@ public class LeptonicaTest {
 //        L_Bytea ba = null;
 //        NativeSize startloc = null;
 //        NativeSize endloc = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.l_byteaWriteStream(fp, ba, startloc, endloc);
 //        assertEquals(expResult, result);
@@ -5710,7 +5713,7 @@ public class LeptonicaTest {
 //        System.out.println("ccbaCreate");
 //        Pix pixs = null;
 //        int n = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        CCBorda expResult = null;
 //        CCBorda result = instance.ccbaCreate(pixs, n);
 //        assertEquals(expResult, result);
@@ -5725,7 +5728,7 @@ public class LeptonicaTest {
 //    public void testCcbaDestroy() {
 //        System.out.println("ccbaDestroy");
 //        CCBorda.ByReference[] pccba = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.ccbaDestroy(pccba);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -5738,7 +5741,7 @@ public class LeptonicaTest {
 //    public void testCcbCreate() {
 //        System.out.println("ccbCreate");
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        CCBord expResult = null;
 //        CCBord result = instance.ccbCreate(pixs);
 //        assertEquals(expResult, result);
@@ -5753,7 +5756,7 @@ public class LeptonicaTest {
 //    public void testCcbDestroy() {
 //        System.out.println("ccbDestroy");
 //        CCBord.ByReference[] pccb = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.ccbDestroy(pccb);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -5767,7 +5770,7 @@ public class LeptonicaTest {
 //        System.out.println("ccbaAddCcb");
 //        CCBorda ccba = null;
 //        CCBord ccb = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ccbaAddCcb(ccba, ccb);
 //        assertEquals(expResult, result);
@@ -5782,7 +5785,7 @@ public class LeptonicaTest {
 //    public void testCcbaGetCount() {
 //        System.out.println("ccbaGetCount");
 //        CCBorda ccba = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ccbaGetCount(ccba);
 //        assertEquals(expResult, result);
@@ -5798,7 +5801,7 @@ public class LeptonicaTest {
 //        System.out.println("ccbaGetCcb");
 //        CCBorda ccba = null;
 //        int index = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        CCBord expResult = null;
 //        CCBord result = instance.ccbaGetCcb(ccba, index);
 //        assertEquals(expResult, result);
@@ -5813,7 +5816,7 @@ public class LeptonicaTest {
 //    public void testPixGetAllCCBorders() {
 //        System.out.println("pixGetAllCCBorders");
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        CCBorda expResult = null;
 //        CCBorda result = instance.pixGetAllCCBorders(pixs);
 //        assertEquals(expResult, result);
@@ -5829,7 +5832,7 @@ public class LeptonicaTest {
 //        System.out.println("pixGetCCBorders");
 //        Pix pixs = null;
 //        Box box = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        CCBord expResult = null;
 //        CCBord result = instance.pixGetCCBorders(pixs, box);
 //        assertEquals(expResult, result);
@@ -5844,7 +5847,7 @@ public class LeptonicaTest {
 //    public void testPixGetOuterBordersPtaa() {
 //        System.out.println("pixGetOuterBordersPtaa");
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Ptaa expResult = null;
 //        Ptaa result = instance.pixGetOuterBordersPtaa(pixs);
 //        assertEquals(expResult, result);
@@ -5860,7 +5863,7 @@ public class LeptonicaTest {
 //        System.out.println("pixGetOuterBorderPta");
 //        Pix pixs = null;
 //        Box box = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pta expResult = null;
 //        Pta result = instance.pixGetOuterBorderPta(pixs, box);
 //        assertEquals(expResult, result);
@@ -5877,7 +5880,7 @@ public class LeptonicaTest {
 //        CCBord ccb = null;
 //        Pix pixs = null;
 //        Box box = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixGetOuterBorder(ccb, pixs, box);
 //        assertEquals(expResult, result);
@@ -5896,7 +5899,7 @@ public class LeptonicaTest {
 //        Box box = null;
 //        int xs = 0;
 //        int ys = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixGetHoleBorder(ccb, pixs, box, xs, ys);
 //        assertEquals(expResult, result);
@@ -5919,7 +5922,7 @@ public class LeptonicaTest {
 //        IntBuffer pqpos = null;
 //        IntBuffer pnpx = null;
 //        IntBuffer pnpy = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.findNextBorderPixel(w, h, data, wpl, px, py, pqpos, pnpx, pnpy);
 //        assertEquals(expResult, result);
@@ -5939,7 +5942,7 @@ public class LeptonicaTest {
 //        int spy = 0;
 //        IntBuffer pxs = null;
 //        IntBuffer pys = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.locateOutsideSeedPixel(fpx, fpy, spx, spy, pxs, pys);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -5952,7 +5955,7 @@ public class LeptonicaTest {
 //    public void testCcbaGenerateGlobalLocs() {
 //        System.out.println("ccbaGenerateGlobalLocs");
 //        CCBorda ccba = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ccbaGenerateGlobalLocs(ccba);
 //        assertEquals(expResult, result);
@@ -5967,7 +5970,7 @@ public class LeptonicaTest {
 //    public void testCcbaGenerateStepChains() {
 //        System.out.println("ccbaGenerateStepChains");
 //        CCBorda ccba = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ccbaGenerateStepChains(ccba);
 //        assertEquals(expResult, result);
@@ -5983,7 +5986,7 @@ public class LeptonicaTest {
 //        System.out.println("ccbaStepChainsToPixCoords");
 //        CCBorda ccba = null;
 //        int coordtype = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ccbaStepChainsToPixCoords(ccba, coordtype);
 //        assertEquals(expResult, result);
@@ -5999,7 +6002,7 @@ public class LeptonicaTest {
 //        System.out.println("ccbaGenerateSPGlobalLocs");
 //        CCBorda ccba = null;
 //        int ptsflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ccbaGenerateSPGlobalLocs(ccba, ptsflag);
 //        assertEquals(expResult, result);
@@ -6014,7 +6017,7 @@ public class LeptonicaTest {
 //    public void testCcbaGenerateSinglePath() {
 //        System.out.println("ccbaGenerateSinglePath");
 //        CCBorda ccba = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ccbaGenerateSinglePath(ccba);
 //        assertEquals(expResult, result);
@@ -6033,7 +6036,7 @@ public class LeptonicaTest {
 //        Box boxinner = null;
 //        IntBuffer pdir = null;
 //        IntBuffer plen = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pta expResult = null;
 //        Pta result = instance.getCutPathForHole(pix, pta, boxinner, pdir, plen);
 //        assertEquals(expResult, result);
@@ -6048,7 +6051,7 @@ public class LeptonicaTest {
 //    public void testCcbaDisplayBorder() {
 //        System.out.println("ccbaDisplayBorder");
 //        CCBorda ccba = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.ccbaDisplayBorder(ccba);
 //        assertEquals(expResult, result);
@@ -6063,7 +6066,7 @@ public class LeptonicaTest {
 //    public void testCcbaDisplaySPBorder() {
 //        System.out.println("ccbaDisplaySPBorder");
 //        CCBorda ccba = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.ccbaDisplaySPBorder(ccba);
 //        assertEquals(expResult, result);
@@ -6078,7 +6081,7 @@ public class LeptonicaTest {
 //    public void testCcbaDisplayImage1() {
 //        System.out.println("ccbaDisplayImage1");
 //        CCBorda ccba = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.ccbaDisplayImage1(ccba);
 //        assertEquals(expResult, result);
@@ -6093,7 +6096,7 @@ public class LeptonicaTest {
 //    public void testCcbaDisplayImage2() {
 //        System.out.println("ccbaDisplayImage2");
 //        CCBorda ccba = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.ccbaDisplayImage2(ccba);
 //        assertEquals(expResult, result);
@@ -6109,7 +6112,7 @@ public class LeptonicaTest {
 //        System.out.println("ccbaWrite");
 //        String filename = "";
 //        CCBorda ccba = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ccbaWrite(filename, ccba);
 //        assertEquals(expResult, result);
@@ -6125,7 +6128,7 @@ public class LeptonicaTest {
 //        System.out.println("ccbaWriteStream");
 //        PointerByReference fp = null;
 //        CCBorda ccba = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ccbaWriteStream(fp, ccba);
 //        assertEquals(expResult, result);
@@ -6140,7 +6143,7 @@ public class LeptonicaTest {
 //    public void testCcbaRead() {
 //        System.out.println("ccbaRead");
 //        String filename = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        CCBorda expResult = null;
 //        CCBorda result = instance.ccbaRead(filename);
 //        assertEquals(expResult, result);
@@ -6155,7 +6158,7 @@ public class LeptonicaTest {
 //    public void testCcbaReadStream() {
 //        System.out.println("ccbaReadStream");
 //        PointerByReference fp = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        CCBorda expResult = null;
 //        CCBorda result = instance.ccbaReadStream(fp);
 //        assertEquals(expResult, result);
@@ -6171,7 +6174,7 @@ public class LeptonicaTest {
 //        System.out.println("ccbaWriteSVG");
 //        String filename = "";
 //        CCBorda ccba = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ccbaWriteSVG(filename, ccba);
 //        assertEquals(expResult, result);
@@ -6187,7 +6190,7 @@ public class LeptonicaTest {
 //        System.out.println("ccbaWriteSVGString");
 //        String filename = "";
 //        CCBorda ccba = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.ccbaWriteSVGString(filename, ccba);
 //        assertEquals(expResult, result);
@@ -6205,7 +6208,7 @@ public class LeptonicaTest {
 //        int type = 0;
 //        int connectivity = 0;
 //        int maxiters = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixThin(pixs, type, connectivity, maxiters);
 //        assertEquals(expResult, result);
@@ -6223,7 +6226,7 @@ public class LeptonicaTest {
 //        int type = 0;
 //        Sela sela = null;
 //        int maxiters = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixThinGeneral(pixs, type, sela, maxiters);
 //        assertEquals(expResult, result);
@@ -6242,7 +6245,7 @@ public class LeptonicaTest {
 //        int index = 0;
 //        int maxiters = 0;
 //        String selfile = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixThinExamples(pixs, type, index, maxiters, selfile);
 //        assertEquals(expResult, result);
@@ -6264,7 +6267,7 @@ public class LeptonicaTest {
 //        int firstpage = 0;
 //        int npages = 0;
 //        int renderflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.jbCorrelation(dirin, thresh, weight, components, rootname, firstpage, npages, renderflag);
 //        assertEquals(expResult, result);
@@ -6286,7 +6289,7 @@ public class LeptonicaTest {
 //        int firstpage = 0;
 //        int npages = 0;
 //        int renderflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.jbRankHaus(dirin, size, rank, components, rootname, firstpage, npages, renderflag);
 //        assertEquals(expResult, result);
@@ -6309,7 +6312,7 @@ public class LeptonicaTest {
 //        Numa.ByReference[] pnatl = null;
 //        int firstpage = 0;
 //        int npages = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        JbClasser expResult = null;
 //        JbClasser result = instance.jbWordsInTextlines(dirin, reduction, maxwidth, maxheight, thresh, weight, pnatl, firstpage, npages);
 //        assertEquals(expResult, result);
@@ -6332,7 +6335,7 @@ public class LeptonicaTest {
 //        Numa.ByReference[] pnatl = null;
 //        int firstpage = 0;
 //        int npages = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        JbClasser expResult = null;
 //        JbClasser result = instance.jbWordsInTextlines(dirin, reduction, maxwidth, maxheight, thresh, weight, pnatl, firstpage, npages);
 //        assertEquals(expResult, result);
@@ -6355,7 +6358,7 @@ public class LeptonicaTest {
 //        Boxa.ByReference[] pboxad = null;
 //        Pixa.ByReference[] ppixad = null;
 //        Numa.ByReference[] pnai = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixGetWordsInTextlines(pixs, reduction, minwidth, minheight, maxwidth, maxheight, pboxad, ppixad, pnai);
 //        assertEquals(expResult, result);
@@ -6377,7 +6380,7 @@ public class LeptonicaTest {
 //        int maxheight = 0;
 //        Boxa.ByReference[] pboxad = null;
 //        Numa.ByReference[] pnai = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixGetWordBoxesInTextlines(pixs, reduction, minwidth, minheight, maxwidth, maxheight, pboxad, pnai);
 //        assertEquals(expResult, result);
@@ -6393,7 +6396,7 @@ public class LeptonicaTest {
 //        System.out.println("boxaExtractSortedPattern");
 //        Boxa boxa = null;
 //        Numa na = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numaa expResult = null;
 //        Numaa result = instance.boxaExtractSortedPattern(boxa, na);
 //        assertEquals(expResult, result);
@@ -6417,7 +6420,7 @@ public class LeptonicaTest {
 //        int dely = 0;
 //        IntBuffer psame = null;
 //        int debugflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaaCompareImagesByBoxes(naa1, naa2, nperline, nreq, maxshiftx, maxshifty, delx, dely, psame, debugflag);
 //        assertEquals(expResult, result);
@@ -6439,7 +6442,7 @@ public class LeptonicaTest {
 //        Pix.ByReference[] ppixr = null;
 //        Pix.ByReference[] ppixg = null;
 //        Pix.ByReference[] ppixb = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixColorContent(pixs, rwhite, gwhite, bwhite, mingray, ppixr, ppixg, ppixb);
 //        assertEquals(expResult, result);
@@ -6458,7 +6461,7 @@ public class LeptonicaTest {
 //        int gwhite = 0;
 //        int bwhite = 0;
 //        int type = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixColorMagnitude(pixs, rwhite, gwhite, bwhite, type);
 //        assertEquals(expResult, result);
@@ -6475,7 +6478,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int threshdiff = 0;
 //        int mindist = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixMaskOverColorPixels(pixs, threshdiff, mindist);
 //        assertEquals(expResult, result);
@@ -6496,7 +6499,7 @@ public class LeptonicaTest {
 //        int factor = 0;
 //        FloatBuffer ppixfract = null;
 //        FloatBuffer pcolorfract = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixColorFraction(pixs, darkthresh, lightthresh, diffthresh, factor, ppixfract, pcolorfract);
 //        assertEquals(expResult, result);
@@ -6516,7 +6519,7 @@ public class LeptonicaTest {
 //        float minfract = 0.0F;
 //        int factor = 0;
 //        IntBuffer pncolors = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixNumSignificantGrayColors(pixs, darkthresh, lightthresh, minfract, factor, pncolors);
 //        assertEquals(expResult, result);
@@ -6535,7 +6538,7 @@ public class LeptonicaTest {
 //        IntBuffer pncolors = null;
 //        IntBuffer piscolor = null;
 //        int debug = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixColorsForQuantization(pixs, thresh, pncolors, piscolor, debug);
 //        assertEquals(expResult, result);
@@ -6552,7 +6555,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int factor = 0;
 //        IntBuffer pncolors = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixNumColors(pixs, factor, pncolors);
 //        assertEquals(expResult, result);
@@ -6572,7 +6575,7 @@ public class LeptonicaTest {
 //        int ncolors = 0;
 //        PointerByReference parray = null;
 //        PixColormap.ByReference[] pcmap = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixGetMostPopulatedColors(pixs, sigbits, factor, ncolors, parray, pcmap);
 //        assertEquals(expResult, result);
@@ -6590,7 +6593,7 @@ public class LeptonicaTest {
 //        int sigbits = 0;
 //        int factor = 0;
 //        int ncolors = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixSimpleColorQuantize(pixs, sigbits, factor, ncolors);
 //        assertEquals(expResult, result);
@@ -6607,7 +6610,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int sigbits = 0;
 //        int factor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.pixGetRGBHistogram(pixs, sigbits, factor);
 //        assertEquals(expResult, result);
@@ -6625,7 +6628,7 @@ public class LeptonicaTest {
 //        PointerByReference pgtab = null;
 //        PointerByReference pbtab = null;
 //        int sigbits = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.makeRGBIndexTables(prtab, pgtab, pbtab, sigbits);
 //        assertEquals(expResult, result);
@@ -6644,7 +6647,7 @@ public class LeptonicaTest {
 //        IntBuffer prval = null;
 //        IntBuffer pgval = null;
 //        IntBuffer pbval = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.getRGBFromIndex(index, sigbits, prval, pgval, pbval);
 //        assertEquals(expResult, result);
@@ -6665,7 +6668,7 @@ public class LeptonicaTest {
 //        IntBuffer phasred = null;
 //        FloatBuffer pratio = null;
 //        Pix.ByReference[] ppixdb = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixHasHighlightRed(pixs, factor, fract, fthresh, phasred, pratio, ppixdb);
 //        assertEquals(expResult, result);
@@ -6686,7 +6689,7 @@ public class LeptonicaTest {
 //        IntByReference phasred = null;
 //        FloatByReference pratio = null;
 //        Pix.ByReference[] ppixdb = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixHasHighlightRed(pixs, factor, fract, fthresh, phasred, pratio, ppixdb);
 //        assertEquals(expResult, result);
@@ -6707,7 +6710,7 @@ public class LeptonicaTest {
 //        int rval = 0;
 //        int gval = 0;
 //        int bval = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixColorGrayRegions(pixs, boxa, type, thresh, rval, gval, bval);
 //        assertEquals(expResult, result);
@@ -6728,7 +6731,7 @@ public class LeptonicaTest {
 //        int rval = 0;
 //        int gval = 0;
 //        int bval = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixColorGray(pixs, box, type, thresh, rval, gval, bval);
 //        assertEquals(expResult, result);
@@ -6747,7 +6750,7 @@ public class LeptonicaTest {
 //        int srcval = 0;
 //        int dstval = 0;
 //        int diff = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixSnapColor(pixd, pixs, srcval, dstval, diff);
 //        assertEquals(expResult, result);
@@ -6766,7 +6769,7 @@ public class LeptonicaTest {
 //        int srcval = 0;
 //        int dstval = 0;
 //        int diff = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixSnapColorCmap(pixd, pixs, srcval, dstval, diff);
 //        assertEquals(expResult, result);
@@ -6784,7 +6787,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int srcval = 0;
 //        int dstval = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixLinearMapToTargetColor(pixd, pixs, srcval, dstval);
 //        assertEquals(expResult, result);
@@ -6802,7 +6805,7 @@ public class LeptonicaTest {
 //        int srcmap = 0;
 //        int dstmap = 0;
 //        IntBuffer pdcolor = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixelLinearMapToTargetColor(scolor, srcmap, dstmap, pdcolor);
 //        assertEquals(expResult, result);
@@ -6820,7 +6823,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int srcval = 0;
 //        int dstval = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixShiftByComponent(pixd, pixs, srcval, dstval);
 //        assertEquals(expResult, result);
@@ -6840,7 +6843,7 @@ public class LeptonicaTest {
 //        int srcval = 0;
 //        int dstval = 0;
 //        IntBuffer ppixel = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixelShiftByComponent(rval, gval, bval, srcval, dstval, ppixel);
 //        assertEquals(expResult, result);
@@ -6859,7 +6862,7 @@ public class LeptonicaTest {
 //        int bval = 0;
 //        float fraction = 0.0F;
 //        IntBuffer ppixel = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixelFractionalShift(rval, gval, bval, fraction, ppixel);
 //        assertEquals(expResult, result);
@@ -6874,7 +6877,7 @@ public class LeptonicaTest {
 //    public void testPixcmapCreate() {
 //        System.out.println("pixcmapCreate");
 //        int depth = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        PixColormap expResult = null;
 //        PixColormap result = instance.pixcmapCreate(depth);
 //        assertEquals(expResult, result);
@@ -6891,7 +6894,7 @@ public class LeptonicaTest {
 //        int depth = 0;
 //        int hasblack = 0;
 //        int haswhite = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        PixColormap expResult = null;
 //        PixColormap result = instance.pixcmapCreateRandom(depth, hasblack, haswhite);
 //        assertEquals(expResult, result);
@@ -6907,7 +6910,7 @@ public class LeptonicaTest {
 //        System.out.println("pixcmapCreateLinear");
 //        int d = 0;
 //        int nlevels = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        PixColormap expResult = null;
 //        PixColormap result = instance.pixcmapCreateLinear(d, nlevels);
 //        assertEquals(expResult, result);
@@ -6922,7 +6925,7 @@ public class LeptonicaTest {
 //    public void testPixcmapCopy() {
 //        System.out.println("pixcmapCopy");
 //        PixColormap cmaps = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        PixColormap expResult = null;
 //        PixColormap result = instance.pixcmapCopy(cmaps);
 //        assertEquals(expResult, result);
@@ -6937,7 +6940,7 @@ public class LeptonicaTest {
 //    public void testPixcmapDestroy() {
 //        System.out.println("pixcmapDestroy");
 //        PixColormap.ByReference[] pcmap = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.pixcmapDestroy(pcmap);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -6953,7 +6956,7 @@ public class LeptonicaTest {
 //        int rval = 0;
 //        int gval = 0;
 //        int bval = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixcmapAddColor(cmap, rval, gval, bval);
 //        assertEquals(expResult, result);
@@ -6972,7 +6975,7 @@ public class LeptonicaTest {
 //        int gval = 0;
 //        int bval = 0;
 //        int aval = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixcmapAddRGBA(cmap, rval, gval, bval, aval);
 //        assertEquals(expResult, result);
@@ -6991,7 +6994,7 @@ public class LeptonicaTest {
 //        int gval = 0;
 //        int bval = 0;
 //        IntBuffer pindex = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixcmapAddNewColor(cmap, rval, gval, bval, pindex);
 //        assertEquals(expResult, result);
@@ -7010,7 +7013,7 @@ public class LeptonicaTest {
 //        int gval = 0;
 //        int bval = 0;
 //        IntBuffer pindex = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixcmapAddNearestColor(cmap, rval, gval, bval, pindex);
 //        assertEquals(expResult, result);
@@ -7029,7 +7032,7 @@ public class LeptonicaTest {
 //        int gval = 0;
 //        int bval = 0;
 //        IntBuffer pusable = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixcmapUsableColor(cmap, rval, gval, bval, pusable);
 //        assertEquals(expResult, result);
@@ -7046,7 +7049,7 @@ public class LeptonicaTest {
 //        PixColormap cmap = null;
 //        int color = 0;
 //        IntBuffer pindex = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixcmapAddBlackOrWhite(cmap, color, pindex);
 //        assertEquals(expResult, result);
@@ -7063,7 +7066,7 @@ public class LeptonicaTest {
 //        PixColormap cmap = null;
 //        int setblack = 0;
 //        int setwhite = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixcmapSetBlackAndWhite(cmap, setblack, setwhite);
 //        assertEquals(expResult, result);
@@ -7078,7 +7081,7 @@ public class LeptonicaTest {
 //    public void testPixcmapGetCount() {
 //        System.out.println("pixcmapGetCount");
 //        PixColormap cmap = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixcmapGetCount(cmap);
 //        assertEquals(expResult, result);
@@ -7093,7 +7096,7 @@ public class LeptonicaTest {
 //    public void testPixcmapGetFreeCount() {
 //        System.out.println("pixcmapGetFreeCount");
 //        PixColormap cmap = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixcmapGetFreeCount(cmap);
 //        assertEquals(expResult, result);
@@ -7108,7 +7111,7 @@ public class LeptonicaTest {
 //    public void testPixcmapGetDepth() {
 //        System.out.println("pixcmapGetDepth");
 //        PixColormap cmap = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixcmapGetDepth(cmap);
 //        assertEquals(expResult, result);
@@ -7124,7 +7127,7 @@ public class LeptonicaTest {
 //        System.out.println("pixcmapGetMinDepth");
 //        PixColormap cmap = null;
 //        IntBuffer pmindepth = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixcmapGetMinDepth(cmap, pmindepth);
 //        assertEquals(expResult, result);
@@ -7139,7 +7142,7 @@ public class LeptonicaTest {
 //    public void testPixcmapClear() {
 //        System.out.println("pixcmapClear");
 //        PixColormap cmap = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixcmapClear(cmap);
 //        assertEquals(expResult, result);
@@ -7158,7 +7161,7 @@ public class LeptonicaTest {
 //        IntBuffer prval = null;
 //        IntBuffer pgval = null;
 //        IntBuffer pbval = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixcmapGetColor(cmap, index, prval, pgval, pbval);
 //        assertEquals(expResult, result);
@@ -7175,7 +7178,7 @@ public class LeptonicaTest {
 //        PixColormap cmap = null;
 //        int index = 0;
 //        IntBuffer pval32 = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixcmapGetColor32(cmap, index, pval32);
 //        assertEquals(expResult, result);
@@ -7195,7 +7198,7 @@ public class LeptonicaTest {
 //        IntBuffer pgval = null;
 //        IntBuffer pbval = null;
 //        IntBuffer paval = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixcmapGetRGBA(cmap, index, prval, pgval, pbval, paval);
 //        assertEquals(expResult, result);
@@ -7212,7 +7215,7 @@ public class LeptonicaTest {
 //        PixColormap cmap = null;
 //        int index = 0;
 //        IntBuffer pval32 = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixcmapGetRGBA32(cmap, index, pval32);
 //        assertEquals(expResult, result);
@@ -7231,7 +7234,7 @@ public class LeptonicaTest {
 //        int rval = 0;
 //        int gval = 0;
 //        int bval = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixcmapResetColor(cmap, index, rval, gval, bval);
 //        assertEquals(expResult, result);
@@ -7250,7 +7253,7 @@ public class LeptonicaTest {
 //        int gval = 0;
 //        int bval = 0;
 //        IntBuffer pindex = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixcmapGetIndex(cmap, rval, gval, bval, pindex);
 //        assertEquals(expResult, result);
@@ -7266,7 +7269,7 @@ public class LeptonicaTest {
 //        System.out.println("pixcmapHasColor");
 //        PixColormap cmap = null;
 //        IntBuffer pcolor = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixcmapHasColor(cmap, pcolor);
 //        assertEquals(expResult, result);
@@ -7282,7 +7285,7 @@ public class LeptonicaTest {
 //        System.out.println("pixcmapIsOpaque");
 //        PixColormap cmap = null;
 //        IntBuffer popaque = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixcmapIsOpaque(cmap, popaque);
 //        assertEquals(expResult, result);
@@ -7298,7 +7301,7 @@ public class LeptonicaTest {
 //        System.out.println("pixcmapCountGrayColors");
 //        PixColormap cmap = null;
 //        IntBuffer pngray = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixcmapCountGrayColors(cmap, pngray);
 //        assertEquals(expResult, result);
@@ -7315,7 +7318,7 @@ public class LeptonicaTest {
 //        PixColormap cmap = null;
 //        float rankval = 0.0F;
 //        IntBuffer pindex = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixcmapGetRankIntensity(cmap, rankval, pindex);
 //        assertEquals(expResult, result);
@@ -7334,7 +7337,7 @@ public class LeptonicaTest {
 //        int gval = 0;
 //        int bval = 0;
 //        IntBuffer pindex = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixcmapGetNearestIndex(cmap, rval, gval, bval, pindex);
 //        assertEquals(expResult, result);
@@ -7351,7 +7354,7 @@ public class LeptonicaTest {
 //        PixColormap cmap = null;
 //        int val = 0;
 //        IntBuffer pindex = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixcmapGetNearestGrayIndex(cmap, val, pindex);
 //        assertEquals(expResult, result);
@@ -7369,7 +7372,7 @@ public class LeptonicaTest {
 //        int color = 0;
 //        IntBuffer pminval = null;
 //        IntBuffer pmaxval = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixcmapGetComponentRange(cmap, color, pminval, pmaxval);
 //        assertEquals(expResult, result);
@@ -7388,7 +7391,7 @@ public class LeptonicaTest {
 //        IntBuffer prval = null;
 //        IntBuffer pgval = null;
 //        IntBuffer pbval = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixcmapGetExtremeValue(cmap, type, prval, pgval, pbval);
 //        assertEquals(expResult, result);
@@ -7403,7 +7406,7 @@ public class LeptonicaTest {
 //    public void testPixcmapGrayToColor() {
 //        System.out.println("pixcmapGrayToColor");
 //        int color = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        PixColormap expResult = null;
 //        PixColormap result = instance.pixcmapGrayToColor(color);
 //        assertEquals(expResult, result);
@@ -7421,7 +7424,7 @@ public class LeptonicaTest {
 //        float rwt = 0.0F;
 //        float gwt = 0.0F;
 //        float bwt = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        PixColormap expResult = null;
 //        PixColormap result = instance.pixcmapColorToGray(cmaps, rwt, gwt, bwt);
 //        assertEquals(expResult, result);
@@ -7436,7 +7439,7 @@ public class LeptonicaTest {
 //    public void testPixcmapReadStream() {
 //        System.out.println("pixcmapReadStream");
 //        PointerByReference fp = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        PixColormap expResult = null;
 //        PixColormap result = instance.pixcmapReadStream(fp);
 //        assertEquals(expResult, result);
@@ -7452,7 +7455,7 @@ public class LeptonicaTest {
 //        System.out.println("pixcmapWriteStream");
 //        PointerByReference fp = null;
 //        PixColormap cmap = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixcmapWriteStream(fp, cmap);
 //        assertEquals(expResult, result);
@@ -7471,7 +7474,7 @@ public class LeptonicaTest {
 //        PointerByReference pgmap = null;
 //        PointerByReference pbmap = null;
 //        PointerByReference pamap = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixcmapToArrays(cmap, prmap, pgmap, pbmap, pamap);
 //        assertEquals(expResult, result);
@@ -7488,7 +7491,7 @@ public class LeptonicaTest {
 //        PixColormap cmap = null;
 //        PointerByReference ptab = null;
 //        IntBuffer pncolors = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixcmapToRGBTable(cmap, ptab, pncolors);
 //        assertEquals(expResult, result);
@@ -7506,7 +7509,7 @@ public class LeptonicaTest {
 //        int cpc = 0;
 //        IntBuffer pncolors = null;
 //        PointerByReference pdata = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixcmapSerializeToMemory(cmap, cpc, pncolors, pdata);
 //        assertEquals(expResult, result);
@@ -7523,7 +7526,7 @@ public class LeptonicaTest {
 //        ByteBuffer data = null;
 //        int cpc = 0;
 //        int ncolors = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        PixColormap expResult = null;
 //        PixColormap result = instance.pixcmapDeserializeFromMemory(data, cpc, ncolors);
 //        assertEquals(expResult, result);
@@ -7539,7 +7542,7 @@ public class LeptonicaTest {
 //        System.out.println("pixcmapConvertToHex");
 //        ByteBuffer data = null;
 //        int ncolors = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.pixcmapConvertToHex(data, ncolors);
 //        assertEquals(expResult, result);
@@ -7557,7 +7560,7 @@ public class LeptonicaTest {
 //        float gamma = 0.0F;
 //        int minval = 0;
 //        int maxval = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixcmapGammaTRC(cmap, gamma, minval, maxval);
 //        assertEquals(expResult, result);
@@ -7573,7 +7576,7 @@ public class LeptonicaTest {
 //        System.out.println("pixcmapContrastTRC");
 //        PixColormap cmap = null;
 //        float factor = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixcmapContrastTRC(cmap, factor);
 //        assertEquals(expResult, result);
@@ -7589,7 +7592,7 @@ public class LeptonicaTest {
 //        System.out.println("pixcmapShiftIntensity");
 //        PixColormap cmap = null;
 //        float fraction = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixcmapShiftIntensity(cmap, fraction);
 //        assertEquals(expResult, result);
@@ -7606,7 +7609,7 @@ public class LeptonicaTest {
 //        PixColormap cmap = null;
 //        int srcval = 0;
 //        int dstval = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixcmapShiftByComponent(cmap, srcval, dstval);
 //        assertEquals(expResult, result);
@@ -7624,7 +7627,7 @@ public class LeptonicaTest {
 //        int type = 0;
 //        int hsize = 0;
 //        int vsize = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixColorMorph(pixs, type, hsize, vsize);
 //        assertEquals(expResult, result);
@@ -7641,7 +7644,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int colors = 0;
 //        int ditherflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixOctreeColorQuant(pixs, colors, ditherflag);
 //        assertEquals(expResult, result);
@@ -7660,7 +7663,7 @@ public class LeptonicaTest {
 //        int ditherflag = 0;
 //        float validthresh = 0.0F;
 //        float colorthresh = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixOctreeColorQuantGeneral(pixs, colors, ditherflag, validthresh, colorthresh);
 //        assertEquals(expResult, result);
@@ -7678,7 +7681,7 @@ public class LeptonicaTest {
 //        PointerByReference pgtab = null;
 //        PointerByReference pbtab = null;
 //        int cqlevels = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.makeRGBToIndexTables(prtab, pgtab, pbtab, cqlevels);
 //        assertEquals(expResult, result);
@@ -7699,7 +7702,7 @@ public class LeptonicaTest {
 //        IntBuffer gtab = null;
 //        IntBuffer btab = null;
 //        IntBuffer pindex = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.getOctcubeIndexFromRGB(rval, gval, bval, rtab, gtab, btab, pindex);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -7714,7 +7717,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int level = 0;
 //        int ditherflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixOctreeQuantByPopulation(pixs, level, ditherflag);
 //        assertEquals(expResult, result);
@@ -7731,7 +7734,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int maxcolors = 0;
 //        int subsample = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixOctreeQuantNumColors(pixs, maxcolors, subsample);
 //        assertEquals(expResult, result);
@@ -7749,7 +7752,7 @@ public class LeptonicaTest {
 //        int depth = 0;
 //        int graylevels = 0;
 //        int delta = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixOctcubeQuantMixedWithGray(pixs, depth, graylevels, delta);
 //        assertEquals(expResult, result);
@@ -7765,7 +7768,7 @@ public class LeptonicaTest {
 //        System.out.println("pixFixedOctcubeQuant256");
 //        Pix pixs = null;
 //        int ditherflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixFixedOctcubeQuant256(pixs, ditherflag);
 //        assertEquals(expResult, result);
@@ -7781,7 +7784,7 @@ public class LeptonicaTest {
 //        System.out.println("pixFewColorsOctcubeQuant1");
 //        Pix pixs = null;
 //        int level = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixFewColorsOctcubeQuant1(pixs, level);
 //        assertEquals(expResult, result);
@@ -7800,7 +7803,7 @@ public class LeptonicaTest {
 //        Numa na = null;
 //        int ncolors = 0;
 //        IntBuffer pnerrors = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixFewColorsOctcubeQuant2(pixs, level, na, ncolors, pnerrors);
 //        assertEquals(expResult, result);
@@ -7821,7 +7824,7 @@ public class LeptonicaTest {
 //        int diffthresh = 0;
 //        float minfract = 0.0F;
 //        int maxspan = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixFewColorsOctcubeQuantMixed(pixs, level, darkthresh, lightthresh, diffthresh, minfract, maxspan);
 //        assertEquals(expResult, result);
@@ -7837,7 +7840,7 @@ public class LeptonicaTest {
 //        System.out.println("pixFixedOctcubeQuantGenRGB");
 //        Pix pixs = null;
 //        int level = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixFixedOctcubeQuantGenRGB(pixs, level);
 //        assertEquals(expResult, result);
@@ -7856,7 +7859,7 @@ public class LeptonicaTest {
 //        int mindepth = 0;
 //        int level = 0;
 //        int metric = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixQuantFromCmap(pixs, cmap, mindepth, level, metric);
 //        assertEquals(expResult, result);
@@ -7875,7 +7878,7 @@ public class LeptonicaTest {
 //        int mindepth = 0;
 //        int level = 0;
 //        int metric = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixOctcubeQuantFromCmap(pixs, cmap, mindepth, level, metric);
 //        assertEquals(expResult, result);
@@ -7896,7 +7899,7 @@ public class LeptonicaTest {
 //        IntBuffer rtab = null;
 //        IntBuffer gtab = null;
 //        IntBuffer btab = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixOctcubeQuantFromCmapLUT(pixs, cmap, mindepth, cmaptab, rtab, gtab, btab);
 //        assertEquals(expResult, result);
@@ -7913,7 +7916,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int level = 0;
 //        IntBuffer pncolors = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.pixOctcubeHistogram(pixs, level, pncolors);
 //        assertEquals(expResult, result);
@@ -7930,7 +7933,7 @@ public class LeptonicaTest {
 //        PixColormap cmap = null;
 //        int level = 0;
 //        int metric = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        IntByReference expResult = null;
 //        IntByReference result = instance.pixcmapToOctcubeLUT(cmap, level, metric);
 //        assertEquals(expResult, result);
@@ -7945,7 +7948,7 @@ public class LeptonicaTest {
 //    public void testPixRemoveUnusedColors() {
 //        System.out.println("pixRemoveUnusedColors");
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixRemoveUnusedColors(pixs);
 //        assertEquals(expResult, result);
@@ -7964,7 +7967,7 @@ public class LeptonicaTest {
 //        int mincount = 0;
 //        float minfract = 0.0F;
 //        IntBuffer pncolors = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixNumberOccupiedOctcubes(pix, level, mincount, minfract, pncolors);
 //        assertEquals(expResult, result);
@@ -7980,7 +7983,7 @@ public class LeptonicaTest {
 //        System.out.println("pixMedianCutQuant");
 //        Pix pixs = null;
 //        int ditherflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixMedianCutQuant(pixs, ditherflag);
 //        assertEquals(expResult, result);
@@ -8001,7 +8004,7 @@ public class LeptonicaTest {
 //        int sigbits = 0;
 //        int maxsub = 0;
 //        int checkbw = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixMedianCutQuantGeneral(pixs, ditherflag, outdepth, maxcolors, sigbits, maxsub, checkbw);
 //        assertEquals(expResult, result);
@@ -8021,7 +8024,7 @@ public class LeptonicaTest {
 //        int darkthresh = 0;
 //        int lightthresh = 0;
 //        int diffthresh = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixMedianCutQuantMixed(pixs, ncolor, ngray, darkthresh, lightthresh, diffthresh);
 //        assertEquals(expResult, result);
@@ -8042,7 +8045,7 @@ public class LeptonicaTest {
 //        int darkthresh = 0;
 //        int lightthresh = 0;
 //        int diffthresh = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixFewColorsMedianCutQuantMixed(pixs, ncolor, ngray, maxncolors, darkthresh, lightthresh, diffthresh);
 //        assertEquals(expResult, result);
@@ -8059,7 +8062,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int sigbits = 0;
 //        int subsample = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        IntByReference expResult = null;
 //        IntByReference result = instance.pixMedianCutHisto(pixs, sigbits, subsample);
 //        assertEquals(expResult, result);
@@ -8078,7 +8081,7 @@ public class LeptonicaTest {
 //        int maxcolors = 0;
 //        int selsize = 0;
 //        int finalcolors = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixColorSegment(pixs, maxdist, maxcolors, selsize, finalcolors);
 //        assertEquals(expResult, result);
@@ -8095,7 +8098,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int maxdist = 0;
 //        int maxcolors = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixColorSegmentCluster(pixs, maxdist, maxcolors);
 //        assertEquals(expResult, result);
@@ -8114,7 +8117,7 @@ public class LeptonicaTest {
 //        Pix pixm = null;
 //        int level = 0;
 //        IntBuffer countarray = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixAssignToNearestColor(pixd, pixs, pixm, level, countarray);
 //        assertEquals(expResult, result);
@@ -8131,7 +8134,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int selsize = 0;
 //        IntBuffer countarray = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixColorSegmentClean(pixs, selsize, countarray);
 //        assertEquals(expResult, result);
@@ -8148,7 +8151,7 @@ public class LeptonicaTest {
 //        Pix pixd = null;
 //        Pix pixs = null;
 //        int finalcolors = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixColorSegmentRemoveColors(pixd, pixs, finalcolors);
 //        assertEquals(expResult, result);
@@ -8164,7 +8167,7 @@ public class LeptonicaTest {
 //        System.out.println("pixConvertRGBToHSV");
 //        Pix pixd = null;
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixConvertRGBToHSV(pixd, pixs);
 //        assertEquals(expResult, result);
@@ -8180,7 +8183,7 @@ public class LeptonicaTest {
 //        System.out.println("pixConvertHSVToRGB");
 //        Pix pixd = null;
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixConvertHSVToRGB(pixd, pixs);
 //        assertEquals(expResult, result);
@@ -8200,7 +8203,7 @@ public class LeptonicaTest {
 //        IntBuffer phval = null;
 //        IntBuffer psval = null;
 //        IntBuffer pvval = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.convertRGBToHSV(rval, gval, bval, phval, psval, pvval);
 //        assertEquals(expResult, result);
@@ -8220,7 +8223,7 @@ public class LeptonicaTest {
 //        IntBuffer prval = null;
 //        IntBuffer pgval = null;
 //        IntBuffer pbval = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.convertHSVToRGB(hval, sval, vval, prval, pgval, pbval);
 //        assertEquals(expResult, result);
@@ -8235,7 +8238,7 @@ public class LeptonicaTest {
 //    public void testPixcmapConvertRGBToHSV() {
 //        System.out.println("pixcmapConvertRGBToHSV");
 //        PixColormap cmap = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixcmapConvertRGBToHSV(cmap);
 //        assertEquals(expResult, result);
@@ -8250,7 +8253,7 @@ public class LeptonicaTest {
 //    public void testPixcmapConvertHSVToRGB() {
 //        System.out.println("pixcmapConvertHSVToRGB");
 //        PixColormap cmap = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixcmapConvertHSVToRGB(cmap);
 //        assertEquals(expResult, result);
@@ -8265,7 +8268,7 @@ public class LeptonicaTest {
 //    public void testPixConvertRGBToHue() {
 //        System.out.println("pixConvertRGBToHue");
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixConvertRGBToHue(pixs);
 //        assertEquals(expResult, result);
@@ -8280,7 +8283,7 @@ public class LeptonicaTest {
 //    public void testPixConvertRGBToSaturation() {
 //        System.out.println("pixConvertRGBToSaturation");
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixConvertRGBToSaturation(pixs);
 //        assertEquals(expResult, result);
@@ -8295,7 +8298,7 @@ public class LeptonicaTest {
 //    public void testPixConvertRGBToValue() {
 //        System.out.println("pixConvertRGBToValue");
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixConvertRGBToValue(pixs);
 //        assertEquals(expResult, result);
@@ -8315,7 +8318,7 @@ public class LeptonicaTest {
 //        int satcenter = 0;
 //        int sathw = 0;
 //        int regionflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixMakeRangeMaskHS(pixs, huecenter, huehw, satcenter, sathw, regionflag);
 //        assertEquals(expResult, result);
@@ -8335,7 +8338,7 @@ public class LeptonicaTest {
 //        int valcenter = 0;
 //        int valhw = 0;
 //        int regionflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixMakeRangeMaskHV(pixs, huecenter, huehw, valcenter, valhw, regionflag);
 //        assertEquals(expResult, result);
@@ -8355,7 +8358,7 @@ public class LeptonicaTest {
 //        int valcenter = 0;
 //        int valhw = 0;
 //        int regionflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixMakeRangeMaskSV(pixs, satcenter, sathw, valcenter, valhw, regionflag);
 //        assertEquals(expResult, result);
@@ -8373,7 +8376,7 @@ public class LeptonicaTest {
 //        int factor = 0;
 //        Numa.ByReference[] pnahue = null;
 //        Numa.ByReference[] pnasat = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixMakeHistoHS(pixs, factor, pnahue, pnasat);
 //        assertEquals(expResult, result);
@@ -8391,7 +8394,7 @@ public class LeptonicaTest {
 //        int factor = 0;
 //        Numa.ByReference[] pnahue = null;
 //        Numa.ByReference[] pnaval = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixMakeHistoHV(pixs, factor, pnahue, pnaval);
 //        assertEquals(expResult, result);
@@ -8409,7 +8412,7 @@ public class LeptonicaTest {
 //        int factor = 0;
 //        Numa.ByReference[] pnasat = null;
 //        Numa.ByReference[] pnaval = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixMakeHistoSV(pixs, factor, pnasat, pnaval);
 //        assertEquals(expResult, result);
@@ -8432,7 +8435,7 @@ public class LeptonicaTest {
 //        Pta.ByReference[] ppta = null;
 //        Numa.ByReference[] pnatot = null;
 //        Pixa.ByReference[] ppixa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixFindHistoPeaksHSV(pixs, type, width, height, npeaks, erasefactor, ppta, pnatot, ppixa);
 //        assertEquals(expResult, result);
@@ -8453,7 +8456,7 @@ public class LeptonicaTest {
 //        int sathw = 0;
 //        int nsamp = 0;
 //        int factor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.displayHSVColorRange(hval, sval, vval, huehw, sathw, nsamp, factor);
 //        assertEquals(expResult, result);
@@ -8469,7 +8472,7 @@ public class LeptonicaTest {
 //        System.out.println("pixConvertRGBToYUV");
 //        Pix pixd = null;
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixConvertRGBToYUV(pixd, pixs);
 //        assertEquals(expResult, result);
@@ -8485,7 +8488,7 @@ public class LeptonicaTest {
 //        System.out.println("pixConvertYUVToRGB");
 //        Pix pixd = null;
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixConvertYUVToRGB(pixd, pixs);
 //        assertEquals(expResult, result);
@@ -8505,7 +8508,7 @@ public class LeptonicaTest {
 //        IntBuffer pyval = null;
 //        IntBuffer puval = null;
 //        IntBuffer pvval = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.convertRGBToYUV(rval, gval, bval, pyval, puval, pvval);
 //        assertEquals(expResult, result);
@@ -8525,7 +8528,7 @@ public class LeptonicaTest {
 //        IntBuffer prval = null;
 //        IntBuffer pgval = null;
 //        IntBuffer pbval = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.convertYUVToRGB(yval, uval, vval, prval, pgval, pbval);
 //        assertEquals(expResult, result);
@@ -8540,7 +8543,7 @@ public class LeptonicaTest {
 //    public void testPixcmapConvertRGBToYUV() {
 //        System.out.println("pixcmapConvertRGBToYUV");
 //        PixColormap cmap = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixcmapConvertRGBToYUV(cmap);
 //        assertEquals(expResult, result);
@@ -8555,7 +8558,7 @@ public class LeptonicaTest {
 //    public void testPixcmapConvertYUVToRGB() {
 //        System.out.println("pixcmapConvertYUVToRGB");
 //        PixColormap cmap = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixcmapConvertYUVToRGB(cmap);
 //        assertEquals(expResult, result);
@@ -8572,7 +8575,7 @@ public class LeptonicaTest {
 //        Pix pix1 = null;
 //        Pix pix2 = null;
 //        IntBuffer psame = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixEqual(pix1, pix2, psame);
 //        assertEquals(expResult, result);
@@ -8590,7 +8593,7 @@ public class LeptonicaTest {
 //        Pix pix2 = null;
 //        int use_alpha = 0;
 //        IntBuffer psame = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixEqualWithAlpha(pix1, pix2, use_alpha, psame);
 //        assertEquals(expResult, result);
@@ -8607,7 +8610,7 @@ public class LeptonicaTest {
 //        Pix pix1 = null;
 //        Pix pix2 = null;
 //        IntBuffer psame = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixEqualWithCmap(pix1, pix2, psame);
 //        assertEquals(expResult, result);
@@ -8623,7 +8626,7 @@ public class LeptonicaTest {
 //        System.out.println("pixUsesCmapColor");
 //        Pix pixs = null;
 //        IntBuffer pcolor = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixUsesCmapColor(pixs, pcolor);
 //        assertEquals(expResult, result);
@@ -8640,7 +8643,7 @@ public class LeptonicaTest {
 //        Pix pix1 = null;
 //        Pix pix2 = null;
 //        FloatBuffer pval = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixCorrelationBinary(pix1, pix2, pval);
 //        assertEquals(expResult, result);
@@ -8656,7 +8659,7 @@ public class LeptonicaTest {
 //        System.out.println("pixDisplayDiffBinary");
 //        Pix pix1 = null;
 //        Pix pix2 = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixDisplayDiffBinary(pix1, pix2);
 //        assertEquals(expResult, result);
@@ -8675,7 +8678,7 @@ public class LeptonicaTest {
 //        int comptype = 0;
 //        FloatBuffer pfract = null;
 //        Pix.ByReference[] ppixdiff = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixCompareBinary(pix1, pix2, comptype, pfract, ppixdiff);
 //        assertEquals(expResult, result);
@@ -8694,7 +8697,7 @@ public class LeptonicaTest {
 //        int comptype = 0;
 //        FloatByReference pfract = null;
 //        Pix.ByReference[] ppixdiff = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixCompareBinary(pix1, pix2, comptype, pfract, ppixdiff);
 //        assertEquals(expResult, result);
@@ -8716,7 +8719,7 @@ public class LeptonicaTest {
 //        FloatBuffer pdiff = null;
 //        FloatBuffer prmsdiff = null;
 //        Pix.ByReference[] ppixdiff = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixCompareGrayOrRGB(pix1, pix2, comptype, plottype, psame, pdiff, prmsdiff, ppixdiff);
 //        assertEquals(expResult, result);
@@ -8738,7 +8741,7 @@ public class LeptonicaTest {
 //        FloatByReference pdiff = null;
 //        FloatByReference prmsdiff = null;
 //        Pix.ByReference[] ppixdiff = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixCompareGrayOrRGB(pix1, pix2, comptype, plottype, psame, pdiff, prmsdiff, ppixdiff);
 //        assertEquals(expResult, result);
@@ -8760,7 +8763,7 @@ public class LeptonicaTest {
 //        FloatBuffer pdiff = null;
 //        FloatBuffer prmsdiff = null;
 //        Pix.ByReference[] ppixdiff = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixCompareGray(pix1, pix2, comptype, plottype, psame, pdiff, prmsdiff, ppixdiff);
 //        assertEquals(expResult, result);
@@ -8782,7 +8785,7 @@ public class LeptonicaTest {
 //        FloatByReference pdiff = null;
 //        FloatByReference prmsdiff = null;
 //        Pix.ByReference[] ppixdiff = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixCompareGray(pix1, pix2, comptype, plottype, psame, pdiff, prmsdiff, ppixdiff);
 //        assertEquals(expResult, result);
@@ -8804,7 +8807,7 @@ public class LeptonicaTest {
 //        FloatBuffer pdiff = null;
 //        FloatBuffer prmsdiff = null;
 //        Pix.ByReference[] ppixdiff = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixCompareRGB(pix1, pix2, comptype, plottype, psame, pdiff, prmsdiff, ppixdiff);
 //        assertEquals(expResult, result);
@@ -8826,7 +8829,7 @@ public class LeptonicaTest {
 //        FloatByReference pdiff = null;
 //        FloatByReference prmsdiff = null;
 //        Pix.ByReference[] ppixdiff = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixCompareRGB(pix1, pix2, comptype, plottype, psame, pdiff, prmsdiff, ppixdiff);
 //        assertEquals(expResult, result);
@@ -8846,7 +8849,7 @@ public class LeptonicaTest {
 //        int sy = 0;
 //        int type = 0;
 //        Pix.ByReference[] ppixdiff = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixCompareTiled(pix1, pix2, sx, sy, type, ppixdiff);
 //        assertEquals(expResult, result);
@@ -8863,7 +8866,7 @@ public class LeptonicaTest {
 //        Pix pix1 = null;
 //        Pix pix2 = null;
 //        int factor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.pixCompareRankDifference(pix1, pix2, factor);
 //        assertEquals(expResult, result);
@@ -8885,7 +8888,7 @@ public class LeptonicaTest {
 //        float maxave = 0.0F;
 //        IntBuffer psimilar = null;
 //        int printstats = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixTestForSimilarity(pix1, pix2, factor, mindiff, maxfract, maxave, psimilar, printstats);
 //        assertEquals(expResult, result);
@@ -8906,7 +8909,7 @@ public class LeptonicaTest {
 //        FloatBuffer pfractdiff = null;
 //        FloatBuffer pavediff = null;
 //        int printstats = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixGetDifferenceStats(pix1, pix2, factor, mindiff, pfractdiff, pavediff, printstats);
 //        assertEquals(expResult, result);
@@ -8923,7 +8926,7 @@ public class LeptonicaTest {
 //        Pix pix1 = null;
 //        Pix pix2 = null;
 //        int factor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.pixGetDifferenceHistogram(pix1, pix2, factor);
 //        assertEquals(expResult, result);
@@ -8945,7 +8948,7 @@ public class LeptonicaTest {
 //        FloatBuffer pfract = null;
 //        Pix.ByReference[] ppixdiff1 = null;
 //        Pix.ByReference[] ppixdiff2 = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixGetPerceptualDiff(pixs1, pixs2, sampling, dilation, mindiff, pfract, ppixdiff1, ppixdiff2);
 //        assertEquals(expResult, result);
@@ -8967,7 +8970,7 @@ public class LeptonicaTest {
 //        FloatByReference pfract = null;
 //        Pix.ByReference[] ppixdiff1 = null;
 //        Pix.ByReference[] ppixdiff2 = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixGetPerceptualDiff(pixs1, pixs2, sampling, dilation, mindiff, pfract, ppixdiff1, ppixdiff2);
 //        assertEquals(expResult, result);
@@ -8985,7 +8988,7 @@ public class LeptonicaTest {
 //        Pix pix2 = null;
 //        int factor = 0;
 //        FloatBuffer ppsnr = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixGetPSNR(pix1, pix2, factor, ppsnr);
 //        assertEquals(expResult, result);
@@ -9006,7 +9009,7 @@ public class LeptonicaTest {
 //        IntBuffer pdely = null;
 //        FloatBuffer pscore = null;
 //        int debugflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixCompareWithTranslation(pix1, pix2, thresh, pdelx, pdely, pscore, debugflag);
 //        assertEquals(expResult, result);
@@ -9032,7 +9035,7 @@ public class LeptonicaTest {
 //        IntBuffer pdely = null;
 //        FloatBuffer pscore = null;
 //        int debugflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixBestCorrelation(pix1, pix2, area1, area2, etransx, etransy, maxshift, tab8, pdelx, pdely, pscore, debugflag);
 //        assertEquals(expResult, result);
@@ -9049,7 +9052,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        Pixa.ByReference[] ppixa = null;
 //        int connectivity = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxa expResult = null;
 //        Boxa result = instance.pixConnComp(pixs, ppixa, connectivity);
 //        assertEquals(expResult, result);
@@ -9066,7 +9069,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        Pixa.ByReference[] ppixa = null;
 //        int connectivity = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxa expResult = null;
 //        Boxa result = instance.pixConnCompPixa(pixs, ppixa, connectivity);
 //        assertEquals(expResult, result);
@@ -9082,7 +9085,7 @@ public class LeptonicaTest {
 //        System.out.println("pixConnCompBB");
 //        Pix pixs = null;
 //        int connectivity = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxa expResult = null;
 //        Boxa result = instance.pixConnCompBB(pixs, connectivity);
 //        assertEquals(expResult, result);
@@ -9099,7 +9102,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int connectivity = 0;
 //        IntBuffer pcount = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixCountConnComp(pixs, connectivity, pcount);
 //        assertEquals(expResult, result);
@@ -9118,7 +9121,7 @@ public class LeptonicaTest {
 //        int ystart = 0;
 //        IntBuffer px = null;
 //        IntBuffer py = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.nextOnPixelInRaster(pixs, xstart, ystart, px, py);
 //        assertEquals(expResult, result);
@@ -9140,7 +9143,7 @@ public class LeptonicaTest {
 //        int ystart = 0;
 //        IntBuffer px = null;
 //        IntBuffer py = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.nextOnPixelInRasterLow(data, w, h, wpl, xstart, ystart, px, py);
 //        assertEquals(expResult, result);
@@ -9159,7 +9162,7 @@ public class LeptonicaTest {
 //        int x = 0;
 //        int y = 0;
 //        int connectivity = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Box expResult = null;
 //        Box result = instance.pixSeedfillBB(pixs, stack, x, y, connectivity);
 //        assertEquals(expResult, result);
@@ -9177,7 +9180,7 @@ public class LeptonicaTest {
 //        L_Stack stack = null;
 //        int x = 0;
 //        int y = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Box expResult = null;
 //        Box result = instance.pixSeedfill4BB(pixs, stack, x, y);
 //        assertEquals(expResult, result);
@@ -9195,7 +9198,7 @@ public class LeptonicaTest {
 //        L_Stack stack = null;
 //        int x = 0;
 //        int y = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Box expResult = null;
 //        Box result = instance.pixSeedfill8BB(pixs, stack, x, y);
 //        assertEquals(expResult, result);
@@ -9214,7 +9217,7 @@ public class LeptonicaTest {
 //        int x = 0;
 //        int y = 0;
 //        int connectivity = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixSeedfill(pixs, stack, x, y, connectivity);
 //        assertEquals(expResult, result);
@@ -9232,7 +9235,7 @@ public class LeptonicaTest {
 //        L_Stack stack = null;
 //        int x = 0;
 //        int y = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixSeedfill4(pixs, stack, x, y);
 //        assertEquals(expResult, result);
@@ -9250,7 +9253,7 @@ public class LeptonicaTest {
 //        L_Stack stack = null;
 //        int x = 0;
 //        int y = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixSeedfill8(pixs, stack, x, y);
 //        assertEquals(expResult, result);
@@ -9272,7 +9275,7 @@ public class LeptonicaTest {
 //        int npages = 0;
 //        String dirout = "";
 //        int outformat = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.convertFilesTo1bpp(dirin, substr, upscaling, thresh, firstpage, npages, dirout, outformat);
 //        assertEquals(expResult, result);
@@ -9289,7 +9292,7 @@ public class LeptonicaTest {
 //        Pix pix = null;
 //        int wc = 0;
 //        int hc = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixBlockconv(pix, wc, hc);
 //        assertEquals(expResult, result);
@@ -9307,7 +9310,7 @@ public class LeptonicaTest {
 //        Pix pixacc = null;
 //        int wc = 0;
 //        int hc = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixBlockconvGray(pixs, pixacc, wc, hc);
 //        assertEquals(expResult, result);
@@ -9322,7 +9325,7 @@ public class LeptonicaTest {
 //    public void testPixBlockconvAccum() {
 //        System.out.println("pixBlockconvAccum");
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixBlockconvAccum(pixs);
 //        assertEquals(expResult, result);
@@ -9339,7 +9342,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int wc = 0;
 //        int hc = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixBlockconvGrayUnnormalized(pixs, wc, hc);
 //        assertEquals(expResult, result);
@@ -9358,7 +9361,7 @@ public class LeptonicaTest {
 //        int hc = 0;
 //        int nx = 0;
 //        int ny = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixBlockconvTiled(pix, wc, hc, nx, ny);
 //        assertEquals(expResult, result);
@@ -9376,7 +9379,7 @@ public class LeptonicaTest {
 //        Pix pixacc = null;
 //        int wc = 0;
 //        int hc = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixBlockconvGrayTile(pixs, pixacc, wc, hc);
 //        assertEquals(expResult, result);
@@ -9398,7 +9401,7 @@ public class LeptonicaTest {
 //        Pix.ByReference[] ppixms = null;
 //        FPix.ByReference[] pfpixv = null;
 //        FPix.ByReference[] pfpixrv = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixWindowedStats(pixs, wc, hc, hasborder, ppixm, ppixms, pfpixv, pfpixrv);
 //        assertEquals(expResult, result);
@@ -9417,7 +9420,7 @@ public class LeptonicaTest {
 //        int hc = 0;
 //        int hasborder = 0;
 //        int normflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixWindowedMean(pixs, wc, hc, hasborder, normflag);
 //        assertEquals(expResult, result);
@@ -9435,7 +9438,7 @@ public class LeptonicaTest {
 //        int wc = 0;
 //        int hc = 0;
 //        int hasborder = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixWindowedMeanSquare(pixs, wc, hc, hasborder);
 //        assertEquals(expResult, result);
@@ -9453,7 +9456,7 @@ public class LeptonicaTest {
 //        Pix pixms = null;
 //        FPix.ByReference[] pfpixv = null;
 //        FPix.ByReference[] pfpixrv = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixWindowedVariance(pixm, pixms, pfpixv, pfpixrv);
 //        assertEquals(expResult, result);
@@ -9468,7 +9471,7 @@ public class LeptonicaTest {
 //    public void testPixMeanSquareAccum() {
 //        System.out.println("pixMeanSquareAccum");
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        DPix expResult = null;
 //        DPix result = instance.pixMeanSquareAccum(pixs);
 //        assertEquals(expResult, result);
@@ -9487,7 +9490,7 @@ public class LeptonicaTest {
 //        int wc = 0;
 //        int hc = 0;
 //        float rank = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixBlockrank(pixs, pixacc, wc, hc, rank);
 //        assertEquals(expResult, result);
@@ -9505,7 +9508,7 @@ public class LeptonicaTest {
 //        Pix pixacc = null;
 //        int wc = 0;
 //        int hc = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixBlocksum(pixs, pixacc, wc, hc);
 //        assertEquals(expResult, result);
@@ -9522,7 +9525,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int halfsize = 0;
 //        Pix pixacc = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixCensusTransform(pixs, halfsize, pixacc);
 //        assertEquals(expResult, result);
@@ -9540,7 +9543,7 @@ public class LeptonicaTest {
 //        L_Kernel kel = null;
 //        int outdepth = 0;
 //        int normflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixConvolve(pixs, kel, outdepth, normflag);
 //        assertEquals(expResult, result);
@@ -9559,7 +9562,7 @@ public class LeptonicaTest {
 //        L_Kernel kely = null;
 //        int outdepth = 0;
 //        int normflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixConvolveSep(pixs, kelx, kely, outdepth, normflag);
 //        assertEquals(expResult, result);
@@ -9575,7 +9578,7 @@ public class LeptonicaTest {
 //        System.out.println("pixConvolveRGB");
 //        Pix pixs = null;
 //        L_Kernel kel = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixConvolveRGB(pixs, kel);
 //        assertEquals(expResult, result);
@@ -9592,7 +9595,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        L_Kernel kelx = null;
 //        L_Kernel kely = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixConvolveRGBSep(pixs, kelx, kely);
 //        assertEquals(expResult, result);
@@ -9609,7 +9612,7 @@ public class LeptonicaTest {
 //        FPix fpixs = null;
 //        L_Kernel kel = null;
 //        int normflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        FPix expResult = null;
 //        FPix result = instance.fpixConvolve(fpixs, kel, normflag);
 //        assertEquals(expResult, result);
@@ -9627,7 +9630,7 @@ public class LeptonicaTest {
 //        L_Kernel kelx = null;
 //        L_Kernel kely = null;
 //        int normflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        FPix expResult = null;
 //        FPix result = instance.fpixConvolveSep(fpixs, kelx, kely, normflag);
 //        assertEquals(expResult, result);
@@ -9646,7 +9649,7 @@ public class LeptonicaTest {
 //        L_Kernel kel2 = null;
 //        int force8 = 0;
 //        IntBuffer pbias = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixConvolveWithBias(pixs, kel1, kel2, force8, pbias);
 //        assertEquals(expResult, result);
@@ -9662,7 +9665,7 @@ public class LeptonicaTest {
 //        System.out.println("l_setConvolveSampling");
 //        int xfact = 0;
 //        int yfact = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.l_setConvolveSampling(xfact, yfact);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -9676,7 +9679,7 @@ public class LeptonicaTest {
 //        System.out.println("pixAddGaussianNoise");
 //        Pix pixs = null;
 //        float stdev = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixAddGaussianNoise(pixs, stdev);
 //        assertEquals(expResult, result);
@@ -9690,7 +9693,7 @@ public class LeptonicaTest {
 //    @Test
 //    public void testGaussDistribSampling() {
 //        System.out.println("gaussDistribSampling");
-//        Leptonica instance = new LeptonicaImpl();
+
 //        float expResult = 0.0F;
 //        float result = instance.gaussDistribSampling();
 //        assertEquals(expResult, result, 0.0);
@@ -9714,7 +9717,7 @@ public class LeptonicaTest {
 //        int maxdiffh = 0;
 //        IntBuffer tab = null;
 //        FloatBuffer pscore = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixCorrelationScore(pix1, pix2, area1, area2, delx, dely, maxdiffw, maxdiffh, tab, pscore);
 //        assertEquals(expResult, result);
@@ -9739,7 +9742,7 @@ public class LeptonicaTest {
 //        IntBuffer tab = null;
 //        IntBuffer downcount = null;
 //        float score_threshold = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixCorrelationScoreThresholded(pix1, pix2, area1, area2, delx, dely, maxdiffw, maxdiffh, tab, downcount, score_threshold);
 //        assertEquals(expResult, result);
@@ -9763,7 +9766,7 @@ public class LeptonicaTest {
 //        int maxdiffh = 0;
 //        IntBuffer tab = null;
 //        FloatBuffer pscore = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixCorrelationScoreSimple(pix1, pix2, area1, area2, delx, dely, maxdiffw, maxdiffh, tab, pscore);
 //        assertEquals(expResult, result);
@@ -9785,7 +9788,7 @@ public class LeptonicaTest {
 //        int dely = 0;
 //        IntBuffer tab = null;
 //        FloatBuffer pscore = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixCorrelationScoreShifted(pix1, pix2, area1, area2, delx, dely, tab, pscore);
 //        assertEquals(expResult, result);
@@ -9801,7 +9804,7 @@ public class LeptonicaTest {
 //        System.out.println("dewarpCreate");
 //        Pix pixs = null;
 //        int pageno = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Dewarp expResult = null;
 //        L_Dewarp result = instance.dewarpCreate(pixs, pageno);
 //        assertEquals(expResult, result);
@@ -9817,7 +9820,7 @@ public class LeptonicaTest {
 //        System.out.println("dewarpCreateRef");
 //        int pageno = 0;
 //        int refpage = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Dewarp expResult = null;
 //        L_Dewarp result = instance.dewarpCreateRef(pageno, refpage);
 //        assertEquals(expResult, result);
@@ -9832,7 +9835,7 @@ public class LeptonicaTest {
 //    public void testDewarpDestroy() {
 //        System.out.println("dewarpDestroy");
 //        L_Dewarp.ByReference[] pdew = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.dewarpDestroy(pdew);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -9849,7 +9852,7 @@ public class LeptonicaTest {
 //        int redfactor = 0;
 //        int minlines = 0;
 //        int maxdist = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Dewarpa expResult = null;
 //        L_Dewarpa result = instance.dewarpaCreate(nptrs, sampling, redfactor, minlines, maxdist);
 //        assertEquals(expResult, result);
@@ -9868,7 +9871,7 @@ public class LeptonicaTest {
 //        int sampling = 0;
 //        int minlines = 0;
 //        int maxdist = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Dewarpa expResult = null;
 //        L_Dewarpa result = instance.dewarpaCreateFromPixacomp(pixac, useboth, sampling, minlines, maxdist);
 //        assertEquals(expResult, result);
@@ -9883,7 +9886,7 @@ public class LeptonicaTest {
 //    public void testDewarpaDestroy() {
 //        System.out.println("dewarpaDestroy");
 //        L_Dewarpa.ByReference[] pdewa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.dewarpaDestroy(pdewa);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -9897,7 +9900,7 @@ public class LeptonicaTest {
 //        System.out.println("dewarpaDestroyDewarp");
 //        L_Dewarpa dewa = null;
 //        int pageno = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.dewarpaDestroyDewarp(dewa, pageno);
 //        assertEquals(expResult, result);
@@ -9913,7 +9916,7 @@ public class LeptonicaTest {
 //        System.out.println("dewarpaInsertDewarp");
 //        L_Dewarpa dewa = null;
 //        L_Dewarp dew = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.dewarpaInsertDewarp(dewa, dew);
 //        assertEquals(expResult, result);
@@ -9929,7 +9932,7 @@ public class LeptonicaTest {
 //        System.out.println("dewarpaGetDewarp");
 //        L_Dewarpa dewa = null;
 //        int index = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Dewarp expResult = null;
 //        L_Dewarp result = instance.dewarpaGetDewarp(dewa, index);
 //        assertEquals(expResult, result);
@@ -9950,7 +9953,7 @@ public class LeptonicaTest {
 //        int max_edgecurv = 0;
 //        int max_diff_edgecurv = 0;
 //        int max_edgeslope = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.dewarpaSetCurvatures(dewa, max_linecurv, min_diff_linecurv, max_diff_linecurv, max_edgecurv, max_diff_edgecurv, max_edgeslope);
 //        assertEquals(expResult, result);
@@ -9966,7 +9969,7 @@ public class LeptonicaTest {
 //        System.out.println("dewarpaUseBothArrays");
 //        L_Dewarpa dewa = null;
 //        int useboth = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.dewarpaUseBothArrays(dewa, useboth);
 //        assertEquals(expResult, result);
@@ -9982,7 +9985,7 @@ public class LeptonicaTest {
 //        System.out.println("dewarpaSetMaxDistance");
 //        L_Dewarpa dewa = null;
 //        int maxdist = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.dewarpaSetMaxDistance(dewa, maxdist);
 //        assertEquals(expResult, result);
@@ -9997,7 +10000,7 @@ public class LeptonicaTest {
 //    public void testDewarpRead() {
 //        System.out.println("dewarpRead");
 //        String filename = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Dewarp expResult = null;
 //        L_Dewarp result = instance.dewarpRead(filename);
 //        assertEquals(expResult, result);
@@ -10012,7 +10015,7 @@ public class LeptonicaTest {
 //    public void testDewarpReadStream() {
 //        System.out.println("dewarpReadStream");
 //        PointerByReference fp = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Dewarp expResult = null;
 //        L_Dewarp result = instance.dewarpReadStream(fp);
 //        assertEquals(expResult, result);
@@ -10028,7 +10031,7 @@ public class LeptonicaTest {
 //        System.out.println("dewarpWrite");
 //        String filename = "";
 //        L_Dewarp dew = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.dewarpWrite(filename, dew);
 //        assertEquals(expResult, result);
@@ -10044,7 +10047,7 @@ public class LeptonicaTest {
 //        System.out.println("dewarpWriteStream");
 //        PointerByReference fp = null;
 //        L_Dewarp dew = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.dewarpWriteStream(fp, dew);
 //        assertEquals(expResult, result);
@@ -10059,7 +10062,7 @@ public class LeptonicaTest {
 //    public void testDewarpaRead() {
 //        System.out.println("dewarpaRead");
 //        String filename = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Dewarpa expResult = null;
 //        L_Dewarpa result = instance.dewarpaRead(filename);
 //        assertEquals(expResult, result);
@@ -10074,7 +10077,7 @@ public class LeptonicaTest {
 //    public void testDewarpaReadStream() {
 //        System.out.println("dewarpaReadStream");
 //        PointerByReference fp = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Dewarpa expResult = null;
 //        L_Dewarpa result = instance.dewarpaReadStream(fp);
 //        assertEquals(expResult, result);
@@ -10090,7 +10093,7 @@ public class LeptonicaTest {
 //        System.out.println("dewarpaWrite");
 //        String filename = "";
 //        L_Dewarpa dewa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.dewarpaWrite(filename, dewa);
 //        assertEquals(expResult, result);
@@ -10106,7 +10109,7 @@ public class LeptonicaTest {
 //        System.out.println("dewarpaWriteStream");
 //        PointerByReference fp = null;
 //        L_Dewarpa dewa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.dewarpaWriteStream(fp, dewa);
 //        assertEquals(expResult, result);
@@ -10122,7 +10125,7 @@ public class LeptonicaTest {
 //        System.out.println("dewarpBuildPageModel");
 //        L_Dewarp dew = null;
 //        String debugfile = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.dewarpBuildPageModel(dew, debugfile);
 //        assertEquals(expResult, result);
@@ -10139,7 +10142,7 @@ public class LeptonicaTest {
 //        L_Dewarp dew = null;
 //        Ptaa ptaa = null;
 //        int rotflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.dewarpFindVertDisparity(dew, ptaa, rotflag);
 //        assertEquals(expResult, result);
@@ -10155,7 +10158,7 @@ public class LeptonicaTest {
 //        System.out.println("dewarpFindHorizDisparity");
 //        L_Dewarp dew = null;
 //        Ptaa ptaa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.dewarpFindHorizDisparity(dew, ptaa);
 //        assertEquals(expResult, result);
@@ -10171,7 +10174,7 @@ public class LeptonicaTest {
 //        System.out.println("dewarpGetTextlineCenters");
 //        Pix pixs = null;
 //        int debugflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Ptaa expResult = null;
 //        Ptaa result = instance.dewarpGetTextlineCenters(pixs, debugflag);
 //        assertEquals(expResult, result);
@@ -10189,7 +10192,7 @@ public class LeptonicaTest {
 //        Ptaa ptaas = null;
 //        float fract = 0.0F;
 //        int debugflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Ptaa expResult = null;
 //        Ptaa result = instance.dewarpRemoveShortLines(pixs, ptaas, fract, debugflag);
 //        assertEquals(expResult, result);
@@ -10206,7 +10209,7 @@ public class LeptonicaTest {
 //        L_Dewarp dew = null;
 //        int opensize = 0;
 //        String debugfile = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.dewarpBuildLineModel(dew, opensize, debugfile);
 //        assertEquals(expResult, result);
@@ -10224,7 +10227,7 @@ public class LeptonicaTest {
 //        int pageno = 0;
 //        IntBuffer pvsuccess = null;
 //        IntBuffer phsuccess = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.dewarpaModelStatus(dewa, pageno, pvsuccess, phsuccess);
 //        assertEquals(expResult, result);
@@ -10246,7 +10249,7 @@ public class LeptonicaTest {
 //        int y = 0;
 //        Pix.ByReference[] ppixd = null;
 //        String debugfile = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.dewarpaApplyDisparity(dewa, pageno, pixs, grayin, x, y, ppixd, debugfile);
 //        assertEquals(expResult, result);
@@ -10268,7 +10271,7 @@ public class LeptonicaTest {
 //        int y = 0;
 //        Pix.ByReference[] ppixd = null;
 //        Pointer debugfile = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.dewarpaApplyDisparity(dewa, pageno, pixs, grayin, x, y, ppixd, debugfile);
 //        assertEquals(expResult, result);
@@ -10283,7 +10286,7 @@ public class LeptonicaTest {
 //    public void testDewarpMinimize() {
 //        System.out.println("dewarpMinimize");
 //        L_Dewarp dew = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.dewarpMinimize(dew);
 //        assertEquals(expResult, result);
@@ -10301,7 +10304,7 @@ public class LeptonicaTest {
 //        Pix pix = null;
 //        int x = 0;
 //        int y = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.dewarpPopulateFullRes(dew, pix, x, y);
 //        assertEquals(expResult, result);
@@ -10322,7 +10325,7 @@ public class LeptonicaTest {
 //        Pix.ByReference[] ppixd = null;
 //        L_Dewarpa.ByReference[] pdewa = null;
 //        int debug = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.dewarpSinglePage(pixs, thresh, adaptive, use_both, ppixd, pdewa, debug);
 //        assertEquals(expResult, result);
@@ -10337,7 +10340,7 @@ public class LeptonicaTest {
 //    public void testDewarpaListPages() {
 //        System.out.println("dewarpaListPages");
 //        L_Dewarpa dewa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.dewarpaListPages(dewa);
 //        assertEquals(expResult, result);
@@ -10354,7 +10357,7 @@ public class LeptonicaTest {
 //        L_Dewarpa dewa = null;
 //        int notests = 0;
 //        int debug = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.dewarpaSetValidModels(dewa, notests, debug);
 //        assertEquals(expResult, result);
@@ -10371,7 +10374,7 @@ public class LeptonicaTest {
 //        L_Dewarpa dewa = null;
 //        int notests = 0;
 //        int debug = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.dewarpaInsertRefModels(dewa, notests, debug);
 //        assertEquals(expResult, result);
@@ -10386,7 +10389,7 @@ public class LeptonicaTest {
 //    public void testDewarpaStripRefModels() {
 //        System.out.println("dewarpaStripRefModels");
 //        L_Dewarpa dewa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.dewarpaStripRefModels(dewa);
 //        assertEquals(expResult, result);
@@ -10401,7 +10404,7 @@ public class LeptonicaTest {
 //    public void testDewarpaRestoreModels() {
 //        System.out.println("dewarpaRestoreModels");
 //        L_Dewarpa dewa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.dewarpaRestoreModels(dewa);
 //        assertEquals(expResult, result);
@@ -10417,7 +10420,7 @@ public class LeptonicaTest {
 //        System.out.println("dewarpaInfo");
 //        PointerByReference fp = null;
 //        L_Dewarpa dewa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.dewarpaInfo(fp, dewa);
 //        assertEquals(expResult, result);
@@ -10438,7 +10441,7 @@ public class LeptonicaTest {
 //        IntBuffer pnhsuccess = null;
 //        IntBuffer pnhvalid = null;
 //        IntBuffer pnref = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.dewarpaModelStats(dewa, pnnone, pnvsuccess, pnvvalid, pnhsuccess, pnhvalid, pnref);
 //        assertEquals(expResult, result);
@@ -10457,7 +10460,7 @@ public class LeptonicaTest {
 //        int first = 0;
 //        int last = 0;
 //        String fontdir = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.dewarpaShowArrays(dewa, scalefact, first, last, fontdir);
 //        assertEquals(expResult, result);
@@ -10474,7 +10477,7 @@ public class LeptonicaTest {
 //        L_Dewarp dew = null;
 //        String subdir = "";
 //        int index = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.dewarpDebug(dew, subdir, index);
 //        assertEquals(expResult, result);
@@ -10495,7 +10498,7 @@ public class LeptonicaTest {
 //        int lastpage = 0;
 //        String fontdir = "";
 //        String pdfout = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.dewarpShowResults(dewa, sa, boxa, firstpage, lastpage, fontdir, pdfout);
 //        assertEquals(expResult, result);
@@ -10510,7 +10513,7 @@ public class LeptonicaTest {
 //    public void testL_dnaCreate() {
 //        System.out.println("l_dnaCreate");
 //        int n = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Dna expResult = null;
 //        L_Dna result = instance.l_dnaCreate(n);
 //        assertEquals(expResult, result);
@@ -10526,7 +10529,7 @@ public class LeptonicaTest {
 //        System.out.println("l_dnaCreateFromIArray");
 //        IntBuffer iarray = null;
 //        int size = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Dna expResult = null;
 //        L_Dna result = instance.l_dnaCreateFromIArray(iarray, size);
 //        assertEquals(expResult, result);
@@ -10543,7 +10546,7 @@ public class LeptonicaTest {
 //        DoubleBuffer darray = null;
 //        int size = 0;
 //        int copyflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Dna expResult = null;
 //        L_Dna result = instance.l_dnaCreateFromDArray(darray, size, copyflag);
 //        assertEquals(expResult, result);
@@ -10560,7 +10563,7 @@ public class LeptonicaTest {
 //        double startval = 0.0;
 //        double increment = 0.0;
 //        int size = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Dna expResult = null;
 //        L_Dna result = instance.l_dnaMakeSequence(startval, increment, size);
 //        assertEquals(expResult, result);
@@ -10575,7 +10578,7 @@ public class LeptonicaTest {
 //    public void testL_dnaDestroy() {
 //        System.out.println("l_dnaDestroy");
 //        L_Dna.ByReference[] pda = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.l_dnaDestroy(pda);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -10588,7 +10591,7 @@ public class LeptonicaTest {
 //    public void testL_dnaCopy() {
 //        System.out.println("l_dnaCopy");
 //        L_Dna da = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Dna expResult = null;
 //        L_Dna result = instance.l_dnaCopy(da);
 //        assertEquals(expResult, result);
@@ -10603,7 +10606,7 @@ public class LeptonicaTest {
 //    public void testL_dnaClone() {
 //        System.out.println("l_dnaClone");
 //        L_Dna da = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Dna expResult = null;
 //        L_Dna result = instance.l_dnaClone(da);
 //        assertEquals(expResult, result);
@@ -10618,7 +10621,7 @@ public class LeptonicaTest {
 //    public void testL_dnaEmpty() {
 //        System.out.println("l_dnaEmpty");
 //        L_Dna da = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.l_dnaEmpty(da);
 //        assertEquals(expResult, result);
@@ -10634,7 +10637,7 @@ public class LeptonicaTest {
 //        System.out.println("l_dnaAddNumber");
 //        L_Dna da = null;
 //        double val = 0.0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.l_dnaAddNumber(da, val);
 //        assertEquals(expResult, result);
@@ -10651,7 +10654,7 @@ public class LeptonicaTest {
 //        L_Dna da = null;
 //        int index = 0;
 //        double val = 0.0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.l_dnaInsertNumber(da, index, val);
 //        assertEquals(expResult, result);
@@ -10667,7 +10670,7 @@ public class LeptonicaTest {
 //        System.out.println("l_dnaRemoveNumber");
 //        L_Dna da = null;
 //        int index = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.l_dnaRemoveNumber(da, index);
 //        assertEquals(expResult, result);
@@ -10684,7 +10687,7 @@ public class LeptonicaTest {
 //        L_Dna da = null;
 //        int index = 0;
 //        double val = 0.0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.l_dnaReplaceNumber(da, index, val);
 //        assertEquals(expResult, result);
@@ -10699,7 +10702,7 @@ public class LeptonicaTest {
 //    public void testL_dnaGetCount() {
 //        System.out.println("l_dnaGetCount");
 //        L_Dna da = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.l_dnaGetCount(da);
 //        assertEquals(expResult, result);
@@ -10715,7 +10718,7 @@ public class LeptonicaTest {
 //        System.out.println("l_dnaSetCount");
 //        L_Dna da = null;
 //        int newcount = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.l_dnaSetCount(da, newcount);
 //        assertEquals(expResult, result);
@@ -10732,7 +10735,7 @@ public class LeptonicaTest {
 //        L_Dna da = null;
 //        int index = 0;
 //        DoubleBuffer pval = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.l_dnaGetDValue(da, index, pval);
 //        assertEquals(expResult, result);
@@ -10749,7 +10752,7 @@ public class LeptonicaTest {
 //        L_Dna da = null;
 //        int index = 0;
 //        IntBuffer pival = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.l_dnaGetIValue(da, index, pival);
 //        assertEquals(expResult, result);
@@ -10766,7 +10769,7 @@ public class LeptonicaTest {
 //        L_Dna da = null;
 //        int index = 0;
 //        double val = 0.0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.l_dnaSetValue(da, index, val);
 //        assertEquals(expResult, result);
@@ -10783,7 +10786,7 @@ public class LeptonicaTest {
 //        L_Dna da = null;
 //        int index = 0;
 //        double diff = 0.0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.l_dnaShiftValue(da, index, diff);
 //        assertEquals(expResult, result);
@@ -10798,7 +10801,7 @@ public class LeptonicaTest {
 //    public void testL_dnaGetIArray() {
 //        System.out.println("l_dnaGetIArray");
 //        L_Dna da = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        IntByReference expResult = null;
 //        IntByReference result = instance.l_dnaGetIArray(da);
 //        assertEquals(expResult, result);
@@ -10814,7 +10817,7 @@ public class LeptonicaTest {
 //        System.out.println("l_dnaGetDArray");
 //        L_Dna da = null;
 //        int copyflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        DoubleByReference expResult = null;
 //        DoubleByReference result = instance.l_dnaGetDArray(da, copyflag);
 //        assertEquals(expResult, result);
@@ -10829,7 +10832,7 @@ public class LeptonicaTest {
 //    public void testL_dnaGetRefcount() {
 //        System.out.println("l_dnaGetRefcount");
 //        L_Dna da = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.l_dnaGetRefcount(da);
 //        assertEquals(expResult, result);
@@ -10845,7 +10848,7 @@ public class LeptonicaTest {
 //        System.out.println("l_dnaChangeRefcount");
 //        L_Dna da = null;
 //        int delta = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.l_dnaChangeRefcount(da, delta);
 //        assertEquals(expResult, result);
@@ -10862,7 +10865,7 @@ public class LeptonicaTest {
 //        L_Dna da = null;
 //        DoubleBuffer pstartx = null;
 //        DoubleBuffer pdelx = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.l_dnaGetParameters(da, pstartx, pdelx);
 //        assertEquals(expResult, result);
@@ -10879,7 +10882,7 @@ public class LeptonicaTest {
 //        L_Dna da = null;
 //        double startx = 0.0;
 //        double delx = 0.0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.l_dnaSetParameters(da, startx, delx);
 //        assertEquals(expResult, result);
@@ -10895,7 +10898,7 @@ public class LeptonicaTest {
 //        System.out.println("l_dnaCopyParameters");
 //        L_Dna dad = null;
 //        L_Dna das = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.l_dnaCopyParameters(dad, das);
 //        assertEquals(expResult, result);
@@ -10910,7 +10913,7 @@ public class LeptonicaTest {
 //    public void testL_dnaRead() {
 //        System.out.println("l_dnaRead");
 //        String filename = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Dna expResult = null;
 //        L_Dna result = instance.l_dnaRead(filename);
 //        assertEquals(expResult, result);
@@ -10925,7 +10928,7 @@ public class LeptonicaTest {
 //    public void testL_dnaReadStream() {
 //        System.out.println("l_dnaReadStream");
 //        PointerByReference fp = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Dna expResult = null;
 //        L_Dna result = instance.l_dnaReadStream(fp);
 //        assertEquals(expResult, result);
@@ -10941,7 +10944,7 @@ public class LeptonicaTest {
 //        System.out.println("l_dnaWrite");
 //        String filename = "";
 //        L_Dna da = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.l_dnaWrite(filename, da);
 //        assertEquals(expResult, result);
@@ -10957,7 +10960,7 @@ public class LeptonicaTest {
 //        System.out.println("l_dnaWriteStream");
 //        PointerByReference fp = null;
 //        L_Dna da = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.l_dnaWriteStream(fp, da);
 //        assertEquals(expResult, result);
@@ -10972,7 +10975,7 @@ public class LeptonicaTest {
 //    public void testL_dnaaCreate() {
 //        System.out.println("l_dnaaCreate");
 //        int n = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Dnaa expResult = null;
 //        L_Dnaa result = instance.l_dnaaCreate(n);
 //        assertEquals(expResult, result);
@@ -10987,7 +10990,7 @@ public class LeptonicaTest {
 //    public void testL_dnaaDestroy() {
 //        System.out.println("l_dnaaDestroy");
 //        L_Dnaa.ByReference[] pdaa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.l_dnaaDestroy(pdaa);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -11002,7 +11005,7 @@ public class LeptonicaTest {
 //        L_Dnaa daa = null;
 //        L_Dna da = null;
 //        int copyflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.l_dnaaAddDna(daa, da, copyflag);
 //        assertEquals(expResult, result);
@@ -11017,7 +11020,7 @@ public class LeptonicaTest {
 //    public void testL_dnaaGetCount() {
 //        System.out.println("l_dnaaGetCount");
 //        L_Dnaa daa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.l_dnaaGetCount(daa);
 //        assertEquals(expResult, result);
@@ -11033,7 +11036,7 @@ public class LeptonicaTest {
 //        System.out.println("l_dnaaGetDnaCount");
 //        L_Dnaa daa = null;
 //        int index = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.l_dnaaGetDnaCount(daa, index);
 //        assertEquals(expResult, result);
@@ -11048,7 +11051,7 @@ public class LeptonicaTest {
 //    public void testL_dnaaGetNumberCount() {
 //        System.out.println("l_dnaaGetNumberCount");
 //        L_Dnaa daa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.l_dnaaGetNumberCount(daa);
 //        assertEquals(expResult, result);
@@ -11065,7 +11068,7 @@ public class LeptonicaTest {
 //        L_Dnaa daa = null;
 //        int index = 0;
 //        int accessflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Dna expResult = null;
 //        L_Dna result = instance.l_dnaaGetDna(daa, index, accessflag);
 //        assertEquals(expResult, result);
@@ -11082,7 +11085,7 @@ public class LeptonicaTest {
 //        L_Dnaa daa = null;
 //        int index = 0;
 //        L_Dna da = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.l_dnaaReplaceDna(daa, index, da);
 //        assertEquals(expResult, result);
@@ -11100,7 +11103,7 @@ public class LeptonicaTest {
 //        int i = 0;
 //        int j = 0;
 //        DoubleBuffer pval = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.l_dnaaGetValue(daa, i, j, pval);
 //        assertEquals(expResult, result);
@@ -11117,7 +11120,7 @@ public class LeptonicaTest {
 //        L_Dnaa daa = null;
 //        int index = 0;
 //        double val = 0.0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.l_dnaaAddNumber(daa, index, val);
 //        assertEquals(expResult, result);
@@ -11132,7 +11135,7 @@ public class LeptonicaTest {
 //    public void testL_dnaaRead() {
 //        System.out.println("l_dnaaRead");
 //        String filename = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Dnaa expResult = null;
 //        L_Dnaa result = instance.l_dnaaRead(filename);
 //        assertEquals(expResult, result);
@@ -11147,7 +11150,7 @@ public class LeptonicaTest {
 //    public void testL_dnaaReadStream() {
 //        System.out.println("l_dnaaReadStream");
 //        PointerByReference fp = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Dnaa expResult = null;
 //        L_Dnaa result = instance.l_dnaaReadStream(fp);
 //        assertEquals(expResult, result);
@@ -11163,7 +11166,7 @@ public class LeptonicaTest {
 //        System.out.println("l_dnaaWrite");
 //        String filename = "";
 //        L_Dnaa daa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.l_dnaaWrite(filename, daa);
 //        assertEquals(expResult, result);
@@ -11179,7 +11182,7 @@ public class LeptonicaTest {
 //        System.out.println("l_dnaaWriteStream");
 //        PointerByReference fp = null;
 //        L_Dnaa daa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.l_dnaaWriteStream(fp, daa);
 //        assertEquals(expResult, result);
@@ -11194,7 +11197,7 @@ public class LeptonicaTest {
 //    public void testL_dnaMakeDelta() {
 //        System.out.println("l_dnaMakeDelta");
 //        L_Dna das = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Dna expResult = null;
 //        L_Dna result = instance.l_dnaMakeDelta(das);
 //        assertEquals(expResult, result);
@@ -11209,7 +11212,7 @@ public class LeptonicaTest {
 //    public void testL_dnaConvertToNuma() {
 //        System.out.println("l_dnaConvertToNuma");
 //        L_Dna da = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.l_dnaConvertToNuma(da);
 //        assertEquals(expResult, result);
@@ -11224,7 +11227,7 @@ public class LeptonicaTest {
 //    public void testNumaConvertToDna() {
 //        System.out.println("numaConvertToDna");
 //        Numa na = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Dna expResult = null;
 //        L_Dna result = instance.numaConvertToDna(na);
 //        assertEquals(expResult, result);
@@ -11242,7 +11245,7 @@ public class LeptonicaTest {
 //        L_Dna das = null;
 //        int istart = 0;
 //        int iend = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.l_dnaJoin(dad, das, istart, iend);
 //        assertEquals(expResult, result);
@@ -11260,7 +11263,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int operation = 0;
 //        ByteBuffer selname = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixMorphDwa_2(pixd, pixs, operation, selname);
 //        assertEquals(expResult, result);
@@ -11278,7 +11281,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int operation = 0;
 //        ByteBuffer selname = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixFMorphopGen_2(pixd, pixs, operation, selname);
 //        assertEquals(expResult, result);
@@ -11299,7 +11302,7 @@ public class LeptonicaTest {
 //        IntBuffer datas = null;
 //        int wpls = 0;
 //        int index = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.fmorphopgen_low_2(datad, w, h, wpld, datas, wpls, index);
 //        assertEquals(expResult, result);
@@ -11315,7 +11318,7 @@ public class LeptonicaTest {
 //        System.out.println("pixSobelEdgeFilter");
 //        Pix pixs = null;
 //        int orientflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixSobelEdgeFilter(pixs, orientflag);
 //        assertEquals(expResult, result);
@@ -11331,7 +11334,7 @@ public class LeptonicaTest {
 //        System.out.println("pixTwoSidedEdgeFilter");
 //        Pix pixs = null;
 //        int orientflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixTwoSidedEdgeFilter(pixs, orientflag);
 //        assertEquals(expResult, result);
@@ -11353,7 +11356,7 @@ public class LeptonicaTest {
 //        FloatBuffer pjspl = null;
 //        FloatBuffer prpl = null;
 //        String debugfile = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixMeasureEdgeSmoothness(pixs, side, minjump, minreversal, pjpl, pjspl, prpl, debugfile);
 //        assertEquals(expResult, result);
@@ -11370,7 +11373,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int side = 0;
 //        String debugfile = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.pixGetEdgeProfile(pixs, side, debugfile);
 //        assertEquals(expResult, result);
@@ -11389,7 +11392,7 @@ public class LeptonicaTest {
 //        int y = 0;
 //        int direction = 0;
 //        IntBuffer ploc = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixGetLastOffPixelInRun(pixs, x, y, direction, ploc);
 //        assertEquals(expResult, result);
@@ -11408,7 +11411,7 @@ public class LeptonicaTest {
 //        int y = 0;
 //        int direction = 0;
 //        IntBuffer ploc = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixGetLastOnPixelInRun(pixs, x, y, direction, ploc);
 //        assertEquals(expResult, result);
@@ -11427,7 +11430,7 @@ public class LeptonicaTest {
 //        float gamma = 0.0F;
 //        int minval = 0;
 //        int maxval = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixGammaTRC(pixd, pixs, gamma, minval, maxval);
 //        assertEquals(expResult, result);
@@ -11447,7 +11450,7 @@ public class LeptonicaTest {
 //        float gamma = 0.0F;
 //        int minval = 0;
 //        int maxval = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixGammaTRCMasked(pixd, pixs, pixm, gamma, minval, maxval);
 //        assertEquals(expResult, result);
@@ -11466,7 +11469,7 @@ public class LeptonicaTest {
 //        float gamma = 0.0F;
 //        int minval = 0;
 //        int maxval = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixGammaTRCWithAlpha(pixd, pixs, gamma, minval, maxval);
 //        assertEquals(expResult, result);
@@ -11483,7 +11486,7 @@ public class LeptonicaTest {
 //        float gamma = 0.0F;
 //        int minval = 0;
 //        int maxval = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.numaGammaTRC(gamma, minval, maxval);
 //        assertEquals(expResult, result);
@@ -11500,7 +11503,7 @@ public class LeptonicaTest {
 //        Pix pixd = null;
 //        Pix pixs = null;
 //        float factor = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixContrastTRC(pixd, pixs, factor);
 //        assertEquals(expResult, result);
@@ -11518,7 +11521,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        Pix pixm = null;
 //        float factor = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixContrastTRCMasked(pixd, pixs, pixm, factor);
 //        assertEquals(expResult, result);
@@ -11533,7 +11536,7 @@ public class LeptonicaTest {
 //    public void testNumaContrastTRC() {
 //        System.out.println("numaContrastTRC");
 //        float factor = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.numaContrastTRC(factor);
 //        assertEquals(expResult, result);
@@ -11551,7 +11554,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        float fract = 0.0F;
 //        int factor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixEqualizeTRC(pixd, pixs, fract, factor);
 //        assertEquals(expResult, result);
@@ -11568,7 +11571,7 @@ public class LeptonicaTest {
 //        Pix pix = null;
 //        float fract = 0.0F;
 //        int factor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.numaEqualizeTRC(pix, fract, factor);
 //        assertEquals(expResult, result);
@@ -11585,7 +11588,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        Pix pixm = null;
 //        Numa na = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixTRCMap(pixs, pixm, na);
 //        assertEquals(expResult, result);
@@ -11602,7 +11605,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int halfwidth = 0;
 //        float fract = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixUnsharpMasking(pixs, halfwidth, fract);
 //        assertEquals(expResult, result);
@@ -11619,7 +11622,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int halfwidth = 0;
 //        float fract = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixUnsharpMaskingGray(pixs, halfwidth, fract);
 //        assertEquals(expResult, result);
@@ -11637,7 +11640,7 @@ public class LeptonicaTest {
 //        int halfwidth = 0;
 //        float fract = 0.0F;
 //        int direction = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixUnsharpMaskingFast(pixs, halfwidth, fract, direction);
 //        assertEquals(expResult, result);
@@ -11655,7 +11658,7 @@ public class LeptonicaTest {
 //        int halfwidth = 0;
 //        float fract = 0.0F;
 //        int direction = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixUnsharpMaskingGrayFast(pixs, halfwidth, fract, direction);
 //        assertEquals(expResult, result);
@@ -11673,7 +11676,7 @@ public class LeptonicaTest {
 //        int halfwidth = 0;
 //        float fract = 0.0F;
 //        int direction = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixUnsharpMaskingGray1D(pixs, halfwidth, fract, direction);
 //        assertEquals(expResult, result);
@@ -11690,7 +11693,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int halfwidth = 0;
 //        float fract = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixUnsharpMaskingGray2D(pixs, halfwidth, fract);
 //        assertEquals(expResult, result);
@@ -11707,7 +11710,7 @@ public class LeptonicaTest {
 //        Pix pixd = null;
 //        Pix pixs = null;
 //        float fract = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixModifyHue(pixd, pixs, fract);
 //        assertEquals(expResult, result);
@@ -11724,7 +11727,7 @@ public class LeptonicaTest {
 //        Pix pixd = null;
 //        Pix pixs = null;
 //        float fract = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixModifySaturation(pixd, pixs, fract);
 //        assertEquals(expResult, result);
@@ -11741,7 +11744,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int factor = 0;
 //        FloatBuffer psat = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixMeasureSaturation(pixs, factor, psat);
 //        assertEquals(expResult, result);
@@ -11758,7 +11761,7 @@ public class LeptonicaTest {
 //        Pix pixd = null;
 //        Pix pixs = null;
 //        float fract = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixModifyBrightness(pixd, pixs, fract);
 //        assertEquals(expResult, result);
@@ -11776,7 +11779,7 @@ public class LeptonicaTest {
 //        float rfract = 0.0F;
 //        float gfract = 0.0F;
 //        float bfract = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixColorShiftRGB(pixs, rfract, gfract, bfract);
 //        assertEquals(expResult, result);
@@ -11794,7 +11797,7 @@ public class LeptonicaTest {
 //        float rfact = 0.0F;
 //        float gfact = 0.0F;
 //        float bfact = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixMultConstantColor(pixs, rfact, gfact, bfact);
 //        assertEquals(expResult, result);
@@ -11810,7 +11813,7 @@ public class LeptonicaTest {
 //        System.out.println("pixMultMatrixColor");
 //        Pix pixs = null;
 //        L_Kernel kel = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixMultMatrixColor(pixs, kel);
 //        assertEquals(expResult, result);
@@ -11829,7 +11832,7 @@ public class LeptonicaTest {
 //        int sm1v = 0;
 //        int sm2h = 0;
 //        int sm2v = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixHalfEdgeByBandpass(pixs, sm1h, sm1v, sm2h, sm2v);
 //        assertEquals(expResult, result);
@@ -11846,7 +11849,7 @@ public class LeptonicaTest {
 //        Sela sela = null;
 //        int fileindex = 0;
 //        String filename = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.fhmtautogen(sela, fileindex, filename);
 //        assertEquals(expResult, result);
@@ -11863,7 +11866,7 @@ public class LeptonicaTest {
 //        Sela sela = null;
 //        int fileindex = 0;
 //        String filename = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.fhmtautogen1(sela, fileindex, filename);
 //        assertEquals(expResult, result);
@@ -11880,7 +11883,7 @@ public class LeptonicaTest {
 //        Sela sela = null;
 //        int fileindex = 0;
 //        String filename = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.fhmtautogen2(sela, fileindex, filename);
 //        assertEquals(expResult, result);
@@ -11897,7 +11900,7 @@ public class LeptonicaTest {
 //        Pix pixd = null;
 //        Pix pixs = null;
 //        ByteBuffer selname = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixHMTDwa_1(pixd, pixs, selname);
 //        assertEquals(expResult, result);
@@ -11914,7 +11917,7 @@ public class LeptonicaTest {
 //        Pix pixd = null;
 //        Pix pixs = null;
 //        ByteBuffer selname = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixFHMTGen_1(pixd, pixs, selname);
 //        assertEquals(expResult, result);
@@ -11935,7 +11938,7 @@ public class LeptonicaTest {
 //        IntBuffer datas = null;
 //        int wpls = 0;
 //        int index = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.fhmtgen_low_1(datad, w, h, wpld, datas, wpls, index);
 //        assertEquals(expResult, result);
@@ -11954,7 +11957,7 @@ public class LeptonicaTest {
 //        Pix pixw = null;
 //        Boxa.ByReference[] pboxa = null;
 //        int debugflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixItalicWords(pixs, boxaw, pixw, pboxa, debugflag);
 //        assertEquals(expResult, result);
@@ -11973,7 +11976,7 @@ public class LeptonicaTest {
 //        FloatBuffer pleftconf = null;
 //        int mincount = 0;
 //        int debug = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixOrientDetect(pixs, pupconf, pleftconf, mincount, debug);
 //        assertEquals(expResult, result);
@@ -11993,7 +11996,7 @@ public class LeptonicaTest {
 //        float minratio = 0.0F;
 //        IntBuffer porient = null;
 //        int debug = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.makeOrientDecision(upconf, leftconf, minupconf, minratio, porient, debug);
 //        assertEquals(expResult, result);
@@ -12011,7 +12014,7 @@ public class LeptonicaTest {
 //        FloatBuffer pconf = null;
 //        int mincount = 0;
 //        int debug = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixUpDownDetect(pixs, pconf, mincount, debug);
 //        assertEquals(expResult, result);
@@ -12030,7 +12033,7 @@ public class LeptonicaTest {
 //        int mincount = 0;
 //        int npixels = 0;
 //        int debug = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixUpDownDetectGeneral(pixs, pconf, mincount, npixels, debug);
 //        assertEquals(expResult, result);
@@ -12049,7 +12052,7 @@ public class LeptonicaTest {
 //        FloatBuffer pleftconf = null;
 //        int mincount = 0;
 //        int debug = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixOrientDetectDwa(pixs, pupconf, pleftconf, mincount, debug);
 //        assertEquals(expResult, result);
@@ -12067,7 +12070,7 @@ public class LeptonicaTest {
 //        FloatBuffer pconf = null;
 //        int mincount = 0;
 //        int debug = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixUpDownDetectDwa(pixs, pconf, mincount, debug);
 //        assertEquals(expResult, result);
@@ -12086,7 +12089,7 @@ public class LeptonicaTest {
 //        int mincount = 0;
 //        int npixels = 0;
 //        int debug = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixUpDownDetectGeneralDwa(pixs, pconf, mincount, npixels, debug);
 //        assertEquals(expResult, result);
@@ -12104,7 +12107,7 @@ public class LeptonicaTest {
 //        FloatBuffer pconf = null;
 //        int mincount = 0;
 //        int debug = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixMirrorDetect(pixs, pconf, mincount, debug);
 //        assertEquals(expResult, result);
@@ -12122,7 +12125,7 @@ public class LeptonicaTest {
 //        FloatBuffer pconf = null;
 //        int mincount = 0;
 //        int debug = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixMirrorDetectDwa(pixs, pconf, mincount, debug);
 //        assertEquals(expResult, result);
@@ -12139,7 +12142,7 @@ public class LeptonicaTest {
 //        Pix pixd = null;
 //        Pix pixs = null;
 //        ByteBuffer selname = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixFlipFHMTGen(pixd, pixs, selname);
 //        assertEquals(expResult, result);
@@ -12156,7 +12159,7 @@ public class LeptonicaTest {
 //        Sela sela = null;
 //        int fileindex = 0;
 //        String filename = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.fmorphautogen(sela, fileindex, filename);
 //        assertEquals(expResult, result);
@@ -12173,7 +12176,7 @@ public class LeptonicaTest {
 //        Sela sela = null;
 //        int fileindex = 0;
 //        String filename = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.fmorphautogen1(sela, fileindex, filename);
 //        assertEquals(expResult, result);
@@ -12190,7 +12193,7 @@ public class LeptonicaTest {
 //        Sela sela = null;
 //        int fileindex = 0;
 //        String filename = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.fmorphautogen2(sela, fileindex, filename);
 //        assertEquals(expResult, result);
@@ -12208,7 +12211,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int operation = 0;
 //        ByteBuffer selname = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixMorphDwa_1(pixd, pixs, operation, selname);
 //        assertEquals(expResult, result);
@@ -12226,7 +12229,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int operation = 0;
 //        ByteBuffer selname = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixFMorphopGen_1(pixd, pixs, operation, selname);
 //        assertEquals(expResult, result);
@@ -12247,7 +12250,7 @@ public class LeptonicaTest {
 //        IntBuffer datas = null;
 //        int wpls = 0;
 //        int index = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.fmorphopgen_low_1(datad, w, h, wpld, datas, wpls, index);
 //        assertEquals(expResult, result);
@@ -12263,7 +12266,7 @@ public class LeptonicaTest {
 //        System.out.println("fpixCreate");
 //        int width = 0;
 //        int height = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        FPix expResult = null;
 //        FPix result = instance.fpixCreate(width, height);
 //        assertEquals(expResult, result);
@@ -12278,7 +12281,7 @@ public class LeptonicaTest {
 //    public void testFpixCreateTemplate() {
 //        System.out.println("fpixCreateTemplate");
 //        FPix fpixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        FPix expResult = null;
 //        FPix result = instance.fpixCreateTemplate(fpixs);
 //        assertEquals(expResult, result);
@@ -12293,7 +12296,7 @@ public class LeptonicaTest {
 //    public void testFpixClone() {
 //        System.out.println("fpixClone");
 //        FPix fpix = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        FPix expResult = null;
 //        FPix result = instance.fpixClone(fpix);
 //        assertEquals(expResult, result);
@@ -12309,7 +12312,7 @@ public class LeptonicaTest {
 //        System.out.println("fpixCopy");
 //        FPix fpixd = null;
 //        FPix fpixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        FPix expResult = null;
 //        FPix result = instance.fpixCopy(fpixd, fpixs);
 //        assertEquals(expResult, result);
@@ -12325,7 +12328,7 @@ public class LeptonicaTest {
 //        System.out.println("fpixResizeImageData");
 //        FPix fpixd = null;
 //        FPix fpixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.fpixResizeImageData(fpixd, fpixs);
 //        assertEquals(expResult, result);
@@ -12340,7 +12343,7 @@ public class LeptonicaTest {
 //    public void testFpixDestroy() {
 //        System.out.println("fpixDestroy");
 //        FPix.ByReference[] pfpix = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.fpixDestroy(pfpix);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -12355,7 +12358,7 @@ public class LeptonicaTest {
 //        FPix fpix = null;
 //        IntBuffer pw = null;
 //        IntBuffer ph = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.fpixGetDimensions(fpix, pw, ph);
 //        assertEquals(expResult, result);
@@ -12372,7 +12375,7 @@ public class LeptonicaTest {
 //        FPix fpix = null;
 //        int w = 0;
 //        int h = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.fpixSetDimensions(fpix, w, h);
 //        assertEquals(expResult, result);
@@ -12387,7 +12390,7 @@ public class LeptonicaTest {
 //    public void testFpixGetWpl() {
 //        System.out.println("fpixGetWpl");
 //        FPix fpix = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.fpixGetWpl(fpix);
 //        assertEquals(expResult, result);
@@ -12403,7 +12406,7 @@ public class LeptonicaTest {
 //        System.out.println("fpixSetWpl");
 //        FPix fpix = null;
 //        int wpl = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.fpixSetWpl(fpix, wpl);
 //        assertEquals(expResult, result);
@@ -12418,7 +12421,7 @@ public class LeptonicaTest {
 //    public void testFpixGetRefcount() {
 //        System.out.println("fpixGetRefcount");
 //        FPix fpix = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.fpixGetRefcount(fpix);
 //        assertEquals(expResult, result);
@@ -12434,7 +12437,7 @@ public class LeptonicaTest {
 //        System.out.println("fpixChangeRefcount");
 //        FPix fpix = null;
 //        int delta = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.fpixChangeRefcount(fpix, delta);
 //        assertEquals(expResult, result);
@@ -12451,7 +12454,7 @@ public class LeptonicaTest {
 //        FPix fpix = null;
 //        IntBuffer pxres = null;
 //        IntBuffer pyres = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.fpixGetResolution(fpix, pxres, pyres);
 //        assertEquals(expResult, result);
@@ -12468,7 +12471,7 @@ public class LeptonicaTest {
 //        FPix fpix = null;
 //        int xres = 0;
 //        int yres = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.fpixSetResolution(fpix, xres, yres);
 //        assertEquals(expResult, result);
@@ -12484,7 +12487,7 @@ public class LeptonicaTest {
 //        System.out.println("fpixCopyResolution");
 //        FPix fpixd = null;
 //        FPix fpixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.fpixCopyResolution(fpixd, fpixs);
 //        assertEquals(expResult, result);
@@ -12499,7 +12502,7 @@ public class LeptonicaTest {
 //    public void testFpixGetData() {
 //        System.out.println("fpixGetData");
 //        FPix fpix = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        FloatByReference expResult = null;
 //        FloatByReference result = instance.fpixGetData(fpix);
 //        assertEquals(expResult, result);
@@ -12515,7 +12518,7 @@ public class LeptonicaTest {
 //        System.out.println("fpixSetData");
 //        FPix fpix = null;
 //        FloatBuffer data = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.fpixSetData(fpix, data);
 //        assertEquals(expResult, result);
@@ -12533,7 +12536,7 @@ public class LeptonicaTest {
 //        int x = 0;
 //        int y = 0;
 //        FloatBuffer pval = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.fpixGetPixel(fpix, x, y, pval);
 //        assertEquals(expResult, result);
@@ -12551,7 +12554,7 @@ public class LeptonicaTest {
 //        int x = 0;
 //        int y = 0;
 //        float val = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.fpixSetPixel(fpix, x, y, val);
 //        assertEquals(expResult, result);
@@ -12566,7 +12569,7 @@ public class LeptonicaTest {
 //    public void testFpixaCreate() {
 //        System.out.println("fpixaCreate");
 //        int n = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        FPixa expResult = null;
 //        FPixa result = instance.fpixaCreate(n);
 //        assertEquals(expResult, result);
@@ -12582,7 +12585,7 @@ public class LeptonicaTest {
 //        System.out.println("fpixaCopy");
 //        FPixa fpixa = null;
 //        int copyflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        FPixa expResult = null;
 //        FPixa result = instance.fpixaCopy(fpixa, copyflag);
 //        assertEquals(expResult, result);
@@ -12597,7 +12600,7 @@ public class LeptonicaTest {
 //    public void testFpixaDestroy() {
 //        System.out.println("fpixaDestroy");
 //        FPixa.ByReference[] pfpixa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.fpixaDestroy(pfpixa);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -12612,7 +12615,7 @@ public class LeptonicaTest {
 //        FPixa fpixa = null;
 //        FPix fpix = null;
 //        int copyflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.fpixaAddFPix(fpixa, fpix, copyflag);
 //        assertEquals(expResult, result);
@@ -12627,7 +12630,7 @@ public class LeptonicaTest {
 //    public void testFpixaGetCount() {
 //        System.out.println("fpixaGetCount");
 //        FPixa fpixa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.fpixaGetCount(fpixa);
 //        assertEquals(expResult, result);
@@ -12643,7 +12646,7 @@ public class LeptonicaTest {
 //        System.out.println("fpixaChangeRefcount");
 //        FPixa fpixa = null;
 //        int delta = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.fpixaChangeRefcount(fpixa, delta);
 //        assertEquals(expResult, result);
@@ -12660,7 +12663,7 @@ public class LeptonicaTest {
 //        FPixa fpixa = null;
 //        int index = 0;
 //        int accesstype = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        FPix expResult = null;
 //        FPix result = instance.fpixaGetFPix(fpixa, index, accesstype);
 //        assertEquals(expResult, result);
@@ -12678,7 +12681,7 @@ public class LeptonicaTest {
 //        int index = 0;
 //        IntBuffer pw = null;
 //        IntBuffer ph = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.fpixaGetFPixDimensions(fpixa, index, pw, ph);
 //        assertEquals(expResult, result);
@@ -12697,7 +12700,7 @@ public class LeptonicaTest {
 //        int x = 0;
 //        int y = 0;
 //        FloatBuffer pval = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.fpixaGetPixel(fpixa, index, x, y, pval);
 //        assertEquals(expResult, result);
@@ -12716,7 +12719,7 @@ public class LeptonicaTest {
 //        int x = 0;
 //        int y = 0;
 //        float val = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.fpixaSetPixel(fpixa, index, x, y, val);
 //        assertEquals(expResult, result);
@@ -12732,7 +12735,7 @@ public class LeptonicaTest {
 //        System.out.println("dpixCreate");
 //        int width = 0;
 //        int height = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        DPix expResult = null;
 //        DPix result = instance.dpixCreate(width, height);
 //        assertEquals(expResult, result);
@@ -12747,7 +12750,7 @@ public class LeptonicaTest {
 //    public void testDpixCreateTemplate() {
 //        System.out.println("dpixCreateTemplate");
 //        DPix dpixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        DPix expResult = null;
 //        DPix result = instance.dpixCreateTemplate(dpixs);
 //        assertEquals(expResult, result);
@@ -12762,7 +12765,7 @@ public class LeptonicaTest {
 //    public void testDpixClone() {
 //        System.out.println("dpixClone");
 //        DPix dpix = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        DPix expResult = null;
 //        DPix result = instance.dpixClone(dpix);
 //        assertEquals(expResult, result);
@@ -12778,7 +12781,7 @@ public class LeptonicaTest {
 //        System.out.println("dpixCopy");
 //        DPix dpixd = null;
 //        DPix dpixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        DPix expResult = null;
 //        DPix result = instance.dpixCopy(dpixd, dpixs);
 //        assertEquals(expResult, result);
@@ -12794,7 +12797,7 @@ public class LeptonicaTest {
 //        System.out.println("dpixResizeImageData");
 //        DPix dpixd = null;
 //        DPix dpixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.dpixResizeImageData(dpixd, dpixs);
 //        assertEquals(expResult, result);
@@ -12809,7 +12812,7 @@ public class LeptonicaTest {
 //    public void testDpixDestroy() {
 //        System.out.println("dpixDestroy");
 //        DPix.ByReference[] pdpix = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.dpixDestroy(pdpix);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -12824,7 +12827,7 @@ public class LeptonicaTest {
 //        DPix dpix = null;
 //        IntBuffer pw = null;
 //        IntBuffer ph = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.dpixGetDimensions(dpix, pw, ph);
 //        assertEquals(expResult, result);
@@ -12841,7 +12844,7 @@ public class LeptonicaTest {
 //        DPix dpix = null;
 //        int w = 0;
 //        int h = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.dpixSetDimensions(dpix, w, h);
 //        assertEquals(expResult, result);
@@ -12856,7 +12859,7 @@ public class LeptonicaTest {
 //    public void testDpixGetWpl() {
 //        System.out.println("dpixGetWpl");
 //        DPix dpix = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.dpixGetWpl(dpix);
 //        assertEquals(expResult, result);
@@ -12872,7 +12875,7 @@ public class LeptonicaTest {
 //        System.out.println("dpixSetWpl");
 //        DPix dpix = null;
 //        int wpl = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.dpixSetWpl(dpix, wpl);
 //        assertEquals(expResult, result);
@@ -12887,7 +12890,7 @@ public class LeptonicaTest {
 //    public void testDpixGetRefcount() {
 //        System.out.println("dpixGetRefcount");
 //        DPix dpix = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.dpixGetRefcount(dpix);
 //        assertEquals(expResult, result);
@@ -12903,7 +12906,7 @@ public class LeptonicaTest {
 //        System.out.println("dpixChangeRefcount");
 //        DPix dpix = null;
 //        int delta = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.dpixChangeRefcount(dpix, delta);
 //        assertEquals(expResult, result);
@@ -12920,7 +12923,7 @@ public class LeptonicaTest {
 //        DPix dpix = null;
 //        IntBuffer pxres = null;
 //        IntBuffer pyres = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.dpixGetResolution(dpix, pxres, pyres);
 //        assertEquals(expResult, result);
@@ -12937,7 +12940,7 @@ public class LeptonicaTest {
 //        DPix dpix = null;
 //        int xres = 0;
 //        int yres = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.dpixSetResolution(dpix, xres, yres);
 //        assertEquals(expResult, result);
@@ -12953,7 +12956,7 @@ public class LeptonicaTest {
 //        System.out.println("dpixCopyResolution");
 //        DPix dpixd = null;
 //        DPix dpixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.dpixCopyResolution(dpixd, dpixs);
 //        assertEquals(expResult, result);
@@ -12968,7 +12971,7 @@ public class LeptonicaTest {
 //    public void testDpixGetData() {
 //        System.out.println("dpixGetData");
 //        DPix dpix = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        DoubleByReference expResult = null;
 //        DoubleByReference result = instance.dpixGetData(dpix);
 //        assertEquals(expResult, result);
@@ -12984,7 +12987,7 @@ public class LeptonicaTest {
 //        System.out.println("dpixSetData");
 //        DPix dpix = null;
 //        DoubleBuffer data = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.dpixSetData(dpix, data);
 //        assertEquals(expResult, result);
@@ -13002,7 +13005,7 @@ public class LeptonicaTest {
 //        int x = 0;
 //        int y = 0;
 //        DoubleBuffer pval = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.dpixGetPixel(dpix, x, y, pval);
 //        assertEquals(expResult, result);
@@ -13020,7 +13023,7 @@ public class LeptonicaTest {
 //        int x = 0;
 //        int y = 0;
 //        double val = 0.0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.dpixSetPixel(dpix, x, y, val);
 //        assertEquals(expResult, result);
@@ -13035,7 +13038,7 @@ public class LeptonicaTest {
 //    public void testFpixRead() {
 //        System.out.println("fpixRead");
 //        String filename = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        FPix expResult = null;
 //        FPix result = instance.fpixRead(filename);
 //        assertEquals(expResult, result);
@@ -13050,7 +13053,7 @@ public class LeptonicaTest {
 //    public void testFpixReadStream() {
 //        System.out.println("fpixReadStream");
 //        PointerByReference fp = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        FPix expResult = null;
 //        FPix result = instance.fpixReadStream(fp);
 //        assertEquals(expResult, result);
@@ -13066,7 +13069,7 @@ public class LeptonicaTest {
 //        System.out.println("fpixWrite");
 //        String filename = "";
 //        FPix fpix = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.fpixWrite(filename, fpix);
 //        assertEquals(expResult, result);
@@ -13082,7 +13085,7 @@ public class LeptonicaTest {
 //        System.out.println("fpixWriteStream");
 //        PointerByReference fp = null;
 //        FPix fpix = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.fpixWriteStream(fp, fpix);
 //        assertEquals(expResult, result);
@@ -13098,7 +13101,7 @@ public class LeptonicaTest {
 //        System.out.println("fpixEndianByteSwap");
 //        FPix fpixd = null;
 //        FPix fpixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        FPix expResult = null;
 //        FPix result = instance.fpixEndianByteSwap(fpixd, fpixs);
 //        assertEquals(expResult, result);
@@ -13113,7 +13116,7 @@ public class LeptonicaTest {
 //    public void testDpixRead() {
 //        System.out.println("dpixRead");
 //        String filename = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        DPix expResult = null;
 //        DPix result = instance.dpixRead(filename);
 //        assertEquals(expResult, result);
@@ -13128,7 +13131,7 @@ public class LeptonicaTest {
 //    public void testDpixReadStream() {
 //        System.out.println("dpixReadStream");
 //        PointerByReference fp = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        DPix expResult = null;
 //        DPix result = instance.dpixReadStream(fp);
 //        assertEquals(expResult, result);
@@ -13144,7 +13147,7 @@ public class LeptonicaTest {
 //        System.out.println("dpixWrite");
 //        String filename = "";
 //        DPix dpix = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.dpixWrite(filename, dpix);
 //        assertEquals(expResult, result);
@@ -13160,7 +13163,7 @@ public class LeptonicaTest {
 //        System.out.println("dpixWriteStream");
 //        PointerByReference fp = null;
 //        DPix dpix = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.dpixWriteStream(fp, dpix);
 //        assertEquals(expResult, result);
@@ -13176,7 +13179,7 @@ public class LeptonicaTest {
 //        System.out.println("dpixEndianByteSwap");
 //        DPix dpixd = null;
 //        DPix dpixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        DPix expResult = null;
 //        DPix result = instance.dpixEndianByteSwap(dpixd, dpixs);
 //        assertEquals(expResult, result);
@@ -13193,7 +13196,7 @@ public class LeptonicaTest {
 //        PointerByReference fp = null;
 //        FPix fpix = null;
 //        int factor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.fpixPrintStream(fp, fpix, factor);
 //        assertEquals(expResult, result);
@@ -13209,7 +13212,7 @@ public class LeptonicaTest {
 //        System.out.println("pixConvertToFPix");
 //        Pix pixs = null;
 //        int ncomps = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        FPix expResult = null;
 //        FPix result = instance.pixConvertToFPix(pixs, ncomps);
 //        assertEquals(expResult, result);
@@ -13225,7 +13228,7 @@ public class LeptonicaTest {
 //        System.out.println("pixConvertToDPix");
 //        Pix pixs = null;
 //        int ncomps = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        DPix expResult = null;
 //        DPix result = instance.pixConvertToDPix(pixs, ncomps);
 //        assertEquals(expResult, result);
@@ -13243,7 +13246,7 @@ public class LeptonicaTest {
 //        int outdepth = 0;
 //        int negvals = 0;
 //        int errorflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.fpixConvertToPix(fpixs, outdepth, negvals, errorflag);
 //        assertEquals(expResult, result);
@@ -13258,7 +13261,7 @@ public class LeptonicaTest {
 //    public void testFpixDisplayMaxDynamicRange() {
 //        System.out.println("fpixDisplayMaxDynamicRange");
 //        FPix fpixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.fpixDisplayMaxDynamicRange(fpixs);
 //        assertEquals(expResult, result);
@@ -13273,7 +13276,7 @@ public class LeptonicaTest {
 //    public void testFpixConvertToDPix() {
 //        System.out.println("fpixConvertToDPix");
 //        FPix fpix = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        DPix expResult = null;
 //        DPix result = instance.fpixConvertToDPix(fpix);
 //        assertEquals(expResult, result);
@@ -13291,7 +13294,7 @@ public class LeptonicaTest {
 //        int outdepth = 0;
 //        int negvals = 0;
 //        int errorflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.dpixConvertToPix(dpixs, outdepth, negvals, errorflag);
 //        assertEquals(expResult, result);
@@ -13306,7 +13309,7 @@ public class LeptonicaTest {
 //    public void testDpixConvertToFPix() {
 //        System.out.println("dpixConvertToFPix");
 //        DPix dpix = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        FPix expResult = null;
 //        FPix result = instance.dpixConvertToFPix(dpix);
 //        assertEquals(expResult, result);
@@ -13324,7 +13327,7 @@ public class LeptonicaTest {
 //        FloatBuffer pminval = null;
 //        IntBuffer pxminloc = null;
 //        IntBuffer pyminloc = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.fpixGetMin(fpix, pminval, pxminloc, pyminloc);
 //        assertEquals(expResult, result);
@@ -13342,7 +13345,7 @@ public class LeptonicaTest {
 //        FloatBuffer pmaxval = null;
 //        IntBuffer pxmaxloc = null;
 //        IntBuffer pymaxloc = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.fpixGetMax(fpix, pmaxval, pxmaxloc, pymaxloc);
 //        assertEquals(expResult, result);
@@ -13360,7 +13363,7 @@ public class LeptonicaTest {
 //        DoubleBuffer pminval = null;
 //        IntBuffer pxminloc = null;
 //        IntBuffer pyminloc = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.dpixGetMin(dpix, pminval, pxminloc, pyminloc);
 //        assertEquals(expResult, result);
@@ -13378,7 +13381,7 @@ public class LeptonicaTest {
 //        DoubleBuffer pmaxval = null;
 //        IntBuffer pxmaxloc = null;
 //        IntBuffer pymaxloc = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.dpixGetMax(dpix, pmaxval, pxmaxloc, pymaxloc);
 //        assertEquals(expResult, result);
@@ -13394,7 +13397,7 @@ public class LeptonicaTest {
 //        System.out.println("fpixScaleByInteger");
 //        FPix fpixs = null;
 //        int factor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        FPix expResult = null;
 //        FPix result = instance.fpixScaleByInteger(fpixs, factor);
 //        assertEquals(expResult, result);
@@ -13410,7 +13413,7 @@ public class LeptonicaTest {
 //        System.out.println("dpixScaleByInteger");
 //        DPix dpixs = null;
 //        int factor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        DPix expResult = null;
 //        DPix result = instance.dpixScaleByInteger(dpixs, factor);
 //        assertEquals(expResult, result);
@@ -13429,7 +13432,7 @@ public class LeptonicaTest {
 //        FPix fpixs2 = null;
 //        float a = 0.0F;
 //        float b = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        FPix expResult = null;
 //        FPix result = instance.fpixLinearCombination(fpixd, fpixs1, fpixs2, a, b);
 //        assertEquals(expResult, result);
@@ -13446,7 +13449,7 @@ public class LeptonicaTest {
 //        FPix fpix = null;
 //        float addc = 0.0F;
 //        float multc = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.fpixAddMultConstant(fpix, addc, multc);
 //        assertEquals(expResult, result);
@@ -13465,7 +13468,7 @@ public class LeptonicaTest {
 //        DPix dpixs2 = null;
 //        float a = 0.0F;
 //        float b = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        DPix expResult = null;
 //        DPix result = instance.dpixLinearCombination(dpixd, dpixs1, dpixs2, a, b);
 //        assertEquals(expResult, result);
@@ -13482,7 +13485,7 @@ public class LeptonicaTest {
 //        DPix dpix = null;
 //        double addc = 0.0;
 //        double multc = 0.0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.dpixAddMultConstant(dpix, addc, multc);
 //        assertEquals(expResult, result);
@@ -13498,7 +13501,7 @@ public class LeptonicaTest {
 //        System.out.println("fpixSetAllArbitrary");
 //        FPix fpix = null;
 //        float inval = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.fpixSetAllArbitrary(fpix, inval);
 //        assertEquals(expResult, result);
@@ -13514,7 +13517,7 @@ public class LeptonicaTest {
 //        System.out.println("dpixSetAllArbitrary");
 //        DPix dpix = null;
 //        double inval = 0.0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.dpixSetAllArbitrary(dpix, inval);
 //        assertEquals(expResult, result);
@@ -13533,7 +13536,7 @@ public class LeptonicaTest {
 //        int right = 0;
 //        int top = 0;
 //        int bot = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        FPix expResult = null;
 //        FPix result = instance.fpixAddBorder(fpixs, left, right, top, bot);
 //        assertEquals(expResult, result);
@@ -13552,7 +13555,7 @@ public class LeptonicaTest {
 //        int right = 0;
 //        int top = 0;
 //        int bot = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        FPix expResult = null;
 //        FPix result = instance.fpixRemoveBorder(fpixs, left, right, top, bot);
 //        assertEquals(expResult, result);
@@ -13571,7 +13574,7 @@ public class LeptonicaTest {
 //        int right = 0;
 //        int top = 0;
 //        int bot = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        FPix expResult = null;
 //        FPix result = instance.fpixAddMirroredBorder(fpixs, left, right, top, bot);
 //        assertEquals(expResult, result);
@@ -13590,7 +13593,7 @@ public class LeptonicaTest {
 //        int right = 0;
 //        int top = 0;
 //        int bot = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        FPix expResult = null;
 //        FPix result = instance.fpixAddContinuedBorder(fpixs, left, right, top, bot);
 //        assertEquals(expResult, result);
@@ -13609,7 +13612,7 @@ public class LeptonicaTest {
 //        int right = 0;
 //        int top = 0;
 //        int bot = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        FPix expResult = null;
 //        FPix result = instance.fpixAddSlopeBorder(fpixs, left, right, top, bot);
 //        assertEquals(expResult, result);
@@ -13631,7 +13634,7 @@ public class LeptonicaTest {
 //        FPix fpixs = null;
 //        int sx = 0;
 //        int sy = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.fpixRasterop(fpixd, dx, dy, dw, dh, fpixs, sx, sy);
 //        assertEquals(expResult, result);
@@ -13647,7 +13650,7 @@ public class LeptonicaTest {
 //        System.out.println("fpixRotateOrth");
 //        FPix fpixs = null;
 //        int quads = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        FPix expResult = null;
 //        FPix result = instance.fpixRotateOrth(fpixs, quads);
 //        assertEquals(expResult, result);
@@ -13663,7 +13666,7 @@ public class LeptonicaTest {
 //        System.out.println("fpixRotate180");
 //        FPix fpixd = null;
 //        FPix fpixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        FPix expResult = null;
 //        FPix result = instance.fpixRotate180(fpixd, fpixs);
 //        assertEquals(expResult, result);
@@ -13679,7 +13682,7 @@ public class LeptonicaTest {
 //        System.out.println("fpixRotate90");
 //        FPix fpixs = null;
 //        int direction = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        FPix expResult = null;
 //        FPix result = instance.fpixRotate90(fpixs, direction);
 //        assertEquals(expResult, result);
@@ -13695,7 +13698,7 @@ public class LeptonicaTest {
 //        System.out.println("fpixFlipLR");
 //        FPix fpixd = null;
 //        FPix fpixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        FPix expResult = null;
 //        FPix result = instance.fpixFlipLR(fpixd, fpixs);
 //        assertEquals(expResult, result);
@@ -13711,7 +13714,7 @@ public class LeptonicaTest {
 //        System.out.println("fpixFlipTB");
 //        FPix fpixd = null;
 //        FPix fpixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        FPix expResult = null;
 //        FPix result = instance.fpixFlipTB(fpixd, fpixs);
 //        assertEquals(expResult, result);
@@ -13730,7 +13733,7 @@ public class LeptonicaTest {
 //        Pta ptas = null;
 //        int border = 0;
 //        float inval = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        FPix expResult = null;
 //        FPix result = instance.fpixAffinePta(fpixs, ptad, ptas, border, inval);
 //        assertEquals(expResult, result);
@@ -13747,7 +13750,7 @@ public class LeptonicaTest {
 //        FPix fpixs = null;
 //        FloatBuffer vc = null;
 //        float inval = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        FPix expResult = null;
 //        FPix result = instance.fpixAffine(fpixs, vc, inval);
 //        assertEquals(expResult, result);
@@ -13766,7 +13769,7 @@ public class LeptonicaTest {
 //        Pta ptas = null;
 //        int border = 0;
 //        float inval = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        FPix expResult = null;
 //        FPix result = instance.fpixProjectivePta(fpixs, ptad, ptas, border, inval);
 //        assertEquals(expResult, result);
@@ -13783,7 +13786,7 @@ public class LeptonicaTest {
 //        FPix fpixs = null;
 //        FloatBuffer vc = null;
 //        float inval = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        FPix expResult = null;
 //        FPix result = instance.fpixProjective(fpixs, vc, inval);
 //        assertEquals(expResult, result);
@@ -13804,7 +13807,7 @@ public class LeptonicaTest {
 //        float y = 0.0F;
 //        float inval = 0.0F;
 //        FloatBuffer pval = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.linearInterpolatePixelFloat(datas, w, h, x, y, inval, pval);
 //        assertEquals(expResult, result);
@@ -13820,7 +13823,7 @@ public class LeptonicaTest {
 //        System.out.println("fpixThresholdToPix");
 //        FPix fpix = null;
 //        float thresh = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.fpixThresholdToPix(fpix, thresh);
 //        assertEquals(expResult, result);
@@ -13841,7 +13844,7 @@ public class LeptonicaTest {
 //        float rdenom = 0.0F;
 //        float gdenom = 0.0F;
 //        float bdenom = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        FPix expResult = null;
 //        FPix result = instance.pixComponentFunction(pix, rnum, gnum, bnum, rdenom, gdenom, bdenom);
 //        assertEquals(expResult, result);
@@ -13856,7 +13859,7 @@ public class LeptonicaTest {
 //    public void testPixReadStreamGif() {
 //        System.out.println("pixReadStreamGif");
 //        PointerByReference fp = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixReadStreamGif(fp);
 //        assertEquals(expResult, result);
@@ -13872,7 +13875,7 @@ public class LeptonicaTest {
 //        System.out.println("pixWriteStreamGif");
 //        PointerByReference fp = null;
 //        Pix pix = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixWriteStreamGif(fp, pix);
 //        assertEquals(expResult, result);
@@ -13888,7 +13891,7 @@ public class LeptonicaTest {
 //        System.out.println("pixReadMemGif");
 //        ByteBuffer cdata = null;
 //        NativeSize size = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixReadMemGif(cdata, size);
 //        assertEquals(expResult, result);
@@ -13905,7 +13908,7 @@ public class LeptonicaTest {
 //        PointerByReference pdata = null;
 //        NativeSizeByReference psize = null;
 //        Pix pix = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixWriteMemGif(pdata, psize, pix);
 //        assertEquals(expResult, result);
@@ -13924,7 +13927,7 @@ public class LeptonicaTest {
 //        String title = "";
 //        String xlabel = "";
 //        String ylabel = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        GPlot expResult = null;
 //        GPlot result = instance.gplotCreate(rootname, outformat, title, xlabel, ylabel);
 //        assertEquals(expResult, result);
@@ -13939,7 +13942,7 @@ public class LeptonicaTest {
 //    public void testGplotDestroy() {
 //        System.out.println("gplotDestroy");
 //        GPlot.ByReference[] pgplot = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.gplotDestroy(pgplot);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -13956,7 +13959,7 @@ public class LeptonicaTest {
 //        Numa nay = null;
 //        int plotstyle = 0;
 //        String plottitle = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.gplotAddPlot(gplot, nax, nay, plotstyle, plottitle);
 //        assertEquals(expResult, result);
@@ -13972,7 +13975,7 @@ public class LeptonicaTest {
 //        System.out.println("gplotSetScaling");
 //        GPlot gplot = null;
 //        int scaling = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.gplotSetScaling(gplot, scaling);
 //        assertEquals(expResult, result);
@@ -13987,7 +13990,7 @@ public class LeptonicaTest {
 //    public void testGplotMakeOutput() {
 //        System.out.println("gplotMakeOutput");
 //        GPlot gplot = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.gplotMakeOutput(gplot);
 //        assertEquals(expResult, result);
@@ -14002,7 +14005,7 @@ public class LeptonicaTest {
 //    public void testGplotGenCommandFile() {
 //        System.out.println("gplotGenCommandFile");
 //        GPlot gplot = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.gplotGenCommandFile(gplot);
 //        assertEquals(expResult, result);
@@ -14017,7 +14020,7 @@ public class LeptonicaTest {
 //    public void testGplotGenDataFiles() {
 //        System.out.println("gplotGenDataFiles");
 //        GPlot gplot = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.gplotGenDataFiles(gplot);
 //        assertEquals(expResult, result);
@@ -14035,7 +14038,7 @@ public class LeptonicaTest {
 //        int outformat = 0;
 //        String outroot = "";
 //        String title = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.gplotSimple1(na, outformat, outroot, title);
 //        assertEquals(expResult, result);
@@ -14054,7 +14057,7 @@ public class LeptonicaTest {
 //        int outformat = 0;
 //        String outroot = "";
 //        String title = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.gplotSimple2(na1, na2, outformat, outroot, title);
 //        assertEquals(expResult, result);
@@ -14072,7 +14075,7 @@ public class LeptonicaTest {
 //        int outformat = 0;
 //        String outroot = "";
 //        String title = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.gplotSimpleN(naa, outformat, outroot, title);
 //        assertEquals(expResult, result);
@@ -14091,7 +14094,7 @@ public class LeptonicaTest {
 //        int outformat = 0;
 //        String outroot = "";
 //        String title = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.gplotSimpleXY1(nax, nay, outformat, outroot, title);
 //        assertEquals(expResult, result);
@@ -14111,7 +14114,7 @@ public class LeptonicaTest {
 //        int outformat = 0;
 //        String outroot = "";
 //        String title = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.gplotSimpleXY2(nax, nay1, nay2, outformat, outroot, title);
 //        assertEquals(expResult, result);
@@ -14130,7 +14133,7 @@ public class LeptonicaTest {
 //        int outformat = 0;
 //        String outroot = "";
 //        String title = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.gplotSimpleXYN(nax, naay, outformat, outroot, title);
 //        assertEquals(expResult, result);
@@ -14145,7 +14148,7 @@ public class LeptonicaTest {
 //    public void testGplotRead() {
 //        System.out.println("gplotRead");
 //        String filename = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        GPlot expResult = null;
 //        GPlot result = instance.gplotRead(filename);
 //        assertEquals(expResult, result);
@@ -14161,7 +14164,7 @@ public class LeptonicaTest {
 //        System.out.println("gplotWrite");
 //        String filename = "";
 //        GPlot gplot = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.gplotWrite(filename, gplot);
 //        assertEquals(expResult, result);
@@ -14179,7 +14182,7 @@ public class LeptonicaTest {
 //        int y1 = 0;
 //        int x2 = 0;
 //        int y2 = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pta expResult = null;
 //        Pta result = instance.generatePtaLine(x1, y1, x2, y2);
 //        assertEquals(expResult, result);
@@ -14198,7 +14201,7 @@ public class LeptonicaTest {
 //        int x2 = 0;
 //        int y2 = 0;
 //        int width = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pta expResult = null;
 //        Pta result = instance.generatePtaWideLine(x1, y1, x2, y2, width);
 //        assertEquals(expResult, result);
@@ -14214,7 +14217,7 @@ public class LeptonicaTest {
 //        System.out.println("generatePtaBox");
 //        Box box = null;
 //        int width = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pta expResult = null;
 //        Pta result = instance.generatePtaBox(box, width);
 //        assertEquals(expResult, result);
@@ -14231,7 +14234,7 @@ public class LeptonicaTest {
 //        Boxa boxa = null;
 //        int width = 0;
 //        int removedups = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pta expResult = null;
 //        Pta result = instance.generatePtaBoxa(boxa, width, removedups);
 //        assertEquals(expResult, result);
@@ -14250,7 +14253,7 @@ public class LeptonicaTest {
 //        int width = 0;
 //        int orient = 0;
 //        int outline = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pta expResult = null;
 //        Pta result = instance.generatePtaHashBox(box, spacing, width, orient, outline);
 //        assertEquals(expResult, result);
@@ -14270,7 +14273,7 @@ public class LeptonicaTest {
 //        int orient = 0;
 //        int outline = 0;
 //        int removedups = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pta expResult = null;
 //        Pta result = instance.generatePtaHashBoxa(boxa, spacing, width, orient, outline, removedups);
 //        assertEquals(expResult, result);
@@ -14285,7 +14288,7 @@ public class LeptonicaTest {
 //    public void testGeneratePtaaBoxa() {
 //        System.out.println("generatePtaaBoxa");
 //        Boxa boxa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Ptaa expResult = null;
 //        Ptaa result = instance.generatePtaaBoxa(boxa);
 //        assertEquals(expResult, result);
@@ -14304,7 +14307,7 @@ public class LeptonicaTest {
 //        int width = 0;
 //        int orient = 0;
 //        int outline = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Ptaa expResult = null;
 //        Ptaa result = instance.generatePtaaHashBoxa(boxa, spacing, width, orient, outline);
 //        assertEquals(expResult, result);
@@ -14322,7 +14325,7 @@ public class LeptonicaTest {
 //        int width = 0;
 //        int closeflag = 0;
 //        int removedups = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pta expResult = null;
 //        Pta result = instance.generatePtaPolyline(ptas, width, closeflag, removedups);
 //        assertEquals(expResult, result);
@@ -14337,7 +14340,7 @@ public class LeptonicaTest {
 //    public void testConvertPtaLineTo4cc() {
 //        System.out.println("convertPtaLineTo4cc");
 //        Pta ptas = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pta expResult = null;
 //        Pta result = instance.convertPtaLineTo4cc(ptas);
 //        assertEquals(expResult, result);
@@ -14352,7 +14355,7 @@ public class LeptonicaTest {
 //    public void testGeneratePtaFilledCircle() {
 //        System.out.println("generatePtaFilledCircle");
 //        int radius = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pta expResult = null;
 //        Pta result = instance.generatePtaFilledCircle(radius);
 //        assertEquals(expResult, result);
@@ -14367,7 +14370,7 @@ public class LeptonicaTest {
 //    public void testGeneratePtaFilledSquare() {
 //        System.out.println("generatePtaFilledSquare");
 //        int side = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pta expResult = null;
 //        Pta result = instance.generatePtaFilledSquare(side);
 //        assertEquals(expResult, result);
@@ -14385,7 +14388,7 @@ public class LeptonicaTest {
 //        int y = 0;
 //        double length = 0.0;
 //        double radang = 0.0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pta expResult = null;
 //        Pta result = instance.generatePtaLineFromPt(x, y, length, radang);
 //        assertEquals(expResult, result);
@@ -14405,7 +14408,7 @@ public class LeptonicaTest {
 //        double radang = 0.0;
 //        DoubleBuffer px = null;
 //        DoubleBuffer py = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.locatePtRadially(xr, yr, dist, radang, px, py);
 //        assertEquals(expResult, result);
@@ -14425,7 +14428,7 @@ public class LeptonicaTest {
 //        int linewidth = 0;
 //        int max = 0;
 //        int color = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixRenderPlotFromNuma(ppix, na, plotloc, linewidth, max, color);
 //        assertEquals(expResult, result);
@@ -14444,7 +14447,7 @@ public class LeptonicaTest {
 //        int plotloc = 0;
 //        int linewidth = 0;
 //        int max = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pta expResult = null;
 //        Pta result = instance.makePlotPtaFromNuma(na, size, plotloc, linewidth, max);
 //        assertEquals(expResult, result);
@@ -14466,7 +14469,7 @@ public class LeptonicaTest {
 //        int max = 0;
 //        int drawref = 0;
 //        int color = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixRenderPlotFromNumaGen(ppix, na, orient, linewidth, refpos, max, drawref, color);
 //        assertEquals(expResult, result);
@@ -14486,7 +14489,7 @@ public class LeptonicaTest {
 //        int refpos = 0;
 //        int max = 0;
 //        int drawref = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pta expResult = null;
 //        Pta result = instance.makePlotPtaFromNumaGen(na, orient, linewidth, refpos, max, drawref);
 //        assertEquals(expResult, result);
@@ -14503,7 +14506,7 @@ public class LeptonicaTest {
 //        Pix pix = null;
 //        Pta pta = null;
 //        int op = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixRenderPta(pix, pta, op);
 //        assertEquals(expResult, result);
@@ -14522,7 +14525,7 @@ public class LeptonicaTest {
 //        byte rval = 0;
 //        byte gval = 0;
 //        byte bval = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixRenderPtaArb(pix, pta, rval, gval, bval);
 //        assertEquals(expResult, result);
@@ -14542,7 +14545,7 @@ public class LeptonicaTest {
 //        byte gval = 0;
 //        byte bval = 0;
 //        float fract = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixRenderPtaBlend(pix, pta, rval, gval, bval, fract);
 //        assertEquals(expResult, result);
@@ -14563,7 +14566,7 @@ public class LeptonicaTest {
 //        int y2 = 0;
 //        int width = 0;
 //        int op = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixRenderLine(pix, x1, y1, x2, y2, width, op);
 //        assertEquals(expResult, result);
@@ -14586,7 +14589,7 @@ public class LeptonicaTest {
 //        byte rval = 0;
 //        byte gval = 0;
 //        byte bval = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixRenderLineArb(pix, x1, y1, x2, y2, width, rval, gval, bval);
 //        assertEquals(expResult, result);
@@ -14610,7 +14613,7 @@ public class LeptonicaTest {
 //        byte gval = 0;
 //        byte bval = 0;
 //        float fract = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixRenderLineBlend(pix, x1, y1, x2, y2, width, rval, gval, bval, fract);
 //        assertEquals(expResult, result);
@@ -14628,7 +14631,7 @@ public class LeptonicaTest {
 //        Box box = null;
 //        int width = 0;
 //        int op = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixRenderBox(pix, box, width, op);
 //        assertEquals(expResult, result);
@@ -14648,7 +14651,7 @@ public class LeptonicaTest {
 //        byte rval = 0;
 //        byte gval = 0;
 //        byte bval = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixRenderBoxArb(pix, box, width, rval, gval, bval);
 //        assertEquals(expResult, result);
@@ -14669,7 +14672,7 @@ public class LeptonicaTest {
 //        byte gval = 0;
 //        byte bval = 0;
 //        float fract = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixRenderBoxBlend(pix, box, width, rval, gval, bval, fract);
 //        assertEquals(expResult, result);
@@ -14687,7 +14690,7 @@ public class LeptonicaTest {
 //        Boxa boxa = null;
 //        int width = 0;
 //        int op = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixRenderBoxa(pix, boxa, width, op);
 //        assertEquals(expResult, result);
@@ -14707,7 +14710,7 @@ public class LeptonicaTest {
 //        byte rval = 0;
 //        byte gval = 0;
 //        byte bval = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixRenderBoxaArb(pix, boxa, width, rval, gval, bval);
 //        assertEquals(expResult, result);
@@ -14729,7 +14732,7 @@ public class LeptonicaTest {
 //        byte bval = 0;
 //        float fract = 0.0F;
 //        int removedups = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixRenderBoxaBlend(pix, boxa, width, rval, gval, bval, fract, removedups);
 //        assertEquals(expResult, result);
@@ -14750,7 +14753,7 @@ public class LeptonicaTest {
 //        int orient = 0;
 //        int outline = 0;
 //        int op = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixRenderHashBox(pix, box, spacing, width, orient, outline, op);
 //        assertEquals(expResult, result);
@@ -14773,7 +14776,7 @@ public class LeptonicaTest {
 //        int rval = 0;
 //        int gval = 0;
 //        int bval = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixRenderHashBoxArb(pix, box, spacing, width, orient, outline, rval, gval, bval);
 //        assertEquals(expResult, result);
@@ -14797,7 +14800,7 @@ public class LeptonicaTest {
 //        int gval = 0;
 //        int bval = 0;
 //        float fract = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixRenderHashBoxBlend(pix, box, spacing, width, orient, outline, rval, gval, bval, fract);
 //        assertEquals(expResult, result);
@@ -14818,7 +14821,7 @@ public class LeptonicaTest {
 //        int orient = 0;
 //        int outline = 0;
 //        int op = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixRenderHashBoxa(pix, boxa, spacing, width, orient, outline, op);
 //        assertEquals(expResult, result);
@@ -14841,7 +14844,7 @@ public class LeptonicaTest {
 //        int rval = 0;
 //        int gval = 0;
 //        int bval = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixRenderHashBoxaArb(pix, boxa, spacing, width, orient, outline, rval, gval, bval);
 //        assertEquals(expResult, result);
@@ -14865,7 +14868,7 @@ public class LeptonicaTest {
 //        int gval = 0;
 //        int bval = 0;
 //        float fract = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixRenderHashBoxaBlend(pix, boxa, spacing, width, orient, outline, rval, gval, bval, fract);
 //        assertEquals(expResult, result);
@@ -14884,7 +14887,7 @@ public class LeptonicaTest {
 //        int width = 0;
 //        int op = 0;
 //        int closeflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixRenderPolyline(pix, ptas, width, op, closeflag);
 //        assertEquals(expResult, result);
@@ -14905,7 +14908,7 @@ public class LeptonicaTest {
 //        byte gval = 0;
 //        byte bval = 0;
 //        int closeflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixRenderPolylineArb(pix, ptas, width, rval, gval, bval, closeflag);
 //        assertEquals(expResult, result);
@@ -14928,7 +14931,7 @@ public class LeptonicaTest {
 //        float fract = 0.0F;
 //        int closeflag = 0;
 //        int removedups = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixRenderPolylineBlend(pix, ptas, width, rval, gval, bval, fract, closeflag, removedups);
 //        assertEquals(expResult, result);
@@ -14947,7 +14950,7 @@ public class LeptonicaTest {
 //        int polyflag = 0;
 //        int width = 0;
 //        int closeflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixRenderRandomCmapPtaa(pix, ptaa, polyflag, width, closeflag);
 //        assertEquals(expResult, result);
@@ -14965,7 +14968,7 @@ public class LeptonicaTest {
 //        int width = 0;
 //        IntBuffer pxmin = null;
 //        IntBuffer pymin = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixRenderPolygon(ptas, width, pxmin, pymin);
 //        assertEquals(expResult, result);
@@ -14983,7 +14986,7 @@ public class LeptonicaTest {
 //        Pta pta = null;
 //        int xmin = 0;
 //        int ymin = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixFillPolygon(pixs, pta, xmin, ymin);
 //        assertEquals(expResult, result);
@@ -15001,7 +15004,7 @@ public class LeptonicaTest {
 //        int startval = 0;
 //        int incr = 0;
 //        int outdepth = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixRenderContours(pixs, startval, incr, outdepth);
 //        assertEquals(expResult, result);
@@ -15017,7 +15020,7 @@ public class LeptonicaTest {
 //        System.out.println("fpixAutoRenderContours");
 //        FPix fpix = null;
 //        int ncontours = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.fpixAutoRenderContours(fpix, ncontours);
 //        assertEquals(expResult, result);
@@ -15034,7 +15037,7 @@ public class LeptonicaTest {
 //        FPix fpixs = null;
 //        float incr = 0.0F;
 //        float proxim = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.fpixRenderContours(fpixs, incr, proxim);
 //        assertEquals(expResult, result);
@@ -15051,7 +15054,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int hsize = 0;
 //        int vsize = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixErodeGray(pixs, hsize, vsize);
 //        assertEquals(expResult, result);
@@ -15068,7 +15071,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int hsize = 0;
 //        int vsize = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixDilateGray(pixs, hsize, vsize);
 //        assertEquals(expResult, result);
@@ -15085,7 +15088,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int hsize = 0;
 //        int vsize = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixOpenGray(pixs, hsize, vsize);
 //        assertEquals(expResult, result);
@@ -15102,7 +15105,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int hsize = 0;
 //        int vsize = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixCloseGray(pixs, hsize, vsize);
 //        assertEquals(expResult, result);
@@ -15119,7 +15122,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int hsize = 0;
 //        int vsize = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixErodeGray3(pixs, hsize, vsize);
 //        assertEquals(expResult, result);
@@ -15136,7 +15139,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int hsize = 0;
 //        int vsize = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixDilateGray3(pixs, hsize, vsize);
 //        assertEquals(expResult, result);
@@ -15153,7 +15156,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int hsize = 0;
 //        int vsize = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixOpenGray3(pixs, hsize, vsize);
 //        assertEquals(expResult, result);
@@ -15170,7 +15173,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int hsize = 0;
 //        int vsize = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixCloseGray3(pixs, hsize, vsize);
 //        assertEquals(expResult, result);
@@ -15185,7 +15188,7 @@ public class LeptonicaTest {
 //    public void testPixDitherToBinary() {
 //        System.out.println("pixDitherToBinary");
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixDitherToBinary(pixs);
 //        assertEquals(expResult, result);
@@ -15202,7 +15205,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int lowerclip = 0;
 //        int upperclip = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixDitherToBinarySpec(pixs, lowerclip, upperclip);
 //        assertEquals(expResult, result);
@@ -15218,7 +15221,7 @@ public class LeptonicaTest {
 //        System.out.println("pixThresholdToBinary");
 //        Pix pixs = null;
 //        int thresh = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixThresholdToBinary(pixs, thresh);
 //        assertEquals(expResult, result);
@@ -15234,7 +15237,7 @@ public class LeptonicaTest {
 //        System.out.println("pixVarThresholdToBinary");
 //        Pix pixs = null;
 //        Pix pixg = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixVarThresholdToBinary(pixs, pixg);
 //        assertEquals(expResult, result);
@@ -15251,7 +15254,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        Pix pixm = null;
 //        float gamma = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixAdaptThresholdToBinary(pixs, pixm, gamma);
 //        assertEquals(expResult, result);
@@ -15271,7 +15274,7 @@ public class LeptonicaTest {
 //        int blackval = 0;
 //        int whiteval = 0;
 //        int thresh = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixAdaptThresholdToBinaryGen(pixs, pixm, gamma, blackval, whiteval, thresh);
 //        assertEquals(expResult, result);
@@ -15288,7 +15291,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int lowerclip = 0;
 //        int upperclip = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixDitherToBinaryLUT(pixs, lowerclip, upperclip);
 //        assertEquals(expResult, result);
@@ -15305,7 +15308,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int val = 0;
 //        int usecmap = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixGenerateMaskByValue(pixs, val, usecmap);
 //        assertEquals(expResult, result);
@@ -15324,7 +15327,7 @@ public class LeptonicaTest {
 //        int upper = 0;
 //        int inband = 0;
 //        int usecmap = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixGenerateMaskByBand(pixs, lower, upper, inband, usecmap);
 //        assertEquals(expResult, result);
@@ -15340,7 +15343,7 @@ public class LeptonicaTest {
 //        System.out.println("pixDitherTo2bpp");
 //        Pix pixs = null;
 //        int cmapflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixDitherTo2bpp(pixs, cmapflag);
 //        assertEquals(expResult, result);
@@ -15358,7 +15361,7 @@ public class LeptonicaTest {
 //        int lowerclip = 0;
 //        int upperclip = 0;
 //        int cmapflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixDitherTo2bppSpec(pixs, lowerclip, upperclip, cmapflag);
 //        assertEquals(expResult, result);
@@ -15375,7 +15378,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int nlevels = 0;
 //        int cmapflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixThresholdTo2bpp(pixs, nlevels, cmapflag);
 //        assertEquals(expResult, result);
@@ -15392,7 +15395,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int nlevels = 0;
 //        int cmapflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixThresholdTo4bpp(pixs, nlevels, cmapflag);
 //        assertEquals(expResult, result);
@@ -15409,7 +15412,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int nlevels = 0;
 //        int cmapflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixThresholdOn8bpp(pixs, nlevels, cmapflag);
 //        assertEquals(expResult, result);
@@ -15429,7 +15432,7 @@ public class LeptonicaTest {
 //        int use_average = 0;
 //        int setblack = 0;
 //        int setwhite = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixThresholdGrayArb(pixs, edgevals, outdepth, use_average, setblack, setwhite);
 //        assertEquals(expResult, result);
@@ -15444,7 +15447,7 @@ public class LeptonicaTest {
 //    public void testMakeGrayQuantIndexTable() {
 //        System.out.println("makeGrayQuantIndexTable");
 //        int nlevels = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        IntByReference expResult = null;
 //        IntByReference result = instance.makeGrayQuantIndexTable(nlevels);
 //        assertEquals(expResult, result);
@@ -15460,7 +15463,7 @@ public class LeptonicaTest {
 //        System.out.println("makeGrayQuantTargetTable");
 //        int nlevels = 0;
 //        int depth = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        IntByReference expResult = null;
 //        IntByReference result = instance.makeGrayQuantTargetTable(nlevels, depth);
 //        assertEquals(expResult, result);
@@ -15478,7 +15481,7 @@ public class LeptonicaTest {
 //        int outdepth = 0;
 //        PointerByReference ptab = null;
 //        PixColormap.ByReference[] pcmap = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.makeGrayQuantTableArb(na, outdepth, ptab, pcmap);
 //        assertEquals(expResult, result);
@@ -15496,7 +15499,7 @@ public class LeptonicaTest {
 //        IntBuffer tab = null;
 //        int outdepth = 0;
 //        PixColormap.ByReference[] pcmap = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.makeGrayQuantColormapArb(pixs, tab, outdepth, pcmap);
 //        assertEquals(expResult, result);
@@ -15514,7 +15517,7 @@ public class LeptonicaTest {
 //        IntByReference tab = null;
 //        int outdepth = 0;
 //        PixColormap.ByReference[] pcmap = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.makeGrayQuantColormapArb(pixs, tab, outdepth, pcmap);
 //        assertEquals(expResult, result);
@@ -15534,7 +15537,7 @@ public class LeptonicaTest {
 //        int delp = 0;
 //        float fractm = 0.0F;
 //        float fractp = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixGenerateMaskByBand32(pixs, refval, delm, delp, fractm, fractp);
 //        assertEquals(expResult, result);
@@ -15552,7 +15555,7 @@ public class LeptonicaTest {
 //        int refval1 = 0;
 //        int refval2 = 0;
 //        int distflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixGenerateMaskByDiscr32(pixs, refval1, refval2, distflag);
 //        assertEquals(expResult, result);
@@ -15571,7 +15574,7 @@ public class LeptonicaTest {
 //        Pix pixm = null;
 //        float minfract = 0.0F;
 //        int maxsize = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixGrayQuantFromHisto(pixd, pixs, pixm, minfract, maxsize);
 //        assertEquals(expResult, result);
@@ -15588,7 +15591,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        PixColormap cmap = null;
 //        int mindepth = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixGrayQuantFromCmap(pixs, cmap, mindepth);
 //        assertEquals(expResult, result);
@@ -15612,7 +15615,7 @@ public class LeptonicaTest {
 //        IntBuffer bufs2 = null;
 //        int lowerclip = 0;
 //        int upperclip = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.ditherToBinaryLow(datad, w, h, wpld, datas, wpls, bufs1, bufs2, lowerclip, upperclip);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -15631,7 +15634,7 @@ public class LeptonicaTest {
 //        int lowerclip = 0;
 //        int upperclip = 0;
 //        int lastlineflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.ditherToBinaryLineLow(lined, w, bufs1, bufs2, lowerclip, upperclip, lastlineflag);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -15651,7 +15654,7 @@ public class LeptonicaTest {
 //        int d = 0;
 //        int wpls = 0;
 //        int thresh = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.thresholdToBinaryLow(datad, w, h, wpld, datas, d, wpls, thresh);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -15668,7 +15671,7 @@ public class LeptonicaTest {
 //        IntBuffer lines = null;
 //        int d = 0;
 //        int thresh = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.thresholdToBinaryLineLow(lined, w, lines, d, thresh);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -15691,7 +15694,7 @@ public class LeptonicaTest {
 //        IntBuffer tabval = null;
 //        IntBuffer tab38 = null;
 //        IntBuffer tab14 = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.ditherToBinaryLUTLow(datad, w, h, wpld, datas, wpls, bufs1, bufs2, tabval, tab38, tab14);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -15711,7 +15714,7 @@ public class LeptonicaTest {
 //        IntBuffer tab38 = null;
 //        IntBuffer tab14 = null;
 //        int lastlineflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.ditherToBinaryLineLUTLow(lined, w, bufs1, bufs2, tabval, tab38, tab14, lastlineflag);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -15728,7 +15731,7 @@ public class LeptonicaTest {
 //        PointerByReference ptab14 = null;
 //        int lowerclip = 0;
 //        int upperclip = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.make8To1DitherTables(ptabval, ptab38, ptab14, lowerclip, upperclip);
 //        assertEquals(expResult, result);
@@ -15753,7 +15756,7 @@ public class LeptonicaTest {
 //        IntBuffer tabval = null;
 //        IntBuffer tab38 = null;
 //        IntBuffer tab14 = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.ditherTo2bppLow(datad, w, h, wpld, datas, wpls, bufs1, bufs2, tabval, tab38, tab14);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -15773,7 +15776,7 @@ public class LeptonicaTest {
 //        IntBuffer tab38 = null;
 //        IntBuffer tab14 = null;
 //        int lastlineflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.ditherTo2bppLineLow(lined, w, bufs1, bufs2, tabval, tab38, tab14, lastlineflag);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -15790,7 +15793,7 @@ public class LeptonicaTest {
 //        PointerByReference ptab14 = null;
 //        int cliptoblack = 0;
 //        int cliptowhite = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.make8To2DitherTables(ptabval, ptab38, ptab14, cliptoblack, cliptowhite);
 //        assertEquals(expResult, result);
@@ -15810,7 +15813,7 @@ public class LeptonicaTest {
 //        IntBuffer datas = null;
 //        int wpls = 0;
 //        IntBuffer tab = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.thresholdTo2bppLow(datad, h, wpld, datas, wpls, tab);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -15828,7 +15831,7 @@ public class LeptonicaTest {
 //        IntBuffer datas = null;
 //        int wpls = 0;
 //        IntBuffer tab = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.thresholdTo4bppLow(datad, h, wpld, datas, wpls, tab);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -15842,7 +15845,7 @@ public class LeptonicaTest {
 //        System.out.println("lheapCreate");
 //        int nalloc = 0;
 //        int direction = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Heap expResult = null;
 //        L_Heap result = instance.lheapCreate(nalloc, direction);
 //        assertEquals(expResult, result);
@@ -15858,7 +15861,7 @@ public class LeptonicaTest {
 //        System.out.println("lheapDestroy");
 //        L_Heap.ByReference[] plh = null;
 //        int freeflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.lheapDestroy(plh, freeflag);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -15872,7 +15875,7 @@ public class LeptonicaTest {
 //        System.out.println("lheapAdd");
 //        L_Heap lh = null;
 //        Pointer item = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.lheapAdd(lh, item);
 //        assertEquals(expResult, result);
@@ -15887,7 +15890,7 @@ public class LeptonicaTest {
 //    public void testLheapRemove() {
 //        System.out.println("lheapRemove");
 //        L_Heap lh = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.lheapRemove(lh);
 //        assertEquals(expResult, result);
@@ -15902,7 +15905,7 @@ public class LeptonicaTest {
 //    public void testLheapGetCount() {
 //        System.out.println("lheapGetCount");
 //        L_Heap lh = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.lheapGetCount(lh);
 //        assertEquals(expResult, result);
@@ -15918,7 +15921,7 @@ public class LeptonicaTest {
 //        System.out.println("lheapSwapUp");
 //        L_Heap lh = null;
 //        int index = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.lheapSwapUp(lh, index);
 //        assertEquals(expResult, result);
@@ -15933,7 +15936,7 @@ public class LeptonicaTest {
 //    public void testLheapSwapDown() {
 //        System.out.println("lheapSwapDown");
 //        L_Heap lh = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.lheapSwapDown(lh);
 //        assertEquals(expResult, result);
@@ -15948,7 +15951,7 @@ public class LeptonicaTest {
 //    public void testLheapSort() {
 //        System.out.println("lheapSort");
 //        L_Heap lh = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.lheapSort(lh);
 //        assertEquals(expResult, result);
@@ -15963,7 +15966,7 @@ public class LeptonicaTest {
 //    public void testLheapSortStrictOrder() {
 //        System.out.println("lheapSortStrictOrder");
 //        L_Heap lh = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.lheapSortStrictOrder(lh);
 //        assertEquals(expResult, result);
@@ -15979,7 +15982,7 @@ public class LeptonicaTest {
 //        System.out.println("lheapPrint");
 //        PointerByReference fp = null;
 //        L_Heap lh = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.lheapPrint(fp, lh);
 //        assertEquals(expResult, result);
@@ -15998,7 +16001,7 @@ public class LeptonicaTest {
 //        int maxheight = 0;
 //        int size = 0;
 //        float rank = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        JbClasser expResult = null;
 //        JbClasser result = instance.jbRankHausInit(components, maxwidth, maxheight, size, rank);
 //        assertEquals(expResult, result);
@@ -16017,7 +16020,7 @@ public class LeptonicaTest {
 //        int maxheight = 0;
 //        float thresh = 0.0F;
 //        float weightfactor = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        JbClasser expResult = null;
 //        JbClasser result = instance.jbCorrelationInit(components, maxwidth, maxheight, thresh, weightfactor);
 //        assertEquals(expResult, result);
@@ -16036,7 +16039,7 @@ public class LeptonicaTest {
 //        int maxheight = 0;
 //        float thresh = 0.0F;
 //        float weightfactor = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        JbClasser expResult = null;
 //        JbClasser result = instance.jbCorrelationInitWithoutComponents(components, maxwidth, maxheight, thresh, weightfactor);
 //        assertEquals(expResult, result);
@@ -16052,7 +16055,7 @@ public class LeptonicaTest {
 //        System.out.println("jbAddPages");
 //        JbClasser classer = null;
 //        Sarray safiles = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.jbAddPages(classer, safiles);
 //        assertEquals(expResult, result);
@@ -16068,7 +16071,7 @@ public class LeptonicaTest {
 //        System.out.println("jbAddPage");
 //        JbClasser classer = null;
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.jbAddPage(classer, pixs);
 //        assertEquals(expResult, result);
@@ -16086,7 +16089,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        Boxa boxas = null;
 //        Pixa pixas = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.jbAddPageComponents(classer, pixs, boxas, pixas);
 //        assertEquals(expResult, result);
@@ -16103,7 +16106,7 @@ public class LeptonicaTest {
 //        JbClasser classer = null;
 //        Boxa boxa = null;
 //        Pixa pixas = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.jbClassifyRankHaus(classer, boxa, pixas);
 //        assertEquals(expResult, result);
@@ -16125,7 +16128,7 @@ public class LeptonicaTest {
 //        float dely = 0.0F;
 //        int maxdiffw = 0;
 //        int maxdiffh = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixHaustest(pix1, pix2, pix3, pix4, delx, dely, maxdiffw, maxdiffh);
 //        assertEquals(expResult, result);
@@ -16151,7 +16154,7 @@ public class LeptonicaTest {
 //        int area3 = 0;
 //        float rank = 0.0F;
 //        IntBuffer tab8 = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixRankHaustest(pix1, pix2, pix3, pix4, delx, dely, maxdiffw, maxdiffh, area1, area3, rank, tab8);
 //        assertEquals(expResult, result);
@@ -16168,7 +16171,7 @@ public class LeptonicaTest {
 //        JbClasser classer = null;
 //        Boxa boxa = null;
 //        Pixa pixas = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.jbClassifyCorrelation(classer, boxa, pixas);
 //        assertEquals(expResult, result);
@@ -16188,7 +16191,7 @@ public class LeptonicaTest {
 //        int maxheight = 0;
 //        Boxa.ByReference[] pboxad = null;
 //        Pixa.ByReference[] ppixad = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.jbGetComponents(pixs, components, maxwidth, maxheight, pboxad, ppixad);
 //        assertEquals(expResult, result);
@@ -16206,7 +16209,7 @@ public class LeptonicaTest {
 //        int maxdil = 0;
 //        Pix.ByReference[] ppixm = null;
 //        IntBuffer psize = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixWordMaskByDilation(pixs, maxdil, ppixm, psize);
 //        assertEquals(expResult, result);
@@ -16224,7 +16227,7 @@ public class LeptonicaTest {
 //        int maxdil = 0;
 //        Pix.ByReference[] ppixm = null;
 //        IntByReference psize = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixWordMaskByDilation(pixs, maxdil, ppixm, psize);
 //        assertEquals(expResult, result);
@@ -16246,7 +16249,7 @@ public class LeptonicaTest {
 //        int maxheight = 0;
 //        Boxa.ByReference[] pboxa = null;
 //        IntBuffer psize = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixWordBoxesByDilation(pixs, maxdil, minwidth, minheight, maxwidth, maxheight, pboxa, psize);
 //        assertEquals(expResult, result);
@@ -16268,7 +16271,7 @@ public class LeptonicaTest {
 //        int maxheight = 0;
 //        Boxa.ByReference[] pboxa = null;
 //        IntByReference psize = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixWordBoxesByDilation(pixs, maxdil, minwidth, minheight, maxwidth, maxheight, pboxa, psize);
 //        assertEquals(expResult, result);
@@ -16285,7 +16288,7 @@ public class LeptonicaTest {
 //        Pixaa pixaa = null;
 //        Numa.ByReference[] pna = null;
 //        Pta.ByReference[] pptat = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pixa expResult = null;
 //        Pixa result = instance.jbAccumulateComposites(pixaa, pna, pptat);
 //        assertEquals(expResult, result);
@@ -16301,7 +16304,7 @@ public class LeptonicaTest {
 //        System.out.println("jbTemplatesFromComposites");
 //        Pixa pixac = null;
 //        Numa na = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pixa expResult = null;
 //        Pixa result = instance.jbTemplatesFromComposites(pixac, na);
 //        assertEquals(expResult, result);
@@ -16317,7 +16320,7 @@ public class LeptonicaTest {
 //        System.out.println("jbClasserCreate");
 //        int method = 0;
 //        int components = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        JbClasser expResult = null;
 //        JbClasser result = instance.jbClasserCreate(method, components);
 //        assertEquals(expResult, result);
@@ -16332,7 +16335,7 @@ public class LeptonicaTest {
 //    public void testJbClasserDestroy() {
 //        System.out.println("jbClasserDestroy");
 //        JbClasser.ByReference[] pclasser = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.jbClasserDestroy(pclasser);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -16345,7 +16348,7 @@ public class LeptonicaTest {
 //    public void testJbDataSave() {
 //        System.out.println("jbDataSave");
 //        JbClasser classer = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        JbData expResult = null;
 //        JbData result = instance.jbDataSave(classer);
 //        assertEquals(expResult, result);
@@ -16360,7 +16363,7 @@ public class LeptonicaTest {
 //    public void testJbDataDestroy() {
 //        System.out.println("jbDataDestroy");
 //        JbData.ByReference[] pdata = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.jbDataDestroy(pdata);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -16374,7 +16377,7 @@ public class LeptonicaTest {
 //        System.out.println("jbDataWrite");
 //        String rootout = "";
 //        JbData jbdata = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.jbDataWrite(rootout, jbdata);
 //        assertEquals(expResult, result);
@@ -16389,7 +16392,7 @@ public class LeptonicaTest {
 //    public void testJbDataRead() {
 //        System.out.println("jbDataRead");
 //        String rootname = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        JbData expResult = null;
 //        JbData result = instance.jbDataRead(rootname);
 //        assertEquals(expResult, result);
@@ -16405,7 +16408,7 @@ public class LeptonicaTest {
 //        System.out.println("jbDataRender");
 //        JbData data = null;
 //        int debugflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pixa expResult = null;
 //        Pixa result = instance.jbDataRender(data, debugflag);
 //        assertEquals(expResult, result);
@@ -16422,7 +16425,7 @@ public class LeptonicaTest {
 //        JbClasser classer = null;
 //        Pix pixs = null;
 //        Boxa boxa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.jbGetULCorners(classer, pixs, boxa);
 //        assertEquals(expResult, result);
@@ -16437,7 +16440,7 @@ public class LeptonicaTest {
 //    public void testJbGetLLCorners() {
 //        System.out.println("jbGetLLCorners");
 //        JbClasser classer = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.jbGetLLCorners(classer);
 //        assertEquals(expResult, result);
@@ -16456,7 +16459,7 @@ public class LeptonicaTest {
 //        IntBuffer ph = null;
 //        IntBuffer pbps = null;
 //        IntBuffer pspp = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.readHeaderJp2k(filename, pw, ph, pbps, pspp);
 //        assertEquals(expResult, result);
@@ -16475,7 +16478,7 @@ public class LeptonicaTest {
 //        IntBuffer ph = null;
 //        IntBuffer pbps = null;
 //        IntBuffer pspp = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.freadHeaderJp2k(fp, pw, ph, pbps, pspp);
 //        assertEquals(expResult, result);
@@ -16494,7 +16497,7 @@ public class LeptonicaTest {
 //        IntByReference ph = null;
 //        IntByReference pbps = null;
 //        IntByReference pspp = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.freadHeaderJp2k(fp, pw, ph, pbps, pspp);
 //        assertEquals(expResult, result);
@@ -16514,7 +16517,7 @@ public class LeptonicaTest {
 //        IntBuffer ph = null;
 //        IntBuffer pbps = null;
 //        IntBuffer pspp = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.readHeaderMemJp2k(data, size, pw, ph, pbps, pspp);
 //        assertEquals(expResult, result);
@@ -16531,7 +16534,7 @@ public class LeptonicaTest {
 //        PointerByReference fp = null;
 //        IntBuffer pxres = null;
 //        IntBuffer pyres = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.fgetJp2kResolution(fp, pxres, pyres);
 //        assertEquals(expResult, result);
@@ -16548,7 +16551,7 @@ public class LeptonicaTest {
 //        PointerByReference fp = null;
 //        IntByReference pxres = null;
 //        IntByReference pyres = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.fgetJp2kResolution(fp, pxres, pyres);
 //        assertEquals(expResult, result);
@@ -16566,7 +16569,7 @@ public class LeptonicaTest {
 //        int reduction = 0;
 //        Box box = null;
 //        int hint = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixReadJp2k(filename, reduction, box, hint);
 //        assertEquals(expResult, result);
@@ -16584,7 +16587,7 @@ public class LeptonicaTest {
 //        int reduction = 0;
 //        Box box = null;
 //        int hint = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixReadStreamJp2k(fp, reduction, box, hint);
 //        assertEquals(expResult, result);
@@ -16603,7 +16606,7 @@ public class LeptonicaTest {
 //        int quality = 0;
 //        int nlevels = 0;
 //        int hint = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixWriteJp2k(filename, pix, quality, nlevels, hint);
 //        assertEquals(expResult, result);
@@ -16622,7 +16625,7 @@ public class LeptonicaTest {
 //        int quality = 0;
 //        int nlevels = 0;
 //        int hint = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixWriteStreamJp2k(fp, pix, quality, nlevels, hint);
 //        assertEquals(expResult, result);
@@ -16641,7 +16644,7 @@ public class LeptonicaTest {
 //        int reduction = 0;
 //        Box box = null;
 //        int hint = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixReadMemJp2k(data, size, reduction, box, hint);
 //        assertEquals(expResult, result);
@@ -16661,7 +16664,7 @@ public class LeptonicaTest {
 //        int quality = 0;
 //        int nlevels = 0;
 //        int hint = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixWriteMemJp2k(pdata, psize, pix, quality, nlevels, hint);
 //        assertEquals(expResult, result);
@@ -16680,7 +16683,7 @@ public class LeptonicaTest {
 //        int reduction = 0;
 //        IntBuffer pnwarn = null;
 //        int hint = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixReadJpeg(filename, cmflag, reduction, pnwarn, hint);
 //        assertEquals(expResult, result);
@@ -16699,7 +16702,7 @@ public class LeptonicaTest {
 //        int reduction = 0;
 //        IntBuffer pnwarn = null;
 //        int hint = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixReadStreamJpeg(fp, cmflag, reduction, pnwarn, hint);
 //        assertEquals(expResult, result);
@@ -16718,7 +16721,7 @@ public class LeptonicaTest {
 //        int reduction = 0;
 //        IntByReference pnwarn = null;
 //        int hint = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixReadStreamJpeg(fp, cmflag, reduction, pnwarn, hint);
 //        assertEquals(expResult, result);
@@ -16738,7 +16741,7 @@ public class LeptonicaTest {
 //        IntBuffer pspp = null;
 //        IntBuffer pycck = null;
 //        IntBuffer pcmyk = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.readHeaderJpeg(filename, pw, ph, pspp, pycck, pcmyk);
 //        assertEquals(expResult, result);
@@ -16758,7 +16761,7 @@ public class LeptonicaTest {
 //        IntBuffer pspp = null;
 //        IntBuffer pycck = null;
 //        IntBuffer pcmyk = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.freadHeaderJpeg(fp, pw, ph, pspp, pycck, pcmyk);
 //        assertEquals(expResult, result);
@@ -16778,7 +16781,7 @@ public class LeptonicaTest {
 //        IntByReference pspp = null;
 //        IntByReference pycck = null;
 //        IntByReference pcmyk = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.freadHeaderJpeg(fp, pw, ph, pspp, pycck, pcmyk);
 //        assertEquals(expResult, result);
@@ -16795,7 +16798,7 @@ public class LeptonicaTest {
 //        PointerByReference fp = null;
 //        IntBuffer pxres = null;
 //        IntBuffer pyres = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.fgetJpegResolution(fp, pxres, pyres);
 //        assertEquals(expResult, result);
@@ -16812,7 +16815,7 @@ public class LeptonicaTest {
 //        PointerByReference fp = null;
 //        IntByReference pxres = null;
 //        IntByReference pyres = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.fgetJpegResolution(fp, pxres, pyres);
 //        assertEquals(expResult, result);
@@ -16828,7 +16831,7 @@ public class LeptonicaTest {
 //        System.out.println("fgetJpegComment");
 //        PointerByReference fp = null;
 //        PointerByReference pcomment = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.fgetJpegComment(fp, pcomment);
 //        assertEquals(expResult, result);
@@ -16846,7 +16849,7 @@ public class LeptonicaTest {
 //        Pix pix = null;
 //        int quality = 0;
 //        int progressive = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixWriteJpeg(filename, pix, quality, progressive);
 //        assertEquals(expResult, result);
@@ -16864,7 +16867,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int quality = 0;
 //        int progressive = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixWriteStreamJpeg(fp, pixs, quality, progressive);
 //        assertEquals(expResult, result);
@@ -16884,7 +16887,7 @@ public class LeptonicaTest {
 //        int reduction = 0;
 //        IntBuffer pnwarn = null;
 //        int hint = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixReadMemJpeg(data, size, cmflag, reduction, pnwarn, hint);
 //        assertEquals(expResult, result);
@@ -16905,7 +16908,7 @@ public class LeptonicaTest {
 //        IntBuffer pspp = null;
 //        IntBuffer pycck = null;
 //        IntBuffer pcmyk = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.readHeaderMemJpeg(data, size, pw, ph, pspp, pycck, pcmyk);
 //        assertEquals(expResult, result);
@@ -16924,7 +16927,7 @@ public class LeptonicaTest {
 //        Pix pix = null;
 //        int quality = 0;
 //        int progressive = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixWriteMemJpeg(pdata, psize, pix, quality, progressive);
 //        assertEquals(expResult, result);
@@ -16940,7 +16943,7 @@ public class LeptonicaTest {
 //        System.out.println("pixSetChromaSampling");
 //        Pix pix = null;
 //        int sampling = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixSetChromaSampling(pix, sampling);
 //        assertEquals(expResult, result);
@@ -16956,7 +16959,7 @@ public class LeptonicaTest {
 //        System.out.println("kernelCreate");
 //        int height = 0;
 //        int width = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Kernel expResult = null;
 //        L_Kernel result = instance.kernelCreate(height, width);
 //        assertEquals(expResult, result);
@@ -16971,7 +16974,7 @@ public class LeptonicaTest {
 //    public void testKernelDestroy() {
 //        System.out.println("kernelDestroy");
 //        L_Kernel.ByReference[] pkel = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.kernelDestroy(pkel);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -16984,7 +16987,7 @@ public class LeptonicaTest {
 //    public void testKernelCopy() {
 //        System.out.println("kernelCopy");
 //        L_Kernel kels = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Kernel expResult = null;
 //        L_Kernel result = instance.kernelCopy(kels);
 //        assertEquals(expResult, result);
@@ -17002,7 +17005,7 @@ public class LeptonicaTest {
 //        int row = 0;
 //        int col = 0;
 //        FloatBuffer pval = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.kernelGetElement(kel, row, col, pval);
 //        assertEquals(expResult, result);
@@ -17020,7 +17023,7 @@ public class LeptonicaTest {
 //        int row = 0;
 //        int col = 0;
 //        float val = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.kernelSetElement(kel, row, col, val);
 //        assertEquals(expResult, result);
@@ -17039,7 +17042,7 @@ public class LeptonicaTest {
 //        IntBuffer psx = null;
 //        IntBuffer pcy = null;
 //        IntBuffer pcx = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.kernelGetParameters(kel, psy, psx, pcy, pcx);
 //        assertEquals(expResult, result);
@@ -17056,7 +17059,7 @@ public class LeptonicaTest {
 //        L_Kernel kel = null;
 //        int cy = 0;
 //        int cx = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.kernelSetOrigin(kel, cy, cx);
 //        assertEquals(expResult, result);
@@ -17072,7 +17075,7 @@ public class LeptonicaTest {
 //        System.out.println("kernelGetSum");
 //        L_Kernel kel = null;
 //        FloatBuffer psum = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.kernelGetSum(kel, psum);
 //        assertEquals(expResult, result);
@@ -17089,7 +17092,7 @@ public class LeptonicaTest {
 //        L_Kernel kel = null;
 //        FloatBuffer pmin = null;
 //        FloatBuffer pmax = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.kernelGetMinMax(kel, pmin, pmax);
 //        assertEquals(expResult, result);
@@ -17105,7 +17108,7 @@ public class LeptonicaTest {
 //        System.out.println("kernelNormalize");
 //        L_Kernel kels = null;
 //        float normsum = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Kernel expResult = null;
 //        L_Kernel result = instance.kernelNormalize(kels, normsum);
 //        assertEquals(expResult, result);
@@ -17120,7 +17123,7 @@ public class LeptonicaTest {
 //    public void testKernelInvert() {
 //        System.out.println("kernelInvert");
 //        L_Kernel kels = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Kernel expResult = null;
 //        L_Kernel result = instance.kernelInvert(kels);
 //        assertEquals(expResult, result);
@@ -17136,7 +17139,7 @@ public class LeptonicaTest {
 //        System.out.println("create2dFloatArray");
 //        int sy = 0;
 //        int sx = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        PointerByReference expResult = null;
 //        PointerByReference result = instance.create2dFloatArray(sy, sx);
 //        assertEquals(expResult, result);
@@ -17151,7 +17154,7 @@ public class LeptonicaTest {
 //    public void testKernelRead() {
 //        System.out.println("kernelRead");
 //        String fname = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Kernel expResult = null;
 //        L_Kernel result = instance.kernelRead(fname);
 //        assertEquals(expResult, result);
@@ -17166,7 +17169,7 @@ public class LeptonicaTest {
 //    public void testKernelReadStream() {
 //        System.out.println("kernelReadStream");
 //        PointerByReference fp = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Kernel expResult = null;
 //        L_Kernel result = instance.kernelReadStream(fp);
 //        assertEquals(expResult, result);
@@ -17182,7 +17185,7 @@ public class LeptonicaTest {
 //        System.out.println("kernelWrite");
 //        String fname = "";
 //        L_Kernel kel = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.kernelWrite(fname, kel);
 //        assertEquals(expResult, result);
@@ -17198,7 +17201,7 @@ public class LeptonicaTest {
 //        System.out.println("kernelWriteStream");
 //        PointerByReference fp = null;
 //        L_Kernel kel = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.kernelWriteStream(fp, kel);
 //        assertEquals(expResult, result);
@@ -17217,7 +17220,7 @@ public class LeptonicaTest {
 //        int cy = 0;
 //        int cx = 0;
 //        String kdata = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Kernel expResult = null;
 //        L_Kernel result = instance.kernelCreateFromString(h, w, cy, cx, kdata);
 //        assertEquals(expResult, result);
@@ -17232,7 +17235,7 @@ public class LeptonicaTest {
 //    public void testKernelCreateFromFile() {
 //        System.out.println("kernelCreateFromFile");
 //        String filename = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Kernel expResult = null;
 //        L_Kernel result = instance.kernelCreateFromFile(filename);
 //        assertEquals(expResult, result);
@@ -17249,7 +17252,7 @@ public class LeptonicaTest {
 //        Pix pix = null;
 //        int cy = 0;
 //        int cx = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Kernel expResult = null;
 //        L_Kernel result = instance.kernelCreateFromPix(pix, cy, cx);
 //        assertEquals(expResult, result);
@@ -17266,7 +17269,7 @@ public class LeptonicaTest {
 //        L_Kernel kel = null;
 //        int size = 0;
 //        int gthick = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.kernelDisplayInPix(kel, size, gthick);
 //        assertEquals(expResult, result);
@@ -17282,7 +17285,7 @@ public class LeptonicaTest {
 //        System.out.println("parseStringForNumbers");
 //        String str = "";
 //        String seps = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.parseStringForNumbers(str, seps);
 //        assertEquals(expResult, result);
@@ -17300,7 +17303,7 @@ public class LeptonicaTest {
 //        int width = 0;
 //        int cy = 0;
 //        int cx = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Kernel expResult = null;
 //        L_Kernel result = instance.makeFlatKernel(height, width, cy, cx);
 //        assertEquals(expResult, result);
@@ -17318,7 +17321,7 @@ public class LeptonicaTest {
 //        int halfwidth = 0;
 //        float stdev = 0.0F;
 //        float max = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Kernel expResult = null;
 //        L_Kernel result = instance.makeGaussianKernel(halfheight, halfwidth, stdev, max);
 //        assertEquals(expResult, result);
@@ -17338,7 +17341,7 @@ public class LeptonicaTest {
 //        float max = 0.0F;
 //        L_Kernel.ByReference[] pkelx = null;
 //        L_Kernel.ByReference[] pkely = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.makeGaussianKernelSep(halfheight, halfwidth, stdev, max, pkelx, pkely);
 //        assertEquals(expResult, result);
@@ -17356,7 +17359,7 @@ public class LeptonicaTest {
 //        int halfwidth = 0;
 //        float stdev = 0.0F;
 //        float ratio = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Kernel expResult = null;
 //        L_Kernel result = instance.makeDoGKernel(halfheight, halfwidth, stdev, ratio);
 //        assertEquals(expResult, result);
@@ -17370,7 +17373,7 @@ public class LeptonicaTest {
 //    @Test
 //    public void testGetImagelibVersions() {
 //        System.out.println("getImagelibVersions");
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.getImagelibVersions();
 //        assertEquals(expResult, result);
@@ -17385,7 +17388,7 @@ public class LeptonicaTest {
 //    public void testListDestroy() {
 //        System.out.println("listDestroy");
 //        DoubleLinkedList.ByReference[] phead = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.listDestroy(phead);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -17399,7 +17402,7 @@ public class LeptonicaTest {
 //        System.out.println("listAddToHead");
 //        DoubleLinkedList.ByReference[] phead = null;
 //        Pointer data = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.listAddToHead(phead, data);
 //        assertEquals(expResult, result);
@@ -17416,7 +17419,7 @@ public class LeptonicaTest {
 //        DoubleLinkedList.ByReference[] phead = null;
 //        DoubleLinkedList.ByReference[] ptail = null;
 //        Pointer data = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.listAddToTail(phead, ptail, data);
 //        assertEquals(expResult, result);
@@ -17433,7 +17436,7 @@ public class LeptonicaTest {
 //        DoubleLinkedList.ByReference[] phead = null;
 //        DoubleLinkedList elem = null;
 //        Pointer data = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.listInsertBefore(phead, elem, data);
 //        assertEquals(expResult, result);
@@ -17450,7 +17453,7 @@ public class LeptonicaTest {
 //        DoubleLinkedList.ByReference[] phead = null;
 //        DoubleLinkedList elem = null;
 //        Pointer data = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.listInsertAfter(phead, elem, data);
 //        assertEquals(expResult, result);
@@ -17466,7 +17469,7 @@ public class LeptonicaTest {
 //        System.out.println("listRemoveElement");
 //        DoubleLinkedList.ByReference[] phead = null;
 //        DoubleLinkedList elem = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.listRemoveElement(phead, elem);
 //        assertEquals(expResult, result);
@@ -17481,7 +17484,7 @@ public class LeptonicaTest {
 //    public void testListRemoveFromHead() {
 //        System.out.println("listRemoveFromHead");
 //        DoubleLinkedList.ByReference[] phead = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.listRemoveFromHead(phead);
 //        assertEquals(expResult, result);
@@ -17497,7 +17500,7 @@ public class LeptonicaTest {
 //        System.out.println("listRemoveFromTail");
 //        DoubleLinkedList.ByReference[] phead = null;
 //        DoubleLinkedList.ByReference[] ptail = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.listRemoveFromTail(phead, ptail);
 //        assertEquals(expResult, result);
@@ -17513,7 +17516,7 @@ public class LeptonicaTest {
 //        System.out.println("listFindElement");
 //        DoubleLinkedList head = null;
 //        Pointer data = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        DoubleLinkedList expResult = null;
 //        DoubleLinkedList result = instance.listFindElement(head, data);
 //        assertEquals(expResult, result);
@@ -17528,7 +17531,7 @@ public class LeptonicaTest {
 //    public void testListFindTail() {
 //        System.out.println("listFindTail");
 //        DoubleLinkedList head = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        DoubleLinkedList expResult = null;
 //        DoubleLinkedList result = instance.listFindTail(head);
 //        assertEquals(expResult, result);
@@ -17543,7 +17546,7 @@ public class LeptonicaTest {
 //    public void testListGetCount() {
 //        System.out.println("listGetCount");
 //        DoubleLinkedList head = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.listGetCount(head);
 //        assertEquals(expResult, result);
@@ -17558,7 +17561,7 @@ public class LeptonicaTest {
 //    public void testListReverse() {
 //        System.out.println("listReverse");
 //        DoubleLinkedList.ByReference[] phead = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.listReverse(phead);
 //        assertEquals(expResult, result);
@@ -17574,7 +17577,7 @@ public class LeptonicaTest {
 //        System.out.println("listJoin");
 //        DoubleLinkedList.ByReference[] phead1 = null;
 //        DoubleLinkedList.ByReference[] phead2 = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.listJoin(phead1, phead2);
 //        assertEquals(expResult, result);
@@ -17594,7 +17597,7 @@ public class LeptonicaTest {
 //        int yi = 0;
 //        float wallps = 0.0F;
 //        float ranis = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.generateBinaryMaze(w, h, xi, yi, wallps, ranis);
 //        assertEquals(expResult, result);
@@ -17614,7 +17617,7 @@ public class LeptonicaTest {
 //        int xf = 0;
 //        int yf = 0;
 //        Pix.ByReference[] ppixd = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pta expResult = null;
 //        Pta result = instance.pixSearchBinaryMaze(pixs, xi, yi, xf, yf, ppixd);
 //        assertEquals(expResult, result);
@@ -17634,7 +17637,7 @@ public class LeptonicaTest {
 //        int xf = 0;
 //        int yf = 0;
 //        Pix.ByReference[] ppixd = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pta expResult = null;
 //        Pta result = instance.pixSearchGrayMaze(pixs, xi, yi, xf, yf, ppixd);
 //        assertEquals(expResult, result);
@@ -17652,7 +17655,7 @@ public class LeptonicaTest {
 //        int polarity = 0;
 //        Box.ByReference[] pbox = null;
 //        String debugfile = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixFindLargestRectangle(pixs, polarity, pbox, debugfile);
 //        assertEquals(expResult, result);
@@ -17670,7 +17673,7 @@ public class LeptonicaTest {
 //        int polarity = 0;
 //        Box.ByReference[] pbox = null;
 //        Pointer debugfile = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixFindLargestRectangle(pixs, polarity, pbox, debugfile);
 //        assertEquals(expResult, result);
@@ -17687,7 +17690,7 @@ public class LeptonicaTest {
 //        Pix pixd = null;
 //        Pix pixs = null;
 //        Pointer sel = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixDilate(pixd, pixs, sel);
 //        assertEquals(expResult, result);
@@ -17704,7 +17707,7 @@ public class LeptonicaTest {
 //        Pix pixd = null;
 //        Pix pixs = null;
 //        Pointer sel = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixErode(pixd, pixs, sel);
 //        assertEquals(expResult, result);
@@ -17721,7 +17724,7 @@ public class LeptonicaTest {
 //        Pix pixd = null;
 //        Pix pixs = null;
 //        Pointer sel = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixHMT(pixd, pixs, sel);
 //        assertEquals(expResult, result);
@@ -17738,7 +17741,7 @@ public class LeptonicaTest {
 //        Pix pixd = null;
 //        Pix pixs = null;
 //        Pointer sel = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixOpen(pixd, pixs, sel);
 //        assertEquals(expResult, result);
@@ -17755,7 +17758,7 @@ public class LeptonicaTest {
 //        Pix pixd = null;
 //        Pix pixs = null;
 //        Pointer sel = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixClose(pixd, pixs, sel);
 //        assertEquals(expResult, result);
@@ -17772,7 +17775,7 @@ public class LeptonicaTest {
 //        Pix pixd = null;
 //        Pix pixs = null;
 //        Pointer sel = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixCloseSafe(pixd, pixs, sel);
 //        assertEquals(expResult, result);
@@ -17789,7 +17792,7 @@ public class LeptonicaTest {
 //        Pix pixd = null;
 //        Pix pixs = null;
 //        Pointer sel = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixOpenGeneralized(pixd, pixs, sel);
 //        assertEquals(expResult, result);
@@ -17806,7 +17809,7 @@ public class LeptonicaTest {
 //        Pix pixd = null;
 //        Pix pixs = null;
 //        Pointer sel = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixCloseGeneralized(pixd, pixs, sel);
 //        assertEquals(expResult, result);
@@ -17824,7 +17827,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int hsize = 0;
 //        int vsize = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixDilateBrick(pixd, pixs, hsize, vsize);
 //        assertEquals(expResult, result);
@@ -17842,7 +17845,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int hsize = 0;
 //        int vsize = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixErodeBrick(pixd, pixs, hsize, vsize);
 //        assertEquals(expResult, result);
@@ -17860,7 +17863,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int hsize = 0;
 //        int vsize = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixOpenBrick(pixd, pixs, hsize, vsize);
 //        assertEquals(expResult, result);
@@ -17878,7 +17881,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int hsize = 0;
 //        int vsize = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixCloseBrick(pixd, pixs, hsize, vsize);
 //        assertEquals(expResult, result);
@@ -17896,7 +17899,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int hsize = 0;
 //        int vsize = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixCloseSafeBrick(pixd, pixs, hsize, vsize);
 //        assertEquals(expResult, result);
@@ -17914,7 +17917,7 @@ public class LeptonicaTest {
 //        int direction = 0;
 //        PointerByReference psel1 = null;
 //        PointerByReference psel2 = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.selectComposableSels(size, direction, psel1, psel2);
 //        assertEquals(expResult, result);
@@ -17931,7 +17934,7 @@ public class LeptonicaTest {
 //        int size = 0;
 //        IntBuffer pfactor1 = null;
 //        IntBuffer pfactor2 = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.selectComposableSizes(size, pfactor1, pfactor2);
 //        assertEquals(expResult, result);
@@ -17949,7 +17952,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int hsize = 0;
 //        int vsize = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixDilateCompBrick(pixd, pixs, hsize, vsize);
 //        assertEquals(expResult, result);
@@ -17967,7 +17970,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int hsize = 0;
 //        int vsize = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixErodeCompBrick(pixd, pixs, hsize, vsize);
 //        assertEquals(expResult, result);
@@ -17985,7 +17988,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int hsize = 0;
 //        int vsize = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixOpenCompBrick(pixd, pixs, hsize, vsize);
 //        assertEquals(expResult, result);
@@ -18003,7 +18006,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int hsize = 0;
 //        int vsize = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixCloseCompBrick(pixd, pixs, hsize, vsize);
 //        assertEquals(expResult, result);
@@ -18021,7 +18024,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int hsize = 0;
 //        int vsize = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixCloseSafeCompBrick(pixd, pixs, hsize, vsize);
 //        assertEquals(expResult, result);
@@ -18036,7 +18039,7 @@ public class LeptonicaTest {
 //    public void testResetMorphBoundaryCondition() {
 //        System.out.println("resetMorphBoundaryCondition");
 //        int bc = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.resetMorphBoundaryCondition(bc);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -18050,7 +18053,7 @@ public class LeptonicaTest {
 //        System.out.println("getMorphBorderPixelColor");
 //        int type = 0;
 //        int depth = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.getMorphBorderPixelColor(type, depth);
 //        assertEquals(expResult, result);
@@ -18066,7 +18069,7 @@ public class LeptonicaTest {
 //        System.out.println("pixExtractBoundary");
 //        Pix pixs = null;
 //        int type = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixExtractBoundary(pixs, type);
 //        assertEquals(expResult, result);
@@ -18084,7 +18087,7 @@ public class LeptonicaTest {
 //        Pix pixm = null;
 //        String sequence = "";
 //        int dispsep = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixMorphSequenceMasked(pixs, pixm, sequence, dispsep);
 //        assertEquals(expResult, result);
@@ -18104,7 +18107,7 @@ public class LeptonicaTest {
 //        int minw = 0;
 //        int minh = 0;
 //        Boxa.ByReference[] pboxa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixMorphSequenceByComponent(pixs, sequence, connectivity, minw, minh, pboxa);
 //        assertEquals(expResult, result);
@@ -18124,7 +18127,7 @@ public class LeptonicaTest {
 //        int minw = 0;
 //        int minh = 0;
 //        Boxa.ByReference[] pboxa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixMorphSequenceByComponent(pixs, sequence, connectivity, minw, minh, pboxa);
 //        assertEquals(expResult, result);
@@ -18142,7 +18145,7 @@ public class LeptonicaTest {
 //        String sequence = "";
 //        int minw = 0;
 //        int minh = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pixa expResult = null;
 //        Pixa result = instance.pixaMorphSequenceByComponent(pixas, sequence, minw, minh);
 //        assertEquals(expResult, result);
@@ -18163,7 +18166,7 @@ public class LeptonicaTest {
 //        int minw = 0;
 //        int minh = 0;
 //        Boxa.ByReference[] pboxa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixMorphSequenceByRegion(pixs, pixm, sequence, connectivity, minw, minh, pboxa);
 //        assertEquals(expResult, result);
@@ -18184,7 +18187,7 @@ public class LeptonicaTest {
 //        int minw = 0;
 //        int minh = 0;
 //        Boxa.ByReference[] pboxa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixMorphSequenceByRegion(pixs, pixm, sequence, connectivity, minw, minh, pboxa);
 //        assertEquals(expResult, result);
@@ -18203,7 +18206,7 @@ public class LeptonicaTest {
 //        String sequence = "";
 //        int minw = 0;
 //        int minh = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pixa expResult = null;
 //        Pixa result = instance.pixaMorphSequenceByRegion(pixs, pixam, sequence, minw, minh);
 //        assertEquals(expResult, result);
@@ -18220,7 +18223,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        Sela sela = null;
 //        int type = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixUnionOfMorphOps(pixs, sela, type);
 //        assertEquals(expResult, result);
@@ -18237,7 +18240,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        Sela sela = null;
 //        int type = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixIntersectionOfMorphOps(pixs, sela, type);
 //        assertEquals(expResult, result);
@@ -18255,7 +18258,7 @@ public class LeptonicaTest {
 //        int connectivity = 0;
 //        int minw = 0;
 //        int minh = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixSelectiveConnCompFill(pixs, connectivity, minw, minh);
 //        assertEquals(expResult, result);
@@ -18275,7 +18278,7 @@ public class LeptonicaTest {
 //        int x0 = 0;
 //        int y0 = 0;
 //        int dsize = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixRemoveMatchedPattern(pixs, pixp, pixe, x0, y0, dsize);
 //        assertEquals(expResult, result);
@@ -18297,7 +18300,7 @@ public class LeptonicaTest {
 //        int color = 0;
 //        float scale = 0.0F;
 //        int nlevels = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixDisplayMatchedPattern(pixs, pixp, pixe, x0, y0, color, scale, nlevels);
 //        assertEquals(expResult, result);
@@ -18315,7 +18318,7 @@ public class LeptonicaTest {
 //        Pix pixm = null;
 //        int maxiters = 0;
 //        int connectivity = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixSeedfillMorph(pixs, pixm, maxiters, connectivity);
 //        assertEquals(expResult, result);
@@ -18333,7 +18336,7 @@ public class LeptonicaTest {
 //        int runtype = 0;
 //        int direction = 0;
 //        int maxsize = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.pixRunHistogramMorph(pixs, runtype, direction, maxsize);
 //        assertEquals(expResult, result);
@@ -18351,7 +18354,7 @@ public class LeptonicaTest {
 //        int hsize = 0;
 //        int vsize = 0;
 //        int type = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixTophat(pixs, hsize, vsize, type);
 //        assertEquals(expResult, result);
@@ -18368,7 +18371,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int height = 0;
 //        int connectivity = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixHDome(pixs, height, connectivity);
 //        assertEquals(expResult, result);
@@ -18386,7 +18389,7 @@ public class LeptonicaTest {
 //        int xsize = 0;
 //        int ysize = 0;
 //        int type = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixFastTophat(pixs, xsize, ysize, type);
 //        assertEquals(expResult, result);
@@ -18404,7 +18407,7 @@ public class LeptonicaTest {
 //        int hsize = 0;
 //        int vsize = 0;
 //        int smoothing = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixMorphGradient(pixs, hsize, vsize, smoothing);
 //        assertEquals(expResult, result);
@@ -18419,7 +18422,7 @@ public class LeptonicaTest {
 //    public void testPixaCentroids() {
 //        System.out.println("pixaCentroids");
 //        Pixa pixa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pta expResult = null;
 //        Pta result = instance.pixaCentroids(pixa);
 //        assertEquals(expResult, result);
@@ -18438,7 +18441,7 @@ public class LeptonicaTest {
 //        IntBuffer sumtab = null;
 //        FloatBuffer pxave = null;
 //        FloatBuffer pyave = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixCentroid(pix, centtab, sumtab, pxave, pyave);
 //        assertEquals(expResult, result);
@@ -18456,7 +18459,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int hsize = 0;
 //        int vsize = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixDilateBrickDwa(pixd, pixs, hsize, vsize);
 //        assertEquals(expResult, result);
@@ -18474,7 +18477,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int hsize = 0;
 //        int vsize = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixErodeBrickDwa(pixd, pixs, hsize, vsize);
 //        assertEquals(expResult, result);
@@ -18492,7 +18495,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int hsize = 0;
 //        int vsize = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixOpenBrickDwa(pixd, pixs, hsize, vsize);
 //        assertEquals(expResult, result);
@@ -18510,7 +18513,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int hsize = 0;
 //        int vsize = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixCloseBrickDwa(pixd, pixs, hsize, vsize);
 //        assertEquals(expResult, result);
@@ -18528,7 +18531,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int hsize = 0;
 //        int vsize = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixDilateCompBrickDwa(pixd, pixs, hsize, vsize);
 //        assertEquals(expResult, result);
@@ -18546,7 +18549,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int hsize = 0;
 //        int vsize = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixErodeCompBrickDwa(pixd, pixs, hsize, vsize);
 //        assertEquals(expResult, result);
@@ -18564,7 +18567,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int hsize = 0;
 //        int vsize = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixOpenCompBrickDwa(pixd, pixs, hsize, vsize);
 //        assertEquals(expResult, result);
@@ -18582,7 +18585,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int hsize = 0;
 //        int vsize = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixCloseCompBrickDwa(pixd, pixs, hsize, vsize);
 //        assertEquals(expResult, result);
@@ -18600,7 +18603,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int hsize = 0;
 //        int vsize = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixDilateCompBrickExtendDwa(pixd, pixs, hsize, vsize);
 //        assertEquals(expResult, result);
@@ -18618,7 +18621,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int hsize = 0;
 //        int vsize = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixErodeCompBrickExtendDwa(pixd, pixs, hsize, vsize);
 //        assertEquals(expResult, result);
@@ -18636,7 +18639,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int hsize = 0;
 //        int vsize = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixOpenCompBrickExtendDwa(pixd, pixs, hsize, vsize);
 //        assertEquals(expResult, result);
@@ -18654,7 +18657,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int hsize = 0;
 //        int vsize = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixCloseCompBrickExtendDwa(pixd, pixs, hsize, vsize);
 //        assertEquals(expResult, result);
@@ -18672,7 +18675,7 @@ public class LeptonicaTest {
 //        IntBuffer pn = null;
 //        IntBuffer pextra = null;
 //        IntBuffer pactualsize = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.getExtendedCompositeParameters(size, pn, pextra, pactualsize);
 //        assertEquals(expResult, result);
@@ -18689,7 +18692,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        String sequence = "";
 //        int dispsep = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixMorphSequence(pixs, sequence, dispsep);
 //        assertEquals(expResult, result);
@@ -18706,7 +18709,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        String sequence = "";
 //        int dispsep = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixMorphCompSequence(pixs, sequence, dispsep);
 //        assertEquals(expResult, result);
@@ -18723,7 +18726,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        String sequence = "";
 //        int dispsep = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixMorphSequenceDwa(pixs, sequence, dispsep);
 //        assertEquals(expResult, result);
@@ -18740,7 +18743,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        String sequence = "";
 //        int dispsep = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixMorphCompSequenceDwa(pixs, sequence, dispsep);
 //        assertEquals(expResult, result);
@@ -18755,7 +18758,7 @@ public class LeptonicaTest {
 //    public void testMorphSequenceVerify() {
 //        System.out.println("morphSequenceVerify");
 //        Sarray sa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.morphSequenceVerify(sa);
 //        assertEquals(expResult, result);
@@ -18773,7 +18776,7 @@ public class LeptonicaTest {
 //        String sequence = "";
 //        int dispsep = 0;
 //        int dispy = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixGrayMorphSequence(pixs, sequence, dispsep, dispy);
 //        assertEquals(expResult, result);
@@ -18791,7 +18794,7 @@ public class LeptonicaTest {
 //        String sequence = "";
 //        int dispsep = 0;
 //        int dispy = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixColorMorphSequence(pixs, sequence, dispsep, dispy);
 //        assertEquals(expResult, result);
@@ -18806,7 +18809,7 @@ public class LeptonicaTest {
 //    public void testNumaCreate() {
 //        System.out.println("numaCreate");
 //        int n = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.numaCreate(n);
 //        assertEquals(expResult, result);
@@ -18822,7 +18825,7 @@ public class LeptonicaTest {
 //        System.out.println("numaCreateFromIArray");
 //        IntBuffer iarray = null;
 //        int size = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.numaCreateFromIArray(iarray, size);
 //        assertEquals(expResult, result);
@@ -18839,7 +18842,7 @@ public class LeptonicaTest {
 //        FloatBuffer farray = null;
 //        int size = 0;
 //        int copyflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.numaCreateFromFArray(farray, size, copyflag);
 //        assertEquals(expResult, result);
@@ -18854,7 +18857,7 @@ public class LeptonicaTest {
 //    public void testNumaDestroy() {
 //        System.out.println("numaDestroy");
 //        Numa.ByReference[] pna = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.numaDestroy(pna);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -18867,7 +18870,7 @@ public class LeptonicaTest {
 //    public void testNumaCopy() {
 //        System.out.println("numaCopy");
 //        Numa na = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.numaCopy(na);
 //        assertEquals(expResult, result);
@@ -18882,7 +18885,7 @@ public class LeptonicaTest {
 //    public void testNumaClone() {
 //        System.out.println("numaClone");
 //        Numa na = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.numaClone(na);
 //        assertEquals(expResult, result);
@@ -18897,7 +18900,7 @@ public class LeptonicaTest {
 //    public void testNumaEmpty() {
 //        System.out.println("numaEmpty");
 //        Numa na = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaEmpty(na);
 //        assertEquals(expResult, result);
@@ -18913,7 +18916,7 @@ public class LeptonicaTest {
 //        System.out.println("numaAddNumber");
 //        Numa na = null;
 //        float val = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaAddNumber(na, val);
 //        assertEquals(expResult, result);
@@ -18930,7 +18933,7 @@ public class LeptonicaTest {
 //        Numa na = null;
 //        int index = 0;
 //        float val = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaInsertNumber(na, index, val);
 //        assertEquals(expResult, result);
@@ -18946,7 +18949,7 @@ public class LeptonicaTest {
 //        System.out.println("numaRemoveNumber");
 //        Numa na = null;
 //        int index = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaRemoveNumber(na, index);
 //        assertEquals(expResult, result);
@@ -18963,7 +18966,7 @@ public class LeptonicaTest {
 //        Numa na = null;
 //        int index = 0;
 //        float val = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaReplaceNumber(na, index, val);
 //        assertEquals(expResult, result);
@@ -18978,7 +18981,7 @@ public class LeptonicaTest {
 //    public void testNumaGetCount() {
 //        System.out.println("numaGetCount");
 //        Numa na = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaGetCount(na);
 //        assertEquals(expResult, result);
@@ -18994,7 +18997,7 @@ public class LeptonicaTest {
 //        System.out.println("numaSetCount");
 //        Numa na = null;
 //        int newcount = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaSetCount(na, newcount);
 //        assertEquals(expResult, result);
@@ -19011,7 +19014,7 @@ public class LeptonicaTest {
 //        Numa na = null;
 //        int index = 0;
 //        FloatBuffer pval = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaGetFValue(na, index, pval);
 //        assertEquals(expResult, result);
@@ -19028,7 +19031,7 @@ public class LeptonicaTest {
 //        Numa na = null;
 //        int index = 0;
 //        IntBuffer pival = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaGetIValue(na, index, pival);
 //        assertEquals(expResult, result);
@@ -19045,7 +19048,7 @@ public class LeptonicaTest {
 //        Numa na = null;
 //        int index = 0;
 //        float val = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaSetValue(na, index, val);
 //        assertEquals(expResult, result);
@@ -19062,7 +19065,7 @@ public class LeptonicaTest {
 //        Numa na = null;
 //        int index = 0;
 //        float diff = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaShiftValue(na, index, diff);
 //        assertEquals(expResult, result);
@@ -19077,7 +19080,7 @@ public class LeptonicaTest {
 //    public void testNumaGetIArray() {
 //        System.out.println("numaGetIArray");
 //        Numa na = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        IntByReference expResult = null;
 //        IntByReference result = instance.numaGetIArray(na);
 //        assertEquals(expResult, result);
@@ -19093,7 +19096,7 @@ public class LeptonicaTest {
 //        System.out.println("numaGetFArray");
 //        Numa na = null;
 //        int copyflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        FloatByReference expResult = null;
 //        FloatByReference result = instance.numaGetFArray(na, copyflag);
 //        assertEquals(expResult, result);
@@ -19108,7 +19111,7 @@ public class LeptonicaTest {
 //    public void testNumaGetRefcount() {
 //        System.out.println("numaGetRefcount");
 //        Numa na = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaGetRefcount(na);
 //        assertEquals(expResult, result);
@@ -19124,7 +19127,7 @@ public class LeptonicaTest {
 //        System.out.println("numaChangeRefcount");
 //        Numa na = null;
 //        int delta = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaChangeRefcount(na, delta);
 //        assertEquals(expResult, result);
@@ -19141,7 +19144,7 @@ public class LeptonicaTest {
 //        Numa na = null;
 //        FloatBuffer pstartx = null;
 //        FloatBuffer pdelx = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaGetParameters(na, pstartx, pdelx);
 //        assertEquals(expResult, result);
@@ -19158,7 +19161,7 @@ public class LeptonicaTest {
 //        Numa na = null;
 //        float startx = 0.0F;
 //        float delx = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaSetParameters(na, startx, delx);
 //        assertEquals(expResult, result);
@@ -19174,7 +19177,7 @@ public class LeptonicaTest {
 //        System.out.println("numaCopyParameters");
 //        Numa nad = null;
 //        Numa nas = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaCopyParameters(nad, nas);
 //        assertEquals(expResult, result);
@@ -19193,7 +19196,7 @@ public class LeptonicaTest {
 //        int size2 = 0;
 //        int addzeros = 0;
 //        int type = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Sarray expResult = null;
 //        Sarray result = instance.numaConvertToSarray(na, size1, size2, addzeros, type);
 //        assertEquals(expResult, result);
@@ -19208,7 +19211,7 @@ public class LeptonicaTest {
 //    public void testNumaRead() {
 //        System.out.println("numaRead");
 //        String filename = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.numaRead(filename);
 //        assertEquals(expResult, result);
@@ -19223,7 +19226,7 @@ public class LeptonicaTest {
 //    public void testNumaReadStream() {
 //        System.out.println("numaReadStream");
 //        PointerByReference fp = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.numaReadStream(fp);
 //        assertEquals(expResult, result);
@@ -19239,7 +19242,7 @@ public class LeptonicaTest {
 //        System.out.println("numaWrite");
 //        String filename = "";
 //        Numa na = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaWrite(filename, na);
 //        assertEquals(expResult, result);
@@ -19255,7 +19258,7 @@ public class LeptonicaTest {
 //        System.out.println("numaWriteStream");
 //        PointerByReference fp = null;
 //        Numa na = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaWriteStream(fp, na);
 //        assertEquals(expResult, result);
@@ -19270,7 +19273,7 @@ public class LeptonicaTest {
 //    public void testNumaaCreate() {
 //        System.out.println("numaaCreate");
 //        int n = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numaa expResult = null;
 //        Numaa result = instance.numaaCreate(n);
 //        assertEquals(expResult, result);
@@ -19286,7 +19289,7 @@ public class LeptonicaTest {
 //        System.out.println("numaaCreateFull");
 //        int ntop = 0;
 //        int n = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numaa expResult = null;
 //        Numaa result = instance.numaaCreateFull(ntop, n);
 //        assertEquals(expResult, result);
@@ -19301,7 +19304,7 @@ public class LeptonicaTest {
 //    public void testNumaaTruncate() {
 //        System.out.println("numaaTruncate");
 //        Numaa naa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaaTruncate(naa);
 //        assertEquals(expResult, result);
@@ -19316,7 +19319,7 @@ public class LeptonicaTest {
 //    public void testNumaaDestroy() {
 //        System.out.println("numaaDestroy");
 //        Numaa.ByReference[] pnaa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.numaaDestroy(pnaa);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -19331,7 +19334,7 @@ public class LeptonicaTest {
 //        Numaa naa = null;
 //        Numa na = null;
 //        int copyflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaaAddNuma(naa, na, copyflag);
 //        assertEquals(expResult, result);
@@ -19346,7 +19349,7 @@ public class LeptonicaTest {
 //    public void testNumaaExtendArray() {
 //        System.out.println("numaaExtendArray");
 //        Numaa naa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaaExtendArray(naa);
 //        assertEquals(expResult, result);
@@ -19361,7 +19364,7 @@ public class LeptonicaTest {
 //    public void testNumaaGetCount() {
 //        System.out.println("numaaGetCount");
 //        Numaa naa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaaGetCount(naa);
 //        assertEquals(expResult, result);
@@ -19377,7 +19380,7 @@ public class LeptonicaTest {
 //        System.out.println("numaaGetNumaCount");
 //        Numaa naa = null;
 //        int index = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaaGetNumaCount(naa, index);
 //        assertEquals(expResult, result);
@@ -19392,7 +19395,7 @@ public class LeptonicaTest {
 //    public void testNumaaGetNumberCount() {
 //        System.out.println("numaaGetNumberCount");
 //        Numaa naa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaaGetNumberCount(naa);
 //        assertEquals(expResult, result);
@@ -19407,7 +19410,7 @@ public class LeptonicaTest {
 //    public void testNumaaGetPtrArray() {
 //        System.out.println("numaaGetPtrArray");
 //        Numaa naa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa.ByReference[] expResult = null;
 //        Numa.ByReference[] result = instance.numaaGetPtrArray(naa);
 //        assertArrayEquals(expResult, result);
@@ -19424,7 +19427,7 @@ public class LeptonicaTest {
 //        Numaa naa = null;
 //        int index = 0;
 //        int accessflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.numaaGetNuma(naa, index, accessflag);
 //        assertEquals(expResult, result);
@@ -19441,7 +19444,7 @@ public class LeptonicaTest {
 //        Numaa naa = null;
 //        int index = 0;
 //        Numa na = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaaReplaceNuma(naa, index, na);
 //        assertEquals(expResult, result);
@@ -19460,7 +19463,7 @@ public class LeptonicaTest {
 //        int j = 0;
 //        FloatBuffer pfval = null;
 //        IntBuffer pival = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaaGetValue(naa, i, j, pfval, pival);
 //        assertEquals(expResult, result);
@@ -19477,7 +19480,7 @@ public class LeptonicaTest {
 //        Numaa naa = null;
 //        int index = 0;
 //        float val = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaaAddNumber(naa, index, val);
 //        assertEquals(expResult, result);
@@ -19492,7 +19495,7 @@ public class LeptonicaTest {
 //    public void testNumaaRead() {
 //        System.out.println("numaaRead");
 //        String filename = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numaa expResult = null;
 //        Numaa result = instance.numaaRead(filename);
 //        assertEquals(expResult, result);
@@ -19507,7 +19510,7 @@ public class LeptonicaTest {
 //    public void testNumaaReadStream() {
 //        System.out.println("numaaReadStream");
 //        PointerByReference fp = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numaa expResult = null;
 //        Numaa result = instance.numaaReadStream(fp);
 //        assertEquals(expResult, result);
@@ -19523,7 +19526,7 @@ public class LeptonicaTest {
 //        System.out.println("numaaWrite");
 //        String filename = "";
 //        Numaa naa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaaWrite(filename, naa);
 //        assertEquals(expResult, result);
@@ -19539,7 +19542,7 @@ public class LeptonicaTest {
 //        System.out.println("numaaWriteStream");
 //        PointerByReference fp = null;
 //        Numaa naa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaaWriteStream(fp, naa);
 //        assertEquals(expResult, result);
@@ -19556,7 +19559,7 @@ public class LeptonicaTest {
 //        int nrows = 0;
 //        int ncols = 0;
 //        int initsize = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa2d expResult = null;
 //        Numa2d result = instance.numa2dCreate(nrows, ncols, initsize);
 //        assertEquals(expResult, result);
@@ -19571,7 +19574,7 @@ public class LeptonicaTest {
 //    public void testNuma2dDestroy() {
 //        System.out.println("numa2dDestroy");
 //        Numa2d.ByReference[] pna2d = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.numa2dDestroy(pna2d);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -19587,7 +19590,7 @@ public class LeptonicaTest {
 //        int row = 0;
 //        int col = 0;
 //        float val = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numa2dAddNumber(na2d, row, col, val);
 //        assertEquals(expResult, result);
@@ -19604,7 +19607,7 @@ public class LeptonicaTest {
 //        Numa2d na2d = null;
 //        int row = 0;
 //        int col = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numa2dGetCount(na2d, row, col);
 //        assertEquals(expResult, result);
@@ -19621,7 +19624,7 @@ public class LeptonicaTest {
 //        Numa2d na2d = null;
 //        int row = 0;
 //        int col = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.numa2dGetNuma(na2d, row, col);
 //        assertEquals(expResult, result);
@@ -19640,7 +19643,7 @@ public class LeptonicaTest {
 //        int col = 0;
 //        int index = 0;
 //        FloatBuffer pval = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numa2dGetFValue(na2d, row, col, index, pval);
 //        assertEquals(expResult, result);
@@ -19659,7 +19662,7 @@ public class LeptonicaTest {
 //        int col = 0;
 //        int index = 0;
 //        IntBuffer pval = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numa2dGetIValue(na2d, row, col, index, pval);
 //        assertEquals(expResult, result);
@@ -19675,7 +19678,7 @@ public class LeptonicaTest {
 //        System.out.println("numaHashCreate");
 //        int nbuckets = 0;
 //        int initsize = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        NumaHash expResult = null;
 //        NumaHash result = instance.numaHashCreate(nbuckets, initsize);
 //        assertEquals(expResult, result);
@@ -19690,7 +19693,7 @@ public class LeptonicaTest {
 //    public void testNumaHashDestroy() {
 //        System.out.println("numaHashDestroy");
 //        NumaHash.ByReference[] pnahash = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.numaHashDestroy(pnahash);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -19704,7 +19707,7 @@ public class LeptonicaTest {
 //        System.out.println("numaHashGetNuma");
 //        NumaHash nahash = null;
 //        int key = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.numaHashGetNuma(nahash, key);
 //        assertEquals(expResult, result);
@@ -19721,7 +19724,7 @@ public class LeptonicaTest {
 //        NumaHash nahash = null;
 //        int key = 0;
 //        float value = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaHashAdd(nahash, key, value);
 //        assertEquals(expResult, result);
@@ -19739,7 +19742,7 @@ public class LeptonicaTest {
 //        Numa na1 = null;
 //        Numa na2 = null;
 //        int op = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.numaArithOp(nad, na1, na2, op);
 //        assertEquals(expResult, result);
@@ -19757,7 +19760,7 @@ public class LeptonicaTest {
 //        Numa na1 = null;
 //        Numa na2 = null;
 //        int op = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.numaLogicalOp(nad, na1, na2, op);
 //        assertEquals(expResult, result);
@@ -19773,7 +19776,7 @@ public class LeptonicaTest {
 //        System.out.println("numaInvert");
 //        Numa nad = null;
 //        Numa nas = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.numaInvert(nad, nas);
 //        assertEquals(expResult, result);
@@ -19791,7 +19794,7 @@ public class LeptonicaTest {
 //        Numa na2 = null;
 //        float maxdiff = 0.0F;
 //        IntBuffer psimilar = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaSimilar(na1, na2, maxdiff, psimilar);
 //        assertEquals(expResult, result);
@@ -19808,7 +19811,7 @@ public class LeptonicaTest {
 //        Numa na = null;
 //        int index = 0;
 //        float val = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaAddToNumber(na, index, val);
 //        assertEquals(expResult, result);
@@ -19825,7 +19828,7 @@ public class LeptonicaTest {
 //        Numa na = null;
 //        FloatBuffer pminval = null;
 //        IntBuffer piminloc = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaGetMin(na, pminval, piminloc);
 //        assertEquals(expResult, result);
@@ -19842,7 +19845,7 @@ public class LeptonicaTest {
 //        Numa na = null;
 //        FloatBuffer pmaxval = null;
 //        IntBuffer pimaxloc = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaGetMax(na, pmaxval, pimaxloc);
 //        assertEquals(expResult, result);
@@ -19858,7 +19861,7 @@ public class LeptonicaTest {
 //        System.out.println("numaGetSum");
 //        Numa na = null;
 //        FloatBuffer psum = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaGetSum(na, psum);
 //        assertEquals(expResult, result);
@@ -19873,7 +19876,7 @@ public class LeptonicaTest {
 //    public void testNumaGetPartialSums() {
 //        System.out.println("numaGetPartialSums");
 //        Numa na = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.numaGetPartialSums(na);
 //        assertEquals(expResult, result);
@@ -19891,7 +19894,7 @@ public class LeptonicaTest {
 //        int first = 0;
 //        int last = 0;
 //        FloatBuffer psum = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaGetSumOnInterval(na, first, last, psum);
 //        assertEquals(expResult, result);
@@ -19908,7 +19911,7 @@ public class LeptonicaTest {
 //        Numa na = null;
 //        int maxsamples = 0;
 //        IntBuffer pallints = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaHasOnlyIntegers(na, maxsamples, pallints);
 //        assertEquals(expResult, result);
@@ -19924,7 +19927,7 @@ public class LeptonicaTest {
 //        System.out.println("numaSubsample");
 //        Numa nas = null;
 //        int subfactor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.numaSubsample(nas, subfactor);
 //        assertEquals(expResult, result);
@@ -19939,7 +19942,7 @@ public class LeptonicaTest {
 //    public void testNumaMakeDelta() {
 //        System.out.println("numaMakeDelta");
 //        Numa nas = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.numaMakeDelta(nas);
 //        assertEquals(expResult, result);
@@ -19956,7 +19959,7 @@ public class LeptonicaTest {
 //        float startval = 0.0F;
 //        float increment = 0.0F;
 //        int size = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.numaMakeSequence(startval, increment, size);
 //        assertEquals(expResult, result);
@@ -19972,7 +19975,7 @@ public class LeptonicaTest {
 //        System.out.println("numaMakeConstant");
 //        float val = 0.0F;
 //        int size = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.numaMakeConstant(val, size);
 //        assertEquals(expResult, result);
@@ -19988,7 +19991,7 @@ public class LeptonicaTest {
 //        System.out.println("numaMakeAbsValue");
 //        Numa nad = null;
 //        Numa nas = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.numaMakeAbsValue(nad, nas);
 //        assertEquals(expResult, result);
@@ -20006,7 +20009,7 @@ public class LeptonicaTest {
 //        int left = 0;
 //        int right = 0;
 //        float val = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.numaAddBorder(nas, left, right, val);
 //        assertEquals(expResult, result);
@@ -20024,7 +20027,7 @@ public class LeptonicaTest {
 //        int left = 0;
 //        int right = 0;
 //        int type = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.numaAddSpecifiedBorder(nas, left, right, type);
 //        assertEquals(expResult, result);
@@ -20041,7 +20044,7 @@ public class LeptonicaTest {
 //        Numa nas = null;
 //        int left = 0;
 //        int right = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.numaRemoveBorder(nas, left, right);
 //        assertEquals(expResult, result);
@@ -20059,7 +20062,7 @@ public class LeptonicaTest {
 //        float eps = 0.0F;
 //        IntBuffer pfirst = null;
 //        IntBuffer plast = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaGetNonzeroRange(na, eps, pfirst, plast);
 //        assertEquals(expResult, result);
@@ -20076,7 +20079,7 @@ public class LeptonicaTest {
 //        Numa na = null;
 //        int type = 0;
 //        IntBuffer pcount = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaGetCountRelativeToZero(na, type, pcount);
 //        assertEquals(expResult, result);
@@ -20093,7 +20096,7 @@ public class LeptonicaTest {
 //        Numa nas = null;
 //        int first = 0;
 //        int last = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.numaClipToInterval(nas, first, last);
 //        assertEquals(expResult, result);
@@ -20110,7 +20113,7 @@ public class LeptonicaTest {
 //        Numa nas = null;
 //        float thresh = 0.0F;
 //        int type = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.numaMakeThresholdIndicator(nas, thresh, type);
 //        assertEquals(expResult, result);
@@ -20126,7 +20129,7 @@ public class LeptonicaTest {
 //        System.out.println("numaUniformSampling");
 //        Numa nas = null;
 //        int nsamp = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.numaUniformSampling(nas, nsamp);
 //        assertEquals(expResult, result);
@@ -20142,7 +20145,7 @@ public class LeptonicaTest {
 //        System.out.println("numaReverse");
 //        Numa nad = null;
 //        Numa nas = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.numaReverse(nad, nas);
 //        assertEquals(expResult, result);
@@ -20159,7 +20162,7 @@ public class LeptonicaTest {
 //        Numa nas = null;
 //        float thresh = 0.0F;
 //        float maxn = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.numaLowPassIntervals(nas, thresh, maxn);
 //        assertEquals(expResult, result);
@@ -20177,7 +20180,7 @@ public class LeptonicaTest {
 //        float thresh1 = 0.0F;
 //        float thresh2 = 0.0F;
 //        float maxn = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.numaThresholdEdges(nas, thresh1, thresh2, maxn);
 //        assertEquals(expResult, result);
@@ -20195,7 +20198,7 @@ public class LeptonicaTest {
 //        int span = 0;
 //        IntBuffer pstart = null;
 //        IntBuffer pend = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaGetSpanValues(na, span, pstart, pend);
 //        assertEquals(expResult, result);
@@ -20214,7 +20217,7 @@ public class LeptonicaTest {
 //        IntBuffer pstart = null;
 //        IntBuffer pend = null;
 //        IntBuffer psign = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaGetEdgeValues(na, edge, pstart, pend, psign);
 //        assertEquals(expResult, result);
@@ -20234,7 +20237,7 @@ public class LeptonicaTest {
 //        int type = 0;
 //        float xval = 0.0F;
 //        FloatBuffer pyval = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaInterpolateEqxVal(startx, deltax, nay, type, xval, pyval);
 //        assertEquals(expResult, result);
@@ -20253,7 +20256,7 @@ public class LeptonicaTest {
 //        int type = 0;
 //        float xval = 0.0F;
 //        FloatBuffer pyval = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaInterpolateArbxVal(nax, nay, type, xval, pyval);
 //        assertEquals(expResult, result);
@@ -20276,7 +20279,7 @@ public class LeptonicaTest {
 //        int npts = 0;
 //        Numa.ByReference[] pnax = null;
 //        Numa.ByReference[] pnay = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaInterpolateEqxInterval(startx, deltax, nasy, type, x0, x1, npts, pnax, pnay);
 //        assertEquals(expResult, result);
@@ -20298,7 +20301,7 @@ public class LeptonicaTest {
 //        int npts = 0;
 //        Numa.ByReference[] pnadx = null;
 //        Numa.ByReference[] pnady = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaInterpolateArbxInterval(nax, nay, type, x0, x1, npts, pnadx, pnady);
 //        assertEquals(expResult, result);
@@ -20316,7 +20319,7 @@ public class LeptonicaTest {
 //        FloatBuffer pmaxval = null;
 //        Numa naloc = null;
 //        FloatBuffer pmaxloc = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaFitMax(na, pmaxval, naloc, pmaxloc);
 //        assertEquals(expResult, result);
@@ -20337,7 +20340,7 @@ public class LeptonicaTest {
 //        int npts = 0;
 //        Numa.ByReference[] pnadx = null;
 //        Numa.ByReference[] pnady = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaDifferentiateInterval(nax, nay, x0, x1, npts, pnadx, pnady);
 //        assertEquals(expResult, result);
@@ -20357,7 +20360,7 @@ public class LeptonicaTest {
 //        float x1 = 0.0F;
 //        int npts = 0;
 //        FloatBuffer psum = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaIntegrateInterval(nax, nay, x0, x1, npts, psum);
 //        assertEquals(expResult, result);
@@ -20377,7 +20380,7 @@ public class LeptonicaTest {
 //        Numa.ByReference[] pnainvert = null;
 //        int sortorder = 0;
 //        int sorttype = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaSortGeneral(na, pnasort, pnaindex, pnainvert, sortorder, sorttype);
 //        assertEquals(expResult, result);
@@ -20393,7 +20396,7 @@ public class LeptonicaTest {
 //        System.out.println("numaSortAutoSelect");
 //        Numa nas = null;
 //        int sortorder = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.numaSortAutoSelect(nas, sortorder);
 //        assertEquals(expResult, result);
@@ -20409,7 +20412,7 @@ public class LeptonicaTest {
 //        System.out.println("numaSortIndexAutoSelect");
 //        Numa nas = null;
 //        int sortorder = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.numaSortIndexAutoSelect(nas, sortorder);
 //        assertEquals(expResult, result);
@@ -20424,7 +20427,7 @@ public class LeptonicaTest {
 //    public void testNumaChooseSortType() {
 //        System.out.println("numaChooseSortType");
 //        Numa nas = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaChooseSortType(nas);
 //        assertEquals(expResult, result);
@@ -20441,7 +20444,7 @@ public class LeptonicaTest {
 //        Numa naout = null;
 //        Numa nain = null;
 //        int sortorder = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.numaSort(naout, nain, sortorder);
 //        assertEquals(expResult, result);
@@ -20457,7 +20460,7 @@ public class LeptonicaTest {
 //        System.out.println("numaBinSort");
 //        Numa nas = null;
 //        int sortorder = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.numaBinSort(nas, sortorder);
 //        assertEquals(expResult, result);
@@ -20473,7 +20476,7 @@ public class LeptonicaTest {
 //        System.out.println("numaGetSortIndex");
 //        Numa na = null;
 //        int sortorder = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.numaGetSortIndex(na, sortorder);
 //        assertEquals(expResult, result);
@@ -20489,7 +20492,7 @@ public class LeptonicaTest {
 //        System.out.println("numaGetBinSortIndex");
 //        Numa nas = null;
 //        int sortorder = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.numaGetBinSortIndex(nas, sortorder);
 //        assertEquals(expResult, result);
@@ -20505,7 +20508,7 @@ public class LeptonicaTest {
 //        System.out.println("numaSortByIndex");
 //        Numa nas = null;
 //        Numa naindex = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.numaSortByIndex(nas, naindex);
 //        assertEquals(expResult, result);
@@ -20522,7 +20525,7 @@ public class LeptonicaTest {
 //        Numa nas = null;
 //        int sortorder = 0;
 //        IntBuffer psorted = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaIsSorted(nas, sortorder, psorted);
 //        assertEquals(expResult, result);
@@ -20541,7 +20544,7 @@ public class LeptonicaTest {
 //        int sortorder = 0;
 //        Numa.ByReference[] pnasx = null;
 //        Numa.ByReference[] pnasy = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaSortPair(nax, nay, sortorder, pnasx, pnasy);
 //        assertEquals(expResult, result);
@@ -20556,7 +20559,7 @@ public class LeptonicaTest {
 //    public void testNumaInvertMap() {
 //        System.out.println("numaInvertMap");
 //        Numa nas = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.numaInvertMap(nas);
 //        assertEquals(expResult, result);
@@ -20572,7 +20575,7 @@ public class LeptonicaTest {
 //        System.out.println("numaPseudorandomSequence");
 //        int size = 0;
 //        int seed = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.numaPseudorandomSequence(size, seed);
 //        assertEquals(expResult, result);
@@ -20588,7 +20591,7 @@ public class LeptonicaTest {
 //        System.out.println("numaRandomPermutation");
 //        Numa nas = null;
 //        int seed = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.numaRandomPermutation(nas, seed);
 //        assertEquals(expResult, result);
@@ -20607,7 +20610,7 @@ public class LeptonicaTest {
 //        Numa nasort = null;
 //        int usebins = 0;
 //        FloatBuffer pval = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaGetRankValue(na, fract, nasort, usebins, pval);
 //        assertEquals(expResult, result);
@@ -20623,7 +20626,7 @@ public class LeptonicaTest {
 //        System.out.println("numaGetMedian");
 //        Numa na = null;
 //        FloatBuffer pval = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaGetMedian(na, pval);
 //        assertEquals(expResult, result);
@@ -20639,7 +20642,7 @@ public class LeptonicaTest {
 //        System.out.println("numaGetBinnedMedian");
 //        Numa na = null;
 //        IntBuffer pval = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaGetBinnedMedian(na, pval);
 //        assertEquals(expResult, result);
@@ -20656,7 +20659,7 @@ public class LeptonicaTest {
 //        Numa na = null;
 //        FloatBuffer pval = null;
 //        IntBuffer pcount = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaGetMode(na, pval, pcount);
 //        assertEquals(expResult, result);
@@ -20673,7 +20676,7 @@ public class LeptonicaTest {
 //        Numa na = null;
 //        FloatBuffer pmedval = null;
 //        FloatBuffer pmedvar = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaGetMedianVariation(na, pmedval, pmedvar);
 //        assertEquals(expResult, result);
@@ -20691,7 +20694,7 @@ public class LeptonicaTest {
 //        Numa nas = null;
 //        int istart = 0;
 //        int iend = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaJoin(nad, nas, istart, iend);
 //        assertEquals(expResult, result);
@@ -20709,7 +20712,7 @@ public class LeptonicaTest {
 //        Numaa naas = null;
 //        int istart = 0;
 //        int iend = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaaJoin(naad, naas, istart, iend);
 //        assertEquals(expResult, result);
@@ -20724,7 +20727,7 @@ public class LeptonicaTest {
 //    public void testNumaaFlattenToNuma() {
 //        System.out.println("numaaFlattenToNuma");
 //        Numaa naa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.numaaFlattenToNuma(naa);
 //        assertEquals(expResult, result);
@@ -20740,7 +20743,7 @@ public class LeptonicaTest {
 //        System.out.println("numaErode");
 //        Numa nas = null;
 //        int size = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.numaErode(nas, size);
 //        assertEquals(expResult, result);
@@ -20756,7 +20759,7 @@ public class LeptonicaTest {
 //        System.out.println("numaDilate");
 //        Numa nas = null;
 //        int size = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.numaDilate(nas, size);
 //        assertEquals(expResult, result);
@@ -20772,7 +20775,7 @@ public class LeptonicaTest {
 //        System.out.println("numaOpen");
 //        Numa nas = null;
 //        int size = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.numaOpen(nas, size);
 //        assertEquals(expResult, result);
@@ -20788,7 +20791,7 @@ public class LeptonicaTest {
 //        System.out.println("numaClose");
 //        Numa nas = null;
 //        int size = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.numaClose(nas, size);
 //        assertEquals(expResult, result);
@@ -20805,7 +20808,7 @@ public class LeptonicaTest {
 //        Numa nas = null;
 //        float shift = 0.0F;
 //        float scale = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.numaTransform(nas, shift, scale);
 //        assertEquals(expResult, result);
@@ -20825,7 +20828,7 @@ public class LeptonicaTest {
 //        Numa.ByReference[] pnams = null;
 //        Numa.ByReference[] pnav = null;
 //        Numa.ByReference[] pnarv = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaWindowedStats(nas, wc, pnam, pnams, pnav, pnarv);
 //        assertEquals(expResult, result);
@@ -20841,7 +20844,7 @@ public class LeptonicaTest {
 //        System.out.println("numaWindowedMean");
 //        Numa nas = null;
 //        int wc = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.numaWindowedMean(nas, wc);
 //        assertEquals(expResult, result);
@@ -20857,7 +20860,7 @@ public class LeptonicaTest {
 //        System.out.println("numaWindowedMeanSquare");
 //        Numa nas = null;
 //        int wc = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.numaWindowedMeanSquare(nas, wc);
 //        assertEquals(expResult, result);
@@ -20875,7 +20878,7 @@ public class LeptonicaTest {
 //        Numa nams = null;
 //        Numa.ByReference[] pnav = null;
 //        Numa.ByReference[] pnarv = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaWindowedVariance(nam, nams, pnav, pnarv);
 //        assertEquals(expResult, result);
@@ -20890,7 +20893,7 @@ public class LeptonicaTest {
 //    public void testNumaConvertToInt() {
 //        System.out.println("numaConvertToInt");
 //        Numa nas = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.numaConvertToInt(nas);
 //        assertEquals(expResult, result);
@@ -20908,7 +20911,7 @@ public class LeptonicaTest {
 //        int maxbins = 0;
 //        IntBuffer pbinsize = null;
 //        IntBuffer pbinstart = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.numaMakeHistogram(na, maxbins, pbinsize, pbinstart);
 //        assertEquals(expResult, result);
@@ -20924,7 +20927,7 @@ public class LeptonicaTest {
 //        System.out.println("numaMakeHistogramAuto");
 //        Numa na = null;
 //        int maxbins = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.numaMakeHistogramAuto(na, maxbins);
 //        assertEquals(expResult, result);
@@ -20941,7 +20944,7 @@ public class LeptonicaTest {
 //        Numa na = null;
 //        float binsize = 0.0F;
 //        float maxsize = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.numaMakeHistogramClipped(na, binsize, maxsize);
 //        assertEquals(expResult, result);
@@ -20957,7 +20960,7 @@ public class LeptonicaTest {
 //        System.out.println("numaRebinHistogram");
 //        Numa nas = null;
 //        int newsize = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.numaRebinHistogram(nas, newsize);
 //        assertEquals(expResult, result);
@@ -20973,7 +20976,7 @@ public class LeptonicaTest {
 //        System.out.println("numaNormalizeHistogram");
 //        Numa nas = null;
 //        float tsum = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.numaNormalizeHistogram(nas, tsum);
 //        assertEquals(expResult, result);
@@ -20997,7 +21000,7 @@ public class LeptonicaTest {
 //        float rank = 0.0F;
 //        FloatBuffer prval = null;
 //        Numa.ByReference[] phisto = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaGetStatsUsingHistogram(na, maxbins, pmin, pmax, pmean, pvariance, pmedian, rank, prval, phisto);
 //        assertEquals(expResult, result);
@@ -21021,7 +21024,7 @@ public class LeptonicaTest {
 //        float rank = 0.0F;
 //        FloatByReference prval = null;
 //        Numa.ByReference[] phisto = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaGetStatsUsingHistogram(na, maxbins, pmin, pmax, pmean, pvariance, pmedian, rank, prval, phisto);
 //        assertEquals(expResult, result);
@@ -21042,7 +21045,7 @@ public class LeptonicaTest {
 //        FloatBuffer pxmedian = null;
 //        FloatBuffer pxmode = null;
 //        FloatBuffer pxvariance = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaGetHistogramStats(nahisto, startx, deltax, pxmean, pxmedian, pxmode, pxvariance);
 //        assertEquals(expResult, result);
@@ -21065,7 +21068,7 @@ public class LeptonicaTest {
 //        FloatBuffer pxmedian = null;
 //        FloatBuffer pxmode = null;
 //        FloatBuffer pxvariance = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaGetHistogramStatsOnInterval(nahisto, startx, deltax, ifirst, ilast, pxmean, pxmedian, pxmode, pxvariance);
 //        assertEquals(expResult, result);
@@ -21085,7 +21088,7 @@ public class LeptonicaTest {
 //        int npts = 0;
 //        Numa.ByReference[] pnax = null;
 //        Numa.ByReference[] pnay = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaMakeRankFromHistogram(startx, deltax, nasy, npts, pnax, pnay);
 //        assertEquals(expResult, result);
@@ -21102,7 +21105,7 @@ public class LeptonicaTest {
 //        Numa na = null;
 //        float rval = 0.0F;
 //        FloatBuffer prank = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaHistogramGetRankFromVal(na, rval, prank);
 //        assertEquals(expResult, result);
@@ -21119,7 +21122,7 @@ public class LeptonicaTest {
 //        Numa na = null;
 //        float rank = 0.0F;
 //        FloatBuffer prval = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaHistogramGetValFromRank(na, rank, prval);
 //        assertEquals(expResult, result);
@@ -21139,7 +21142,7 @@ public class LeptonicaTest {
 //        Numa.ByReference[] pnam = null;
 //        Numa.ByReference[] pnar = null;
 //        Numa.ByReference[] pnabb = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaDiscretizeRankAndIntensity(na, nbins, pnarbin, pnam, pnar, pnabb);
 //        assertEquals(expResult, result);
@@ -21157,7 +21160,7 @@ public class LeptonicaTest {
 //        int nbins = 0;
 //        Numa.ByReference[] pnarbin = null;
 //        Numa.ByReference[] pnam = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaGetRankBinValues(na, nbins, pnarbin, pnam);
 //        assertEquals(expResult, result);
@@ -21179,7 +21182,7 @@ public class LeptonicaTest {
 //        FloatBuffer pnum1 = null;
 //        FloatBuffer pnum2 = null;
 //        Numa.ByReference[] pnascore = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaSplitDistribution(na, scorefract, psplitindex, pave1, pave2, pnum1, pnum2, pnascore);
 //        assertEquals(expResult, result);
@@ -21201,7 +21204,7 @@ public class LeptonicaTest {
 //        FloatByReference pnum1 = null;
 //        FloatByReference pnum2 = null;
 //        Numa.ByReference[] pnascore = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaSplitDistribution(na, scorefract, psplitindex, pave1, pave2, pnum1, pnum2, pnascore);
 //        assertEquals(expResult, result);
@@ -21218,7 +21221,7 @@ public class LeptonicaTest {
 //        Numa na1 = null;
 //        Numa na2 = null;
 //        FloatBuffer pdist = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaEarthMoverDistance(na1, na2, pdist);
 //        assertEquals(expResult, result);
@@ -21236,7 +21239,7 @@ public class LeptonicaTest {
 //        int nmax = 0;
 //        float fract1 = 0.0F;
 //        float fract2 = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.numaFindPeaks(nas, nmax, fract1, fract2);
 //        assertEquals(expResult, result);
@@ -21252,7 +21255,7 @@ public class LeptonicaTest {
 //        System.out.println("numaFindExtrema");
 //        Numa nas = null;
 //        float delta = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.numaFindExtrema(nas, delta);
 //        assertEquals(expResult, result);
@@ -21270,7 +21273,7 @@ public class LeptonicaTest {
 //        float minreversal = 0.0F;
 //        IntBuffer pnr = null;
 //        FloatBuffer pnrpl = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaCountReversals(nas, minreversal, pnr, pnrpl);
 //        assertEquals(expResult, result);
@@ -21288,7 +21291,7 @@ public class LeptonicaTest {
 //        Numa nay = null;
 //        float estthresh = 0.0F;
 //        FloatBuffer pbestthresh = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaSelectCrossingThreshold(nax, nay, estthresh, pbestthresh);
 //        assertEquals(expResult, result);
@@ -21305,7 +21308,7 @@ public class LeptonicaTest {
 //        Numa nax = null;
 //        Numa nay = null;
 //        float thresh = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.numaCrossingsByThreshold(nax, nay, thresh);
 //        assertEquals(expResult, result);
@@ -21322,7 +21325,7 @@ public class LeptonicaTest {
 //        Numa nax = null;
 //        Numa nay = null;
 //        float delta = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.numaCrossingsByPeaks(nax, nay, delta);
 //        assertEquals(expResult, result);
@@ -21345,7 +21348,7 @@ public class LeptonicaTest {
 //        FloatBuffer pbestwidth = null;
 //        FloatBuffer pbestshift = null;
 //        FloatBuffer pbestscore = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaEvalBestHaarParameters(nas, relweight, nwidth, nshift, minwidth, maxwidth, pbestwidth, pbestshift, pbestscore);
 //        assertEquals(expResult, result);
@@ -21364,7 +21367,7 @@ public class LeptonicaTest {
 //        float shift = 0.0F;
 //        float relweight = 0.0F;
 //        FloatBuffer pscore = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.numaEvalHaarSum(nas, width, shift, relweight, pscore);
 //        assertEquals(expResult, result);
@@ -21383,7 +21386,7 @@ public class LeptonicaTest {
 //        Pix.ByReference[] ppixtm = null;
 //        Pix.ByReference[] ppixtb = null;
 //        int debug = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixGetRegionsBinary(pixs, ppixhm, ppixtm, ppixtb, debug);
 //        assertEquals(expResult, result);
@@ -21401,7 +21404,7 @@ public class LeptonicaTest {
 //        Pix.ByReference[] ppixtext = null;
 //        IntBuffer phtfound = null;
 //        int debug = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixGenHalftoneMask(pixs, ppixtext, phtfound, debug);
 //        assertEquals(expResult, result);
@@ -21419,7 +21422,7 @@ public class LeptonicaTest {
 //        Pix.ByReference[] ppixtext = null;
 //        IntByReference phtfound = null;
 //        int debug = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixGenHalftoneMask(pixs, ppixtext, phtfound, debug);
 //        assertEquals(expResult, result);
@@ -21437,7 +21440,7 @@ public class LeptonicaTest {
 //        Pix.ByReference[] ppixvws = null;
 //        IntBuffer ptlfound = null;
 //        int debug = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixGenTextlineMask(pixs, ppixvws, ptlfound, debug);
 //        assertEquals(expResult, result);
@@ -21455,7 +21458,7 @@ public class LeptonicaTest {
 //        Pix.ByReference[] ppixvws = null;
 //        IntByReference ptlfound = null;
 //        int debug = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixGenTextlineMask(pixs, ppixvws, ptlfound, debug);
 //        assertEquals(expResult, result);
@@ -21472,7 +21475,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        Pix pixvws = null;
 //        int debug = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixGenTextblockMask(pixs, pixvws, debug);
 //        assertEquals(expResult, result);
@@ -21494,7 +21497,7 @@ public class LeptonicaTest {
 //        int showmorph = 0;
 //        int display = 0;
 //        String pdfdir = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Box expResult = null;
 //        Box result = instance.pixFindPageForeground(pixs, threshold, mindist, erasedist, pagenum, showmorph, display, pdfdir);
 //        assertEquals(expResult, result);
@@ -21514,7 +21517,7 @@ public class LeptonicaTest {
 //        Boxa.ByReference[] pboxa = null;
 //        Pixa.ByReference[] ppixa = null;
 //        Pix.ByReference[] ppixdebug = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixSplitIntoCharacters(pixs, minw, minh, pboxa, ppixa, ppixdebug);
 //        assertEquals(expResult, result);
@@ -21532,7 +21535,7 @@ public class LeptonicaTest {
 //        int delta = 0;
 //        int mindel = 0;
 //        Pix.ByReference[] ppixdebug = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxa expResult = null;
 //        Boxa result = instance.pixSplitComponentWithProfile(pixs, delta, mindel, ppixdebug);
 //        assertEquals(expResult, result);
@@ -21552,7 +21555,7 @@ public class LeptonicaTest {
 //        int rval = 0;
 //        int gval = 0;
 //        int bval = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixSetSelectCmap(pixs, box, sindex, rval, gval, bval);
 //        assertEquals(expResult, result);
@@ -21572,7 +21575,7 @@ public class LeptonicaTest {
 //        int rval = 0;
 //        int gval = 0;
 //        int bval = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixColorGrayRegionsCmap(pixs, boxa, type, rval, gval, bval);
 //        assertEquals(expResult, result);
@@ -21592,7 +21595,7 @@ public class LeptonicaTest {
 //        int rval = 0;
 //        int gval = 0;
 //        int bval = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixColorGrayCmap(pixs, box, type, rval, gval, bval);
 //        assertEquals(expResult, result);
@@ -21612,7 +21615,7 @@ public class LeptonicaTest {
 //        int gval = 0;
 //        int bval = 0;
 //        Numa.ByReference[] pna = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.addColorizedGrayToCmap(cmap, type, rval, gval, bval, pna);
 //        assertEquals(expResult, result);
@@ -21634,7 +21637,7 @@ public class LeptonicaTest {
 //        int rval = 0;
 //        int gval = 0;
 //        int bval = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixSetSelectMaskedCmap(pixs, pixm, x, y, sindex, rval, gval, bval);
 //        assertEquals(expResult, result);
@@ -21655,7 +21658,7 @@ public class LeptonicaTest {
 //        int rval = 0;
 //        int gval = 0;
 //        int bval = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixSetMaskedCmap(pixs, pixm, x, y, rval, gval, bval);
 //        assertEquals(expResult, result);
@@ -21671,7 +21674,7 @@ public class LeptonicaTest {
 //        System.out.println("parseForProtos");
 //        String filein = "";
 //        String prestring = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.parseForProtos(filein, prestring);
 //        assertEquals(expResult, result);
@@ -21693,7 +21696,7 @@ public class LeptonicaTest {
 //        int maxperim = 0;
 //        float fract = 0.0F;
 //        int maxpops = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxa expResult = null;
 //        Boxa result = instance.boxaGetWhiteblocks(boxas, box, sortflag, maxboxes, maxoverlap, maxperim, fract, maxpops);
 //        assertEquals(expResult, result);
@@ -21709,7 +21712,7 @@ public class LeptonicaTest {
 //        System.out.println("boxaPruneSortedOnOverlap");
 //        Boxa boxas = null;
 //        float maxoverlap = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxa expResult = null;
 //        Boxa result = instance.boxaPruneSortedOnOverlap(boxas, maxoverlap);
 //        assertEquals(expResult, result);
@@ -21731,7 +21734,7 @@ public class LeptonicaTest {
 //        int quality = 0;
 //        String title = "";
 //        String fileout = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.convertFilesToPdf(dirname, substr, res, scalefactor, type, quality, title, fileout);
 //        assertEquals(expResult, result);
@@ -21752,7 +21755,7 @@ public class LeptonicaTest {
 //        int quality = 0;
 //        String title = "";
 //        String fileout = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.saConvertFilesToPdf(sa, res, scalefactor, type, quality, title, fileout);
 //        assertEquals(expResult, result);
@@ -21774,7 +21777,7 @@ public class LeptonicaTest {
 //        String title = "";
 //        PointerByReference pdata = null;
 //        NativeSizeByReference pnbytes = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.saConvertFilesToPdfData(sa, res, scalefactor, type, quality, title, pdata, pnbytes);
 //        assertEquals(expResult, result);
@@ -21790,7 +21793,7 @@ public class LeptonicaTest {
 //        System.out.println("selectDefaultPdfEncoding");
 //        Pix pix = null;
 //        IntBuffer ptype = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.selectDefaultPdfEncoding(pix, ptype);
 //        assertEquals(expResult, result);
@@ -21808,7 +21811,7 @@ public class LeptonicaTest {
 //        String substr = "";
 //        String title = "";
 //        String fileout = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.convertUnscaledFilesToPdf(dirname, substr, title, fileout);
 //        assertEquals(expResult, result);
@@ -21825,7 +21828,7 @@ public class LeptonicaTest {
 //        Sarray sa = null;
 //        String title = "";
 //        String fileout = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.saConvertUnscaledFilesToPdf(sa, title, fileout);
 //        assertEquals(expResult, result);
@@ -21843,7 +21846,7 @@ public class LeptonicaTest {
 //        String title = "";
 //        PointerByReference pdata = null;
 //        NativeSizeByReference pnbytes = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.saConvertUnscaledFilesToPdfData(sa, title, pdata, pnbytes);
 //        assertEquals(expResult, result);
@@ -21861,7 +21864,7 @@ public class LeptonicaTest {
 //        String title = "";
 //        PointerByReference pdata = null;
 //        NativeSizeByReference pnbytes = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.convertUnscaledToPdfData(fname, title, pdata, pnbytes);
 //        assertEquals(expResult, result);
@@ -21882,7 +21885,7 @@ public class LeptonicaTest {
 //        int quality = 0;
 //        String title = "";
 //        String fileout = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixaConvertToPdf(pixa, res, scalefactor, type, quality, title, fileout);
 //        assertEquals(expResult, result);
@@ -21904,7 +21907,7 @@ public class LeptonicaTest {
 //        String title = "";
 //        PointerByReference pdata = null;
 //        NativeSizeByReference pnbytes = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixaConvertToPdfData(pixa, res, scalefactor, type, quality, title, pdata, pnbytes);
 //        assertEquals(expResult, result);
@@ -21928,7 +21931,7 @@ public class LeptonicaTest {
 //        String title = "";
 //        L_Pdf_Data.ByReference[] plpd = null;
 //        int position = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.convertToPdf(filein, type, quality, fileout, x, y, res, title, plpd, position);
 //        assertEquals(expResult, result);
@@ -21952,7 +21955,7 @@ public class LeptonicaTest {
 //        Pointer title = null;
 //        L_Pdf_Data.ByReference[] plpd = null;
 //        int position = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.convertToPdf(filein, type, quality, fileout, x, y, res, title, plpd, position);
 //        assertEquals(expResult, result);
@@ -21977,7 +21980,7 @@ public class LeptonicaTest {
 //        String title = "";
 //        L_Pdf_Data.ByReference[] plpd = null;
 //        int position = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.convertImageDataToPdf(imdata, size, type, quality, fileout, x, y, res, title, plpd, position);
 //        assertEquals(expResult, result);
@@ -22002,7 +22005,7 @@ public class LeptonicaTest {
 //        Pointer title = null;
 //        L_Pdf_Data.ByReference[] plpd = null;
 //        int position = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.convertImageDataToPdf(imdata, size, type, quality, fileout, x, y, res, title, plpd, position);
 //        assertEquals(expResult, result);
@@ -22027,7 +22030,7 @@ public class LeptonicaTest {
 //        String title = "";
 //        L_Pdf_Data.ByReference[] plpd = null;
 //        int position = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.convertToPdfData(filein, type, quality, pdata, pnbytes, x, y, res, title, plpd, position);
 //        assertEquals(expResult, result);
@@ -22052,7 +22055,7 @@ public class LeptonicaTest {
 //        Pointer title = null;
 //        L_Pdf_Data.ByReference[] plpd = null;
 //        int position = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.convertToPdfData(filein, type, quality, pdata, pnbytes, x, y, res, title, plpd, position);
 //        assertEquals(expResult, result);
@@ -22078,7 +22081,7 @@ public class LeptonicaTest {
 //        String title = "";
 //        L_Pdf_Data.ByReference[] plpd = null;
 //        int position = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.convertImageDataToPdfData(imdata, size, type, quality, pdata, pnbytes, x, y, res, title, plpd, position);
 //        assertEquals(expResult, result);
@@ -22104,7 +22107,7 @@ public class LeptonicaTest {
 //        Pointer title = null;
 //        L_Pdf_Data.ByReference[] plpd = null;
 //        int position = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.convertImageDataToPdfData(imdata, size, type, quality, pdata, pnbytes, x, y, res, title, plpd, position);
 //        assertEquals(expResult, result);
@@ -22128,7 +22131,7 @@ public class LeptonicaTest {
 //        String title = "";
 //        L_Pdf_Data.ByReference[] plpd = null;
 //        int position = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixConvertToPdf(pix, type, quality, fileout, x, y, res, title, plpd, position);
 //        assertEquals(expResult, result);
@@ -22152,7 +22155,7 @@ public class LeptonicaTest {
 //        Pointer title = null;
 //        L_Pdf_Data.ByReference[] plpd = null;
 //        int position = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixConvertToPdf(pix, type, quality, fileout, x, y, res, title, plpd, position);
 //        assertEquals(expResult, result);
@@ -22170,7 +22173,7 @@ public class LeptonicaTest {
 //        Pix pix = null;
 //        int res = 0;
 //        String title = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixWriteStreamPdf(fp, pix, res, title);
 //        assertEquals(expResult, result);
@@ -22188,7 +22191,7 @@ public class LeptonicaTest {
 //        Pix pix = null;
 //        int res = 0;
 //        Pointer title = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixWriteStreamPdf(fp, pix, res, title);
 //        assertEquals(expResult, result);
@@ -22207,7 +22210,7 @@ public class LeptonicaTest {
 //        Pix pix = null;
 //        int res = 0;
 //        String title = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixWriteMemPdf(pdata, pnbytes, pix, res, title);
 //        assertEquals(expResult, result);
@@ -22231,7 +22234,7 @@ public class LeptonicaTest {
 //        float scalefactor = 0.0F;
 //        String title = "";
 //        String fileout = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.convertSegmentedFilesToPdf(dirname, substr, res, type, thresh, baa, quality, scalefactor, title, fileout);
 //        assertEquals(expResult, result);
@@ -22249,7 +22252,7 @@ public class LeptonicaTest {
 //        String substr = "";
 //        int numpre = 0;
 //        int numpost = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxaa expResult = null;
 //        Boxaa result = instance.convertNumberedMasksToBoxaa(dirname, substr, numpre, numpost);
 //        assertEquals(expResult, result);
@@ -22272,7 +22275,7 @@ public class LeptonicaTest {
 //        float scalefactor = 0.0F;
 //        String title = "";
 //        String fileout = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.convertToPdfSegmented(filein, res, type, thresh, boxa, quality, scalefactor, title, fileout);
 //        assertEquals(expResult, result);
@@ -22295,7 +22298,7 @@ public class LeptonicaTest {
 //        float scalefactor = 0.0F;
 //        String title = "";
 //        String fileout = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixConvertToPdfSegmented(pixs, res, type, thresh, boxa, quality, scalefactor, title, fileout);
 //        assertEquals(expResult, result);
@@ -22319,7 +22322,7 @@ public class LeptonicaTest {
 //        String title = "";
 //        PointerByReference pdata = null;
 //        NativeSizeByReference pnbytes = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.convertToPdfDataSegmented(filein, res, type, thresh, boxa, quality, scalefactor, title, pdata, pnbytes);
 //        assertEquals(expResult, result);
@@ -22343,7 +22346,7 @@ public class LeptonicaTest {
 //        String title = "";
 //        PointerByReference pdata = null;
 //        NativeSizeByReference pnbytes = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixConvertToPdfDataSegmented(pixs, res, type, thresh, boxa, quality, scalefactor, title, pdata, pnbytes);
 //        assertEquals(expResult, result);
@@ -22360,7 +22363,7 @@ public class LeptonicaTest {
 //        String dirname = "";
 //        String substr = "";
 //        String fileout = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.concatenatePdf(dirname, substr, fileout);
 //        assertEquals(expResult, result);
@@ -22376,7 +22379,7 @@ public class LeptonicaTest {
 //        System.out.println("saConcatenatePdf");
 //        Sarray sa = null;
 //        String fileout = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.saConcatenatePdf(sa, fileout);
 //        assertEquals(expResult, result);
@@ -22392,7 +22395,7 @@ public class LeptonicaTest {
 //        System.out.println("ptraConcatenatePdf");
 //        L_Ptra pa = null;
 //        String fileout = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ptraConcatenatePdf(pa, fileout);
 //        assertEquals(expResult, result);
@@ -22410,7 +22413,7 @@ public class LeptonicaTest {
 //        String substr = "";
 //        PointerByReference pdata = null;
 //        NativeSizeByReference pnbytes = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.concatenatePdfToData(dirname, substr, pdata, pnbytes);
 //        assertEquals(expResult, result);
@@ -22427,7 +22430,7 @@ public class LeptonicaTest {
 //        Sarray sa = null;
 //        PointerByReference pdata = null;
 //        NativeSizeByReference pnbytes = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.saConcatenatePdfToData(sa, pdata, pnbytes);
 //        assertEquals(expResult, result);
@@ -22452,7 +22455,7 @@ public class LeptonicaTest {
 //        String title = "";
 //        L_Pdf_Data.ByReference[] plpd = null;
 //        int position = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixConvertToPdfData(pix, type, quality, pdata, pnbytes, x, y, res, title, plpd, position);
 //        assertEquals(expResult, result);
@@ -22477,7 +22480,7 @@ public class LeptonicaTest {
 //        Pointer title = null;
 //        L_Pdf_Data.ByReference[] plpd = null;
 //        int position = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixConvertToPdfData(pix, type, quality, pdata, pnbytes, x, y, res, title, plpd, position);
 //        assertEquals(expResult, result);
@@ -22495,7 +22498,7 @@ public class LeptonicaTest {
 //        Sarray sa = null;
 //        PointerByReference pdata = null;
 //        NativeSizeByReference pnbytes = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ptraConcatenatePdfToData(pa_data, sa, pdata, pnbytes);
 //        assertEquals(expResult, result);
@@ -22513,7 +22516,7 @@ public class LeptonicaTest {
 //        Pix pix = null;
 //        int quality = 0;
 //        L_Compressed_Data.ByReference[] pcid = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.l_generateCIDataForPdf(fname, pix, quality, pcid);
 //        assertEquals(expResult, result);
@@ -22531,7 +22534,7 @@ public class LeptonicaTest {
 //        Pix pix = null;
 //        int quality = 0;
 //        L_Compressed_Data.ByReference[] pcid = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.l_generateCIDataForPdf(fname, pix, quality, pcid);
 //        assertEquals(expResult, result);
@@ -22546,7 +22549,7 @@ public class LeptonicaTest {
 //    public void testL_generateFlateDataPdf() {
 //        System.out.println("l_generateFlateDataPdf");
 //        String fname = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Compressed_Data expResult = null;
 //        L_Compressed_Data result = instance.l_generateFlateDataPdf(fname);
 //        assertEquals(expResult, result);
@@ -22562,7 +22565,7 @@ public class LeptonicaTest {
 //        System.out.println("l_generateJpegData");
 //        String fname = "";
 //        int ascii85flag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Compressed_Data expResult = null;
 //        L_Compressed_Data result = instance.l_generateJpegData(fname, ascii85flag);
 //        assertEquals(expResult, result);
@@ -22581,7 +22584,7 @@ public class LeptonicaTest {
 //        int quality = 0;
 //        int ascii85 = 0;
 //        L_Compressed_Data.ByReference[] pcid = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.l_generateCIData(fname, type, quality, ascii85, pcid);
 //        assertEquals(expResult, result);
@@ -22600,7 +22603,7 @@ public class LeptonicaTest {
 //        int quality = 0;
 //        int ascii85 = 0;
 //        L_Compressed_Data.ByReference[] pcid = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.l_generateCIData(fname, type, quality, ascii85, pcid);
 //        assertEquals(expResult, result);
@@ -22619,7 +22622,7 @@ public class LeptonicaTest {
 //        int quality = 0;
 //        int ascii85 = 0;
 //        L_Compressed_Data.ByReference[] pcid = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixGenerateCIData(pixs, type, quality, ascii85, pcid);
 //        assertEquals(expResult, result);
@@ -22635,7 +22638,7 @@ public class LeptonicaTest {
 //        System.out.println("l_generateFlateData");
 //        String fname = "";
 //        int ascii85flag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Compressed_Data expResult = null;
 //        L_Compressed_Data result = instance.l_generateFlateData(fname, ascii85flag);
 //        assertEquals(expResult, result);
@@ -22651,7 +22654,7 @@ public class LeptonicaTest {
 //        System.out.println("l_generateG4Data");
 //        String fname = "";
 //        int ascii85flag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Compressed_Data expResult = null;
 //        L_Compressed_Data result = instance.l_generateG4Data(fname, ascii85flag);
 //        assertEquals(expResult, result);
@@ -22669,7 +22672,7 @@ public class LeptonicaTest {
 //        String title = "";
 //        PointerByReference pdata = null;
 //        NativeSizeByReference pnbytes = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.cidConvertToPdfData(cid, title, pdata, pnbytes);
 //        assertEquals(expResult, result);
@@ -22684,7 +22687,7 @@ public class LeptonicaTest {
 //    public void testL_CIDataDestroy() {
 //        System.out.println("l_CIDataDestroy");
 //        L_Compressed_Data.ByReference[] pcid = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.l_CIDataDestroy(pcid);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -22697,7 +22700,7 @@ public class LeptonicaTest {
 //    public void testL_pdfSetG4ImageMask() {
 //        System.out.println("l_pdfSetG4ImageMask");
 //        int flag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.l_pdfSetG4ImageMask(flag);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -22710,7 +22713,7 @@ public class LeptonicaTest {
 //    public void testL_pdfSetDateAndVersion() {
 //        System.out.println("l_pdfSetDateAndVersion");
 //        int flag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.l_pdfSetDateAndVersion(flag);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -22724,7 +22727,7 @@ public class LeptonicaTest {
 //        System.out.println("setPixMemoryManager");
 //        Leptonica.setPixMemoryManager_allocator_callback allocator = null;
 //        Leptonica.setPixMemoryManager_deallocator_callback deallocator = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.setPixMemoryManager(allocator, deallocator);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -22739,7 +22742,7 @@ public class LeptonicaTest {
 //        int width = 0;
 //        int height = 0;
 //        int depth = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixCreate(width, height, depth);
 //        assertEquals(expResult, result);
@@ -22756,7 +22759,7 @@ public class LeptonicaTest {
 //        int width = 0;
 //        int height = 0;
 //        int depth = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixCreateNoInit(width, height, depth);
 //        assertEquals(expResult, result);
@@ -22771,7 +22774,7 @@ public class LeptonicaTest {
 //    public void testPixCreateTemplate() {
 //        System.out.println("pixCreateTemplate");
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixCreateTemplate(pixs);
 //        assertEquals(expResult, result);
@@ -22786,7 +22789,7 @@ public class LeptonicaTest {
 //    public void testPixCreateTemplateNoInit() {
 //        System.out.println("pixCreateTemplateNoInit");
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixCreateTemplateNoInit(pixs);
 //        assertEquals(expResult, result);
@@ -22803,7 +22806,7 @@ public class LeptonicaTest {
 //        int width = 0;
 //        int height = 0;
 //        int depth = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixCreateHeader(width, height, depth);
 //        assertEquals(expResult, result);
@@ -22818,7 +22821,7 @@ public class LeptonicaTest {
 //    public void testPixClone() {
 //        System.out.println("pixClone");
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixClone(pixs);
 //        assertEquals(expResult, result);
@@ -22833,7 +22836,7 @@ public class LeptonicaTest {
 //    public void testPixDestroy() {
 //        System.out.println("pixDestroy");
 //        Pix.ByReference[] ppix = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.pixDestroy(ppix);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -22847,7 +22850,7 @@ public class LeptonicaTest {
 //        System.out.println("pixCopy");
 //        Pix pixd = null;
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixCopy(pixd, pixs);
 //        assertEquals(expResult, result);
@@ -22863,7 +22866,7 @@ public class LeptonicaTest {
 //        System.out.println("pixResizeImageData");
 //        Pix pixd = null;
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixResizeImageData(pixd, pixs);
 //        assertEquals(expResult, result);
@@ -22879,7 +22882,7 @@ public class LeptonicaTest {
 //        System.out.println("pixCopyColormap");
 //        Pix pixd = null;
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixCopyColormap(pixd, pixs);
 //        assertEquals(expResult, result);
@@ -22895,7 +22898,7 @@ public class LeptonicaTest {
 //        System.out.println("pixSizesEqual");
 //        Pix pix1 = null;
 //        Pix pix2 = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixSizesEqual(pix1, pix2);
 //        assertEquals(expResult, result);
@@ -22913,7 +22916,7 @@ public class LeptonicaTest {
 //        Pix.ByReference[] ppixs = null;
 //        int copytext = 0;
 //        int copyformat = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixTransferAllData(pixd, ppixs, copytext, copyformat);
 //        assertEquals(expResult, result);
@@ -22929,7 +22932,7 @@ public class LeptonicaTest {
 //        System.out.println("pixSwapAndDestroy");
 //        Pix.ByReference[] ppixd = null;
 //        Pix.ByReference[] ppixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixSwapAndDestroy(ppixd, ppixs);
 //        assertEquals(expResult, result);
@@ -22944,7 +22947,7 @@ public class LeptonicaTest {
 //    public void testPixGetWidth() {
 //        System.out.println("pixGetWidth");
 //        Pix pix = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixGetWidth(pix);
 //        assertEquals(expResult, result);
@@ -22960,7 +22963,7 @@ public class LeptonicaTest {
 //        System.out.println("pixSetWidth");
 //        Pix pix = null;
 //        int width = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixSetWidth(pix, width);
 //        assertEquals(expResult, result);
@@ -22975,7 +22978,7 @@ public class LeptonicaTest {
 //    public void testPixGetHeight() {
 //        System.out.println("pixGetHeight");
 //        Pix pix = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixGetHeight(pix);
 //        assertEquals(expResult, result);
@@ -22991,7 +22994,7 @@ public class LeptonicaTest {
 //        System.out.println("pixSetHeight");
 //        Pix pix = null;
 //        int height = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixSetHeight(pix, height);
 //        assertEquals(expResult, result);
@@ -23006,7 +23009,7 @@ public class LeptonicaTest {
 //    public void testPixGetDepth() {
 //        System.out.println("pixGetDepth");
 //        Pix pix = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixGetDepth(pix);
 //        assertEquals(expResult, result);
@@ -23022,7 +23025,7 @@ public class LeptonicaTest {
 //        System.out.println("pixSetDepth");
 //        Pix pix = null;
 //        int depth = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixSetDepth(pix, depth);
 //        assertEquals(expResult, result);
@@ -23040,7 +23043,7 @@ public class LeptonicaTest {
 //        IntBuffer pw = null;
 //        IntBuffer ph = null;
 //        IntBuffer pd = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixGetDimensions(pix, pw, ph, pd);
 //        assertEquals(expResult, result);
@@ -23058,7 +23061,7 @@ public class LeptonicaTest {
 //        int w = 0;
 //        int h = 0;
 //        int d = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixSetDimensions(pix, w, h, d);
 //        assertEquals(expResult, result);
@@ -23074,7 +23077,7 @@ public class LeptonicaTest {
 //        System.out.println("pixCopyDimensions");
 //        Pix pixd = null;
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixCopyDimensions(pixd, pixs);
 //        assertEquals(expResult, result);
@@ -23089,7 +23092,7 @@ public class LeptonicaTest {
 //    public void testPixGetSpp() {
 //        System.out.println("pixGetSpp");
 //        Pix pix = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixGetSpp(pix);
 //        assertEquals(expResult, result);
@@ -23105,7 +23108,7 @@ public class LeptonicaTest {
 //        System.out.println("pixSetSpp");
 //        Pix pix = null;
 //        int spp = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixSetSpp(pix, spp);
 //        assertEquals(expResult, result);
@@ -23121,7 +23124,7 @@ public class LeptonicaTest {
 //        System.out.println("pixCopySpp");
 //        Pix pixd = null;
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixCopySpp(pixd, pixs);
 //        assertEquals(expResult, result);
@@ -23136,7 +23139,7 @@ public class LeptonicaTest {
 //    public void testPixGetWpl() {
 //        System.out.println("pixGetWpl");
 //        Pix pix = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixGetWpl(pix);
 //        assertEquals(expResult, result);
@@ -23152,7 +23155,7 @@ public class LeptonicaTest {
 //        System.out.println("pixSetWpl");
 //        Pix pix = null;
 //        int wpl = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixSetWpl(pix, wpl);
 //        assertEquals(expResult, result);
@@ -23167,7 +23170,7 @@ public class LeptonicaTest {
 //    public void testPixGetRefcount() {
 //        System.out.println("pixGetRefcount");
 //        Pix pix = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixGetRefcount(pix);
 //        assertEquals(expResult, result);
@@ -23183,7 +23186,7 @@ public class LeptonicaTest {
 //        System.out.println("pixChangeRefcount");
 //        Pix pix = null;
 //        int delta = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixChangeRefcount(pix, delta);
 //        assertEquals(expResult, result);
@@ -23198,7 +23201,7 @@ public class LeptonicaTest {
 //    public void testPixGetXRes() {
 //        System.out.println("pixGetXRes");
 //        Pix pix = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixGetXRes(pix);
 //        assertEquals(expResult, result);
@@ -23214,7 +23217,7 @@ public class LeptonicaTest {
 //        System.out.println("pixSetXRes");
 //        Pix pix = null;
 //        int res = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixSetXRes(pix, res);
 //        assertEquals(expResult, result);
@@ -23229,7 +23232,7 @@ public class LeptonicaTest {
 //    public void testPixGetYRes() {
 //        System.out.println("pixGetYRes");
 //        Pix pix = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixGetYRes(pix);
 //        assertEquals(expResult, result);
@@ -23245,7 +23248,7 @@ public class LeptonicaTest {
 //        System.out.println("pixSetYRes");
 //        Pix pix = null;
 //        int res = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixSetYRes(pix, res);
 //        assertEquals(expResult, result);
@@ -23262,7 +23265,7 @@ public class LeptonicaTest {
 //        Pix pix = null;
 //        IntBuffer pxres = null;
 //        IntBuffer pyres = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixGetResolution(pix, pxres, pyres);
 //        assertEquals(expResult, result);
@@ -23279,7 +23282,7 @@ public class LeptonicaTest {
 //        Pix pix = null;
 //        int xres = 0;
 //        int yres = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixSetResolution(pix, xres, yres);
 //        assertEquals(expResult, result);
@@ -23295,7 +23298,7 @@ public class LeptonicaTest {
 //        System.out.println("pixCopyResolution");
 //        Pix pixd = null;
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixCopyResolution(pixd, pixs);
 //        assertEquals(expResult, result);
@@ -23312,7 +23315,7 @@ public class LeptonicaTest {
 //        Pix pix = null;
 //        float xscale = 0.0F;
 //        float yscale = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixScaleResolution(pix, xscale, yscale);
 //        assertEquals(expResult, result);
@@ -23327,7 +23330,7 @@ public class LeptonicaTest {
 //    public void testPixGetInputFormat() {
 //        System.out.println("pixGetInputFormat");
 //        Pix pix = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixGetInputFormat(pix);
 //        assertEquals(expResult, result);
@@ -23343,7 +23346,7 @@ public class LeptonicaTest {
 //        System.out.println("pixSetInputFormat");
 //        Pix pix = null;
 //        int informat = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixSetInputFormat(pix, informat);
 //        assertEquals(expResult, result);
@@ -23359,7 +23362,7 @@ public class LeptonicaTest {
 //        System.out.println("pixCopyInputFormat");
 //        Pix pixd = null;
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixCopyInputFormat(pixd, pixs);
 //        assertEquals(expResult, result);
@@ -23374,7 +23377,7 @@ public class LeptonicaTest {
 //    public void testPixGetText() {
 //        System.out.println("pixGetText");
 //        Pix pix = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.pixGetText(pix);
 //        assertEquals(expResult, result);
@@ -23390,7 +23393,7 @@ public class LeptonicaTest {
 //        System.out.println("pixSetText");
 //        Pix pix = null;
 //        String textstring = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixSetText(pix, textstring);
 //        assertEquals(expResult, result);
@@ -23406,7 +23409,7 @@ public class LeptonicaTest {
 //        System.out.println("pixAddText");
 //        Pix pix = null;
 //        String textstring = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixAddText(pix, textstring);
 //        assertEquals(expResult, result);
@@ -23422,7 +23425,7 @@ public class LeptonicaTest {
 //        System.out.println("pixCopyText");
 //        Pix pixd = null;
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixCopyText(pixd, pixs);
 //        assertEquals(expResult, result);
@@ -23437,7 +23440,7 @@ public class LeptonicaTest {
 //    public void testPixGetColormap() {
 //        System.out.println("pixGetColormap");
 //        Pix pix = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        PixColormap expResult = null;
 //        PixColormap result = instance.pixGetColormap(pix);
 //        assertEquals(expResult, result);
@@ -23453,7 +23456,7 @@ public class LeptonicaTest {
 //        System.out.println("pixSetColormap");
 //        Pix pix = null;
 //        PixColormap colormap = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixSetColormap(pix, colormap);
 //        assertEquals(expResult, result);
@@ -23468,7 +23471,7 @@ public class LeptonicaTest {
 //    public void testPixDestroyColormap() {
 //        System.out.println("pixDestroyColormap");
 //        Pix pix = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixDestroyColormap(pix);
 //        assertEquals(expResult, result);
@@ -23483,7 +23486,7 @@ public class LeptonicaTest {
 //    public void testPixGetData() {
 //        System.out.println("pixGetData");
 //        Pix pix = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        IntByReference expResult = null;
 //        IntByReference result = instance.pixGetData(pix);
 //        assertEquals(expResult, result);
@@ -23499,7 +23502,7 @@ public class LeptonicaTest {
 //        System.out.println("pixSetData");
 //        Pix pix = null;
 //        IntBuffer data = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixSetData(pix, data);
 //        assertEquals(expResult, result);
@@ -23514,7 +23517,7 @@ public class LeptonicaTest {
 //    public void testPixExtractData() {
 //        System.out.println("pixExtractData");
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        IntByReference expResult = null;
 //        IntByReference result = instance.pixExtractData(pixs);
 //        assertEquals(expResult, result);
@@ -23529,7 +23532,7 @@ public class LeptonicaTest {
 //    public void testPixFreeData() {
 //        System.out.println("pixFreeData");
 //        Pix pix = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixFreeData(pix);
 //        assertEquals(expResult, result);
@@ -23545,7 +23548,7 @@ public class LeptonicaTest {
 //        System.out.println("pixGetLinePtrs");
 //        Pix pix = null;
 //        IntBuffer psize = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        PointerByReference expResult = null;
 //        PointerByReference result = instance.pixGetLinePtrs(pix, psize);
 //        assertEquals(expResult, result);
@@ -23562,7 +23565,7 @@ public class LeptonicaTest {
 //        PointerByReference fp = null;
 //        Pix pix = null;
 //        String text = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixPrintStreamInfo(fp, pix, text);
 //        assertEquals(expResult, result);
@@ -23579,7 +23582,7 @@ public class LeptonicaTest {
 //        PointerByReference fp = null;
 //        Pix pix = null;
 //        Pointer text = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixPrintStreamInfo(fp, pix, text);
 //        assertEquals(expResult, result);
@@ -23597,7 +23600,7 @@ public class LeptonicaTest {
 //        int x = 0;
 //        int y = 0;
 //        IntBuffer pval = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixGetPixel(pix, x, y, pval);
 //        assertEquals(expResult, result);
@@ -23615,7 +23618,7 @@ public class LeptonicaTest {
 //        int x = 0;
 //        int y = 0;
 //        int val = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixSetPixel(pix, x, y, val);
 //        assertEquals(expResult, result);
@@ -23635,7 +23638,7 @@ public class LeptonicaTest {
 //        IntBuffer prval = null;
 //        IntBuffer pgval = null;
 //        IntBuffer pbval = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixGetRGBPixel(pix, x, y, prval, pgval, pbval);
 //        assertEquals(expResult, result);
@@ -23655,7 +23658,7 @@ public class LeptonicaTest {
 //        int rval = 0;
 //        int gval = 0;
 //        int bval = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixSetRGBPixel(pix, x, y, rval, gval, bval);
 //        assertEquals(expResult, result);
@@ -23673,7 +23676,7 @@ public class LeptonicaTest {
 //        IntBuffer pval = null;
 //        IntBuffer px = null;
 //        IntBuffer py = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixGetRandomPixel(pix, pval, px, py);
 //        assertEquals(expResult, result);
@@ -23690,7 +23693,7 @@ public class LeptonicaTest {
 //        Pix pix = null;
 //        int x = 0;
 //        int y = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixClearPixel(pix, x, y);
 //        assertEquals(expResult, result);
@@ -23707,7 +23710,7 @@ public class LeptonicaTest {
 //        Pix pix = null;
 //        int x = 0;
 //        int y = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixFlipPixel(pix, x, y);
 //        assertEquals(expResult, result);
@@ -23725,7 +23728,7 @@ public class LeptonicaTest {
 //        int x = 0;
 //        int depth = 0;
 //        int val = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.setPixelLow(line, x, depth, val);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -23740,7 +23743,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int op = 0;
 //        IntBuffer pval = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixGetBlackOrWhiteVal(pixs, op, pval);
 //        assertEquals(expResult, result);
@@ -23755,7 +23758,7 @@ public class LeptonicaTest {
 //    public void testPixClearAll() {
 //        System.out.println("pixClearAll");
 //        Pix pix = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixClearAll(pix);
 //        assertEquals(expResult, result);
@@ -23770,7 +23773,7 @@ public class LeptonicaTest {
 //    public void testPixSetAll() {
 //        System.out.println("pixSetAll");
 //        Pix pix = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixSetAll(pix);
 //        assertEquals(expResult, result);
@@ -23786,7 +23789,7 @@ public class LeptonicaTest {
 //        System.out.println("pixSetAllGray");
 //        Pix pix = null;
 //        int grayval = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixSetAllGray(pix, grayval);
 //        assertEquals(expResult, result);
@@ -23802,7 +23805,7 @@ public class LeptonicaTest {
 //        System.out.println("pixSetAllArbitrary");
 //        Pix pix = null;
 //        int val = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixSetAllArbitrary(pix, val);
 //        assertEquals(expResult, result);
@@ -23818,7 +23821,7 @@ public class LeptonicaTest {
 //        System.out.println("pixSetBlackOrWhite");
 //        Pix pixs = null;
 //        int op = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixSetBlackOrWhite(pixs, op);
 //        assertEquals(expResult, result);
@@ -23835,7 +23838,7 @@ public class LeptonicaTest {
 //        Pix pix = null;
 //        int comp = 0;
 //        int val = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixSetComponentArbitrary(pix, comp, val);
 //        assertEquals(expResult, result);
@@ -23851,7 +23854,7 @@ public class LeptonicaTest {
 //        System.out.println("pixClearInRect");
 //        Pix pix = null;
 //        Box box = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixClearInRect(pix, box);
 //        assertEquals(expResult, result);
@@ -23867,7 +23870,7 @@ public class LeptonicaTest {
 //        System.out.println("pixSetInRect");
 //        Pix pix = null;
 //        Box box = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixSetInRect(pix, box);
 //        assertEquals(expResult, result);
@@ -23884,7 +23887,7 @@ public class LeptonicaTest {
 //        Pix pix = null;
 //        Box box = null;
 //        int val = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixSetInRectArbitrary(pix, box, val);
 //        assertEquals(expResult, result);
@@ -23902,7 +23905,7 @@ public class LeptonicaTest {
 //        Box box = null;
 //        int val = 0;
 //        float fract = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixBlendInRect(pixs, box, val, fract);
 //        assertEquals(expResult, result);
@@ -23918,7 +23921,7 @@ public class LeptonicaTest {
 //        System.out.println("pixSetPadBits");
 //        Pix pix = null;
 //        int val = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixSetPadBits(pix, val);
 //        assertEquals(expResult, result);
@@ -23936,7 +23939,7 @@ public class LeptonicaTest {
 //        int by = 0;
 //        int bh = 0;
 //        int val = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixSetPadBitsBand(pix, by, bh, val);
 //        assertEquals(expResult, result);
@@ -23956,7 +23959,7 @@ public class LeptonicaTest {
 //        int top = 0;
 //        int bot = 0;
 //        int op = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixSetOrClearBorder(pixs, left, right, top, bot, op);
 //        assertEquals(expResult, result);
@@ -23976,7 +23979,7 @@ public class LeptonicaTest {
 //        int top = 0;
 //        int bot = 0;
 //        int val = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixSetBorderVal(pixs, left, right, top, bot, val);
 //        assertEquals(expResult, result);
@@ -23993,7 +23996,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int dist = 0;
 //        int val = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixSetBorderRingVal(pixs, dist, val);
 //        assertEquals(expResult, result);
@@ -24012,7 +24015,7 @@ public class LeptonicaTest {
 //        int right = 0;
 //        int top = 0;
 //        int bot = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixSetMirroredBorder(pixs, left, right, top, bot);
 //        assertEquals(expResult, result);
@@ -24032,7 +24035,7 @@ public class LeptonicaTest {
 //        int right = 0;
 //        int top = 0;
 //        int bot = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixCopyBorder(pixd, pixs, left, right, top, bot);
 //        assertEquals(expResult, result);
@@ -24049,7 +24052,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int npix = 0;
 //        int val = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixAddBorder(pixs, npix, val);
 //        assertEquals(expResult, result);
@@ -24069,7 +24072,7 @@ public class LeptonicaTest {
 //        int top = 0;
 //        int bot = 0;
 //        int op = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixAddBlackOrWhiteBorder(pixs, left, right, top, bot, op);
 //        assertEquals(expResult, result);
@@ -24089,7 +24092,7 @@ public class LeptonicaTest {
 //        int top = 0;
 //        int bot = 0;
 //        int val = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixAddBorderGeneral(pixs, left, right, top, bot, val);
 //        assertEquals(expResult, result);
@@ -24105,7 +24108,7 @@ public class LeptonicaTest {
 //        System.out.println("pixRemoveBorder");
 //        Pix pixs = null;
 //        int npix = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixRemoveBorder(pixs, npix);
 //        assertEquals(expResult, result);
@@ -24124,7 +24127,7 @@ public class LeptonicaTest {
 //        int right = 0;
 //        int top = 0;
 //        int bot = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixRemoveBorderGeneral(pixs, left, right, top, bot);
 //        assertEquals(expResult, result);
@@ -24141,7 +24144,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int wd = 0;
 //        int hd = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixRemoveBorderToSize(pixs, wd, hd);
 //        assertEquals(expResult, result);
@@ -24160,7 +24163,7 @@ public class LeptonicaTest {
 //        int right = 0;
 //        int top = 0;
 //        int bot = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixAddMirroredBorder(pixs, left, right, top, bot);
 //        assertEquals(expResult, result);
@@ -24179,7 +24182,7 @@ public class LeptonicaTest {
 //        int right = 0;
 //        int top = 0;
 //        int bot = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixAddRepeatedBorder(pixs, left, right, top, bot);
 //        assertEquals(expResult, result);
@@ -24198,7 +24201,7 @@ public class LeptonicaTest {
 //        int right = 0;
 //        int top = 0;
 //        int bot = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixAddMixedBorder(pixs, left, right, top, bot);
 //        assertEquals(expResult, result);
@@ -24217,7 +24220,7 @@ public class LeptonicaTest {
 //        int right = 0;
 //        int top = 0;
 //        int bot = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixAddContinuedBorder(pixs, left, right, top, bot);
 //        assertEquals(expResult, result);
@@ -24235,7 +24238,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        float shiftx = 0.0F;
 //        float shifty = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixShiftAndTransferAlpha(pixd, pixs, shiftx, shifty);
 //        assertEquals(expResult, result);
@@ -24252,7 +24255,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int val = 0;
 //        int maxw = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixDisplayLayersRGBA(pixs, val, maxw);
 //        assertEquals(expResult, result);
@@ -24269,7 +24272,7 @@ public class LeptonicaTest {
 //        Pix pixr = null;
 //        Pix pixg = null;
 //        Pix pixb = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixCreateRGBImage(pixr, pixg, pixb);
 //        assertEquals(expResult, result);
@@ -24285,7 +24288,7 @@ public class LeptonicaTest {
 //        System.out.println("pixGetRGBComponent");
 //        Pix pixs = null;
 //        int comp = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixGetRGBComponent(pixs, comp);
 //        assertEquals(expResult, result);
@@ -24302,7 +24305,7 @@ public class LeptonicaTest {
 //        Pix pixd = null;
 //        Pix pixs = null;
 //        int comp = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixSetRGBComponent(pixd, pixs, comp);
 //        assertEquals(expResult, result);
@@ -24318,7 +24321,7 @@ public class LeptonicaTest {
 //        System.out.println("pixGetRGBComponentCmap");
 //        Pix pixs = null;
 //        int comp = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixGetRGBComponentCmap(pixs, comp);
 //        assertEquals(expResult, result);
@@ -24335,7 +24338,7 @@ public class LeptonicaTest {
 //        Pix pixd = null;
 //        Pix pixs = null;
 //        int comp = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixCopyRGBComponent(pixd, pixs, comp);
 //        assertEquals(expResult, result);
@@ -24353,7 +24356,7 @@ public class LeptonicaTest {
 //        int gval = 0;
 //        int bval = 0;
 //        IntBuffer ppixel = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.composeRGBPixel(rval, gval, bval, ppixel);
 //        assertEquals(expResult, result);
@@ -24372,7 +24375,7 @@ public class LeptonicaTest {
 //        int bval = 0;
 //        int aval = 0;
 //        IntBuffer ppixel = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.composeRGBAPixel(rval, gval, bval, aval, ppixel);
 //        assertEquals(expResult, result);
@@ -24390,7 +24393,7 @@ public class LeptonicaTest {
 //        IntBuffer prval = null;
 //        IntBuffer pgval = null;
 //        IntBuffer pbval = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.extractRGBValues(pixel, prval, pgval, pbval);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -24407,7 +24410,7 @@ public class LeptonicaTest {
 //        IntBuffer pgval = null;
 //        IntBuffer pbval = null;
 //        IntBuffer paval = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.extractRGBAValues(pixel, prval, pgval, pbval, paval);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -24421,7 +24424,7 @@ public class LeptonicaTest {
 //        System.out.println("extractMinMaxComponent");
 //        int pixel = 0;
 //        int type = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.extractMinMaxComponent(pixel, type);
 //        assertEquals(expResult, result);
@@ -24440,7 +24443,7 @@ public class LeptonicaTest {
 //        ByteBuffer bufr = null;
 //        ByteBuffer bufg = null;
 //        ByteBuffer bufb = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixGetRGBLine(pixs, row, bufr, bufg, bufb);
 //        assertEquals(expResult, result);
@@ -24455,7 +24458,7 @@ public class LeptonicaTest {
 //    public void testPixEndianByteSwapNew() {
 //        System.out.println("pixEndianByteSwapNew");
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixEndianByteSwapNew(pixs);
 //        assertEquals(expResult, result);
@@ -24470,7 +24473,7 @@ public class LeptonicaTest {
 //    public void testPixEndianByteSwap() {
 //        System.out.println("pixEndianByteSwap");
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixEndianByteSwap(pixs);
 //        assertEquals(expResult, result);
@@ -24487,7 +24490,7 @@ public class LeptonicaTest {
 //        IntBuffer datad = null;
 //        IntBuffer datas = null;
 //        int wpl = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.lineEndianByteSwap(datad, datas, wpl);
 //        assertEquals(expResult, result);
@@ -24502,7 +24505,7 @@ public class LeptonicaTest {
 //    public void testPixEndianTwoByteSwapNew() {
 //        System.out.println("pixEndianTwoByteSwapNew");
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixEndianTwoByteSwapNew(pixs);
 //        assertEquals(expResult, result);
@@ -24517,7 +24520,7 @@ public class LeptonicaTest {
 //    public void testPixEndianTwoByteSwap() {
 //        System.out.println("pixEndianTwoByteSwap");
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixEndianTwoByteSwap(pixs);
 //        assertEquals(expResult, result);
@@ -24534,7 +24537,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        PointerByReference pdata = null;
 //        NativeSizeByReference pnbytes = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixGetRasterData(pixs, pdata, pnbytes);
 //        assertEquals(expResult, result);
@@ -24550,7 +24553,7 @@ public class LeptonicaTest {
 //        System.out.println("pixAlphaIsOpaque");
 //        Pix pix = null;
 //        IntBuffer popaque = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixAlphaIsOpaque(pix, popaque);
 //        assertEquals(expResult, result);
@@ -24567,7 +24570,7 @@ public class LeptonicaTest {
 //        Pix pix = null;
 //        IntBuffer pw = null;
 //        IntBuffer ph = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        PointerByReference expResult = null;
 //        PointerByReference result = instance.pixSetupByteProcessing(pix, pw, ph);
 //        assertEquals(expResult, result);
@@ -24583,7 +24586,7 @@ public class LeptonicaTest {
 //        System.out.println("pixCleanupByteProcessing");
 //        Pix pix = null;
 //        PointerByReference lineptrs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixCleanupByteProcessing(pix, lineptrs);
 //        assertEquals(expResult, result);
@@ -24599,7 +24602,7 @@ public class LeptonicaTest {
 //        System.out.println("l_setAlphaMaskBorder");
 //        float val1 = 0.0F;
 //        float val2 = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.l_setAlphaMaskBorder(val1, val2);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -24614,7 +24617,7 @@ public class LeptonicaTest {
 //        Pix pixd = null;
 //        Pix pixm = null;
 //        int val = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixSetMasked(pixd, pixm, val);
 //        assertEquals(expResult, result);
@@ -24633,7 +24636,7 @@ public class LeptonicaTest {
 //        int val = 0;
 //        int x = 0;
 //        int y = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixSetMaskedGeneral(pixd, pixm, val, x, y);
 //        assertEquals(expResult, result);
@@ -24650,7 +24653,7 @@ public class LeptonicaTest {
 //        Pix pixd = null;
 //        Pix pixs = null;
 //        Pix pixm = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixCombineMasked(pixd, pixs, pixm);
 //        assertEquals(expResult, result);
@@ -24669,7 +24672,7 @@ public class LeptonicaTest {
 //        Pix pixm = null;
 //        int x = 0;
 //        int y = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixCombineMaskedGeneral(pixd, pixs, pixm, x, y);
 //        assertEquals(expResult, result);
@@ -24688,7 +24691,7 @@ public class LeptonicaTest {
 //        int x = 0;
 //        int y = 0;
 //        int val = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixPaintThroughMask(pixd, pixm, x, y, val);
 //        assertEquals(expResult, result);
@@ -24708,7 +24711,7 @@ public class LeptonicaTest {
 //        int y = 0;
 //        int tilesize = 0;
 //        int searchdir = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixPaintSelfThroughMask(pixd, pixm, x, y, tilesize, searchdir);
 //        assertEquals(expResult, result);
@@ -24724,7 +24727,7 @@ public class LeptonicaTest {
 //        System.out.println("pixMakeMaskFromLUT");
 //        Pix pixs = null;
 //        IntBuffer tab = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixMakeMaskFromLUT(pixs, tab);
 //        assertEquals(expResult, result);
@@ -24741,7 +24744,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int val = 0;
 //        int debug = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixSetUnderTransparency(pixs, val, debug);
 //        assertEquals(expResult, result);
@@ -24757,7 +24760,7 @@ public class LeptonicaTest {
 //        System.out.println("pixInvert");
 //        Pix pixd = null;
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixInvert(pixd, pixs);
 //        assertEquals(expResult, result);
@@ -24774,7 +24777,7 @@ public class LeptonicaTest {
 //        Pix pixd = null;
 //        Pix pixs1 = null;
 //        Pix pixs2 = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixOr(pixd, pixs1, pixs2);
 //        assertEquals(expResult, result);
@@ -24791,7 +24794,7 @@ public class LeptonicaTest {
 //        Pix pixd = null;
 //        Pix pixs1 = null;
 //        Pix pixs2 = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixAnd(pixd, pixs1, pixs2);
 //        assertEquals(expResult, result);
@@ -24808,7 +24811,7 @@ public class LeptonicaTest {
 //        Pix pixd = null;
 //        Pix pixs1 = null;
 //        Pix pixs2 = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixXor(pixd, pixs1, pixs2);
 //        assertEquals(expResult, result);
@@ -24825,7 +24828,7 @@ public class LeptonicaTest {
 //        Pix pixd = null;
 //        Pix pixs1 = null;
 //        Pix pixs2 = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixSubtract(pixd, pixs1, pixs2);
 //        assertEquals(expResult, result);
@@ -24841,7 +24844,7 @@ public class LeptonicaTest {
 //        System.out.println("pixZero");
 //        Pix pix = null;
 //        IntBuffer pempty = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixZero(pix, pempty);
 //        assertEquals(expResult, result);
@@ -24857,7 +24860,7 @@ public class LeptonicaTest {
 //        System.out.println("pixForegroundFraction");
 //        Pix pix = null;
 //        FloatBuffer pfract = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixForegroundFraction(pix, pfract);
 //        assertEquals(expResult, result);
@@ -24872,7 +24875,7 @@ public class LeptonicaTest {
 //    public void testPixaCountPixels() {
 //        System.out.println("pixaCountPixels");
 //        Pixa pixa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.pixaCountPixels(pixa);
 //        assertEquals(expResult, result);
@@ -24889,7 +24892,7 @@ public class LeptonicaTest {
 //        Pix pix = null;
 //        IntBuffer pcount = null;
 //        IntBuffer tab8 = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixCountPixels(pix, pcount, tab8);
 //        assertEquals(expResult, result);
@@ -24905,7 +24908,7 @@ public class LeptonicaTest {
 //        System.out.println("pixCountByRow");
 //        Pix pix = null;
 //        Box box = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.pixCountByRow(pix, box);
 //        assertEquals(expResult, result);
@@ -24921,7 +24924,7 @@ public class LeptonicaTest {
 //        System.out.println("pixCountByColumn");
 //        Pix pix = null;
 //        Box box = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.pixCountByColumn(pix, box);
 //        assertEquals(expResult, result);
@@ -24937,7 +24940,7 @@ public class LeptonicaTest {
 //        System.out.println("pixCountPixelsByRow");
 //        Pix pix = null;
 //        IntBuffer tab8 = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.pixCountPixelsByRow(pix, tab8);
 //        assertEquals(expResult, result);
@@ -24952,7 +24955,7 @@ public class LeptonicaTest {
 //    public void testPixCountPixelsByColumn() {
 //        System.out.println("pixCountPixelsByColumn");
 //        Pix pix = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.pixCountPixelsByColumn(pix);
 //        assertEquals(expResult, result);
@@ -24970,7 +24973,7 @@ public class LeptonicaTest {
 //        int row = 0;
 //        IntBuffer pcount = null;
 //        IntBuffer tab8 = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixCountPixelsInRow(pix, row, pcount, tab8);
 //        assertEquals(expResult, result);
@@ -24986,7 +24989,7 @@ public class LeptonicaTest {
 //        System.out.println("pixGetMomentByColumn");
 //        Pix pix = null;
 //        int order = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.pixGetMomentByColumn(pix, order);
 //        assertEquals(expResult, result);
@@ -25004,7 +25007,7 @@ public class LeptonicaTest {
 //        int thresh = 0;
 //        IntBuffer pabove = null;
 //        IntBuffer tab8 = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixThresholdPixelSum(pix, thresh, pabove, tab8);
 //        assertEquals(expResult, result);
@@ -25018,7 +25021,7 @@ public class LeptonicaTest {
 //    @Test
 //    public void testMakePixelSumTab8() {
 //        System.out.println("makePixelSumTab8");
-//        Leptonica instance = new LeptonicaImpl();
+
 //        IntByReference expResult = null;
 //        IntByReference result = instance.makePixelSumTab8();
 //        assertEquals(expResult, result);
@@ -25032,7 +25035,7 @@ public class LeptonicaTest {
 //    @Test
 //    public void testMakePixelCentroidTab8() {
 //        System.out.println("makePixelCentroidTab8");
-//        Leptonica instance = new LeptonicaImpl();
+
 //        IntByReference expResult = null;
 //        IntByReference result = instance.makePixelCentroidTab8();
 //        assertEquals(expResult, result);
@@ -25049,7 +25052,7 @@ public class LeptonicaTest {
 //        Pix pix = null;
 //        Box box = null;
 //        int type = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.pixAverageByRow(pix, box, type);
 //        assertEquals(expResult, result);
@@ -25066,7 +25069,7 @@ public class LeptonicaTest {
 //        Pix pix = null;
 //        Box box = null;
 //        int type = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.pixAverageByColumn(pix, box, type);
 //        assertEquals(expResult, result);
@@ -25083,7 +25086,7 @@ public class LeptonicaTest {
 //        Pix pix = null;
 //        Box box = null;
 //        FloatBuffer pave = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixAverageInRect(pix, box, pave);
 //        assertEquals(expResult, result);
@@ -25099,7 +25102,7 @@ public class LeptonicaTest {
 //        System.out.println("pixVarianceByRow");
 //        Pix pix = null;
 //        Box box = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.pixVarianceByRow(pix, box);
 //        assertEquals(expResult, result);
@@ -25115,7 +25118,7 @@ public class LeptonicaTest {
 //        System.out.println("pixVarianceByColumn");
 //        Pix pix = null;
 //        Box box = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.pixVarianceByColumn(pix, box);
 //        assertEquals(expResult, result);
@@ -25132,7 +25135,7 @@ public class LeptonicaTest {
 //        Pix pix = null;
 //        Box box = null;
 //        FloatBuffer prootvar = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixVarianceInRect(pix, box, prootvar);
 //        assertEquals(expResult, result);
@@ -25148,7 +25151,7 @@ public class LeptonicaTest {
 //        System.out.println("pixAbsDiffByRow");
 //        Pix pix = null;
 //        Box box = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.pixAbsDiffByRow(pix, box);
 //        assertEquals(expResult, result);
@@ -25164,7 +25167,7 @@ public class LeptonicaTest {
 //        System.out.println("pixAbsDiffByColumn");
 //        Pix pix = null;
 //        Box box = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.pixAbsDiffByColumn(pix, box);
 //        assertEquals(expResult, result);
@@ -25182,7 +25185,7 @@ public class LeptonicaTest {
 //        Box box = null;
 //        int dir = 0;
 //        FloatBuffer pabsdiff = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixAbsDiffInRect(pix, box, dir, pabsdiff);
 //        assertEquals(expResult, result);
@@ -25202,7 +25205,7 @@ public class LeptonicaTest {
 //        int x2 = 0;
 //        int y2 = 0;
 //        FloatBuffer pabsdiff = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixAbsDiffOnLine(pix, x1, y1, x2, y2, pabsdiff);
 //        assertEquals(expResult, result);
@@ -25221,7 +25224,7 @@ public class LeptonicaTest {
 //        int val = 0;
 //        int factor = 0;
 //        IntBuffer pcount = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixCountArbInRect(pixs, box, val, factor, pcount);
 //        assertEquals(expResult, result);
@@ -25238,7 +25241,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int w = 0;
 //        int h = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixMirroredTiling(pixs, w, h);
 //        assertEquals(expResult, result);
@@ -25254,7 +25257,7 @@ public class LeptonicaTest {
 //        System.out.println("pixGetGrayHistogram");
 //        Pix pixs = null;
 //        int factor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.pixGetGrayHistogram(pixs, factor);
 //        assertEquals(expResult, result);
@@ -25273,7 +25276,7 @@ public class LeptonicaTest {
 //        int x = 0;
 //        int y = 0;
 //        int factor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.pixGetGrayHistogramMasked(pixs, pixm, x, y, factor);
 //        assertEquals(expResult, result);
@@ -25290,7 +25293,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        Box box = null;
 //        int factor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.pixGetGrayHistogramInRect(pixs, box, factor);
 //        assertEquals(expResult, result);
@@ -25309,7 +25312,7 @@ public class LeptonicaTest {
 //        Numa.ByReference[] pnar = null;
 //        Numa.ByReference[] pnag = null;
 //        Numa.ByReference[] pnab = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixGetColorHistogram(pixs, factor, pnar, pnag, pnab);
 //        assertEquals(expResult, result);
@@ -25331,7 +25334,7 @@ public class LeptonicaTest {
 //        Numa.ByReference[] pnar = null;
 //        Numa.ByReference[] pnag = null;
 //        Numa.ByReference[] pnab = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixGetColorHistogramMasked(pixs, pixm, x, y, factor, pnar, pnag, pnab);
 //        assertEquals(expResult, result);
@@ -25347,7 +25350,7 @@ public class LeptonicaTest {
 //        System.out.println("pixGetCmapHistogram");
 //        Pix pixs = null;
 //        int factor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.pixGetCmapHistogram(pixs, factor);
 //        assertEquals(expResult, result);
@@ -25366,7 +25369,7 @@ public class LeptonicaTest {
 //        int x = 0;
 //        int y = 0;
 //        int factor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.pixGetCmapHistogramMasked(pixs, pixm, x, y, factor);
 //        assertEquals(expResult, result);
@@ -25383,7 +25386,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        Box box = null;
 //        int factor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.pixGetCmapHistogramInRect(pixs, box, factor);
 //        assertEquals(expResult, result);
@@ -25401,7 +25404,7 @@ public class LeptonicaTest {
 //        int factor = 0;
 //        float rank = 0.0F;
 //        IntBuffer pvalue = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixGetRankValue(pixs, factor, rank, pvalue);
 //        assertEquals(expResult, result);
@@ -25424,7 +25427,7 @@ public class LeptonicaTest {
 //        FloatBuffer prval = null;
 //        FloatBuffer pgval = null;
 //        FloatBuffer pbval = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixGetRankValueMaskedRGB(pixs, pixm, x, y, factor, rank, prval, pgval, pbval);
 //        assertEquals(expResult, result);
@@ -25446,7 +25449,7 @@ public class LeptonicaTest {
 //        float rank = 0.0F;
 //        FloatBuffer pval = null;
 //        Numa.ByReference[] pna = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixGetRankValueMasked(pixs, pixm, x, y, factor, rank, pval, pna);
 //        assertEquals(expResult, result);
@@ -25468,7 +25471,7 @@ public class LeptonicaTest {
 //        float rank = 0.0F;
 //        FloatByReference pval = null;
 //        Numa.ByReference[] pna = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixGetRankValueMasked(pixs, pixm, x, y, factor, rank, pval, pna);
 //        assertEquals(expResult, result);
@@ -25486,7 +25489,7 @@ public class LeptonicaTest {
 //        int factor = 0;
 //        int type = 0;
 //        IntBuffer pvalue = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixGetAverageValue(pixs, factor, type, pvalue);
 //        assertEquals(expResult, result);
@@ -25509,7 +25512,7 @@ public class LeptonicaTest {
 //        FloatBuffer prval = null;
 //        FloatBuffer pgval = null;
 //        FloatBuffer pbval = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixGetAverageMaskedRGB(pixs, pixm, x, y, factor, type, prval, pgval, pbval);
 //        assertEquals(expResult, result);
@@ -25530,7 +25533,7 @@ public class LeptonicaTest {
 //        int factor = 0;
 //        int type = 0;
 //        FloatBuffer pval = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixGetAverageMasked(pixs, pixm, x, y, factor, type, pval);
 //        assertEquals(expResult, result);
@@ -25551,7 +25554,7 @@ public class LeptonicaTest {
 //        Pix.ByReference[] ppixr = null;
 //        Pix.ByReference[] ppixg = null;
 //        Pix.ByReference[] ppixb = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixGetAverageTiledRGB(pixs, sx, sy, type, ppixr, ppixg, ppixb);
 //        assertEquals(expResult, result);
@@ -25569,7 +25572,7 @@ public class LeptonicaTest {
 //        int sx = 0;
 //        int sy = 0;
 //        int type = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixGetAverageTiled(pixs, sx, sy, type);
 //        assertEquals(expResult, result);
@@ -25591,7 +25594,7 @@ public class LeptonicaTest {
 //        Numa.ByReference[] pnamodecount = null;
 //        Numa.ByReference[] pnavar = null;
 //        Numa.ByReference[] pnarootvar = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixRowStats(pixs, box, pnamean, pnamedian, pnamode, pnamodecount, pnavar, pnarootvar);
 //        assertEquals(expResult, result);
@@ -25613,7 +25616,7 @@ public class LeptonicaTest {
 //        Numa.ByReference[] pnamodecount = null;
 //        Numa.ByReference[] pnavar = null;
 //        Numa.ByReference[] pnarootvar = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixColumnStats(pixs, box, pnamean, pnamedian, pnamode, pnamodecount, pnavar, pnarootvar);
 //        assertEquals(expResult, result);
@@ -25632,7 +25635,7 @@ public class LeptonicaTest {
 //        int color = 0;
 //        IntBuffer pminval = null;
 //        IntBuffer pmaxval = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixGetComponentRange(pixs, factor, color, pminval, pmaxval);
 //        assertEquals(expResult, result);
@@ -25653,7 +25656,7 @@ public class LeptonicaTest {
 //        IntBuffer pgval = null;
 //        IntBuffer pbval = null;
 //        IntBuffer pgrayval = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixGetExtremeValue(pixs, factor, type, prval, pgval, pbval, pgrayval);
 //        assertEquals(expResult, result);
@@ -25672,7 +25675,7 @@ public class LeptonicaTest {
 //        IntBuffer pmaxval = null;
 //        IntBuffer pxmax = null;
 //        IntBuffer pymax = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixGetMaxValueInRect(pixs, box, pmaxval, pxmax, pymax);
 //        assertEquals(expResult, result);
@@ -25694,7 +25697,7 @@ public class LeptonicaTest {
 //        IntBuffer pmaxval = null;
 //        PointerByReference pcarray = null;
 //        String fontdir = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixGetBinnedComponentRange(pixs, nbins, factor, color, pminval, pmaxval, pcarray, fontdir);
 //        assertEquals(expResult, result);
@@ -25715,7 +25718,7 @@ public class LeptonicaTest {
 //        PointerByReference pcarray = null;
 //        int debugflag = 0;
 //        String fontdir = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixGetRankColorArray(pixs, nbins, type, factor, pcarray, debugflag, fontdir);
 //        assertEquals(expResult, result);
@@ -25736,7 +25739,7 @@ public class LeptonicaTest {
 //        Numa nalut = null;
 //        PointerByReference pcarray = null;
 //        int debugflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixGetBinnedColor(pixs, pixg, factor, nbins, nalut, pcarray, debugflag);
 //        assertEquals(expResult, result);
@@ -25755,7 +25758,7 @@ public class LeptonicaTest {
 //        int side = 0;
 //        int ncols = 0;
 //        String fontdir = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixDisplayColorArray(carray, ncolors, side, ncols, fontdir);
 //        assertEquals(expResult, result);
@@ -25774,7 +25777,7 @@ public class LeptonicaTest {
 //        int size = 0;
 //        int nbins = 0;
 //        int type = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixRankBinByStrip(pixs, direction, size, nbins, type);
 //        assertEquals(expResult, result);
@@ -25792,7 +25795,7 @@ public class LeptonicaTest {
 //        int type = 0;
 //        int nbins = 0;
 //        int thresh = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixaGetAlignedStats(pixa, type, nbins, thresh);
 //        assertEquals(expResult, result);
@@ -25809,7 +25812,7 @@ public class LeptonicaTest {
 //        Pixa pixa = null;
 //        int col = 0;
 //        Pix pixd = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixaExtractColumnFromEachPix(pixa, col, pixd);
 //        assertEquals(expResult, result);
@@ -25828,7 +25831,7 @@ public class LeptonicaTest {
 //        int nbins = 0;
 //        int thresh = 0;
 //        FloatBuffer colvect = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixGetRowStats(pixs, type, nbins, thresh, colvect);
 //        assertEquals(expResult, result);
@@ -25847,7 +25850,7 @@ public class LeptonicaTest {
 //        int nbins = 0;
 //        int thresh = 0;
 //        FloatBuffer rowvect = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixGetColumnStats(pixs, type, nbins, thresh, rowvect);
 //        assertEquals(expResult, result);
@@ -25864,7 +25867,7 @@ public class LeptonicaTest {
 //        Pix pix = null;
 //        int col = 0;
 //        FloatBuffer colvect = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixSetPixelColumn(pix, col, colvect);
 //        assertEquals(expResult, result);
@@ -25883,7 +25886,7 @@ public class LeptonicaTest {
 //        int thresh = 0;
 //        IntBuffer pfgval = null;
 //        IntBuffer pbgval = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixThresholdForFgBg(pixs, factor, thresh, pfgval, pbgval);
 //        assertEquals(expResult, result);
@@ -25904,7 +25907,7 @@ public class LeptonicaTest {
 //        IntBuffer pfgval = null;
 //        IntBuffer pbgval = null;
 //        int debugflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixSplitDistributionFgBg(pixs, scorefract, factor, pthresh, pfgval, pbgval, debugflag);
 //        assertEquals(expResult, result);
@@ -25921,7 +25924,7 @@ public class LeptonicaTest {
 //        Pixa pixa = null;
 //        Numa.ByReference[] pnaw = null;
 //        Numa.ByReference[] pnah = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixaFindDimensions(pixa, pnaw, pnah);
 //        assertEquals(expResult, result);
@@ -25938,7 +25941,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        IntBuffer tab = null;
 //        FloatBuffer pfract = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixFindAreaPerimRatio(pixs, tab, pfract);
 //        assertEquals(expResult, result);
@@ -25953,7 +25956,7 @@ public class LeptonicaTest {
 //    public void testPixaFindPerimToAreaRatio() {
 //        System.out.println("pixaFindPerimToAreaRatio");
 //        Pixa pixa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.pixaFindPerimToAreaRatio(pixa);
 //        assertEquals(expResult, result);
@@ -25970,7 +25973,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        IntBuffer tab = null;
 //        FloatBuffer pfract = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixFindPerimToAreaRatio(pixs, tab, pfract);
 //        assertEquals(expResult, result);
@@ -25985,7 +25988,7 @@ public class LeptonicaTest {
 //    public void testPixaFindPerimSizeRatio() {
 //        System.out.println("pixaFindPerimSizeRatio");
 //        Pixa pixa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.pixaFindPerimSizeRatio(pixa);
 //        assertEquals(expResult, result);
@@ -26002,7 +26005,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        IntBuffer tab = null;
 //        FloatBuffer pratio = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixFindPerimSizeRatio(pixs, tab, pratio);
 //        assertEquals(expResult, result);
@@ -26017,7 +26020,7 @@ public class LeptonicaTest {
 //    public void testPixaFindAreaFraction() {
 //        System.out.println("pixaFindAreaFraction");
 //        Pixa pixa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.pixaFindAreaFraction(pixa);
 //        assertEquals(expResult, result);
@@ -26034,7 +26037,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        IntBuffer tab = null;
 //        FloatBuffer pfract = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixFindAreaFraction(pixs, tab, pfract);
 //        assertEquals(expResult, result);
@@ -26051,7 +26054,7 @@ public class LeptonicaTest {
 //        Pixa pixa = null;
 //        Pix pixm = null;
 //        int debug = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.pixaFindAreaFractionMasked(pixa, pixm, debug);
 //        assertEquals(expResult, result);
@@ -26070,7 +26073,7 @@ public class LeptonicaTest {
 //        Pix pixm = null;
 //        IntBuffer tab = null;
 //        FloatBuffer pfract = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixFindAreaFractionMasked(pixs, box, pixm, tab, pfract);
 //        assertEquals(expResult, result);
@@ -26085,7 +26088,7 @@ public class LeptonicaTest {
 //    public void testPixaFindWidthHeightRatio() {
 //        System.out.println("pixaFindWidthHeightRatio");
 //        Pixa pixa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.pixaFindWidthHeightRatio(pixa);
 //        assertEquals(expResult, result);
@@ -26100,7 +26103,7 @@ public class LeptonicaTest {
 //    public void testPixaFindWidthHeightProduct() {
 //        System.out.println("pixaFindWidthHeightProduct");
 //        Pixa pixa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.pixaFindWidthHeightProduct(pixa);
 //        assertEquals(expResult, result);
@@ -26121,7 +26124,7 @@ public class LeptonicaTest {
 //        IntBuffer tab = null;
 //        FloatBuffer pratio = null;
 //        IntBuffer pnoverlap = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixFindOverlapFraction(pixs1, pixs2, x2, y2, tab, pratio, pnoverlap);
 //        assertEquals(expResult, result);
@@ -26139,7 +26142,7 @@ public class LeptonicaTest {
 //        int dist = 0;
 //        int minw = 0;
 //        int minh = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxa expResult = null;
 //        Boxa result = instance.pixFindRectangleComps(pixs, dist, minw, minh);
 //        assertEquals(expResult, result);
@@ -26157,7 +26160,7 @@ public class LeptonicaTest {
 //        Box box = null;
 //        int dist = 0;
 //        IntBuffer pconforms = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixConformsToRectangle(pixs, box, dist, pconforms);
 //        assertEquals(expResult, result);
@@ -26173,7 +26176,7 @@ public class LeptonicaTest {
 //        System.out.println("pixClipRectangles");
 //        Pix pixs = null;
 //        Boxa boxa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pixa expResult = null;
 //        Pixa result = instance.pixClipRectangles(pixs, boxa);
 //        assertEquals(expResult, result);
@@ -26190,7 +26193,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        Box box = null;
 //        Box.ByReference[] pboxc = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixClipRectangle(pixs, box, pboxc);
 //        assertEquals(expResult, result);
@@ -26209,7 +26212,7 @@ public class LeptonicaTest {
 //        int x = 0;
 //        int y = 0;
 //        int outval = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixClipMasked(pixs, pixm, x, y, outval);
 //        assertEquals(expResult, result);
@@ -26227,7 +26230,7 @@ public class LeptonicaTest {
 //        Pix pixs2 = null;
 //        Pix.ByReference[] ppixd1 = null;
 //        Pix.ByReference[] ppixd2 = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixCropToMatch(pixs1, pixs2, ppixd1, ppixd2);
 //        assertEquals(expResult, result);
@@ -26244,7 +26247,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int w = 0;
 //        int h = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixCropToSize(pixs, w, h);
 //        assertEquals(expResult, result);
@@ -26262,7 +26265,7 @@ public class LeptonicaTest {
 //        Pix pixt = null;
 //        int w = 0;
 //        int h = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixResizeToMatch(pixs, pixt, w, h);
 //        assertEquals(expResult, result);
@@ -26279,7 +26282,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        Pix.ByReference[] ppixd = null;
 //        Box.ByReference[] pbox = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixClipToForeground(pixs, ppixd, pbox);
 //        assertEquals(expResult, result);
@@ -26295,7 +26298,7 @@ public class LeptonicaTest {
 //        System.out.println("pixTestClipToForeground");
 //        Pix pixs = null;
 //        IntBuffer pcanclip = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixTestClipToForeground(pixs, pcanclip);
 //        assertEquals(expResult, result);
@@ -26313,7 +26316,7 @@ public class LeptonicaTest {
 //        Box boxs = null;
 //        Pix.ByReference[] ppixd = null;
 //        Box.ByReference[] pboxd = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixClipBoxToForeground(pixs, boxs, ppixd, pboxd);
 //        assertEquals(expResult, result);
@@ -26331,7 +26334,7 @@ public class LeptonicaTest {
 //        Box box = null;
 //        int scanflag = 0;
 //        IntBuffer ploc = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixScanForForeground(pixs, box, scanflag, ploc);
 //        assertEquals(expResult, result);
@@ -26353,7 +26356,7 @@ public class LeptonicaTest {
 //        int factor = 0;
 //        Pix.ByReference[] ppixd = null;
 //        Box.ByReference[] pboxd = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixClipBoxToEdges(pixs, boxs, lowthresh, highthresh, maxwidth, factor, ppixd, pboxd);
 //        assertEquals(expResult, result);
@@ -26375,7 +26378,7 @@ public class LeptonicaTest {
 //        int factor = 0;
 //        int scanflag = 0;
 //        IntBuffer ploc = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixScanForEdge(pixs, box, lowthresh, highthresh, maxwidth, factor, scanflag, ploc);
 //        assertEquals(expResult, result);
@@ -26395,7 +26398,7 @@ public class LeptonicaTest {
 //        int x2 = 0;
 //        int y2 = 0;
 //        int factor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.pixExtractOnLine(pixs, x1, y1, x2, y2, factor);
 //        assertEquals(expResult, result);
@@ -26415,7 +26418,7 @@ public class LeptonicaTest {
 //        int x2 = 0;
 //        int y2 = 0;
 //        int factor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        float expResult = 0.0F;
 //        float result = instance.pixAverageOnLine(pixs, x1, y1, x2, y2, factor);
 //        assertEquals(expResult, result, 0.0);
@@ -26436,7 +26439,7 @@ public class LeptonicaTest {
 //        int last = 0;
 //        int factor1 = 0;
 //        int factor2 = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.pixAverageIntensityProfile(pixs, fract, dir, first, last, factor1, factor2);
 //        assertEquals(expResult, result);
@@ -26458,7 +26461,7 @@ public class LeptonicaTest {
 //        int minreversal = 0;
 //        int factor1 = 0;
 //        int factor2 = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.pixReversalProfile(pixs, fract, dir, first, last, minreversal, factor1, factor2);
 //        assertEquals(expResult, result);
@@ -26479,7 +26482,7 @@ public class LeptonicaTest {
 //        int c2 = 0;
 //        int size = 0;
 //        Numa.ByReference[] pnad = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixWindowedVarianceOnLine(pixs, dir, loc, c1, c2, size, pnad);
 //        assertEquals(expResult, result);
@@ -26504,7 +26507,7 @@ public class LeptonicaTest {
 //        Numa.ByReference[] pnamax = null;
 //        FloatBuffer pminave = null;
 //        FloatBuffer pmaxave = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixMinMaxNearLine(pixs, x1, y1, x2, y2, dist, direction, pnamin, pnamax, pminave, pmaxave);
 //        assertEquals(expResult, result);
@@ -26529,7 +26532,7 @@ public class LeptonicaTest {
 //        Numa.ByReference[] pnamax = null;
 //        FloatByReference pminave = null;
 //        FloatByReference pmaxave = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixMinMaxNearLine(pixs, x1, y1, x2, y2, dist, direction, pnamin, pnamax, pminave, pmaxave);
 //        assertEquals(expResult, result);
@@ -26544,7 +26547,7 @@ public class LeptonicaTest {
 //    public void testPixRankRowTransform() {
 //        System.out.println("pixRankRowTransform");
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixRankRowTransform(pixs);
 //        assertEquals(expResult, result);
@@ -26559,7 +26562,7 @@ public class LeptonicaTest {
 //    public void testPixRankColumnTransform() {
 //        System.out.println("pixRankColumnTransform");
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixRankColumnTransform(pixs);
 //        assertEquals(expResult, result);
@@ -26574,7 +26577,7 @@ public class LeptonicaTest {
 //    public void testPixaCreate() {
 //        System.out.println("pixaCreate");
 //        int n = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pixa expResult = null;
 //        Pixa result = instance.pixaCreate(n);
 //        assertEquals(expResult, result);
@@ -26592,7 +26595,7 @@ public class LeptonicaTest {
 //        int n = 0;
 //        int cellw = 0;
 //        int cellh = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pixa expResult = null;
 //        Pixa result = instance.pixaCreateFromPix(pixs, n, cellw, cellh);
 //        assertEquals(expResult, result);
@@ -26609,7 +26612,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        Boxa boxa = null;
 //        IntBuffer pcropwarn = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pixa expResult = null;
 //        Pixa result = instance.pixaCreateFromBoxa(pixs, boxa, pcropwarn);
 //        assertEquals(expResult, result);
@@ -26628,7 +26631,7 @@ public class LeptonicaTest {
 //        int ny = 0;
 //        int borderwidth = 0;
 //        int bordercolor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pixa expResult = null;
 //        Pixa result = instance.pixaSplitPix(pixs, nx, ny, borderwidth, bordercolor);
 //        assertEquals(expResult, result);
@@ -26643,7 +26646,7 @@ public class LeptonicaTest {
 //    public void testPixaDestroy() {
 //        System.out.println("pixaDestroy");
 //        Pixa.ByReference[] ppixa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.pixaDestroy(ppixa);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -26657,7 +26660,7 @@ public class LeptonicaTest {
 //        System.out.println("pixaCopy");
 //        Pixa pixa = null;
 //        int copyflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pixa expResult = null;
 //        Pixa result = instance.pixaCopy(pixa, copyflag);
 //        assertEquals(expResult, result);
@@ -26674,7 +26677,7 @@ public class LeptonicaTest {
 //        Pixa pixa = null;
 //        Pix pix = null;
 //        int copyflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixaAddPix(pixa, pix, copyflag);
 //        assertEquals(expResult, result);
@@ -26691,7 +26694,7 @@ public class LeptonicaTest {
 //        Pixa pixa = null;
 //        Box box = null;
 //        int copyflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixaAddBox(pixa, box, copyflag);
 //        assertEquals(expResult, result);
@@ -26707,7 +26710,7 @@ public class LeptonicaTest {
 //        System.out.println("pixaExtendArrayToSize");
 //        Pixa pixa = null;
 //        int size = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixaExtendArrayToSize(pixa, size);
 //        assertEquals(expResult, result);
@@ -26722,7 +26725,7 @@ public class LeptonicaTest {
 //    public void testPixaGetCount() {
 //        System.out.println("pixaGetCount");
 //        Pixa pixa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixaGetCount(pixa);
 //        assertEquals(expResult, result);
@@ -26738,7 +26741,7 @@ public class LeptonicaTest {
 //        System.out.println("pixaChangeRefcount");
 //        Pixa pixa = null;
 //        int delta = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixaChangeRefcount(pixa, delta);
 //        assertEquals(expResult, result);
@@ -26755,7 +26758,7 @@ public class LeptonicaTest {
 //        Pixa pixa = null;
 //        int index = 0;
 //        int accesstype = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixaGetPix(pixa, index, accesstype);
 //        assertEquals(expResult, result);
@@ -26774,7 +26777,7 @@ public class LeptonicaTest {
 //        IntBuffer pw = null;
 //        IntBuffer ph = null;
 //        IntBuffer pd = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixaGetPixDimensions(pixa, index, pw, ph, pd);
 //        assertEquals(expResult, result);
@@ -26790,7 +26793,7 @@ public class LeptonicaTest {
 //        System.out.println("pixaGetBoxa");
 //        Pixa pixa = null;
 //        int accesstype = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxa expResult = null;
 //        Boxa result = instance.pixaGetBoxa(pixa, accesstype);
 //        assertEquals(expResult, result);
@@ -26805,7 +26808,7 @@ public class LeptonicaTest {
 //    public void testPixaGetBoxaCount() {
 //        System.out.println("pixaGetBoxaCount");
 //        Pixa pixa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixaGetBoxaCount(pixa);
 //        assertEquals(expResult, result);
@@ -26822,7 +26825,7 @@ public class LeptonicaTest {
 //        Pixa pixa = null;
 //        int index = 0;
 //        int accesstype = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Box expResult = null;
 //        Box result = instance.pixaGetBox(pixa, index, accesstype);
 //        assertEquals(expResult, result);
@@ -26842,7 +26845,7 @@ public class LeptonicaTest {
 //        IntBuffer py = null;
 //        IntBuffer pw = null;
 //        IntBuffer ph = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixaGetBoxGeometry(pixa, index, px, py, pw, ph);
 //        assertEquals(expResult, result);
@@ -26859,7 +26862,7 @@ public class LeptonicaTest {
 //        Pixa pixa = null;
 //        Boxa boxa = null;
 //        int accesstype = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixaSetBoxa(pixa, boxa, accesstype);
 //        assertEquals(expResult, result);
@@ -26874,7 +26877,7 @@ public class LeptonicaTest {
 //    public void testPixaGetPixArray() {
 //        System.out.println("pixaGetPixArray");
 //        Pixa pixa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix.ByReference[] expResult = null;
 //        Pix.ByReference[] result = instance.pixaGetPixArray(pixa);
 //        assertArrayEquals(expResult, result);
@@ -26890,7 +26893,7 @@ public class LeptonicaTest {
 //        System.out.println("pixaVerifyDepth");
 //        Pixa pixa = null;
 //        IntBuffer pmaxdepth = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixaVerifyDepth(pixa, pmaxdepth);
 //        assertEquals(expResult, result);
@@ -26907,7 +26910,7 @@ public class LeptonicaTest {
 //        Pixa pixa = null;
 //        IntBuffer pfullpa = null;
 //        IntBuffer pfullba = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixaIsFull(pixa, pfullpa, pfullba);
 //        assertEquals(expResult, result);
@@ -26923,7 +26926,7 @@ public class LeptonicaTest {
 //        System.out.println("pixaCountText");
 //        Pixa pixa = null;
 //        IntBuffer pntext = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixaCountText(pixa, pntext);
 //        assertEquals(expResult, result);
@@ -26939,7 +26942,7 @@ public class LeptonicaTest {
 //        System.out.println("pixaGetLinePtrs");
 //        Pixa pixa = null;
 //        IntBuffer psize = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        PointerByReference expResult = null;
 //        PointerByReference result = instance.pixaGetLinePtrs(pixa, psize);
 //        assertEquals(expResult, result);
@@ -26957,7 +26960,7 @@ public class LeptonicaTest {
 //        int index = 0;
 //        Pix pix = null;
 //        Box box = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixaReplacePix(pixa, index, pix, box);
 //        assertEquals(expResult, result);
@@ -26975,7 +26978,7 @@ public class LeptonicaTest {
 //        int index = 0;
 //        Pix pixs = null;
 //        Box box = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixaInsertPix(pixa, index, pixs, box);
 //        assertEquals(expResult, result);
@@ -26991,7 +26994,7 @@ public class LeptonicaTest {
 //        System.out.println("pixaRemovePix");
 //        Pixa pixa = null;
 //        int index = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixaRemovePix(pixa, index);
 //        assertEquals(expResult, result);
@@ -27009,7 +27012,7 @@ public class LeptonicaTest {
 //        int index = 0;
 //        Pix.ByReference[] ppix = null;
 //        Box.ByReference[] pbox = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixaRemovePixAndSave(pixa, index, ppix, pbox);
 //        assertEquals(expResult, result);
@@ -27026,7 +27029,7 @@ public class LeptonicaTest {
 //        Pixa pixa = null;
 //        Pix pix = null;
 //        Box box = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixaInitFull(pixa, pix, box);
 //        assertEquals(expResult, result);
@@ -27041,7 +27044,7 @@ public class LeptonicaTest {
 //    public void testPixaClear() {
 //        System.out.println("pixaClear");
 //        Pixa pixa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixaClear(pixa);
 //        assertEquals(expResult, result);
@@ -27059,7 +27062,7 @@ public class LeptonicaTest {
 //        Pixa pixas = null;
 //        int istart = 0;
 //        int iend = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixaJoin(pixad, pixas, istart, iend);
 //        assertEquals(expResult, result);
@@ -27077,7 +27080,7 @@ public class LeptonicaTest {
 //        Pixaa paas = null;
 //        int istart = 0;
 //        int iend = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixaaJoin(paad, paas, istart, iend);
 //        assertEquals(expResult, result);
@@ -27092,7 +27095,7 @@ public class LeptonicaTest {
 //    public void testPixaaCreate() {
 //        System.out.println("pixaaCreate");
 //        int n = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pixaa expResult = null;
 //        Pixaa result = instance.pixaaCreate(n);
 //        assertEquals(expResult, result);
@@ -27110,7 +27113,7 @@ public class LeptonicaTest {
 //        int n = 0;
 //        int type = 0;
 //        int copyflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pixaa expResult = null;
 //        Pixaa result = instance.pixaaCreateFromPixa(pixa, n, type, copyflag);
 //        assertEquals(expResult, result);
@@ -27125,7 +27128,7 @@ public class LeptonicaTest {
 //    public void testPixaaDestroy() {
 //        System.out.println("pixaaDestroy");
 //        Pixaa.ByReference[] ppaa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.pixaaDestroy(ppaa);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -27140,7 +27143,7 @@ public class LeptonicaTest {
 //        Pixaa paa = null;
 //        Pixa pixa = null;
 //        int copyflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixaaAddPixa(paa, pixa, copyflag);
 //        assertEquals(expResult, result);
@@ -27155,7 +27158,7 @@ public class LeptonicaTest {
 //    public void testPixaaExtendArray() {
 //        System.out.println("pixaaExtendArray");
 //        Pixaa paa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixaaExtendArray(paa);
 //        assertEquals(expResult, result);
@@ -27174,7 +27177,7 @@ public class LeptonicaTest {
 //        Pix pix = null;
 //        Box box = null;
 //        int copyflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixaaAddPix(paa, index, pix, box, copyflag);
 //        assertEquals(expResult, result);
@@ -27191,7 +27194,7 @@ public class LeptonicaTest {
 //        Pixaa paa = null;
 //        Box box = null;
 //        int copyflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixaaAddBox(paa, box, copyflag);
 //        assertEquals(expResult, result);
@@ -27207,7 +27210,7 @@ public class LeptonicaTest {
 //        System.out.println("pixaaGetCount");
 //        Pixaa paa = null;
 //        Numa.ByReference[] pna = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixaaGetCount(paa, pna);
 //        assertEquals(expResult, result);
@@ -27224,7 +27227,7 @@ public class LeptonicaTest {
 //        Pixaa paa = null;
 //        int index = 0;
 //        int accesstype = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pixa expResult = null;
 //        Pixa result = instance.pixaaGetPixa(paa, index, accesstype);
 //        assertEquals(expResult, result);
@@ -27240,7 +27243,7 @@ public class LeptonicaTest {
 //        System.out.println("pixaaGetBoxa");
 //        Pixaa paa = null;
 //        int accesstype = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxa expResult = null;
 //        Boxa result = instance.pixaaGetBoxa(paa, accesstype);
 //        assertEquals(expResult, result);
@@ -27258,7 +27261,7 @@ public class LeptonicaTest {
 //        int index = 0;
 //        int ipix = 0;
 //        int accessflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixaaGetPix(paa, index, ipix, accessflag);
 //        assertEquals(expResult, result);
@@ -27274,7 +27277,7 @@ public class LeptonicaTest {
 //        System.out.println("pixaaVerifyDepth");
 //        Pixaa paa = null;
 //        IntBuffer pmaxdepth = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixaaVerifyDepth(paa, pmaxdepth);
 //        assertEquals(expResult, result);
@@ -27290,7 +27293,7 @@ public class LeptonicaTest {
 //        System.out.println("pixaaIsFull");
 //        Pixaa paa = null;
 //        IntBuffer pfull = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixaaIsFull(paa, pfull);
 //        assertEquals(expResult, result);
@@ -27306,7 +27309,7 @@ public class LeptonicaTest {
 //        System.out.println("pixaaInitFull");
 //        Pixaa paa = null;
 //        Pixa pixa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixaaInitFull(paa, pixa);
 //        assertEquals(expResult, result);
@@ -27323,7 +27326,7 @@ public class LeptonicaTest {
 //        Pixaa paa = null;
 //        int index = 0;
 //        Pixa pixa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixaaReplacePixa(paa, index, pixa);
 //        assertEquals(expResult, result);
@@ -27338,7 +27341,7 @@ public class LeptonicaTest {
 //    public void testPixaaClear() {
 //        System.out.println("pixaaClear");
 //        Pixaa paa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixaaClear(paa);
 //        assertEquals(expResult, result);
@@ -27353,7 +27356,7 @@ public class LeptonicaTest {
 //    public void testPixaaTruncate() {
 //        System.out.println("pixaaTruncate");
 //        Pixaa paa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixaaTruncate(paa);
 //        assertEquals(expResult, result);
@@ -27368,7 +27371,7 @@ public class LeptonicaTest {
 //    public void testPixaRead() {
 //        System.out.println("pixaRead");
 //        String filename = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pixa expResult = null;
 //        Pixa result = instance.pixaRead(filename);
 //        assertEquals(expResult, result);
@@ -27383,7 +27386,7 @@ public class LeptonicaTest {
 //    public void testPixaReadStream() {
 //        System.out.println("pixaReadStream");
 //        PointerByReference fp = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pixa expResult = null;
 //        Pixa result = instance.pixaReadStream(fp);
 //        assertEquals(expResult, result);
@@ -27399,7 +27402,7 @@ public class LeptonicaTest {
 //        System.out.println("pixaWrite");
 //        String filename = "";
 //        Pixa pixa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixaWrite(filename, pixa);
 //        assertEquals(expResult, result);
@@ -27415,7 +27418,7 @@ public class LeptonicaTest {
 //        System.out.println("pixaWriteStream");
 //        PointerByReference fp = null;
 //        Pixa pixa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixaWriteStream(fp, pixa);
 //        assertEquals(expResult, result);
@@ -27433,7 +27436,7 @@ public class LeptonicaTest {
 //        String substr = "";
 //        int first = 0;
 //        int nfiles = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pixaa expResult = null;
 //        Pixaa result = instance.pixaaReadFromFiles(dirname, substr, first, nfiles);
 //        assertEquals(expResult, result);
@@ -27448,7 +27451,7 @@ public class LeptonicaTest {
 //    public void testPixaaRead() {
 //        System.out.println("pixaaRead");
 //        String filename = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pixaa expResult = null;
 //        Pixaa result = instance.pixaaRead(filename);
 //        assertEquals(expResult, result);
@@ -27463,7 +27466,7 @@ public class LeptonicaTest {
 //    public void testPixaaReadStream() {
 //        System.out.println("pixaaReadStream");
 //        PointerByReference fp = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pixaa expResult = null;
 //        Pixaa result = instance.pixaaReadStream(fp);
 //        assertEquals(expResult, result);
@@ -27479,7 +27482,7 @@ public class LeptonicaTest {
 //        System.out.println("pixaaWrite");
 //        String filename = "";
 //        Pixaa paa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixaaWrite(filename, paa);
 //        assertEquals(expResult, result);
@@ -27495,7 +27498,7 @@ public class LeptonicaTest {
 //        System.out.println("pixaaWriteStream");
 //        PointerByReference fp = null;
 //        Pixaa paa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixaaWriteStream(fp, paa);
 //        assertEquals(expResult, result);
@@ -27512,7 +27515,7 @@ public class LeptonicaTest {
 //        int w = 0;
 //        int h = 0;
 //        int negflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pixacc expResult = null;
 //        Pixacc result = instance.pixaccCreate(w, h, negflag);
 //        assertEquals(expResult, result);
@@ -27528,7 +27531,7 @@ public class LeptonicaTest {
 //        System.out.println("pixaccCreateFromPix");
 //        Pix pix = null;
 //        int negflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pixacc expResult = null;
 //        Pixacc result = instance.pixaccCreateFromPix(pix, negflag);
 //        assertEquals(expResult, result);
@@ -27543,7 +27546,7 @@ public class LeptonicaTest {
 //    public void testPixaccDestroy() {
 //        System.out.println("pixaccDestroy");
 //        Pixacc.ByReference[] ppixacc = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.pixaccDestroy(ppixacc);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -27557,7 +27560,7 @@ public class LeptonicaTest {
 //        System.out.println("pixaccFinal");
 //        Pixacc pixacc = null;
 //        int outdepth = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixaccFinal(pixacc, outdepth);
 //        assertEquals(expResult, result);
@@ -27572,7 +27575,7 @@ public class LeptonicaTest {
 //    public void testPixaccGetPix() {
 //        System.out.println("pixaccGetPix");
 //        Pixacc pixacc = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixaccGetPix(pixacc);
 //        assertEquals(expResult, result);
@@ -27587,7 +27590,7 @@ public class LeptonicaTest {
 //    public void testPixaccGetOffset() {
 //        System.out.println("pixaccGetOffset");
 //        Pixacc pixacc = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixaccGetOffset(pixacc);
 //        assertEquals(expResult, result);
@@ -27603,7 +27606,7 @@ public class LeptonicaTest {
 //        System.out.println("pixaccAdd");
 //        Pixacc pixacc = null;
 //        Pix pix = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixaccAdd(pixacc, pix);
 //        assertEquals(expResult, result);
@@ -27619,7 +27622,7 @@ public class LeptonicaTest {
 //        System.out.println("pixaccSubtract");
 //        Pixacc pixacc = null;
 //        Pix pix = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixaccSubtract(pixacc, pix);
 //        assertEquals(expResult, result);
@@ -27635,7 +27638,7 @@ public class LeptonicaTest {
 //        System.out.println("pixaccMultConst");
 //        Pixacc pixacc = null;
 //        float factor = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixaccMultConst(pixacc, factor);
 //        assertEquals(expResult, result);
@@ -27652,7 +27655,7 @@ public class LeptonicaTest {
 //        Pixacc pixacc = null;
 //        Pix pix = null;
 //        float factor = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixaccMultConstAccumulate(pixacc, pix, factor);
 //        assertEquals(expResult, result);
@@ -27673,7 +27676,7 @@ public class LeptonicaTest {
 //        int type = 0;
 //        int relation = 0;
 //        IntBuffer pchanged = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixSelectBySize(pixs, width, height, connectivity, type, relation, pchanged);
 //        assertEquals(expResult, result);
@@ -27693,7 +27696,7 @@ public class LeptonicaTest {
 //        int type = 0;
 //        int relation = 0;
 //        IntBuffer pchanged = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pixa expResult = null;
 //        Pixa result = instance.pixaSelectBySize(pixas, width, height, type, relation, pchanged);
 //        assertEquals(expResult, result);
@@ -27712,7 +27715,7 @@ public class LeptonicaTest {
 //        int height = 0;
 //        int type = 0;
 //        int relation = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.pixaMakeSizeIndicator(pixa, width, height, type, relation);
 //        assertEquals(expResult, result);
@@ -27731,7 +27734,7 @@ public class LeptonicaTest {
 //        int connectivity = 0;
 //        int type = 0;
 //        IntBuffer pchanged = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixSelectByPerimToAreaRatio(pixs, thresh, connectivity, type, pchanged);
 //        assertEquals(expResult, result);
@@ -27749,7 +27752,7 @@ public class LeptonicaTest {
 //        float thresh = 0.0F;
 //        int type = 0;
 //        IntBuffer pchanged = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pixa expResult = null;
 //        Pixa result = instance.pixaSelectByPerimToAreaRatio(pixas, thresh, type, pchanged);
 //        assertEquals(expResult, result);
@@ -27768,7 +27771,7 @@ public class LeptonicaTest {
 //        int connectivity = 0;
 //        int type = 0;
 //        IntBuffer pchanged = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixSelectByPerimSizeRatio(pixs, thresh, connectivity, type, pchanged);
 //        assertEquals(expResult, result);
@@ -27786,7 +27789,7 @@ public class LeptonicaTest {
 //        float thresh = 0.0F;
 //        int type = 0;
 //        IntBuffer pchanged = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pixa expResult = null;
 //        Pixa result = instance.pixaSelectByPerimSizeRatio(pixas, thresh, type, pchanged);
 //        assertEquals(expResult, result);
@@ -27805,7 +27808,7 @@ public class LeptonicaTest {
 //        int connectivity = 0;
 //        int type = 0;
 //        IntBuffer pchanged = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixSelectByAreaFraction(pixs, thresh, connectivity, type, pchanged);
 //        assertEquals(expResult, result);
@@ -27823,7 +27826,7 @@ public class LeptonicaTest {
 //        float thresh = 0.0F;
 //        int type = 0;
 //        IntBuffer pchanged = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pixa expResult = null;
 //        Pixa result = instance.pixaSelectByAreaFraction(pixas, thresh, type, pchanged);
 //        assertEquals(expResult, result);
@@ -27842,7 +27845,7 @@ public class LeptonicaTest {
 //        int connectivity = 0;
 //        int type = 0;
 //        IntBuffer pchanged = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixSelectByWidthHeightRatio(pixs, thresh, connectivity, type, pchanged);
 //        assertEquals(expResult, result);
@@ -27860,7 +27863,7 @@ public class LeptonicaTest {
 //        float thresh = 0.0F;
 //        int type = 0;
 //        IntBuffer pchanged = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pixa expResult = null;
 //        Pixa result = instance.pixaSelectByWidthHeightRatio(pixas, thresh, type, pchanged);
 //        assertEquals(expResult, result);
@@ -27877,7 +27880,7 @@ public class LeptonicaTest {
 //        Pixa pixas = null;
 //        Numa na = null;
 //        IntBuffer pchanged = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pixa expResult = null;
 //        Pixa result = instance.pixaSelectWithIndicator(pixas, na, pchanged);
 //        assertEquals(expResult, result);
@@ -27894,7 +27897,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        Pixa pixa = null;
 //        Numa na = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixRemoveWithIndicator(pixs, pixa, na);
 //        assertEquals(expResult, result);
@@ -27911,7 +27914,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        Pixa pixa = null;
 //        Numa na = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixAddWithIndicator(pixs, pixa, na);
 //        assertEquals(expResult, result);
@@ -27928,7 +27931,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        Pixa pixa = null;
 //        int index = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixaRenderComponent(pixs, pixa, index);
 //        assertEquals(expResult, result);
@@ -27947,7 +27950,7 @@ public class LeptonicaTest {
 //        int sortorder = 0;
 //        Numa.ByReference[] pnaindex = null;
 //        int copyflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pixa expResult = null;
 //        Pixa result = instance.pixaSort(pixas, sorttype, sortorder, pnaindex, copyflag);
 //        assertEquals(expResult, result);
@@ -27966,7 +27969,7 @@ public class LeptonicaTest {
 //        int sortorder = 0;
 //        Numa.ByReference[] pnaindex = null;
 //        int copyflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pixa expResult = null;
 //        Pixa result = instance.pixaBinSort(pixas, sorttype, sortorder, pnaindex, copyflag);
 //        assertEquals(expResult, result);
@@ -27983,7 +27986,7 @@ public class LeptonicaTest {
 //        Pixa pixas = null;
 //        Numa naindex = null;
 //        int copyflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pixa expResult = null;
 //        Pixa result = instance.pixaSortByIndex(pixas, naindex, copyflag);
 //        assertEquals(expResult, result);
@@ -28000,7 +28003,7 @@ public class LeptonicaTest {
 //        Pixa pixas = null;
 //        Numaa naa = null;
 //        int copyflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pixaa expResult = null;
 //        Pixaa result = instance.pixaSort2dByIndex(pixas, naa, copyflag);
 //        assertEquals(expResult, result);
@@ -28018,7 +28021,7 @@ public class LeptonicaTest {
 //        int first = 0;
 //        int last = 0;
 //        int copyflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pixa expResult = null;
 //        Pixa result = instance.pixaSelectRange(pixas, first, last, copyflag);
 //        assertEquals(expResult, result);
@@ -28036,7 +28039,7 @@ public class LeptonicaTest {
 //        int first = 0;
 //        int last = 0;
 //        int copyflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pixaa expResult = null;
 //        Pixaa result = instance.pixaaSelectRange(paas, first, last, copyflag);
 //        assertEquals(expResult, result);
@@ -28053,7 +28056,7 @@ public class LeptonicaTest {
 //        Pixaa paas = null;
 //        int wd = 0;
 //        int hd = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pixaa expResult = null;
 //        Pixaa result = instance.pixaaScaleToSize(paas, wd, hd);
 //        assertEquals(expResult, result);
@@ -28070,7 +28073,7 @@ public class LeptonicaTest {
 //        Pixaa paas = null;
 //        Numa nawd = null;
 //        Numa nahd = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pixaa expResult = null;
 //        Pixaa result = instance.pixaaScaleToSizeVar(paas, nawd, nahd);
 //        assertEquals(expResult, result);
@@ -28087,7 +28090,7 @@ public class LeptonicaTest {
 //        Pixa pixas = null;
 //        int wd = 0;
 //        int hd = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pixa expResult = null;
 //        Pixa result = instance.pixaScaleToSize(pixas, wd, hd);
 //        assertEquals(expResult, result);
@@ -28108,7 +28111,7 @@ public class LeptonicaTest {
 //        int top = 0;
 //        int bot = 0;
 //        int val = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pixa expResult = null;
 //        Pixa result = instance.pixaAddBorderGeneral(pixad, pixas, left, right, top, bot, val);
 //        assertEquals(expResult, result);
@@ -28125,7 +28128,7 @@ public class LeptonicaTest {
 //        Pixaa paa = null;
 //        Numa.ByReference[] pnaindex = null;
 //        int copyflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pixa expResult = null;
 //        Pixa result = instance.pixaaFlattenToPixa(paa, pnaindex, copyflag);
 //        assertEquals(expResult, result);
@@ -28144,7 +28147,7 @@ public class LeptonicaTest {
 //        IntBuffer pminh = null;
 //        IntBuffer pmaxw = null;
 //        IntBuffer pmaxh = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixaaSizeRange(paa, pminw, pminh, pmaxw, pmaxh);
 //        assertEquals(expResult, result);
@@ -28163,7 +28166,7 @@ public class LeptonicaTest {
 //        IntBuffer pminh = null;
 //        IntBuffer pmaxw = null;
 //        IntBuffer pmaxh = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixaSizeRange(pixa, pminw, pminh, pmaxw, pmaxh);
 //        assertEquals(expResult, result);
@@ -28179,7 +28182,7 @@ public class LeptonicaTest {
 //        System.out.println("pixaClipToPix");
 //        Pixa pixas = null;
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pixa expResult = null;
 //        Pixa result = instance.pixaClipToPix(pixas, pixs);
 //        assertEquals(expResult, result);
@@ -28195,7 +28198,7 @@ public class LeptonicaTest {
 //        System.out.println("pixaGetRenderingDepth");
 //        Pixa pixa = null;
 //        IntBuffer pdepth = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixaGetRenderingDepth(pixa, pdepth);
 //        assertEquals(expResult, result);
@@ -28211,7 +28214,7 @@ public class LeptonicaTest {
 //        System.out.println("pixaHasColor");
 //        Pixa pixa = null;
 //        IntBuffer phascolor = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixaHasColor(pixa, phascolor);
 //        assertEquals(expResult, result);
@@ -28227,7 +28230,7 @@ public class LeptonicaTest {
 //        System.out.println("pixaAnyColormaps");
 //        Pixa pixa = null;
 //        IntBuffer phascmap = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixaAnyColormaps(pixa, phascmap);
 //        assertEquals(expResult, result);
@@ -28244,7 +28247,7 @@ public class LeptonicaTest {
 //        Pixa pixa = null;
 //        IntBuffer pmaxdepth = null;
 //        IntBuffer psame = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixaGetDepthInfo(pixa, pmaxdepth, psame);
 //        assertEquals(expResult, result);
@@ -28259,7 +28262,7 @@ public class LeptonicaTest {
 //    public void testPixaConvertToSameDepth() {
 //        System.out.println("pixaConvertToSameDepth");
 //        Pixa pixas = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pixa expResult = null;
 //        Pixa result = instance.pixaConvertToSameDepth(pixas);
 //        assertEquals(expResult, result);
@@ -28278,7 +28281,7 @@ public class LeptonicaTest {
 //        int maxdist = 0;
 //        Numa.ByReference[] pnaindex = null;
 //        IntBuffer psame = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixaEqual(pixa1, pixa2, maxdist, pnaindex, psame);
 //        assertEquals(expResult, result);
@@ -28297,7 +28300,7 @@ public class LeptonicaTest {
 //        int maxdist = 0;
 //        Numa.ByReference[] pnaindex = null;
 //        IntByReference psame = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixaEqual(pixa1, pixa2, maxdist, pnaindex, psame);
 //        assertEquals(expResult, result);
@@ -28314,7 +28317,7 @@ public class LeptonicaTest {
 //        Pixa pixa = null;
 //        int w = 0;
 //        int h = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixaDisplay(pixa, w, h);
 //        assertEquals(expResult, result);
@@ -28332,7 +28335,7 @@ public class LeptonicaTest {
 //        int w = 0;
 //        int h = 0;
 //        int bgcolor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixaDisplayOnColor(pixa, w, h, bgcolor);
 //        assertEquals(expResult, result);
@@ -28349,7 +28352,7 @@ public class LeptonicaTest {
 //        Pixa pixa = null;
 //        int w = 0;
 //        int h = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixaDisplayRandomCmap(pixa, w, h);
 //        assertEquals(expResult, result);
@@ -28370,7 +28373,7 @@ public class LeptonicaTest {
 //        int spacing = 0;
 //        int border = 0;
 //        Boxa.ByReference[] pboxa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixaDisplayLinearly(pixas, direction, scalefactor, background, spacing, border, pboxa);
 //        assertEquals(expResult, result);
@@ -28389,7 +28392,7 @@ public class LeptonicaTest {
 //        int cellh = 0;
 //        IntBuffer pncols = null;
 //        Boxa.ByReference[] pboxa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixaDisplayOnLattice(pixa, cellw, cellh, pncols, pboxa);
 //        assertEquals(expResult, result);
@@ -28408,7 +28411,7 @@ public class LeptonicaTest {
 //        int cellh = 0;
 //        IntByReference pncols = null;
 //        Boxa.ByReference[] pboxa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixaDisplayOnLattice(pixa, cellw, cellh, pncols, pboxa);
 //        assertEquals(expResult, result);
@@ -28427,7 +28430,7 @@ public class LeptonicaTest {
 //        int ny = 0;
 //        int borderwidth = 0;
 //        int bordercolor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixaDisplayUnsplit(pixa, nx, ny, borderwidth, bordercolor);
 //        assertEquals(expResult, result);
@@ -28445,7 +28448,7 @@ public class LeptonicaTest {
 //        int maxwidth = 0;
 //        int background = 0;
 //        int spacing = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixaDisplayTiled(pixa, maxwidth, background, spacing);
 //        assertEquals(expResult, result);
@@ -28466,7 +28469,7 @@ public class LeptonicaTest {
 //        int background = 0;
 //        int spacing = 0;
 //        int border = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixaDisplayTiledInRows(pixa, outdepth, maxwidth, scalefactor, background, spacing, border);
 //        assertEquals(expResult, result);
@@ -28487,7 +28490,7 @@ public class LeptonicaTest {
 //        int background = 0;
 //        int spacing = 0;
 //        int border = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixaDisplayTiledAndScaled(pixa, outdepth, tilewidth, ncols, background, spacing, border);
 //        assertEquals(expResult, result);
@@ -28504,7 +28507,7 @@ public class LeptonicaTest {
 //        Pixaa paa = null;
 //        int w = 0;
 //        int h = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixaaDisplay(paa, w, h);
 //        assertEquals(expResult, result);
@@ -28522,7 +28525,7 @@ public class LeptonicaTest {
 //        int xspace = 0;
 //        int yspace = 0;
 //        int maxw = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixaaDisplayByPixa(paa, xspace, yspace, maxw);
 //        assertEquals(expResult, result);
@@ -28543,7 +28546,7 @@ public class LeptonicaTest {
 //        int background = 0;
 //        int spacing = 0;
 //        int border = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pixa expResult = null;
 //        Pixa result = instance.pixaaDisplayTiledAndScaled(paa, outdepth, tilewidth, ncols, background, spacing, border);
 //        assertEquals(expResult, result);
@@ -28559,7 +28562,7 @@ public class LeptonicaTest {
 //        System.out.println("pixaConvertTo1");
 //        Pixa pixas = null;
 //        int thresh = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pixa expResult = null;
 //        Pixa result = instance.pixaConvertTo1(pixas, thresh);
 //        assertEquals(expResult, result);
@@ -28575,7 +28578,7 @@ public class LeptonicaTest {
 //        System.out.println("pixaConvertTo8");
 //        Pixa pixas = null;
 //        int cmapflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pixa expResult = null;
 //        Pixa result = instance.pixaConvertTo8(pixas, cmapflag);
 //        assertEquals(expResult, result);
@@ -28591,7 +28594,7 @@ public class LeptonicaTest {
 //        System.out.println("pixaConvertTo8Color");
 //        Pixa pixas = null;
 //        int dither = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pixa expResult = null;
 //        Pixa result = instance.pixaConvertTo8Color(pixas, dither);
 //        assertEquals(expResult, result);
@@ -28606,7 +28609,7 @@ public class LeptonicaTest {
 //    public void testPixaConvertTo32() {
 //        System.out.println("pixaConvertTo32");
 //        Pixa pixas = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pixa expResult = null;
 //        Pixa result = instance.pixaConvertTo32(pixas);
 //        assertEquals(expResult, result);
@@ -28629,7 +28632,7 @@ public class LeptonicaTest {
 //        int border = 0;
 //        String fontdir = "";
 //        String outdir = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.convertToNUpFiles(dir, substr, nx, ny, tw, spacing, border, fontdir, outdir);
 //        assertEquals(expResult, result);
@@ -28651,7 +28654,7 @@ public class LeptonicaTest {
 //        int spacing = 0;
 //        int border = 0;
 //        String fontdir = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pixa expResult = null;
 //        Pixa result = instance.convertToNUpPixa(dir, substr, nx, ny, tw, spacing, border, fontdir);
 //        assertEquals(expResult, result);
@@ -28669,7 +28672,7 @@ public class LeptonicaTest {
 //        NativeSize smallest = null;
 //        Numa numalloc = null;
 //        String logfile = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pmsCreate(minsize, smallest, numalloc, logfile);
 //        assertEquals(expResult, result);
@@ -28683,7 +28686,7 @@ public class LeptonicaTest {
 //    @Test
 //    public void testPmsDestroy() {
 //        System.out.println("pmsDestroy");
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.pmsDestroy();
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -28696,7 +28699,7 @@ public class LeptonicaTest {
 //    public void testPmsCustomAlloc() {
 //        System.out.println("pmsCustomAlloc");
 //        NativeSize nbytes = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.pmsCustomAlloc(nbytes);
 //        assertEquals(expResult, result);
@@ -28711,7 +28714,7 @@ public class LeptonicaTest {
 //    public void testPmsCustomDealloc() {
 //        System.out.println("pmsCustomDealloc");
 //        Pointer data = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.pmsCustomDealloc(data);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -28724,7 +28727,7 @@ public class LeptonicaTest {
 //    public void testPmsGetAlloc() {
 //        System.out.println("pmsGetAlloc");
 //        NativeSize nbytes = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.pmsGetAlloc(nbytes);
 //        assertEquals(expResult, result);
@@ -28740,7 +28743,7 @@ public class LeptonicaTest {
 //        System.out.println("pmsGetLevelForAlloc");
 //        NativeSize nbytes = null;
 //        IntBuffer plevel = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pmsGetLevelForAlloc(nbytes, plevel);
 //        assertEquals(expResult, result);
@@ -28756,7 +28759,7 @@ public class LeptonicaTest {
 //        System.out.println("pmsGetLevelForDealloc");
 //        Pointer data = null;
 //        IntBuffer plevel = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pmsGetLevelForDealloc(data, plevel);
 //        assertEquals(expResult, result);
@@ -28770,7 +28773,7 @@ public class LeptonicaTest {
 //    @Test
 //    public void testPmsLogInfo() {
 //        System.out.println("pmsLogInfo");
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.pmsLogInfo();
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -28784,7 +28787,7 @@ public class LeptonicaTest {
 //        System.out.println("pixAddConstantGray");
 //        Pix pixs = null;
 //        int val = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixAddConstantGray(pixs, val);
 //        assertEquals(expResult, result);
@@ -28800,7 +28803,7 @@ public class LeptonicaTest {
 //        System.out.println("pixMultConstantGray");
 //        Pix pixs = null;
 //        float val = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixMultConstantGray(pixs, val);
 //        assertEquals(expResult, result);
@@ -28817,7 +28820,7 @@ public class LeptonicaTest {
 //        Pix pixd = null;
 //        Pix pixs1 = null;
 //        Pix pixs2 = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixAddGray(pixd, pixs1, pixs2);
 //        assertEquals(expResult, result);
@@ -28834,7 +28837,7 @@ public class LeptonicaTest {
 //        Pix pixd = null;
 //        Pix pixs1 = null;
 //        Pix pixs2 = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixSubtractGray(pixd, pixs1, pixs2);
 //        assertEquals(expResult, result);
@@ -28852,7 +28855,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int threshval = 0;
 //        int setval = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixThresholdToValue(pixd, pixs, threshval, setval);
 //        assertEquals(expResult, result);
@@ -28869,7 +28872,7 @@ public class LeptonicaTest {
 //        int w = 0;
 //        int h = 0;
 //        int offset = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixInitAccumulate(w, h, offset);
 //        assertEquals(expResult, result);
@@ -28886,7 +28889,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int offset = 0;
 //        int depth = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixFinalAccumulate(pixs, offset, depth);
 //        assertEquals(expResult, result);
@@ -28903,7 +28906,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int offset = 0;
 //        int threshold = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixFinalAccumulateThreshold(pixs, offset, threshold);
 //        assertEquals(expResult, result);
@@ -28920,7 +28923,7 @@ public class LeptonicaTest {
 //        Pix pixd = null;
 //        Pix pixs = null;
 //        int op = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixAccumulate(pixd, pixs, op);
 //        assertEquals(expResult, result);
@@ -28937,7 +28940,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        float factor = 0.0F;
 //        int offset = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixMultConstAccumulate(pixs, factor, offset);
 //        assertEquals(expResult, result);
@@ -28953,7 +28956,7 @@ public class LeptonicaTest {
 //        System.out.println("pixAbsDifference");
 //        Pix pixs1 = null;
 //        Pix pixs2 = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixAbsDifference(pixs1, pixs2);
 //        assertEquals(expResult, result);
@@ -28969,7 +28972,7 @@ public class LeptonicaTest {
 //        System.out.println("pixAddRGB");
 //        Pix pixs1 = null;
 //        Pix pixs2 = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixAddRGB(pixs1, pixs2);
 //        assertEquals(expResult, result);
@@ -28987,7 +28990,7 @@ public class LeptonicaTest {
 //        Pix pixs1 = null;
 //        Pix pixs2 = null;
 //        int type = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixMinOrMax(pixd, pixs1, pixs2, type);
 //        assertEquals(expResult, result);
@@ -29003,7 +29006,7 @@ public class LeptonicaTest {
 //        System.out.println("pixMaxDynamicRange");
 //        Pix pixs = null;
 //        int type = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixMaxDynamicRange(pixs, type);
 //        assertEquals(expResult, result);
@@ -29017,7 +29020,7 @@ public class LeptonicaTest {
 //    @Test
 //    public void testMakeLogBase2Tab() {
 //        System.out.println("makeLogBase2Tab");
-//        Leptonica instance = new LeptonicaImpl();
+
 //        FloatByReference expResult = null;
 //        FloatByReference result = instance.makeLogBase2Tab();
 //        assertEquals(expResult, result);
@@ -29033,7 +29036,7 @@ public class LeptonicaTest {
 //        System.out.println("getLogBase2");
 //        int val = 0;
 //        FloatBuffer logtab = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        float expResult = 0.0F;
 //        float result = instance.getLogBase2(val, logtab);
 //        assertEquals(expResult, result, 0.0);
@@ -29049,7 +29052,7 @@ public class LeptonicaTest {
 //        System.out.println("pixcompCreateFromPix");
 //        Pix pix = null;
 //        int comptype = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        PixComp expResult = null;
 //        PixComp result = instance.pixcompCreateFromPix(pix, comptype);
 //        assertEquals(expResult, result);
@@ -29066,7 +29069,7 @@ public class LeptonicaTest {
 //        ByteBuffer data = null;
 //        NativeSize size = null;
 //        int copyflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        PixComp expResult = null;
 //        PixComp result = instance.pixcompCreateFromString(data, size, copyflag);
 //        assertEquals(expResult, result);
@@ -29082,7 +29085,7 @@ public class LeptonicaTest {
 //        System.out.println("pixcompCreateFromFile");
 //        String filename = "";
 //        int comptype = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        PixComp expResult = null;
 //        PixComp result = instance.pixcompCreateFromFile(filename, comptype);
 //        assertEquals(expResult, result);
@@ -29097,7 +29100,7 @@ public class LeptonicaTest {
 //    public void testPixcompDestroy() {
 //        System.out.println("pixcompDestroy");
 //        PixComp.ByReference[] ppixc = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.pixcompDestroy(ppixc);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -29113,7 +29116,7 @@ public class LeptonicaTest {
 //        IntBuffer pw = null;
 //        IntBuffer ph = null;
 //        IntBuffer pd = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixcompGetDimensions(pixc, pw, ph, pd);
 //        assertEquals(expResult, result);
@@ -29131,7 +29134,7 @@ public class LeptonicaTest {
 //        int d = 0;
 //        int cmapflag = 0;
 //        IntBuffer pformat = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixcompDetermineFormat(comptype, d, cmapflag, pformat);
 //        assertEquals(expResult, result);
@@ -29146,7 +29149,7 @@ public class LeptonicaTest {
 //    public void testPixCreateFromPixcomp() {
 //        System.out.println("pixCreateFromPixcomp");
 //        PixComp pixc = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixCreateFromPixcomp(pixc);
 //        assertEquals(expResult, result);
@@ -29161,7 +29164,7 @@ public class LeptonicaTest {
 //    public void testPixacompCreate() {
 //        System.out.println("pixacompCreate");
 //        int n = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        PixaComp expResult = null;
 //        PixaComp result = instance.pixacompCreate(n);
 //        assertEquals(expResult, result);
@@ -29179,7 +29182,7 @@ public class LeptonicaTest {
 //        int offset = 0;
 //        Pix pix = null;
 //        int comptype = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        PixaComp expResult = null;
 //        PixaComp result = instance.pixacompCreateWithInit(n, offset, pix, comptype);
 //        assertEquals(expResult, result);
@@ -29196,7 +29199,7 @@ public class LeptonicaTest {
 //        Pixa pixa = null;
 //        int comptype = 0;
 //        int accesstype = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        PixaComp expResult = null;
 //        PixaComp result = instance.pixacompCreateFromPixa(pixa, comptype, accesstype);
 //        assertEquals(expResult, result);
@@ -29213,7 +29216,7 @@ public class LeptonicaTest {
 //        String dirname = "";
 //        String substr = "";
 //        int comptype = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        PixaComp expResult = null;
 //        PixaComp result = instance.pixacompCreateFromFiles(dirname, substr, comptype);
 //        assertEquals(expResult, result);
@@ -29229,7 +29232,7 @@ public class LeptonicaTest {
 //        System.out.println("pixacompCreateFromSA");
 //        Sarray sa = null;
 //        int comptype = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        PixaComp expResult = null;
 //        PixaComp result = instance.pixacompCreateFromSA(sa, comptype);
 //        assertEquals(expResult, result);
@@ -29244,7 +29247,7 @@ public class LeptonicaTest {
 //    public void testPixacompDestroy() {
 //        System.out.println("pixacompDestroy");
 //        PixaComp.ByReference[] ppixac = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.pixacompDestroy(ppixac);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -29259,7 +29262,7 @@ public class LeptonicaTest {
 //        PixaComp pixac = null;
 //        Pix pix = null;
 //        int comptype = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixacompAddPix(pixac, pix, comptype);
 //        assertEquals(expResult, result);
@@ -29275,7 +29278,7 @@ public class LeptonicaTest {
 //        System.out.println("pixacompAddPixcomp");
 //        PixaComp pixac = null;
 //        PixComp pixc = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixacompAddPixcomp(pixac, pixc);
 //        assertEquals(expResult, result);
@@ -29293,7 +29296,7 @@ public class LeptonicaTest {
 //        int index = 0;
 //        Pix pix = null;
 //        int comptype = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixacompReplacePix(pixac, index, pix, comptype);
 //        assertEquals(expResult, result);
@@ -29310,7 +29313,7 @@ public class LeptonicaTest {
 //        PixaComp pixac = null;
 //        int index = 0;
 //        PixComp pixc = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixacompReplacePixcomp(pixac, index, pixc);
 //        assertEquals(expResult, result);
@@ -29327,7 +29330,7 @@ public class LeptonicaTest {
 //        PixaComp pixac = null;
 //        Box box = null;
 //        int copyflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixacompAddBox(pixac, box, copyflag);
 //        assertEquals(expResult, result);
@@ -29342,7 +29345,7 @@ public class LeptonicaTest {
 //    public void testPixacompGetCount() {
 //        System.out.println("pixacompGetCount");
 //        PixaComp pixac = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixacompGetCount(pixac);
 //        assertEquals(expResult, result);
@@ -29358,7 +29361,7 @@ public class LeptonicaTest {
 //        System.out.println("pixacompGetPixcomp");
 //        PixaComp pixac = null;
 //        int index = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        PixComp expResult = null;
 //        PixComp result = instance.pixacompGetPixcomp(pixac, index);
 //        assertEquals(expResult, result);
@@ -29374,7 +29377,7 @@ public class LeptonicaTest {
 //        System.out.println("pixacompGetPix");
 //        PixaComp pixac = null;
 //        int index = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixacompGetPix(pixac, index);
 //        assertEquals(expResult, result);
@@ -29393,7 +29396,7 @@ public class LeptonicaTest {
 //        IntBuffer pw = null;
 //        IntBuffer ph = null;
 //        IntBuffer pd = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixacompGetPixDimensions(pixac, index, pw, ph, pd);
 //        assertEquals(expResult, result);
@@ -29409,7 +29412,7 @@ public class LeptonicaTest {
 //        System.out.println("pixacompGetBoxa");
 //        PixaComp pixac = null;
 //        int accesstype = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxa expResult = null;
 //        Boxa result = instance.pixacompGetBoxa(pixac, accesstype);
 //        assertEquals(expResult, result);
@@ -29424,7 +29427,7 @@ public class LeptonicaTest {
 //    public void testPixacompGetBoxaCount() {
 //        System.out.println("pixacompGetBoxaCount");
 //        PixaComp pixac = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixacompGetBoxaCount(pixac);
 //        assertEquals(expResult, result);
@@ -29441,7 +29444,7 @@ public class LeptonicaTest {
 //        PixaComp pixac = null;
 //        int index = 0;
 //        int accesstype = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Box expResult = null;
 //        Box result = instance.pixacompGetBox(pixac, index, accesstype);
 //        assertEquals(expResult, result);
@@ -29461,7 +29464,7 @@ public class LeptonicaTest {
 //        IntBuffer py = null;
 //        IntBuffer pw = null;
 //        IntBuffer ph = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixacompGetBoxGeometry(pixac, index, px, py, pw, ph);
 //        assertEquals(expResult, result);
@@ -29476,7 +29479,7 @@ public class LeptonicaTest {
 //    public void testPixacompGetOffset() {
 //        System.out.println("pixacompGetOffset");
 //        PixaComp pixac = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixacompGetOffset(pixac);
 //        assertEquals(expResult, result);
@@ -29492,7 +29495,7 @@ public class LeptonicaTest {
 //        System.out.println("pixacompSetOffset");
 //        PixaComp pixac = null;
 //        int offset = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixacompSetOffset(pixac, offset);
 //        assertEquals(expResult, result);
@@ -29508,7 +29511,7 @@ public class LeptonicaTest {
 //        System.out.println("pixaCreateFromPixacomp");
 //        PixaComp pixac = null;
 //        int accesstype = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pixa expResult = null;
 //        Pixa result = instance.pixaCreateFromPixacomp(pixac, accesstype);
 //        assertEquals(expResult, result);
@@ -29523,7 +29526,7 @@ public class LeptonicaTest {
 //    public void testPixacompRead() {
 //        System.out.println("pixacompRead");
 //        String filename = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        PixaComp expResult = null;
 //        PixaComp result = instance.pixacompRead(filename);
 //        assertEquals(expResult, result);
@@ -29538,7 +29541,7 @@ public class LeptonicaTest {
 //    public void testPixacompReadStream() {
 //        System.out.println("pixacompReadStream");
 //        PointerByReference fp = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        PixaComp expResult = null;
 //        PixaComp result = instance.pixacompReadStream(fp);
 //        assertEquals(expResult, result);
@@ -29554,7 +29557,7 @@ public class LeptonicaTest {
 //        System.out.println("pixacompWrite");
 //        String filename = "";
 //        PixaComp pixac = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixacompWrite(filename, pixac);
 //        assertEquals(expResult, result);
@@ -29570,7 +29573,7 @@ public class LeptonicaTest {
 //        System.out.println("pixacompWriteStream");
 //        PointerByReference fp = null;
 //        PixaComp pixac = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixacompWriteStream(fp, pixac);
 //        assertEquals(expResult, result);
@@ -29591,7 +29594,7 @@ public class LeptonicaTest {
 //        int quality = 0;
 //        String title = "";
 //        String fileout = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixacompConvertToPdf(pixac, res, scalefactor, type, quality, title, fileout);
 //        assertEquals(expResult, result);
@@ -29613,7 +29616,7 @@ public class LeptonicaTest {
 //        String title = "";
 //        PointerByReference pdata = null;
 //        NativeSizeByReference pnbytes = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixacompConvertToPdfData(pixac, res, scalefactor, type, quality, title, pdata, pnbytes);
 //        assertEquals(expResult, result);
@@ -29630,7 +29633,7 @@ public class LeptonicaTest {
 //        PointerByReference fp = null;
 //        PixaComp pixac = null;
 //        String text = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixacompWriteStreamInfo(fp, pixac, text);
 //        assertEquals(expResult, result);
@@ -29647,7 +29650,7 @@ public class LeptonicaTest {
 //        PointerByReference fp = null;
 //        PixaComp pixac = null;
 //        Pointer text = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixacompWriteStreamInfo(fp, pixac, text);
 //        assertEquals(expResult, result);
@@ -29664,7 +29667,7 @@ public class LeptonicaTest {
 //        PointerByReference fp = null;
 //        PixComp pixc = null;
 //        String text = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixcompWriteStreamInfo(fp, pixc, text);
 //        assertEquals(expResult, result);
@@ -29681,7 +29684,7 @@ public class LeptonicaTest {
 //        PointerByReference fp = null;
 //        PixComp pixc = null;
 //        Pointer text = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixcompWriteStreamInfo(fp, pixc, text);
 //        assertEquals(expResult, result);
@@ -29702,7 +29705,7 @@ public class LeptonicaTest {
 //        int background = 0;
 //        int spacing = 0;
 //        int border = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixacompDisplayTiledAndScaled(pixac, outdepth, tilewidth, ncols, background, spacing, border);
 //        assertEquals(expResult, result);
@@ -29720,7 +29723,7 @@ public class LeptonicaTest {
 //        int d = 0;
 //        int nlevels = 0;
 //        int cmapflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixThreshold8(pixs, d, nlevels, cmapflag);
 //        assertEquals(expResult, result);
@@ -29737,7 +29740,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int type = 0;
 //        int ifnocmap = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixRemoveColormapGeneral(pixs, type, ifnocmap);
 //        assertEquals(expResult, result);
@@ -29753,7 +29756,7 @@ public class LeptonicaTest {
 //        System.out.println("pixRemoveColormap");
 //        Pix pixs = null;
 //        int type = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixRemoveColormap(pixs, type);
 //        assertEquals(expResult, result);
@@ -29768,7 +29771,7 @@ public class LeptonicaTest {
 //    public void testPixAddGrayColormap8() {
 //        System.out.println("pixAddGrayColormap8");
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixAddGrayColormap8(pixs);
 //        assertEquals(expResult, result);
@@ -29783,7 +29786,7 @@ public class LeptonicaTest {
 //    public void testPixAddMinimalGrayColormap8() {
 //        System.out.println("pixAddMinimalGrayColormap8");
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixAddMinimalGrayColormap8(pixs);
 //        assertEquals(expResult, result);
@@ -29798,7 +29801,7 @@ public class LeptonicaTest {
 //    public void testPixConvertRGBToLuminance() {
 //        System.out.println("pixConvertRGBToLuminance");
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixConvertRGBToLuminance(pixs);
 //        assertEquals(expResult, result);
@@ -29816,7 +29819,7 @@ public class LeptonicaTest {
 //        float rwt = 0.0F;
 //        float gwt = 0.0F;
 //        float bwt = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixConvertRGBToGray(pixs, rwt, gwt, bwt);
 //        assertEquals(expResult, result);
@@ -29831,7 +29834,7 @@ public class LeptonicaTest {
 //    public void testPixConvertRGBToGrayFast() {
 //        System.out.println("pixConvertRGBToGrayFast");
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixConvertRGBToGrayFast(pixs);
 //        assertEquals(expResult, result);
@@ -29847,7 +29850,7 @@ public class LeptonicaTest {
 //        System.out.println("pixConvertRGBToGrayMinMax");
 //        Pix pixs = null;
 //        int type = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixConvertRGBToGrayMinMax(pixs, type);
 //        assertEquals(expResult, result);
@@ -29863,7 +29866,7 @@ public class LeptonicaTest {
 //        System.out.println("pixConvertRGBToGraySatBoost");
 //        Pix pixs = null;
 //        int refval = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixConvertRGBToGraySatBoost(pixs, refval);
 //        assertEquals(expResult, result);
@@ -29878,7 +29881,7 @@ public class LeptonicaTest {
 //    public void testPixConvertGrayToColormap() {
 //        System.out.println("pixConvertGrayToColormap");
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixConvertGrayToColormap(pixs);
 //        assertEquals(expResult, result);
@@ -29894,7 +29897,7 @@ public class LeptonicaTest {
 //        System.out.println("pixConvertGrayToColormap8");
 //        Pix pixs = null;
 //        int mindepth = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixConvertGrayToColormap8(pixs, mindepth);
 //        assertEquals(expResult, result);
@@ -29911,7 +29914,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int color = 0;
 //        int cmapflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixColorizeGray(pixs, color, cmapflag);
 //        assertEquals(expResult, result);
@@ -29927,7 +29930,7 @@ public class LeptonicaTest {
 //        System.out.println("pixConvertRGBToColormap");
 //        Pix pixs = null;
 //        int ditherflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixConvertRGBToColormap(pixs, ditherflag);
 //        assertEquals(expResult, result);
@@ -29946,7 +29949,7 @@ public class LeptonicaTest {
 //        int mingraycolors = 0;
 //        int octlevel = 0;
 //        Pix.ByReference[] ppixd = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixQuantizeIfFewColors(pixs, maxcolors, mingraycolors, octlevel, ppixd);
 //        assertEquals(expResult, result);
@@ -29962,7 +29965,7 @@ public class LeptonicaTest {
 //        System.out.println("pixConvert16To8");
 //        Pix pixs = null;
 //        int type = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixConvert16To8(pixs, type);
 //        assertEquals(expResult, result);
@@ -29978,7 +29981,7 @@ public class LeptonicaTest {
 //        System.out.println("pixConvertGrayToFalseColor");
 //        Pix pixs = null;
 //        float gamma = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixConvertGrayToFalseColor(pixs, gamma);
 //        assertEquals(expResult, result);
@@ -29995,7 +29998,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int depth = 0;
 //        int invert = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixUnpackBinary(pixs, depth, invert);
 //        assertEquals(expResult, result);
@@ -30013,7 +30016,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        short val0 = 0;
 //        short val1 = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixConvert1To16(pixd, pixs, val0, val1);
 //        assertEquals(expResult, result);
@@ -30031,7 +30034,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int val0 = 0;
 //        int val1 = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixConvert1To32(pixd, pixs, val0, val1);
 //        assertEquals(expResult, result);
@@ -30046,7 +30049,7 @@ public class LeptonicaTest {
 //    public void testPixConvert1To2Cmap() {
 //        System.out.println("pixConvert1To2Cmap");
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixConvert1To2Cmap(pixs);
 //        assertEquals(expResult, result);
@@ -30064,7 +30067,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int val0 = 0;
 //        int val1 = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixConvert1To2(pixd, pixs, val0, val1);
 //        assertEquals(expResult, result);
@@ -30079,7 +30082,7 @@ public class LeptonicaTest {
 //    public void testPixConvert1To4Cmap() {
 //        System.out.println("pixConvert1To4Cmap");
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixConvert1To4Cmap(pixs);
 //        assertEquals(expResult, result);
@@ -30097,7 +30100,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int val0 = 0;
 //        int val1 = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixConvert1To4(pixd, pixs, val0, val1);
 //        assertEquals(expResult, result);
@@ -30115,7 +30118,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        byte val0 = 0;
 //        byte val1 = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixConvert1To8(pixd, pixs, val0, val1);
 //        assertEquals(expResult, result);
@@ -30135,7 +30138,7 @@ public class LeptonicaTest {
 //        byte val2 = 0;
 //        byte val3 = 0;
 //        int cmapflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixConvert2To8(pixs, val0, val1, val2, val3, cmapflag);
 //        assertEquals(expResult, result);
@@ -30151,7 +30154,7 @@ public class LeptonicaTest {
 //        System.out.println("pixConvert4To8");
 //        Pix pixs = null;
 //        int cmapflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixConvert4To8(pixs, cmapflag);
 //        assertEquals(expResult, result);
@@ -30167,7 +30170,7 @@ public class LeptonicaTest {
 //        System.out.println("pixConvert8To16");
 //        Pix pixs = null;
 //        int leftshift = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixConvert8To16(pixs, leftshift);
 //        assertEquals(expResult, result);
@@ -30183,7 +30186,7 @@ public class LeptonicaTest {
 //        System.out.println("pixConvertTo1");
 //        Pix pixs = null;
 //        int threshold = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixConvertTo1(pixs, threshold);
 //        assertEquals(expResult, result);
@@ -30200,7 +30203,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int factor = 0;
 //        int threshold = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixConvertTo1BySampling(pixs, factor, threshold);
 //        assertEquals(expResult, result);
@@ -30216,7 +30219,7 @@ public class LeptonicaTest {
 //        System.out.println("pixConvertTo8");
 //        Pix pixs = null;
 //        int cmapflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixConvertTo8(pixs, cmapflag);
 //        assertEquals(expResult, result);
@@ -30233,7 +30236,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int factor = 0;
 //        int cmapflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixConvertTo8BySampling(pixs, factor, cmapflag);
 //        assertEquals(expResult, result);
@@ -30249,7 +30252,7 @@ public class LeptonicaTest {
 //        System.out.println("pixConvertTo8Color");
 //        Pix pixs = null;
 //        int dither = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixConvertTo8Color(pixs, dither);
 //        assertEquals(expResult, result);
@@ -30264,7 +30267,7 @@ public class LeptonicaTest {
 //    public void testPixConvertTo16() {
 //        System.out.println("pixConvertTo16");
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixConvertTo16(pixs);
 //        assertEquals(expResult, result);
@@ -30279,7 +30282,7 @@ public class LeptonicaTest {
 //    public void testPixConvertTo32() {
 //        System.out.println("pixConvertTo32");
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixConvertTo32(pixs);
 //        assertEquals(expResult, result);
@@ -30295,7 +30298,7 @@ public class LeptonicaTest {
 //        System.out.println("pixConvertTo32BySampling");
 //        Pix pixs = null;
 //        int factor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixConvertTo32BySampling(pixs, factor);
 //        assertEquals(expResult, result);
@@ -30310,7 +30313,7 @@ public class LeptonicaTest {
 //    public void testPixConvert8To32() {
 //        System.out.println("pixConvert8To32");
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixConvert8To32(pixs);
 //        assertEquals(expResult, result);
@@ -30327,7 +30330,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int copyflag = 0;
 //        int warnflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixConvertTo8Or32(pixs, copyflag, warnflag);
 //        assertEquals(expResult, result);
@@ -30342,7 +30345,7 @@ public class LeptonicaTest {
 //    public void testPixConvert24To32() {
 //        System.out.println("pixConvert24To32");
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixConvert24To32(pixs);
 //        assertEquals(expResult, result);
@@ -30357,7 +30360,7 @@ public class LeptonicaTest {
 //    public void testPixConvert32To24() {
 //        System.out.println("pixConvert32To24");
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixConvert32To24(pixs);
 //        assertEquals(expResult, result);
@@ -30372,7 +30375,7 @@ public class LeptonicaTest {
 //    public void testPixRemoveAlpha() {
 //        System.out.println("pixRemoveAlpha");
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixRemoveAlpha(pixs);
 //        assertEquals(expResult, result);
@@ -30388,7 +30391,7 @@ public class LeptonicaTest {
 //        System.out.println("pixAddAlphaTo1bpp");
 //        Pix pixd = null;
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixAddAlphaTo1bpp(pixd, pixs);
 //        assertEquals(expResult, result);
@@ -30404,7 +30407,7 @@ public class LeptonicaTest {
 //        System.out.println("pixConvertLossless");
 //        Pix pixs = null;
 //        int d = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixConvertLossless(pixs, d);
 //        assertEquals(expResult, result);
@@ -30419,7 +30422,7 @@ public class LeptonicaTest {
 //    public void testPixConvertForPSWrap() {
 //        System.out.println("pixConvertForPSWrap");
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixConvertForPSWrap(pixs);
 //        assertEquals(expResult, result);
@@ -30437,7 +30440,7 @@ public class LeptonicaTest {
 //        float scalex = 0.0F;
 //        float scaley = 0.0F;
 //        int order = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixConvertToSubpixelRGB(pixs, scalex, scaley, order);
 //        assertEquals(expResult, result);
@@ -30455,7 +30458,7 @@ public class LeptonicaTest {
 //        float scalex = 0.0F;
 //        float scaley = 0.0F;
 //        int order = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixConvertGrayToSubpixelRGB(pixs, scalex, scaley, order);
 //        assertEquals(expResult, result);
@@ -30473,7 +30476,7 @@ public class LeptonicaTest {
 //        float scalex = 0.0F;
 //        float scaley = 0.0F;
 //        int order = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixConvertColorToSubpixelRGB(pixs, scalex, scaley, order);
 //        assertEquals(expResult, result);
@@ -30490,7 +30493,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int connect = 0;
 //        int depth = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixConnCompTransform(pixs, connect, depth);
 //        assertEquals(expResult, result);
@@ -30506,7 +30509,7 @@ public class LeptonicaTest {
 //        System.out.println("pixConnCompAreaTransform");
 //        Pix pixs = null;
 //        int connect = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixConnCompAreaTransform(pixs, connect);
 //        assertEquals(expResult, result);
@@ -30521,7 +30524,7 @@ public class LeptonicaTest {
 //    public void testPixLocToColorTransform() {
 //        System.out.println("pixLocToColorTransform");
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixLocToColorTransform(pixs);
 //        assertEquals(expResult, result);
@@ -30542,7 +30545,7 @@ public class LeptonicaTest {
 //        int h = 0;
 //        int xoverlap = 0;
 //        int yoverlap = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        PixTiling expResult = null;
 //        PixTiling result = instance.pixTilingCreate(pixs, nx, ny, w, h, xoverlap, yoverlap);
 //        assertEquals(expResult, result);
@@ -30557,7 +30560,7 @@ public class LeptonicaTest {
 //    public void testPixTilingDestroy() {
 //        System.out.println("pixTilingDestroy");
 //        PixTiling.ByReference[] ppt = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.pixTilingDestroy(ppt);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -30572,7 +30575,7 @@ public class LeptonicaTest {
 //        PixTiling pt = null;
 //        IntBuffer pnx = null;
 //        IntBuffer pny = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixTilingGetCount(pt, pnx, pny);
 //        assertEquals(expResult, result);
@@ -30589,7 +30592,7 @@ public class LeptonicaTest {
 //        PixTiling pt = null;
 //        IntBuffer pw = null;
 //        IntBuffer ph = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixTilingGetSize(pt, pw, ph);
 //        assertEquals(expResult, result);
@@ -30606,7 +30609,7 @@ public class LeptonicaTest {
 //        PixTiling pt = null;
 //        int i = 0;
 //        int j = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixTilingGetTile(pt, i, j);
 //        assertEquals(expResult, result);
@@ -30621,7 +30624,7 @@ public class LeptonicaTest {
 //    public void testPixTilingNoStripOnPaint() {
 //        System.out.println("pixTilingNoStripOnPaint");
 //        PixTiling pt = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixTilingNoStripOnPaint(pt);
 //        assertEquals(expResult, result);
@@ -30640,7 +30643,7 @@ public class LeptonicaTest {
 //        int j = 0;
 //        Pix pixs = null;
 //        PixTiling pt = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixTilingPaintTile(pixd, i, j, pixs, pt);
 //        assertEquals(expResult, result);
@@ -30655,7 +30658,7 @@ public class LeptonicaTest {
 //    public void testPixReadStreamPng() {
 //        System.out.println("pixReadStreamPng");
 //        PointerByReference fp = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixReadStreamPng(fp);
 //        assertEquals(expResult, result);
@@ -30675,7 +30678,7 @@ public class LeptonicaTest {
 //        IntBuffer pbps = null;
 //        IntBuffer pspp = null;
 //        IntBuffer piscmap = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.readHeaderPng(filename, pw, ph, pbps, pspp, piscmap);
 //        assertEquals(expResult, result);
@@ -30695,7 +30698,7 @@ public class LeptonicaTest {
 //        IntBuffer pbps = null;
 //        IntBuffer pspp = null;
 //        IntBuffer piscmap = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.freadHeaderPng(fp, pw, ph, pbps, pspp, piscmap);
 //        assertEquals(expResult, result);
@@ -30715,7 +30718,7 @@ public class LeptonicaTest {
 //        IntByReference pbps = null;
 //        IntByReference pspp = null;
 //        IntByReference piscmap = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.freadHeaderPng(fp, pw, ph, pbps, pspp, piscmap);
 //        assertEquals(expResult, result);
@@ -30736,7 +30739,7 @@ public class LeptonicaTest {
 //        IntBuffer pbps = null;
 //        IntBuffer pspp = null;
 //        IntBuffer piscmap = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.readHeaderMemPng(data, size, pw, ph, pbps, pspp, piscmap);
 //        assertEquals(expResult, result);
@@ -30753,7 +30756,7 @@ public class LeptonicaTest {
 //        PointerByReference fp = null;
 //        IntBuffer pxres = null;
 //        IntBuffer pyres = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.fgetPngResolution(fp, pxres, pyres);
 //        assertEquals(expResult, result);
@@ -30770,7 +30773,7 @@ public class LeptonicaTest {
 //        PointerByReference fp = null;
 //        IntByReference pxres = null;
 //        IntByReference pyres = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.fgetPngResolution(fp, pxres, pyres);
 //        assertEquals(expResult, result);
@@ -30786,7 +30789,7 @@ public class LeptonicaTest {
 //        System.out.println("isPngInterlaced");
 //        String filename = "";
 //        IntBuffer pinterlaced = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.isPngInterlaced(filename, pinterlaced);
 //        assertEquals(expResult, result);
@@ -30803,7 +30806,7 @@ public class LeptonicaTest {
 //        String filename = "";
 //        Pix pix = null;
 //        float gamma = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixWritePng(filename, pix, gamma);
 //        assertEquals(expResult, result);
@@ -30820,7 +30823,7 @@ public class LeptonicaTest {
 //        PointerByReference fp = null;
 //        Pix pix = null;
 //        float gamma = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixWriteStreamPng(fp, pix, gamma);
 //        assertEquals(expResult, result);
@@ -30836,7 +30839,7 @@ public class LeptonicaTest {
 //        System.out.println("pixSetZlibCompression");
 //        Pix pix = null;
 //        int compval = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixSetZlibCompression(pix, compval);
 //        assertEquals(expResult, result);
@@ -30851,7 +30854,7 @@ public class LeptonicaTest {
 //    public void testL_pngSetReadStrip16To8() {
 //        System.out.println("l_pngSetReadStrip16To8");
 //        int flag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.l_pngSetReadStrip16To8(flag);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -30865,7 +30868,7 @@ public class LeptonicaTest {
 //        System.out.println("pixReadMemPng");
 //        ByteBuffer cdata = null;
 //        NativeSize size = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixReadMemPng(cdata, size);
 //        assertEquals(expResult, result);
@@ -30883,7 +30886,7 @@ public class LeptonicaTest {
 //        NativeSizeByReference psize = null;
 //        Pix pix = null;
 //        float gamma = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixWriteMemPng(pdata, psize, pix, gamma);
 //        assertEquals(expResult, result);
@@ -30898,7 +30901,7 @@ public class LeptonicaTest {
 //    public void testPixReadStreamPnm() {
 //        System.out.println("pixReadStreamPnm");
 //        PointerByReference fp = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixReadStreamPnm(fp);
 //        assertEquals(expResult, result);
@@ -30919,7 +30922,7 @@ public class LeptonicaTest {
 //        IntBuffer ptype = null;
 //        IntBuffer pbps = null;
 //        IntBuffer pspp = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.readHeaderPnm(filename, pw, ph, pd, ptype, pbps, pspp);
 //        assertEquals(expResult, result);
@@ -30940,7 +30943,7 @@ public class LeptonicaTest {
 //        IntBuffer ptype = null;
 //        IntBuffer pbps = null;
 //        IntBuffer pspp = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.freadHeaderPnm(fp, pw, ph, pd, ptype, pbps, pspp);
 //        assertEquals(expResult, result);
@@ -30961,7 +30964,7 @@ public class LeptonicaTest {
 //        IntByReference ptype = null;
 //        IntByReference pbps = null;
 //        IntByReference pspp = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.freadHeaderPnm(fp, pw, ph, pd, ptype, pbps, pspp);
 //        assertEquals(expResult, result);
@@ -30977,7 +30980,7 @@ public class LeptonicaTest {
 //        System.out.println("pixWriteStreamPnm");
 //        PointerByReference fp = null;
 //        Pix pix = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixWriteStreamPnm(fp, pix);
 //        assertEquals(expResult, result);
@@ -30993,7 +30996,7 @@ public class LeptonicaTest {
 //        System.out.println("pixWriteStreamAsciiPnm");
 //        PointerByReference fp = null;
 //        Pix pix = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixWriteStreamAsciiPnm(fp, pix);
 //        assertEquals(expResult, result);
@@ -31009,7 +31012,7 @@ public class LeptonicaTest {
 //        System.out.println("pixReadMemPnm");
 //        ByteBuffer cdata = null;
 //        NativeSize size = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixReadMemPnm(cdata, size);
 //        assertEquals(expResult, result);
@@ -31031,7 +31034,7 @@ public class LeptonicaTest {
 //        IntBuffer ptype = null;
 //        IntBuffer pbps = null;
 //        IntBuffer pspp = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.readHeaderMemPnm(cdata, size, pw, ph, pd, ptype, pbps, pspp);
 //        assertEquals(expResult, result);
@@ -31048,7 +31051,7 @@ public class LeptonicaTest {
 //        PointerByReference pdata = null;
 //        NativeSizeByReference psize = null;
 //        Pix pix = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixWriteMemPnm(pdata, psize, pix);
 //        assertEquals(expResult, result);
@@ -31066,7 +31069,7 @@ public class LeptonicaTest {
 //        Pta ptad = null;
 //        Pta ptas = null;
 //        int incolor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixProjectiveSampledPta(pixs, ptad, ptas, incolor);
 //        assertEquals(expResult, result);
@@ -31083,7 +31086,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        FloatBuffer vc = null;
 //        int incolor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixProjectiveSampled(pixs, vc, incolor);
 //        assertEquals(expResult, result);
@@ -31101,7 +31104,7 @@ public class LeptonicaTest {
 //        Pta ptad = null;
 //        Pta ptas = null;
 //        int incolor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixProjectivePta(pixs, ptad, ptas, incolor);
 //        assertEquals(expResult, result);
@@ -31118,7 +31121,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        FloatBuffer vc = null;
 //        int incolor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixProjective(pixs, vc, incolor);
 //        assertEquals(expResult, result);
@@ -31136,7 +31139,7 @@ public class LeptonicaTest {
 //        Pta ptad = null;
 //        Pta ptas = null;
 //        int colorval = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixProjectivePtaColor(pixs, ptad, ptas, colorval);
 //        assertEquals(expResult, result);
@@ -31153,7 +31156,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        FloatBuffer vc = null;
 //        int colorval = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixProjectiveColor(pixs, vc, colorval);
 //        assertEquals(expResult, result);
@@ -31171,7 +31174,7 @@ public class LeptonicaTest {
 //        Pta ptad = null;
 //        Pta ptas = null;
 //        byte grayval = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixProjectivePtaGray(pixs, ptad, ptas, grayval);
 //        assertEquals(expResult, result);
@@ -31188,7 +31191,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        FloatBuffer vc = null;
 //        byte grayval = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixProjectiveGray(pixs, vc, grayval);
 //        assertEquals(expResult, result);
@@ -31208,7 +31211,7 @@ public class LeptonicaTest {
 //        Pix pixg = null;
 //        float fract = 0.0F;
 //        int border = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixProjectivePtaWithAlpha(pixs, ptad, ptas, pixg, fract, border);
 //        assertEquals(expResult, result);
@@ -31225,7 +31228,7 @@ public class LeptonicaTest {
 //        Pta ptas = null;
 //        Pta ptad = null;
 //        PointerByReference pvc = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.getProjectiveXformCoeffs(ptas, ptad, pvc);
 //        assertEquals(expResult, result);
@@ -31244,7 +31247,7 @@ public class LeptonicaTest {
 //        int y = 0;
 //        IntBuffer pxp = null;
 //        IntBuffer pyp = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.projectiveXformSampledPt(vc, x, y, pxp, pyp);
 //        assertEquals(expResult, result);
@@ -31263,7 +31266,7 @@ public class LeptonicaTest {
 //        int y = 0;
 //        FloatBuffer pxp = null;
 //        FloatBuffer pyp = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.projectiveXformPt(vc, x, y, pxp, pyp);
 //        assertEquals(expResult, result);
@@ -31281,7 +31284,7 @@ public class LeptonicaTest {
 //        String substr = "";
 //        int res = 0;
 //        String fileout = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.convertFilesToPS(dirin, substr, res, fileout);
 //        assertEquals(expResult, result);
@@ -31298,7 +31301,7 @@ public class LeptonicaTest {
 //        Sarray sa = null;
 //        int res = 0;
 //        String fileout = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.sarrayConvertFilesToPS(sa, res, fileout);
 //        assertEquals(expResult, result);
@@ -31317,7 +31320,7 @@ public class LeptonicaTest {
 //        float xpts = 0.0F;
 //        float ypts = 0.0F;
 //        String fileout = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.convertFilesFittedToPS(dirin, substr, xpts, ypts, fileout);
 //        assertEquals(expResult, result);
@@ -31335,7 +31338,7 @@ public class LeptonicaTest {
 //        float xpts = 0.0F;
 //        float ypts = 0.0F;
 //        String fileout = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.sarrayConvertFilesFittedToPS(sa, xpts, ypts, fileout);
 //        assertEquals(expResult, result);
@@ -31354,7 +31357,7 @@ public class LeptonicaTest {
 //        int res = 0;
 //        IntBuffer pfirstfile = null;
 //        IntBuffer pindex = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.writeImageCompressedToPSFile(filein, fileout, res, pfirstfile, pindex);
 //        assertEquals(expResult, result);
@@ -31380,7 +31383,7 @@ public class LeptonicaTest {
 //        float imagescale = 0.0F;
 //        int threshold = 0;
 //        String fileout = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.convertSegmentedPagesToPS(pagedir, pagestr, page_numpre, maskdir, maskstr, mask_numpre, numpost, maxnum, textscale, imagescale, threshold, fileout);
 //        assertEquals(expResult, result);
@@ -31401,7 +31404,7 @@ public class LeptonicaTest {
 //        int threshold = 0;
 //        int pageno = 0;
 //        String fileout = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixWriteSegmentedPageToPS(pixs, pixm, textscale, imagescale, threshold, pageno, fileout);
 //        assertEquals(expResult, result);
@@ -31420,7 +31423,7 @@ public class LeptonicaTest {
 //        float scale = 0.0F;
 //        int pageno = 0;
 //        String fileout = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixWriteMixedToPS(pixb, pixc, scale, pageno, fileout);
 //        assertEquals(expResult, result);
@@ -31437,7 +31440,7 @@ public class LeptonicaTest {
 //        String filein = "";
 //        String fileout = "";
 //        int level = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.convertToPSEmbed(filein, fileout, level);
 //        assertEquals(expResult, result);
@@ -31455,7 +31458,7 @@ public class LeptonicaTest {
 //        String fileout = "";
 //        int res = 0;
 //        int level = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixaWriteCompressedToPS(pixa, fileout, res, level);
 //        assertEquals(expResult, result);
@@ -31471,7 +31474,7 @@ public class LeptonicaTest {
 //        System.out.println("pixWritePSEmbed");
 //        String filein = "";
 //        String fileout = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixWritePSEmbed(filein, fileout);
 //        assertEquals(expResult, result);
@@ -31490,7 +31493,7 @@ public class LeptonicaTest {
 //        Box box = null;
 //        int res = 0;
 //        float scale = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixWriteStreamPS(fp, pix, box, res, scale);
 //        assertEquals(expResult, result);
@@ -31508,7 +31511,7 @@ public class LeptonicaTest {
 //        Box box = null;
 //        int res = 0;
 //        float scale = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.pixWriteStringPS(pixs, box, res, scale);
 //        assertEquals(expResult, result);
@@ -31533,7 +31536,7 @@ public class LeptonicaTest {
 //        float wpt = 0.0F;
 //        float hpt = 0.0F;
 //        int boxflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.generateUncompressedPS(hexdata, w, h, d, psbpl, bps, xpt, ypt, wpt, hpt, boxflag);
 //        assertEquals(expResult, result);
@@ -31556,7 +31559,7 @@ public class LeptonicaTest {
 //        FloatBuffer pypt = null;
 //        FloatBuffer pwpt = null;
 //        FloatBuffer phpt = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.getScaledParametersPS(box, wpix, hpix, res, scale, pxpt, pypt, pwpt, phpt);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -31571,7 +31574,7 @@ public class LeptonicaTest {
 //        byte byteval = 0;
 //        ByteBuffer pnib1 = null;
 //        ByteBuffer pnib2 = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.convertByteToHexAscii(byteval, pnib1, pnib2);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -31585,7 +31588,7 @@ public class LeptonicaTest {
 //        System.out.println("convertJpegToPSEmbed");
 //        String filein = "";
 //        String fileout = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.convertJpegToPSEmbed(filein, fileout);
 //        assertEquals(expResult, result);
@@ -31608,7 +31611,7 @@ public class LeptonicaTest {
 //        float scale = 0.0F;
 //        int pageno = 0;
 //        int endpage = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.convertJpegToPS(filein, fileout, operation, x, y, res, scale, pageno, endpage);
 //        assertEquals(expResult, result);
@@ -31631,7 +31634,7 @@ public class LeptonicaTest {
 //        float scale = 0.0F;
 //        int pageno = 0;
 //        int endpage = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.convertJpegToPSString(filein, poutstr, pnbytes, x, y, res, scale, pageno, endpage);
 //        assertEquals(expResult, result);
@@ -31653,7 +31656,7 @@ public class LeptonicaTest {
 //        float hpt = 0.0F;
 //        int pageno = 0;
 //        int endpage = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.generateJpegPS(filein, cid, xpt, ypt, wpt, hpt, pageno, endpage);
 //        assertEquals(expResult, result);
@@ -31669,7 +31672,7 @@ public class LeptonicaTest {
 //        System.out.println("convertG4ToPSEmbed");
 //        String filein = "";
 //        String fileout = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.convertG4ToPSEmbed(filein, fileout);
 //        assertEquals(expResult, result);
@@ -31693,7 +31696,7 @@ public class LeptonicaTest {
 //        int pageno = 0;
 //        int maskflag = 0;
 //        int endpage = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.convertG4ToPS(filein, fileout, operation, x, y, res, scale, pageno, maskflag, endpage);
 //        assertEquals(expResult, result);
@@ -31717,7 +31720,7 @@ public class LeptonicaTest {
 //        int pageno = 0;
 //        int maskflag = 0;
 //        int endpage = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.convertG4ToPSString(filein, poutstr, pnbytes, x, y, res, scale, pageno, maskflag, endpage);
 //        assertEquals(expResult, result);
@@ -31740,7 +31743,7 @@ public class LeptonicaTest {
 //        int maskflag = 0;
 //        int pageno = 0;
 //        int endpage = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.generateG4PS(filein, cid, xpt, ypt, wpt, hpt, maskflag, pageno, endpage);
 //        assertEquals(expResult, result);
@@ -31758,7 +31761,7 @@ public class LeptonicaTest {
 //        String fileout = "";
 //        String tempfile = "";
 //        float fillfract = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.convertTiffMultipageToPS(filein, fileout, tempfile, fillfract);
 //        assertEquals(expResult, result);
@@ -31774,7 +31777,7 @@ public class LeptonicaTest {
 //        System.out.println("convertFlateToPSEmbed");
 //        String filein = "";
 //        String fileout = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.convertFlateToPSEmbed(filein, fileout);
 //        assertEquals(expResult, result);
@@ -31797,7 +31800,7 @@ public class LeptonicaTest {
 //        float scale = 0.0F;
 //        int pageno = 0;
 //        int endpage = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.convertFlateToPS(filein, fileout, operation, x, y, res, scale, pageno, endpage);
 //        assertEquals(expResult, result);
@@ -31820,7 +31823,7 @@ public class LeptonicaTest {
 //        float scale = 0.0F;
 //        int pageno = 0;
 //        int endpage = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.convertFlateToPSString(filein, poutstr, pnbytes, x, y, res, scale, pageno, endpage);
 //        assertEquals(expResult, result);
@@ -31842,7 +31845,7 @@ public class LeptonicaTest {
 //        float hpt = 0.0F;
 //        int pageno = 0;
 //        int endpage = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.generateFlatePS(filein, cid, xpt, ypt, wpt, hpt, pageno, endpage);
 //        assertEquals(expResult, result);
@@ -31862,7 +31865,7 @@ public class LeptonicaTest {
 //        Box box = null;
 //        int res = 0;
 //        float scale = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixWriteMemPS(pdata, psize, pix, box, res, scale);
 //        assertEquals(expResult, result);
@@ -31879,7 +31882,7 @@ public class LeptonicaTest {
 //        int w = 0;
 //        int h = 0;
 //        float fillfract = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.getResLetterPage(w, h, fillfract);
 //        assertEquals(expResult, result);
@@ -31896,7 +31899,7 @@ public class LeptonicaTest {
 //        int w = 0;
 //        int h = 0;
 //        float fillfract = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.getResA4Page(w, h, fillfract);
 //        assertEquals(expResult, result);
@@ -31913,7 +31916,7 @@ public class LeptonicaTest {
 //        ByteBuffer inarray = null;
 //        int insize = 0;
 //        IntBuffer poutsize = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.encodeAscii85(inarray, insize, poutsize);
 //        assertEquals(expResult, result);
@@ -31930,7 +31933,7 @@ public class LeptonicaTest {
 //        ByteBuffer ina = null;
 //        int insize = 0;
 //        IntBuffer poutsize = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.decodeAscii85(ina, insize, poutsize);
 //        assertEquals(expResult, result);
@@ -31945,7 +31948,7 @@ public class LeptonicaTest {
 //    public void testL_psWriteBoundingBox() {
 //        System.out.println("l_psWriteBoundingBox");
 //        int flag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.l_psWriteBoundingBox(flag);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -31958,7 +31961,7 @@ public class LeptonicaTest {
 //    public void testPtaCreate() {
 //        System.out.println("ptaCreate");
 //        int n = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pta expResult = null;
 //        Pta result = instance.ptaCreate(n);
 //        assertEquals(expResult, result);
@@ -31974,7 +31977,7 @@ public class LeptonicaTest {
 //        System.out.println("ptaCreateFromNuma");
 //        Numa nax = null;
 //        Numa nay = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pta expResult = null;
 //        Pta result = instance.ptaCreateFromNuma(nax, nay);
 //        assertEquals(expResult, result);
@@ -31989,7 +31992,7 @@ public class LeptonicaTest {
 //    public void testPtaDestroy() {
 //        System.out.println("ptaDestroy");
 //        Pta.ByReference[] ppta = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.ptaDestroy(ppta);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -32002,7 +32005,7 @@ public class LeptonicaTest {
 //    public void testPtaCopy() {
 //        System.out.println("ptaCopy");
 //        Pta pta = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pta expResult = null;
 //        Pta result = instance.ptaCopy(pta);
 //        assertEquals(expResult, result);
@@ -32019,7 +32022,7 @@ public class LeptonicaTest {
 //        Pta ptas = null;
 //        int istart = 0;
 //        int iend = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pta expResult = null;
 //        Pta result = instance.ptaCopyRange(ptas, istart, iend);
 //        assertEquals(expResult, result);
@@ -32034,7 +32037,7 @@ public class LeptonicaTest {
 //    public void testPtaClone() {
 //        System.out.println("ptaClone");
 //        Pta pta = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pta expResult = null;
 //        Pta result = instance.ptaClone(pta);
 //        assertEquals(expResult, result);
@@ -32049,7 +32052,7 @@ public class LeptonicaTest {
 //    public void testPtaEmpty() {
 //        System.out.println("ptaEmpty");
 //        Pta pta = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ptaEmpty(pta);
 //        assertEquals(expResult, result);
@@ -32066,7 +32069,7 @@ public class LeptonicaTest {
 //        Pta pta = null;
 //        float x = 0.0F;
 //        float y = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ptaAddPt(pta, x, y);
 //        assertEquals(expResult, result);
@@ -32084,7 +32087,7 @@ public class LeptonicaTest {
 //        int index = 0;
 //        int x = 0;
 //        int y = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ptaInsertPt(pta, index, x, y);
 //        assertEquals(expResult, result);
@@ -32100,7 +32103,7 @@ public class LeptonicaTest {
 //        System.out.println("ptaRemovePt");
 //        Pta pta = null;
 //        int index = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ptaRemovePt(pta, index);
 //        assertEquals(expResult, result);
@@ -32115,7 +32118,7 @@ public class LeptonicaTest {
 //    public void testPtaGetRefcount() {
 //        System.out.println("ptaGetRefcount");
 //        Pta pta = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ptaGetRefcount(pta);
 //        assertEquals(expResult, result);
@@ -32131,7 +32134,7 @@ public class LeptonicaTest {
 //        System.out.println("ptaChangeRefcount");
 //        Pta pta = null;
 //        int delta = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ptaChangeRefcount(pta, delta);
 //        assertEquals(expResult, result);
@@ -32146,7 +32149,7 @@ public class LeptonicaTest {
 //    public void testPtaGetCount() {
 //        System.out.println("ptaGetCount");
 //        Pta pta = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ptaGetCount(pta);
 //        assertEquals(expResult, result);
@@ -32164,7 +32167,7 @@ public class LeptonicaTest {
 //        int index = 0;
 //        FloatBuffer px = null;
 //        FloatBuffer py = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ptaGetPt(pta, index, px, py);
 //        assertEquals(expResult, result);
@@ -32182,7 +32185,7 @@ public class LeptonicaTest {
 //        int index = 0;
 //        IntBuffer px = null;
 //        IntBuffer py = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ptaGetIPt(pta, index, px, py);
 //        assertEquals(expResult, result);
@@ -32200,7 +32203,7 @@ public class LeptonicaTest {
 //        int index = 0;
 //        float x = 0.0F;
 //        float y = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ptaSetPt(pta, index, x, y);
 //        assertEquals(expResult, result);
@@ -32217,7 +32220,7 @@ public class LeptonicaTest {
 //        Pta pta = null;
 //        Numa.ByReference[] pnax = null;
 //        Numa.ByReference[] pnay = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ptaGetArrays(pta, pnax, pnay);
 //        assertEquals(expResult, result);
@@ -32232,7 +32235,7 @@ public class LeptonicaTest {
 //    public void testPtaRead() {
 //        System.out.println("ptaRead");
 //        String filename = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pta expResult = null;
 //        Pta result = instance.ptaRead(filename);
 //        assertEquals(expResult, result);
@@ -32247,7 +32250,7 @@ public class LeptonicaTest {
 //    public void testPtaReadStream() {
 //        System.out.println("ptaReadStream");
 //        PointerByReference fp = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pta expResult = null;
 //        Pta result = instance.ptaReadStream(fp);
 //        assertEquals(expResult, result);
@@ -32264,7 +32267,7 @@ public class LeptonicaTest {
 //        String filename = "";
 //        Pta pta = null;
 //        int type = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ptaWrite(filename, pta, type);
 //        assertEquals(expResult, result);
@@ -32281,7 +32284,7 @@ public class LeptonicaTest {
 //        PointerByReference fp = null;
 //        Pta pta = null;
 //        int type = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ptaWriteStream(fp, pta, type);
 //        assertEquals(expResult, result);
@@ -32296,7 +32299,7 @@ public class LeptonicaTest {
 //    public void testPtaaCreate() {
 //        System.out.println("ptaaCreate");
 //        int n = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Ptaa expResult = null;
 //        Ptaa result = instance.ptaaCreate(n);
 //        assertEquals(expResult, result);
@@ -32311,7 +32314,7 @@ public class LeptonicaTest {
 //    public void testPtaaDestroy() {
 //        System.out.println("ptaaDestroy");
 //        Ptaa.ByReference[] pptaa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.ptaaDestroy(pptaa);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -32326,7 +32329,7 @@ public class LeptonicaTest {
 //        Ptaa ptaa = null;
 //        Pta pta = null;
 //        int copyflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ptaaAddPta(ptaa, pta, copyflag);
 //        assertEquals(expResult, result);
@@ -32341,7 +32344,7 @@ public class LeptonicaTest {
 //    public void testPtaaGetCount() {
 //        System.out.println("ptaaGetCount");
 //        Ptaa ptaa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ptaaGetCount(ptaa);
 //        assertEquals(expResult, result);
@@ -32358,7 +32361,7 @@ public class LeptonicaTest {
 //        Ptaa ptaa = null;
 //        int index = 0;
 //        int accessflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pta expResult = null;
 //        Pta result = instance.ptaaGetPta(ptaa, index, accessflag);
 //        assertEquals(expResult, result);
@@ -32377,7 +32380,7 @@ public class LeptonicaTest {
 //        int jpt = 0;
 //        FloatBuffer px = null;
 //        FloatBuffer py = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ptaaGetPt(ptaa, ipta, jpt, px, py);
 //        assertEquals(expResult, result);
@@ -32393,7 +32396,7 @@ public class LeptonicaTest {
 //        System.out.println("ptaaInitFull");
 //        Ptaa ptaa = null;
 //        Pta pta = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ptaaInitFull(ptaa, pta);
 //        assertEquals(expResult, result);
@@ -32410,7 +32413,7 @@ public class LeptonicaTest {
 //        Ptaa ptaa = null;
 //        int index = 0;
 //        Pta pta = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ptaaReplacePta(ptaa, index, pta);
 //        assertEquals(expResult, result);
@@ -32428,7 +32431,7 @@ public class LeptonicaTest {
 //        int ipta = 0;
 //        float x = 0.0F;
 //        float y = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ptaaAddPt(ptaa, ipta, x, y);
 //        assertEquals(expResult, result);
@@ -32443,7 +32446,7 @@ public class LeptonicaTest {
 //    public void testPtaaTruncate() {
 //        System.out.println("ptaaTruncate");
 //        Ptaa ptaa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ptaaTruncate(ptaa);
 //        assertEquals(expResult, result);
@@ -32458,7 +32461,7 @@ public class LeptonicaTest {
 //    public void testPtaaRead() {
 //        System.out.println("ptaaRead");
 //        String filename = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Ptaa expResult = null;
 //        Ptaa result = instance.ptaaRead(filename);
 //        assertEquals(expResult, result);
@@ -32473,7 +32476,7 @@ public class LeptonicaTest {
 //    public void testPtaaReadStream() {
 //        System.out.println("ptaaReadStream");
 //        PointerByReference fp = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Ptaa expResult = null;
 //        Ptaa result = instance.ptaaReadStream(fp);
 //        assertEquals(expResult, result);
@@ -32490,7 +32493,7 @@ public class LeptonicaTest {
 //        String filename = "";
 //        Ptaa ptaa = null;
 //        int type = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ptaaWrite(filename, ptaa, type);
 //        assertEquals(expResult, result);
@@ -32507,7 +32510,7 @@ public class LeptonicaTest {
 //        PointerByReference fp = null;
 //        Ptaa ptaa = null;
 //        int type = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ptaaWriteStream(fp, ptaa, type);
 //        assertEquals(expResult, result);
@@ -32523,7 +32526,7 @@ public class LeptonicaTest {
 //        System.out.println("ptaSubsample");
 //        Pta ptas = null;
 //        int subfactor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pta expResult = null;
 //        Pta result = instance.ptaSubsample(ptas, subfactor);
 //        assertEquals(expResult, result);
@@ -32541,7 +32544,7 @@ public class LeptonicaTest {
 //        Pta ptas = null;
 //        int istart = 0;
 //        int iend = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ptaJoin(ptad, ptas, istart, iend);
 //        assertEquals(expResult, result);
@@ -32559,7 +32562,7 @@ public class LeptonicaTest {
 //        Ptaa ptaas = null;
 //        int istart = 0;
 //        int iend = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ptaaJoin(ptaad, ptaas, istart, iend);
 //        assertEquals(expResult, result);
@@ -32575,7 +32578,7 @@ public class LeptonicaTest {
 //        System.out.println("ptaReverse");
 //        Pta ptas = null;
 //        int type = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pta expResult = null;
 //        Pta result = instance.ptaReverse(ptas, type);
 //        assertEquals(expResult, result);
@@ -32590,7 +32593,7 @@ public class LeptonicaTest {
 //    public void testPtaTranspose() {
 //        System.out.println("ptaTranspose");
 //        Pta ptas = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pta expResult = null;
 //        Pta result = instance.ptaTranspose(ptas);
 //        assertEquals(expResult, result);
@@ -32607,7 +32610,7 @@ public class LeptonicaTest {
 //        Pta ptas = null;
 //        int xs = 0;
 //        int ys = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pta expResult = null;
 //        Pta result = instance.ptaCyclicPerm(ptas, xs, ys);
 //        assertEquals(expResult, result);
@@ -32625,7 +32628,7 @@ public class LeptonicaTest {
 //        int sorttype = 0;
 //        int sortorder = 0;
 //        Numa.ByReference[] pnaindex = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pta expResult = null;
 //        Pta result = instance.ptaSort(ptas, sorttype, sortorder, pnaindex);
 //        assertEquals(expResult, result);
@@ -32643,7 +32646,7 @@ public class LeptonicaTest {
 //        int sorttype = 0;
 //        int sortorder = 0;
 //        Numa.ByReference[] pnaindex = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ptaGetSortIndex(ptas, sorttype, sortorder, pnaindex);
 //        assertEquals(expResult, result);
@@ -32659,7 +32662,7 @@ public class LeptonicaTest {
 //        System.out.println("ptaSortByIndex");
 //        Pta ptas = null;
 //        Numa naindex = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pta expResult = null;
 //        Pta result = instance.ptaSortByIndex(ptas, naindex);
 //        assertEquals(expResult, result);
@@ -32675,7 +32678,7 @@ public class LeptonicaTest {
 //        System.out.println("ptaRemoveDuplicates");
 //        Pta ptas = null;
 //        int factor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pta expResult = null;
 //        Pta result = instance.ptaRemoveDuplicates(ptas, factor);
 //        assertEquals(expResult, result);
@@ -32691,7 +32694,7 @@ public class LeptonicaTest {
 //        System.out.println("ptaaSortByIndex");
 //        Ptaa ptaas = null;
 //        Numa naindex = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Ptaa expResult = null;
 //        Ptaa result = instance.ptaaSortByIndex(ptaas, naindex);
 //        assertEquals(expResult, result);
@@ -32706,7 +32709,7 @@ public class LeptonicaTest {
 //    public void testPtaGetBoundingRegion() {
 //        System.out.println("ptaGetBoundingRegion");
 //        Pta pta = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Box expResult = null;
 //        Box result = instance.ptaGetBoundingRegion(pta);
 //        assertEquals(expResult, result);
@@ -32725,7 +32728,7 @@ public class LeptonicaTest {
 //        FloatBuffer pmaxx = null;
 //        FloatBuffer pminy = null;
 //        FloatBuffer pmaxy = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ptaGetRange(pta, pminx, pmaxx, pminy, pmaxy);
 //        assertEquals(expResult, result);
@@ -32741,7 +32744,7 @@ public class LeptonicaTest {
 //        System.out.println("ptaGetInsideBox");
 //        Pta ptas = null;
 //        Box box = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pta expResult = null;
 //        Pta result = instance.ptaGetInsideBox(ptas, box);
 //        assertEquals(expResult, result);
@@ -32756,7 +32759,7 @@ public class LeptonicaTest {
 //    public void testPixFindCornerPixels() {
 //        System.out.println("pixFindCornerPixels");
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pta expResult = null;
 //        Pta result = instance.pixFindCornerPixels(pixs);
 //        assertEquals(expResult, result);
@@ -32773,7 +32776,7 @@ public class LeptonicaTest {
 //        Pta pta = null;
 //        int x = 0;
 //        int y = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ptaContainsPt(pta, x, y);
 //        assertEquals(expResult, result);
@@ -32789,7 +32792,7 @@ public class LeptonicaTest {
 //        System.out.println("ptaTestIntersection");
 //        Pta pta1 = null;
 //        Pta pta2 = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ptaTestIntersection(pta1, pta2);
 //        assertEquals(expResult, result);
@@ -32808,7 +32811,7 @@ public class LeptonicaTest {
 //        int shifty = 0;
 //        float scalex = 0.0F;
 //        float scaley = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pta expResult = null;
 //        Pta result = instance.ptaTransform(ptas, shiftx, shifty, scalex, scaley);
 //        assertEquals(expResult, result);
@@ -32826,7 +32829,7 @@ public class LeptonicaTest {
 //        float x = 0.0F;
 //        float y = 0.0F;
 //        IntBuffer pinside = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ptaPtInsidePolygon(pta, x, y, pinside);
 //        assertEquals(expResult, result);
@@ -32844,7 +32847,7 @@ public class LeptonicaTest {
 //        float y1 = 0.0F;
 //        float x2 = 0.0F;
 //        float y2 = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        float expResult = 0.0F;
 //        float result = instance.l_angleBetweenVectors(x1, y1, x2, y2);
 //        assertEquals(expResult, result, 0.0);
@@ -32862,7 +32865,7 @@ public class LeptonicaTest {
 //        FloatBuffer pa = null;
 //        FloatBuffer pb = null;
 //        Numa.ByReference[] pnafit = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ptaGetLinearLSF(pta, pa, pb, pnafit);
 //        assertEquals(expResult, result);
@@ -32880,7 +32883,7 @@ public class LeptonicaTest {
 //        FloatByReference pa = null;
 //        FloatByReference pb = null;
 //        Numa.ByReference[] pnafit = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ptaGetLinearLSF(pta, pa, pb, pnafit);
 //        assertEquals(expResult, result);
@@ -32899,7 +32902,7 @@ public class LeptonicaTest {
 //        FloatBuffer pb = null;
 //        FloatBuffer pc = null;
 //        Numa.ByReference[] pnafit = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ptaGetQuadraticLSF(pta, pa, pb, pc, pnafit);
 //        assertEquals(expResult, result);
@@ -32918,7 +32921,7 @@ public class LeptonicaTest {
 //        FloatByReference pb = null;
 //        FloatByReference pc = null;
 //        Numa.ByReference[] pnafit = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ptaGetQuadraticLSF(pta, pa, pb, pc, pnafit);
 //        assertEquals(expResult, result);
@@ -32938,7 +32941,7 @@ public class LeptonicaTest {
 //        FloatBuffer pc = null;
 //        FloatBuffer pd = null;
 //        Numa.ByReference[] pnafit = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ptaGetCubicLSF(pta, pa, pb, pc, pd, pnafit);
 //        assertEquals(expResult, result);
@@ -32958,7 +32961,7 @@ public class LeptonicaTest {
 //        FloatByReference pc = null;
 //        FloatByReference pd = null;
 //        Numa.ByReference[] pnafit = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ptaGetCubicLSF(pta, pa, pb, pc, pd, pnafit);
 //        assertEquals(expResult, result);
@@ -32979,7 +32982,7 @@ public class LeptonicaTest {
 //        FloatBuffer pd = null;
 //        FloatBuffer pe = null;
 //        Numa.ByReference[] pnafit = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ptaGetQuarticLSF(pta, pa, pb, pc, pd, pe, pnafit);
 //        assertEquals(expResult, result);
@@ -33000,7 +33003,7 @@ public class LeptonicaTest {
 //        FloatByReference pd = null;
 //        FloatByReference pe = null;
 //        Numa.ByReference[] pnafit = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ptaGetQuarticLSF(pta, pa, pb, pc, pd, pe, pnafit);
 //        assertEquals(expResult, result);
@@ -33021,7 +33024,7 @@ public class LeptonicaTest {
 //        FloatBuffer pb = null;
 //        FloatBuffer pmederr = null;
 //        Numa.ByReference[] pnafit = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ptaNoisyLinearLSF(pta, factor, pptad, pa, pb, pmederr, pnafit);
 //        assertEquals(expResult, result);
@@ -33042,7 +33045,7 @@ public class LeptonicaTest {
 //        FloatByReference pb = null;
 //        FloatByReference pmederr = null;
 //        Numa.ByReference[] pnafit = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ptaNoisyLinearLSF(pta, factor, pptad, pa, pb, pmederr, pnafit);
 //        assertEquals(expResult, result);
@@ -33064,7 +33067,7 @@ public class LeptonicaTest {
 //        FloatBuffer pc = null;
 //        FloatBuffer pmederr = null;
 //        Numa.ByReference[] pnafit = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ptaNoisyQuadraticLSF(pta, factor, pptad, pa, pb, pc, pmederr, pnafit);
 //        assertEquals(expResult, result);
@@ -33086,7 +33089,7 @@ public class LeptonicaTest {
 //        FloatByReference pc = null;
 //        FloatByReference pmederr = null;
 //        Numa.ByReference[] pnafit = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ptaNoisyQuadraticLSF(pta, factor, pptad, pa, pb, pc, pmederr, pnafit);
 //        assertEquals(expResult, result);
@@ -33104,7 +33107,7 @@ public class LeptonicaTest {
 //        float b = 0.0F;
 //        float x = 0.0F;
 //        FloatBuffer py = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.applyLinearFit(a, b, x, py);
 //        assertEquals(expResult, result);
@@ -33123,7 +33126,7 @@ public class LeptonicaTest {
 //        float c = 0.0F;
 //        float x = 0.0F;
 //        FloatBuffer py = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.applyQuadraticFit(a, b, c, x, py);
 //        assertEquals(expResult, result);
@@ -33143,7 +33146,7 @@ public class LeptonicaTest {
 //        float d = 0.0F;
 //        float x = 0.0F;
 //        FloatBuffer py = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.applyCubicFit(a, b, c, d, x, py);
 //        assertEquals(expResult, result);
@@ -33164,7 +33167,7 @@ public class LeptonicaTest {
 //        float e = 0.0F;
 //        float x = 0.0F;
 //        FloatBuffer py = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.applyQuarticFit(a, b, c, d, e, x, py);
 //        assertEquals(expResult, result);
@@ -33182,7 +33185,7 @@ public class LeptonicaTest {
 //        Pta pta = null;
 //        int outformat = 0;
 //        String title = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixPlotAlongPta(pixs, pta, outformat, title);
 //        assertEquals(expResult, result);
@@ -33198,7 +33201,7 @@ public class LeptonicaTest {
 //        System.out.println("ptaGetPixelsFromPix");
 //        Pix pixs = null;
 //        Box box = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pta expResult = null;
 //        Pta result = instance.ptaGetPixelsFromPix(pixs, box);
 //        assertEquals(expResult, result);
@@ -33215,7 +33218,7 @@ public class LeptonicaTest {
 //        Pta pta = null;
 //        int w = 0;
 //        int h = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixGenerateFromPta(pta, w, h);
 //        assertEquals(expResult, result);
@@ -33231,7 +33234,7 @@ public class LeptonicaTest {
 //        System.out.println("ptaGetBoundaryPixels");
 //        Pix pixs = null;
 //        int type = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pta expResult = null;
 //        Pta result = instance.ptaGetBoundaryPixels(pixs, type);
 //        assertEquals(expResult, result);
@@ -33250,7 +33253,7 @@ public class LeptonicaTest {
 //        int connectivity = 0;
 //        Boxa.ByReference[] pboxa = null;
 //        Pixa.ByReference[] ppixa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Ptaa expResult = null;
 //        Ptaa result = instance.ptaaGetBoundaryPixels(pixs, type, connectivity, pboxa, ppixa);
 //        assertEquals(expResult, result);
@@ -33267,7 +33270,7 @@ public class LeptonicaTest {
 //        Pix pixd = null;
 //        Pix pixs = null;
 //        Pta pta = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixDisplayPta(pixd, pixs, pta);
 //        assertEquals(expResult, result);
@@ -33287,7 +33290,7 @@ public class LeptonicaTest {
 //        Pix pixp = null;
 //        int cx = 0;
 //        int cy = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixDisplayPtaaPattern(pixd, pixs, ptaa, pixp, cx, cy);
 //        assertEquals(expResult, result);
@@ -33308,7 +33311,7 @@ public class LeptonicaTest {
 //        int cx = 0;
 //        int cy = 0;
 //        int color = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixDisplayPtaPattern(pixd, pixs, pta, pixp, cx, cy, color);
 //        assertEquals(expResult, result);
@@ -33329,7 +33332,7 @@ public class LeptonicaTest {
 //        int cy = 0;
 //        int w = 0;
 //        int h = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pta expResult = null;
 //        Pta result = instance.ptaReplicatePattern(ptas, pixp, ptap, cx, cy, w, h);
 //        assertEquals(expResult, result);
@@ -33345,7 +33348,7 @@ public class LeptonicaTest {
 //        System.out.println("pixDisplayPtaa");
 //        Pix pixs = null;
 //        Ptaa ptaa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixDisplayPtaa(pixs, ptaa);
 //        assertEquals(expResult, result);
@@ -33360,7 +33363,7 @@ public class LeptonicaTest {
 //    public void testPtraCreate() {
 //        System.out.println("ptraCreate");
 //        int n = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Ptra expResult = null;
 //        L_Ptra result = instance.ptraCreate(n);
 //        assertEquals(expResult, result);
@@ -33377,7 +33380,7 @@ public class LeptonicaTest {
 //        L_Ptra.ByReference[] ppa = null;
 //        int freeflag = 0;
 //        int warnflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.ptraDestroy(ppa, freeflag, warnflag);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -33391,7 +33394,7 @@ public class LeptonicaTest {
 //        System.out.println("ptraAdd");
 //        L_Ptra pa = null;
 //        Pointer item = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ptraAdd(pa, item);
 //        assertEquals(expResult, result);
@@ -33409,7 +33412,7 @@ public class LeptonicaTest {
 //        int index = 0;
 //        Pointer item = null;
 //        int shiftflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ptraInsert(pa, index, item, shiftflag);
 //        assertEquals(expResult, result);
@@ -33426,7 +33429,7 @@ public class LeptonicaTest {
 //        L_Ptra pa = null;
 //        int index = 0;
 //        int flag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.ptraRemove(pa, index, flag);
 //        assertEquals(expResult, result);
@@ -33441,7 +33444,7 @@ public class LeptonicaTest {
 //    public void testPtraRemoveLast() {
 //        System.out.println("ptraRemoveLast");
 //        L_Ptra pa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.ptraRemoveLast(pa);
 //        assertEquals(expResult, result);
@@ -33459,7 +33462,7 @@ public class LeptonicaTest {
 //        int index = 0;
 //        Pointer item = null;
 //        int freeflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.ptraReplace(pa, index, item, freeflag);
 //        assertEquals(expResult, result);
@@ -33476,7 +33479,7 @@ public class LeptonicaTest {
 //        L_Ptra pa = null;
 //        int index1 = 0;
 //        int index2 = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ptraSwap(pa, index1, index2);
 //        assertEquals(expResult, result);
@@ -33491,7 +33494,7 @@ public class LeptonicaTest {
 //    public void testPtraCompactArray() {
 //        System.out.println("ptraCompactArray");
 //        L_Ptra pa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ptraCompactArray(pa);
 //        assertEquals(expResult, result);
@@ -33506,7 +33509,7 @@ public class LeptonicaTest {
 //    public void testPtraReverse() {
 //        System.out.println("ptraReverse");
 //        L_Ptra pa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ptraReverse(pa);
 //        assertEquals(expResult, result);
@@ -33522,7 +33525,7 @@ public class LeptonicaTest {
 //        System.out.println("ptraJoin");
 //        L_Ptra pa1 = null;
 //        L_Ptra pa2 = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ptraJoin(pa1, pa2);
 //        assertEquals(expResult, result);
@@ -33538,7 +33541,7 @@ public class LeptonicaTest {
 //        System.out.println("ptraGetMaxIndex");
 //        L_Ptra pa = null;
 //        IntBuffer pmaxindex = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ptraGetMaxIndex(pa, pmaxindex);
 //        assertEquals(expResult, result);
@@ -33554,7 +33557,7 @@ public class LeptonicaTest {
 //        System.out.println("ptraGetActualCount");
 //        L_Ptra pa = null;
 //        IntBuffer pcount = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ptraGetActualCount(pa, pcount);
 //        assertEquals(expResult, result);
@@ -33570,7 +33573,7 @@ public class LeptonicaTest {
 //        System.out.println("ptraGetPtrToItem");
 //        L_Ptra pa = null;
 //        int index = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.ptraGetPtrToItem(pa, index);
 //        assertEquals(expResult, result);
@@ -33585,7 +33588,7 @@ public class LeptonicaTest {
 //    public void testPtraaCreate() {
 //        System.out.println("ptraaCreate");
 //        int n = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Ptraa expResult = null;
 //        L_Ptraa result = instance.ptraaCreate(n);
 //        assertEquals(expResult, result);
@@ -33602,7 +33605,7 @@ public class LeptonicaTest {
 //        L_Ptraa.ByReference[] ppaa = null;
 //        int freeflag = 0;
 //        int warnflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.ptraaDestroy(ppaa, freeflag, warnflag);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -33616,7 +33619,7 @@ public class LeptonicaTest {
 //        System.out.println("ptraaGetSize");
 //        L_Ptraa paa = null;
 //        IntBuffer psize = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ptraaGetSize(paa, psize);
 //        assertEquals(expResult, result);
@@ -33633,7 +33636,7 @@ public class LeptonicaTest {
 //        L_Ptraa paa = null;
 //        int index = 0;
 //        L_Ptra pa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ptraaInsertPtra(paa, index, pa);
 //        assertEquals(expResult, result);
@@ -33650,7 +33653,7 @@ public class LeptonicaTest {
 //        L_Ptraa paa = null;
 //        int index = 0;
 //        int accessflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Ptra expResult = null;
 //        L_Ptra result = instance.ptraaGetPtra(paa, index, accessflag);
 //        assertEquals(expResult, result);
@@ -33665,7 +33668,7 @@ public class LeptonicaTest {
 //    public void testPtraaFlattenToPtra() {
 //        System.out.println("ptraaFlattenToPtra");
 //        L_Ptraa paa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Ptra expResult = null;
 //        L_Ptra result = instance.ptraaFlattenToPtra(paa);
 //        assertEquals(expResult, result);
@@ -33683,7 +33686,7 @@ public class LeptonicaTest {
 //        int nlevels = 0;
 //        Pix pix_ma = null;
 //        FPixa.ByReference[] pfpixa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixQuadtreeMean(pixs, nlevels, pix_ma, pfpixa);
 //        assertEquals(expResult, result);
@@ -33703,7 +33706,7 @@ public class LeptonicaTest {
 //        DPix dpix_msa = null;
 //        FPixa.ByReference[] pfpixa_v = null;
 //        FPixa.ByReference[] pfpixa_rv = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixQuadtreeVariance(pixs, nlevels, pix_ma, dpix_msa, pfpixa_v, pfpixa_rv);
 //        assertEquals(expResult, result);
@@ -33721,7 +33724,7 @@ public class LeptonicaTest {
 //        Box box = null;
 //        Pix pixma = null;
 //        FloatBuffer pval = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixMeanInRectangle(pixs, box, pixma, pval);
 //        assertEquals(expResult, result);
@@ -33741,7 +33744,7 @@ public class LeptonicaTest {
 //        DPix dpix_msa = null;
 //        FloatBuffer pvar = null;
 //        FloatBuffer prvar = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixVarianceInRectangle(pixs, box, pix_ma, dpix_msa, pvar, prvar);
 //        assertEquals(expResult, result);
@@ -33758,7 +33761,7 @@ public class LeptonicaTest {
 //        int w = 0;
 //        int h = 0;
 //        int nlevels = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxaa expResult = null;
 //        Boxaa result = instance.boxaaQuadtreeRegions(w, h, nlevels);
 //        assertEquals(expResult, result);
@@ -33777,7 +33780,7 @@ public class LeptonicaTest {
 //        int x = 0;
 //        int y = 0;
 //        FloatBuffer pval = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.quadtreeGetParent(fpixa, level, x, y, pval);
 //        assertEquals(expResult, result);
@@ -33799,7 +33802,7 @@ public class LeptonicaTest {
 //        FloatBuffer pval10 = null;
 //        FloatBuffer pval01 = null;
 //        FloatBuffer pval11 = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.quadtreeGetChildren(fpixa, level, x, y, pval00, pval10, pval01, pval11);
 //        assertEquals(expResult, result);
@@ -33815,7 +33818,7 @@ public class LeptonicaTest {
 //        System.out.println("quadtreeMaxLevels");
 //        int w = 0;
 //        int h = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.quadtreeMaxLevels(w, h);
 //        assertEquals(expResult, result);
@@ -33832,7 +33835,7 @@ public class LeptonicaTest {
 //        FPixa fpixa = null;
 //        int factor = 0;
 //        String fontdir = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.fpixaDisplayQuadtree(fpixa, factor, fontdir);
 //        assertEquals(expResult, result);
@@ -33847,7 +33850,7 @@ public class LeptonicaTest {
 //    public void testLqueueCreate() {
 //        System.out.println("lqueueCreate");
 //        int nalloc = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Queue expResult = null;
 //        L_Queue result = instance.lqueueCreate(nalloc);
 //        assertEquals(expResult, result);
@@ -33863,7 +33866,7 @@ public class LeptonicaTest {
 //        System.out.println("lqueueDestroy");
 //        L_Queue.ByReference[] plq = null;
 //        int freeflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.lqueueDestroy(plq, freeflag);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -33877,7 +33880,7 @@ public class LeptonicaTest {
 //        System.out.println("lqueueAdd");
 //        L_Queue lq = null;
 //        Pointer item = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.lqueueAdd(lq, item);
 //        assertEquals(expResult, result);
@@ -33892,7 +33895,7 @@ public class LeptonicaTest {
 //    public void testLqueueRemove() {
 //        System.out.println("lqueueRemove");
 //        L_Queue lq = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.lqueueRemove(lq);
 //        assertEquals(expResult, result);
@@ -33907,7 +33910,7 @@ public class LeptonicaTest {
 //    public void testLqueueGetCount() {
 //        System.out.println("lqueueGetCount");
 //        L_Queue lq = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.lqueueGetCount(lq);
 //        assertEquals(expResult, result);
@@ -33923,7 +33926,7 @@ public class LeptonicaTest {
 //        System.out.println("lqueuePrint");
 //        PointerByReference fp = null;
 //        L_Queue lq = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.lqueuePrint(fp, lq);
 //        assertEquals(expResult, result);
@@ -33941,7 +33944,7 @@ public class LeptonicaTest {
 //        int wf = 0;
 //        int hf = 0;
 //        float rank = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixRankFilter(pixs, wf, hf, rank);
 //        assertEquals(expResult, result);
@@ -33959,7 +33962,7 @@ public class LeptonicaTest {
 //        int wf = 0;
 //        int hf = 0;
 //        float rank = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixRankFilterRGB(pixs, wf, hf, rank);
 //        assertEquals(expResult, result);
@@ -33977,7 +33980,7 @@ public class LeptonicaTest {
 //        int wf = 0;
 //        int hf = 0;
 //        float rank = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixRankFilterGray(pixs, wf, hf, rank);
 //        assertEquals(expResult, result);
@@ -33994,7 +33997,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int wf = 0;
 //        int hf = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixMedianFilter(pixs, wf, hf);
 //        assertEquals(expResult, result);
@@ -34013,7 +34016,7 @@ public class LeptonicaTest {
 //        int hf = 0;
 //        float rank = 0.0F;
 //        float scalefactor = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixRankFilterWithScaling(pixs, wf, hf, rank, scalefactor);
 //        assertEquals(expResult, result);
@@ -34032,7 +34035,7 @@ public class LeptonicaTest {
 //        int method = 0;
 //        Sarray.ByReference[] psaw = null;
 //        int debugflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Sarray expResult = null;
 //        Sarray result = instance.pixProcessBarcodes(pixs, format, method, psaw, debugflag);
 //        assertEquals(expResult, result);
@@ -34048,7 +34051,7 @@ public class LeptonicaTest {
 //        System.out.println("pixExtractBarcodes");
 //        Pix pixs = null;
 //        int debugflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pixa expResult = null;
 //        Pixa result = instance.pixExtractBarcodes(pixs, debugflag);
 //        assertEquals(expResult, result);
@@ -34067,7 +34070,7 @@ public class LeptonicaTest {
 //        int method = 0;
 //        Sarray.ByReference[] psaw = null;
 //        int debugflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Sarray expResult = null;
 //        Sarray result = instance.pixReadBarcodes(pixa, format, method, psaw, debugflag);
 //        assertEquals(expResult, result);
@@ -34084,7 +34087,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int method = 0;
 //        int debugflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.pixReadBarcodeWidths(pixs, method, debugflag);
 //        assertEquals(expResult, result);
@@ -34102,7 +34105,7 @@ public class LeptonicaTest {
 //        int thresh = 0;
 //        Pix.ByReference[] ppixb = null;
 //        Pix.ByReference[] ppixm = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Boxa expResult = null;
 //        Boxa result = instance.pixLocateBarcodes(pixs, thresh, ppixb, ppixm);
 //        assertEquals(expResult, result);
@@ -34123,7 +34126,7 @@ public class LeptonicaTest {
 //        int threshold = 0;
 //        FloatBuffer pangle = null;
 //        FloatBuffer pconf = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixDeskewBarcode(pixs, pixb, box, margin, threshold, pangle, pconf);
 //        assertEquals(expResult, result);
@@ -34143,7 +34146,7 @@ public class LeptonicaTest {
 //        Numa.ByReference[] pnaehist = null;
 //        Numa.ByReference[] pnaohist = null;
 //        int debugflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.pixExtractBarcodeWidths1(pixs, thresh, binfract, pnaehist, pnaohist, debugflag);
 //        assertEquals(expResult, result);
@@ -34162,7 +34165,7 @@ public class LeptonicaTest {
 //        FloatBuffer pwidth = null;
 //        Numa.ByReference[] pnac = null;
 //        int debugflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.pixExtractBarcodeWidths2(pixs, thresh, pwidth, pnac, debugflag);
 //        assertEquals(expResult, result);
@@ -34181,7 +34184,7 @@ public class LeptonicaTest {
 //        FloatByReference pwidth = null;
 //        Numa.ByReference[] pnac = null;
 //        int debugflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.pixExtractBarcodeWidths2(pixs, thresh, pwidth, pnac, debugflag);
 //        assertEquals(expResult, result);
@@ -34198,7 +34201,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        float thresh = 0.0F;
 //        int debugflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.pixExtractBarcodeCrossings(pixs, thresh, debugflag);
 //        assertEquals(expResult, result);
@@ -34217,7 +34220,7 @@ public class LeptonicaTest {
 //        Numa.ByReference[] pnaehist = null;
 //        Numa.ByReference[] pnaohist = null;
 //        int debugflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.numaQuantizeCrossingsByWidth(nas, binfract, pnaehist, pnaohist, debugflag);
 //        assertEquals(expResult, result);
@@ -34237,7 +34240,7 @@ public class LeptonicaTest {
 //        FloatBuffer pfirstloc = null;
 //        Numa.ByReference[] pnac = null;
 //        int debugflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.numaQuantizeCrossingsByWindow(nas, ratio, pwidth, pfirstloc, pnac, debugflag);
 //        assertEquals(expResult, result);
@@ -34257,7 +34260,7 @@ public class LeptonicaTest {
 //        FloatByReference pfirstloc = null;
 //        Numa.ByReference[] pnac = null;
 //        int debugflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.numaQuantizeCrossingsByWindow(nas, ratio, pwidth, pfirstloc, pnac, debugflag);
 //        assertEquals(expResult, result);
@@ -34273,7 +34276,7 @@ public class LeptonicaTest {
 //        System.out.println("pixaReadFiles");
 //        String dirname = "";
 //        String substr = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pixa expResult = null;
 //        Pixa result = instance.pixaReadFiles(dirname, substr);
 //        assertEquals(expResult, result);
@@ -34288,7 +34291,7 @@ public class LeptonicaTest {
 //    public void testPixaReadFilesSA() {
 //        System.out.println("pixaReadFilesSA");
 //        Sarray sa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pixa expResult = null;
 //        Pixa result = instance.pixaReadFilesSA(sa);
 //        assertEquals(expResult, result);
@@ -34304,7 +34307,6 @@ public class LeptonicaTest {
         System.out.println("pixRead");
         String filename = "eurotext.png";
         File image = new File(testResourcesPath, filename);
-        Leptonica instance = new LeptonicaImpl().getInstance();
         Pix result = instance.pixRead(image.getPath());
         PointerByReference pRef = new PointerByReference();
         pRef.setValue(result.getPointer());
@@ -34320,7 +34322,7 @@ public class LeptonicaTest {
 //        System.out.println("pixReadWithHint");
 //        String filename = "";
 //        int hint = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixReadWithHint(filename, hint);
 //        assertEquals(expResult, result);
@@ -34336,7 +34338,7 @@ public class LeptonicaTest {
 //        System.out.println("pixReadIndexed");
 //        Sarray sa = null;
 //        int index = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixReadIndexed(sa, index);
 //        assertEquals(expResult, result);
@@ -34352,7 +34354,7 @@ public class LeptonicaTest {
 //        System.out.println("pixReadStream");
 //        PointerByReference fp = null;
 //        int hint = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixReadStream(fp, hint);
 //        assertEquals(expResult, result);
@@ -34373,7 +34375,7 @@ public class LeptonicaTest {
 //        IntBuffer pbps = null;
 //        IntBuffer pspp = null;
 //        IntBuffer piscmap = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixReadHeader(filename, pformat, pw, ph, pbps, pspp, piscmap);
 //        assertEquals(expResult, result);
@@ -34389,7 +34391,7 @@ public class LeptonicaTest {
 //        System.out.println("findFileFormat");
 //        String filename = "";
 //        IntBuffer pformat = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.findFileFormat(filename, pformat);
 //        assertEquals(expResult, result);
@@ -34405,7 +34407,7 @@ public class LeptonicaTest {
 //        System.out.println("findFileFormatStream");
 //        PointerByReference fp = null;
 //        IntBuffer pformat = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.findFileFormatStream(fp, pformat);
 //        assertEquals(expResult, result);
@@ -34421,7 +34423,7 @@ public class LeptonicaTest {
 //        System.out.println("findFileFormatStream");
 //        PointerByReference fp = null;
 //        IntByReference pformat = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.findFileFormatStream(fp, pformat);
 //        assertEquals(expResult, result);
@@ -34437,7 +34439,7 @@ public class LeptonicaTest {
 //        System.out.println("findFileFormatBuffer");
 //        ByteBuffer buf = null;
 //        IntBuffer pformat = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.findFileFormatBuffer(buf, pformat);
 //        assertEquals(expResult, result);
@@ -34452,7 +34454,7 @@ public class LeptonicaTest {
 //    public void testFileFormatIsTiff() {
 //        System.out.println("fileFormatIsTiff");
 //        PointerByReference fp = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.fileFormatIsTiff(fp);
 //        assertEquals(expResult, result);
@@ -34468,7 +34470,7 @@ public class LeptonicaTest {
 //        System.out.println("pixReadMem");
 //        ByteBuffer data = null;
 //        NativeSize size = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixReadMem(data, size);
 //        assertEquals(expResult, result);
@@ -34490,7 +34492,7 @@ public class LeptonicaTest {
 //        IntBuffer pbps = null;
 //        IntBuffer pspp = null;
 //        IntBuffer piscmap = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixReadHeaderMem(data, size, pformat, pw, ph, pbps, pspp, piscmap);
 //        assertEquals(expResult, result);
@@ -34505,7 +34507,7 @@ public class LeptonicaTest {
 //    public void testIoFormatTest() {
 //        System.out.println("ioFormatTest");
 //        String filename = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.ioFormatTest(filename);
 //        assertEquals(expResult, result);
@@ -34520,7 +34522,7 @@ public class LeptonicaTest {
 //    public void testRecogaCreateFromRecog() {
 //        System.out.println("recogaCreateFromRecog");
 //        L_Recog recog = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Recoga expResult = null;
 //        L_Recoga result = instance.recogaCreateFromRecog(recog);
 //        assertEquals(expResult, result);
@@ -34541,7 +34543,7 @@ public class LeptonicaTest {
 //        int threshold = 0;
 //        int maxyshift = 0;
 //        String fontdir = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Recoga expResult = null;
 //        L_Recoga result = instance.recogaCreateFromPixaa(paa, scalew, scaleh, templ_type, threshold, maxyshift, fontdir);
 //        assertEquals(expResult, result);
@@ -34556,7 +34558,7 @@ public class LeptonicaTest {
 //    public void testRecogaCreate() {
 //        System.out.println("recogaCreate");
 //        int n = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Recoga expResult = null;
 //        L_Recoga result = instance.recogaCreate(n);
 //        assertEquals(expResult, result);
@@ -34571,7 +34573,7 @@ public class LeptonicaTest {
 //    public void testRecogaDestroy() {
 //        System.out.println("recogaDestroy");
 //        L_Recoga.ByReference[] precoga = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.recogaDestroy(precoga);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -34585,7 +34587,7 @@ public class LeptonicaTest {
 //        System.out.println("recogaAddRecog");
 //        L_Recoga recoga = null;
 //        L_Recog recog = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.recogaAddRecog(recoga, recog);
 //        assertEquals(expResult, result);
@@ -34601,7 +34603,7 @@ public class LeptonicaTest {
 //        System.out.println("recogReplaceInRecoga");
 //        L_Recog.ByReference[] precog1 = null;
 //        L_Recog recog2 = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.recogReplaceInRecoga(precog1, recog2);
 //        assertEquals(expResult, result);
@@ -34617,7 +34619,7 @@ public class LeptonicaTest {
 //        System.out.println("recogaGetRecog");
 //        L_Recoga recoga = null;
 //        int index = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Recog expResult = null;
 //        L_Recog result = instance.recogaGetRecog(recoga, index);
 //        assertEquals(expResult, result);
@@ -34632,7 +34634,7 @@ public class LeptonicaTest {
 //    public void testRecogaGetCount() {
 //        System.out.println("recogaGetCount");
 //        L_Recoga recoga = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.recogaGetCount(recoga);
 //        assertEquals(expResult, result);
@@ -34647,7 +34649,7 @@ public class LeptonicaTest {
 //    public void testRecogGetCount() {
 //        System.out.println("recogGetCount");
 //        L_Recog recog = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.recogGetCount(recog);
 //        assertEquals(expResult, result);
@@ -34663,7 +34665,7 @@ public class LeptonicaTest {
 //        System.out.println("recogGetIndex");
 //        L_Recog recog = null;
 //        IntBuffer pindex = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.recogGetIndex(recog, pindex);
 //        assertEquals(expResult, result);
@@ -34678,7 +34680,7 @@ public class LeptonicaTest {
 //    public void testRecogGetParent() {
 //        System.out.println("recogGetParent");
 //        L_Recog recog = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Recoga expResult = null;
 //        L_Recoga result = instance.recogGetParent(recog);
 //        assertEquals(expResult, result);
@@ -34693,7 +34695,7 @@ public class LeptonicaTest {
 //    public void testRecogSetBootflag() {
 //        System.out.println("recogSetBootflag");
 //        L_Recog recog = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.recogSetBootflag(recog);
 //        assertEquals(expResult, result);
@@ -34714,7 +34716,7 @@ public class LeptonicaTest {
 //        int threshold = 0;
 //        int maxyshift = 0;
 //        String fontdir = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Recog expResult = null;
 //        L_Recog result = instance.recogCreateFromRecog(recs, scalew, scaleh, templ_type, threshold, maxyshift, fontdir);
 //        assertEquals(expResult, result);
@@ -34735,7 +34737,7 @@ public class LeptonicaTest {
 //        int threshold = 0;
 //        int maxyshift = 0;
 //        String fontdir = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Recog expResult = null;
 //        L_Recog result = instance.recogCreateFromPixa(pixa, scalew, scaleh, templ_type, threshold, maxyshift, fontdir);
 //        assertEquals(expResult, result);
@@ -34755,7 +34757,7 @@ public class LeptonicaTest {
 //        int threshold = 0;
 //        int maxyshift = 0;
 //        String fontdir = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Recog expResult = null;
 //        L_Recog result = instance.recogCreate(scalew, scaleh, templ_type, threshold, maxyshift, fontdir);
 //        assertEquals(expResult, result);
@@ -34770,7 +34772,7 @@ public class LeptonicaTest {
 //    public void testRecogDestroy() {
 //        System.out.println("recogDestroy");
 //        L_Recog.ByReference[] precog = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.recogDestroy(precog);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -34784,7 +34786,7 @@ public class LeptonicaTest {
 //        System.out.println("recogAppend");
 //        L_Recog recog1 = null;
 //        L_Recog recog2 = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.recogAppend(recog1, recog2);
 //        assertEquals(expResult, result);
@@ -34802,7 +34804,7 @@ public class LeptonicaTest {
 //        int val = 0;
 //        ByteBuffer text = null;
 //        IntBuffer pindex = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.recogGetClassIndex(recog, val, text, pindex);
 //        assertEquals(expResult, result);
@@ -34819,7 +34821,7 @@ public class LeptonicaTest {
 //        L_Recog recog = null;
 //        ByteBuffer text = null;
 //        IntBuffer pindex = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.recogStringToIndex(recog, text, pindex);
 //        assertEquals(expResult, result);
@@ -34836,7 +34838,7 @@ public class LeptonicaTest {
 //        L_Recog recog = null;
 //        int index = 0;
 //        PointerByReference pcharstr = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.recogGetClassString(recog, index, pcharstr);
 //        assertEquals(expResult, result);
@@ -34852,7 +34854,7 @@ public class LeptonicaTest {
 //        System.out.println("l_convertCharstrToInt");
 //        String str = "";
 //        IntBuffer pval = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.l_convertCharstrToInt(str, pval);
 //        assertEquals(expResult, result);
@@ -34867,7 +34869,7 @@ public class LeptonicaTest {
 //    public void testRecogaRead() {
 //        System.out.println("recogaRead");
 //        String filename = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Recoga expResult = null;
 //        L_Recoga result = instance.recogaRead(filename);
 //        assertEquals(expResult, result);
@@ -34882,7 +34884,7 @@ public class LeptonicaTest {
 //    public void testRecogaReadStream() {
 //        System.out.println("recogaReadStream");
 //        PointerByReference fp = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Recoga expResult = null;
 //        L_Recoga result = instance.recogaReadStream(fp);
 //        assertEquals(expResult, result);
@@ -34898,7 +34900,7 @@ public class LeptonicaTest {
 //        System.out.println("recogaWrite");
 //        String filename = "";
 //        L_Recoga recoga = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.recogaWrite(filename, recoga);
 //        assertEquals(expResult, result);
@@ -34915,7 +34917,7 @@ public class LeptonicaTest {
 //        PointerByReference fp = null;
 //        L_Recoga recoga = null;
 //        String filename = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.recogaWriteStream(fp, recoga, filename);
 //        assertEquals(expResult, result);
@@ -34932,7 +34934,7 @@ public class LeptonicaTest {
 //        PointerByReference fp = null;
 //        L_Recoga recoga = null;
 //        Pointer filename = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.recogaWriteStream(fp, recoga, filename);
 //        assertEquals(expResult, result);
@@ -34948,7 +34950,7 @@ public class LeptonicaTest {
 //        System.out.println("recogaWritePixaa");
 //        String filename = "";
 //        L_Recoga recoga = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.recogaWritePixaa(filename, recoga);
 //        assertEquals(expResult, result);
@@ -34963,7 +34965,7 @@ public class LeptonicaTest {
 //    public void testRecogRead() {
 //        System.out.println("recogRead");
 //        String filename = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Recog expResult = null;
 //        L_Recog result = instance.recogRead(filename);
 //        assertEquals(expResult, result);
@@ -34978,7 +34980,7 @@ public class LeptonicaTest {
 //    public void testRecogReadStream() {
 //        System.out.println("recogReadStream");
 //        PointerByReference fp = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Recog expResult = null;
 //        L_Recog result = instance.recogReadStream(fp);
 //        assertEquals(expResult, result);
@@ -34994,7 +34996,7 @@ public class LeptonicaTest {
 //        System.out.println("recogWrite");
 //        String filename = "";
 //        L_Recog recog = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.recogWrite(filename, recog);
 //        assertEquals(expResult, result);
@@ -35011,7 +35013,7 @@ public class LeptonicaTest {
 //        PointerByReference fp = null;
 //        L_Recog recog = null;
 //        String filename = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.recogWriteStream(fp, recog, filename);
 //        assertEquals(expResult, result);
@@ -35028,7 +35030,7 @@ public class LeptonicaTest {
 //        PointerByReference fp = null;
 //        L_Recog recog = null;
 //        Pointer filename = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.recogWriteStream(fp, recog, filename);
 //        assertEquals(expResult, result);
@@ -35044,7 +35046,7 @@ public class LeptonicaTest {
 //        System.out.println("recogWritePixa");
 //        String filename = "";
 //        L_Recog recog = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.recogWritePixa(filename, recog);
 //        assertEquals(expResult, result);
@@ -35062,7 +35064,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int nlevels = 0;
 //        Pix.ByReference[] ppixdb = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.recogDecode(recog, pixs, nlevels, ppixdb);
 //        assertEquals(expResult, result);
@@ -35079,7 +35081,7 @@ public class LeptonicaTest {
 //        L_Recog recog = null;
 //        Pix pixs = null;
 //        int debug = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.recogMakeDecodingArrays(recog, pixs, debug);
 //        assertEquals(expResult, result);
@@ -35095,7 +35097,7 @@ public class LeptonicaTest {
 //        System.out.println("recogRunViterbi");
 //        L_Recog recog = null;
 //        Pix.ByReference[] ppixdb = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.recogRunViterbi(recog, ppixdb);
 //        assertEquals(expResult, result);
@@ -35111,7 +35113,7 @@ public class LeptonicaTest {
 //        System.out.println("recogCreateDid");
 //        L_Recog recog = null;
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.recogCreateDid(recog, pixs);
 //        assertEquals(expResult, result);
@@ -35126,7 +35128,7 @@ public class LeptonicaTest {
 //    public void testRecogDestroyDid() {
 //        System.out.println("recogDestroyDid");
 //        L_Recog recog = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.recogDestroyDid(recog);
 //        assertEquals(expResult, result);
@@ -35141,7 +35143,7 @@ public class LeptonicaTest {
 //    public void testRecogDidExists() {
 //        System.out.println("recogDidExists");
 //        L_Recog recog = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.recogDidExists(recog);
 //        assertEquals(expResult, result);
@@ -35156,7 +35158,7 @@ public class LeptonicaTest {
 //    public void testRecogGetDid() {
 //        System.out.println("recogGetDid");
 //        L_Recog recog = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Rdid expResult = null;
 //        L_Rdid result = instance.recogGetDid(recog);
 //        assertEquals(expResult, result);
@@ -35172,7 +35174,7 @@ public class LeptonicaTest {
 //        System.out.println("recogSetChannelParams");
 //        L_Recog recog = null;
 //        int nlevels = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.recogSetChannelParams(recog, nlevels);
 //        assertEquals(expResult, result);
@@ -35195,7 +35197,7 @@ public class LeptonicaTest {
 //        Pixa.ByReference[] ppixa = null;
 //        Pix.ByReference[] ppixdb = null;
 //        int debugsplit = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.recogaIdentifyMultiple(recoga, pixs, nitems, minw, minh, pboxa, ppixa, ppixdb, debugsplit);
 //        assertEquals(expResult, result);
@@ -35217,7 +35219,7 @@ public class LeptonicaTest {
 //        Pixa.ByReference[] ppixa = null;
 //        Numa.ByReference[] pnaid = null;
 //        int debug = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.recogSplitIntoCharacters(recog, pixs, minw, minh, pboxa, ppixa, pnaid, debug);
 //        assertEquals(expResult, result);
@@ -35238,7 +35240,7 @@ public class LeptonicaTest {
 //        Numa.ByReference[] pnaindex = null;
 //        Sarray.ByReference[] psachar = null;
 //        int debug = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.recogCorrelationBestRow(recog, pixs, pboxa, pnascore, pnaindex, psachar, debug);
 //        assertEquals(expResult, result);
@@ -35259,7 +35261,7 @@ public class LeptonicaTest {
 //        IntBuffer pindex = null;
 //        PointerByReference pcharstr = null;
 //        Pix.ByReference[] ppixdb = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.recogCorrelationBestChar(recog, pixs, pbox, pscore, pindex, pcharstr, ppixdb);
 //        assertEquals(expResult, result);
@@ -35280,7 +35282,7 @@ public class LeptonicaTest {
 //        IntByReference pindex = null;
 //        PointerByReference pcharstr = null;
 //        Pix.ByReference[] ppixdb = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.recogCorrelationBestChar(recog, pixs, pbox, pscore, pindex, pcharstr, ppixdb);
 //        assertEquals(expResult, result);
@@ -35298,7 +35300,7 @@ public class LeptonicaTest {
 //        Pixa pixa = null;
 //        Numa naid = null;
 //        Pix.ByReference[] ppixdb = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.recogaIdentifyPixa(recoga, pixa, naid, ppixdb);
 //        assertEquals(expResult, result);
@@ -35316,7 +35318,7 @@ public class LeptonicaTest {
 //        Pixa pixa = null;
 //        Numa naid = null;
 //        Pix.ByReference[] ppixdb = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.recogIdentifyPixa(recog, pixa, naid, ppixdb);
 //        assertEquals(expResult, result);
@@ -35333,7 +35335,7 @@ public class LeptonicaTest {
 //        L_Recog recog = null;
 //        Pix pixs = null;
 //        Pix.ByReference[] ppixdb = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.recogIdentifyPix(recog, pixs, ppixdb);
 //        assertEquals(expResult, result);
@@ -35348,7 +35350,7 @@ public class LeptonicaTest {
 //    public void testRecogSkipIdentify() {
 //        System.out.println("recogSkipIdentify");
 //        L_Recog recog = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.recogSkipIdentify(recog);
 //        assertEquals(expResult, result);
@@ -35363,7 +35365,7 @@ public class LeptonicaTest {
 //    public void testRchaDestroy() {
 //        System.out.println("rchaDestroy");
 //        L_Rcha.ByReference[] prcha = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.rchaDestroy(prcha);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -35376,7 +35378,7 @@ public class LeptonicaTest {
 //    public void testRchDestroy() {
 //        System.out.println("rchDestroy");
 //        L_Rch.ByReference[] prch = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.rchDestroy(prch);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -35396,7 +35398,7 @@ public class LeptonicaTest {
 //        Numa.ByReference[] pnaxloc = null;
 //        Numa.ByReference[] pnayloc = null;
 //        Numa.ByReference[] pnawidth = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.rchaExtract(rcha, pnaindex, pnascore, psatext, pnasample, pnaxloc, pnayloc, pnawidth);
 //        assertEquals(expResult, result);
@@ -35418,7 +35420,7 @@ public class LeptonicaTest {
 //        IntBuffer pxloc = null;
 //        IntBuffer pyloc = null;
 //        IntBuffer pwidth = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.rchExtract(rch, pindex, pscore, ptext, psample, pxloc, pyloc, pwidth);
 //        assertEquals(expResult, result);
@@ -35435,7 +35437,7 @@ public class LeptonicaTest {
 //        L_Recog recog = null;
 //        Pix pixs = null;
 //        int pad = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.recogProcessToIdentify(recog, pixs, pad);
 //        assertEquals(expResult, result);
@@ -35455,7 +35457,7 @@ public class LeptonicaTest {
 //        float minaf = 0.0F;
 //        float maxaf = 0.0F;
 //        int debug = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.recogPreSplittingFilter(recog, pixs, maxasp, minaf, maxaf, debug);
 //        assertEquals(expResult, result);
@@ -35476,7 +35478,7 @@ public class LeptonicaTest {
 //        float maxaf = 0.0F;
 //        IntBuffer premove = null;
 //        int debug = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.recogSplittingFilter(recog, pixs, maxasp, minaf, maxaf, premove, debug);
 //        assertEquals(expResult, result);
@@ -35496,7 +35498,7 @@ public class LeptonicaTest {
 //        int spacethresh = 0;
 //        Boxaa.ByReference[] pbaa = null;
 //        Numaa.ByReference[] pnaa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Sarray expResult = null;
 //        Sarray result = instance.recogaExtractNumbers(recoga, boxas, scorethresh, spacethresh, pbaa, pnaa);
 //        assertEquals(expResult, result);
@@ -35512,7 +35514,7 @@ public class LeptonicaTest {
 //        System.out.println("recogSetTemplateType");
 //        L_Recog recog = null;
 //        int templ_type = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.recogSetTemplateType(recog, templ_type);
 //        assertEquals(expResult, result);
@@ -35529,7 +35531,7 @@ public class LeptonicaTest {
 //        L_Recog recog = null;
 //        int scalew = 0;
 //        int scaleh = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.recogSetScaling(recog, scalew, scaleh);
 //        assertEquals(expResult, result);
@@ -35549,7 +35551,7 @@ public class LeptonicaTest {
 //        ByteBuffer text = null;
 //        int multflag = 0;
 //        int debug = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.recogTrainLabelled(recog, pixs, box, text, multflag, debug);
 //        assertEquals(expResult, result);
@@ -35569,7 +35571,7 @@ public class LeptonicaTest {
 //        ByteBuffer text = null;
 //        Pixa.ByReference[] ppixa = null;
 //        int debug = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.recogProcessMultLabelled(recog, pixs, box, text, ppixa, debug);
 //        assertEquals(expResult, result);
@@ -35589,7 +35591,7 @@ public class LeptonicaTest {
 //        Pointer text = null;
 //        Pixa.ByReference[] ppixa = null;
 //        int debug = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.recogProcessMultLabelled(recog, pixs, box, text, ppixa, debug);
 //        assertEquals(expResult, result);
@@ -35608,7 +35610,7 @@ public class LeptonicaTest {
 //        Box box = null;
 //        ByteBuffer text = null;
 //        Pixa.ByReference[] ppixa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.recogProcessSingleLabelled(recog, pixs, box, text, ppixa);
 //        assertEquals(expResult, result);
@@ -35627,7 +35629,7 @@ public class LeptonicaTest {
 //        Box box = null;
 //        Pointer text = null;
 //        Pixa.ByReference[] ppixa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.recogProcessSingleLabelled(recog, pixs, box, text, ppixa);
 //        assertEquals(expResult, result);
@@ -35645,7 +35647,7 @@ public class LeptonicaTest {
 //        Pixa pixa = null;
 //        int classindex = 0;
 //        int debug = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.recogAddSamples(recog, pixa, classindex, debug);
 //        assertEquals(expResult, result);
@@ -35661,7 +35663,7 @@ public class LeptonicaTest {
 //        System.out.println("recogScaleCharacter");
 //        L_Recog recog = null;
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.recogScaleCharacter(recog, pixs);
 //        assertEquals(expResult, result);
@@ -35677,7 +35679,7 @@ public class LeptonicaTest {
 //        System.out.println("recogAverageSamples");
 //        L_Recog recog = null;
 //        int debug = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.recogAverageSamples(recog, debug);
 //        assertEquals(expResult, result);
@@ -35696,7 +35698,7 @@ public class LeptonicaTest {
 //        Pix.ByReference[] ppixd = null;
 //        FloatBuffer px = null;
 //        FloatBuffer py = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixaAccumulateSamples(pixa, pta, ppixd, px, py);
 //        assertEquals(expResult, result);
@@ -35715,7 +35717,7 @@ public class LeptonicaTest {
 //        Pix.ByReference[] ppixd = null;
 //        FloatByReference px = null;
 //        FloatByReference py = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixaAccumulateSamples(pixa, pta, ppixd, px, py);
 //        assertEquals(expResult, result);
@@ -35731,7 +35733,7 @@ public class LeptonicaTest {
 //        System.out.println("recogTrainingFinished");
 //        L_Recog recog = null;
 //        int debug = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.recogTrainingFinished(recog, debug);
 //        assertEquals(expResult, result);
@@ -35749,7 +35751,7 @@ public class LeptonicaTest {
 //        float targetscore = 0.0F;
 //        float minfract = 0.0F;
 //        int debug = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.recogRemoveOutliers(recog, targetscore, minfract, debug);
 //        assertEquals(expResult, result);
@@ -35765,7 +35767,7 @@ public class LeptonicaTest {
 //        System.out.println("recogaTrainingDone");
 //        L_Recoga recoga = null;
 //        IntBuffer pdone = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.recogaTrainingDone(recoga, pdone);
 //        assertEquals(expResult, result);
@@ -35780,7 +35782,7 @@ public class LeptonicaTest {
 //    public void testRecogaFinishAveraging() {
 //        System.out.println("recogaFinishAveraging");
 //        L_Recoga recoga = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.recogaFinishAveraging(recoga);
 //        assertEquals(expResult, result);
@@ -35801,7 +35803,7 @@ public class LeptonicaTest {
 //        int singlechar = 0;
 //        float minscore = 0.0F;
 //        int debug = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.recogTrainUnlabelled(recog, recogboot, pixs, box, singlechar, minscore, debug);
 //        assertEquals(expResult, result);
@@ -35817,7 +35819,7 @@ public class LeptonicaTest {
 //        System.out.println("recogPadTrainingSet");
 //        L_Recog.ByReference[] precog = null;
 //        int debug = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.recogPadTrainingSet(precog, debug);
 //        assertEquals(expResult, result);
@@ -35838,7 +35840,7 @@ public class LeptonicaTest {
 //        Numa.ByReference[] pnascore = null;
 //        Numa.ByReference[] pnasum = null;
 //        Pixa.ByReference[] ppixadb = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.recogBestCorrelForPadding(recog, recoga, pnaset, pnaindex, pnascore, pnasum, ppixadb);
 //        assertEquals(expResult, result);
@@ -35857,7 +35859,7 @@ public class LeptonicaTest {
 //        Numa.ByReference[] pnaindex = null;
 //        Numa.ByReference[] pnascore = null;
 //        Pixa.ByReference[] ppixadb = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.recogCorrelAverages(recog1, recog2, pnaindex, pnascore, ppixadb);
 //        assertEquals(expResult, result);
@@ -35878,7 +35880,7 @@ public class LeptonicaTest {
 //        int type = 0;
 //        int min_nopad = 0;
 //        int max_afterpad = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.recogSetPadParams(recog, bootdir, bootpattern, bootpath, type, min_nopad, max_afterpad);
 //        assertEquals(expResult, result);
@@ -35895,7 +35897,7 @@ public class LeptonicaTest {
 //        PointerByReference fp = null;
 //        L_Recoga recoga = null;
 //        int display = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.recogaShowContent(fp, recoga, display);
 //        assertEquals(expResult, result);
@@ -35912,7 +35914,7 @@ public class LeptonicaTest {
 //        PointerByReference fp = null;
 //        L_Recog recog = null;
 //        int display = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.recogShowContent(fp, recog, display);
 //        assertEquals(expResult, result);
@@ -35928,7 +35930,7 @@ public class LeptonicaTest {
 //        System.out.println("recogDebugAverages");
 //        L_Recog recog = null;
 //        int debug = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.recogDebugAverages(recog, debug);
 //        assertEquals(expResult, result);
@@ -35943,7 +35945,7 @@ public class LeptonicaTest {
 //    public void testRecogShowAverageTemplates() {
 //        System.out.println("recogShowAverageTemplates");
 //        L_Recog recog = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.recogShowAverageTemplates(recog);
 //        assertEquals(expResult, result);
@@ -35962,7 +35964,7 @@ public class LeptonicaTest {
 //        float minscore = 0.0F;
 //        float maxscore = 0.0F;
 //        int display = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.recogShowMatchesInRange(recog, pixa, minscore, maxscore, display);
 //        assertEquals(expResult, result);
@@ -35982,7 +35984,7 @@ public class LeptonicaTest {
 //        Box box = null;
 //        int index = 0;
 //        float score = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.recogShowMatch(recog, pix1, pix2, box, index, score);
 //        assertEquals(expResult, result);
@@ -35999,7 +36001,7 @@ public class LeptonicaTest {
 //        int argc = 0;
 //        PointerByReference argv = null;
 //        L_RegParams.ByReference[] prp = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.regTestSetup(argc, argv, prp);
 //        assertEquals(expResult, result);
@@ -36014,7 +36016,7 @@ public class LeptonicaTest {
 //    public void testRegTestCleanup() {
 //        System.out.println("regTestCleanup");
 //        L_RegParams rp = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.regTestCleanup(rp);
 //        assertEquals(expResult, result);
@@ -36032,7 +36034,7 @@ public class LeptonicaTest {
 //        float val1 = 0.0F;
 //        float val2 = 0.0F;
 //        float delta = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.regTestCompareValues(rp, val1, val2, delta);
 //        assertEquals(expResult, result);
@@ -36051,7 +36053,7 @@ public class LeptonicaTest {
 //        NativeSize bytes1 = null;
 //        ByteBuffer string2 = null;
 //        NativeSize bytes2 = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.regTestCompareStrings(rp, string1, bytes1, string2, bytes2);
 //        assertEquals(expResult, result);
@@ -36068,7 +36070,7 @@ public class LeptonicaTest {
 //        L_RegParams rp = null;
 //        Pix pix1 = null;
 //        Pix pix2 = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.regTestComparePix(rp, pix1, pix2);
 //        assertEquals(expResult, result);
@@ -36088,7 +36090,7 @@ public class LeptonicaTest {
 //        int mindiff = 0;
 //        float maxfract = 0.0F;
 //        int printstats = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.regTestCompareSimilarPix(rp, pix1, pix2, mindiff, maxfract, printstats);
 //        assertEquals(expResult, result);
@@ -36104,7 +36106,7 @@ public class LeptonicaTest {
 //        System.out.println("regTestCheckFile");
 //        L_RegParams rp = null;
 //        String localname = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.regTestCheckFile(rp, localname);
 //        assertEquals(expResult, result);
@@ -36121,7 +36123,7 @@ public class LeptonicaTest {
 //        L_RegParams rp = null;
 //        int index1 = 0;
 //        int index2 = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.regTestCompareFiles(rp, index1, index2);
 //        assertEquals(expResult, result);
@@ -36138,7 +36140,7 @@ public class LeptonicaTest {
 //        L_RegParams rp = null;
 //        Pix pix = null;
 //        int format = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.regTestWritePixAndCheck(rp, pix, format);
 //        assertEquals(expResult, result);
@@ -36161,7 +36163,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int sx = 0;
 //        int sy = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixRasterop(pixd, dx, dy, dw, dh, op, pixs, sx, sy);
 //        assertEquals(expResult, result);
@@ -36180,7 +36182,7 @@ public class LeptonicaTest {
 //        int bw = 0;
 //        int vshift = 0;
 //        int incolor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixRasteropVip(pixd, bx, bw, vshift, incolor);
 //        assertEquals(expResult, result);
@@ -36199,7 +36201,7 @@ public class LeptonicaTest {
 //        int bh = 0;
 //        int hshift = 0;
 //        int incolor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixRasteropHip(pixd, by, bh, hshift, incolor);
 //        assertEquals(expResult, result);
@@ -36218,7 +36220,7 @@ public class LeptonicaTest {
 //        int hshift = 0;
 //        int vshift = 0;
 //        int incolor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixTranslate(pixd, pixs, hshift, vshift, incolor);
 //        assertEquals(expResult, result);
@@ -36236,7 +36238,7 @@ public class LeptonicaTest {
 //        int hshift = 0;
 //        int vshift = 0;
 //        int incolor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixRasteropIP(pixd, hshift, vshift, incolor);
 //        assertEquals(expResult, result);
@@ -36253,7 +36255,7 @@ public class LeptonicaTest {
 //        Pix pixd = null;
 //        Pix pixs = null;
 //        int op = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixRasteropFullImage(pixd, pixs, op);
 //        assertEquals(expResult, result);
@@ -36275,7 +36277,7 @@ public class LeptonicaTest {
 //        int x = 0;
 //        int w = 0;
 //        int shift = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.rasteropVipLow(data, pixw, pixh, depth, wpl, x, w, shift);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -36294,7 +36296,7 @@ public class LeptonicaTest {
 //        int y = 0;
 //        int h = 0;
 //        int shift = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.rasteropHipLow(data, pixh, depth, wpl, y, h, shift);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -36311,7 +36313,7 @@ public class LeptonicaTest {
 //        IntBuffer datas = null;
 //        int wpls = 0;
 //        int shift = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.shiftDataHorizontalLow(datad, wpld, datas, wpls, shift);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -36333,7 +36335,7 @@ public class LeptonicaTest {
 //        int dw = 0;
 //        int dh = 0;
 //        int op = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.rasteropUniLow(datad, dpixw, dpixh, depth, dwpl, dx, dy, dw, dh, op);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -36361,7 +36363,7 @@ public class LeptonicaTest {
 //        int swpl = 0;
 //        int sx = 0;
 //        int sy = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.rasteropLow(datad, dpixw, dpixh, depth, dwpl, dx, dy, dw, dh, op, datas, spixw, spixh, swpl, sx, sy);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -36379,7 +36381,7 @@ public class LeptonicaTest {
 //        int incolor = 0;
 //        int width = 0;
 //        int height = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixRotate(pixs, angle, type, incolor, width, height);
 //        assertEquals(expResult, result);
@@ -36398,7 +36400,7 @@ public class LeptonicaTest {
 //        int incolor = 0;
 //        int width = 0;
 //        int height = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixEmbedForRotation(pixs, angle, incolor, width, height);
 //        assertEquals(expResult, result);
@@ -36417,7 +36419,7 @@ public class LeptonicaTest {
 //        int ycen = 0;
 //        float angle = 0.0F;
 //        int incolor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixRotateBySampling(pixs, xcen, ycen, angle, incolor);
 //        assertEquals(expResult, result);
@@ -36434,7 +36436,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        float angle = 0.0F;
 //        int incolor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixRotateBinaryNice(pixs, angle, incolor);
 //        assertEquals(expResult, result);
@@ -36452,7 +36454,7 @@ public class LeptonicaTest {
 //        float angle = 0.0F;
 //        Pix pixg = null;
 //        float fract = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixRotateWithAlpha(pixs, angle, pixg, fract);
 //        assertEquals(expResult, result);
@@ -36469,7 +36471,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        float angle = 0.0F;
 //        int incolor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixRotateAM(pixs, angle, incolor);
 //        assertEquals(expResult, result);
@@ -36486,7 +36488,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        float angle = 0.0F;
 //        int colorval = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixRotateAMColor(pixs, angle, colorval);
 //        assertEquals(expResult, result);
@@ -36503,7 +36505,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        float angle = 0.0F;
 //        byte grayval = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixRotateAMGray(pixs, angle, grayval);
 //        assertEquals(expResult, result);
@@ -36520,7 +36522,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        float angle = 0.0F;
 //        int incolor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixRotateAMCorner(pixs, angle, incolor);
 //        assertEquals(expResult, result);
@@ -36537,7 +36539,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        float angle = 0.0F;
 //        int fillval = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixRotateAMColorCorner(pixs, angle, fillval);
 //        assertEquals(expResult, result);
@@ -36554,7 +36556,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        float angle = 0.0F;
 //        byte grayval = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixRotateAMGrayCorner(pixs, angle, grayval);
 //        assertEquals(expResult, result);
@@ -36571,7 +36573,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        float angle = 0.0F;
 //        int colorval = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixRotateAMColorFast(pixs, angle, colorval);
 //        assertEquals(expResult, result);
@@ -36593,7 +36595,7 @@ public class LeptonicaTest {
 //        int wpls = 0;
 //        float angle = 0.0F;
 //        int colorval = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.rotateAMColorLow(datad, w, h, wpld, datas, wpls, angle, colorval);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -36613,7 +36615,7 @@ public class LeptonicaTest {
 //        int wpls = 0;
 //        float angle = 0.0F;
 //        byte grayval = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.rotateAMGrayLow(datad, w, h, wpld, datas, wpls, angle, grayval);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -36633,7 +36635,7 @@ public class LeptonicaTest {
 //        int wpls = 0;
 //        float angle = 0.0F;
 //        int colorval = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.rotateAMColorCornerLow(datad, w, h, wpld, datas, wpls, angle, colorval);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -36653,7 +36655,7 @@ public class LeptonicaTest {
 //        int wpls = 0;
 //        float angle = 0.0F;
 //        byte grayval = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.rotateAMGrayCornerLow(datad, w, h, wpld, datas, wpls, angle, grayval);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -36673,7 +36675,7 @@ public class LeptonicaTest {
 //        int wpls = 0;
 //        float angle = 0.0F;
 //        int colorval = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.rotateAMColorFastLow(datad, w, h, wpld, datas, wpls, angle, colorval);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -36687,7 +36689,7 @@ public class LeptonicaTest {
 //        System.out.println("pixRotateOrth");
 //        Pix pixs = null;
 //        int quads = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixRotateOrth(pixs, quads);
 //        assertEquals(expResult, result);
@@ -36703,7 +36705,7 @@ public class LeptonicaTest {
 //        System.out.println("pixRotate180");
 //        Pix pixd = null;
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixRotate180(pixd, pixs);
 //        assertEquals(expResult, result);
@@ -36719,7 +36721,7 @@ public class LeptonicaTest {
 //        System.out.println("pixRotate90");
 //        Pix pixs = null;
 //        int direction = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixRotate90(pixs, direction);
 //        assertEquals(expResult, result);
@@ -36735,7 +36737,7 @@ public class LeptonicaTest {
 //        System.out.println("pixFlipLR");
 //        Pix pixd = null;
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixFlipLR(pixd, pixs);
 //        assertEquals(expResult, result);
@@ -36751,7 +36753,7 @@ public class LeptonicaTest {
 //        System.out.println("pixFlipTB");
 //        Pix pixd = null;
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixFlipTB(pixd, pixs);
 //        assertEquals(expResult, result);
@@ -36770,7 +36772,7 @@ public class LeptonicaTest {
 //        int ycen = 0;
 //        float angle = 0.0F;
 //        int incolor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixRotateShear(pixs, xcen, ycen, angle, incolor);
 //        assertEquals(expResult, result);
@@ -36789,7 +36791,7 @@ public class LeptonicaTest {
 //        int ycen = 0;
 //        float angle = 0.0F;
 //        int incolor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixRotate2Shear(pixs, xcen, ycen, angle, incolor);
 //        assertEquals(expResult, result);
@@ -36808,7 +36810,7 @@ public class LeptonicaTest {
 //        int ycen = 0;
 //        float angle = 0.0F;
 //        int incolor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixRotate3Shear(pixs, xcen, ycen, angle, incolor);
 //        assertEquals(expResult, result);
@@ -36827,7 +36829,7 @@ public class LeptonicaTest {
 //        int ycen = 0;
 //        float angle = 0.0F;
 //        int incolor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixRotateShearIP(pixs, xcen, ycen, angle, incolor);
 //        assertEquals(expResult, result);
@@ -36844,7 +36846,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        float angle = 0.0F;
 //        int incolor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixRotateShearCenter(pixs, angle, incolor);
 //        assertEquals(expResult, result);
@@ -36861,7 +36863,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        float angle = 0.0F;
 //        int incolor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixRotateShearCenterIP(pixs, angle, incolor);
 //        assertEquals(expResult, result);
@@ -36879,7 +36881,7 @@ public class LeptonicaTest {
 //        int color = 0;
 //        int depth = 0;
 //        int nangles = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixStrokeWidthTransform(pixs, color, depth, nangles);
 //        assertEquals(expResult, result);
@@ -36897,7 +36899,7 @@ public class LeptonicaTest {
 //        int color = 0;
 //        int direction = 0;
 //        int depth = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixRunlengthTransform(pixs, color, direction, depth);
 //        assertEquals(expResult, result);
@@ -36916,7 +36918,7 @@ public class LeptonicaTest {
 //        IntBuffer xstart = null;
 //        IntBuffer xend = null;
 //        IntBuffer pn = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixFindHorizontalRuns(pix, y, xstart, xend, pn);
 //        assertEquals(expResult, result);
@@ -36935,7 +36937,7 @@ public class LeptonicaTest {
 //        IntBuffer ystart = null;
 //        IntBuffer yend = null;
 //        IntBuffer pn = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixFindVerticalRuns(pix, x, ystart, yend, pn);
 //        assertEquals(expResult, result);
@@ -36952,7 +36954,7 @@ public class LeptonicaTest {
 //        Pix pix = null;
 //        int direction = 0;
 //        Numa.ByReference[] pnastart = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.pixFindMaxRuns(pix, direction, pnastart);
 //        assertEquals(expResult, result);
@@ -36970,7 +36972,7 @@ public class LeptonicaTest {
 //        int y = 0;
 //        IntBuffer pxstart = null;
 //        IntBuffer psize = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixFindMaxHorizontalRunOnLine(pix, y, pxstart, psize);
 //        assertEquals(expResult, result);
@@ -36988,7 +36990,7 @@ public class LeptonicaTest {
 //        int x = 0;
 //        IntBuffer pystart = null;
 //        IntBuffer psize = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixFindMaxVerticalRunOnLine(pix, x, pystart, psize);
 //        assertEquals(expResult, result);
@@ -37008,7 +37010,7 @@ public class LeptonicaTest {
 //        IntBuffer start = null;
 //        IntBuffer end = null;
 //        int n = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.runlengthMembershipOnLine(buffer, size, depth, start, end, n);
 //        assertEquals(expResult, result);
@@ -37023,7 +37025,7 @@ public class LeptonicaTest {
 //    public void testMakeMSBitLocTab() {
 //        System.out.println("makeMSBitLocTab");
 //        int bitval = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        IntByReference expResult = null;
 //        IntByReference result = instance.makeMSBitLocTab(bitval);
 //        assertEquals(expResult, result);
@@ -37038,7 +37040,7 @@ public class LeptonicaTest {
 //    public void testSarrayCreate() {
 //        System.out.println("sarrayCreate");
 //        int n = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Sarray expResult = null;
 //        Sarray result = instance.sarrayCreate(n);
 //        assertEquals(expResult, result);
@@ -37054,7 +37056,7 @@ public class LeptonicaTest {
 //        System.out.println("sarrayCreateInitialized");
 //        int n = 0;
 //        ByteBuffer initstr = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Sarray expResult = null;
 //        Sarray result = instance.sarrayCreateInitialized(n, initstr);
 //        assertEquals(expResult, result);
@@ -37069,7 +37071,7 @@ public class LeptonicaTest {
 //    public void testSarrayCreateWordsFromString() {
 //        System.out.println("sarrayCreateWordsFromString");
 //        String string = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Sarray expResult = null;
 //        Sarray result = instance.sarrayCreateWordsFromString(string);
 //        assertEquals(expResult, result);
@@ -37085,7 +37087,7 @@ public class LeptonicaTest {
 //        System.out.println("sarrayCreateLinesFromString");
 //        ByteBuffer string = null;
 //        int blankflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Sarray expResult = null;
 //        Sarray result = instance.sarrayCreateLinesFromString(string, blankflag);
 //        assertEquals(expResult, result);
@@ -37100,7 +37102,7 @@ public class LeptonicaTest {
 //    public void testSarrayDestroy() {
 //        System.out.println("sarrayDestroy");
 //        Sarray.ByReference[] psa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.sarrayDestroy(psa);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -37113,7 +37115,7 @@ public class LeptonicaTest {
 //    public void testSarrayCopy() {
 //        System.out.println("sarrayCopy");
 //        Sarray sa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Sarray expResult = null;
 //        Sarray result = instance.sarrayCopy(sa);
 //        assertEquals(expResult, result);
@@ -37128,7 +37130,7 @@ public class LeptonicaTest {
 //    public void testSarrayClone() {
 //        System.out.println("sarrayClone");
 //        Sarray sa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Sarray expResult = null;
 //        Sarray result = instance.sarrayClone(sa);
 //        assertEquals(expResult, result);
@@ -37145,7 +37147,7 @@ public class LeptonicaTest {
 //        Sarray sa = null;
 //        ByteBuffer string = null;
 //        int copyflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.sarrayAddString(sa, string, copyflag);
 //        assertEquals(expResult, result);
@@ -37161,7 +37163,7 @@ public class LeptonicaTest {
 //        System.out.println("sarrayRemoveString");
 //        Sarray sa = null;
 //        int index = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.sarrayRemoveString(sa, index);
 //        assertEquals(expResult, result);
@@ -37179,7 +37181,7 @@ public class LeptonicaTest {
 //        int index = 0;
 //        ByteBuffer newstr = null;
 //        int copyflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.sarrayReplaceString(sa, index, newstr, copyflag);
 //        assertEquals(expResult, result);
@@ -37194,7 +37196,7 @@ public class LeptonicaTest {
 //    public void testSarrayClear() {
 //        System.out.println("sarrayClear");
 //        Sarray sa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.sarrayClear(sa);
 //        assertEquals(expResult, result);
@@ -37209,7 +37211,7 @@ public class LeptonicaTest {
 //    public void testSarrayGetCount() {
 //        System.out.println("sarrayGetCount");
 //        Sarray sa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.sarrayGetCount(sa);
 //        assertEquals(expResult, result);
@@ -37226,7 +37228,7 @@ public class LeptonicaTest {
 //        Sarray sa = null;
 //        IntBuffer pnalloc = null;
 //        IntBuffer pn = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        PointerByReference expResult = null;
 //        PointerByReference result = instance.sarrayGetArray(sa, pnalloc, pn);
 //        assertEquals(expResult, result);
@@ -37243,7 +37245,7 @@ public class LeptonicaTest {
 //        Sarray sa = null;
 //        int index = 0;
 //        int copyflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.sarrayGetString(sa, index, copyflag);
 //        assertEquals(expResult, result);
@@ -37258,7 +37260,7 @@ public class LeptonicaTest {
 //    public void testSarrayGetRefcount() {
 //        System.out.println("sarrayGetRefcount");
 //        Sarray sa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.sarrayGetRefcount(sa);
 //        assertEquals(expResult, result);
@@ -37274,7 +37276,7 @@ public class LeptonicaTest {
 //        System.out.println("sarrayChangeRefcount");
 //        Sarray sa = null;
 //        int delta = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.sarrayChangeRefcount(sa, delta);
 //        assertEquals(expResult, result);
@@ -37290,7 +37292,7 @@ public class LeptonicaTest {
 //        System.out.println("sarrayToString");
 //        Sarray sa = null;
 //        int addnlflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.sarrayToString(sa, addnlflag);
 //        assertEquals(expResult, result);
@@ -37308,7 +37310,7 @@ public class LeptonicaTest {
 //        int first = 0;
 //        int nstrings = 0;
 //        int addnlflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.sarrayToStringRange(sa, first, nstrings, addnlflag);
 //        assertEquals(expResult, result);
@@ -37324,7 +37326,7 @@ public class LeptonicaTest {
 //        System.out.println("sarrayConcatenate");
 //        Sarray sa1 = null;
 //        Sarray sa2 = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.sarrayConcatenate(sa1, sa2);
 //        assertEquals(expResult, result);
@@ -37342,7 +37344,7 @@ public class LeptonicaTest {
 //        Sarray sa2 = null;
 //        int start = 0;
 //        int end = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.sarrayAppendRange(sa1, sa2, start, end);
 //        assertEquals(expResult, result);
@@ -37359,7 +37361,7 @@ public class LeptonicaTest {
 //        Sarray sa1 = null;
 //        Sarray sa2 = null;
 //        ByteBuffer padstring = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.sarrayPadToSameSize(sa1, sa2, padstring);
 //        assertEquals(expResult, result);
@@ -37375,7 +37377,7 @@ public class LeptonicaTest {
 //        System.out.println("sarrayConvertWordsToLines");
 //        Sarray sa = null;
 //        int linesize = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Sarray expResult = null;
 //        Sarray result = instance.sarrayConvertWordsToLines(sa, linesize);
 //        assertEquals(expResult, result);
@@ -37392,7 +37394,7 @@ public class LeptonicaTest {
 //        Sarray sa = null;
 //        String str = "";
 //        String separators = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.sarraySplitString(sa, str, separators);
 //        assertEquals(expResult, result);
@@ -37408,7 +37410,7 @@ public class LeptonicaTest {
 //        System.out.println("sarraySelectBySubstring");
 //        Sarray sain = null;
 //        String substr = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Sarray expResult = null;
 //        Sarray result = instance.sarraySelectBySubstring(sain, substr);
 //        assertEquals(expResult, result);
@@ -37425,7 +37427,7 @@ public class LeptonicaTest {
 //        Sarray sain = null;
 //        int first = 0;
 //        int last = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Sarray expResult = null;
 //        Sarray result = instance.sarraySelectByRange(sain, first, last);
 //        assertEquals(expResult, result);
@@ -37446,7 +37448,7 @@ public class LeptonicaTest {
 //        IntBuffer pnewstart = null;
 //        String substr = "";
 //        int loc = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.sarrayParseRange(sa, start, pactualstart, pend, pnewstart, substr, loc);
 //        assertEquals(expResult, result);
@@ -37463,7 +37465,7 @@ public class LeptonicaTest {
 //        Sarray saout = null;
 //        Sarray sain = null;
 //        int sortorder = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Sarray expResult = null;
 //        Sarray result = instance.sarraySort(saout, sain, sortorder);
 //        assertEquals(expResult, result);
@@ -37479,7 +37481,7 @@ public class LeptonicaTest {
 //        System.out.println("sarraySortByIndex");
 //        Sarray sain = null;
 //        Numa naindex = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Sarray expResult = null;
 //        Sarray result = instance.sarraySortByIndex(sain, naindex);
 //        assertEquals(expResult, result);
@@ -37495,7 +37497,7 @@ public class LeptonicaTest {
 //        System.out.println("stringCompareLexical");
 //        String str1 = "";
 //        String str2 = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.stringCompareLexical(str1, str2);
 //        assertEquals(expResult, result);
@@ -37510,7 +37512,7 @@ public class LeptonicaTest {
 //    public void testSarrayRead() {
 //        System.out.println("sarrayRead");
 //        String filename = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Sarray expResult = null;
 //        Sarray result = instance.sarrayRead(filename);
 //        assertEquals(expResult, result);
@@ -37525,7 +37527,7 @@ public class LeptonicaTest {
 //    public void testSarrayReadStream() {
 //        System.out.println("sarrayReadStream");
 //        PointerByReference fp = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Sarray expResult = null;
 //        Sarray result = instance.sarrayReadStream(fp);
 //        assertEquals(expResult, result);
@@ -37541,7 +37543,7 @@ public class LeptonicaTest {
 //        System.out.println("sarrayWrite");
 //        String filename = "";
 //        Sarray sa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.sarrayWrite(filename, sa);
 //        assertEquals(expResult, result);
@@ -37557,7 +37559,7 @@ public class LeptonicaTest {
 //        System.out.println("sarrayWriteStream");
 //        PointerByReference fp = null;
 //        Sarray sa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.sarrayWriteStream(fp, sa);
 //        assertEquals(expResult, result);
@@ -37573,7 +37575,7 @@ public class LeptonicaTest {
 //        System.out.println("sarrayAppend");
 //        String filename = "";
 //        Sarray sa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.sarrayAppend(filename, sa);
 //        assertEquals(expResult, result);
@@ -37592,7 +37594,7 @@ public class LeptonicaTest {
 //        int numpre = 0;
 //        int numpost = 0;
 //        int maxnum = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Sarray expResult = null;
 //        Sarray result = instance.getNumberedPathnamesInDirectory(dirname, substr, numpre, numpost, maxnum);
 //        assertEquals(expResult, result);
@@ -37610,7 +37612,7 @@ public class LeptonicaTest {
 //        String substr = "";
 //        int first = 0;
 //        int nfiles = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Sarray expResult = null;
 //        Sarray result = instance.getSortedPathnamesInDirectory(dirname, substr, first, nfiles);
 //        assertEquals(expResult, result);
@@ -37628,7 +37630,7 @@ public class LeptonicaTest {
 //        int numpre = 0;
 //        int numpost = 0;
 //        int maxnum = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Sarray expResult = null;
 //        Sarray result = instance.convertSortedToNumberedPathnames(sa, numpre, numpost, maxnum);
 //        assertEquals(expResult, result);
@@ -37643,7 +37645,7 @@ public class LeptonicaTest {
 //    public void testGetFilenamesInDirectory() {
 //        System.out.println("getFilenamesInDirectory");
 //        String dirname = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Sarray expResult = null;
 //        Sarray result = instance.getFilenamesInDirectory(dirname);
 //        assertEquals(expResult, result);
@@ -37660,7 +37662,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        float scalex = 0.0F;
 //        float scaley = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixScale(pixs, scalex, scaley);
 //        assertEquals(expResult, result);
@@ -37677,7 +37679,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int wd = 0;
 //        int hd = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixScaleToSize(pixs, wd, hd);
 //        assertEquals(expResult, result);
@@ -37696,7 +37698,7 @@ public class LeptonicaTest {
 //        float scaley = 0.0F;
 //        float sharpfract = 0.0F;
 //        int sharpwidth = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixScaleGeneral(pixs, scalex, scaley, sharpfract, sharpwidth);
 //        assertEquals(expResult, result);
@@ -37713,7 +37715,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        float scalex = 0.0F;
 //        float scaley = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixScaleLI(pixs, scalex, scaley);
 //        assertEquals(expResult, result);
@@ -37730,7 +37732,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        float scalex = 0.0F;
 //        float scaley = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixScaleColorLI(pixs, scalex, scaley);
 //        assertEquals(expResult, result);
@@ -37745,7 +37747,7 @@ public class LeptonicaTest {
 //    public void testPixScaleColor2xLI() {
 //        System.out.println("pixScaleColor2xLI");
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixScaleColor2xLI(pixs);
 //        assertEquals(expResult, result);
@@ -37760,7 +37762,7 @@ public class LeptonicaTest {
 //    public void testPixScaleColor4xLI() {
 //        System.out.println("pixScaleColor4xLI");
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixScaleColor4xLI(pixs);
 //        assertEquals(expResult, result);
@@ -37777,7 +37779,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        float scalex = 0.0F;
 //        float scaley = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixScaleGrayLI(pixs, scalex, scaley);
 //        assertEquals(expResult, result);
@@ -37792,7 +37794,7 @@ public class LeptonicaTest {
 //    public void testPixScaleGray2xLI() {
 //        System.out.println("pixScaleGray2xLI");
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixScaleGray2xLI(pixs);
 //        assertEquals(expResult, result);
@@ -37807,7 +37809,7 @@ public class LeptonicaTest {
 //    public void testPixScaleGray4xLI() {
 //        System.out.println("pixScaleGray4xLI");
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixScaleGray4xLI(pixs);
 //        assertEquals(expResult, result);
@@ -37824,7 +37826,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        float scalex = 0.0F;
 //        float scaley = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixScaleBySampling(pixs, scalex, scaley);
 //        assertEquals(expResult, result);
@@ -37841,7 +37843,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int wd = 0;
 //        int hd = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixScaleBySamplingToSize(pixs, wd, hd);
 //        assertEquals(expResult, result);
@@ -37857,7 +37859,7 @@ public class LeptonicaTest {
 //        System.out.println("pixScaleByIntSampling");
 //        Pix pixs = null;
 //        int factor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixScaleByIntSampling(pixs, factor);
 //        assertEquals(expResult, result);
@@ -37874,7 +37876,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int factor = 0;
 //        int color = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixScaleRGBToGrayFast(pixs, factor, color);
 //        assertEquals(expResult, result);
@@ -37891,7 +37893,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int factor = 0;
 //        int thresh = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixScaleRGBToBinaryFast(pixs, factor, thresh);
 //        assertEquals(expResult, result);
@@ -37908,7 +37910,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int factor = 0;
 //        int thresh = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixScaleGrayToBinaryFast(pixs, factor, thresh);
 //        assertEquals(expResult, result);
@@ -37925,7 +37927,7 @@ public class LeptonicaTest {
 //        Pix pix = null;
 //        float scalex = 0.0F;
 //        float scaley = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixScaleSmooth(pix, scalex, scaley);
 //        assertEquals(expResult, result);
@@ -37943,7 +37945,7 @@ public class LeptonicaTest {
 //        float rwt = 0.0F;
 //        float gwt = 0.0F;
 //        float bwt = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixScaleRGBToGray2(pixs, rwt, gwt, bwt);
 //        assertEquals(expResult, result);
@@ -37960,7 +37962,7 @@ public class LeptonicaTest {
 //        Pix pix = null;
 //        float scalex = 0.0F;
 //        float scaley = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixScaleAreaMap(pix, scalex, scaley);
 //        assertEquals(expResult, result);
@@ -37975,7 +37977,7 @@ public class LeptonicaTest {
 //    public void testPixScaleAreaMap2() {
 //        System.out.println("pixScaleAreaMap2");
 //        Pix pix = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixScaleAreaMap2(pix);
 //        assertEquals(expResult, result);
@@ -37992,7 +37994,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        float scalex = 0.0F;
 //        float scaley = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixScaleBinary(pixs, scalex, scaley);
 //        assertEquals(expResult, result);
@@ -38008,7 +38010,7 @@ public class LeptonicaTest {
 //        System.out.println("pixScaleToGray");
 //        Pix pixs = null;
 //        float scalefactor = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixScaleToGray(pixs, scalefactor);
 //        assertEquals(expResult, result);
@@ -38024,7 +38026,7 @@ public class LeptonicaTest {
 //        System.out.println("pixScaleToGrayFast");
 //        Pix pixs = null;
 //        float scalefactor = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixScaleToGrayFast(pixs, scalefactor);
 //        assertEquals(expResult, result);
@@ -38039,7 +38041,7 @@ public class LeptonicaTest {
 //    public void testPixScaleToGray2() {
 //        System.out.println("pixScaleToGray2");
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixScaleToGray2(pixs);
 //        assertEquals(expResult, result);
@@ -38054,7 +38056,7 @@ public class LeptonicaTest {
 //    public void testPixScaleToGray3() {
 //        System.out.println("pixScaleToGray3");
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixScaleToGray3(pixs);
 //        assertEquals(expResult, result);
@@ -38069,7 +38071,7 @@ public class LeptonicaTest {
 //    public void testPixScaleToGray4() {
 //        System.out.println("pixScaleToGray4");
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixScaleToGray4(pixs);
 //        assertEquals(expResult, result);
@@ -38084,7 +38086,7 @@ public class LeptonicaTest {
 //    public void testPixScaleToGray6() {
 //        System.out.println("pixScaleToGray6");
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixScaleToGray6(pixs);
 //        assertEquals(expResult, result);
@@ -38099,7 +38101,7 @@ public class LeptonicaTest {
 //    public void testPixScaleToGray8() {
 //        System.out.println("pixScaleToGray8");
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixScaleToGray8(pixs);
 //        assertEquals(expResult, result);
@@ -38114,7 +38116,7 @@ public class LeptonicaTest {
 //    public void testPixScaleToGray16() {
 //        System.out.println("pixScaleToGray16");
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixScaleToGray16(pixs);
 //        assertEquals(expResult, result);
@@ -38130,7 +38132,7 @@ public class LeptonicaTest {
 //        System.out.println("pixScaleToGrayMipmap");
 //        Pix pixs = null;
 //        float scalefactor = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixScaleToGrayMipmap(pixs, scalefactor);
 //        assertEquals(expResult, result);
@@ -38147,7 +38149,7 @@ public class LeptonicaTest {
 //        Pix pixs1 = null;
 //        Pix pixs2 = null;
 //        float scale = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixScaleMipmap(pixs1, pixs2, scale);
 //        assertEquals(expResult, result);
@@ -38163,7 +38165,7 @@ public class LeptonicaTest {
 //        System.out.println("pixExpandReplicate");
 //        Pix pixs = null;
 //        int factor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixExpandReplicate(pixs, factor);
 //        assertEquals(expResult, result);
@@ -38179,7 +38181,7 @@ public class LeptonicaTest {
 //        System.out.println("pixScaleGray2xLIThresh");
 //        Pix pixs = null;
 //        int thresh = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixScaleGray2xLIThresh(pixs, thresh);
 //        assertEquals(expResult, result);
@@ -38194,7 +38196,7 @@ public class LeptonicaTest {
 //    public void testPixScaleGray2xLIDither() {
 //        System.out.println("pixScaleGray2xLIDither");
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixScaleGray2xLIDither(pixs);
 //        assertEquals(expResult, result);
@@ -38210,7 +38212,7 @@ public class LeptonicaTest {
 //        System.out.println("pixScaleGray4xLIThresh");
 //        Pix pixs = null;
 //        int thresh = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixScaleGray4xLIThresh(pixs, thresh);
 //        assertEquals(expResult, result);
@@ -38225,7 +38227,7 @@ public class LeptonicaTest {
 //    public void testPixScaleGray4xLIDither() {
 //        System.out.println("pixScaleGray4xLIDither");
 //        Pix pixs = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixScaleGray4xLIDither(pixs);
 //        assertEquals(expResult, result);
@@ -38243,7 +38245,7 @@ public class LeptonicaTest {
 //        int xfact = 0;
 //        int yfact = 0;
 //        int type = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixScaleGrayMinMax(pixs, xfact, yfact, type);
 //        assertEquals(expResult, result);
@@ -38259,7 +38261,7 @@ public class LeptonicaTest {
 //        System.out.println("pixScaleGrayMinMax2");
 //        Pix pixs = null;
 //        int type = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixScaleGrayMinMax2(pixs, type);
 //        assertEquals(expResult, result);
@@ -38278,7 +38280,7 @@ public class LeptonicaTest {
 //        int level2 = 0;
 //        int level3 = 0;
 //        int level4 = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixScaleGrayRankCascade(pixs, level1, level2, level3, level4);
 //        assertEquals(expResult, result);
@@ -38294,7 +38296,7 @@ public class LeptonicaTest {
 //        System.out.println("pixScaleGrayRank2");
 //        Pix pixs = null;
 //        int rank = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixScaleGrayRank2(pixs, rank);
 //        assertEquals(expResult, result);
@@ -38312,7 +38314,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        float scalex = 0.0F;
 //        float scaley = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixScaleAndTransferAlpha(pixd, pixs, scalex, scaley);
 //        assertEquals(expResult, result);
@@ -38331,7 +38333,7 @@ public class LeptonicaTest {
 //        float scaley = 0.0F;
 //        Pix pixg = null;
 //        float fract = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixScaleWithAlpha(pixs, scalex, scaley, pixg, fract);
 //        assertEquals(expResult, result);
@@ -38353,7 +38355,7 @@ public class LeptonicaTest {
 //        int ws = 0;
 //        int hs = 0;
 //        int wpls = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.scaleColorLILow(datad, wd, hd, wpld, datas, ws, hs, wpls);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -38373,7 +38375,7 @@ public class LeptonicaTest {
 //        int ws = 0;
 //        int hs = 0;
 //        int wpls = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.scaleGrayLILow(datad, wd, hd, wpld, datas, ws, hs, wpls);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -38391,7 +38393,7 @@ public class LeptonicaTest {
 //        int ws = 0;
 //        int hs = 0;
 //        int wpls = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.scaleColor2xLILow(datad, wpld, datas, ws, hs, wpls);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -38409,7 +38411,7 @@ public class LeptonicaTest {
 //        int ws = 0;
 //        int wpls = 0;
 //        int lastlineflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.scaleColor2xLILineLow(lined, wpld, lines, ws, wpls, lastlineflag);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -38427,7 +38429,7 @@ public class LeptonicaTest {
 //        int ws = 0;
 //        int hs = 0;
 //        int wpls = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.scaleGray2xLILow(datad, wpld, datas, ws, hs, wpls);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -38445,7 +38447,7 @@ public class LeptonicaTest {
 //        int ws = 0;
 //        int wpls = 0;
 //        int lastlineflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.scaleGray2xLILineLow(lined, wpld, lines, ws, wpls, lastlineflag);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -38463,7 +38465,7 @@ public class LeptonicaTest {
 //        int ws = 0;
 //        int hs = 0;
 //        int wpls = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.scaleGray4xLILow(datad, wpld, datas, ws, hs, wpls);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -38481,7 +38483,7 @@ public class LeptonicaTest {
 //        int ws = 0;
 //        int wpls = 0;
 //        int lastlineflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.scaleGray4xLILineLow(lined, wpld, lines, ws, wpls, lastlineflag);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -38502,7 +38504,7 @@ public class LeptonicaTest {
 //        int hs = 0;
 //        int d = 0;
 //        int wpls = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.scaleBySamplingLow(datad, wd, hd, wpld, datas, ws, hs, d, wpls);
 //        assertEquals(expResult, result);
@@ -38526,7 +38528,7 @@ public class LeptonicaTest {
 //        int d = 0;
 //        int wpls = 0;
 //        int size = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.scaleSmoothLow(datad, wd, hd, wpld, datas, ws, hs, d, wpls, size);
 //        assertEquals(expResult, result);
@@ -38549,7 +38551,7 @@ public class LeptonicaTest {
 //        float rwt = 0.0F;
 //        float gwt = 0.0F;
 //        float bwt = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.scaleRGBToGray2Low(datad, wd, hd, wpld, datas, wpls, rwt, gwt, bwt);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -38569,7 +38571,7 @@ public class LeptonicaTest {
 //        int ws = 0;
 //        int hs = 0;
 //        int wpls = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.scaleColorAreaMapLow(datad, wd, hd, wpld, datas, ws, hs, wpls);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -38589,7 +38591,7 @@ public class LeptonicaTest {
 //        int ws = 0;
 //        int hs = 0;
 //        int wpls = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.scaleGrayAreaMapLow(datad, wd, hd, wpld, datas, ws, hs, wpls);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -38608,7 +38610,7 @@ public class LeptonicaTest {
 //        IntBuffer datas = null;
 //        int d = 0;
 //        int wpls = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.scaleAreaMapLow2(datad, wd, hd, wpld, datas, d, wpls);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -38628,7 +38630,7 @@ public class LeptonicaTest {
 //        int ws = 0;
 //        int hs = 0;
 //        int wpls = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.scaleBinaryLow(datad, wd, hd, wpld, datas, ws, hs, wpls);
 //        assertEquals(expResult, result);
@@ -38650,7 +38652,7 @@ public class LeptonicaTest {
 //        int wpls = 0;
 //        IntBuffer sumtab = null;
 //        ByteBuffer valtab = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.scaleToGray2Low(datad, wd, hd, wpld, datas, wpls, sumtab, valtab);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -38662,7 +38664,7 @@ public class LeptonicaTest {
 //    @Test
 //    public void testMakeSumTabSG2() {
 //        System.out.println("makeSumTabSG2");
-//        Leptonica instance = new LeptonicaImpl();
+
 //        IntByReference expResult = null;
 //        IntByReference result = instance.makeSumTabSG2();
 //        assertEquals(expResult, result);
@@ -38676,7 +38678,7 @@ public class LeptonicaTest {
 //    @Test
 //    public void testMakeValTabSG2() {
 //        System.out.println("makeValTabSG2");
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.makeValTabSG2();
 //        assertEquals(expResult, result);
@@ -38698,7 +38700,7 @@ public class LeptonicaTest {
 //        int wpls = 0;
 //        IntBuffer sumtab = null;
 //        ByteBuffer valtab = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.scaleToGray3Low(datad, wd, hd, wpld, datas, wpls, sumtab, valtab);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -38710,7 +38712,7 @@ public class LeptonicaTest {
 //    @Test
 //    public void testMakeSumTabSG3() {
 //        System.out.println("makeSumTabSG3");
-//        Leptonica instance = new LeptonicaImpl();
+
 //        IntByReference expResult = null;
 //        IntByReference result = instance.makeSumTabSG3();
 //        assertEquals(expResult, result);
@@ -38724,7 +38726,7 @@ public class LeptonicaTest {
 //    @Test
 //    public void testMakeValTabSG3() {
 //        System.out.println("makeValTabSG3");
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.makeValTabSG3();
 //        assertEquals(expResult, result);
@@ -38746,7 +38748,7 @@ public class LeptonicaTest {
 //        int wpls = 0;
 //        IntBuffer sumtab = null;
 //        ByteBuffer valtab = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.scaleToGray4Low(datad, wd, hd, wpld, datas, wpls, sumtab, valtab);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -38758,7 +38760,7 @@ public class LeptonicaTest {
 //    @Test
 //    public void testMakeSumTabSG4() {
 //        System.out.println("makeSumTabSG4");
-//        Leptonica instance = new LeptonicaImpl();
+
 //        IntByReference expResult = null;
 //        IntByReference result = instance.makeSumTabSG4();
 //        assertEquals(expResult, result);
@@ -38772,7 +38774,7 @@ public class LeptonicaTest {
 //    @Test
 //    public void testMakeValTabSG4() {
 //        System.out.println("makeValTabSG4");
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.makeValTabSG4();
 //        assertEquals(expResult, result);
@@ -38794,7 +38796,7 @@ public class LeptonicaTest {
 //        int wpls = 0;
 //        IntBuffer tab8 = null;
 //        ByteBuffer valtab = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.scaleToGray6Low(datad, wd, hd, wpld, datas, wpls, tab8, valtab);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -38806,7 +38808,7 @@ public class LeptonicaTest {
 //    @Test
 //    public void testMakeValTabSG6() {
 //        System.out.println("makeValTabSG6");
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.makeValTabSG6();
 //        assertEquals(expResult, result);
@@ -38828,7 +38830,7 @@ public class LeptonicaTest {
 //        int wpls = 0;
 //        IntBuffer tab8 = null;
 //        ByteBuffer valtab = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.scaleToGray8Low(datad, wd, hd, wpld, datas, wpls, tab8, valtab);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -38840,7 +38842,7 @@ public class LeptonicaTest {
 //    @Test
 //    public void testMakeValTabSG8() {
 //        System.out.println("makeValTabSG8");
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.makeValTabSG8();
 //        assertEquals(expResult, result);
@@ -38861,7 +38863,7 @@ public class LeptonicaTest {
 //        IntBuffer datas = null;
 //        int wpls = 0;
 //        IntBuffer tab8 = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.scaleToGray16Low(datad, wd, hd, wpld, datas, wpls, tab8);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -38882,7 +38884,7 @@ public class LeptonicaTest {
 //        IntBuffer datas2 = null;
 //        int wpls2 = 0;
 //        float red = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.scaleMipmapLow(datad, wd, hd, wpld, datas1, wpls1, datas2, wpls2, red);
 //        assertEquals(expResult, result);
@@ -38900,7 +38902,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        Pix pixm = null;
 //        int connectivity = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixSeedfillBinary(pixd, pixs, pixm, connectivity);
 //        assertEquals(expResult, result);
@@ -38920,7 +38922,7 @@ public class LeptonicaTest {
 //        int connectivity = 0;
 //        int xmax = 0;
 //        int ymax = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixSeedfillBinaryRestricted(pixd, pixs, pixm, connectivity, xmax, ymax);
 //        assertEquals(expResult, result);
@@ -38936,7 +38938,7 @@ public class LeptonicaTest {
 //        System.out.println("pixHolesByFilling");
 //        Pix pixs = null;
 //        int connectivity = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixHolesByFilling(pixs, connectivity);
 //        assertEquals(expResult, result);
@@ -38952,7 +38954,7 @@ public class LeptonicaTest {
 //        System.out.println("pixFillClosedBorders");
 //        Pix pixs = null;
 //        int connectivity = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixFillClosedBorders(pixs, connectivity);
 //        assertEquals(expResult, result);
@@ -38968,7 +38970,7 @@ public class LeptonicaTest {
 //        System.out.println("pixExtractBorderConnComps");
 //        Pix pixs = null;
 //        int connectivity = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixExtractBorderConnComps(pixs, connectivity);
 //        assertEquals(expResult, result);
@@ -38984,7 +38986,7 @@ public class LeptonicaTest {
 //        System.out.println("pixRemoveBorderConnComps");
 //        Pix pixs = null;
 //        int connectivity = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixRemoveBorderConnComps(pixs, connectivity);
 //        assertEquals(expResult, result);
@@ -39000,7 +39002,7 @@ public class LeptonicaTest {
 //        System.out.println("pixFillBgFromBorder");
 //        Pix pixs = null;
 //        int connectivity = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixFillBgFromBorder(pixs, connectivity);
 //        assertEquals(expResult, result);
@@ -39018,7 +39020,7 @@ public class LeptonicaTest {
 //        int minsize = 0;
 //        float maxhfract = 0.0F;
 //        float minfgfract = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixFillHolesToBoundingRect(pixs, minsize, maxhfract, minfgfract);
 //        assertEquals(expResult, result);
@@ -39035,7 +39037,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        Pix pixm = null;
 //        int connectivity = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixSeedfillGray(pixs, pixm, connectivity);
 //        assertEquals(expResult, result);
@@ -39052,7 +39054,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        Pix pixm = null;
 //        int connectivity = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixSeedfillGrayInv(pixs, pixm, connectivity);
 //        assertEquals(expResult, result);
@@ -39069,7 +39071,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        Pix pixm = null;
 //        int connectivity = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixSeedfillGraySimple(pixs, pixm, connectivity);
 //        assertEquals(expResult, result);
@@ -39086,7 +39088,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        Pix pixm = null;
 //        int connectivity = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixSeedfillGrayInvSimple(pixs, pixm, connectivity);
 //        assertEquals(expResult, result);
@@ -39104,7 +39106,7 @@ public class LeptonicaTest {
 //        Pix pixm = null;
 //        int delta = 0;
 //        int connectivity = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixSeedfillGrayBasin(pixb, pixm, delta, connectivity);
 //        assertEquals(expResult, result);
@@ -39122,7 +39124,7 @@ public class LeptonicaTest {
 //        int connectivity = 0;
 //        int outdepth = 0;
 //        int boundcond = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixDistanceFunction(pixs, connectivity, outdepth, boundcond);
 //        assertEquals(expResult, result);
@@ -39138,7 +39140,7 @@ public class LeptonicaTest {
 //        System.out.println("pixSeedspread");
 //        Pix pixs = null;
 //        int connectivity = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixSeedspread(pixs, connectivity);
 //        assertEquals(expResult, result);
@@ -39157,7 +39159,7 @@ public class LeptonicaTest {
 //        int minmax = 0;
 //        Pix.ByReference[] ppixmin = null;
 //        Pix.ByReference[] ppixmax = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixLocalExtrema(pixs, maxmin, minmax, ppixmin, ppixmax);
 //        assertEquals(expResult, result);
@@ -39175,7 +39177,7 @@ public class LeptonicaTest {
 //        int mindist = 0;
 //        Pix.ByReference[] ppixmin = null;
 //        Pix.ByReference[] ppixmax = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixSelectedLocalExtrema(pixs, mindist, ppixmin, ppixmax);
 //        assertEquals(expResult, result);
@@ -39191,7 +39193,7 @@ public class LeptonicaTest {
 //        System.out.println("pixFindEqualValues");
 //        Pix pixs1 = null;
 //        Pix pixs2 = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixFindEqualValues(pixs1, pixs2);
 //        assertEquals(expResult, result);
@@ -39209,7 +39211,7 @@ public class LeptonicaTest {
 //        Pix pixm = null;
 //        Pta.ByReference[] ppta = null;
 //        Numa.ByReference[] pnav = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixSelectMinInConnComp(pixs, pixm, ppta, pnav);
 //        assertEquals(expResult, result);
@@ -39228,7 +39230,7 @@ public class LeptonicaTest {
 //        Pix pixm = null;
 //        int connectivity = 0;
 //        int bordersize = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixRemoveSeededComponents(pixd, pixs, pixm, connectivity, bordersize);
 //        assertEquals(expResult, result);
@@ -39249,7 +39251,7 @@ public class LeptonicaTest {
 //        int hm = 0;
 //        int wplm = 0;
 //        int connectivity = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.seedfillBinaryLow(datas, hs, wpls, datam, hm, wplm, connectivity);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -39268,7 +39270,7 @@ public class LeptonicaTest {
 //        IntBuffer datam = null;
 //        int wplm = 0;
 //        int connectivity = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.seedfillGrayLow(datas, w, h, wpls, datam, wplm, connectivity);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -39287,7 +39289,7 @@ public class LeptonicaTest {
 //        IntBuffer datam = null;
 //        int wplm = 0;
 //        int connectivity = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.seedfillGrayInvLow(datas, w, h, wpls, datam, wplm, connectivity);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -39306,7 +39308,7 @@ public class LeptonicaTest {
 //        IntBuffer datam = null;
 //        int wplm = 0;
 //        int connectivity = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.seedfillGrayLowSimple(datas, w, h, wpls, datam, wplm, connectivity);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -39325,7 +39327,7 @@ public class LeptonicaTest {
 //        IntBuffer datam = null;
 //        int wplm = 0;
 //        int connectivity = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.seedfillGrayInvLowSimple(datas, w, h, wpls, datam, wplm, connectivity);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -39343,7 +39345,7 @@ public class LeptonicaTest {
 //        int d = 0;
 //        int wpld = 0;
 //        int connectivity = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.distanceFunctionLow(datad, w, h, d, wpld, connectivity);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -39362,7 +39364,7 @@ public class LeptonicaTest {
 //        IntBuffer datat = null;
 //        int wplt = 0;
 //        int connectivity = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.seedspreadLow(datad, w, h, wpld, datat, wplt, connectivity);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -39375,7 +39377,7 @@ public class LeptonicaTest {
 //    public void testSelaCreate() {
 //        System.out.println("selaCreate");
 //        int n = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Sela expResult = null;
 //        Sela result = instance.selaCreate(n);
 //        assertEquals(expResult, result);
@@ -39390,7 +39392,7 @@ public class LeptonicaTest {
 //    public void testSelaDestroy() {
 //        System.out.println("selaDestroy");
 //        Sela.ByReference[] psela = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.selaDestroy(psela);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -39405,7 +39407,7 @@ public class LeptonicaTest {
 //        int height = 0;
 //        int width = 0;
 //        String name = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Selector expResult = null;
 //        Selector result = instance.selCreate(height, width, name);
 //        assertEquals(expResult, result);
@@ -39420,7 +39422,7 @@ public class LeptonicaTest {
 //    public void testSelDestroy() {
 //        System.out.println("selDestroy");
 //        PointerByReference psel = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.selDestroy(psel);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -39433,7 +39435,7 @@ public class LeptonicaTest {
 //    public void testSelCopy() {
 //        System.out.println("selCopy");
 //        Pointer sel = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Selector expResult = null;
 //        Selector result = instance.selCopy(sel);
 //        assertEquals(expResult, result);
@@ -39452,7 +39454,7 @@ public class LeptonicaTest {
 //        int cy = 0;
 //        int cx = 0;
 //        int type = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Selector expResult = null;
 //        Selector result = instance.selCreateBrick(h, w, cy, cx, type);
 //        assertEquals(expResult, result);
@@ -39469,7 +39471,7 @@ public class LeptonicaTest {
 //        int factor1 = 0;
 //        int factor2 = 0;
 //        int direction = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Selector expResult = null;
 //        Selector result = instance.selCreateComb(factor1, factor2, direction);
 //        assertEquals(expResult, result);
@@ -39485,7 +39487,7 @@ public class LeptonicaTest {
 //        System.out.println("create2dIntArray");
 //        int sy = 0;
 //        int sx = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        PointerByReference expResult = null;
 //        PointerByReference result = instance.create2dIntArray(sy, sx);
 //        assertEquals(expResult, result);
@@ -39503,7 +39505,7 @@ public class LeptonicaTest {
 //        Pointer sel = null;
 //        String selname = "";
 //        int copyflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.selaAddSel(sela, sel, selname, copyflag);
 //        assertEquals(expResult, result);
@@ -39518,7 +39520,7 @@ public class LeptonicaTest {
 //    public void testSelaGetCount() {
 //        System.out.println("selaGetCount");
 //        Sela sela = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.selaGetCount(sela);
 //        assertEquals(expResult, result);
@@ -39534,7 +39536,7 @@ public class LeptonicaTest {
 //        System.out.println("selaGetSel");
 //        Sela sela = null;
 //        int i = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Selector expResult = null;
 //        Selector result = instance.selaGetSel(sela, i);
 //        assertEquals(expResult, result);
@@ -39549,7 +39551,7 @@ public class LeptonicaTest {
 //    public void testSelGetName() {
 //        System.out.println("selGetName");
 //        Pointer sel = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.selGetName(sel);
 //        assertEquals(expResult, result);
@@ -39565,7 +39567,7 @@ public class LeptonicaTest {
 //        System.out.println("selSetName");
 //        Pointer sel = null;
 //        String name = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.selSetName(sel, name);
 //        assertEquals(expResult, result);
@@ -39583,7 +39585,7 @@ public class LeptonicaTest {
 //        String name = "";
 //        IntBuffer pindex = null;
 //        PointerByReference psel = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.selaFindSelByName(sela, name, pindex, psel);
 //        assertEquals(expResult, result);
@@ -39601,7 +39603,7 @@ public class LeptonicaTest {
 //        int row = 0;
 //        int col = 0;
 //        IntBuffer ptype = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.selGetElement(sel, row, col, ptype);
 //        assertEquals(expResult, result);
@@ -39619,7 +39621,7 @@ public class LeptonicaTest {
 //        int row = 0;
 //        int col = 0;
 //        int type = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.selSetElement(sel, row, col, type);
 //        assertEquals(expResult, result);
@@ -39638,7 +39640,7 @@ public class LeptonicaTest {
 //        IntBuffer psx = null;
 //        IntBuffer pcy = null;
 //        IntBuffer pcx = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.selGetParameters(sel, psy, psx, pcy, pcx);
 //        assertEquals(expResult, result);
@@ -39655,7 +39657,7 @@ public class LeptonicaTest {
 //        Pointer sel = null;
 //        int cy = 0;
 //        int cx = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.selSetOrigin(sel, cy, cx);
 //        assertEquals(expResult, result);
@@ -39671,7 +39673,7 @@ public class LeptonicaTest {
 //        System.out.println("selGetTypeAtOrigin");
 //        Pointer sel = null;
 //        IntBuffer ptype = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.selGetTypeAtOrigin(sel, ptype);
 //        assertEquals(expResult, result);
@@ -39688,7 +39690,7 @@ public class LeptonicaTest {
 //        Sela sela = null;
 //        int hsize = 0;
 //        int vsize = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.selaGetBrickName(sela, hsize, vsize);
 //        assertEquals(expResult, result);
@@ -39705,7 +39707,7 @@ public class LeptonicaTest {
 //        Sela sela = null;
 //        int size = 0;
 //        int direction = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.selaGetCombName(sela, size, direction);
 //        assertEquals(expResult, result);
@@ -39726,7 +39728,7 @@ public class LeptonicaTest {
 //        PointerByReference pnameh2 = null;
 //        PointerByReference pnamev1 = null;
 //        PointerByReference pnamev2 = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.getCompositeParameters(size, psize1, psize2, pnameh1, pnameh2, pnamev1, pnamev2);
 //        assertEquals(expResult, result);
@@ -39741,7 +39743,7 @@ public class LeptonicaTest {
 //    public void testSelaGetSelnames() {
 //        System.out.println("selaGetSelnames");
 //        Sela sela = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Sarray expResult = null;
 //        Sarray result = instance.selaGetSelnames(sela);
 //        assertEquals(expResult, result);
@@ -39760,7 +39762,7 @@ public class LeptonicaTest {
 //        IntBuffer pyp = null;
 //        IntBuffer pxn = null;
 //        IntBuffer pyn = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.selFindMaxTranslations(sel, pxp, pyp, pxn, pyn);
 //        assertEquals(expResult, result);
@@ -39776,7 +39778,7 @@ public class LeptonicaTest {
 //        System.out.println("selRotateOrth");
 //        Pointer sel = null;
 //        int quads = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Selector expResult = null;
 //        Selector result = instance.selRotateOrth(sel, quads);
 //        assertEquals(expResult, result);
@@ -39791,7 +39793,7 @@ public class LeptonicaTest {
 //    public void testSelaRead() {
 //        System.out.println("selaRead");
 //        String fname = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Sela expResult = null;
 //        Sela result = instance.selaRead(fname);
 //        assertEquals(expResult, result);
@@ -39806,7 +39808,7 @@ public class LeptonicaTest {
 //    public void testSelaReadStream() {
 //        System.out.println("selaReadStream");
 //        PointerByReference fp = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Sela expResult = null;
 //        Sela result = instance.selaReadStream(fp);
 //        assertEquals(expResult, result);
@@ -39821,7 +39823,7 @@ public class LeptonicaTest {
 //    public void testSelRead() {
 //        System.out.println("selRead");
 //        String fname = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Selector expResult = null;
 //        Selector result = instance.selRead(fname);
 //        assertEquals(expResult, result);
@@ -39836,7 +39838,7 @@ public class LeptonicaTest {
 //    public void testSelReadStream() {
 //        System.out.println("selReadStream");
 //        PointerByReference fp = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Selector expResult = null;
 //        Selector result = instance.selReadStream(fp);
 //        assertEquals(expResult, result);
@@ -39852,7 +39854,7 @@ public class LeptonicaTest {
 //        System.out.println("selaWrite");
 //        String fname = "";
 //        Sela sela = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.selaWrite(fname, sela);
 //        assertEquals(expResult, result);
@@ -39868,7 +39870,7 @@ public class LeptonicaTest {
 //        System.out.println("selaWriteStream");
 //        PointerByReference fp = null;
 //        Sela sela = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.selaWriteStream(fp, sela);
 //        assertEquals(expResult, result);
@@ -39884,7 +39886,7 @@ public class LeptonicaTest {
 //        System.out.println("selWrite");
 //        String fname = "";
 //        Pointer sel = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.selWrite(fname, sel);
 //        assertEquals(expResult, result);
@@ -39900,7 +39902,7 @@ public class LeptonicaTest {
 //        System.out.println("selWriteStream");
 //        PointerByReference fp = null;
 //        Pointer sel = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.selWriteStream(fp, sel);
 //        assertEquals(expResult, result);
@@ -39918,7 +39920,7 @@ public class LeptonicaTest {
 //        int h = 0;
 //        int w = 0;
 //        String name = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Selector expResult = null;
 //        Selector result = instance.selCreateFromString(text, h, w, name);
 //        assertEquals(expResult, result);
@@ -39933,7 +39935,7 @@ public class LeptonicaTest {
 //    public void testSelPrintToString() {
 //        System.out.println("selPrintToString");
 //        Pointer sel = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.selPrintToString(sel);
 //        assertEquals(expResult, result);
@@ -39948,7 +39950,7 @@ public class LeptonicaTest {
 //    public void testSelaCreateFromFile() {
 //        System.out.println("selaCreateFromFile");
 //        String filename = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Sela expResult = null;
 //        Sela result = instance.selaCreateFromFile(filename);
 //        assertEquals(expResult, result);
@@ -39966,7 +39968,7 @@ public class LeptonicaTest {
 //        int cy = 0;
 //        int cx = 0;
 //        String name = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Selector expResult = null;
 //        Selector result = instance.selCreateFromPta(pta, cy, cx, name);
 //        assertEquals(expResult, result);
@@ -39984,7 +39986,7 @@ public class LeptonicaTest {
 //        int cy = 0;
 //        int cx = 0;
 //        String name = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Selector expResult = null;
 //        Selector result = instance.selCreateFromPix(pix, cy, cx, name);
 //        assertEquals(expResult, result);
@@ -39999,7 +40001,7 @@ public class LeptonicaTest {
 //    public void testSelReadFromColorImage() {
 //        System.out.println("selReadFromColorImage");
 //        String pathname = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Selector expResult = null;
 //        Selector result = instance.selReadFromColorImage(pathname);
 //        assertEquals(expResult, result);
@@ -40015,7 +40017,7 @@ public class LeptonicaTest {
 //        System.out.println("selCreateFromColorPix");
 //        Pix pixs = null;
 //        ByteBuffer selname = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Selector expResult = null;
 //        Selector result = instance.selCreateFromColorPix(pixs, selname);
 //        assertEquals(expResult, result);
@@ -40032,7 +40034,7 @@ public class LeptonicaTest {
 //        Pointer sel = null;
 //        int size = 0;
 //        int gthick = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.selDisplayInPix(sel, size, gthick);
 //        assertEquals(expResult, result);
@@ -40051,7 +40053,7 @@ public class LeptonicaTest {
 //        int gthick = 0;
 //        int spacing = 0;
 //        int ncols = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.selaDisplayInPix(sela, size, gthick, spacing, ncols);
 //        assertEquals(expResult, result);
@@ -40066,7 +40068,7 @@ public class LeptonicaTest {
 //    public void testSelaAddBasic() {
 //        System.out.println("selaAddBasic");
 //        Sela sela = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Sela expResult = null;
 //        Sela result = instance.selaAddBasic(sela);
 //        assertEquals(expResult, result);
@@ -40081,7 +40083,7 @@ public class LeptonicaTest {
 //    public void testSelaAddHitMiss() {
 //        System.out.println("selaAddHitMiss");
 //        Sela sela = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Sela expResult = null;
 //        Sela result = instance.selaAddHitMiss(sela);
 //        assertEquals(expResult, result);
@@ -40096,7 +40098,7 @@ public class LeptonicaTest {
 //    public void testSelaAddDwaLinear() {
 //        System.out.println("selaAddDwaLinear");
 //        Sela sela = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Sela expResult = null;
 //        Sela result = instance.selaAddDwaLinear(sela);
 //        assertEquals(expResult, result);
@@ -40111,7 +40113,7 @@ public class LeptonicaTest {
 //    public void testSelaAddDwaCombs() {
 //        System.out.println("selaAddDwaCombs");
 //        Sela sela = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Sela expResult = null;
 //        Sela result = instance.selaAddDwaCombs(sela);
 //        assertEquals(expResult, result);
@@ -40130,7 +40132,7 @@ public class LeptonicaTest {
 //        float mdist = 0.0F;
 //        int norient = 0;
 //        int debugflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Sela expResult = null;
 //        Sela result = instance.selaAddCrossJunctions(sela, hlsize, mdist, norient, debugflag);
 //        assertEquals(expResult, result);
@@ -40149,7 +40151,7 @@ public class LeptonicaTest {
 //        float mdist = 0.0F;
 //        int norient = 0;
 //        int debugflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Sela expResult = null;
 //        Sela result = instance.selaAddTJunctions(sela, hlsize, mdist, norient, debugflag);
 //        assertEquals(expResult, result);
@@ -40173,7 +40175,7 @@ public class LeptonicaTest {
 //        int leftpix = 0;
 //        int rightpix = 0;
 //        Pix.ByReference[] ppixe = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Selector expResult = null;
 //        Selector result = instance.pixGenerateSelWithRuns(pixs, nhlines, nvlines, distance, minlength, toppix, botpix, leftpix, rightpix, ppixe);
 //        assertEquals(expResult, result);
@@ -40196,7 +40198,7 @@ public class LeptonicaTest {
 //        int leftpix = 0;
 //        int rightpix = 0;
 //        Pix.ByReference[] ppixe = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Selector expResult = null;
 //        Selector result = instance.pixGenerateSelRandom(pixs, hitfract, missfract, distance, toppix, botpix, leftpix, rightpix, ppixe);
 //        assertEquals(expResult, result);
@@ -40220,7 +40222,7 @@ public class LeptonicaTest {
 //        int leftflag = 0;
 //        int rightflag = 0;
 //        Pix.ByReference[] ppixe = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Selector expResult = null;
 //        Selector result = instance.pixGenerateSelBoundary(pixs, hitdist, missdist, hitskip, missskip, topflag, botflag, leftflag, rightflag, ppixe);
 //        assertEquals(expResult, result);
@@ -40238,7 +40240,7 @@ public class LeptonicaTest {
 //        int x = 0;
 //        int y = 0;
 //        int minlength = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.pixGetRunCentersOnLine(pixs, x, y, minlength);
 //        assertEquals(expResult, result);
@@ -40257,7 +40259,7 @@ public class LeptonicaTest {
 //        int y1 = 0;
 //        int x2 = 0;
 //        int y2 = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.pixGetRunsOnLine(pixs, x1, y1, x2, y2);
 //        assertEquals(expResult, result);
@@ -40273,7 +40275,7 @@ public class LeptonicaTest {
 //        System.out.println("pixSubsampleBoundaryPixels");
 //        Pix pixs = null;
 //        int skip = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pta expResult = null;
 //        Pta result = instance.pixSubsampleBoundaryPixels(pixs, skip);
 //        assertEquals(expResult, result);
@@ -40292,7 +40294,7 @@ public class LeptonicaTest {
 //        int y = 0;
 //        IntBuffer pxa = null;
 //        IntBuffer pya = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.adjacentOnPixelInRaster(pixs, x, y, pxa, pya);
 //        assertEquals(expResult, result);
@@ -40311,7 +40313,7 @@ public class LeptonicaTest {
 //        int scalefactor = 0;
 //        int hitcolor = 0;
 //        int misscolor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixDisplayHitMissSel(pixs, sel, scalefactor, hitcolor, misscolor);
 //        assertEquals(expResult, result);
@@ -40330,7 +40332,7 @@ public class LeptonicaTest {
 //        int yloc = 0;
 //        float radang = 0.0F;
 //        int incolor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixHShear(pixd, pixs, yloc, radang, incolor);
 //        assertEquals(expResult, result);
@@ -40349,7 +40351,7 @@ public class LeptonicaTest {
 //        int xloc = 0;
 //        float radang = 0.0F;
 //        int incolor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixVShear(pixd, pixs, xloc, radang, incolor);
 //        assertEquals(expResult, result);
@@ -40367,7 +40369,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        float radang = 0.0F;
 //        int incolor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixHShearCorner(pixd, pixs, radang, incolor);
 //        assertEquals(expResult, result);
@@ -40385,7 +40387,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        float radang = 0.0F;
 //        int incolor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixVShearCorner(pixd, pixs, radang, incolor);
 //        assertEquals(expResult, result);
@@ -40403,7 +40405,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        float radang = 0.0F;
 //        int incolor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixHShearCenter(pixd, pixs, radang, incolor);
 //        assertEquals(expResult, result);
@@ -40421,7 +40423,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        float radang = 0.0F;
 //        int incolor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixVShearCenter(pixd, pixs, radang, incolor);
 //        assertEquals(expResult, result);
@@ -40439,7 +40441,7 @@ public class LeptonicaTest {
 //        int yloc = 0;
 //        float radang = 0.0F;
 //        int incolor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixHShearIP(pixs, yloc, radang, incolor);
 //        assertEquals(expResult, result);
@@ -40457,7 +40459,7 @@ public class LeptonicaTest {
 //        int xloc = 0;
 //        float radang = 0.0F;
 //        int incolor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixVShearIP(pixs, xloc, radang, incolor);
 //        assertEquals(expResult, result);
@@ -40475,7 +40477,7 @@ public class LeptonicaTest {
 //        int yloc = 0;
 //        float radang = 0.0F;
 //        int incolor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixHShearLI(pixs, yloc, radang, incolor);
 //        assertEquals(expResult, result);
@@ -40493,7 +40495,7 @@ public class LeptonicaTest {
 //        int xloc = 0;
 //        float radang = 0.0F;
 //        int incolor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixVShearLI(pixs, xloc, radang, incolor);
 //        assertEquals(expResult, result);
@@ -40509,7 +40511,6 @@ public class LeptonicaTest {
 //        System.out.println("pixDeskew");
 //        Pix pix = null;
 //        int redsearch = 0;
-//        Leptonica instance = new LeptonicaImpl().getInstance();
 //        String filename = "eurotext_deskew.png";
 //        File image = new File(testResourcesPath, filename);
 //        pix = instance.pixRead(image.getPath());
@@ -40536,7 +40537,7 @@ public class LeptonicaTest {
 //        int redsearch = 0;
 //        FloatBuffer pangle = FloatBuffer.allocate(1);
 //        FloatBuffer pconf = FloatBuffer.allocate(1);
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixFindSkewAndDeskew(pixs, redsearch, pangle, pconf);
 //        assertEquals(expResult, result);
@@ -40558,7 +40559,7 @@ public class LeptonicaTest {
 //        int thresh = 0;
 //        FloatBuffer pangle = FloatBuffer.allocate(1);
 //        FloatBuffer pconf = FloatBuffer.allocate(1);
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixDeskewGeneral(pixs, redsweep, sweeprange, sweepdelta, redsearch, thresh, pangle, pconf);
 //        assertEquals(expResult, result);
@@ -40577,7 +40578,6 @@ public class LeptonicaTest {
         FloatBuffer pconf = FloatBuffer.allocate(1);
         String filename = "eurotext_deskew.png";
         File image = new File(testResourcesPath, filename);
-        Leptonica instance = new LeptonicaImpl().getInstance();
         pix = instance.pixRead(image.getPath());
         int expResult = 0;
         Pix pixb = instance.pixScaleRGBToBinaryFast(pix, 1, 1);
@@ -40612,7 +40612,7 @@ public class LeptonicaTest {
 //        int reduction = 0;
 //        float sweeprange = 0.0F;
 //        float sweepdelta = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixFindSkewSweep(pixs, pangle, reduction, sweeprange, sweepdelta);
 //        assertEquals(expResult, result);
@@ -40634,7 +40634,7 @@ public class LeptonicaTest {
 //        float sweeprange = 0.0F;
 //        float sweepdelta = 0.0F;
 //        float minbsdelta = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixFindSkewSweepAndSearch(pixs, pangle, pconf, redsweep, redsearch, sweeprange, sweepdelta, minbsdelta);
 //        assertEquals(expResult, result);
@@ -40658,7 +40658,7 @@ public class LeptonicaTest {
 //        float sweeprange = 0.0F;
 //        float sweepdelta = 0.0F;
 //        float minbsdelta = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixFindSkewSweepAndSearchScore(pixs, pangle, pconf, pendscore, redsweep, redsearch, sweepcenter, sweeprange, sweepdelta, minbsdelta);
 //        assertEquals(expResult, result);
@@ -40683,7 +40683,7 @@ public class LeptonicaTest {
 //        float sweepdelta = 0.0F;
 //        float minbsdelta = 0.0F;
 //        int pivot = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixFindSkewSweepAndSearchScorePivot(pixs, pangle, pconf, pendscore, redsweep, redsearch, sweepcenter, sweeprange, sweepdelta, minbsdelta, pivot);
 //        assertEquals(expResult, result);
@@ -40706,7 +40706,7 @@ public class LeptonicaTest {
 //        float sweepdelta = 0.0F;
 //        float minbsdelta = 0.0F;
 //        float confprior = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixFindSkewOrthogonalRange(pixs, pangle, pconf, redsweep, redsearch, sweeprange, sweepdelta, minbsdelta, confprior);
 //        assertEquals(expResult, result);
@@ -40722,7 +40722,7 @@ public class LeptonicaTest {
 //        System.out.println("pixFindDifferentialSquareSum");
 //        Pix pixs = null;
 //        FloatBuffer psum = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixFindDifferentialSquareSum(pixs, psum);
 //        assertEquals(expResult, result);
@@ -40740,7 +40740,7 @@ public class LeptonicaTest {
 //        FloatBuffer phratio = null;
 //        FloatBuffer pvratio = null;
 //        FloatBuffer pfract = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixFindNormalizedSquareSum(pixs, phratio, pvratio, pfract);
 //        assertEquals(expResult, result);
@@ -40755,7 +40755,7 @@ public class LeptonicaTest {
 //    public void testPixReadStreamSpix() {
 //        System.out.println("pixReadStreamSpix");
 //        PointerByReference fp = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixReadStreamSpix(fp);
 //        assertEquals(expResult, result);
@@ -40775,7 +40775,7 @@ public class LeptonicaTest {
 //        IntBuffer pbps = null;
 //        IntBuffer pspp = null;
 //        IntBuffer piscmap = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.readHeaderSpix(filename, pwidth, pheight, pbps, pspp, piscmap);
 //        assertEquals(expResult, result);
@@ -40795,7 +40795,7 @@ public class LeptonicaTest {
 //        IntBuffer pbps = null;
 //        IntBuffer pspp = null;
 //        IntBuffer piscmap = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.freadHeaderSpix(fp, pwidth, pheight, pbps, pspp, piscmap);
 //        assertEquals(expResult, result);
@@ -40815,7 +40815,7 @@ public class LeptonicaTest {
 //        IntByReference pbps = null;
 //        IntByReference pspp = null;
 //        IntByReference piscmap = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.freadHeaderSpix(fp, pwidth, pheight, pbps, pspp, piscmap);
 //        assertEquals(expResult, result);
@@ -40835,7 +40835,7 @@ public class LeptonicaTest {
 //        IntBuffer pbps = null;
 //        IntBuffer pspp = null;
 //        IntBuffer piscmap = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.sreadHeaderSpix(data, pwidth, pheight, pbps, pspp, piscmap);
 //        assertEquals(expResult, result);
@@ -40851,7 +40851,7 @@ public class LeptonicaTest {
 //        System.out.println("pixWriteStreamSpix");
 //        PointerByReference fp = null;
 //        Pix pix = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixWriteStreamSpix(fp, pix);
 //        assertEquals(expResult, result);
@@ -40867,7 +40867,7 @@ public class LeptonicaTest {
 //        System.out.println("pixReadMemSpix");
 //        ByteBuffer data = null;
 //        NativeSize size = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixReadMemSpix(data, size);
 //        assertEquals(expResult, result);
@@ -40884,7 +40884,7 @@ public class LeptonicaTest {
 //        PointerByReference pdata = null;
 //        NativeSizeByReference psize = null;
 //        Pix pix = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixWriteMemSpix(pdata, psize, pix);
 //        assertEquals(expResult, result);
@@ -40901,7 +40901,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        PointerByReference pdata = null;
 //        NativeSizeByReference pnbytes = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixSerializeToMemory(pixs, pdata, pnbytes);
 //        assertEquals(expResult, result);
@@ -40917,7 +40917,7 @@ public class LeptonicaTest {
 //        System.out.println("pixDeserializeFromMemory");
 //        IntBuffer data = null;
 //        NativeSize nbytes = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixDeserializeFromMemory(data, nbytes);
 //        assertEquals(expResult, result);
@@ -40932,7 +40932,7 @@ public class LeptonicaTest {
 //    public void testLstackCreate() {
 //        System.out.println("lstackCreate");
 //        int nalloc = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Stack expResult = null;
 //        L_Stack result = instance.lstackCreate(nalloc);
 //        assertEquals(expResult, result);
@@ -40948,7 +40948,7 @@ public class LeptonicaTest {
 //        System.out.println("lstackDestroy");
 //        L_Stack.ByReference[] plstack = null;
 //        int freeflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.lstackDestroy(plstack, freeflag);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -40962,7 +40962,7 @@ public class LeptonicaTest {
 //        System.out.println("lstackAdd");
 //        L_Stack lstack = null;
 //        Pointer item = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.lstackAdd(lstack, item);
 //        assertEquals(expResult, result);
@@ -40977,7 +40977,7 @@ public class LeptonicaTest {
 //    public void testLstackRemove() {
 //        System.out.println("lstackRemove");
 //        L_Stack lstack = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.lstackRemove(lstack);
 //        assertEquals(expResult, result);
@@ -40992,7 +40992,7 @@ public class LeptonicaTest {
 //    public void testLstackGetCount() {
 //        System.out.println("lstackGetCount");
 //        L_Stack lstack = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.lstackGetCount(lstack);
 //        assertEquals(expResult, result);
@@ -41008,7 +41008,7 @@ public class LeptonicaTest {
 //        System.out.println("lstackPrint");
 //        PointerByReference fp = null;
 //        L_Stack lstack = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.lstackPrint(fp, lstack);
 //        assertEquals(expResult, result);
@@ -41023,7 +41023,7 @@ public class LeptonicaTest {
 //    public void testSudokuReadFile() {
 //        System.out.println("sudokuReadFile");
 //        String filename = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        IntByReference expResult = null;
 //        IntByReference result = instance.sudokuReadFile(filename);
 //        assertEquals(expResult, result);
@@ -41038,7 +41038,7 @@ public class LeptonicaTest {
 //    public void testSudokuReadString() {
 //        System.out.println("sudokuReadString");
 //        String str = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        IntByReference expResult = null;
 //        IntByReference result = instance.sudokuReadString(str);
 //        assertEquals(expResult, result);
@@ -41053,7 +41053,7 @@ public class LeptonicaTest {
 //    public void testSudokuCreate() {
 //        System.out.println("sudokuCreate");
 //        IntBuffer array = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Sudoku expResult = null;
 //        L_Sudoku result = instance.sudokuCreate(array);
 //        assertEquals(expResult, result);
@@ -41068,7 +41068,7 @@ public class LeptonicaTest {
 //    public void testSudokuDestroy() {
 //        System.out.println("sudokuDestroy");
 //        L_Sudoku.ByReference[] psud = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.sudokuDestroy(psud);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -41081,7 +41081,7 @@ public class LeptonicaTest {
 //    public void testSudokuSolve() {
 //        System.out.println("sudokuSolve");
 //        L_Sudoku sud = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.sudokuSolve(sud);
 //        assertEquals(expResult, result);
@@ -41097,7 +41097,7 @@ public class LeptonicaTest {
 //        System.out.println("sudokuTestUniqueness");
 //        IntBuffer array = null;
 //        IntBuffer punique = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.sudokuTestUniqueness(array, punique);
 //        assertEquals(expResult, result);
@@ -41115,7 +41115,7 @@ public class LeptonicaTest {
 //        int seed = 0;
 //        int minelems = 0;
 //        int maxtries = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Sudoku expResult = null;
 //        L_Sudoku result = instance.sudokuGenerate(array, seed, minelems, maxtries);
 //        assertEquals(expResult, result);
@@ -41131,7 +41131,7 @@ public class LeptonicaTest {
 //        System.out.println("sudokuOutput");
 //        L_Sudoku sud = null;
 //        int arraytype = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.sudokuOutput(sud, arraytype);
 //        assertEquals(expResult, result);
@@ -41151,7 +41151,7 @@ public class LeptonicaTest {
 //        int val = 0;
 //        int location = 0;
 //        IntBuffer poverflow = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixAddSingleTextblock(pixs, bmf, textstr, val, location, poverflow);
 //        assertEquals(expResult, result);
@@ -41170,7 +41170,7 @@ public class LeptonicaTest {
 //        String textstr = "";
 //        int val = 0;
 //        int location = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixAddSingleTextline(pixs, bmf, textstr, val, location);
 //        assertEquals(expResult, result);
@@ -41193,7 +41193,7 @@ public class LeptonicaTest {
 //        int wtext = 0;
 //        int firstindent = 0;
 //        IntBuffer poverflow = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixSetTextblock(pixs, bmf, textstr, val, x0, y0, wtext, firstindent, poverflow);
 //        assertEquals(expResult, result);
@@ -41215,7 +41215,7 @@ public class LeptonicaTest {
 //        int y0 = 0;
 //        IntBuffer pwidth = null;
 //        IntBuffer poverflow = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixSetTextline(pixs, bmf, textstr, val, x0, y0, pwidth, poverflow);
 //        assertEquals(expResult, result);
@@ -41234,7 +41234,7 @@ public class LeptonicaTest {
 //        Numa na = null;
 //        int val = 0;
 //        int location = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pixa expResult = null;
 //        Pixa result = instance.pixaAddTextNumber(pixas, bmf, na, val, location);
 //        assertEquals(expResult, result);
@@ -41253,7 +41253,7 @@ public class LeptonicaTest {
 //        Sarray sa = null;
 //        int val = 0;
 //        int location = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pixa expResult = null;
 //        Pixa result = instance.pixaAddTextline(pixas, bmf, sa, val, location);
 //        assertEquals(expResult, result);
@@ -41272,7 +41272,7 @@ public class LeptonicaTest {
 //        int maxw = 0;
 //        int firstindent = 0;
 //        IntBuffer ph = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Sarray expResult = null;
 //        Sarray result = instance.bmfGetLineStrings(bmf, textstr, maxw, firstindent, ph);
 //        assertEquals(expResult, result);
@@ -41289,7 +41289,7 @@ public class LeptonicaTest {
 //        L_Bmf bmf = null;
 //        String textstr = "";
 //        Sarray sa = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Numa expResult = null;
 //        Numa result = instance.bmfGetWordWidths(bmf, textstr, sa);
 //        assertEquals(expResult, result);
@@ -41306,7 +41306,7 @@ public class LeptonicaTest {
 //        L_Bmf bmf = null;
 //        String textstr = "";
 //        IntBuffer pw = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.bmfGetStringWidth(bmf, textstr, pw);
 //        assertEquals(expResult, result);
@@ -41322,7 +41322,7 @@ public class LeptonicaTest {
 //        System.out.println("splitStringToParagraphs");
 //        ByteBuffer textstr = null;
 //        int splitflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Sarray expResult = null;
 //        Sarray result = instance.splitStringToParagraphs(textstr, splitflag);
 //        assertEquals(expResult, result);
@@ -41338,7 +41338,7 @@ public class LeptonicaTest {
 //        System.out.println("pixReadTiff");
 //        String filename = "";
 //        int n = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixReadTiff(filename, n);
 //        assertEquals(expResult, result);
@@ -41354,7 +41354,7 @@ public class LeptonicaTest {
 //        System.out.println("pixReadStreamTiff");
 //        PointerByReference fp = null;
 //        int n = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixReadStreamTiff(fp, n);
 //        assertEquals(expResult, result);
@@ -41372,7 +41372,7 @@ public class LeptonicaTest {
 //        Pix pix = null;
 //        int comptype = 0;
 //        String modestring = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixWriteTiff(filename, pix, comptype, modestring);
 //        assertEquals(expResult, result);
@@ -41394,7 +41394,7 @@ public class LeptonicaTest {
 //        Sarray savals = null;
 //        Sarray satypes = null;
 //        Numa nasizes = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixWriteTiffCustom(filename, pix, comptype, modestring, natags, savals, satypes, nasizes);
 //        assertEquals(expResult, result);
@@ -41411,7 +41411,7 @@ public class LeptonicaTest {
 //        PointerByReference fp = null;
 //        Pix pix = null;
 //        int comptype = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixWriteStreamTiff(fp, pix, comptype);
 //        assertEquals(expResult, result);
@@ -41426,7 +41426,7 @@ public class LeptonicaTest {
 //    public void testPixaReadMultipageTiff() {
 //        System.out.println("pixaReadMultipageTiff");
 //        String filename = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pixa expResult = null;
 //        Pixa result = instance.pixaReadMultipageTiff(filename);
 //        assertEquals(expResult, result);
@@ -41443,7 +41443,7 @@ public class LeptonicaTest {
 //        String dirin = "";
 //        String substr = "";
 //        String fileout = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.writeMultipageTiff(dirin, substr, fileout);
 //        assertEquals(expResult, result);
@@ -41459,7 +41459,7 @@ public class LeptonicaTest {
 //        System.out.println("writeMultipageTiffSA");
 //        Sarray sa = null;
 //        String fileout = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.writeMultipageTiffSA(sa, fileout);
 //        assertEquals(expResult, result);
@@ -41475,7 +41475,7 @@ public class LeptonicaTest {
 //        System.out.println("fprintTiffInfo");
 //        PointerByReference fpout = null;
 //        String tiffile = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.fprintTiffInfo(fpout, tiffile);
 //        assertEquals(expResult, result);
@@ -41491,7 +41491,7 @@ public class LeptonicaTest {
 //        System.out.println("fprintTiffInfo");
 //        PointerByReference fpout = null;
 //        Pointer tiffile = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.fprintTiffInfo(fpout, tiffile);
 //        assertEquals(expResult, result);
@@ -41507,7 +41507,7 @@ public class LeptonicaTest {
 //        System.out.println("tiffGetCount");
 //        PointerByReference fp = null;
 //        IntBuffer pn = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.tiffGetCount(fp, pn);
 //        assertEquals(expResult, result);
@@ -41523,7 +41523,7 @@ public class LeptonicaTest {
 //        System.out.println("tiffGetCount");
 //        PointerByReference fp = null;
 //        IntByReference pn = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.tiffGetCount(fp, pn);
 //        assertEquals(expResult, result);
@@ -41540,7 +41540,7 @@ public class LeptonicaTest {
 //        PointerByReference fp = null;
 //        IntBuffer pxres = null;
 //        IntBuffer pyres = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.getTiffResolution(fp, pxres, pyres);
 //        assertEquals(expResult, result);
@@ -41557,7 +41557,7 @@ public class LeptonicaTest {
 //        PointerByReference fp = null;
 //        IntByReference pxres = null;
 //        IntByReference pyres = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.getTiffResolution(fp, pxres, pyres);
 //        assertEquals(expResult, result);
@@ -41580,7 +41580,7 @@ public class LeptonicaTest {
 //        IntBuffer pres = null;
 //        IntBuffer pcmap = null;
 //        IntBuffer pformat = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.readHeaderTiff(filename, n, pwidth, pheight, pbps, pspp, pres, pcmap, pformat);
 //        assertEquals(expResult, result);
@@ -41603,7 +41603,7 @@ public class LeptonicaTest {
 //        IntBuffer pres = null;
 //        IntBuffer pcmap = null;
 //        IntBuffer pformat = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.freadHeaderTiff(fp, n, pwidth, pheight, pbps, pspp, pres, pcmap, pformat);
 //        assertEquals(expResult, result);
@@ -41626,7 +41626,7 @@ public class LeptonicaTest {
 //        IntByReference pres = null;
 //        IntByReference pcmap = null;
 //        IntByReference pformat = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.freadHeaderTiff(fp, n, pwidth, pheight, pbps, pspp, pres, pcmap, pformat);
 //        assertEquals(expResult, result);
@@ -41650,7 +41650,7 @@ public class LeptonicaTest {
 //        IntBuffer pres = null;
 //        IntBuffer pcmap = null;
 //        IntBuffer pformat = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.readHeaderMemTiff(cdata, size, n, pwidth, pheight, pbps, pspp, pres, pcmap, pformat);
 //        assertEquals(expResult, result);
@@ -41666,7 +41666,7 @@ public class LeptonicaTest {
 //        System.out.println("findTiffCompression");
 //        PointerByReference fp = null;
 //        IntBuffer pcomptype = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.findTiffCompression(fp, pcomptype);
 //        assertEquals(expResult, result);
@@ -41682,7 +41682,7 @@ public class LeptonicaTest {
 //        System.out.println("findTiffCompression");
 //        PointerByReference fp = null;
 //        IntByReference pcomptype = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.findTiffCompression(fp, pcomptype);
 //        assertEquals(expResult, result);
@@ -41702,7 +41702,7 @@ public class LeptonicaTest {
 //        IntBuffer pw = null;
 //        IntBuffer ph = null;
 //        IntBuffer pminisblack = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.extractG4DataFromFile(filein, pdata, pnbytes, pw, ph, pminisblack);
 //        assertEquals(expResult, result);
@@ -41719,7 +41719,7 @@ public class LeptonicaTest {
 //        ByteBuffer cdata = null;
 //        NativeSize size = null;
 //        int n = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixReadMemTiff(cdata, size, n);
 //        assertEquals(expResult, result);
@@ -41737,7 +41737,7 @@ public class LeptonicaTest {
 //        NativeSizeByReference psize = null;
 //        Pix pix = null;
 //        int comptype = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixWriteMemTiff(pdata, psize, pix, comptype);
 //        assertEquals(expResult, result);
@@ -41759,7 +41759,7 @@ public class LeptonicaTest {
 //        Sarray savals = null;
 //        Sarray satypes = null;
 //        Numa nasizes = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixWriteMemTiffCustom(pdata, psize, pix, comptype, natags, savals, satypes, nasizes);
 //        assertEquals(expResult, result);
@@ -41774,7 +41774,7 @@ public class LeptonicaTest {
 //    public void testSetMsgSeverity() {
 //        System.out.println("setMsgSeverity");
 //        int newsev = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.setMsgSeverity(newsev);
 //        assertEquals(expResult, result);
@@ -41791,7 +41791,7 @@ public class LeptonicaTest {
 //        String msg = "";
 //        String procname = "";
 //        int ival = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.returnErrorInt(msg, procname, ival);
 //        assertEquals(expResult, result);
@@ -41808,7 +41808,7 @@ public class LeptonicaTest {
 //        String msg = "";
 //        String procname = "";
 //        float fval = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        float expResult = 0.0F;
 //        float result = instance.returnErrorFloat(msg, procname, fval);
 //        assertEquals(expResult, result, 0.0);
@@ -41825,7 +41825,7 @@ public class LeptonicaTest {
 //        String msg = "";
 //        String procname = "";
 //        Pointer pval = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.returnErrorPtr(msg, procname, pval);
 //        assertEquals(expResult, result);
@@ -41840,7 +41840,7 @@ public class LeptonicaTest {
 //    public void testStringNew() {
 //        System.out.println("stringNew");
 //        String src = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.stringNew(src);
 //        assertEquals(expResult, result);
@@ -41857,7 +41857,7 @@ public class LeptonicaTest {
 //        ByteBuffer dest = null;
 //        String src = "";
 //        int n = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.stringCopy(dest, src, n);
 //        assertEquals(expResult, result);
@@ -41873,7 +41873,7 @@ public class LeptonicaTest {
 //        System.out.println("stringReplace");
 //        PointerByReference pdest = null;
 //        String src = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.stringReplace(pdest, src);
 //        assertEquals(expResult, result);
@@ -41889,7 +41889,7 @@ public class LeptonicaTest {
 //        System.out.println("stringLength");
 //        String src = "";
 //        NativeSize size = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.stringLength(src, size);
 //        assertEquals(expResult, result);
@@ -41906,7 +41906,7 @@ public class LeptonicaTest {
 //        ByteBuffer dest = null;
 //        NativeSize size = null;
 //        String src = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.stringCat(dest, size, src);
 //        assertEquals(expResult, result);
@@ -41922,7 +41922,7 @@ public class LeptonicaTest {
 //        System.out.println("stringConcatNew");
 //        String first = "";
 //        Object[] varArgs1 = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.stringConcatNew(first, varArgs1);
 //        assertEquals(expResult, result);
@@ -41938,7 +41938,7 @@ public class LeptonicaTest {
 //        System.out.println("stringJoin");
 //        String src1 = "";
 //        String src2 = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.stringJoin(src1, src2);
 //        assertEquals(expResult, result);
@@ -41953,7 +41953,7 @@ public class LeptonicaTest {
 //    public void testStringReverse() {
 //        System.out.println("stringReverse");
 //        String src = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.stringReverse(src);
 //        assertEquals(expResult, result);
@@ -41970,7 +41970,7 @@ public class LeptonicaTest {
 //        ByteBuffer cstr = null;
 //        String seps = "";
 //        PointerByReference psaveptr = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.strtokSafe(cstr, seps, psaveptr);
 //        assertEquals(expResult, result);
@@ -41988,7 +41988,7 @@ public class LeptonicaTest {
 //        String seps = "";
 //        PointerByReference phead = null;
 //        PointerByReference ptail = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.stringSplitOnToken(cstr, seps, phead, ptail);
 //        assertEquals(expResult, result);
@@ -42004,7 +42004,7 @@ public class LeptonicaTest {
 //        System.out.println("stringRemoveChars");
 //        String src = "";
 //        String remchars = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.stringRemoveChars(src, remchars);
 //        assertEquals(expResult, result);
@@ -42021,7 +42021,7 @@ public class LeptonicaTest {
 //        String src = "";
 //        String sub = "";
 //        IntBuffer ploc = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.stringFindSubstr(src, sub, ploc);
 //        assertEquals(expResult, result);
@@ -42040,7 +42040,7 @@ public class LeptonicaTest {
 //        String sub2 = "";
 //        IntBuffer pfound = null;
 //        IntBuffer ploc = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.stringReplaceSubstr(src, sub1, sub2, pfound, ploc);
 //        assertEquals(expResult, result);
@@ -42058,7 +42058,7 @@ public class LeptonicaTest {
 //        String sub1 = "";
 //        String sub2 = "";
 //        IntBuffer pcount = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.stringReplaceEachSubstr(src, sub1, sub2, pcount);
 //        assertEquals(expResult, result);
@@ -42076,7 +42076,7 @@ public class LeptonicaTest {
 //        NativeSize datalen = null;
 //        ByteBuffer sequence = null;
 //        NativeSize seqlen = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_Dna expResult = null;
 //        L_Dna result = instance.arrayFindEachSequence(data, datalen, sequence, seqlen);
 //        assertEquals(expResult, result);
@@ -42096,7 +42096,7 @@ public class LeptonicaTest {
 //        NativeSize seqlen = null;
 //        IntBuffer poffset = null;
 //        IntBuffer pfound = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.arrayFindSequence(data, datalen, sequence, seqlen, poffset, pfound);
 //        assertEquals(expResult, result);
@@ -42113,7 +42113,7 @@ public class LeptonicaTest {
 //        PointerByReference pindata = null;
 //        int oldsize = 0;
 //        int newsize = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.reallocNew(pindata, oldsize, newsize);
 //        assertEquals(expResult, result);
@@ -42129,7 +42129,7 @@ public class LeptonicaTest {
 //        System.out.println("l_binaryRead");
 //        String filename = "";
 //        NativeSizeByReference pnbytes = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.l_binaryRead(filename, pnbytes);
 //        assertEquals(expResult, result);
@@ -42145,7 +42145,7 @@ public class LeptonicaTest {
 //        System.out.println("l_binaryReadStream");
 //        PointerByReference fp = null;
 //        NativeSizeByReference pnbytes = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.l_binaryReadStream(fp, pnbytes);
 //        assertEquals(expResult, result);
@@ -42163,7 +42163,7 @@ public class LeptonicaTest {
 //        NativeSize start = null;
 //        NativeSize nbytes = null;
 //        NativeSizeByReference pnread = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.l_binaryReadSelect(filename, start, nbytes, pnread);
 //        assertEquals(expResult, result);
@@ -42181,7 +42181,7 @@ public class LeptonicaTest {
 //        NativeSize start = null;
 //        NativeSize nbytes = null;
 //        NativeSizeByReference pnread = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.l_binaryReadSelectStream(fp, start, nbytes, pnread);
 //        assertEquals(expResult, result);
@@ -42199,7 +42199,7 @@ public class LeptonicaTest {
 //        String operation = "";
 //        Pointer data = null;
 //        NativeSize nbytes = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.l_binaryWrite(filename, operation, data, nbytes);
 //        assertEquals(expResult, result);
@@ -42214,7 +42214,7 @@ public class LeptonicaTest {
 //    public void testNbytesInFile() {
 //        System.out.println("nbytesInFile");
 //        String filename = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        NativeSize expResult = null;
 //        NativeSize result = instance.nbytesInFile(filename);
 //        assertEquals(expResult, result);
@@ -42229,7 +42229,7 @@ public class LeptonicaTest {
 //    public void testFnbytesInFile() {
 //        System.out.println("fnbytesInFile");
 //        PointerByReference fp = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        NativeSize expResult = null;
 //        NativeSize result = instance.fnbytesInFile(fp);
 //        assertEquals(expResult, result);
@@ -42245,7 +42245,7 @@ public class LeptonicaTest {
 //        System.out.println("l_binaryCopy");
 //        ByteBuffer datas = null;
 //        NativeSize size = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.l_binaryCopy(datas, size);
 //        assertEquals(expResult, result);
@@ -42261,7 +42261,7 @@ public class LeptonicaTest {
 //        System.out.println("fileCopy");
 //        String srcfile = "";
 //        String newfile = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.fileCopy(srcfile, newfile);
 //        assertEquals(expResult, result);
@@ -42277,7 +42277,7 @@ public class LeptonicaTest {
 //        System.out.println("fileConcatenate");
 //        String srcfile = "";
 //        String destfile = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.fileConcatenate(srcfile, destfile);
 //        assertEquals(expResult, result);
@@ -42293,7 +42293,7 @@ public class LeptonicaTest {
 //        System.out.println("fileAppendString");
 //        String filename = "";
 //        String str = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.fileAppendString(filename, str);
 //        assertEquals(expResult, result);
@@ -42310,7 +42310,7 @@ public class LeptonicaTest {
 //        String fname1 = "";
 //        String fname2 = "";
 //        IntBuffer psame = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.filesAreIdentical(fname1, fname2, psame);
 //        assertEquals(expResult, result);
@@ -42325,7 +42325,7 @@ public class LeptonicaTest {
 //    public void testConvertOnLittleEnd16() {
 //        System.out.println("convertOnLittleEnd16");
 //        short shortin = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        short expResult = 0;
 //        short result = instance.convertOnLittleEnd16(shortin);
 //        assertEquals(expResult, result);
@@ -42340,7 +42340,7 @@ public class LeptonicaTest {
 //    public void testConvertOnBigEnd16() {
 //        System.out.println("convertOnBigEnd16");
 //        short shortin = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        short expResult = 0;
 //        short result = instance.convertOnBigEnd16(shortin);
 //        assertEquals(expResult, result);
@@ -42355,7 +42355,7 @@ public class LeptonicaTest {
 //    public void testConvertOnLittleEnd32() {
 //        System.out.println("convertOnLittleEnd32");
 //        int wordin = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.convertOnLittleEnd32(wordin);
 //        assertEquals(expResult, result);
@@ -42370,7 +42370,7 @@ public class LeptonicaTest {
 //    public void testConvertOnBigEnd32() {
 //        System.out.println("convertOnBigEnd32");
 //        int wordin = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.convertOnBigEnd32(wordin);
 //        assertEquals(expResult, result);
@@ -42385,7 +42385,7 @@ public class LeptonicaTest {
 //    public void testFopenReadStream() {
 //        System.out.println("fopenReadStream");
 //        String filename = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        PointerByReference expResult = null;
 //        PointerByReference result = instance.fopenReadStream(filename);
 //        assertEquals(expResult, result);
@@ -42401,7 +42401,7 @@ public class LeptonicaTest {
 //        System.out.println("fopenWriteStream");
 //        String filename = "";
 //        String modestring = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        PointerByReference expResult = null;
 //        PointerByReference result = instance.fopenWriteStream(filename, modestring);
 //        assertEquals(expResult, result);
@@ -42417,7 +42417,7 @@ public class LeptonicaTest {
 //        System.out.println("lept_fopen");
 //        String filename = "";
 //        String mode = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        PointerByReference expResult = null;
 //        PointerByReference result = instance.lept_fopen(filename, mode);
 //        assertEquals(expResult, result);
@@ -42432,7 +42432,7 @@ public class LeptonicaTest {
 //    public void testLept_fclose() {
 //        System.out.println("lept_fclose");
 //        PointerByReference fp = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.lept_fclose(fp);
 //        assertEquals(expResult, result);
@@ -42448,7 +42448,7 @@ public class LeptonicaTest {
 //        System.out.println("lept_calloc");
 //        NativeSize nmemb = null;
 //        NativeSize size = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.lept_calloc(nmemb, size);
 //        assertEquals(expResult, result);
@@ -42463,7 +42463,7 @@ public class LeptonicaTest {
 //    public void testLept_free() {
 //        System.out.println("lept_free");
 //        Pointer ptr = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.lept_free(ptr);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -42476,7 +42476,7 @@ public class LeptonicaTest {
 //    public void testLept_mkdir() {
 //        System.out.println("lept_mkdir");
 //        String subdir = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.lept_mkdir(subdir);
 //        assertEquals(expResult, result);
@@ -42491,7 +42491,7 @@ public class LeptonicaTest {
 //    public void testLept_rmdir() {
 //        System.out.println("lept_rmdir");
 //        String subdir = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.lept_rmdir(subdir);
 //        assertEquals(expResult, result);
@@ -42507,7 +42507,7 @@ public class LeptonicaTest {
 //        System.out.println("lept_direxists");
 //        String dir = "";
 //        IntBuffer pexists = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.lept_direxists(dir, pexists);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -42521,7 +42521,7 @@ public class LeptonicaTest {
 //        System.out.println("lept_rm_match");
 //        String subdir = "";
 //        String substr = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.lept_rm_match(subdir, substr);
 //        assertEquals(expResult, result);
@@ -42537,7 +42537,7 @@ public class LeptonicaTest {
 //        System.out.println("lept_rm");
 //        String subdir = "";
 //        String tail = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.lept_rm(subdir, tail);
 //        assertEquals(expResult, result);
@@ -42552,7 +42552,7 @@ public class LeptonicaTest {
 //    public void testLept_rmfile() {
 //        System.out.println("lept_rmfile");
 //        String filepath = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.lept_rmfile(filepath);
 //        assertEquals(expResult, result);
@@ -42570,7 +42570,7 @@ public class LeptonicaTest {
 //        String newdir = "";
 //        String newtail = "";
 //        PointerByReference pnewpath = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.lept_mv(srcfile, newdir, newtail, pnewpath);
 //        assertEquals(expResult, result);
@@ -42588,7 +42588,7 @@ public class LeptonicaTest {
 //        String newdir = "";
 //        String newtail = "";
 //        PointerByReference pnewpath = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.lept_cp(srcfile, newdir, newtail, pnewpath);
 //        assertEquals(expResult, result);
@@ -42605,7 +42605,7 @@ public class LeptonicaTest {
 //        String pathname = "";
 //        PointerByReference pdir = null;
 //        PointerByReference ptail = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.splitPathAtDirectory(pathname, pdir, ptail);
 //        assertEquals(expResult, result);
@@ -42622,7 +42622,7 @@ public class LeptonicaTest {
 //        String pathname = "";
 //        PointerByReference pbasename = null;
 //        PointerByReference pextension = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.splitPathAtExtension(pathname, pbasename, pextension);
 //        assertEquals(expResult, result);
@@ -42638,7 +42638,7 @@ public class LeptonicaTest {
 //        System.out.println("pathJoin");
 //        String dir = "";
 //        String fname = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.pathJoin(dir, fname);
 //        assertEquals(expResult, result);
@@ -42654,7 +42654,7 @@ public class LeptonicaTest {
 //        System.out.println("appendSubdirectory");
 //        String dir = "";
 //        String subdir = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.appendSubdirectory(dir, subdir);
 //        assertEquals(expResult, result);
@@ -42670,7 +42670,7 @@ public class LeptonicaTest {
 //        System.out.println("convertSepCharsInPath");
 //        ByteBuffer path = null;
 //        int type = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.convertSepCharsInPath(path, type);
 //        assertEquals(expResult, result);
@@ -42686,7 +42686,7 @@ public class LeptonicaTest {
 //        System.out.println("genPathname");
 //        String dir = "";
 //        String fname = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.genPathname(dir, fname);
 //        assertEquals(expResult, result);
@@ -42703,7 +42703,7 @@ public class LeptonicaTest {
 //        ByteBuffer result_2 = null;
 //        NativeSize nbytes = null;
 //        String subdir = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.makeTempDirname(result_2, nbytes, subdir);
 //        assertEquals(expResult, result);
@@ -42720,7 +42720,7 @@ public class LeptonicaTest {
 //        ByteBuffer path = null;
 //        NativeSize nbytes = null;
 //        int flag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.modifyTrailingSlash(path, nbytes, flag);
 //        assertEquals(expResult, result);
@@ -42738,7 +42738,7 @@ public class LeptonicaTest {
 //        String tail = "";
 //        int usetime = 0;
 //        int usepid = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.genTempFilename(dir, tail, usetime, usepid);
 //        assertEquals(expResult, result);
@@ -42755,7 +42755,7 @@ public class LeptonicaTest {
 //        String fname = "";
 //        int numpre = 0;
 //        int numpost = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.extractNumberFromFilename(fname, numpre, numpost);
 //        assertEquals(expResult, result);
@@ -42773,7 +42773,7 @@ public class LeptonicaTest {
 //        float loc = 0.0F;
 //        float size = 0.0F;
 //        String fileout = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.fileCorruptByDeletion(filein, loc, size, fileout);
 //        assertEquals(expResult, result);
@@ -42791,7 +42791,7 @@ public class LeptonicaTest {
 //        float loc = 0.0F;
 //        float size = 0.0F;
 //        String fileout = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.fileCorruptByMutation(filein, loc, size, fileout);
 //        assertEquals(expResult, result);
@@ -42808,7 +42808,7 @@ public class LeptonicaTest {
 //        int range = 0;
 //        int seed = 0;
 //        IntBuffer pval = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.genRandomIntegerInRange(range, seed, pval);
 //        assertEquals(expResult, result);
@@ -42823,7 +42823,7 @@ public class LeptonicaTest {
 //    public void testLept_roundftoi() {
 //        System.out.println("lept_roundftoi");
 //        float fval = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.lept_roundftoi(fval);
 //        assertEquals(expResult, result);
@@ -42838,7 +42838,7 @@ public class LeptonicaTest {
 //    public void testConvertBinaryToGrayCode() {
 //        System.out.println("convertBinaryToGrayCode");
 //        int val = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.convertBinaryToGrayCode(val);
 //        assertEquals(expResult, result);
@@ -42853,7 +42853,7 @@ public class LeptonicaTest {
 //    public void testConvertGrayCodeToBinary() {
 //        System.out.println("convertGrayCodeToBinary");
 //        int val = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.convertGrayCodeToBinary(val);
 //        assertEquals(expResult, result);
@@ -42861,17 +42861,16 @@ public class LeptonicaTest {
 //        fail("The test case is a prototype.");
 //    }
 //
-//    /**
-//     * Test of getLeptonicaVersion method, of class Leptonica.
-//     */
-//    @Test
-//    public void testGetLeptonicaVersion() {
-//        System.out.println("getLeptonicaVersion");
-//        Leptonica instance = new LeptonicaImpl();
-//        String expResult = "leptonica-1.73";
-//        Pointer result = instance.getLeptonicaVersion();
-//        assertTrue(result.getString(0).startsWith(expResult));
-//    }
+    /**
+     * Test of getLeptonicaVersion method, of class Leptonica.
+     */
+    @Test
+    public void testGetLeptonicaVersion() {
+        System.out.println("getLeptonicaVersion");
+        String expResult = "leptonica-1.73";
+        Pointer result = instance.getLeptonicaVersion();
+        assertTrue(result.getString(0).startsWith(expResult));
+    }
 //
 //    /**
 //     * Test of startTimer method, of class Leptonica.
@@ -42879,7 +42878,7 @@ public class LeptonicaTest {
 //    @Test
 //    public void testStartTimer() {
 //        System.out.println("startTimer");
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.startTimer();
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -42891,7 +42890,7 @@ public class LeptonicaTest {
 //    @Test
 //    public void testStopTimer() {
 //        System.out.println("stopTimer");
-//        Leptonica instance = new LeptonicaImpl();
+
 //        float expResult = 0.0F;
 //        float result = instance.stopTimer();
 //        assertEquals(expResult, result, 0.0);
@@ -42905,7 +42904,7 @@ public class LeptonicaTest {
 //    @Test
 //    public void testStartTimerNested() {
 //        System.out.println("startTimerNested");
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.startTimerNested();
 //        assertEquals(expResult, result);
@@ -42920,7 +42919,7 @@ public class LeptonicaTest {
 //    public void testStopTimerNested() {
 //        System.out.println("stopTimerNested");
 //        Pointer rusage_start = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        float expResult = 0.0F;
 //        float result = instance.stopTimerNested(rusage_start);
 //        assertEquals(expResult, result, 0.0);
@@ -42936,7 +42935,7 @@ public class LeptonicaTest {
 //        System.out.println("l_getCurrentTime");
 //        IntBuffer sec = null;
 //        IntBuffer usec = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.l_getCurrentTime(sec, usec);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -42948,7 +42947,6 @@ public class LeptonicaTest {
     @Test
     public void testStartWallTimer() {
         System.out.println("startWallTimer");
-        Leptonica instance = new LeptonicaImpl().getInstance();
         L_WallTimer timer = instance.startWallTimer();
         assertNotNull(timer);
         System.out.println("stopWallTimer");
@@ -42965,7 +42963,7 @@ public class LeptonicaTest {
 //    @Test
 //    public void testL_getFormattedDate() {
 //        System.out.println("l_getFormattedDate");
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.l_getFormattedDate();
 //        assertEquals(expResult, result);
@@ -42985,7 +42983,7 @@ public class LeptonicaTest {
 //        int thumbwidth = 0;
 //        int viewwidth = 0;
 //        int copyorig = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixHtmlViewer(dirin, dirout, rootname, thumbwidth, viewwidth, copyorig);
 //        assertEquals(expResult, result);
@@ -43005,7 +43003,7 @@ public class LeptonicaTest {
 //        int seed = 0;
 //        int color = 0;
 //        int cmapflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixSimpleCaptcha(pixs, border, nterms, seed, color, cmapflag);
 //        assertEquals(expResult, result);
@@ -43028,7 +43026,7 @@ public class LeptonicaTest {
 //        int ny = 0;
 //        int seed = 0;
 //        int grayval = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixRandomHarmonicWarp(pixs, xmag, ymag, xfreq, yfreq, nx, ny, seed, grayval);
 //        assertEquals(expResult, result);
@@ -43049,7 +43047,7 @@ public class LeptonicaTest {
 //        int ybendt = 0;
 //        int ybendb = 0;
 //        int redleft = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixWarpStereoscopic(pixs, zbend, zshiftt, zshiftb, ybendt, ybendb, redleft);
 //        assertEquals(expResult, result);
@@ -43069,7 +43067,7 @@ public class LeptonicaTest {
 //        int hmax = 0;
 //        int operation = 0;
 //        int incolor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixStretchHorizontal(pixs, dir, type, hmax, operation, incolor);
 //        assertEquals(expResult, result);
@@ -43088,7 +43086,7 @@ public class LeptonicaTest {
 //        int type = 0;
 //        int hmax = 0;
 //        int incolor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixStretchHorizontalSampled(pixs, dir, type, hmax, incolor);
 //        assertEquals(expResult, result);
@@ -43107,7 +43105,7 @@ public class LeptonicaTest {
 //        int type = 0;
 //        int hmax = 0;
 //        int incolor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixStretchHorizontalLI(pixs, dir, type, hmax, incolor);
 //        assertEquals(expResult, result);
@@ -43127,7 +43125,7 @@ public class LeptonicaTest {
 //        int vmaxb = 0;
 //        int operation = 0;
 //        int incolor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixQuadraticVShear(pixs, dir, vmaxt, vmaxb, operation, incolor);
 //        assertEquals(expResult, result);
@@ -43146,7 +43144,7 @@ public class LeptonicaTest {
 //        int vmaxt = 0;
 //        int vmaxb = 0;
 //        int incolor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixQuadraticVShearSampled(pixs, dir, vmaxt, vmaxb, incolor);
 //        assertEquals(expResult, result);
@@ -43165,7 +43163,7 @@ public class LeptonicaTest {
 //        int vmaxt = 0;
 //        int vmaxb = 0;
 //        int incolor = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixQuadraticVShearLI(pixs, dir, vmaxt, vmaxb, incolor);
 //        assertEquals(expResult, result);
@@ -43184,7 +43182,7 @@ public class LeptonicaTest {
 //        float rwt = 0.0F;
 //        float gwt = 0.0F;
 //        float bwt = 0.0F;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixStereoFromPair(pix1, pix2, rwt, gwt, bwt);
 //        assertEquals(expResult, result);
@@ -43202,7 +43200,7 @@ public class LeptonicaTest {
 //        Pix pixm = null;
 //        int mindepth = 0;
 //        int debugflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        L_WShed expResult = null;
 //        L_WShed result = instance.wshedCreate(pixs, pixm, mindepth, debugflag);
 //        assertEquals(expResult, result);
@@ -43217,7 +43215,7 @@ public class LeptonicaTest {
 //    public void testWshedDestroy() {
 //        System.out.println("wshedDestroy");
 //        L_WShed.ByReference[] pwshed = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.wshedDestroy(pwshed);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -43230,7 +43228,7 @@ public class LeptonicaTest {
 //    public void testWshedApply() {
 //        System.out.println("wshedApply");
 //        L_WShed wshed = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.wshedApply(wshed);
 //        assertEquals(expResult, result);
@@ -43247,7 +43245,7 @@ public class LeptonicaTest {
 //        L_WShed wshed = null;
 //        Pixa.ByReference[] ppixa = null;
 //        Numa.ByReference[] pnalevels = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.wshedBasins(wshed, ppixa, pnalevels);
 //        assertEquals(expResult, result);
@@ -43262,7 +43260,7 @@ public class LeptonicaTest {
 //    public void testWshedRenderFill() {
 //        System.out.println("wshedRenderFill");
 //        L_WShed wshed = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.wshedRenderFill(wshed);
 //        assertEquals(expResult, result);
@@ -43277,7 +43275,7 @@ public class LeptonicaTest {
 //    public void testWshedRenderColors() {
 //        System.out.println("wshedRenderColors");
 //        L_WShed wshed = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.wshedRenderColors(wshed);
 //        assertEquals(expResult, result);
@@ -43292,7 +43290,7 @@ public class LeptonicaTest {
 //    public void testPixReadStreamWebP() {
 //        System.out.println("pixReadStreamWebP");
 //        PointerByReference fp = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixReadStreamWebP(fp);
 //        assertEquals(expResult, result);
@@ -43308,7 +43306,7 @@ public class LeptonicaTest {
 //        System.out.println("pixReadMemWebP");
 //        ByteBuffer filedata = null;
 //        NativeSize filesize = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pix expResult = null;
 //        Pix result = instance.pixReadMemWebP(filedata, filesize);
 //        assertEquals(expResult, result);
@@ -43326,7 +43324,7 @@ public class LeptonicaTest {
 //        IntBuffer pw = null;
 //        IntBuffer ph = null;
 //        IntBuffer pspp = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.readHeaderWebP(filename, pw, ph, pspp);
 //        assertEquals(expResult, result);
@@ -43345,7 +43343,7 @@ public class LeptonicaTest {
 //        IntBuffer pw = null;
 //        IntBuffer ph = null;
 //        IntBuffer pspp = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.readHeaderMemWebP(data, size, pw, ph, pspp);
 //        assertEquals(expResult, result);
@@ -43363,7 +43361,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int quality = 0;
 //        int lossless = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixWriteWebP(filename, pixs, quality, lossless);
 //        assertEquals(expResult, result);
@@ -43381,7 +43379,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int quality = 0;
 //        int lossless = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixWriteStreamWebP(fp, pixs, quality, lossless);
 //        assertEquals(expResult, result);
@@ -43400,7 +43398,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int quality = 0;
 //        int lossless = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixWriteMemWebP(pencdata, pencsize, pixs, quality, lossless);
 //        assertEquals(expResult, result);
@@ -43417,7 +43415,7 @@ public class LeptonicaTest {
 //        String rootname = "";
 //        Pixa pixa = null;
 //        int format = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixaWriteFiles(rootname, pixa, format);
 //        assertEquals(expResult, result);
@@ -43434,7 +43432,7 @@ public class LeptonicaTest {
 //        String filename = "";
 //        Pix pix = null;
 //        int format = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixWrite(filename, pix, format);
 //        assertEquals(expResult, result);
@@ -43451,7 +43449,7 @@ public class LeptonicaTest {
 //        PointerByReference fp = null;
 //        Pix pix = null;
 //        int format = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixWriteStream(fp, pix, format);
 //        assertEquals(expResult, result);
@@ -43469,7 +43467,7 @@ public class LeptonicaTest {
 //        Pix pix = null;
 //        int quality = 0;
 //        int progressive = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixWriteImpliedFormat(filename, pix, quality, progressive);
 //        assertEquals(expResult, result);
@@ -43488,7 +43486,7 @@ public class LeptonicaTest {
 //        Pix pix = null;
 //        int format = 0;
 //        PointerByReference pfilename = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixWriteTempfile(dir, tail, pix, format, pfilename);
 //        assertEquals(expResult, result);
@@ -43503,7 +43501,7 @@ public class LeptonicaTest {
 //    public void testPixChooseOutputFormat() {
 //        System.out.println("pixChooseOutputFormat");
 //        Pix pix = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixChooseOutputFormat(pix);
 //        assertEquals(expResult, result);
@@ -43518,7 +43516,7 @@ public class LeptonicaTest {
 //    public void testGetImpliedFileFormat() {
 //        System.out.println("getImpliedFileFormat");
 //        String filename = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.getImpliedFileFormat(filename);
 //        assertEquals(expResult, result);
@@ -43533,7 +43531,7 @@ public class LeptonicaTest {
 //    public void testGetFormatExtension() {
 //        System.out.println("getFormatExtension");
 //        int format = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.getFormatExtension(format);
 //        assertEquals(expResult, result);
@@ -43551,7 +43549,7 @@ public class LeptonicaTest {
 //        NativeSizeByReference psize = null;
 //        Pix pix = null;
 //        int format = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixWriteMem(pdata, psize, pix, format);
 //        assertEquals(expResult, result);
@@ -43568,7 +43566,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int x = 0;
 //        int y = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixDisplay(pixs, x, y);
 //        assertEquals(expResult, result);
@@ -43587,7 +43585,7 @@ public class LeptonicaTest {
 //        int y = 0;
 //        String title = "";
 //        int dispflag = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixDisplayWithTitle(pixs, x, y, title, dispflag);
 //        assertEquals(expResult, result);
@@ -43602,7 +43600,7 @@ public class LeptonicaTest {
 //    public void testPixDisplayMultiple() {
 //        System.out.println("pixDisplayMultiple");
 //        String filepattern = "";
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixDisplayMultiple(filepattern);
 //        assertEquals(expResult, result);
@@ -43618,7 +43616,7 @@ public class LeptonicaTest {
 //        System.out.println("pixDisplayWrite");
 //        Pix pixs = null;
 //        int reduction = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixDisplayWrite(pixs, reduction);
 //        assertEquals(expResult, result);
@@ -43635,7 +43633,7 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        int reduction = 0;
 //        int format = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixDisplayWriteFormat(pixs, reduction, format);
 //        assertEquals(expResult, result);
@@ -43655,7 +43653,7 @@ public class LeptonicaTest {
 //        int newrow = 0;
 //        int space = 0;
 //        int dp = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixSaveTiled(pixs, pixa, scalefactor, newrow, space, dp);
 //        assertEquals(expResult, result);
@@ -43676,7 +43674,7 @@ public class LeptonicaTest {
 //        int space = 0;
 //        int linewidth = 0;
 //        int dp = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixSaveTiledOutline(pixs, pixa, scalefactor, newrow, space, linewidth, dp);
 //        assertEquals(expResult, result);
@@ -43700,7 +43698,7 @@ public class LeptonicaTest {
 //        String textstr = "";
 //        int val = 0;
 //        int location = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        int expResult = 0;
 //        int result = instance.pixSaveTiledWithText(pixs, pixa, outwidth, newrow, space, linewidth, bmf, textstr, val, location);
 //        assertEquals(expResult, result);
@@ -43715,7 +43713,7 @@ public class LeptonicaTest {
 //    public void testL_chooseDisplayProg() {
 //        System.out.println("l_chooseDisplayProg");
 //        int selection = 0;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        instance.l_chooseDisplayProg(selection);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -43730,7 +43728,7 @@ public class LeptonicaTest {
 //        ByteBuffer datain = null;
 //        NativeSize nin = null;
 //        NativeSizeByReference pnout = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.zlibCompress(datain, nin, pnout);
 //        assertEquals(expResult, result);
@@ -43747,7 +43745,7 @@ public class LeptonicaTest {
 //        ByteBuffer datain = null;
 //        NativeSize nin = null;
 //        NativeSizeByReference pnout = null;
-//        Leptonica instance = new LeptonicaImpl();
+
 //        Pointer expResult = null;
 //        Pointer result = instance.zlibUncompress(datain, nin, pnout);
 //        assertEquals(expResult, result);
