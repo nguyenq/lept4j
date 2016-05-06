@@ -17,13 +17,16 @@ package net.sourceforge.lept4j.util;
 
 import com.sun.jna.ptr.PointerByReference;
 import java.awt.image.BufferedImage;
+import java.awt.image.RenderedImage;
 import java.io.File;
 import java.io.FileInputStream;
+import java.nio.ByteBuffer;
 import javax.imageio.ImageIO;
 
 import net.sourceforge.lept4j.Leptonica;
 import net.sourceforge.lept4j.Leptonica1;
 import net.sourceforge.lept4j.Pix;
+import static net.sourceforge.lept4j.ILeptonica.IFF_PNG;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -31,6 +34,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import org.junit.Ignore;
 
 public class LeptUtilsTest {
 
@@ -96,4 +100,49 @@ public class LeptUtilsTest {
         Leptonica1.pixDestroy(pRef);
     }
 
+    /**
+     * Test of getImageByteBuffer method, of class LeptUtils.
+     */
+    @Test
+    @Ignore
+    public void testGetImageByteBuffer() throws Exception {
+        System.out.println("getImageByteBuffer");
+        RenderedImage image = null;
+        ByteBuffer expResult = null;
+        ByteBuffer result = LeptUtils.getImageByteBuffer(image);
+        assertEquals(expResult, result);
+    }
+
+    /**
+     * Test of removeLines method, of class LeptUtils.
+     */
+    @Test
+    public void testRemoveLines() {
+        System.out.println("removeLines");
+        File input = new File(testResourcesPath, "table.png");
+        Pix pixs = Leptonica1.pixRead(input.getPath());
+        Leptonica1.pixDisplayWrite(pixs, 1);
+        // remove horizontal lines
+        Pix result = LeptUtils.removeLines(pixs);
+        String outfile = "target/test-classes/test-results/result-hlines-removed.png";
+        Leptonica1.pixWrite(outfile, result, IFF_PNG);
+        Leptonica1.pixDisplayWrite(result, 1);
+
+        // remove vertical lines
+        Pix pix90 = Leptonica1.pixRotate90(result, 1); // rotate 90 degrees
+        Pix result2 = LeptUtils.removeLines(pix90);
+        Pix result3 = Leptonica1.pixRotate90(result2, -1); // rotate 90 degrees back
+        outfile = "target/test-classes/test-results/result-vlines-removed.png";
+        Leptonica1.pixWrite(outfile, result3, IFF_PNG);
+        Leptonica1.pixDisplayWrite(result3, 1);
+
+        Leptonica1.pixDisplayMultiple("target/test-classes/test-results/result-*.png");
+
+        // resource cleanup
+        LeptUtils.disposePix(pixs);
+        LeptUtils.disposePix(result2);
+        LeptUtils.disposePix(result3);
+        LeptUtils.disposePix(result);
+        assertTrue(new File(outfile).exists());
+    }
 }

@@ -23,6 +23,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
+import java.nio.FloatBuffer;
 import java.util.Iterator;
 import java.util.Locale;
 import javax.imageio.IIOImage;
@@ -50,6 +51,7 @@ public class LeptUtils {
 
     final static String JAI_IMAGE_WRITER_MESSAGE = "Need to install JAI Image I/O package.\nhttps://java.net/projects/jai-imageio/";
     final static String TIFF_FORMAT = "tiff";
+    final static float deg2rad = (float) (3.14159 / 180.);
 
     /**
      * Converts Leptonica <code>Pix</code> to <code>BufferedImage</code>.
@@ -81,6 +83,85 @@ public class LeptUtils {
         ByteBuffer buff = getImageByteBuffer(image);
         Pix pix = Leptonica1.pixReadMem(buff, new NativeSize(buff.capacity()));
         return pix;
+    }
+    
+    /**
+     * Removes horizontal lines from a grayscale image. The algorithm is based
+     * on Leptonica <code>lineremoval.c</code> example.
+     *
+     * @see
+     * <a href="http://www.leptonica.com/line-removal.html">line-removal</a>
+     *
+     * @param pixs input image
+     * @return image with lines removed
+     */
+    public static Pix removeLines(Pix pixs) {
+        float angle, conf;
+        Pix pix1, pix2, pix3, pix4, pix5;
+        Pix pix6, pix7, pix8, pix9;
+
+        /* threshold to binary, extracting much of the lines */
+        pix1 = Leptonica1.pixThresholdToBinary(pixs, 170);
+
+        /* find the skew angle and deskew using an interpolated
+         * rotator for anti-aliasing (to avoid jaggies) */
+        FloatBuffer pangle = FloatBuffer.allocate(1);
+        FloatBuffer pconf = FloatBuffer.allocate(1);
+        Leptonica1.pixFindSkew(pix1, pangle, pconf);
+        angle = pangle.get();
+        conf = pconf.get();
+        pix2 = Leptonica1.pixRotateAMGray(pixs, (float) (deg2rad * angle), (byte) 255);
+
+        /* extract the lines to be removed */
+        pix3 = Leptonica1.pixCloseGray(pix2, 51, 1);
+
+        /* solidify the lines to be removed */
+        pix4 = Leptonica1.pixErodeGray(pix3, 1, 5);
+
+        /* clean the background of those lines */
+        pix5 = Leptonica1.pixThresholdToValue(null, pix4, 210, 255);
+
+        pix6 = Leptonica1.pixThresholdToValue(null, pix5, 200, 0);
+
+        /* get paint-through mask for changed pixels */
+        pix7 = Leptonica1.pixThresholdToBinary(pix6, 210);
+
+        /* add the inverted, cleaned lines to orig.  Because
+         * the background was cleaned, the inversion is 0,
+         * so when you add, it doesn't lighten those pixels.
+         * It only lightens (to white) the pixels in the lines! */
+        Leptonica1.pixInvert(pix6, pix6);
+        pix8 = Leptonica1.pixAddGray(null, pix2, pix6);
+
+        pix9 = Leptonica1.pixOpenGray(pix8, 1, 9);
+
+        Leptonica1.pixCombineMasked(pix8, pix9, pix7);
+
+        // resource cleanup
+        disposePix(pix1);
+        disposePix(pix2);
+        disposePix(pix3);
+        disposePix(pix4);
+        disposePix(pix5);
+        disposePix(pix6);
+        disposePix(pix7);
+        disposePix(pix9);
+
+        return pix8;
+    }
+
+    /**
+     * Disposes of Pix resource.
+     *
+     * @param pix
+     */
+    public static void disposePix(Pix pix) {
+        if (pix == null) {
+            return;
+        }
+        PointerByReference pRef = new PointerByReference();
+        pRef.setValue(pix.getPointer());
+        Leptonica1.pixDestroy(pRef);
     }
 
     /**
