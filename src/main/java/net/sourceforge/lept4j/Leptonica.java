@@ -1217,31 +1217,31 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int boxaExtendArrayToSize(Boxa boxa, int size);
 //
-//    /**
-//     * Original signature : <code>l_int32 boxaGetCount(BOXA*)</code><br>
-//     * <i>native declaration : allheaders.h:342</i>
-//     */
-//    int boxaGetCount(Boxa boxa);
-//
-//    /**
-//     * Original signature : <code>l_int32 boxaGetValidCount(BOXA*)</code><br>
-//     * <i>native declaration : allheaders.h:344</i>
-//     */
-//    int boxaGetValidCount(Boxa boxa);
-//
-//    /**
-//     * Original signature :
-//     * <code>BOX* boxaGetBox(BOXA*, l_int32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:346</i>
-//     */
-//    Box boxaGetBox(Boxa boxa, int index, int accessflag);
-//
-//    /**
-//     * Original signature :
-//     * <code>BOX* boxaGetValidBox(BOXA*, l_int32, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:348</i>
-//     */
-//    Box boxaGetValidBox(Boxa boxa, int index, int accessflag);
+    /**
+     * Original signature : <code>l_int32 boxaGetCount(BOXA*)</code><br>
+     * <i>native declaration : allheaders.h:342</i>
+     */
+    int boxaGetCount(Boxa boxa);
+
+    /**
+     * Original signature : <code>l_int32 boxaGetValidCount(BOXA*)</code><br>
+     * <i>native declaration : allheaders.h:344</i>
+     */
+    int boxaGetValidCount(Boxa boxa);
+
+    /**
+     * Original signature :
+     * <code>BOX* boxaGetBox(BOXA*, l_int32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:346</i>
+     */
+    Box boxaGetBox(Boxa boxa, int index, int accessflag);
+
+    /**
+     * Original signature :
+     * <code>BOX* boxaGetValidBox(BOXA*, l_int32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:348</i>
+     */
+    Box boxaGetValidBox(Boxa boxa, int index, int accessflag);
 //
 //    /**
 //     * Original signature :

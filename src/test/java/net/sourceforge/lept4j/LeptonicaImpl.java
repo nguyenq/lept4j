@@ -726,6 +726,26 @@ public class LeptonicaImpl implements Leptonica {
     }
 
     @Override
+    public int boxaGetCount(Boxa boxa) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int boxaGetValidCount(Boxa boxa) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public Box boxaGetBox(Boxa boxa, int index, int accessflag) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public Box boxaGetValidBox(Boxa boxa, int index, int accessflag) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
     public int boxaaReplaceBoxa(Boxaa baa, int index, Boxa boxa) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
@@ -6544,5 +6564,5 @@ public class LeptonicaImpl implements Leptonica {
     public HBITMAP pixGetWindowsHBITMAP(Pix pixs) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
-    
+
 }
