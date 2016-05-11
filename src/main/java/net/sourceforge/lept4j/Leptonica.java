@@ -17988,9 +17988,9 @@ public interface Leptonica extends Library, ILeptonica {
      */
     Pointer zlibUncompress(ByteBuffer datain, NativeSize nin, NativeSizeByReference pnout);
 
-    /**
-     * Original signature : <code>HBITMAP pixGetWindowsHBITMAP(PIX*)</code><br>
-     * <i>native declaration : leptwin.h:2</i>
-     */
-    HBITMAP pixGetWindowsHBITMAP(Pix pixs);
+//    /**
+//     * Original signature : <code>HBITMAP pixGetWindowsHBITMAP(PIX*)</code><br>
+//     * <i>native declaration : leptwin.h:2</i>
+//     */
+//    HBITMAP pixGetWindowsHBITMAP(Pix pixs);
 }
