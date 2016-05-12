@@ -22,6 +22,7 @@ Version 1.1.2 (17 March 2016):
 Version 1.2 (19 March 2016):
 - Upgrade to Leptonica 1.73
 
-Version 1.2.1 (10 May 2016):
+Version 1.2.1 (11 May 2016):
 - Add removeLines method
-- Add back a few methods accidentally commented out
+- Add back a few methods accidentally commented 
+- Revert jna to 4.1.0
