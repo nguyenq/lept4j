@@ -5651,6 +5651,11 @@ public class LeptonicaImpl implements Leptonica {
     }
 
     @Override
+    public Pix pixReadStream(FILE fp, int hint) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
     public int pixReadHeader(String filename, IntBuffer pformat, IntBuffer pw, IntBuffer ph, IntBuffer pbps, IntBuffer pspp, IntBuffer piscmap) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
@@ -6231,7 +6236,77 @@ public class LeptonicaImpl implements Leptonica {
     }
 
     @Override
+    public Pix pixReadTiff(String filename, int n) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public Pix pixReadStreamTiff(FILE fp, int n) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int pixWriteTiff(String filename, Pix pix, int comptype, String modestring) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int pixWriteTiffCustom(String filename, Pix pix, int comptype, String modestring, Numa natags, Sarray savals, Sarray satypes, Numa nasizes) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int pixWriteStreamTiff(FILE fp, Pix pix, int comptype) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public Pixa pixaReadMultipageTiff(String filename) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int writeMultipageTiff(String dirin, String substr, String fileout) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int writeMultipageTiffSA(Sarray sa, String fileout) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int fprintTiffInfo(FILE fpout, String tiffile) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int tiffGetCount(FILE fp, IntBuffer pn) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int getTiffResolution(FILE fp, IntBuffer pxres, IntBuffer pyres) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int readHeaderTiff(String filename, int n, IntBuffer pwidth, IntBuffer pheight, IntBuffer pbps, IntBuffer pspp, IntBuffer pres, IntBuffer pcmap, IntBuffer pformat) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int freadHeaderTiff(FILE fp, int n, IntBuffer pwidth, IntBuffer pheight, IntBuffer pbps, IntBuffer pspp, IntBuffer pres, IntBuffer pcmap, IntBuffer pformat) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
     public int readHeaderMemTiff(ByteBuffer cdata, NativeSize size, int n, IntBuffer pwidth, IntBuffer pheight, IntBuffer pbps, IntBuffer pspp, IntBuffer pres, IntBuffer pcmap, IntBuffer pformat) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int findTiffCompression(FILE fp, IntBuffer pcomptype) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
@@ -6241,7 +6316,32 @@ public class LeptonicaImpl implements Leptonica {
     }
 
     @Override
+    public int pixWriteMemTiff(PointerByReference pdata, NativeSizeByReference psize, Pix pix, int comptype) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int pixWriteMemTiffCustom(PointerByReference pdata, NativeSizeByReference psize, Pix pix, int comptype, Numa natags, Sarray savals, Sarray satypes, Numa nasizes) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public Pointer stringNew(String src) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
     public int stringCopy(ByteBuffer dest, String src, int n) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int stringReplace(PointerByReference pdest, String src) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int stringLength(String src, NativeSize size) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 

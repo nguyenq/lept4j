@@ -14184,11 +14184,11 @@ public interface Leptonica extends Library, ILeptonica {
      */
     Pix pixReadIndexed(Sarray sa, int index);
 
-//    /**
-//     * Original signature : <code>PIX* pixReadStream(FILE*, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4060</i>
-//     */
-//    Pix pixReadStream(FILE fp, int hint);
+    /**
+     * Original signature : <code>PIX* pixReadStream(FILE*, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4060</i>
+     */
+    Pix pixReadStream(FILE fp, int hint);
 
     /**
      * Original signature :
@@ -16980,96 +16980,96 @@ public interface Leptonica extends Library, ILeptonica {
      */
     Sarray splitStringToParagraphs(ByteBuffer textstr, int splitflag);
 
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixReadTiff(const char*, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4874</i>
-//     */
-//    Pix pixReadTiff(String filename, int n);
+    /**
+     * Original signature :
+     * <code>PIX* pixReadTiff(const char*, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4874</i>
+     */
+    Pix pixReadTiff(String filename, int n);
 
-//    /**
-//     * Original signature :
-//     * <code>PIX* pixReadStreamTiff(FILE*, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4876</i>
-//     */
-//    Pix pixReadStreamTiff(FILE fp, int n);
+    /**
+     * Original signature :
+     * <code>PIX* pixReadStreamTiff(FILE*, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4876</i>
+     */
+    Pix pixReadStreamTiff(FILE fp, int n);
 
-//    /**
-//     * Original signature :
-//     * <code>l_int32 pixWriteTiff(const char*, PIX*, l_int32, const char*)</code><br>
-//     * <i>native declaration : allheaders.h:4878</i>
-//     */
-//    int pixWriteTiff(String filename, Pix pix, int comptype, String modestring);
+    /**
+     * Original signature :
+     * <code>l_int32 pixWriteTiff(const char*, PIX*, l_int32, const char*)</code><br>
+     * <i>native declaration : allheaders.h:4878</i>
+     */
+    int pixWriteTiff(String filename, Pix pix, int comptype, String modestring);
 
-//    /**
-//     * Original signature :
-//     * <code>l_int32 pixWriteTiffCustom(const char*, PIX*, l_int32, const char*, NUMA*, SARRAY*, SARRAY*, NUMA*)</code><br>
-//     * <i>native declaration : allheaders.h:4880</i>
-//     */
-//    int pixWriteTiffCustom(String filename, Pix pix, int comptype, String modestring, Numa natags, Sarray savals, Sarray satypes, Numa nasizes);
+    /**
+     * Original signature :
+     * <code>l_int32 pixWriteTiffCustom(const char*, PIX*, l_int32, const char*, NUMA*, SARRAY*, SARRAY*, NUMA*)</code><br>
+     * <i>native declaration : allheaders.h:4880</i>
+     */
+    int pixWriteTiffCustom(String filename, Pix pix, int comptype, String modestring, Numa natags, Sarray savals, Sarray satypes, Numa nasizes);
 
-//    /**
-//     * Original signature :
-//     * <code>l_int32 pixWriteStreamTiff(FILE*, PIX*, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4882</i>
-//     */
-//    int pixWriteStreamTiff(FILE fp, Pix pix, int comptype);
+    /**
+     * Original signature :
+     * <code>l_int32 pixWriteStreamTiff(FILE*, PIX*, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4882</i>
+     */
+    int pixWriteStreamTiff(FILE fp, Pix pix, int comptype);
 
-//    /**
-//     * Original signature :
-//     * <code>PIXA* pixaReadMultipageTiff(const char*)</code><br>
-//     * <i>native declaration : allheaders.h:4884</i>
-//     */
-//    Pixa pixaReadMultipageTiff(String filename);
+    /**
+     * Original signature :
+     * <code>PIXA* pixaReadMultipageTiff(const char*)</code><br>
+     * <i>native declaration : allheaders.h:4884</i>
+     */
+    Pixa pixaReadMultipageTiff(String filename);
 
-//    /**
-//     * Original signature :
-//     * <code>l_int32 writeMultipageTiff(const char*, const char*, const char*)</code><br>
-//     * <i>native declaration : allheaders.h:4886</i>
-//     */
-//    int writeMultipageTiff(String dirin, String substr, String fileout);
+    /**
+     * Original signature :
+     * <code>l_int32 writeMultipageTiff(const char*, const char*, const char*)</code><br>
+     * <i>native declaration : allheaders.h:4886</i>
+     */
+    int writeMultipageTiff(String dirin, String substr, String fileout);
 
-//    /**
-//     * Original signature :
-//     * <code>l_int32 writeMultipageTiffSA(SARRAY*, const char*)</code><br>
-//     * <i>native declaration : allheaders.h:4888</i>
-//     */
-//    int writeMultipageTiffSA(Sarray sa, String fileout);
+    /**
+     * Original signature :
+     * <code>l_int32 writeMultipageTiffSA(SARRAY*, const char*)</code><br>
+     * <i>native declaration : allheaders.h:4888</i>
+     */
+    int writeMultipageTiffSA(Sarray sa, String fileout);
 
-//    /**
-//     * Original signature :
-//     * <code>l_int32 fprintTiffInfo(FILE*, const char*)</code><br>
-//     * <i>native declaration : allheaders.h:4890</i>
-//     */
-//    int fprintTiffInfo(FILE fpout, String tiffile);
+    /**
+     * Original signature :
+     * <code>l_int32 fprintTiffInfo(FILE*, const char*)</code><br>
+     * <i>native declaration : allheaders.h:4890</i>
+     */
+    int fprintTiffInfo(FILE fpout, String tiffile);
 
-//    /**
-//     * Original signature :
-//     * <code>l_int32 tiffGetCount(FILE*, l_int32*)</code><br>
-//     * <i>native declaration : allheaders.h:4892</i>
-//     */
-//    int tiffGetCount(FILE fp, IntBuffer pn);
+    /**
+     * Original signature :
+     * <code>l_int32 tiffGetCount(FILE*, l_int32*)</code><br>
+     * <i>native declaration : allheaders.h:4892</i>
+     */
+    int tiffGetCount(FILE fp, IntBuffer pn);
 
-//    /**
-//     * Original signature :
-//     * <code>l_int32 getTiffResolution(FILE*, l_int32*, l_int32*)</code><br>
-//     * <i>native declaration : allheaders.h:4894</i>
-//     */
-//    int getTiffResolution(FILE fp, IntBuffer pxres, IntBuffer pyres);
+    /**
+     * Original signature :
+     * <code>l_int32 getTiffResolution(FILE*, l_int32*, l_int32*)</code><br>
+     * <i>native declaration : allheaders.h:4894</i>
+     */
+    int getTiffResolution(FILE fp, IntBuffer pxres, IntBuffer pyres);
 
-//    /**
-//     * Original signature :
-//     * <code>l_int32 readHeaderTiff(const char*, l_int32, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code><br>
-//     * <i>native declaration : allheaders.h:4896</i>
-//     */
-//    int readHeaderTiff(String filename, int n, IntBuffer pwidth, IntBuffer pheight, IntBuffer pbps, IntBuffer pspp, IntBuffer pres, IntBuffer pcmap, IntBuffer pformat);
+    /**
+     * Original signature :
+     * <code>l_int32 readHeaderTiff(const char*, l_int32, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code><br>
+     * <i>native declaration : allheaders.h:4896</i>
+     */
+    int readHeaderTiff(String filename, int n, IntBuffer pwidth, IntBuffer pheight, IntBuffer pbps, IntBuffer pspp, IntBuffer pres, IntBuffer pcmap, IntBuffer pformat);
 
-//    /**
-//     * Original signature :
-//     * <code>l_int32 freadHeaderTiff(FILE*, l_int32, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code><br>
-//     * <i>native declaration : allheaders.h:4898</i>
-//     */
-//    int freadHeaderTiff(FILE fp, int n, IntBuffer pwidth, IntBuffer pheight, IntBuffer pbps, IntBuffer pspp, IntBuffer pres, IntBuffer pcmap, IntBuffer pformat);
+    /**
+     * Original signature :
+     * <code>l_int32 freadHeaderTiff(FILE*, l_int32, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code><br>
+     * <i>native declaration : allheaders.h:4898</i>
+     */
+    int freadHeaderTiff(FILE fp, int n, IntBuffer pwidth, IntBuffer pheight, IntBuffer pbps, IntBuffer pspp, IntBuffer pres, IntBuffer pcmap, IntBuffer pformat);
 
     /**
      * Original signature :
@@ -17078,12 +17078,12 @@ public interface Leptonica extends Library, ILeptonica {
      */
     int readHeaderMemTiff(ByteBuffer cdata, NativeSize size, int n, IntBuffer pwidth, IntBuffer pheight, IntBuffer pbps, IntBuffer pspp, IntBuffer pres, IntBuffer pcmap, IntBuffer pformat);
 
-//    /**
-//     * Original signature :
-//     * <code>l_int32 findTiffCompression(FILE*, l_int32*)</code><br>
-//     * <i>native declaration : allheaders.h:4902</i>
-//     */
-//    int findTiffCompression(FILE fp, IntBuffer pcomptype);
+    /**
+     * Original signature :
+     * <code>l_int32 findTiffCompression(FILE*, l_int32*)</code><br>
+     * <i>native declaration : allheaders.h:4902</i>
+     */
+    int findTiffCompression(FILE fp, IntBuffer pcomptype);
 
 //    /**
 //     * Original signature :
@@ -17099,19 +17099,19 @@ public interface Leptonica extends Library, ILeptonica {
      */
     Pix pixReadMemTiff(ByteBuffer cdata, NativeSize size, int n);
 
-//    /**
-//     * Original signature :
-//     * <code>l_int32 pixWriteMemTiff(l_uint8**, size_t*, PIX*, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:4908</i>
-//     */
-//    int pixWriteMemTiff(PointerByReference pdata, NativeSizeByReference psize, Pix pix, int comptype);
+    /**
+     * Original signature :
+     * <code>l_int32 pixWriteMemTiff(l_uint8**, size_t*, PIX*, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:4908</i>
+     */
+    int pixWriteMemTiff(PointerByReference pdata, NativeSizeByReference psize, Pix pix, int comptype);
 
-//    /**
-//     * Original signature :
-//     * <code>l_int32 pixWriteMemTiffCustom(l_uint8**, size_t*, PIX*, l_int32, NUMA*, SARRAY*, SARRAY*, NUMA*)</code><br>
-//     * <i>native declaration : allheaders.h:4910</i>
-//     */
-//    int pixWriteMemTiffCustom(PointerByReference pdata, NativeSizeByReference psize, Pix pix, int comptype, Numa natags, Sarray savals, Sarray satypes, Numa nasizes);
+    /**
+     * Original signature :
+     * <code>l_int32 pixWriteMemTiffCustom(l_uint8**, size_t*, PIX*, l_int32, NUMA*, SARRAY*, SARRAY*, NUMA*)</code><br>
+     * <i>native declaration : allheaders.h:4910</i>
+     */
+    int pixWriteMemTiffCustom(PointerByReference pdata, NativeSizeByReference psize, Pix pix, int comptype, Numa natags, Sarray savals, Sarray satypes, Numa nasizes);
 
 //    /**
 //     * Original signature : <code>l_int32 setMsgSeverity(l_int32)</code><br>
@@ -17140,11 +17140,11 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    Pointer returnErrorPtr(String msg, String procname, Pointer pval);
 
-//    /**
-//     * Original signature : <code>char* stringNew(const char*)</code><br>
-//     * <i>native declaration : allheaders.h:4920</i>
-//     */
-//    Pointer stringNew(String src);
+    /**
+     * Original signature : <code>char* stringNew(const char*)</code><br>
+     * <i>native declaration : allheaders.h:4920</i>
+     */
+    Pointer stringNew(String src);
 
     /**
      * Original signature :
@@ -17153,19 +17153,19 @@ public interface Leptonica extends Library, ILeptonica {
      */
     int stringCopy(ByteBuffer dest, String src, int n);
 
-//    /**
-//     * Original signature :
-//     * <code>l_int32 stringReplace(char**, const char*)</code><br>
-//     * <i>native declaration : allheaders.h:4924</i>
-//     */
-//    int stringReplace(PointerByReference pdest, String src);
+    /**
+     * Original signature :
+     * <code>l_int32 stringReplace(char**, const char*)</code><br>
+     * <i>native declaration : allheaders.h:4924</i>
+     */
+    int stringReplace(PointerByReference pdest, String src);
 
-//    /**
-//     * Original signature :
-//     * <code>l_int32 stringLength(const char*, size_t)</code><br>
-//     * <i>native declaration : allheaders.h:4926</i>
-//     */
-//    int stringLength(String src, NativeSize size);
+    /**
+     * Original signature :
+     * <code>l_int32 stringLength(const char*, size_t)</code><br>
+     * <i>native declaration : allheaders.h:4926</i>
+     */
+    int stringLength(String src, NativeSize size);
 
     /**
      * Original signature :
