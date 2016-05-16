@@ -5541,12 +5541,72 @@ public class LeptonicaImpl implements Leptonica {
     }
 
     @Override
+    public Pix pixReadStreamPng(FILE fp) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int readHeaderPng(String filename, IntBuffer pw, IntBuffer ph, IntBuffer pbps, IntBuffer pspp, IntBuffer piscmap) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int freadHeaderPng(FILE fp, IntBuffer pw, IntBuffer ph, IntBuffer pbps, IntBuffer pspp, IntBuffer piscmap) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
     public int readHeaderMemPng(ByteBuffer data, NativeSize size, IntBuffer pw, IntBuffer ph, IntBuffer pbps, IntBuffer pspp, IntBuffer piscmap) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
+    public int fgetPngResolution(FILE fp, IntBuffer pxres, IntBuffer pyres) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int isPngInterlaced(String filename, IntBuffer pinterlaced) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int fgetPngColormapInfo(FILE fp, PointerByReference pcmap, IntBuffer ptransparency) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int fgetPngColormapInfo(FILE fp, PointerByReference pcmap, IntByReference ptransparency) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int pixWritePng(String filename, Pix pix, float gamma) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int pixWriteStreamPng(FILE fp, Pix pix, float gamma) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int pixSetZlibCompression(Pix pix, int compval) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public void l_pngSetReadStrip16To8(int flag) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
     public Pix pixReadMemPng(ByteBuffer cdata, NativeSize size) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int pixWriteMemPng(PointerByReference pdata, NativeSizeByReference psize, Pix pix, float gamma) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
@@ -5667,6 +5727,11 @@ public class LeptonicaImpl implements Leptonica {
 
     @Override
     public int findFileFormatBuffer(ByteBuffer buf, IntBuffer pformat) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int fileFormatIsTiff(FILE fp) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 

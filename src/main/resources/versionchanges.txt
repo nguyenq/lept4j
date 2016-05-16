@@ -23,6 +23,9 @@ Version 1.2 (19 March 2016):
 - Upgrade to Leptonica 1.73
 
 Version 1.2.1 (11 May 2016):
-- Add removeLines method
+- Implement removeLines method
 - Add back a few methods accidentally commented 
 - Revert jna to 4.1.0
+
+Version 1.2.2 (15 May 2016):
+- Include more API methods related to TIFF and PNG

@@ -12637,25 +12637,25 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    int pixTilingPaintTile(Pix pixd, int i, int j, Pix pixs, PixTiling pt);
 
-//    /**
-//     * Original signature : <code>PIX* pixReadStreamPng(FILE*)</code><br>
-//     * <i>native declaration : allheaders.h:3622</i>
-//     */
-//    Pix pixReadStreamPng(FILE fp);
+    /**
+     * Original signature : <code>PIX* pixReadStreamPng(FILE*)</code><br>
+     * <i>native declaration : allheaders.h:3622</i>
+     */
+    Pix pixReadStreamPng(FILE fp);
 
-//    /**
-//     * Original signature :
-//     * <code>l_int32 readHeaderPng(const char*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code><br>
-//     * <i>native declaration : allheaders.h:3624</i>
-//     */
-//    int readHeaderPng(String filename, IntBuffer pw, IntBuffer ph, IntBuffer pbps, IntBuffer pspp, IntBuffer piscmap);
+    /**
+     * Original signature :
+     * <code>l_int32 readHeaderPng(const char*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code><br>
+     * <i>native declaration : allheaders.h:3624</i>
+     */
+    int readHeaderPng(String filename, IntBuffer pw, IntBuffer ph, IntBuffer pbps, IntBuffer pspp, IntBuffer piscmap);
 
-//    /**
-//     * Original signature :
-//     * <code>l_int32 freadHeaderPng(FILE*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code><br>
-//     * <i>native declaration : allheaders.h:3626</i>
-//     */
-//    int freadHeaderPng(FILE fp, IntBuffer pw, IntBuffer ph, IntBuffer pbps, IntBuffer pspp, IntBuffer piscmap);
+    /**
+     * Original signature :
+     * <code>l_int32 freadHeaderPng(FILE*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code><br>
+     * <i>native declaration : allheaders.h:3626</i>
+     */
+    int freadHeaderPng(FILE fp, IntBuffer pw, IntBuffer ph, IntBuffer pbps, IntBuffer pspp, IntBuffer piscmap);
 
     /**
      * Original signature :
@@ -12664,61 +12664,61 @@ public interface Leptonica extends Library, ILeptonica {
      */
     int readHeaderMemPng(ByteBuffer data, NativeSize size, IntBuffer pw, IntBuffer ph, IntBuffer pbps, IntBuffer pspp, IntBuffer piscmap);
 
-//    /**
-//     * Original signature :
-//     * <code>l_int32 fgetPngResolution(FILE*, l_int32*, l_int32*)</code><br>
-//     * <i>native declaration : allheaders.h:3630</i>
-//     */
-//    int fgetPngResolution(FILE fp, IntBuffer pxres, IntBuffer pyres);
+    /**
+     * Original signature :
+     * <code>l_int32 fgetPngResolution(FILE*, l_int32*, l_int32*)</code><br>
+     * <i>native declaration : allheaders.h:3630</i>
+     */
+    int fgetPngResolution(FILE fp, IntBuffer pxres, IntBuffer pyres);
 
-//    /**
-//     * Original signature :
-//     * <code>l_int32 isPngInterlaced(const char*, l_int32*)</code><br>
-//     * <i>native declaration : allheaders.h:3632</i>
-//     */
-//    int isPngInterlaced(String filename, IntBuffer pinterlaced);
+    /**
+     * Original signature :
+     * <code>l_int32 isPngInterlaced(const char*, l_int32*)</code><br>
+     * <i>native declaration : allheaders.h:3632</i>
+     */
+    int isPngInterlaced(String filename, IntBuffer pinterlaced);
 
-//    /**
-//     * Original signature :
-//     * <code>l_int32 fgetPngColormapInfo(FILE*, PIXCMAP**, l_int32*)</code><br>
-//     * <i>native declaration : allheaders.h:3634</i>
-//     */
-//    int fgetPngColormapInfo(FILE fp, PointerByReference pcmap, IntBuffer ptransparency);
+    /**
+     * Original signature :
+     * <code>l_int32 fgetPngColormapInfo(FILE*, PIXCMAP**, l_int32*)</code><br>
+     * <i>native declaration : allheaders.h:3634</i>
+     */
+    int fgetPngColormapInfo(FILE fp, PointerByReference pcmap, IntBuffer ptransparency);
 
-//    /**
-//     * Original signature :
-//     * <code>l_int32 fgetPngColormapInfo(FILE*, PIXCMAP**, l_int32*)</code><br>
-//     * <i>native declaration : allheaders.h:3634</i>
-//     */
-//    int fgetPngColormapInfo(FILE fp, PointerByReference pcmap, IntByReference ptransparency);
+    /**
+     * Original signature :
+     * <code>l_int32 fgetPngColormapInfo(FILE*, PIXCMAP**, l_int32*)</code><br>
+     * <i>native declaration : allheaders.h:3634</i>
+     */
+    int fgetPngColormapInfo(FILE fp, PointerByReference pcmap, IntByReference ptransparency);
 
-//    /**
-//     * Original signature :
-//     * <code>l_int32 pixWritePng(const char*, PIX*, l_float32)</code><br>
-//     * <i>native declaration : allheaders.h:3636</i>
-//     */
-//    int pixWritePng(String filename, Pix pix, float gamma);
+    /**
+     * Original signature :
+     * <code>l_int32 pixWritePng(const char*, PIX*, l_float32)</code><br>
+     * <i>native declaration : allheaders.h:3636</i>
+     */
+    int pixWritePng(String filename, Pix pix, float gamma);
 
-//    /**
-//     * Original signature :
-//     * <code>l_int32 pixWriteStreamPng(FILE*, PIX*, l_float32)</code><br>
-//     * <i>native declaration : allheaders.h:3638</i>
-//     */
-//    int pixWriteStreamPng(FILE fp, Pix pix, float gamma);
+    /**
+     * Original signature :
+     * <code>l_int32 pixWriteStreamPng(FILE*, PIX*, l_float32)</code><br>
+     * <i>native declaration : allheaders.h:3638</i>
+     */
+    int pixWriteStreamPng(FILE fp, Pix pix, float gamma);
 
-//    /**
-//     * Original signature :
-//     * <code>l_int32 pixSetZlibCompression(PIX*, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:3640</i>
-//     */
-//    int pixSetZlibCompression(Pix pix, int compval);
+    /**
+     * Original signature :
+     * <code>l_int32 pixSetZlibCompression(PIX*, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:3640</i>
+     */
+    int pixSetZlibCompression(Pix pix, int compval);
 
-//    /**
-//     * Original signature :
-//     * <code>void l_pngSetReadStrip16To8(l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:3642</i>
-//     */
-//    void l_pngSetReadStrip16To8(int flag);
+    /**
+     * Original signature :
+     * <code>void l_pngSetReadStrip16To8(l_int32)</code><br>
+     * <i>native declaration : allheaders.h:3642</i>
+     */
+    void l_pngSetReadStrip16To8(int flag);
 
     /**
      * Original signature :
@@ -12727,12 +12727,12 @@ public interface Leptonica extends Library, ILeptonica {
      */
     Pix pixReadMemPng(ByteBuffer cdata, NativeSize size);
 
-//    /**
-//     * Original signature :
-//     * <code>l_int32 pixWriteMemPng(l_uint8**, size_t*, PIX*, l_float32)</code><br>
-//     * <i>native declaration : allheaders.h:3646</i>
-//     */
-//    int pixWriteMemPng(PointerByReference pdata, NativeSizeByReference psize, Pix pix, float gamma);
+    /**
+     * Original signature :
+     * <code>l_int32 pixWriteMemPng(l_uint8**, size_t*, PIX*, l_float32)</code><br>
+     * <i>native declaration : allheaders.h:3646</i>
+     */
+    int pixWriteMemPng(PointerByReference pdata, NativeSizeByReference psize, Pix pix, float gamma);
 
 //    /**
 //     * Original signature : <code>PIX* pixReadStreamPnm(FILE*)</code><br>
@@ -14218,11 +14218,11 @@ public interface Leptonica extends Library, ILeptonica {
      */
     int findFileFormatBuffer(ByteBuffer buf, IntBuffer pformat);
 
-//    /**
-//     * Original signature : <code>l_int32 fileFormatIsTiff(FILE*)</code><br>
-//     * <i>native declaration : allheaders.h:4070</i>
-//     */
-//    int fileFormatIsTiff(FILE fp);
+    /**
+     * Original signature : <code>l_int32 fileFormatIsTiff(FILE*)</code><br>
+     * <i>native declaration : allheaders.h:4070</i>
+     */
+    int fileFormatIsTiff(FILE fp);
 
     /**
      * Original signature :
