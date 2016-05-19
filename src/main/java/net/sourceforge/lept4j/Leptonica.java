@@ -1173,50 +1173,50 @@ public interface Leptonica extends Library, ILeptonica {
      */
     int boxChangeRefcount(Box box, int delta);
 
-//    /**
-//     * Original signature : <code>l_int32 boxIsValid(BOX*, l_int32*)</code><br>
-//     * <i>native declaration : allheaders.h:328</i>
-//     */
-//    int boxIsValid(Box box, IntBuffer pvalid);
-//
-//    /**
-//     * Original signature : <code>BOXA* boxaCreate(l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:330</i>
-//     */
-//    Boxa boxaCreate(int n);
-//
-//    /**
-//     * Original signature : <code>BOXA* boxaCopy(BOXA*, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:332</i>
-//     */
-//    Boxa boxaCopy(Boxa boxa, int copyflag);
-//
-//    /**
-//     * Original signature : <code>void boxaDestroy(BOXA**)</code><br>
-//     * <i>native declaration : allheaders.h:334</i>
-//     */
-//    void boxaDestroy(PointerByReference pboxa);
-//
-//    /**
-//     * Original signature :
-//     * <code>l_int32 boxaAddBox(BOXA*, BOX*, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:336</i>
-//     */
-//    int boxaAddBox(Boxa boxa, Box box, int copyflag);
-//
-//    /**
-//     * Original signature : <code>l_int32 boxaExtendArray(BOXA*)</code><br>
-//     * <i>native declaration : allheaders.h:338</i>
-//     */
-//    int boxaExtendArray(Boxa boxa);
-//
-//    /**
-//     * Original signature :
-//     * <code>l_int32 boxaExtendArrayToSize(BOXA*, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:340</i>
-//     */
-//    int boxaExtendArrayToSize(Boxa boxa, int size);
-//
+    /**
+     * Original signature : <code>l_int32 boxIsValid(BOX*, l_int32*)</code><br>
+     * <i>native declaration : allheaders.h:328</i>
+     */
+    int boxIsValid(Box box, IntBuffer pvalid);
+
+    /**
+     * Original signature : <code>BOXA* boxaCreate(l_int32)</code><br>
+     * <i>native declaration : allheaders.h:330</i>
+     */
+    Boxa boxaCreate(int n);
+
+    /**
+     * Original signature : <code>BOXA* boxaCopy(BOXA*, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:332</i>
+     */
+    Boxa boxaCopy(Boxa boxa, int copyflag);
+
+    /**
+     * Original signature : <code>void boxaDestroy(BOXA**)</code><br>
+     * <i>native declaration : allheaders.h:334</i>
+     */
+    void boxaDestroy(PointerByReference pboxa);
+
+    /**
+     * Original signature :
+     * <code>l_int32 boxaAddBox(BOXA*, BOX*, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:336</i>
+     */
+    int boxaAddBox(Boxa boxa, Box box, int copyflag);
+
+    /**
+     * Original signature : <code>l_int32 boxaExtendArray(BOXA*)</code><br>
+     * <i>native declaration : allheaders.h:338</i>
+     */
+    int boxaExtendArray(Boxa boxa);
+
+    /**
+     * Original signature :
+     * <code>l_int32 boxaExtendArrayToSize(BOXA*, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:340</i>
+     */
+    int boxaExtendArrayToSize(Boxa boxa, int size);
+
     /**
      * Original signature : <code>l_int32 boxaGetCount(BOXA*)</code><br>
      * <i>native declaration : allheaders.h:342</i>
@@ -1242,65 +1242,65 @@ public interface Leptonica extends Library, ILeptonica {
      * <i>native declaration : allheaders.h:348</i>
      */
     Box boxaGetValidBox(Boxa boxa, int index, int accessflag);
-//
-//    /**
-//     * Original signature :
-//     * <code>l_int32 boxaGetBoxGeometry(BOXA*, l_int32, l_int32*, l_int32*, l_int32*, l_int32*)</code><br>
-//     * <i>native declaration : allheaders.h:350</i>
-//     */
-//    int boxaGetBoxGeometry(Boxa boxa, int index, IntBuffer px, IntBuffer py, IntBuffer pw, IntBuffer ph);
-//
-//    /**
-//     * Original signature : <code>l_int32 boxaIsFull(BOXA*, l_int32*)</code><br>
-//     * <i>native declaration : allheaders.h:352</i>
-//     */
-//    int boxaIsFull(Boxa boxa, IntBuffer pfull);
-//
-//    /**
-//     * Original signature :
-//     * <code>l_int32 boxaReplaceBox(BOXA*, l_int32, BOX*)</code><br>
-//     * <i>native declaration : allheaders.h:354</i>
-//     */
-//    int boxaReplaceBox(Boxa boxa, int index, Box box);
-//
-//    /**
-//     * Original signature :
-//     * <code>l_int32 boxaInsertBox(BOXA*, l_int32, BOX*)</code><br>
-//     * <i>native declaration : allheaders.h:356</i>
-//     */
-//    int boxaInsertBox(Boxa boxa, int index, Box box);
-//
-//    /**
-//     * Original signature :
-//     * <code>l_int32 boxaRemoveBox(BOXA*, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:358</i>
-//     */
-//    int boxaRemoveBox(Boxa boxa, int index);
-//
-//    /**
-//     * Original signature :
-//     * <code>l_int32 boxaRemoveBoxAndSave(BOXA*, l_int32, BOX**)</code><br>
-//     * <i>native declaration : allheaders.h:360</i>
-//     */
-//    int boxaRemoveBoxAndSave(Boxa boxa, int index, PointerByReference pbox);
-//
-//    /**
-//     * Original signature : <code>BOXA* boxaSaveValid(BOXA*, l_int32)</code><br>
-//     * <i>native declaration : allheaders.h:362</i>
-//     */
-//    Boxa boxaSaveValid(Boxa boxas, int copyflag);
-//
-//    /**
-//     * Original signature : <code>l_int32 boxaInitFull(BOXA*, BOX*)</code><br>
-//     * <i>native declaration : allheaders.h:364</i>
-//     */
-//    int boxaInitFull(Boxa boxa, Box box);
-//
-//    /**
-//     * Original signature : <code>l_int32 boxaClear(BOXA*)</code><br>
-//     * <i>native declaration : allheaders.h:366</i>
-//     */
-//    int boxaClear(Boxa boxa);
+
+    /**
+     * Original signature :
+     * <code>l_int32 boxaGetBoxGeometry(BOXA*, l_int32, l_int32*, l_int32*, l_int32*, l_int32*)</code><br>
+     * <i>native declaration : allheaders.h:350</i>
+     */
+    int boxaGetBoxGeometry(Boxa boxa, int index, IntBuffer px, IntBuffer py, IntBuffer pw, IntBuffer ph);
+
+    /**
+     * Original signature : <code>l_int32 boxaIsFull(BOXA*, l_int32*)</code><br>
+     * <i>native declaration : allheaders.h:352</i>
+     */
+    int boxaIsFull(Boxa boxa, IntBuffer pfull);
+
+    /**
+     * Original signature :
+     * <code>l_int32 boxaReplaceBox(BOXA*, l_int32, BOX*)</code><br>
+     * <i>native declaration : allheaders.h:354</i>
+     */
+    int boxaReplaceBox(Boxa boxa, int index, Box box);
+
+    /**
+     * Original signature :
+     * <code>l_int32 boxaInsertBox(BOXA*, l_int32, BOX*)</code><br>
+     * <i>native declaration : allheaders.h:356</i>
+     */
+    int boxaInsertBox(Boxa boxa, int index, Box box);
+
+    /**
+     * Original signature :
+     * <code>l_int32 boxaRemoveBox(BOXA*, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:358</i>
+     */
+    int boxaRemoveBox(Boxa boxa, int index);
+
+    /**
+     * Original signature :
+     * <code>l_int32 boxaRemoveBoxAndSave(BOXA*, l_int32, BOX**)</code><br>
+     * <i>native declaration : allheaders.h:360</i>
+     */
+    int boxaRemoveBoxAndSave(Boxa boxa, int index, PointerByReference pbox);
+
+    /**
+     * Original signature : <code>BOXA* boxaSaveValid(BOXA*, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:362</i>
+     */
+    Boxa boxaSaveValid(Boxa boxas, int copyflag);
+
+    /**
+     * Original signature : <code>l_int32 boxaInitFull(BOXA*, BOX*)</code><br>
+     * <i>native declaration : allheaders.h:364</i>
+     */
+    int boxaInitFull(Boxa boxa, Box box);
+
+    /**
+     * Original signature : <code>l_int32 boxaClear(BOXA*)</code><br>
+     * <i>native declaration : allheaders.h:366</i>
+     */
+    int boxaClear(Boxa boxa);
 //
 //    /**
 //     * Original signature : <code>BOXAA* boxaaCreate(l_int32)</code><br>
@@ -15403,63 +15403,63 @@ public interface Leptonica extends Library, ILeptonica {
 //     * <i>native declaration : allheaders.h:4408</i>
 //     */
 //    int stringCompareLexical(String str1, String str2);
-
-    /**
-     * Original signature :
-     * <code>SARRAY* sarrayUnionByAset(SARRAY*, SARRAY*)</code><br>
-     * <i>native declaration : allheaders.h:4410</i>
-     */
-    Sarray sarrayUnionByAset(Sarray sa1, Sarray sa2);
-
-    /**
-     * Original signature :
-     * <code>SARRAY* sarrayRemoveDupsByAset(SARRAY*)</code><br>
-     * <i>native declaration : allheaders.h:4412</i>
-     */
-    Sarray sarrayRemoveDupsByAset(Sarray sas);
-
-    /**
-     * Original signature :
-     * <code>SARRAY* sarrayIntersectionByAset(SARRAY*, SARRAY*)</code><br>
-     * <i>native declaration : allheaders.h:4414</i>
-     */
-    Sarray sarrayIntersectionByAset(Sarray sa1, Sarray sa2);
-
-    /**
-     * Original signature :
-     * <code>L_ASET* l_asetCreateFromSarray(SARRAY*)</code><br>
-     * <i>native declaration : allheaders.h:4416</i>
-     */
-    L_Rbtree l_asetCreateFromSarray(Sarray sa);
-
-    /**
-     * Original signature :
-     * <code>l_int32 sarrayRemoveDupsByHash(SARRAY*, SARRAY**, L_DNAHASH**)</code><br>
-     * <i>native declaration : allheaders.h:4418</i>
-     */
-    int sarrayRemoveDupsByHash(Sarray sas, PointerByReference psad, PointerByReference pdahash);
-
-    /**
-     * Original signature :
-     * <code>SARRAY* sarrayIntersectionByHash(SARRAY*, SARRAY*)</code><br>
-     * <i>native declaration : allheaders.h:4420</i>
-     */
-    Sarray sarrayIntersectionByHash(Sarray sa1, Sarray sa2);
-
-    /**
-     * Original signature :
-     * <code>l_int32 sarrayFindStringByHash(SARRAY*, L_DNAHASH*, const char*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:4422</i>
-     */
-    int sarrayFindStringByHash(Sarray sa, L_DnaHash dahash, String str, IntBuffer pindex);
-
-    /**
-     * Original signature :
-     * <code>L_DNAHASH* l_dnaHashCreateFromSarray(SARRAY*)</code><br>
-     * <i>native declaration : allheaders.h:4424</i>
-     */
-    L_DnaHash l_dnaHashCreateFromSarray(Sarray sa);
-
+//
+//    /**
+//     * Original signature :
+//     * <code>SARRAY* sarrayUnionByAset(SARRAY*, SARRAY*)</code><br>
+//     * <i>native declaration : allheaders.h:4410</i>
+//     */
+//    Sarray sarrayUnionByAset(Sarray sa1, Sarray sa2);
+//
+//    /**
+//     * Original signature :
+//     * <code>SARRAY* sarrayRemoveDupsByAset(SARRAY*)</code><br>
+//     * <i>native declaration : allheaders.h:4412</i>
+//     */
+//    Sarray sarrayRemoveDupsByAset(Sarray sas);
+//
+//    /**
+//     * Original signature :
+//     * <code>SARRAY* sarrayIntersectionByAset(SARRAY*, SARRAY*)</code><br>
+//     * <i>native declaration : allheaders.h:4414</i>
+//     */
+//    Sarray sarrayIntersectionByAset(Sarray sa1, Sarray sa2);
+//
+//    /**
+//     * Original signature :
+//     * <code>L_ASET* l_asetCreateFromSarray(SARRAY*)</code><br>
+//     * <i>native declaration : allheaders.h:4416</i>
+//     */
+//    L_Rbtree l_asetCreateFromSarray(Sarray sa);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 sarrayRemoveDupsByHash(SARRAY*, SARRAY**, L_DNAHASH**)</code><br>
+//     * <i>native declaration : allheaders.h:4418</i>
+//     */
+//    int sarrayRemoveDupsByHash(Sarray sas, PointerByReference psad, PointerByReference pdahash);
+//
+//    /**
+//     * Original signature :
+//     * <code>SARRAY* sarrayIntersectionByHash(SARRAY*, SARRAY*)</code><br>
+//     * <i>native declaration : allheaders.h:4420</i>
+//     */
+//    Sarray sarrayIntersectionByHash(Sarray sa1, Sarray sa2);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 sarrayFindStringByHash(SARRAY*, L_DNAHASH*, const char*, l_int32*)</code><br>
+//     * <i>native declaration : allheaders.h:4422</i>
+//     */
+//    int sarrayFindStringByHash(Sarray sa, L_DnaHash dahash, String str, IntBuffer pindex);
+//
+//    /**
+//     * Original signature :
+//     * <code>L_DNAHASH* l_dnaHashCreateFromSarray(SARRAY*)</code><br>
+//     * <i>native declaration : allheaders.h:4424</i>
+//     */
+//    L_DnaHash l_dnaHashCreateFromSarray(Sarray sa);
+//
 //    /**
 //     * Original signature : <code>SARRAY* sarrayRead(const char*)</code><br>
 //     * <i>native declaration : allheaders.h:4426</i>
@@ -17139,47 +17139,47 @@ public interface Leptonica extends Library, ILeptonica {
 //     * <i>native declaration : allheaders.h:4918</i>
 //     */
 //    Pointer returnErrorPtr(String msg, String procname, Pointer pval);
-
-    /**
-     * Original signature : <code>char* stringNew(const char*)</code><br>
-     * <i>native declaration : allheaders.h:4920</i>
-     */
-    Pointer stringNew(String src);
-
-    /**
-     * Original signature :
-     * <code>l_int32 stringCopy(char*, const char*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:4922</i>
-     */
-    int stringCopy(ByteBuffer dest, String src, int n);
-
-    /**
-     * Original signature :
-     * <code>l_int32 stringReplace(char**, const char*)</code><br>
-     * <i>native declaration : allheaders.h:4924</i>
-     */
-    int stringReplace(PointerByReference pdest, String src);
-
-    /**
-     * Original signature :
-     * <code>l_int32 stringLength(const char*, size_t)</code><br>
-     * <i>native declaration : allheaders.h:4926</i>
-     */
-    int stringLength(String src, NativeSize size);
-
-    /**
-     * Original signature :
-     * <code>l_int32 stringCat(char*, size_t, const char*)</code><br>
-     * <i>native declaration : allheaders.h:4928</i>
-     */
-    int stringCat(ByteBuffer dest, NativeSize size, String src);
-
-    /**
-     * Original signature :
-     * <code>char* stringConcatNew(const char*, null)</code><br>
-     * <i>native declaration : allheaders.h:4930</i>
-     */
-    Pointer stringConcatNew(String first, PointerByReference varArgs);
+//
+//    /**
+//     * Original signature : <code>char* stringNew(const char*)</code><br>
+//     * <i>native declaration : allheaders.h:4920</i>
+//     */
+//    Pointer stringNew(String src);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 stringCopy(char*, const char*, l_int32)</code><br>
+//     * <i>native declaration : allheaders.h:4922</i>
+//     */
+//    int stringCopy(ByteBuffer dest, String src, int n);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 stringReplace(char**, const char*)</code><br>
+//     * <i>native declaration : allheaders.h:4924</i>
+//     */
+//    int stringReplace(PointerByReference pdest, String src);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 stringLength(const char*, size_t)</code><br>
+//     * <i>native declaration : allheaders.h:4926</i>
+//     */
+//    int stringLength(String src, NativeSize size);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 stringCat(char*, size_t, const char*)</code><br>
+//     * <i>native declaration : allheaders.h:4928</i>
+//     */
+//    int stringCat(ByteBuffer dest, NativeSize size, String src);
+//
+//    /**
+//     * Original signature :
+//     * <code>char* stringConcatNew(const char*, null)</code><br>
+//     * <i>native declaration : allheaders.h:4930</i>
+//     */
+//    Pointer stringConcatNew(String first, PointerByReference varArgs);
 
 //    /**
 //     * Original signature :
@@ -17200,21 +17200,21 @@ public interface Leptonica extends Library, ILeptonica {
 //     * <i>native declaration : allheaders.h:4936</i>
 //     */
 //    Pointer stringReverse(String src);
-
-    /**
-     * Original signature :
-     * <code>char* strtokSafe(char*, const char*, char**)</code><br>
-     * <i>native declaration : allheaders.h:4938</i>
-     */
-    Pointer strtokSafe(ByteBuffer cstr, String seps, PointerByReference psaveptr);
-
-    /**
-     * Original signature :
-     * <code>l_int32 stringSplitOnToken(char*, const char*, char**, char**)</code><br>
-     * <i>native declaration : allheaders.h:4940</i>
-     */
-    int stringSplitOnToken(ByteBuffer cstr, String seps, PointerByReference phead, PointerByReference ptail);
-
+//
+//    /**
+//     * Original signature :
+//     * <code>char* strtokSafe(char*, const char*, char**)</code><br>
+//     * <i>native declaration : allheaders.h:4938</i>
+//     */
+//    Pointer strtokSafe(ByteBuffer cstr, String seps, PointerByReference psaveptr);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 stringSplitOnToken(char*, const char*, char**, char**)</code><br>
+//     * <i>native declaration : allheaders.h:4940</i>
+//     */
+//    int stringSplitOnToken(ByteBuffer cstr, String seps, PointerByReference phead, PointerByReference ptail);
+//
 //    /**
 //     * Original signature :
 //     * <code>char* stringRemoveChars(const char*, const char*)</code><br>

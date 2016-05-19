@@ -29,3 +29,6 @@ Version 1.2.1 (11 May 2016):
 
 Version 1.2.2 (15 May 2016):
 - Include more API methods related to TIFF and PNG
+
+Version 1.2.3 (19 May 2016):
+- Include more API methods related to box array operations
