@@ -726,6 +726,41 @@ public class LeptonicaImpl implements Leptonica {
     }
 
     @Override
+    public int boxIsValid(Box box, IntBuffer pvalid) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public Boxa boxaCreate(int n) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public Boxa boxaCopy(Boxa boxa, int copyflag) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public void boxaDestroy(PointerByReference pboxa) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int boxaAddBox(Boxa boxa, Box box, int copyflag) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int boxaExtendArray(Boxa boxa) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int boxaExtendArrayToSize(Boxa boxa, int size) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
     public int boxaGetCount(Boxa boxa) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
@@ -742,6 +777,51 @@ public class LeptonicaImpl implements Leptonica {
 
     @Override
     public Box boxaGetValidBox(Boxa boxa, int index, int accessflag) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int boxaGetBoxGeometry(Boxa boxa, int index, IntBuffer px, IntBuffer py, IntBuffer pw, IntBuffer ph) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int boxaIsFull(Boxa boxa, IntBuffer pfull) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int boxaReplaceBox(Boxa boxa, int index, Box box) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int boxaInsertBox(Boxa boxa, int index, Box box) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int boxaRemoveBox(Boxa boxa, int index) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int boxaRemoveBoxAndSave(Boxa boxa, int index, PointerByReference pbox) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public Boxa boxaSaveValid(Boxa boxas, int copyflag) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int boxaInitFull(Boxa boxa, Box box) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int boxaClear(Boxa boxa) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
@@ -5936,46 +6016,6 @@ public class LeptonicaImpl implements Leptonica {
     }
 
     @Override
-    public Sarray sarrayUnionByAset(Sarray sa1, Sarray sa2) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public Sarray sarrayRemoveDupsByAset(Sarray sas) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public Sarray sarrayIntersectionByAset(Sarray sa1, Sarray sa2) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public L_Rbtree l_asetCreateFromSarray(Sarray sa) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public int sarrayRemoveDupsByHash(Sarray sas, PointerByReference psad, PointerByReference pdahash) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public Sarray sarrayIntersectionByHash(Sarray sa1, Sarray sa2) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public int sarrayFindStringByHash(Sarray sa, L_DnaHash dahash, String str, IntBuffer pindex) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public L_DnaHash l_dnaHashCreateFromSarray(Sarray sa) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
     public Pix pixScale(Pix pixs, float scalex, float scaley) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
@@ -6387,46 +6427,6 @@ public class LeptonicaImpl implements Leptonica {
 
     @Override
     public int pixWriteMemTiffCustom(PointerByReference pdata, NativeSizeByReference psize, Pix pix, int comptype, Numa natags, Sarray savals, Sarray satypes, Numa nasizes) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public Pointer stringNew(String src) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public int stringCopy(ByteBuffer dest, String src, int n) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public int stringReplace(PointerByReference pdest, String src) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public int stringLength(String src, NativeSize size) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public int stringCat(ByteBuffer dest, NativeSize size, String src) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public Pointer stringConcatNew(String first, PointerByReference varArgs) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public Pointer strtokSafe(ByteBuffer cstr, String seps, PointerByReference psaveptr) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public int stringSplitOnToken(ByteBuffer cstr, String seps, PointerByReference phead, PointerByReference ptail) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 

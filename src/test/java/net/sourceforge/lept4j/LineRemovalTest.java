@@ -251,6 +251,9 @@ private final String testResourcesPath = "src/test/resources/test-data";
      * @param pix
      */
     void disposePix(Pix pix) {
+        if (pix == null) {
+            return;
+        }
         PointerByReference pRef = new PointerByReference();
         pRef.setValue(pix.getPointer());
         Leptonica1.pixDestroy(pRef);
