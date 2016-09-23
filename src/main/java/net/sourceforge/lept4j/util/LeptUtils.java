@@ -203,8 +203,6 @@ public class LeptUtils {
             Leptonica1.dewarpaDestroy(pRef);
         } else if (resource instanceof L_Dna) {
             Leptonica1.l_dnaDestroy(pRef);
-        } else if (resource instanceof L_Dewarpa) {
-            Leptonica1.dewarpaDestroy(pRef);
         } else if (resource instanceof L_Dnaa) {
             Leptonica1.l_dnaaDestroy(pRef);
         } else if (resource instanceof L_DnaHash) {
