@@ -104,7 +104,7 @@ public class OtsuTest {
             thresh.rewind();
             /* Give gnuplot time to write out the plot */
             Thread.sleep(1000);
-            pixp = Leptonica1.pixRead("/tmp/histplot.png");
+            pixp = Leptonica1.pixRead(System.getProperty("java.io.tmpdir") + "/redout/histplot.png");
             Leptonica1.pixSaveTiled(pixp, pixa, 1.0f, 0, 20, 1);
             pixt1 = Leptonica1.pixaDisplay(pixa, 0, 0);
             textstr = String.format("Scorefract = %3.1f ........... Thresh = %d", scorefract, thresh.get());
