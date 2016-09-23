@@ -42,6 +42,7 @@ import com.ochafik.lang.jnaerator.runtime.NativeSizeByReference;
 import static net.sourceforge.lept4j.ILeptonica.IFF_TIFF;
 import net.sourceforge.lept4j.Leptonica1;
 import net.sourceforge.lept4j.Pix;
+import net.sourceforge.lept4j.Pixa;
 
 /**
  * Various utility methods for Leptonica.
@@ -84,7 +85,7 @@ public class LeptUtils {
         Pix pix = Leptonica1.pixReadMem(buff, new NativeSize(buff.capacity()));
         return pix;
     }
-    
+
     /**
      * Removes horizontal lines from a grayscale image. The algorithm is based
      * on Leptonica <code>lineremoval.c</code> example.
@@ -162,6 +163,20 @@ public class LeptUtils {
         PointerByReference pRef = new PointerByReference();
         pRef.setValue(pix.getPointer());
         Leptonica1.pixDestroy(pRef);
+    }
+
+    /**
+     * Disposes of Pixa resource.
+     *
+     * @param pixa
+     */
+    public static void destroyPixa(Pixa pixa) {
+        if (pixa == null) {
+            return;
+        }
+        PointerByReference pRef = new PointerByReference();
+        pRef.setValue(pixa.getPointer());
+        Leptonica1.pixaDestroy(pRef);
     }
 
     /**
