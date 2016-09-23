@@ -48,7 +48,7 @@ import static net.sourceforge.lept4j.ILeptonica.IFF_TIFF;
  */
 public class LeptUtils {
 
-    final static String JAI_IMAGE_WRITER_MESSAGE = "Need to install JAI Image I/O package.\nhttps://java.net/projects/jai-imageio/";
+    final static String JAI_IMAGE_WRITER_MESSAGE = "Need to install JAI Image I/O package.\nhttps://github.com/jai-imageio/jai-imageio-core";
     final static String TIFF_FORMAT = "tiff";
     final static float deg2rad = (float) (3.14159 / 180.);
 
@@ -68,6 +68,7 @@ public class LeptUtils {
         InputStream in = new ByteArrayInputStream(b);
         BufferedImage bi = ImageIO.read(in);
         in.close();
+        Leptonica1.bbufferDestroy(pdata);
         return bi;
     }
 
