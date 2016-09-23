@@ -156,7 +156,7 @@ public class OtsuTest {
      * @param pixa
      */
     void pixaDestroy(Pixa pixa) {
-        LeptUtils.disposePixa(pixa);
+        LeptUtils.dispose(pixa);
     }
 
     /**

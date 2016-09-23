@@ -164,20 +164,6 @@ public class LeptUtils {
     }
 
     /**
-     * Disposes of Pixa resource.
-     *
-     * @param pixa
-     */
-    public static void disposePixa(Pixa pixa) {
-        if (pixa == null) {
-            return;
-        }
-        PointerByReference pRef = new PointerByReference();
-        pRef.setValue(pixa.getPointer());
-        Leptonica1.pixaDestroy(pRef);
-    }
-
-    /**
      * Disposes of Leptonica native resource.
      *
      * @param resource
