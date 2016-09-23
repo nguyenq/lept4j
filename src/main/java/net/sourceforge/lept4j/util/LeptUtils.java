@@ -38,11 +38,9 @@ import com.sun.jna.ptr.PointerByReference;
 
 import com.ochafik.lang.jnaerator.runtime.NativeSize;
 import com.ochafik.lang.jnaerator.runtime.NativeSizeByReference;
-
+import com.sun.jna.Structure;
+import net.sourceforge.lept4j.*;
 import static net.sourceforge.lept4j.ILeptonica.IFF_TIFF;
-import net.sourceforge.lept4j.Leptonica1;
-import net.sourceforge.lept4j.Pix;
-import net.sourceforge.lept4j.Pixa;
 
 /**
  * Various utility methods for Leptonica.
@@ -170,13 +168,112 @@ public class LeptUtils {
      *
      * @param pixa
      */
-    public static void destroyPixa(Pixa pixa) {
+    public static void disposePixa(Pixa pixa) {
         if (pixa == null) {
             return;
         }
         PointerByReference pRef = new PointerByReference();
         pRef.setValue(pixa.getPointer());
         Leptonica1.pixaDestroy(pRef);
+    }
+
+    /**
+     * Disposes of Leptonica native resource.
+     *
+     * @param resource
+     */
+    public static void dispose(Structure resource) {
+        if (resource == null) {
+            return;
+        }
+        PointerByReference pRef = new PointerByReference();
+        pRef.setValue(resource.getPointer());
+
+        if (resource instanceof Pix) {
+            Leptonica1.pixDestroy(pRef);
+        } else if (resource instanceof Pixa) {
+            Leptonica1.pixaDestroy(pRef);
+        } else if (resource instanceof Box) {
+            Leptonica1.boxDestroy(pRef);
+        } else if (resource instanceof Boxa) {
+            Leptonica1.boxaDestroy(pRef);
+        } else if (resource instanceof L_Bmf) {
+            Leptonica1.bmfDestroy(pRef);
+        } else if (resource instanceof L_ByteBuffer) {
+            Leptonica1.bbufferDestroy(pRef);
+        } else if (resource instanceof Boxaa) {
+            Leptonica1.boxaaDestroy(pRef);
+        } else if (resource instanceof L_Bytea) {
+            Leptonica1.l_byteaDestroy(pRef);
+        } else if (resource instanceof CCBorda) {
+            Leptonica1.ccbaDestroy(pRef);
+        } else if (resource instanceof CCBord) {
+            Leptonica1.ccbDestroy(pRef);
+        } else if (resource instanceof PixColormap) {
+            Leptonica1.pixcmapDestroy(pRef);
+        } else if (resource instanceof L_Dewarp) {
+            Leptonica1.dewarpDestroy(pRef);
+        } else if (resource instanceof L_Dewarpa) {
+            Leptonica1.dewarpaDestroy(pRef);
+        } else if (resource instanceof L_Dna) {
+            Leptonica1.l_dnaDestroy(pRef);
+        } else if (resource instanceof L_Dewarpa) {
+            Leptonica1.dewarpaDestroy(pRef);
+        } else if (resource instanceof L_Dnaa) {
+            Leptonica1.l_dnaaDestroy(pRef);
+        } else if (resource instanceof L_DnaHash) {
+            Leptonica1.l_dnaHashDestroy(pRef);
+        } else if (resource instanceof FPix) {
+            Leptonica1.fpixDestroy(pRef);
+        } else if (resource instanceof FPixa) {
+            Leptonica1.fpixaDestroy(pRef);
+        } else if (resource instanceof DPix) {
+            Leptonica1.dpixDestroy(pRef);
+        } else if (resource instanceof GPlot) {
+            Leptonica1.gplotDestroy(pRef);
+        } else if (resource instanceof JbClasser) {
+            Leptonica1.jbClasserDestroy(pRef);
+        } else if (resource instanceof JbData) {
+            Leptonica1.jbDataDestroy(pRef);
+        } else if (resource instanceof L_Kernel) {
+            Leptonica1.kernelDestroy(pRef);
+        } else if (resource instanceof Numa) {
+            Leptonica1.numaDestroy(pRef);
+        } else if (resource instanceof Numaa) {
+            Leptonica1.numaaDestroy(pRef);
+        } else if (resource instanceof Pixaa) {
+            Leptonica1.pixaaDestroy(pRef);
+        } else if (resource instanceof Pixacc) {
+            Leptonica1.pixaccDestroy(pRef);
+        } else if (resource instanceof PixComp) {
+            Leptonica1.pixcompDestroy(pRef);
+        } else if (resource instanceof PixaComp) {
+            Leptonica1.pixacompDestroy(pRef);
+        } else if (resource instanceof PixTiling) {
+            Leptonica1.pixTilingDestroy(pRef);
+        } else if (resource instanceof Pta) {
+            Leptonica1.ptaDestroy(pRef);
+        } else if (resource instanceof Ptaa) {
+            Leptonica1.ptaaDestroy(pRef);
+        } else if (resource instanceof L_Recoga) {
+            Leptonica1.recogaDestroy(pRef);
+        } else if (resource instanceof L_Recog) {
+            Leptonica1.recogDestroy(pRef);
+        } else if (resource instanceof Sarray) {
+            Leptonica1.sarrayDestroy(pRef);
+        } else if (resource instanceof Sela) {
+            Leptonica1.selaDestroy(pRef);
+        } else if (resource instanceof L_Sudoku) {
+            Leptonica1.sudokuDestroy(pRef);
+        } else if (resource instanceof L_WShed) {
+            Leptonica1.wshedDestroy(pRef);
+        } else if (resource instanceof DoubleLinkedList) {
+            Leptonica1.listDestroy(pRef);
+        } else if (resource instanceof L_Rbtree) {
+            Leptonica1.l_rbtreeDestroy(pRef);
+        } else {
+            throw new RuntimeException("Not supported.");
+        }
     }
 
     /**

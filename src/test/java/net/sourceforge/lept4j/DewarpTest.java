@@ -20,6 +20,7 @@ import java.io.File;
 import static net.sourceforge.lept4j.ILeptonica.IFF_JFIF_JPEG;
 import static net.sourceforge.lept4j.ILeptonica.IFF_PNG;
 import static net.sourceforge.lept4j.ILeptonica.IFF_TIFF_G4;
+import net.sourceforge.lept4j.util.LeptUtils;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -42,7 +43,6 @@ public class DewarpTest {
     Leptonica instance;
 
     public DewarpTest() {
-
     }
 
     @BeforeClass
@@ -216,11 +216,6 @@ public class DewarpTest {
      * @param pix
      */
     void pixDestroy(Pix pix) {
-        if (pix == null) {
-            return;
-        }
-        PointerByReference pRef = new PointerByReference();
-        pRef.setValue(pix.getPointer());
-        instance.pixDestroy(pRef);
+        LeptUtils.disposePix(pix);
     }
 }

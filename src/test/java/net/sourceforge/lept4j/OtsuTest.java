@@ -33,7 +33,7 @@ import org.junit.Test;
  * thresholding an image that doesn't have a well-defined background color.
  * <br>
  * Standard Otsu binarization is done with <code>scorefract</code> = 0.0, which
- * returns the threshold at the maximum value of the score. However. this value
+ * returns the threshold at the maximum value of the score. However, this value
  * is up on the shoulder of the background, and its use causes some of the dark
  * background to be binarized as foreground.
  * <br>
@@ -44,25 +44,24 @@ import org.junit.Test;
  * much cleaner binarization.
  */
 public class OtsuTest {
-
+    
     private final String testResourcesPath = "src/test/resources/test-data";
-
+    
     public OtsuTest() {
-
     }
-
+    
     @BeforeClass
     public static void setUpClass() {
     }
-
+    
     @AfterClass
     public static void tearDownClass() {
     }
-
+    
     @Before
     public void setUp() {
     }
-
+    
     @After
     public void tearDown() {
     }
@@ -83,7 +82,7 @@ public class OtsuTest {
         L_Bmf bmf;
         Pix pixs, pixb, pixb2, pixb3, pixg, pixp, pixt1, pixt2;
         Pixa pixa;
-
+        
         String filename = "1555-7.jpg";
         File image = new File(testResourcesPath, filename);
         pixs = Leptonica1.pixRead(image.getPath());
@@ -118,7 +117,7 @@ public class OtsuTest {
             pixDestroy(pixt2);
             pixaDestroy(pixa);
         }
-
+        
         pixa = Leptonica1.pixaCreate(2);
         for (int i = 0; i < 2; i++) {
             scorefract = 0.1f * i;
@@ -136,7 +135,7 @@ public class OtsuTest {
         Leptonica1.pixWrite("target/test-classes/test-results/otsu-tiled.jpg", pixb, IFF_PNG);
         pixDestroy(pixb);
         pixaDestroy(pixa);
-
+        
         bmfDestroy(bmf);
         pixDestroy(pixs);
         pixDestroy(pixg);
@@ -157,7 +156,7 @@ public class OtsuTest {
      * @param pixa
      */
     void pixaDestroy(Pixa pixa) {
-        LeptUtils.destroyPixa(pixa);
+        LeptUtils.disposePixa(pixa);
     }
 
     /**
@@ -166,11 +165,6 @@ public class OtsuTest {
      * @param bmf
      */
     void bmfDestroy(L_Bmf bmf) {
-        if (bmf == null) {
-            return;
-        }
-        PointerByReference pRef = new PointerByReference();
-        pRef.setValue(bmf.getPointer());
-        Leptonica1.bmfDestroy(pRef);
+        LeptUtils.dispose(bmf);
     }
 }
