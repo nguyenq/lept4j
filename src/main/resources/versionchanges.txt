@@ -32,3 +32,7 @@ Version 1.2.2 (15 May 2016):
 
 Version 1.2.3 (29 May 2016):
 - Include more API methods related to box array operations
+
+Version 1.2.4 (24 September 2016):
+- Fix Invalid memory access error caused by memory leaks in convertPixToImage
+- Add Otsu test case

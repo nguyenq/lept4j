@@ -88,6 +88,9 @@ public class LeptUtils {
     /**
      * Removes horizontal lines from a grayscale image. The algorithm is based
      * on Leptonica <code>lineremoval.c</code> example.
+     * <br>
+     * To remove vertical lines, rotate the image 90 degrees first, remove the
+     * horizontal lines, and rotate it back.
      *
      * @see
      * <a href="http://www.leptonica.com/line-removal.html">line-removal</a>
@@ -167,7 +170,9 @@ public class LeptUtils {
     /**
      * Disposes of Leptonica native resource.
      *
-     * @param resource
+     * @param resource A Leptonica object, such as <code>Pix</code>,
+     * <code>Pixa</code>, <code>Box</code>, <code>Boxa</code>,
+     * <code>PixColormap</code>, etc.
      */
     public static void dispose(Structure resource) {
         if (resource == null) {

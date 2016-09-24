@@ -32,12 +32,12 @@ import org.junit.Test;
  * This demonstrates the usefulness of the modified version of Otsu for
  * thresholding an image that doesn't have a well-defined background color.
  * <br>
- * Standard Otsu binarization is done with <code>scorefract</code> = 0.0, which
+ * Standard Otsu binarization is done with <code>scorefract = 0.0</code>, which
  * returns the threshold at the maximum value of the score. However, this value
  * is up on the shoulder of the background, and its use causes some of the dark
  * background to be binarized as foreground.
  * <br>
- * Using the modified Otsu with <code>scorefract</code> = 0.1 returns a
+ * Using the modified Otsu with <code>scorefract = 0.1</code> returns a
  * threshold at the lowest value of this histogram such that the score is at
  * least 0.9 times the maximum value of the score. This allows the threshold to
  * be taken in the histogram minimum between the fg and bg peaks, producing a
