@@ -136,7 +136,7 @@ public class LeptUtilsTest {
         Leptonica1.pixWrite(outfile, result3, IFF_PNG);
         Leptonica1.pixDisplayWrite(result3, 1);
 
-        Leptonica1.pixDisplayMultiple("target/test-classes/test-results/result-*.png");
+        Leptonica1.pixDisplayMultiple(300, 1f, "target/test-classes/test-results/result-*.png");
 
         // resource cleanup
         LeptUtils.disposePix(pixs);

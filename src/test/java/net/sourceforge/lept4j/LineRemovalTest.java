@@ -139,7 +139,7 @@ private final String testResourcesPath = "src/test/resources/test-data";
         instance.pixWrite("target/test-classes/test-results/dave-result.png", pix8, IFF_PNG);
         instance.pixDisplayWrite(pix8, 1);
 
-        instance.pixDisplayMultiple("target/test-classes/test-results/dave-proc*.png");
+        instance.pixDisplayMultiple(300, 1f, "target/test-classes/test-results/dave-proc*.png");
 
         // resource cleanup
         disposePix(pixs);

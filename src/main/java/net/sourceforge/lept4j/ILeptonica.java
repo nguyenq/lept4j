@@ -132,87 +132,78 @@ public interface ILeptonica {
 
     /**
      * gplot.h<br>
-     * Data structures and parameters for generating gnuplot files<br>
-     * <i>native declaration : gplot.h:10</i><br>
+     * <pre><br>
+     *   Data structures and parameters for generating gnuplot files<br>
+     *   We used to support X11 output, but recent versions of gnuplot do not<br>
+     *   support the X11 terminal.  To get display to your screen, use<br>
+     *   GPLOT_PNG output; e.g.,<br>
+     *       gplotSimple1(na, GPLOT_PNG, "/tmp/someroot", ...);<br>
+     *       l_fileDisplay("/tmp/someroot.png", ...);<br>
+     * </pre><br>
+     * <i>native declaration : gplot.h:17</i><br>
      * enum values
      */
     public static interface GPLOT_STYLE {
 
-        /**
-         * <i>native declaration : gplot.h:5</i>
+        /** <i>native declaration : gplot.h:12</i>
          */
         public static final int GPLOT_LINES = 0;
-        /**
-         * <i>native declaration : gplot.h:6</i>
+        /** <i>native declaration : gplot.h:13</i>
          */
         public static final int GPLOT_POINTS = 1;
-        /**
-         * <i>native declaration : gplot.h:7</i>
+        /** <i>native declaration : gplot.h:14</i>
          */
         public static final int GPLOT_IMPULSES = 2;
-        /**
-         * <i>native declaration : gplot.h:8</i>
+        /** <i>native declaration : gplot.h:15</i>
          */
         public static final int GPLOT_LINESPOINTS = 3;
-        /**
-         * <i>native declaration : gplot.h:9</i>
+        /** <i>native declaration : gplot.h:16</i>
          */
         public static final int GPLOT_DOTS = 4;
-    };
-
-    /**
-     * <i>native declaration : gplot.h:18</i><br>
-     * enum values
-     */
-    public static interface GPLOT_OUTPUT {
-
-        /**
-         * <i>native declaration : gplot.h:12</i>
-         */
-        public static final int GPLOT_NONE = 0;
-        /**
-         * <i>native declaration : gplot.h:13</i>
-         */
-        public static final int GPLOT_PNG = 1;
-        /**
-         * <i>native declaration : gplot.h:14</i>
-         */
-        public static final int GPLOT_PS = 2;
-        /**
-         * <i>native declaration : gplot.h:15</i>
-         */
-        public static final int GPLOT_EPS = 3;
-        /**
-         * <i>native declaration : gplot.h:16</i>
-         */
-        public static final int GPLOT_X11 = 4;
-        /**
-         * <i>native declaration : gplot.h:17</i>
-         */
-        public static final int GPLOT_LATEX = 5;
     };
 
     /**
      * <i>native declaration : gplot.h:24</i><br>
      * enum values
      */
+    public static interface GPLOT_OUTPUT {
+
+        /** <i>native declaration : gplot.h:19</i>
+         */
+        public static final int GPLOT_NONE = 0;
+        /** <i>native declaration : gplot.h:20</i>
+         */
+        public static final int GPLOT_PNG = 1;
+        /** <i>native declaration : gplot.h:21</i>
+         */
+        public static final int GPLOT_PS = 2;
+        /** <i>native declaration : gplot.h:22</i>
+         */
+        public static final int GPLOT_EPS = 3;
+        /** <i>native declaration : gplot.h:23</i>
+         */
+        public static final int GPLOT_LATEX = 4;
+    };
+
+    /**
+     * <i>native declaration : gplot.h:30</i><br>
+     * enum values
+     */
     public static interface GPLOT_SCALING {
 
         /**
          * default<br>
-         * <i>native declaration : gplot.h:20</i>
+         * <i>
+         * native declaration : gplot.h:26</i>
          */
         public static final int GPLOT_LINEAR_SCALE = 0;
-        /**
-         * <i>native declaration : gplot.h:21</i>
+        /** <i>native declaration : gplot.h:27</i>
          */
         public static final int GPLOT_LOG_SCALE_X = 1;
-        /**
-         * <i>native declaration : gplot.h:22</i>
+        /** <i>native declaration : gplot.h:28</i>
          */
         public static final int GPLOT_LOG_SCALE_Y = 2;
-        /**
-         * <i>native declaration : gplot.h:23</i>
+        /** <i>native declaration : gplot.h:29</i>
          */
         public static final int GPLOT_LOG_SCALE_X_Y = 3;
     };
@@ -235,6 +226,9 @@ public interface ILeptonica {
     public static final int IFF_LPDF = 16;
     public static final int IFF_DEFAULT = 17;
     public static final int IFF_SPIX = 18;
+    /**
+     * BM - for bitmaps
+     */
     public static final int BMP_ID = 0x4d42;
     /**
      * MM - for 'motorola'
@@ -345,7 +339,15 @@ public interface ILeptonica {
     /**
      * useful in a downscaling contrast
      */
-    public static final int L_CHOOSE_MAX_MIN_DIFF = 3;
+    public static final int L_CHOOSE_MAXDIFF = 3;
+    /**
+     * use a modification of the min value
+     */
+    public static final int L_CHOOSE_MIN_BOOST = 4;
+    /**
+     * use a modification of the max value
+     */
+    public static final int L_CHOOSE_MAX_BOOST = 5;
     /**
      * assume bg outside image
      */
@@ -360,19 +362,70 @@ public interface ILeptonica {
     public static final int L_MAX_DIFF_FROM_AVERAGE_2 = 1;
     public static final int L_MAX_MIN_DIFF_FROM_2 = 2;
     public static final int L_MAX_DIFF = 3;
+    /**
+     * red color index in RGBA_QUAD
+     */
     public static final int COLOR_RED = 0;
+    /**
+     * green color index in RGBA_QUAD
+     */
     public static final int COLOR_GREEN = 1;
+    /**
+     * blue color index in RGBA_QUAD
+     */
     public static final int COLOR_BLUE = 2;
+    /**
+     * alpha value index in RGBA_QUAD
+     */
     public static final int L_ALPHA_CHANNEL = 3;
+    /**
+     * draw in red
+     */
+    public static final int L_DRAW_RED = 0;
+    /**
+     * draw in green
+     */
+    public static final int L_DRAW_GREEN = 1;
+    /**
+     * draw in blue
+     */
+    public static final int L_DRAW_BLUE = 2;
+    /**
+     * draw specified color
+     */
+    public static final int L_DRAW_SPECIFIED = 3;
+    /**
+     * draw as sequence of r,g,b
+     */
+    public static final int L_DRAW_RGB = 4;
+    /**
+     * draw randomly chosen colors
+     */
+    public static final int L_DRAW_RANDOM = 5;
+    /**
+     * remove colormap for conv to 1 bpp
+     */
     public static final int REMOVE_CMAP_TO_BINARY = 0;
+    /**
+     * remove colormap for conv to 8 bpp
+     */
     public static final int REMOVE_CMAP_TO_GRAYSCALE = 1;
+    /**
+     * remove colormap for conv to 32 bpp
+     */
     public static final int REMOVE_CMAP_TO_FULL_COLOR = 2;
+    /**
+     * remove colormap and alpha
+     */
     public static final int REMOVE_CMAP_WITH_ALPHA = 3;
+    /**
+     * remove depending on src format
+     */
     public static final int REMOVE_CMAP_BASED_ON_SRC = 4;
     /**
-     * stuff it in; no copy, clone or copy-clone
+     * do not copy the object; do not delete the ptr
      */
-    public static final int L_INSERT = 0;
+    public static final int L_NOCOPY = 0;
     /**
      * make/use a copy of the object
      */
@@ -382,7 +435,7 @@ public interface ILeptonica {
      */
     public static final int L_CLONE = 2;
     /**
-     * make a new object and fill with with clones
+     * make a new object and fill each object in the
      */
     public static final int L_COPY_CLONE = 3;
     /**
@@ -494,13 +547,21 @@ public interface ILeptonica {
      */
     public static final int L_SELECT_HEIGHT = 2;
     /**
-     * either width or height can satisfy
+     * x value satisfy constraint
      */
-    public static final int L_SELECT_IF_EITHER = 3;
+    public static final int L_SELECT_XVAL = 3;
     /**
-     * both width and height must satisfy
+     * y value must satisfy constraint
      */
-    public static final int L_SELECT_IF_BOTH = 4;
+    public static final int L_SELECT_YVAL = 4;
+    /**
+     * either width or height (or xval
+     */
+    public static final int L_SELECT_IF_EITHER = 5;
+    /**
+     * both width and height (or xval
+     */
+    public static final int L_SELECT_IF_BOTH = 6;
     /**
      * save if value is less than threshold
      */
@@ -1140,60 +1201,24 @@ public interface ILeptonica {
     public static final int L_REG_GENERATE = 0;
     public static final int L_REG_COMPARE = 1;
     public static final int L_REG_DISPLAY = 2;
+    /**
+     * typedef for the data type
+     */
+    public static final int L_STR_TYPE = 0;
+    /**
+     * name of the data type
+     */
+    public static final int L_STR_NAME = 1;
+    /**
+     * reader to get the data type from file
+     */
+    public static final int L_STR_READER = 2;
+    /**
+     * reader to get the compressed string in memory
+     */
+    public static final int L_STR_MEMREADER = 3;
     public static final int L_SUDOKU_INIT = 0;
     public static final int L_SUDOKU_STATE = 1;
-    /**
-     * use histogram of barcode widths
-     */
-    public static final int L_USE_WIDTHS = 1;
-    /**
-     * find best window for decoding transitions
-     */
-    public static final int L_USE_WINDOWS = 2;
-    /**
-     * unknown format
-     */
-    public static final int L_BF_UNKNOWN = 0;
-    /**
-     * try decoding with all known formats
-     */
-    public static final int L_BF_ANY = 1;
-    /**
-     * decode with Code128 format
-     */
-    public static final int L_BF_CODE128 = 2;
-    /**
-     * decode with EAN8 format
-     */
-    public static final int L_BF_EAN8 = 3;
-    /**
-     * decode with EAN13 format
-     */
-    public static final int L_BF_EAN13 = 4;
-    /**
-     * decode with Code 2 of 5 format
-     */
-    public static final int L_BF_CODE2OF5 = 5;
-    /**
-     * decode with Interleaved 2 of 5 format
-     */
-    public static final int L_BF_CODEI2OF5 = 6;
-    /**
-     * decode with Code39 format
-     */
-    public static final int L_BF_CODE39 = 7;
-    /**
-     * decode with Code93 format
-     */
-    public static final int L_BF_CODE93 = 8;
-    /**
-     * decode with Code93 format
-     */
-    public static final int L_BF_CODABAR = 9;
-    /**
-     * decode with UPC A format
-     */
-    public static final int L_BF_UPCA = 10;
     /**
      * -------------------------------------------------------------------------*<br>
      * Standard size of border added around images for special processing *<br>
@@ -1204,314 +1229,236 @@ public interface ILeptonica {
     /**
      * Conversion Error : sizeof(l_uint32)<br>
      * SKIPPED:<br>
-     * <i>native declaration : pix.h:50</i><br>
+     * <i>native declaration : pix.h:39</i><br>
      * static const l_int32 L_RED_SHIFT = 8 * (sizeof(l_uint32) - 1 -
      * COLOR_RED);
      */
     /**
      * Conversion Error : sizeof(l_uint32)<br>
      * SKIPPED:<br>
-     * <i>native declaration : pix.h:51</i><br>
+     * <i>native declaration : pix.h:40</i><br>
      * static const l_int32 L_GREEN_SHIFT = 8 * (sizeof(l_uint32) - 1 -
      * COLOR_GREEN);
      */
     /**
      * Conversion Error : sizeof(l_uint32)<br>
      * SKIPPED:<br>
-     * <i>native declaration : pix.h:52</i><br>
+     * <i>native declaration : pix.h:41</i><br>
      * static const l_int32 L_BLUE_SHIFT = 8 * (sizeof(l_uint32) - 1 -
      * COLOR_BLUE);
      */
     /**
      * Conversion Error : sizeof(l_uint32)<br>
      * SKIPPED:<br>
-     * <i>native declaration : pix.h:53</i><br>
+     * <i>native declaration : pix.h:42</i><br>
      * static const l_int32 L_ALPHA_SHIFT = 8 * (sizeof(l_uint32) - 1 -
      * L_ALPHA_CHANNEL);
      */
     /**
-     * Notes:<br>
-     * (1) These numbers are ad-hoc, but they do add up to 1.<br>
-     * Unlike, for example, the weighting factor for conversion<br>
-     * of RGB to luminance, or more specifically to Y in the<br>
-     * YUV colorspace. Those numbers come from the<br>
-     * International Telecommunications Union, via ITU-R.
+     * <pre><br>
+     *  Notes:<br>
+     *      (1) These perceptual weighting factors are ad-hoc, but they do<br>
+     *          add up to 1.  Unlike, for example, the weighting factors for<br>
+     *          converting RGB to luminance, or more specifically to Y in the<br>
+     *          YUV colorspace.  Those numbers come from the<br>
+     *          International Telecommunications Union, via ITU-R.<br>
+     * </pre><br>
+     * Percept. weight for red
      */
     public static final float L_RED_WEIGHT = 0.3f;
+    /**
+     * Percept. weight for green
+     */
     public static final float L_GREEN_WEIGHT = 0.5f;
+    /**
+     * Percept. weight for blue
+     */
     public static final float L_BLUE_WEIGHT = 0.2f;
     /**
-     * copyflag value in sarrayGetString()
+     * stuff it in; no copy or clone
      */
-    public static final int L_NOCOPY = 0;
-    public static final int NumSupportedBarcodeFormats = 7;
-    public static final int C25_START = 10;
-    public static final int C25_STOP = 11;
-    public static final int CI25_START = 10;
-    public static final int CI25_STOP = 11;
-    public static final int C93_START = 47;
-    public static final int C93_STOP = 47;
-    public static final int C39_START = 43;
-    public static final int C39_STOP = 43;
-    public static final int UPCA_START = 10;
-    public static final int UPCA_STOP = 11;
-    public static final int UPCA_MID = 12;
-    /**
-     * in A or B only; in C it is 96
-     */
-    public static final int C128_FUN_3 = 96;
-    /**
-     * in A or B only; in C it is 97
-     */
-    public static final int C128_FUNC_2 = 97;
-    /**
-     * in A or B only; in C it is 98
-     */
-    public static final int C128_SHIFT = 98;
-    /**
-     * in A or B only; in C it is 99
-     */
-    public static final int C128_GOTO_C = 99;
-    public static final int C128_GOTO_B = 100;
-    public static final int C128_GOTO_A = 101;
-    public static final int C128_FUNC_1 = 102;
-    public static final int C128_START_A = 103;
-    public static final int C128_START_B = 104;
-    public static final int C128_START_C = 105;
-    public static final int C128_STOP = 106;
-    public static final int C128_SYMBOL_WIDTH = 11;
-    /**
-     * <i>native declaration : allheaders.h</i>
+    public static final int L_INSERT = 0;
+    /** <i>native declaration : allheaders.h</i>
      */
     public static final int LIBLEPT_MAJOR_VERSION = (int) 1;
-    /**
-     * <i>native declaration : allheaders.h</i>
+    /** <i>native declaration : allheaders.h</i>
      */
-    public static final int LIBLEPT_MINOR_VERSION = (int) 73;
-    /**
-     * <i>native declaration : environ.h</i>
+    public static final int LIBLEPT_MINOR_VERSION = (int) 74;
+    /** <i>native declaration : allheaders.h</i>
+     */
+    public static final int LIBLEPT_PATCH_VERSION = (int) 1;
+    /** <i>native declaration : environ.h</i>
      */
     public static final int HAVE_LIBJPEG = (int) 1;
-    /**
-     * <i>native declaration : environ.h</i>
+    /** <i>native declaration : environ.h</i>
      */
     public static final int HAVE_LIBTIFF = (int) 1;
-    /**
-     * <i>native declaration : environ.h</i>
+    /** <i>native declaration : environ.h</i>
      */
     public static final int HAVE_LIBPNG = (int) 1;
-    /**
-     * <i>native declaration : environ.h</i>
+    /** <i>native declaration : environ.h</i>
      */
     public static final int HAVE_LIBZ = (int) 1;
-    /**
-     * <i>native declaration : environ.h</i>
+    /** <i>native declaration : environ.h</i>
      */
     public static final int HAVE_LIBGIF = (int) 0;
-    /**
-     * <i>native declaration : environ.h</i>
+    /** <i>native declaration : environ.h</i>
      */
     public static final int HAVE_LIBUNGIF = (int) 0;
-    /**
-     * <i>native declaration : environ.h</i>
+    /** <i>native declaration : environ.h</i>
      */
     public static final int HAVE_LIBWEBP = (int) 0;
-    /**
-     * <i>native declaration : environ.h</i>
+    /** <i>native declaration : environ.h</i>
      */
     public static final int HAVE_LIBJP2K = (int) 0;
-    /**
-     * <i>native declaration : environ.h</i>
+    /** <i>native declaration : environ.h</i>
      */
     public static final int USE_BMPIO = (int) 1;
-    /**
-     * <i>native declaration : environ.h</i>
+    /** <i>native declaration : environ.h</i>
      */
     public static final int USE_PNMIO = (int) 1;
-    /**
-     * <i>native declaration : environ.h</i>
+    /** <i>native declaration : environ.h</i>
      */
     public static final int USE_JP2KHEADER = (int) 1;
-    /**
-     * <i>native declaration : environ.h</i>
+    /** <i>native declaration : environ.h</i>
      */
     public static final int USE_PDFIO = (int) 1;
-    /**
-     * <i>native declaration : environ.h</i>
+    /** <i>native declaration : environ.h</i>
      */
     public static final int USE_PSIO = (int) 1;
-    /**
-     * <i>native declaration : environ.h</i>
+    /** <i>native declaration : environ.h</i>
      */
     public static final int UNDEF = (int) -1;
-    /**
-     * <i>native declaration : environ.h</i>
+    /** <i>native declaration : environ.h</i>
      */
     public static final int NULL = (int) 0;
-    /**
-     * <i>native declaration : environ.h</i>
+    /** <i>native declaration : environ.h</i>
      */
     public static final int TRUE = (int) 1;
-    /**
-     * <i>native declaration : environ.h</i>
+    /** <i>native declaration : environ.h</i>
      */
     public static final int FALSE = (int) 0;
-    /**
-     * <i>native declaration : array.h</i>
+    /** <i>native declaration : array.h</i>
      */
     public static final int NUMA_VERSION_NUMBER = (int) 1;
-    /**
-     * <i>native declaration : array.h</i>
+    /** <i>native declaration : array.h</i>
      */
     public static final int DNA_VERSION_NUMBER = (int) 1;
-    /**
-     * <i>native declaration : array.h</i>
+    /** <i>native declaration : array.h</i>
      */
     public static final int SARRAY_VERSION_NUMBER = (int) 1;
-    /**
-     * <i>native declaration : arrayaccess.h</i>
+    /** <i>native declaration : arrayaccess.h</i>
      */
     public static final int USE_INLINE_ACCESSORS = (int) 1;
-    /**
-     * <i>native declaration : dewarp.h</i>
+    /** <i>native declaration : dewarp.h</i>
      */
     public static final int DEWARP_VERSION_NUMBER = (int) 4;
-    /**
-     * <i>native declaration : gplot.h</i>
+    /** <i>native declaration : gplot.h</i>
      */
     public static final int GPLOT_VERSION_NUMBER = (int) 1;
-    /**
-     * <i>native declaration : gplot.h</i>
+    /** <i>native declaration : gplot.h</i>
      */
     public static final int NUM_GPLOT_STYLES = (int) 5;
-    /**
-     * <i>native declaration : gplot.h</i>
+    /** <i>native declaration : gplot.h</i>
      */
     public static final int NUM_GPLOT_OUTPUTS = (int) 6;
-    /**
-     * <i>native declaration : jbclass.h</i>
+    /** <i>native declaration : jbclass.h</i>
      */
     public static final String JB_TEMPLATE_EXT = (String) ".templates.png";
-    /**
-     * <i>native declaration : jbclass.h</i>
+    /** <i>native declaration : jbclass.h</i>
      */
     public static final String JB_DATA_EXT = (String) ".data";
-    /**
-     * <i>native declaration : morph.h</i>
+    /** <i>native declaration : morph.h</i>
      */
     public static final int SEL_VERSION_NUMBER = (int) 1;
-    /**
-     * <i>native declaration : morph.h</i>
+    /** <i>native declaration : morph.h</i>
      */
     public static final int KERNEL_VERSION_NUMBER = (int) 2;
-    /**
-     * <i>native declaration : pix.h</i>
+    /** <i>native declaration : pix.h</i>
      */
     public static final int PIX_SRC = (int) (0xc);
-    /**
-     * <i>native declaration : pix.h</i>
+    /** <i>native declaration : pix.h</i>
      */
     public static final int PIX_DST = (int) (0xa);
-    /**
-     * <i>native declaration : pix.h</i>
+    /** <i>native declaration : pix.h</i>
      */
     public static final int PIX_CLR = (int) (0x0);
-    /**
-     * <i>native declaration : pix.h</i>
+    /** <i>native declaration : pix.h</i>
      */
     public static final int PIX_SET = (int) (0xf);
-    /**
-     * <i>native declaration : pix.h</i>
+    /** <i>native declaration : pix.h</i>
      */
     public static final int PIX_PAINT = (int) ((0xc) | (0xa));
-    /**
-     * <i>native declaration : pix.h</i>
+    /** <i>native declaration : pix.h</i>
      */
     public static final int PIX_MASK = (int) ((0xc) & (0xa));
-    /**
-     * <i>native declaration : pix.h</i>
+    /** <i>native declaration : pix.h</i>
      */
     public static final int PIX_SUBTRACT = (int) ((0xa) & ((0xc) ^ 0x0f));
-    /**
-     * <i>native declaration : pix.h</i>
+    /** <i>native declaration : pix.h</i>
      */
     public static final int PIX_XOR = (int) ((0xc) ^ (0xa));
-    /**
-     * <i>native declaration : pix.h</i>
+    /** <i>native declaration : pix.h</i>
      */
     public static final int PIXAA_VERSION_NUMBER = (int) 2;
-    /**
-     * <i>native declaration : pix.h</i>
+    /** <i>native declaration : pix.h</i>
      */
     public static final int PIXA_VERSION_NUMBER = (int) 2;
-    /**
-     * <i>native declaration : pix.h</i>
+    /** <i>native declaration : pix.h</i>
      */
     public static final int BOXA_VERSION_NUMBER = (int) 2;
-    /**
-     * <i>native declaration : pix.h</i>
+    /** <i>native declaration : pix.h</i>
      */
     public static final int BOXAA_VERSION_NUMBER = (int) 3;
-    /**
-     * <i>native declaration : pix.h</i>
+    /** <i>native declaration : pix.h</i>
      */
     public static final int PTA_VERSION_NUMBER = (int) 1;
-    /**
-     * <i>native declaration : pix.h</i>
+    /** <i>native declaration : pix.h</i>
      */
     public static final int FPIX_VERSION_NUMBER = (int) 2;
-    /**
-     * <i>native declaration : pix.h</i>
+    /** <i>native declaration : pix.h</i>
      */
     public static final int DPIX_VERSION_NUMBER = (int) 2;
-    /**
-     * <i>native declaration : pix.h</i>
+    /** <i>native declaration : pix.h</i>
      */
     public static final int PIXACOMP_VERSION_NUMBER = (int) 2;
-    /**
-     * <i>native declaration : recog.h</i>
+    /** <i>native declaration : recog.h</i>
      */
     public static final int RECOG_VERSION_NUMBER = (int) 1;
-    /**
-     * <i>native declaration : bmfdata.h</i>
-     */
-    public static final int NUM_FONTS = (int) 9;
-    /**
-     * <i>native declaration : freetype.h</i>
-     */
-    public static final int LEPTONICA_FT_RESOLUTION = (int) 96;
 
-    /**
-     * <i>native declaration : allheaders.h:5169</i>
+    /** <i>native declaration : pix.h:528</i>
      */
-    public interface setPixMemoryManager_allocator_callback extends Callback {
+    public interface alloc_fn extends Callback {
 
         Pointer apply(NativeSize size_t1);
     };
 
-    /**
-     * <i>native declaration : allheaders.h:5170</i>
+    /** <i>native declaration : pix.h:530</i>
      */
-    public interface setPixMemoryManager_deallocator_callback extends Callback {
+    public interface dealloc_fn extends Callback {
 
         void apply(Pointer voidPtr1);
     };
-    
+
     public static class HBITMAP extends PointerType {
-            public HBITMAP(Pointer address) {
-                    super(address);
-            }
-            public HBITMAP() {
-                    super();
-            }
+
+        public HBITMAP(Pointer address) {
+            super(address);
+        }
+
+        public HBITMAP() {
+            super();
+        }
     };
-    
+
     public static class FILE extends PointerType {
-            public FILE(Pointer address) {
-                    super(address);
-            }
-            public FILE() {
-                    super();
-            }
+
+        public FILE(Pointer address) {
+            super(address);
+        }
+
+        public FILE() {
+            super();
+        }
     };
 }

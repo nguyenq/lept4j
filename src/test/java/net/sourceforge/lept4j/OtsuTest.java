@@ -98,7 +98,7 @@ public class OtsuTest {
             thresh.rewind();
             fgval.rewind();
             bgval.rewind();
-            Leptonica1.pixSplitDistributionFgBg(pixg, scorefract, 1, thresh, fgval, bgval, 1);
+            Leptonica1.pixSplitDistributionFgBg(pixg, scorefract, 1, thresh, fgval, bgval, null);
             System.err.printf("thresh = %d, fgval = %d, bgval = %d\n", thresh.get(), fgval.get(), bgval.get());
             thresh.rewind();
             /* Give gnuplot time to write out the plot */
