@@ -31,8 +31,8 @@ import org.junit.Test;
  * Java version of <code>dewarptest1.c</code>, this exercises functions in
  * <code>dewarp.c</code> for dewarping based on lines of horizontal text. It
  * also creates a 24-image pdf of steps in the process.<br> Output files could
- * be found in 
- * <code>C:\Users\yourname\AppData\Local\Temp\leptonica<code> directory on Windows.
+ * be found in <code>C:\Users\yourname\AppData\Local\Temp\leptonica</code>
+ * directory on Windows.
  * <br>
  * Note: Leptonica uses gthumb on Unix and IrfanView (<code>i_view32</code>) on
  * Windows for displaying images.
@@ -43,6 +43,7 @@ public class DewarpTest {
     Leptonica instance;
 
     public DewarpTest() {
+
     }
 
     @BeforeClass
@@ -82,7 +83,7 @@ public class DewarpTest {
         pixs = instance.pixRead(image.getPath());
         /*    pixs =  instance.pixRead("cat-10.jpg"); */
 
-        /* Normalize for varying background and binarize */
+ /* Normalize for varying background and binarize */
         pixn = instance.pixBackgroundNormSimple(pixs, null, null);
         pixg = instance.pixConvertRGBToGray(pixn, 0.5f, 0.3f, 0.2f);
         pixb = instance.pixThresholdToBinary(pixg, 130);
@@ -142,7 +143,7 @@ public class DewarpTest {
 
         /* Normalize another image, that may not have enough textlines
          * to build an accurate model */
-        /*    pixs2 =  instance.pixRead("1555-3.jpg");  */
+ /*    pixs2 =  instance.pixRead("1555-3.jpg");  */
         filename = "cat-7.jpg";
         image = new File(testResourcesPath, filename);
         pixs2 = instance.pixRead(image.getPath());

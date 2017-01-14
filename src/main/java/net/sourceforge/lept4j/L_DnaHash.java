@@ -18,7 +18,10 @@ public class L_DnaHash extends Structure {
 	 * C type : l_int32
 	 */
 	public int initsize;
-	/** C type : L_Dna** */
+	/** 
+         * array of L_Dna<br>
+         * C type : L_Dna**
+         */
 	public DoubleByReference dna;
 	public L_DnaHash() {
 		super();
@@ -30,7 +33,8 @@ public class L_DnaHash extends Structure {
 	 * @param nbuckets C type : l_int32<br>
 	 * @param initsize initial size of each dna that is made<br>
 	 * C type : l_int32<br>
-	 * @param dna C type : L_Dna**
+	 * @param dna array of L_Dna<br>
+	 * C type : L_Dna**
 	 */
 	public L_DnaHash(int nbuckets, int initsize, DoubleByReference dna) {
 		super();

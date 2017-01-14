@@ -157,12 +157,12 @@ public class L_Recog extends Structure {
 	 */
 	public int max_splith;
 	/**
-	 * text array for arbitrary char set<br>
+	 * text array for arbitrary charset<br>
 	 * C type : Sarray*
 	 */
 	public net.sourceforge.lept4j.Sarray.ByReference sa_text;
 	/**
-	 * index-to-char lut for arbitrary char set<br>
+	 * index-to-char lut for arbitrary charset<br>
 	 * C type : L_Dna*
 	 */
 	public net.sourceforge.lept4j.L_Dna.ByReference dna_tochar;
@@ -177,17 +177,12 @@ public class L_Recog extends Structure {
 	 */
 	public IntByReference sumtab;
 	/**
-	 * serialized filename (if read)<br>
-	 * C type : char*
-	 */
-	public Pointer fname;
-	/**
 	 * all unscaled bitmaps for each class<br>
 	 * C type : Pixaa*
 	 */
 	public net.sourceforge.lept4j.Pixaa.ByReference pixaa_u;
 	/**
-	 * averaged unscaled bitmaps for each class<br>
+	 * averaged unscaled bitmaps per class<br>
 	 * C type : Pixa*
 	 */
 	public net.sourceforge.lept4j.Pixa.ByReference pixa_u;
@@ -320,7 +315,7 @@ public class L_Recog extends Structure {
 		super();
 	}
 	protected List<? > getFieldOrder() {
-		return Arrays.asList("scalew", "scaleh", "templ_type", "maxarraysize", "setsize", "threshold", "maxyshift", "asperity_fr", "charset_type", "charset_size", "bootdir", "bootpattern", "bootpath", "boot_iters", "min_nopad", "max_afterpad", "min_samples", "num_samples", "minwidth_u", "maxwidth_u", "minheight_u", "maxheight_u", "minwidth", "maxwidth", "ave_done", "train_done", "min_splitw", "min_splith", "max_splith", "sa_text", "dna_tochar", "centtab", "sumtab", "fname", "pixaa_u", "pixa_u", "ptaa_u", "pta_u", "naasum_u", "nasum_u", "pixaa", "pixa", "ptaa", "pta", "naasum", "nasum", "pixa_tr", "pixadb_ave", "pixa_id", "pixdb_ave", "pixdb_range", "pixadb_boot", "pixadb_split", "bmf", "bmf_size", "did", "rch", "rcha", "bootrecog", "index", "parent");
+		return Arrays.asList("scalew", "scaleh", "templ_type", "maxarraysize", "setsize", "threshold", "maxyshift", "asperity_fr", "charset_type", "charset_size", "bootdir", "bootpattern", "bootpath", "boot_iters", "min_nopad", "max_afterpad", "min_samples", "num_samples", "minwidth_u", "maxwidth_u", "minheight_u", "maxheight_u", "minwidth", "maxwidth", "ave_done", "train_done", "min_splitw", "min_splith", "max_splith", "sa_text", "dna_tochar", "centtab", "sumtab", "pixaa_u", "pixa_u", "ptaa_u", "pta_u", "naasum_u", "nasum_u", "pixaa", "pixa", "ptaa", "pta", "naasum", "nasum", "pixa_tr", "pixadb_ave", "pixa_id", "pixdb_ave", "pixdb_range", "pixadb_boot", "pixadb_split", "bmf", "bmf_size", "did", "rch", "rcha", "bootrecog", "index", "parent");
 	}
 	public L_Recog(Pointer peer) {
 		super(peer);

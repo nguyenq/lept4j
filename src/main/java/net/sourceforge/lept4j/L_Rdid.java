@@ -25,7 +25,7 @@ public class L_Rdid extends Structure {
 	 */
 	public PointerByReference counta;
 	/**
-	 * best y-shift array per averaged template<br>
+	 * best y-shift array per average template<br>
 	 * C type : l_int32**
 	 */
 	public PointerByReference delya;
