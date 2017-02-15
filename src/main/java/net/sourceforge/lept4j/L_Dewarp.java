@@ -157,7 +157,7 @@ public class L_Dewarp extends Structure {
 	 */
 	public int hvalid;
         /**
-	 * < if 1, skip horiz disparity<br>
+	 * if 1, skip horiz disparity<br>
 	 * C type : l_int32
 	 */
 	public int skip_horiz;

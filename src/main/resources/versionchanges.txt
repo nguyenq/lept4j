@@ -36,3 +36,6 @@ Version 1.2.3 (29 May 2016):
 Version 1.2.4 (24 September 2016):
 - Fix Invalid memory access error caused by memory leaks in convertPixToImage
 - Add Otsu test case
+
+Version 1.3.0 (15 February 2017):
+- Upgrade to Leptonica 1.74.1
