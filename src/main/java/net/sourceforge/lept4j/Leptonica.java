@@ -16721,7 +16721,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     * <code>SEL* selCreate(l_int32, l_int32, const char*)</code><br>
 //     * <i>native declaration : allheaders.h:4792</i>
 //     */
-//    Selector selCreate(int height, int width, String name);
+//    Sel selCreate(int height, int width, String name);
 
 //    /**
 //     * Original signature : <code>void selDestroy(SEL**)</code><br>
@@ -16733,21 +16733,21 @@ public interface Leptonica extends Library, ILeptonica {
 //     * Original signature : <code>SEL* selCopy(SEL*)</code><br>
 //     * <i>native declaration : allheaders.h:4796</i>
 //     */
-//    Selector selCopy(Pointer sel);
+//    Sel selCopy(Pointer sel);
 
 //    /**
 //     * Original signature :
 //     * <code>SEL* selCreateBrick(l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
 //     * <i>native declaration : allheaders.h:4798</i>
 //     */
-//    Selector selCreateBrick(int h, int w, int cy, int cx, int type);
+//    Sel selCreateBrick(int h, int w, int cy, int cx, int type);
 
 //    /**
 //     * Original signature :
 //     * <code>SEL* selCreateComb(l_int32, l_int32, l_int32)</code><br>
 //     * <i>native declaration : allheaders.h:4800</i>
 //     */
-//    Selector selCreateComb(int factor1, int factor2, int direction);
+//    Sel selCreateComb(int factor1, int factor2, int direction);
 
 //    /**
 //     * Original signature :
@@ -16773,7 +16773,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     * Original signature : <code>SEL* selaGetSel(SELA*, l_int32)</code><br>
 //     * <i>native declaration : allheaders.h:4808</i>
 //     */
-//    Selector selaGetSel(Sela sela, int i);
+//    Sel selaGetSel(Sela sela, int i);
 
 //    /**
 //     * Original signature : <code>char* selGetName(SEL*)</code><br>
@@ -16868,7 +16868,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     * Original signature : <code>SEL* selRotateOrth(SEL*, l_int32)</code><br>
 //     * <i>native declaration : allheaders.h:4836</i>
 //     */
-//    Selector selRotateOrth(Pointer sel, int quads);
+//    Sel selRotateOrth(Pointer sel, int quads);
 
 //    /**
 //     * Original signature : <code>SELA* selaRead(const char*)</code><br>
@@ -16886,13 +16886,13 @@ public interface Leptonica extends Library, ILeptonica {
 //     * Original signature : <code>SEL* selRead(const char*)</code><br>
 //     * <i>native declaration : allheaders.h:4842</i>
 //     */
-//    Selector selRead(String fname);
+//    Sel selRead(String fname);
 
 //    /**
 //     * Original signature : <code>SEL* selReadStream(FILE*)</code><br>
 //     * <i>native declaration : allheaders.h:4844</i>
 //     */
-//    Selector selReadStream(FILE fp);
+//    Sel selReadStream(FILE fp);
 
 //    /**
 //     * Original signature :
@@ -16925,7 +16925,7 @@ public interface Leptonica extends Library, ILeptonica {
 //     * <code>SEL* selCreateFromString(const char*, l_int32, l_int32, const char*)</code><br>
 //     * <i>native declaration : allheaders.h:4854</i>
 //     */
-//    Selector selCreateFromString(String text, int h, int w, String name);
+//    Sel selCreateFromString(String text, int h, int w, String name);
 
 //    /**
 //     * Original signature : <code>char* selPrintToString(SEL*)</code><br>
@@ -16945,28 +16945,28 @@ public interface Leptonica extends Library, ILeptonica {
 //     * <code>SEL* selCreateFromPta(PTA*, l_int32, l_int32, const char*)</code><br>
 //     * <i>native declaration : allheaders.h:4860</i>
 //     */
-//    Selector selCreateFromPta(Pta pta, int cy, int cx, String name);
+//    Sel selCreateFromPta(Pta pta, int cy, int cx, String name);
 
 //    /**
 //     * Original signature :
 //     * <code>SEL* selCreateFromPix(PIX*, l_int32, l_int32, const char*)</code><br>
 //     * <i>native declaration : allheaders.h:4862</i>
 //     */
-//    Selector selCreateFromPix(Pix pix, int cy, int cx, String name);
+//    Sel selCreateFromPix(Pix pix, int cy, int cx, String name);
 
 //    /**
 //     * Original signature :
 //     * <code>SEL* selReadFromColorImage(const char*)</code><br>
 //     * <i>native declaration : allheaders.h:4864</i>
 //     */
-//    Selector selReadFromColorImage(String pathname);
+//    Sel selReadFromColorImage(String pathname);
 
 //    /**
 //     * Original signature :
 //     * <code>SEL* selCreateFromColorPix(PIX*, char*)</code><br>
 //     * <i>native declaration : allheaders.h:4866</i>
 //     */
-//    Selector selCreateFromColorPix(Pix pixs, ByteBuffer selname);
+//    Sel selCreateFromColorPix(Pix pixs, ByteBuffer selname);
 
 //    /**
 //     * Original signature :
@@ -17043,21 +17043,21 @@ public interface Leptonica extends Library, ILeptonica {
 //     * <code>SEL* pixGenerateSelWithRuns(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, PIX**)</code><br>
 //     * <i>native declaration : allheaders.h:4890</i>
 //     */
-//    Selector pixGenerateSelWithRuns(Pix pixs, int nhlines, int nvlines, int distance, int minlength, int toppix, int botpix, int leftpix, int rightpix, PointerByReference ppixe);
+//    Sel pixGenerateSelWithRuns(Pix pixs, int nhlines, int nvlines, int distance, int minlength, int toppix, int botpix, int leftpix, int rightpix, PointerByReference ppixe);
 
 //    /**
 //     * Original signature :
 //     * <code>SEL* pixGenerateSelRandom(PIX*, l_float32, l_float32, l_int32, l_int32, l_int32, l_int32, l_int32, PIX**)</code><br>
 //     * <i>native declaration : allheaders.h:4892</i>
 //     */
-//    Selector pixGenerateSelRandom(Pix pixs, float hitfract, float missfract, int distance, int toppix, int botpix, int leftpix, int rightpix, PointerByReference ppixe);
+//    Sel pixGenerateSelRandom(Pix pixs, float hitfract, float missfract, int distance, int toppix, int botpix, int leftpix, int rightpix, PointerByReference ppixe);
 
 //    /**
 //     * Original signature :
 //     * <code>SEL* pixGenerateSelBoundary(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, PIX**)</code><br>
 //     * <i>native declaration : allheaders.h:4894</i>
 //     */
-//    Selector pixGenerateSelBoundary(Pix pixs, int hitdist, int missdist, int hitskip, int missskip, int topflag, int botflag, int leftflag, int rightflag, PointerByReference ppixe);
+//    Sel pixGenerateSelBoundary(Pix pixs, int hitdist, int missdist, int hitskip, int missskip, int topflag, int botflag, int leftflag, int rightflag, PointerByReference ppixe);
 
 //    /**
 //     * Original signature :

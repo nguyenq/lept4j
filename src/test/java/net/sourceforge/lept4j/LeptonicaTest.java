@@ -34,7 +34,6 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
-import org.rococoa.Selector;
 
 public class LeptonicaTest {
     
@@ -39408,8 +39407,8 @@ public class LeptonicaTest {
 //        int width = 0;
 //        String name = "";
 
-//        Selector expResult = null;
-//        Selector result = instance.selCreate(height, width, name);
+//        Sel expResult = null;
+//        Sel result = instance.selCreate(height, width, name);
 //        assertEquals(expResult, result);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -39436,8 +39435,8 @@ public class LeptonicaTest {
 //        System.out.println("selCopy");
 //        Pointer sel = null;
 
-//        Selector expResult = null;
-//        Selector result = instance.selCopy(sel);
+//        Sel expResult = null;
+//        Sel result = instance.selCopy(sel);
 //        assertEquals(expResult, result);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -39455,8 +39454,8 @@ public class LeptonicaTest {
 //        int cx = 0;
 //        int type = 0;
 
-//        Selector expResult = null;
-//        Selector result = instance.selCreateBrick(h, w, cy, cx, type);
+//        Sel expResult = null;
+//        Sel result = instance.selCreateBrick(h, w, cy, cx, type);
 //        assertEquals(expResult, result);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -39472,8 +39471,8 @@ public class LeptonicaTest {
 //        int factor2 = 0;
 //        int direction = 0;
 
-//        Selector expResult = null;
-//        Selector result = instance.selCreateComb(factor1, factor2, direction);
+//        Sel expResult = null;
+//        Sel result = instance.selCreateComb(factor1, factor2, direction);
 //        assertEquals(expResult, result);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -39537,8 +39536,8 @@ public class LeptonicaTest {
 //        Sela sela = null;
 //        int i = 0;
 
-//        Selector expResult = null;
-//        Selector result = instance.selaGetSel(sela, i);
+//        Sel expResult = null;
+//        Sel result = instance.selaGetSel(sela, i);
 //        assertEquals(expResult, result);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -39779,8 +39778,8 @@ public class LeptonicaTest {
 //        Pointer sel = null;
 //        int quads = 0;
 
-//        Selector expResult = null;
-//        Selector result = instance.selRotateOrth(sel, quads);
+//        Sel expResult = null;
+//        Sel result = instance.selRotateOrth(sel, quads);
 //        assertEquals(expResult, result);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -39824,8 +39823,8 @@ public class LeptonicaTest {
 //        System.out.println("selRead");
 //        String fname = "";
 
-//        Selector expResult = null;
-//        Selector result = instance.selRead(fname);
+//        Sel expResult = null;
+//        Sel result = instance.selRead(fname);
 //        assertEquals(expResult, result);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -39839,8 +39838,8 @@ public class LeptonicaTest {
 //        System.out.println("selReadStream");
 //        PointerByReference fp = null;
 
-//        Selector expResult = null;
-//        Selector result = instance.selReadStream(fp);
+//        Sel expResult = null;
+//        Sel result = instance.selReadStream(fp);
 //        assertEquals(expResult, result);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -39921,8 +39920,8 @@ public class LeptonicaTest {
 //        int w = 0;
 //        String name = "";
 
-//        Selector expResult = null;
-//        Selector result = instance.selCreateFromString(text, h, w, name);
+//        Sel expResult = null;
+//        Sel result = instance.selCreateFromString(text, h, w, name);
 //        assertEquals(expResult, result);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -39969,8 +39968,8 @@ public class LeptonicaTest {
 //        int cx = 0;
 //        String name = "";
 
-//        Selector expResult = null;
-//        Selector result = instance.selCreateFromPta(pta, cy, cx, name);
+//        Sel expResult = null;
+//        Sel result = instance.selCreateFromPta(pta, cy, cx, name);
 //        assertEquals(expResult, result);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -39987,8 +39986,8 @@ public class LeptonicaTest {
 //        int cx = 0;
 //        String name = "";
 
-//        Selector expResult = null;
-//        Selector result = instance.selCreateFromPix(pix, cy, cx, name);
+//        Sel expResult = null;
+//        Sel result = instance.selCreateFromPix(pix, cy, cx, name);
 //        assertEquals(expResult, result);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -40002,8 +40001,8 @@ public class LeptonicaTest {
 //        System.out.println("selReadFromColorImage");
 //        String pathname = "";
 
-//        Selector expResult = null;
-//        Selector result = instance.selReadFromColorImage(pathname);
+//        Sel expResult = null;
+//        Sel result = instance.selReadFromColorImage(pathname);
 //        assertEquals(expResult, result);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -40018,8 +40017,8 @@ public class LeptonicaTest {
 //        Pix pixs = null;
 //        ByteBuffer selname = null;
 
-//        Selector expResult = null;
-//        Selector result = instance.selCreateFromColorPix(pixs, selname);
+//        Sel expResult = null;
+//        Sel result = instance.selCreateFromColorPix(pixs, selname);
 //        assertEquals(expResult, result);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -40176,8 +40175,8 @@ public class LeptonicaTest {
 //        int rightpix = 0;
 //        Pix.ByReference[] ppixe = null;
 
-//        Selector expResult = null;
-//        Selector result = instance.pixGenerateSelWithRuns(pixs, nhlines, nvlines, distance, minlength, toppix, botpix, leftpix, rightpix, ppixe);
+//        Sel expResult = null;
+//        Sel result = instance.pixGenerateSelWithRuns(pixs, nhlines, nvlines, distance, minlength, toppix, botpix, leftpix, rightpix, ppixe);
 //        assertEquals(expResult, result);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -40199,8 +40198,8 @@ public class LeptonicaTest {
 //        int rightpix = 0;
 //        Pix.ByReference[] ppixe = null;
 
-//        Selector expResult = null;
-//        Selector result = instance.pixGenerateSelRandom(pixs, hitfract, missfract, distance, toppix, botpix, leftpix, rightpix, ppixe);
+//        Sel expResult = null;
+//        Sel result = instance.pixGenerateSelRandom(pixs, hitfract, missfract, distance, toppix, botpix, leftpix, rightpix, ppixe);
 //        assertEquals(expResult, result);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -40223,8 +40222,8 @@ public class LeptonicaTest {
 //        int rightflag = 0;
 //        Pix.ByReference[] ppixe = null;
 
-//        Selector expResult = null;
-//        Selector result = instance.pixGenerateSelBoundary(pixs, hitdist, missdist, hitskip, missskip, topflag, botflag, leftflag, rightflag, ppixe);
+//        Sel expResult = null;
+//        Sel result = instance.pixGenerateSelBoundary(pixs, hitdist, missdist, hitskip, missskip, topflag, botflag, leftflag, rightflag, ppixe);
 //        assertEquals(expResult, result);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");

@@ -99,7 +99,7 @@ public class LeptUtilsTest {
         pRef.setValue(result.getPointer());
         Leptonica1.pixDestroy(pRef);
     }
-
+    
     /**
      * Test of getImageByteBuffer method, of class LeptUtils.
      */

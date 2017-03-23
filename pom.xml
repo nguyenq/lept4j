@@ -86,10 +86,5 @@
 			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-			<groupId>org.rococoa</groupId>
-			<artifactId>rococoa-core</artifactId>
-			<version>0.5</version>
-		</dependency>
 	</dependencies>
 </project>
