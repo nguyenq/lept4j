@@ -50,7 +50,7 @@ public class L_Rdid extends Structure {
 	 */
 	public net.sourceforge.lept4j.Numa.ByReference nasum;
 	/**
-	 * first moment of pixels in pixs by column<br>
+	 * first moment of pixels in pixs by cols<br>
 	 * C type : Numa*
 	 */
 	public net.sourceforge.lept4j.Numa.ByReference namoment;
@@ -100,6 +100,11 @@ public class L_Rdid extends Structure {
 	 */
 	public net.sourceforge.lept4j.Numa.ByReference nawidth;
 	/**
+	 * Viterbi result for splitting input pixs<br>
+	 * C type : Boxa*
+	 */
+	public net.sourceforge.lept4j.Boxa.ByReference boxa;
+	/**
 	 * correlation scores: best path templates<br>
 	 * C type : Numa*
 	 */
@@ -109,6 +114,11 @@ public class L_Rdid extends Structure {
 	 * C type : Numa*
 	 */
 	public net.sourceforge.lept4j.Numa.ByReference natempl_r;
+	/**
+	 * samples of best scored templates<br>
+	 * C type : Numa*
+	 */
+	public net.sourceforge.lept4j.Numa.ByReference nasample_r;
 	/**
 	 * x locations of best rescoredtemplates<br>
 	 * C type : Numa*
@@ -133,7 +143,7 @@ public class L_Rdid extends Structure {
 		super();
 	}
 	protected List<? > getFieldOrder() {
-		return Arrays.asList("pixs", "counta", "delya", "narray", "size", "setwidth", "nasum", "namoment", "fullarrays", "beta", "gamma", "trellisscore", "trellistempl", "natempl", "naxloc", "nadely", "nawidth", "nascore", "natempl_r", "naxloc_r", "nadely_r", "nawidth_r", "nascore_r");
+		return Arrays.asList("pixs", "counta", "delya", "narray", "size", "setwidth", "nasum", "namoment", "fullarrays", "beta", "gamma", "trellisscore", "trellistempl", "natempl", "naxloc", "nadely", "nawidth", "boxa", "nascore", "natempl_r", "nasample_r", "naxloc_r", "nadely_r", "nawidth_r", "nascore_r");
 	}
 	public L_Rdid(Pointer peer) {
 		super(peer);

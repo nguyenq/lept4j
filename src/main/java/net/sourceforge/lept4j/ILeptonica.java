@@ -193,8 +193,7 @@ public interface ILeptonica {
 
         /**
          * default<br>
-         * <i>
-         * native declaration : gplot.h:26</i>
+         * <i>native declaration : gplot.h:26</i>
          */
         public static final int GPLOT_LINEAR_SCALE = 0;
         /** <i>native declaration : gplot.h:27</i>
@@ -603,6 +602,14 @@ public interface ILeptonica {
      */
     public static final int L_SELECT_AVERAGE = 6;
     /**
+     * use hue value (in HSV color space)
+     */
+    public static final int L_SELECT_HUE = 7;
+    /**
+     * use saturation value (in HSV space)
+     */
+    public static final int L_SELECT_SATURATION = 8;
+    /**
      * use LSB
      */
     public static final int L_LS_BYTE = 1;
@@ -611,21 +618,25 @@ public interface ILeptonica {
      */
     public static final int L_MS_BYTE = 2;
     /**
+     * use LSB if max(val) 256; else MSB
+     */
+    public static final int L_AUTO_BYTE = 3;
+    /**
      * use max(val, 255)
      */
-    public static final int L_CLIP_TO_FF = 3;
+    public static final int L_CLIP_TO_FF = 4;
     /**
      * use two LSB
      */
-    public static final int L_LS_TWO_BYTES = 4;
+    public static final int L_LS_TWO_BYTES = 5;
     /**
      * use two MSB
      */
-    public static final int L_MS_TWO_BYTES = 5;
+    public static final int L_MS_TWO_BYTES = 6;
     /**
      * use max(val, 65535)
      */
-    public static final int L_CLIP_TO_FFFF = 6;
+    public static final int L_CLIP_TO_FFFF = 7;
     /**
      * use area map rotation, if possible
      */
@@ -1155,26 +1166,6 @@ public interface ILeptonica {
      */
     public static final int L_REMOVE_TRAIL_SLASH = 2;
     /**
-     * select the unscaled bitmaps
-     */
-    public static final int L_SELECT_UNSCALED = 0;
-    /**
-     * select the scaled bitmaps
-     */
-    public static final int L_SELECT_SCALED = 1;
-    /**
-     * select both unscaled and scaled
-     */
-    public static final int L_SELECT_BOTH = 2;
-    /**
-     * form template from class average
-     */
-    public static final int L_USE_AVERAGE = 0;
-    /**
-     * match against all elements of each class
-     */
-    public static final int L_USE_ALL = 1;
-    /**
      * character set type is not specified
      */
     public static final int L_UNKNOWN = 0;
@@ -1198,6 +1189,14 @@ public interface ILeptonica {
      * 26 upper-case letters
      */
     public static final int L_UC_ALPHA = 5;
+    /**
+     * use all templates; default
+     */
+    public static final int L_USE_ALL_TEMPLATES = 0;
+    /**
+     * use average templates; special cases
+     */
+    public static final int L_USE_AVERAGE_TEMPLATES = 1;
     public static final int L_REG_GENERATE = 0;
     public static final int L_REG_COMPARE = 1;
     public static final int L_REG_DISPLAY = 2;
@@ -1286,7 +1285,7 @@ public interface ILeptonica {
     public static final int LIBLEPT_MINOR_VERSION = (int) 74;
     /** <i>native declaration : allheaders.h</i>
      */
-    public static final int LIBLEPT_PATCH_VERSION = (int) 1;
+    public static final int LIBLEPT_PATCH_VERSION = (int) 2;
     /** <i>native declaration : environ.h</i>
      */
     public static final int HAVE_LIBJPEG = (int) 1;
@@ -1424,16 +1423,16 @@ public interface ILeptonica {
     public static final int PIXACOMP_VERSION_NUMBER = (int) 2;
     /** <i>native declaration : recog.h</i>
      */
-    public static final int RECOG_VERSION_NUMBER = (int) 1;
+    public static final int RECOG_VERSION_NUMBER = (int) 2;
 
-    /** <i>native declaration : pix.h:528</i>
+    /** <i>native declaration : pix.h:531</i>
      */
     public interface alloc_fn extends Callback {
 
         Pointer apply(NativeSize size_t1);
     };
 
-    /** <i>native declaration : pix.h:530</i>
+    /** <i>native declaration : pix.h:533</i>
      */
     public interface dealloc_fn extends Callback {
 

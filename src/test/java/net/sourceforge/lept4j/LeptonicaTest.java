@@ -34566,19 +34566,6 @@ public class LeptonicaTest {
 //    }
 //
 //    /**
-//     * Test of recogaDestroy method, of class Leptonica.
-//     */
-//    @Test
-//    public void testRecogaDestroy() {
-//        System.out.println("recogaDestroy");
-//        L_Recoga.ByReference[] precoga = null;
-
-//        instance.recogaDestroy(precoga);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
 //     * Test of recogaAddRecog method, of class Leptonica.
 //     */
 //    @Test
@@ -42866,7 +42853,7 @@ public class LeptonicaTest {
     @Test
     public void testGetLeptonicaVersion() {
         System.out.println("getLeptonicaVersion");
-        String expResult = "leptonica-1.74.1";
+        String expResult = "leptonica-1.74.2";
         Pointer result = instance.getLeptonicaVersion();
         assertTrue(result.getString(0).startsWith(expResult));
     }

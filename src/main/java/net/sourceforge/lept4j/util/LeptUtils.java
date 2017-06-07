@@ -245,8 +245,6 @@ public class LeptUtils {
             Leptonica1.ptaDestroy(pRef);
         } else if (resource instanceof Ptaa) {
             Leptonica1.ptaaDestroy(pRef);
-        } else if (resource instanceof L_Recoga) {
-            Leptonica1.recogaDestroy(pRef);
         } else if (resource instanceof L_Recog) {
             Leptonica1.recogDestroy(pRef);
         } else if (resource instanceof Sarray) {

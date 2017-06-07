@@ -32,6 +32,11 @@ public class L_Dewarp extends Structure {
 	 */
 	public net.sourceforge.lept4j.FPix.ByReference samphdispar;
 	/**
+	 * sampled slope h-disparity array<br>
+	 * C type : FPix*
+	 */
+	public net.sourceforge.lept4j.FPix.ByReference sampydispar;
+	/**
 	 * full vert disparity array<br>
 	 * C type : FPix*
 	 */
@@ -41,6 +46,11 @@ public class L_Dewarp extends Structure {
 	 * C type : FPix*
 	 */
 	public net.sourceforge.lept4j.FPix.ByReference fullhdispar;
+	/**
+	 * full slope h-disparity array<br>
+	 * C type : FPix*
+	 */
+	public net.sourceforge.lept4j.FPix.ByReference fullydispar;
 	/**
 	 * sorted y val of midpoint each line<br>
 	 * C type : Numa*
@@ -147,6 +157,11 @@ public class L_Dewarp extends Structure {
 	 */
 	public int hsuccess;
 	/**
+	 * sets to 1 if slope disparity builds<br>
+	 * C type : l_int32
+	 */
+	public int ysuccess;
+	/**
 	 * sets to 1 if valid vert disparity<br>
 	 * C type : l_int32
 	 */
@@ -170,7 +185,7 @@ public class L_Dewarp extends Structure {
 		super();
 	}
 	protected List<? > getFieldOrder() {
-		return Arrays.asList("dewa", "pixs", "sampvdispar", "samphdispar", "fullvdispar", "fullhdispar", "namidys", "nacurves", "w", "h", "pageno", "sampling", "redfactor", "minlines", "nlines", "mincurv", "maxcurv", "leftslope", "rightslope", "leftcurv", "rightcurv", "nx", "ny", "hasref", "refpage", "vsuccess", "hsuccess", "vvalid", "hvalid", "skip_horiz", "debug");
+		return Arrays.asList("dewa", "pixs", "sampvdispar", "samphdispar", "sampydispar", "fullvdispar", "fullhdispar", "fullydispar", "namidys", "nacurves", "w", "h", "pageno", "sampling", "redfactor", "minlines", "nlines", "mincurv", "maxcurv", "leftslope", "rightslope", "leftcurv", "rightcurv", "nx", "ny", "hasref", "refpage", "vsuccess", "hsuccess", "ysuccess", "vvalid", "hvalid", "skip_horiz", "debug");
 	}
 	public L_Dewarp(Pointer peer) {
 		super(peer);
