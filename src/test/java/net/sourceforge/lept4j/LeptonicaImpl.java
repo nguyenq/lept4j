@@ -252,11 +252,6 @@ public class LeptonicaImpl implements Leptonica {
     }
 
     @Override
-    public Numa pixFindBaselines(Pix pixs, PointerByReference ppta, int debug) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
     public Pix pixDeskewLocal(Pix pixs, int nslices, int redsweep, int redsearch, float sweeprange, float sweepdelta, float minbsdelta) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
@@ -778,11 +773,6 @@ public class LeptonicaImpl implements Leptonica {
 
     @Override
     public Boxa boxaClipToBox(Boxa boxas, Box box) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public Boxa boxaCombineOverlaps(Boxa boxas) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
@@ -6746,6 +6736,44 @@ public class LeptonicaImpl implements Leptonica {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
-   
+    @Override
+    public Numa pixFindBaselines(Pix pixs, PointerByReference ppta, Pixa pixadb) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int boxaContainedInBoxa(Boxa boxa1, Boxa boxa2, IntBuffer pcontained) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public Boxa boxaCombineOverlaps(Boxa boxas, Pixa pixadb) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int boxaCombineOverlapsInPair(Boxa boxas1, Boxa boxas2, PointerByReference pboxad1, PointerByReference pboxad2, Pixa pixadb) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int boxCompareSize(Box box1, Box box2, int type, IntBuffer prel) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int pixDecideIfTable(Pix pixs, Box box, IntBuffer pistable, Pixa pixadb) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public Pix pixPrepare1bpp(Pix pixs, Box box, float cropfract, int outres) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public Pix pixDeskewBoth(Pix pixs, int redsearch) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
    
 }

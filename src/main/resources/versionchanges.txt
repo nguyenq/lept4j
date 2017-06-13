@@ -52,3 +52,6 @@ Version 1.4.0 (21 May 2017):
 
 Version 1.5.0 (6 June 2017):
 - Upgrade to Leptonica 1.74.2
+
+Version 1.6.0 (13 June 2017):
+- Upgrade to Leptonica 1.74.4

@@ -580,10 +580,10 @@ public class Leptonica1 implements Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>NUMA* pixFindBaselines(PIX*, PTA**, l_int32)</code><br>
+     * <code>NUMA* pixFindBaselines(PIX*, PTA**, PIXA*)</code><br>
      * <i>native declaration : allheaders.h:156</i>
      */
-    public static native Numa pixFindBaselines(Pix pixs, PointerByReference ppta, int debug);
+    public static native Numa pixFindBaselines(Pix pixs, PointerByReference ppta, Pixa pixadb);
 
     /**
      * Original signature :
@@ -1050,8 +1050,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int pixaSaveFont(String indir, String outdir, int fontsize);
 
     /**
-     * Original signature :
-     * <code>PIX* pixReadStreamBmp(FILE*)</code><br>
+     * Original signature : <code>PIX* pixReadStreamBmp(FILE*)</code><br>
      * <i>native declaration : allheaders.h:290</i>
      */
     public static native Pix pixReadStreamBmp(FILE fp);
@@ -1533,6 +1532,13 @@ public class Leptonica1 implements Library, ILeptonica {
 
     /**
      * Original signature :
+     * <code>l_int32 boxaContainedInBoxa(BOXA*, BOXA*, l_int32*)</code><br>
+     * <i>native declaration : allheaders.h:436</i>
+     */
+    public static native int boxaContainedInBoxa(Boxa boxa1, Boxa boxa2, IntBuffer pcontained);
+
+    /**
+     * Original signature :
      * <code>BOXA* boxaIntersectsBox(BOXA*, BOX*)</code><br>
      * <i>native declaration : allheaders.h:436</i>
      */
@@ -1552,10 +1558,18 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Boxa boxaClipToBox(Boxa boxas, Box box);
 
     /**
-     * Original signature : <code>BOXA* boxaCombineOverlaps(BOXA*)</code><br>
+     * Original signature :
+     * <code>BOXA* boxaCombineOverlaps(BOXA*, PIXA*)</code><br>
      * <i>native declaration : allheaders.h:442</i>
      */
-    public static native Boxa boxaCombineOverlaps(Boxa boxas);
+    public static native Boxa boxaCombineOverlaps(Boxa boxas, Pixa pixadb);
+
+    /**
+     * Original signature :
+     * <code>l_int32 boxaCombineOverlapsInPair(BOXA*, BOXA*, BOXA**, BOXA**, PIXA*)</code><br>
+     * <i>native declaration : allheaders.h:446</i>
+     */
+    public static native int boxaCombineOverlapsInPair(Boxa boxas1, Boxa boxas2, PointerByReference pboxad1, PointerByReference pboxad2, Pixa pixadb);
 
     /**
      * Original signature : <code>BOX* boxOverlapRegion(BOX*, BOX*)</code><br>
@@ -1596,6 +1610,13 @@ public class Leptonica1 implements Library, ILeptonica {
      * <i>native declaration : allheaders.h:454</i>
      */
     public static native int boxSeparationDistance(Box box1, Box box2, IntBuffer ph_sep, IntBuffer pv_sep);
+
+    /**
+     * Original signature :
+     * <code>l_int32 boxCompareSize(BOX*, BOX*, l_int32, l_int32*)</code><br>
+     * <i>native declaration : allheaders.h:460</i>
+     */
+    public static native int boxCompareSize(Box box1, Box box2, int type, IntBuffer prel);
 
     /**
      * Original signature :
@@ -9225,6 +9246,27 @@ public class Leptonica1 implements Library, ILeptonica {
 
     /**
      * Original signature :
+     * <code>l_int32 pixDecideIfTable(PIX*, BOX*, l_int32*, PIXA*)</code><br>
+     * <i>native declaration : allheaders.h:</i>
+     */
+    public static native int pixDecideIfTable(Pix pixs, Box box, IntBuffer pistable, Pixa pixadb);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixPrepare1bpp(PIX*, BOX*, l_float32, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:</i>
+     */
+    public static native Pix pixPrepare1bpp(Pix pixs, Box box, float cropfract, int outres);
+
+    /**
+     * Original signature :
+     * <code>l_int32 pixCountTextColumns(PIX*, l_float32, l_float32, l_float32, l_int32*, PIXA*)</code><br>
+     * <i>native declaration : allheaders.h:2636</i>
+     */
+    public static native int pixCountTextColumns(Pix pixs, float deltafract, float peakfract, float clipfract, IntBuffer pncols, Pixa pixadb);
+
+    /**
+     * Original signature :
      * <code>l_int32 pixDecideIfText(PIX*, BOX*, l_int32*, PIXA*)</code><br>
      * <i>native declaration : allheaders.h:2632</i>
      */
@@ -9236,13 +9278,6 @@ public class Leptonica1 implements Library, ILeptonica {
      * <i>native declaration : allheaders.h:2634</i>
      */
     public static native int pixFindThreshFgExtent(Pix pixs, int thresh, IntBuffer ptop, IntBuffer pbot);
-
-    /**
-     * Original signature :
-     * <code>l_int32 pixCountTextColumns(PIX*, l_float32, l_float32, l_float32, l_int32*, PIXA*)</code><br>
-     * <i>native declaration : allheaders.h:2636</i>
-     */
-    public static native int pixCountTextColumns(Pix pixs, float deltafract, float peakfract, float clipfract, IntBuffer pncols, Pixa pixadb);
 
     /**
      * Original signature :
@@ -17195,6 +17230,12 @@ public class Leptonica1 implements Library, ILeptonica {
      * <i>native declaration : allheaders.h:4930</i>
      */
     public static native Pix pixVShearLI(Pix pixs, int xloc, float radang, int incolor);
+
+    /**
+     * Original signature : <code>PIX* pixDeskewBoth(PIX*, l_int32)</code><br>
+     * <i>native declaration : allheaders.h:</i>
+     */
+    public static native Pix pixDeskewBoth(Pix pixs, int redsearch);
 
     /**
      * Original signature : <code>PIX* pixDeskew(PIX*, l_int32)</code><br>
