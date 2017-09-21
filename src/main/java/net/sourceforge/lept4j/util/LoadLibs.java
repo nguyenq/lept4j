@@ -151,12 +151,12 @@ public class LoadLibs {
                     if (jarEntry.isDirectory()) {
                         currentFile.mkdirs();
                     } else {
-                        currentFile.deleteOnExit();
-                        InputStream is = jarFile.getInputStream(jarEntry);
-                        OutputStream out = FileUtils.openOutputStream(currentFile);
-                        IOUtils.copy(is, out);
-                        is.close();
-                        out.close();
+                        if (!currentFile.exists() || currentFile.length() != jarEntry.getSize()) {
+                            try (InputStream is = jarFile.getInputStream(jarEntry);
+                                    OutputStream out = FileUtils.openOutputStream(currentFile)) {
+                                IOUtils.copy(is, out);
+                            }
+                        }
                     }
                 }
             }
