@@ -146,14 +146,14 @@ public class LoadLibs {
                  */
                 if (jarEntryName.startsWith(jarConnectionEntryName)) {
                     String filename = jarEntryName.substring(jarConnectionEntryName.length());
-                    File currentFile = new File(destDir, filename);
+                    File targetFile = new File(destDir, filename);
 
                     if (jarEntry.isDirectory()) {
-                        currentFile.mkdirs();
+                        targetFile.mkdirs();
                     } else {
-                        if (!currentFile.exists() || currentFile.length() != jarEntry.getSize()) {
+                        if (!targetFile.exists() || targetFile.length() != jarEntry.getSize()) {
                             try (InputStream is = jarFile.getInputStream(jarEntry);
-                                    OutputStream out = FileUtils.openOutputStream(currentFile)) {
+                                    OutputStream out = FileUtils.openOutputStream(targetFile)) {
                                 IOUtils.copy(is, out);
                             }
                         }

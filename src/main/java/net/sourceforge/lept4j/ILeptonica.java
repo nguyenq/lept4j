@@ -1309,7 +1309,7 @@ public interface ILeptonica {
     public static final int HAVE_LIBWEBP = (int) 1;
     /** <i>native declaration : environ.h</i>
      */
-    public static final int HAVE_LIBJP2K = (int) 0;
+    public static final int HAVE_LIBJP2K = (int) 1;
     /** <i>native declaration : environ.h</i>
      */
     public static final int USE_BMPIO = (int) 1;
