@@ -56,5 +56,6 @@ Version 1.5.0 (6 June 2017):
 Version 1.6.0 (13 June 2017):
 - Upgrade to Leptonica 1.74.4
 
-Version 1.6.1 (21 September 2017)
+Version 1.6.1 (22 September 2017)
 - Not extract/copy native resource if it exists and has same file size
+- Add jp2k support
