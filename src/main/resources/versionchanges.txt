@@ -59,3 +59,6 @@ Version 1.6.0 (13 June 2017):
 Version 1.6.1 (22 September 2017)
 - Not extract/copy native resource if it exists and has same file size
 - Add jp2k support
+
+Version 1.6.2 (30 October 2017)
+- Update libpng, libtiff, and libopenjp2 libraries
