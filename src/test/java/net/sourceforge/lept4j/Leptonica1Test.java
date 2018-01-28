@@ -14567,21 +14567,6 @@ public class Leptonica1Test {
 //    }
 //
 //    /**
-//     * Test of makeGrayQuantTargetTable method, of class Leptonica1.
-//     */
-//    @Test
-//    public void testMakeGrayQuantTargetTable() {
-//        System.out.println("makeGrayQuantTargetTable");
-//        int nlevels = 0;
-//        int depth = 0;
-//        IntByReference expResult = null;
-//        IntByReference result = Leptonica1.makeGrayQuantTargetTable(nlevels, depth);
-//        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
 //     * Test of makeGrayQuantTableArb method, of class Leptonica1.
 //     */
 //    @Test
@@ -14593,40 +14578,6 @@ public class Leptonica1Test {
 //        PixColormap.ByReference[] pcmap = null;
 //        int expResult = 0;
 //        int result = Leptonica1.makeGrayQuantTableArb(na, outdepth, ptab, pcmap);
-//        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of makeGrayQuantColormapArb method, of class Leptonica1.
-//     */
-//    @Test
-//    public void testMakeGrayQuantColormapArb_4args_1() {
-//        System.out.println("makeGrayQuantColormapArb");
-//        Pix pixs = null;
-//        IntBuffer tab = null;
-//        int outdepth = 0;
-//        PixColormap.ByReference[] pcmap = null;
-//        int expResult = 0;
-//        int result = Leptonica1.makeGrayQuantColormapArb(pixs, tab, outdepth, pcmap);
-//        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of makeGrayQuantColormapArb method, of class Leptonica1.
-//     */
-//    @Test
-//    public void testMakeGrayQuantColormapArb_4args_2() {
-//        System.out.println("makeGrayQuantColormapArb");
-//        Pix pixs = null;
-//        IntByReference tab = null;
-//        int outdepth = 0;
-//        PixColormap.ByReference[] pcmap = null;
-//        int expResult = 0;
-//        int result = Leptonica1.makeGrayQuantColormapArb(pixs, tab, outdepth, pcmap);
 //        assertEquals(expResult, result);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -14698,27 +14649,6 @@ public class Leptonica1Test {
 //        Pix expResult = null;
 //        Pix result = Leptonica1.pixGrayQuantFromCmap(pixs, cmap, mindepth);
 //        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of ditherToBinaryLow method, of class Leptonica1.
-//     */
-//    @Test
-//    public void testDitherToBinaryLow() {
-//        System.out.println("ditherToBinaryLow");
-//        IntBuffer datad = null;
-//        int w = 0;
-//        int h = 0;
-//        int wpld = 0;
-//        IntBuffer datas = null;
-//        int wpls = 0;
-//        IntBuffer bufs1 = null;
-//        IntBuffer bufs2 = null;
-//        int lowerclip = 0;
-//        int upperclip = 0;
-//        Leptonica1.ditherToBinaryLow(datad, w, h, wpld, datas, wpls, bufs1, bufs2, lowerclip, upperclip);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
 //    }
@@ -14831,28 +14761,6 @@ public class Leptonica1Test {
 //        int expResult = 0;
 //        int result = Leptonica1.make8To1DitherTables(ptabval, ptab38, ptab14, lowerclip, upperclip);
 //        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of ditherTo2bppLow method, of class Leptonica1.
-//     */
-//    @Test
-//    public void testDitherTo2bppLow() {
-//        System.out.println("ditherTo2bppLow");
-//        IntBuffer datad = null;
-//        int w = 0;
-//        int h = 0;
-//        int wpld = 0;
-//        IntBuffer datas = null;
-//        int wpls = 0;
-//        IntBuffer bufs1 = null;
-//        IntBuffer bufs2 = null;
-//        IntBuffer tabval = null;
-//        IntBuffer tab38 = null;
-//        IntBuffer tab14 = null;
-//        Leptonica1.ditherTo2bppLow(datad, w, h, wpld, datas, wpls, bufs1, bufs2, tabval, tab38, tab14);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
 //    }
@@ -24012,23 +23920,6 @@ public class Leptonica1Test {
 //        Numa.ByReference[] pna = null;
 //        int expResult = 0;
 //        int result = Leptonica1.pixGetRankValueMasked(pixs, pixm, x, y, factor, rank, pval, pna);
-//        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of pixGetAverageValue method, of class Leptonica1.
-//     */
-//    @Test
-//    public void testPixGetAverageValue() {
-//        System.out.println("pixGetAverageValue");
-//        Pix pixs = null;
-//        int factor = 0;
-//        int type = 0;
-//        IntBuffer pvalue = null;
-//        int expResult = 0;
-//        int result = Leptonica1.pixGetAverageValue(pixs, factor, type, pvalue);
 //        assertEquals(expResult, result);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
@@ -34208,22 +34099,6 @@ public class Leptonica1Test {
 //    }
 //
 //    /**
-//     * Test of shiftDataHorizontalLow method, of class Leptonica1.
-//     */
-//    @Test
-//    public void testShiftDataHorizontalLow() {
-//        System.out.println("shiftDataHorizontalLow");
-//        IntBuffer datad = null;
-//        int wpld = 0;
-//        IntBuffer datas = null;
-//        int wpls = 0;
-//        int shift = 0;
-//        Leptonica1.shiftDataHorizontalLow(datad, wpld, datas, wpls, shift);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
 //     * Test of rasteropUniLow method, of class Leptonica1.
 //     */
 //    @Test
@@ -34467,63 +34342,6 @@ public class Leptonica1Test {
 //        Pix expResult = null;
 //        Pix result = Leptonica1.pixRotateAMColorFast(pixs, angle, colorval);
 //        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of rotateAMColorLow method, of class Leptonica1.
-//     */
-//    @Test
-//    public void testRotateAMColorLow() {
-//        System.out.println("rotateAMColorLow");
-//        IntBuffer datad = null;
-//        int w = 0;
-//        int h = 0;
-//        int wpld = 0;
-//        IntBuffer datas = null;
-//        int wpls = 0;
-//        float angle = 0.0F;
-//        int colorval = 0;
-//        Leptonica1.rotateAMColorLow(datad, w, h, wpld, datas, wpls, angle, colorval);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of rotateAMGrayLow method, of class Leptonica1.
-//     */
-//    @Test
-//    public void testRotateAMGrayLow() {
-//        System.out.println("rotateAMGrayLow");
-//        IntBuffer datad = null;
-//        int w = 0;
-//        int h = 0;
-//        int wpld = 0;
-//        IntBuffer datas = null;
-//        int wpls = 0;
-//        float angle = 0.0F;
-//        byte grayval = 0;
-//        Leptonica1.rotateAMGrayLow(datad, w, h, wpld, datas, wpls, angle, grayval);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of rotateAMColorCornerLow method, of class Leptonica1.
-//     */
-//    @Test
-//    public void testRotateAMColorCornerLow() {
-//        System.out.println("rotateAMColorCornerLow");
-//        IntBuffer datad = null;
-//        int w = 0;
-//        int h = 0;
-//        int wpld = 0;
-//        IntBuffer datas = null;
-//        int wpls = 0;
-//        float angle = 0.0F;
-//        int colorval = 0;
-//        Leptonica1.rotateAMColorCornerLow(datad, w, h, wpld, datas, wpls, angle, colorval);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
 //    }
@@ -35969,64 +35787,6 @@ public class Leptonica1Test {
 //    }
 //
 //    /**
-//     * Test of pixScaleGray2xLIThresh method, of class Leptonica1.
-//     */
-//    @Test
-//    public void testPixScaleGray2xLIThresh() {
-//        System.out.println("pixScaleGray2xLIThresh");
-//        Pix pixs = null;
-//        int thresh = 0;
-//        Pix expResult = null;
-//        Pix result = Leptonica1.pixScaleGray2xLIThresh(pixs, thresh);
-//        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of pixScaleGray2xLIDither method, of class Leptonica1.
-//     */
-//    @Test
-//    public void testPixScaleGray2xLIDither() {
-//        System.out.println("pixScaleGray2xLIDither");
-//        Pix pixs = null;
-//        Pix expResult = null;
-//        Pix result = Leptonica1.pixScaleGray2xLIDither(pixs);
-//        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of pixScaleGray4xLIThresh method, of class Leptonica1.
-//     */
-//    @Test
-//    public void testPixScaleGray4xLIThresh() {
-//        System.out.println("pixScaleGray4xLIThresh");
-//        Pix pixs = null;
-//        int thresh = 0;
-//        Pix expResult = null;
-//        Pix result = Leptonica1.pixScaleGray4xLIThresh(pixs, thresh);
-//        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of pixScaleGray4xLIDither method, of class Leptonica1.
-//     */
-//    @Test
-//    public void testPixScaleGray4xLIDither() {
-//        System.out.println("pixScaleGray4xLIDither");
-//        Pix pixs = null;
-//        Pix expResult = null;
-//        Pix result = Leptonica1.pixScaleGray4xLIDither(pixs);
-//        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
 //     * Test of pixScaleGrayMinMax method, of class Leptonica1.
 //     */
 //    @Test
@@ -36122,44 +35882,6 @@ public class Leptonica1Test {
 //        Pix expResult = null;
 //        Pix result = Leptonica1.pixScaleWithAlpha(pixs, scalex, scaley, pixg, fract);
 //        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of scaleColorLILow method, of class Leptonica1.
-//     */
-//    @Test
-//    public void testScaleColorLILow() {
-//        System.out.println("scaleColorLILow");
-//        IntBuffer datad = null;
-//        int wd = 0;
-//        int hd = 0;
-//        int wpld = 0;
-//        IntBuffer datas = null;
-//        int ws = 0;
-//        int hs = 0;
-//        int wpls = 0;
-//        Leptonica1.scaleColorLILow(datad, wd, hd, wpld, datas, ws, hs, wpls);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of scaleGrayLILow method, of class Leptonica1.
-//     */
-//    @Test
-//    public void testScaleGrayLILow() {
-//        System.out.println("scaleGrayLILow");
-//        IntBuffer datad = null;
-//        int wd = 0;
-//        int hd = 0;
-//        int wpld = 0;
-//        IntBuffer datas = null;
-//        int ws = 0;
-//        int hs = 0;
-//        int wpls = 0;
-//        Leptonica1.scaleGrayLILow(datad, wd, hd, wpld, datas, ws, hs, wpls);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
 //    }
@@ -36365,284 +36087,6 @@ public class Leptonica1Test {
 //        int hs = 0;
 //        int wpls = 0;
 //        Leptonica1.scaleGrayAreaMapLow(datad, wd, hd, wpld, datas, ws, hs, wpls);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of scaleAreaMapLow2 method, of class Leptonica1.
-//     */
-//    @Test
-//    public void testScaleAreaMapLow2() {
-//        System.out.println("scaleAreaMapLow2");
-//        IntBuffer datad = null;
-//        int wd = 0;
-//        int hd = 0;
-//        int wpld = 0;
-//        IntBuffer datas = null;
-//        int d = 0;
-//        int wpls = 0;
-//        Leptonica1.scaleAreaMapLow2(datad, wd, hd, wpld, datas, d, wpls);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of scaleBinaryLow method, of class Leptonica1.
-//     */
-//    @Test
-//    public void testScaleBinaryLow() {
-//        System.out.println("scaleBinaryLow");
-//        IntBuffer datad = null;
-//        int wd = 0;
-//        int hd = 0;
-//        int wpld = 0;
-//        IntBuffer datas = null;
-//        int ws = 0;
-//        int hs = 0;
-//        int wpls = 0;
-//        int expResult = 0;
-//        int result = Leptonica1.scaleBinaryLow(datad, wd, hd, wpld, datas, ws, hs, wpls);
-//        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of scaleToGray2Low method, of class Leptonica1.
-//     */
-//    @Test
-//    public void testScaleToGray2Low() {
-//        System.out.println("scaleToGray2Low");
-//        IntBuffer datad = null;
-//        int wd = 0;
-//        int hd = 0;
-//        int wpld = 0;
-//        IntBuffer datas = null;
-//        int wpls = 0;
-//        IntBuffer sumtab = null;
-//        ByteBuffer valtab = null;
-//        Leptonica1.scaleToGray2Low(datad, wd, hd, wpld, datas, wpls, sumtab, valtab);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of makeSumTabSG2 method, of class Leptonica1.
-//     */
-//    @Test
-//    public void testMakeSumTabSG2() {
-//        System.out.println("makeSumTabSG2");
-//        IntByReference expResult = null;
-//        IntByReference result = Leptonica1.makeSumTabSG2();
-//        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of makeValTabSG2 method, of class Leptonica1.
-//     */
-//    @Test
-//    public void testMakeValTabSG2() {
-//        System.out.println("makeValTabSG2");
-//        Pointer expResult = null;
-//        Pointer result = Leptonica1.makeValTabSG2();
-//        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of scaleToGray3Low method, of class Leptonica1.
-//     */
-//    @Test
-//    public void testScaleToGray3Low() {
-//        System.out.println("scaleToGray3Low");
-//        IntBuffer datad = null;
-//        int wd = 0;
-//        int hd = 0;
-//        int wpld = 0;
-//        IntBuffer datas = null;
-//        int wpls = 0;
-//        IntBuffer sumtab = null;
-//        ByteBuffer valtab = null;
-//        Leptonica1.scaleToGray3Low(datad, wd, hd, wpld, datas, wpls, sumtab, valtab);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of makeSumTabSG3 method, of class Leptonica1.
-//     */
-//    @Test
-//    public void testMakeSumTabSG3() {
-//        System.out.println("makeSumTabSG3");
-//        IntByReference expResult = null;
-//        IntByReference result = Leptonica1.makeSumTabSG3();
-//        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of makeValTabSG3 method, of class Leptonica1.
-//     */
-//    @Test
-//    public void testMakeValTabSG3() {
-//        System.out.println("makeValTabSG3");
-//        Pointer expResult = null;
-//        Pointer result = Leptonica1.makeValTabSG3();
-//        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of scaleToGray4Low method, of class Leptonica1.
-//     */
-//    @Test
-//    public void testScaleToGray4Low() {
-//        System.out.println("scaleToGray4Low");
-//        IntBuffer datad = null;
-//        int wd = 0;
-//        int hd = 0;
-//        int wpld = 0;
-//        IntBuffer datas = null;
-//        int wpls = 0;
-//        IntBuffer sumtab = null;
-//        ByteBuffer valtab = null;
-//        Leptonica1.scaleToGray4Low(datad, wd, hd, wpld, datas, wpls, sumtab, valtab);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of makeSumTabSG4 method, of class Leptonica1.
-//     */
-//    @Test
-//    public void testMakeSumTabSG4() {
-//        System.out.println("makeSumTabSG4");
-//        IntByReference expResult = null;
-//        IntByReference result = Leptonica1.makeSumTabSG4();
-//        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of makeValTabSG4 method, of class Leptonica1.
-//     */
-//    @Test
-//    public void testMakeValTabSG4() {
-//        System.out.println("makeValTabSG4");
-//        Pointer expResult = null;
-//        Pointer result = Leptonica1.makeValTabSG4();
-//        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of scaleToGray6Low method, of class Leptonica1.
-//     */
-//    @Test
-//    public void testScaleToGray6Low() {
-//        System.out.println("scaleToGray6Low");
-//        IntBuffer datad = null;
-//        int wd = 0;
-//        int hd = 0;
-//        int wpld = 0;
-//        IntBuffer datas = null;
-//        int wpls = 0;
-//        IntBuffer tab8 = null;
-//        ByteBuffer valtab = null;
-//        Leptonica1.scaleToGray6Low(datad, wd, hd, wpld, datas, wpls, tab8, valtab);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of makeValTabSG6 method, of class Leptonica1.
-//     */
-//    @Test
-//    public void testMakeValTabSG6() {
-//        System.out.println("makeValTabSG6");
-//        Pointer expResult = null;
-//        Pointer result = Leptonica1.makeValTabSG6();
-//        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of scaleToGray8Low method, of class Leptonica1.
-//     */
-//    @Test
-//    public void testScaleToGray8Low() {
-//        System.out.println("scaleToGray8Low");
-//        IntBuffer datad = null;
-//        int wd = 0;
-//        int hd = 0;
-//        int wpld = 0;
-//        IntBuffer datas = null;
-//        int wpls = 0;
-//        IntBuffer tab8 = null;
-//        ByteBuffer valtab = null;
-//        Leptonica1.scaleToGray8Low(datad, wd, hd, wpld, datas, wpls, tab8, valtab);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of makeValTabSG8 method, of class Leptonica1.
-//     */
-//    @Test
-//    public void testMakeValTabSG8() {
-//        System.out.println("makeValTabSG8");
-//        Pointer expResult = null;
-//        Pointer result = Leptonica1.makeValTabSG8();
-//        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of scaleToGray16Low method, of class Leptonica1.
-//     */
-//    @Test
-//    public void testScaleToGray16Low() {
-//        System.out.println("scaleToGray16Low");
-//        IntBuffer datad = null;
-//        int wd = 0;
-//        int hd = 0;
-//        int wpld = 0;
-//        IntBuffer datas = null;
-//        int wpls = 0;
-//        IntBuffer tab8 = null;
-//        Leptonica1.scaleToGray16Low(datad, wd, hd, wpld, datas, wpls, tab8);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of scaleMipmapLow method, of class Leptonica1.
-//     */
-//    @Test
-//    public void testScaleMipmapLow() {
-//        System.out.println("scaleMipmapLow");
-//        IntBuffer datad = null;
-//        int wd = 0;
-//        int hd = 0;
-//        int wpld = 0;
-//        IntBuffer datas1 = null;
-//        int wpls1 = 0;
-//        IntBuffer datas2 = null;
-//        int wpls2 = 0;
-//        float red = 0.0F;
-//        int expResult = 0;
-//        int result = Leptonica1.scaleMipmapLow(datad, wd, hd, wpld, datas1, wpls1, datas2, wpls2, red);
-//        assertEquals(expResult, result);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
 //    }
@@ -36969,131 +36413,6 @@ public class Leptonica1Test {
 //        Pix expResult = null;
 //        Pix result = Leptonica1.pixRemoveSeededComponents(pixd, pixs, pixm, connectivity, bordersize);
 //        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of seedfillBinaryLow method, of class Leptonica1.
-//     */
-//    @Test
-//    public void testSeedfillBinaryLow() {
-//        System.out.println("seedfillBinaryLow");
-//        IntBuffer datas = null;
-//        int hs = 0;
-//        int wpls = 0;
-//        IntBuffer datam = null;
-//        int hm = 0;
-//        int wplm = 0;
-//        int connectivity = 0;
-//        Leptonica1.seedfillBinaryLow(datas, hs, wpls, datam, hm, wplm, connectivity);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of seedfillGrayLow method, of class Leptonica1.
-//     */
-//    @Test
-//    public void testSeedfillGrayLow() {
-//        System.out.println("seedfillGrayLow");
-//        IntBuffer datas = null;
-//        int w = 0;
-//        int h = 0;
-//        int wpls = 0;
-//        IntBuffer datam = null;
-//        int wplm = 0;
-//        int connectivity = 0;
-//        Leptonica1.seedfillGrayLow(datas, w, h, wpls, datam, wplm, connectivity);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of seedfillGrayInvLow method, of class Leptonica1.
-//     */
-//    @Test
-//    public void testSeedfillGrayInvLow() {
-//        System.out.println("seedfillGrayInvLow");
-//        IntBuffer datas = null;
-//        int w = 0;
-//        int h = 0;
-//        int wpls = 0;
-//        IntBuffer datam = null;
-//        int wplm = 0;
-//        int connectivity = 0;
-//        Leptonica1.seedfillGrayInvLow(datas, w, h, wpls, datam, wplm, connectivity);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of seedfillGrayLowSimple method, of class Leptonica1.
-//     */
-//    @Test
-//    public void testSeedfillGrayLowSimple() {
-//        System.out.println("seedfillGrayLowSimple");
-//        IntBuffer datas = null;
-//        int w = 0;
-//        int h = 0;
-//        int wpls = 0;
-//        IntBuffer datam = null;
-//        int wplm = 0;
-//        int connectivity = 0;
-//        Leptonica1.seedfillGrayLowSimple(datas, w, h, wpls, datam, wplm, connectivity);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of seedfillGrayInvLowSimple method, of class Leptonica1.
-//     */
-//    @Test
-//    public void testSeedfillGrayInvLowSimple() {
-//        System.out.println("seedfillGrayInvLowSimple");
-//        IntBuffer datas = null;
-//        int w = 0;
-//        int h = 0;
-//        int wpls = 0;
-//        IntBuffer datam = null;
-//        int wplm = 0;
-//        int connectivity = 0;
-//        Leptonica1.seedfillGrayInvLowSimple(datas, w, h, wpls, datam, wplm, connectivity);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of distanceFunctionLow method, of class Leptonica1.
-//     */
-//    @Test
-//    public void testDistanceFunctionLow() {
-//        System.out.println("distanceFunctionLow");
-//        IntBuffer datad = null;
-//        int w = 0;
-//        int h = 0;
-//        int d = 0;
-//        int wpld = 0;
-//        int connectivity = 0;
-//        Leptonica1.distanceFunctionLow(datad, w, h, d, wpld, connectivity);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of seedspreadLow method, of class Leptonica1.
-//     */
-//    @Test
-//    public void testSeedspreadLow() {
-//        System.out.println("seedspreadLow");
-//        IntBuffer datad = null;
-//        int w = 0;
-//        int h = 0;
-//        int wpld = 0;
-//        IntBuffer datat = null;
-//        int wplt = 0;
-//        int connectivity = 0;
-//        Leptonica1.seedspreadLow(datad, w, h, wpld, datat, wplt, connectivity);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
 //    }
@@ -40368,7 +39687,7 @@ public class Leptonica1Test {
     @Test
     public void testGetLeptonicaVersion() {
         System.out.println("getLeptonicaVersion");
-        String expResult = "leptonica-1.74.4";
+        String expResult = "leptonica-1.75.0";
         Pointer result = Leptonica1.getLeptonicaVersion();
         assertTrue(result.getString(0).startsWith(expResult));
     }

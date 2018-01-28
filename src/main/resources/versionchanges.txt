@@ -62,3 +62,6 @@ Version 1.6.1 (22 September 2017)
 
 Version 1.6.2 (30 October 2017)
 - Update libpng, libtiff, and libopenjp2 libraries
+
+Version 1.7.0 (28 January 2018):
+- Upgrade to Leptonica 1.75.0

@@ -2081,17 +2081,17 @@ public interface Leptonica extends Library, ILeptonica {
 
 //    /**
 //     * Original signature :
-//     * <code>BOXA* boxaSmoothSequenceLS(BOXA*, l_float32, l_int32, l_int32, l_int32)</code><br>
+//     * <code>BOXA* boxaSmoothSequenceLS(BOXA*, l_float32, l_int32, l_int32, l_int32, l_int32)</code><br>
 //     * <i>native declaration : allheaders.h:606</i>
 //     */
-//    Boxa boxaSmoothSequenceLS(Boxa boxas, float factor, int subflag, int maxdiff, int debug);
+//    Boxa boxaSmoothSequenceLS(Boxa boxas, float factor, int subflag, int maxdiff, int extrapixels, int debug);
 //
 //    /**
 //     * Original signature :
-//     * <code>BOXA* boxaSmoothSequenceMedian(BOXA*, l_int32, l_int32, l_int32, l_int32)</code><br>
+//     * <code>BOXA* boxaSmoothSequenceMedian(BOXA*, l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
 //     * <i>native declaration : allheaders.h:608</i>
 //     */
-//    Boxa boxaSmoothSequenceMedian(Boxa boxas, int halfwin, int subflag, int maxdiff, int debug);
+//    Boxa boxaSmoothSequenceMedian(Boxa boxas, int halfwin, int subflag, int maxdiff, int extrapixels, int debug);
 //
 //    /**
 //     * Original signature :
@@ -2109,10 +2109,10 @@ public interface Leptonica extends Library, ILeptonica {
 //
 //    /**
 //     * Original signature :
-//     * <code>BOXA* boxaModifyWithBoxa(BOXA*, BOXA*, l_int32, l_int32)</code><br>
+//     * <code>BOXA* boxaModifyWithBoxa(BOXA*, BOXA*, l_int32, l_int32, l_int32)</code><br>
 //     * <i>native declaration : allheaders.h:614</i>
 //     */
-//    Boxa boxaModifyWithBoxa(Boxa boxas, Boxa boxam, int subflag, int maxdiff);
+//    Boxa boxaModifyWithBoxa(Boxa boxas, Boxa boxam, int subflag, int maxdiff, int extrapixels);
 //
 //    /**
 //     * Original signature :
@@ -3685,14 +3685,14 @@ public interface Leptonica extends Library, ILeptonica {
      * <code>l_int32 pixTestForSimilarity(PIX*, PIX*, l_int32, l_int32, l_float32, l_float32, l_int32*, l_int32)</code><br>
      * <i>native declaration : allheaders.h:1068</i>
      */
-    int pixTestForSimilarity(Pix pix1, Pix pix2, int factor, int mindiff, float maxfract, float maxave, IntBuffer psimilar, int printstats);
+    int pixTestForSimilarity(Pix pix1, Pix pix2, int factor, int mindiff, float maxfract, float maxave, IntBuffer psimilar, int details);
 
     /**
      * Original signature :
      * <code>l_int32 pixGetDifferenceStats(PIX*, PIX*, l_int32, l_int32, l_float32*, l_float32*, l_int32)</code><br>
      * <i>native declaration : allheaders.h:1070</i>
      */
-    int pixGetDifferenceStats(Pix pix1, Pix pix2, int factor, int mindiff, FloatBuffer pfractdiff, FloatBuffer pavediff, int printstats);
+    int pixGetDifferenceStats(Pix pix1, Pix pix2, int factor, int mindiff, FloatBuffer pfractdiff, FloatBuffer pavediff, int details);
 
     /**
      * Original signature :
@@ -6493,28 +6493,10 @@ public interface Leptonica extends Library, ILeptonica {
 //      IntByReference makeGrayQuantIndexTable(int nlevels);
 //      /**
 //       * Original signature :
-//       * <code>l_int32* makeGrayQuantTargetTable(l_int32, l_int32)</code><br>
-//       * <i>native declaration : allheaders.h:1922</i>
-//       */
-//      IntByReference makeGrayQuantTargetTable(int nlevels, int depth);
-//      /**
-//       * Original signature :
 //       * <code>l_int32 makeGrayQuantTableArb(NUMA*, l_int32, l_int32**, PIXCMAP**)</code><br>
 //       * <i>native declaration : allheaders.h:1924</i>
 //       */
 //      int makeGrayQuantTableArb(Numa na, int outdepth, PointerByReference ptab, PointerByReference pcmap);
-//      /**
-//       * Original signature :
-//       * <code>l_int32 makeGrayQuantColormapArb(PIX*, l_int32*, l_int32, PIXCMAP**)</code><br>
-//       * <i>native declaration : allheaders.h:1926</i>
-//       */
-//      int makeGrayQuantColormapArb(Pix pixs, IntBuffer tab, int outdepth, PointerByReference pcmap);
-//      /**
-//       * Original signature :
-//       * <code>l_int32 makeGrayQuantColormapArb(PIX*, l_int32*, l_int32, PIXCMAP**)</code><br>
-//       * <i>native declaration : allheaders.h:1926</i>
-//       */
-//      int makeGrayQuantColormapArb(Pix pixs, IntByReference tab, int outdepth, PointerByReference pcmap);
 //      /**
 //       * Original signature :
 //       * <code>PIX* pixGenerateMaskByBand32(PIX*, l_uint32, l_int32, l_int32, l_float32, l_float32)</code><br>
@@ -6541,23 +6523,10 @@ public interface Leptonica extends Library, ILeptonica {
 //      Pix pixGrayQuantFromCmap(Pix pixs, PixColormap cmap, int mindepth);
 //      /**
 //       * Original signature :
-//       * <code>void ditherToBinaryLow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_uint32*, l_uint32*, l_int32, l_int32)</code><br>
-//       * <i>native declaration : allheaders.h:1936</i>
-//       */
-//      void ditherToBinaryLow(IntBuffer datad, int w, int h, int wpld, IntBuffer datas, int wpls, IntBuffer bufs1, IntBuffer bufs2, int lowerclip, int upperclip);
-//      /**
-//       * Original signature :
 //       * <code>void ditherToBinaryLineLow(l_uint32*, l_int32, l_uint32*, l_uint32*, l_int32, l_int32, l_int32)</code><br>
 //       * <i>native declaration : allheaders.h:1938</i>
 //       */
 //      void ditherToBinaryLineLow(IntBuffer lined, int w, IntBuffer bufs1, IntBuffer bufs2, int lowerclip, int upperclip, int lastlineflag);
-    /**
-     * Original signature :
-     * <code>void thresholdToBinaryLow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1940</i>
-     */
-    void thresholdToBinaryLow(IntBuffer datad, int w, int h, int wpld, IntBuffer datas, int d, int wpls, int thresh);
-
     /**
      * Original signature :
      * <code>void thresholdToBinaryLineLow(l_uint32*, l_int32, l_uint32*, l_int32, l_int32)</code><br>
@@ -6565,42 +6534,7 @@ public interface Leptonica extends Library, ILeptonica {
      */
     void thresholdToBinaryLineLow(IntBuffer lined, int w, IntBuffer lines, int d, int thresh);
 
-    /**
-     * Original signature :
-     * <code>void ditherTo2bppLow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_uint32*, l_uint32*, l_int32*, l_int32*, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:1944</i>
-     */
-    void ditherTo2bppLow(IntBuffer datad, int w, int h, int wpld, IntBuffer datas, int wpls, IntBuffer bufs1, IntBuffer bufs2, IntBuffer tabval, IntBuffer tab38, IntBuffer tab14);
-
-    /**
-     * Original signature :
-     * <code>void ditherTo2bppLineLow(l_uint32*, l_int32, l_uint32*, l_uint32*, l_int32*, l_int32*, l_int32*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1946</i>
-     */
-    void ditherTo2bppLineLow(IntBuffer lined, int w, IntBuffer bufs1, IntBuffer bufs2, IntBuffer tabval, IntBuffer tab38, IntBuffer tab14, int lastlineflag);
-
-    /**
-     * Original signature :
-     * <code>l_int32 make8To2DitherTables(l_int32**, l_int32**, l_int32**, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:1948</i>
-     */
-    int make8To2DitherTables(PointerByReference ptabval, PointerByReference ptab38, PointerByReference ptab14, int cliptoblack, int cliptowhite);
-
-    /**
-     * Original signature :
-     * <code>void thresholdTo2bppLow(l_uint32*, l_int32, l_int32, l_uint32*, l_int32, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:1950</i>
-     */
-    void thresholdTo2bppLow(IntBuffer datad, int h, int wpld, IntBuffer datas, int wpls, IntBuffer tab);
-
-    /**
-     * Original signature :
-     * <code>void thresholdTo4bppLow(l_uint32*, l_int32, l_int32, l_uint32*, l_int32, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:1952</i>
-     */
-    void thresholdTo4bppLow(IntBuffer datad, int h, int wpld, IntBuffer datas, int wpls, IntBuffer tab);
-
-    /**
+     /**
      * Original signature :
      * <code>L_HEAP* lheapCreate(l_int32, l_int32)</code><br>
      * <i>native declaration : allheaders.h:1954</i>
@@ -10416,12 +10350,6 @@ public interface Leptonica extends Library, ILeptonica {
 //      int pixGetRankValueMasked(Pix pixs, Pix pixm, int x, int y, int factor, float rank, FloatByReference pval, PointerByReference pna);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixGetAverageValue(PIX*, l_int32, l_int32, l_uint32*)</code><br>
-//       * <i>native declaration : allheaders.h:3092</i>
-//       */
-//      int pixGetAverageValue(Pix pixs, int factor, int type, IntBuffer pvalue);
-//      /**
-//       * Original signature :
 //       * <code>l_int32 pixGetAverageMaskedRGB(PIX*, PIX*, l_int32, l_int32, l_int32, l_int32, l_float32*, l_float32*, l_float32*)</code><br>
 //       * <i>native declaration : allheaders.h:3094</i>
 //       */
@@ -10902,10 +10830,10 @@ public interface Leptonica extends Library, ILeptonica {
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixaVerifyDepth(PIXA*, l_int32*)</code><br>
+//       * <code>l_int32 pixaVerifyDepth(PIXA*, l_int32*, l_int32*)</code><br>
 //       * <i>native declaration : allheaders.h:3248</i>
 //       */
-//      int pixaVerifyDepth(Pixa pixa, IntBuffer pmaxdepth);
+//      int pixaVerifyDepth(Pixa pixa, IntBuffer psame, IntBuffer pmaxd);
 //      /**
 //       * Original signature :
 //       * <code>l_int32 pixaIsFull(PIXA*, l_int32*, l_int32*)</code><br>
@@ -11618,11 +11546,9 @@ public interface Leptonica extends Library, ILeptonica {
 //      Pixa pixaConvertTo8(Pixa pixas, int cmapflag);
 //      /**
 //       * Original signature :
-//       * <code>PIXA* pixaConvertTo8Color(PIXA*, l_int32)</code><br>
-//       * <i>native declaration : allheaders.h:3478</i>
+//       * <code>PIXA* pixaConvertTo8Colormap(PIXA*, l_int32)</code><br>
 //       */
-//      Pixa pixaConvertTo8Color(Pixa pixas, int dither);
-//  
+//      Pixa pixaConvertTo8Colormap(Pixa pixas, int dither);
 //      /**
 //       * Original signature : <code>PIXA* pixaConvertTo32(PIXA*)</code><br>
 //       * <i>native declaration : allheaders.h:3480</i>
@@ -12333,6 +12259,26 @@ public interface Leptonica extends Library, ILeptonica {
      * <i>native declaration : allheaders.h:3700</i>
      */
     Pix pixConvert8To16(Pix pixs, int leftshift);
+        
+    /**
+     * Original signature : <code>PIX* pixConvertTo2(PIX*)</code><br>
+     */
+    Pix pixConvertTo2(Pix pixs);
+
+    /**
+     * Original signature : <code>PIX* pixConvert8To2(PIX*)</code><br>
+     */
+    Pix pixConvert8To2(Pix pix);
+
+    /**
+     * Original signature : <code>PIX* pixConvertTo4(PIX*)</code><br>
+     */
+    Pix pixConvertTo4(Pix pixs);
+
+    /**
+     * Original signature : <code>PIX* pixConvert8To4(PIX*)</code><br>
+     */
+    Pix pixConvert8To4(Pix pix);
 
     /**
      * Original signature : <code>PIX* pixConvertTo1(PIX*, l_int32)</code><br>
@@ -12359,13 +12305,12 @@ public interface Leptonica extends Library, ILeptonica {
      * <i>native declaration : allheaders.h:3708</i>
      */
     Pix pixConvertTo8BySampling(Pix pixs, int factor, int cmapflag);
-
+   
     /**
      * Original signature :
-     * <code>PIX* pixConvertTo8Color(PIX*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:3710</i>
+     * <code>PIX* pixConvertTo8Colormap(PIX*, l_int32)</code><br>
      */
-    Pix pixConvertTo8Color(Pix pixs, int dither);
+    Pix pixConvertTo8Colormap(Pix pixs, int dither);
 
     /**
      * Original signature : <code>PIX* pixConvertTo16(PIX*)</code><br>
@@ -14631,12 +14576,6 @@ public interface Leptonica extends Library, ILeptonica {
 //      void rasteropHipLow(IntBuffer data, int pixh, int depth, int wpl, int y, int h, int shift);
 //      /**
 //       * Original signature :
-//       * <code>void shiftDataHorizontalLow(l_uint32*, l_int32, l_uint32*, l_int32, l_int32)</code><br>
-//       * <i>native declaration : allheaders.h:4416</i>
-//       */
-//      void shiftDataHorizontalLow(IntBuffer datad, int wpld, IntBuffer datas, int wpls, int shift);
-//      /**
-//       * Original signature :
 //       * <code>void rasteropUniLow(l_uint32*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
 //       * <i>native declaration : allheaders.h:4418</i>
 //       */
@@ -14731,36 +14670,6 @@ public interface Leptonica extends Library, ILeptonica {
      */
     Pix pixRotateAMColorFast(Pix pixs, float angle, int colorval);
 
-//      /**
-//       * Original signature :
-//       * <code>void rotateAMColorLow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_float32, l_uint32)</code><br>
-//       * <i>native declaration : allheaders.h:4446</i>
-//       */
-//      void rotateAMColorLow(IntBuffer datad, int w, int h, int wpld, IntBuffer datas, int wpls, float angle, int colorval);
-//      /**
-//       * Original signature :
-//       * <code>void rotateAMGrayLow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_float32, l_uint8)</code><br>
-//       * <i>native declaration : allheaders.h:4448</i>
-//       */
-//      void rotateAMGrayLow(IntBuffer datad, int w, int h, int wpld, IntBuffer datas, int wpls, float angle, byte grayval);
-//      /**
-//       * Original signature :
-//       * <code>void rotateAMColorCornerLow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_float32, l_uint32)</code><br>
-//       * <i>native declaration : allheaders.h:4450</i>
-//       */
-//      void rotateAMColorCornerLow(IntBuffer datad, int w, int h, int wpld, IntBuffer datas, int wpls, float angle, int colorval);
-//      /**
-//       * Original signature :
-//       * <code>void rotateAMGrayCornerLow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_float32, l_uint8)</code><br>
-//       * <i>native declaration : allheaders.h:4452</i>
-//       */
-//      void rotateAMGrayCornerLow(IntBuffer datad, int w, int h, int wpld, IntBuffer datas, int wpls, float angle, byte grayval);
-//      /**
-//       * Original signature :
-//       * <code>void rotateAMColorFastLow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_float32, l_uint32)</code><br>
-//       * <i>native declaration : allheaders.h:4454</i>
-//       */
-//      void rotateAMColorFastLow(IntBuffer datad, int w, int h, int wpld, IntBuffer datas, int wpls, float angle, int colorval);
     /**
      * Original signature : <code>PIX* pixRotateOrth(PIX*, l_int32)</code><br>
      * <i>native declaration : allheaders.h:4456</i>
@@ -15311,6 +15220,12 @@ public interface Leptonica extends Library, ILeptonica {
      * <i>native declaration : allheaders.h:4628</i>
      */
     Pix pixScaleSmooth(Pix pix, float scalex, float scaley);
+    
+    /**
+     * Original signature :
+     * <code>PIX* pixScaleSmoothToSize(PIX*, l_int32, l_int32)</code><br>
+     */
+    Pix pixScaleSmoothToSize(Pix pixs, int wd, int hd);
 
     /**
      * Original signature :
@@ -15478,191 +15393,7 @@ public interface Leptonica extends Library, ILeptonica {
      */
     Pix pixScaleWithAlpha(Pix pixs, float scalex, float scaley, Pix pixg, float fract);
 
-//      /**
-//       * Original signature :
-//       * <code>void scaleColorLILow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_int32, l_int32)</code><br>
-//       * <i>native declaration : allheaders.h:4680</i>
-//       */
-//      void scaleColorLILow(IntBuffer datad, int wd, int hd, int wpld, IntBuffer datas, int ws, int hs, int wpls);
-//      /**
-//       * Original signature :
-//       * <code>void scaleGrayLILow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_int32, l_int32)</code><br>
-//       * <i>native declaration : allheaders.h:4682</i>
-//       */
-//      void scaleGrayLILow(IntBuffer datad, int wd, int hd, int wpld, IntBuffer datas, int ws, int hs, int wpls);
-//      /**
-//       * Original signature :
-//       * <code>void scaleColor2xLILow(l_uint32*, l_int32, l_uint32*, l_int32, l_int32, l_int32)</code><br>
-//       * <i>native declaration : allheaders.h:4684</i>
-//       */
-//      void scaleColor2xLILow(IntBuffer datad, int wpld, IntBuffer datas, int ws, int hs, int wpls);
-//      /**
-//       * Original signature :
-//       * <code>void scaleColor2xLILineLow(l_uint32*, l_int32, l_uint32*, l_int32, l_int32, l_int32)</code><br>
-//       * <i>native declaration : allheaders.h:4686</i>
-//       */
-//      void scaleColor2xLILineLow(IntBuffer lined, int wpld, IntBuffer lines, int ws, int wpls, int lastlineflag);
-//      /**
-//       * Original signature :
-//       * <code>void scaleGray2xLILow(l_uint32*, l_int32, l_uint32*, l_int32, l_int32, l_int32)</code><br>
-//       * <i>native declaration : allheaders.h:4688</i>
-//       */
-//      void scaleGray2xLILow(IntBuffer datad, int wpld, IntBuffer datas, int ws, int hs, int wpls);
-//      /**
-//       * Original signature :
-//       * <code>void scaleGray2xLILineLow(l_uint32*, l_int32, l_uint32*, l_int32, l_int32, l_int32)</code><br>
-//       * <i>native declaration : allheaders.h:4690</i>
-//       */
-//      void scaleGray2xLILineLow(IntBuffer lined, int wpld, IntBuffer lines, int ws, int wpls, int lastlineflag);
-//      /**
-//       * Original signature :
-//       * <code>void scaleGray4xLILow(l_uint32*, l_int32, l_uint32*, l_int32, l_int32, l_int32)</code><br>
-//       * <i>native declaration : allheaders.h:4692</i>
-//       */
-//      void scaleGray4xLILow(IntBuffer datad, int wpld, IntBuffer datas, int ws, int hs, int wpls);
-//      /**
-//       * Original signature :
-//       * <code>void scaleGray4xLILineLow(l_uint32*, l_int32, l_uint32*, l_int32, l_int32, l_int32)</code><br>
-//       * <i>native declaration : allheaders.h:4694</i>
-//       */
-//      void scaleGray4xLILineLow(IntBuffer lined, int wpld, IntBuffer lines, int ws, int wpls, int lastlineflag);
-//      /**
-//       * Original signature :
-//       * <code>l_int32 scaleBySamplingLow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_int32, l_int32, l_int32)</code><br>
-//       * <i>native declaration : allheaders.h:4696</i>
-//       */
-//      int scaleBySamplingLow(IntBuffer datad, int wd, int hd, int wpld, IntBuffer datas, int ws, int hs, int d, int wpls);
-//      /**
-//       * Original signature :
-//       * <code>l_int32 scaleSmoothLow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
-//       * <i>native declaration : allheaders.h:4698</i>
-//       */
-//      int scaleSmoothLow(IntBuffer datad, int wd, int hd, int wpld, IntBuffer datas, int ws, int hs, int d, int wpls, int size);
-//      /**
-//       * Original signature :
-//       * <code>void scaleRGBToGray2Low(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_float32, l_float32, l_float32)</code><br>
-//       * <i>native declaration : allheaders.h:4700</i>
-//       */
-//      void scaleRGBToGray2Low(IntBuffer datad, int wd, int hd, int wpld, IntBuffer datas, int wpls, float rwt, float gwt, float bwt);
-//      /**
-//       * Original signature :
-//       * <code>void scaleColorAreaMapLow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_int32, l_int32)</code><br>
-//       * <i>native declaration : allheaders.h:4702</i>
-//       */
-//      void scaleColorAreaMapLow(IntBuffer datad, int wd, int hd, int wpld, IntBuffer datas, int ws, int hs, int wpls);
-//      /**
-//       * Original signature :
-//       * <code>void scaleGrayAreaMapLow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_int32, l_int32)</code><br>
-//       * <i>native declaration : allheaders.h:4704</i>
-//       */
-//      void scaleGrayAreaMapLow(IntBuffer datad, int wd, int hd, int wpld, IntBuffer datas, int ws, int hs, int wpls);
-//      /**
-//       * Original signature :
-//       * <code>void scaleAreaMapLow2(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_int32)</code><br>
-//       * <i>native declaration : allheaders.h:4706</i>
-//       */
-//      void scaleAreaMapLow2(IntBuffer datad, int wd, int hd, int wpld, IntBuffer datas, int d, int wpls);
-//      /**
-//       * Original signature :
-//       * <code>l_int32 scaleBinaryLow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_int32, l_int32)</code><br>
-//       * <i>native declaration : allheaders.h:4708</i>
-//       */
-//      int scaleBinaryLow(IntBuffer datad, int wd, int hd, int wpld, IntBuffer datas, int ws, int hs, int wpls);
-    /**
-     * Original signature :
-     * <code>void scaleToGray2Low(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_uint32*, l_uint8*)</code><br>
-     * <i>native declaration : allheaders.h:4710</i>
-     */
-    void scaleToGray2Low(IntBuffer datad, int wd, int hd, int wpld, IntBuffer datas, int wpls, IntBuffer sumtab, ByteBuffer valtab);
-//  
-//      /**
-//       * Original signature : <code>l_uint32* makeSumTabSG2()</code><br>
-//       * <i>native declaration : allheaders.h:4712</i>
-//       */
-//      IntByReference makeSumTabSG2();
-//  
-//      /**
-//       * Original signature : <code>l_uint8* makeValTabSG2()</code><br>
-//       * <i>native declaration : allheaders.h:4714</i>
-//       */
-//      Pointer makeValTabSG2();
-
-    /**
-     * Original signature :
-     * <code>void scaleToGray3Low(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_uint32*, l_uint8*)</code><br>
-     * <i>native declaration : allheaders.h:4716</i>
-     */
-    void scaleToGray3Low(IntBuffer datad, int wd, int hd, int wpld, IntBuffer datas, int wpls, IntBuffer sumtab, ByteBuffer valtab);
-//  
-//      /**
-//       * Original signature : <code>l_uint32* makeSumTabSG3()</code><br>
-//       * <i>native declaration : allheaders.h:4718</i>
-//       */
-//      IntByReference makeSumTabSG3();
-//  
-//      /**
-//       * Original signature : <code>l_uint8* makeValTabSG3()</code><br>
-//       * <i>native declaration : allheaders.h:4720</i>
-//       */
-//      Pointer makeValTabSG3();
-
-    /**
-     * Original signature :
-     * <code>void scaleToGray4Low(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_uint32*, l_uint8*)</code><br>
-     * <i>native declaration : allheaders.h:4722</i>
-     */
-    void scaleToGray4Low(IntBuffer datad, int wd, int hd, int wpld, IntBuffer datas, int wpls, IntBuffer sumtab, ByteBuffer valtab);
-//  
-//      /**
-//       * Original signature : <code>l_uint32* makeSumTabSG4()</code><br>
-//       * <i>native declaration : allheaders.h:4724</i>
-//       */
-//      IntByReference makeSumTabSG4();
-//  
-//      /**
-//       * Original signature : <code>l_uint8* makeValTabSG4()</code><br>
-//       * <i>native declaration : allheaders.h:4726</i>
-//       */
-//      Pointer makeValTabSG4();
-
-    /**
-     * Original signature :
-     * <code>void scaleToGray6Low(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_int32*, l_uint8*)</code><br>
-     * <i>native declaration : allheaders.h:4728</i>
-     */
-    void scaleToGray6Low(IntBuffer datad, int wd, int hd, int wpld, IntBuffer datas, int wpls, IntBuffer tab8, ByteBuffer valtab);
-//  
-//      /**
-//       * Original signature : <code>l_uint8* makeValTabSG6()</code><br>
-//       * <i>native declaration : allheaders.h:4730</i>
-//       */
-//      Pointer makeValTabSG6();
-
-    /**
-     * Original signature :
-     * <code>void scaleToGray8Low(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_int32*, l_uint8*)</code><br>
-     * <i>native declaration : allheaders.h:4732</i>
-     */
-    void scaleToGray8Low(IntBuffer datad, int wd, int hd, int wpld, IntBuffer datas, int wpls, IntBuffer tab8, ByteBuffer valtab);
-//  
-//      /**
-//       * Original signature : <code>l_uint8* makeValTabSG8()</code><br>
-//       * <i>native declaration : allheaders.h:4734</i>
-//       */
-//      Pointer makeValTabSG8();
-
-//      /**
-//       * Original signature :
-//       * <code>void scaleToGray16Low(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_int32*)</code><br>
-//       * <i>native declaration : allheaders.h:4736</i>
-//       */
-//      void scaleToGray16Low(IntBuffer datad, int wd, int hd, int wpld, IntBuffer datas, int wpls, IntBuffer tab8);
-//      /**
-//       * Original signature :
-//       * <code>l_int32 scaleMipmapLow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_uint32*, l_int32, l_float32)</code><br>
-//       * <i>native declaration : allheaders.h:4738</i>
-//       */
-//      int scaleMipmapLow(IntBuffer datad, int wd, int hd, int wpld, IntBuffer datas1, int wpls1, IntBuffer datas2, int wpls2, float red);
+ 
 //      /**
 //       * Original signature :
 //       * <code>PIX* pixSeedfillBinary(PIX*, PIX*, PIX*, l_int32)</code><br>
@@ -15783,48 +15514,6 @@ public interface Leptonica extends Library, ILeptonica {
 //       * <i>native declaration : allheaders.h:4778</i>
 //       */
 //      Pix pixRemoveSeededComponents(Pix pixd, Pix pixs, Pix pixm, int connectivity, int bordersize);
-//      /**
-//       * Original signature :
-//       * <code>void seedfillBinaryLow(l_uint32*, l_int32, l_int32, l_uint32*, l_int32, l_int32, l_int32)</code><br>
-//       * <i>native declaration : allheaders.h:4780</i>
-//       */
-//      void seedfillBinaryLow(IntBuffer datas, int hs, int wpls, IntBuffer datam, int hm, int wplm, int connectivity);
-//      /**
-//       * Original signature :
-//       * <code>void seedfillGrayLow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_int32)</code><br>
-//       * <i>native declaration : allheaders.h:4782</i>
-//       */
-//      void seedfillGrayLow(IntBuffer datas, int w, int h, int wpls, IntBuffer datam, int wplm, int connectivity);
-//      /**
-//       * Original signature :
-//       * <code>void seedfillGrayInvLow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_int32)</code><br>
-//       * <i>native declaration : allheaders.h:4784</i>
-//       */
-//      void seedfillGrayInvLow(IntBuffer datas, int w, int h, int wpls, IntBuffer datam, int wplm, int connectivity);
-//      /**
-//       * Original signature :
-//       * <code>void seedfillGrayLowSimple(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_int32)</code><br>
-//       * <i>native declaration : allheaders.h:4786</i>
-//       */
-//      void seedfillGrayLowSimple(IntBuffer datas, int w, int h, int wpls, IntBuffer datam, int wplm, int connectivity);
-//      /**
-//       * Original signature :
-//       * <code>void seedfillGrayInvLowSimple(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_int32)</code><br>
-//       * <i>native declaration : allheaders.h:4788</i>
-//       */
-//      void seedfillGrayInvLowSimple(IntBuffer datas, int w, int h, int wpls, IntBuffer datam, int wplm, int connectivity);
-//      /**
-//       * Original signature :
-//       * <code>void distanceFunctionLow(l_uint32*, l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
-//       * <i>native declaration : allheaders.h:4790</i>
-//       */
-//      void distanceFunctionLow(IntBuffer datad, int w, int h, int d, int wpld, int connectivity);
-//      /**
-//       * Original signature :
-//       * <code>void seedspreadLow(l_uint32*, l_int32, l_int32, l_int32, l_uint32*, l_int32, l_int32)</code><br>
-//       * <i>native declaration : allheaders.h:4792</i>
-//       */
-//      void seedspreadLow(IntBuffer datad, int w, int h, int wpld, IntBuffer datat, int wplt, int connectivity);
 //  
 //      /**
 //       * Original signature : <code>SELA* selaCreate(l_int32)</code><br>

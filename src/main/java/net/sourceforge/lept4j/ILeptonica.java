@@ -618,7 +618,7 @@ public interface ILeptonica {
      */
     public static final int L_MS_BYTE = 2;
     /**
-     * use LSB if max(val) 256; else MSB
+     * use LSB if max(val) &lt; 256; else MSB
      */
     public static final int L_AUTO_BYTE = 3;
     /**
@@ -746,6 +746,30 @@ public interface ILeptonica {
      */
     public static final int L_EUCLIDEAN_DISTANCE = 2;
     /**
+     * values &lt; 0
+     */
+    public static final int L_NEGATIVE = 1;
+    /**
+     * values &gt;= 0
+     */
+    public static final int L_NON_NEGATIVE = 2;
+    /**
+     * values &gt; 0
+     */
+    public static final int L_POSITIVE = 3;
+    /**
+     * values &lt;= 0
+     */
+    public static final int L_NON_POSITIVE = 4;
+    /**
+     * values = 0
+     */
+    public static final int L_ZERO = 5;
+    /**
+     * all values
+     */
+    public static final int L_ALL = 6;
+    /**
      * average of abs values
      */
     public static final int L_MEAN_ABSVAL = 1;
@@ -833,6 +857,14 @@ public interface ILeptonica {
      * neither horizontal nor vertical
      */
     public static final int L_OBLIQUE_LINE = 4;
+    /** 
+     * typical: page is viewed with height &gt; width
+     */
+    public static final int L_PORTRAIT_MODE = 0;
+    /**
+     * page is viewed at 90 deg to portrait mode
+     */
+    public static final int L_LANDSCAPE_MODE = 1;
     /**
      * scan from left
      */
@@ -946,17 +978,21 @@ public interface ILeptonica {
      */
     public static final int L_USE_MAXSIZE = 2;
     /**
-     * substitute boundary if big abs diff
+     * modify boundary if big location diff
      */
-    public static final int L_SUB_ON_BIG_DIFF = 3;
+    public static final int L_SUB_ON_LOC_DIFF = 3;
     /**
-     * substitute boundary with capped min
+     * modify boundary if big size diff
      */
-    public static final int L_USE_CAPPED_MIN = 4;
+    public static final int L_SUB_ON_SIZE_DIFF = 4;
     /**
-     * substitute boundary with capped max
+     * modify boundary with capped min
      */
-    public static final int L_USE_CAPPED_MAX = 5;
+    public static final int L_USE_CAPPED_MIN = 5;
+    /**
+     * modify boundary with capped max
+     */
+    public static final int L_USE_CAPPED_MAX = 6;
     /**
      * resize to bounding region; remove smaller
      */
@@ -1282,10 +1318,10 @@ public interface ILeptonica {
     public static final int LIBLEPT_MAJOR_VERSION = (int) 1;
     /** <i>native declaration : allheaders.h</i>
      */
-    public static final int LIBLEPT_MINOR_VERSION = (int) 74;
+    public static final int LIBLEPT_MINOR_VERSION = (int) 75;
     /** <i>native declaration : allheaders.h</i>
      */
-    public static final int LIBLEPT_PATCH_VERSION = (int) 4;
+    public static final int LIBLEPT_PATCH_VERSION = (int) 0;
     /** <i>native declaration : environ.h</i>
      */
     public static final int HAVE_LIBJPEG = (int) 1;
@@ -1360,7 +1396,7 @@ public interface ILeptonica {
     public static final int NUM_GPLOT_STYLES = (int) 5;
     /** <i>native declaration : gplot.h</i>
      */
-    public static final int NUM_GPLOT_OUTPUTS = (int) 6;
+    public static final int NUM_GPLOT_OUTPUTS = (int) 5;
     /** <i>native declaration : jbclass.h</i>
      */
     public static final String JB_TEMPLATE_EXT = (String) ".templates.png";
@@ -1425,14 +1461,14 @@ public interface ILeptonica {
      */
     public static final int RECOG_VERSION_NUMBER = (int) 2;
 
-    /** <i>native declaration : pix.h:531</i>
+    /** <i>native declaration : pix.h:546</i>
      */
     public interface alloc_fn extends Callback {
 
         Pointer apply(NativeSize size_t1);
     };
 
-    /** <i>native declaration : pix.h:533</i>
+    /** <i>native declaration : pix.h:548</i>
      */
     public interface dealloc_fn extends Callback {
 
