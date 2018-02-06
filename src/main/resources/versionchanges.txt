@@ -65,3 +65,6 @@ Version 1.6.2 (30 October 2017)
 
 Version 1.7.0 (28 January 2018):
 - Upgrade to Leptonica 1.75.0
+
+Version 1.8.0 (5 February 2018):
+- Upgrade to Leptonica 1.75.1

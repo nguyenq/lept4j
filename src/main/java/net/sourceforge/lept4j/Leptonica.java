@@ -2594,17 +2594,17 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixGetWordsInTextlines(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, BOXA**, PIXA**, NUMA**)</code><br>
+     * <code>l_int32 pixGetWordsInTextlines(PIX*, l_int32, l_int32, l_int32, l_int32, BOXA**, PIXA**, NUMA**)</code><br>
      * <i>native declaration : allheaders.h:752</i>
      */
-    int pixGetWordsInTextlines(Pix pixs, int reduction, int minwidth, int minheight, int maxwidth, int maxheight, PointerByReference pboxad, PointerByReference ppixad, PointerByReference pnai);
+    int pixGetWordsInTextlines(Pix pixs, int minwidth, int minheight, int maxwidth, int maxheight, PointerByReference pboxad, PointerByReference ppixad, PointerByReference pnai);
 
     /**
      * Original signature :
-     * <code>l_int32 pixGetWordBoxesInTextlines(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, BOXA**, NUMA**)</code><br>
+     * <code>l_int32 pixGetWordBoxesInTextlines(PIX*, l_int32, l_int32, l_int32, l_int32, BOXA**, NUMA**)</code><br>
      * <i>native declaration : allheaders.h:754</i>
      */
-    int pixGetWordBoxesInTextlines(Pix pixs, int reduction, int minwidth, int minheight, int maxwidth, int maxheight, PointerByReference pboxad, PointerByReference pnai);
+    int pixGetWordBoxesInTextlines(Pix pixs, int minwidth, int minheight, int maxwidth, int maxheight, PointerByReference pboxad, PointerByReference pnai);
 
     /**
      * Original signature :
@@ -6666,31 +6666,31 @@ public interface Leptonica extends Library, ILeptonica {
 //      int jbGetComponents(Pix pixs, int components, int maxwidth, int maxheight, PointerByReference pboxad, PointerByReference ppixad);
     /**
      * Original signature :
-     * <code>l_int32 pixWordMaskByDilation(PIX*, l_int32, PIX**, l_int32*)</code><br>
+     * <code>l_int32 pixWordMaskByDilation(PIX*, PIX**, l_int32*, PIXA*)</code><br>
+     * <i>native declaration : allheaders.h:1994</i>
+     */
+    int pixWordMaskByDilation(Pix pixs, PointerByReference ppixm, IntBuffer psize, Pixa pixadb);
+
+    /**
+     * Original signature :
+     * <code>l_int32 pixWordMaskByDilation(PIX*, PIX**, l_int32*, PIXA*)</code><br>
+     * <i>native declaration : allheaders.h:1994</i>
+     */
+    int pixWordMaskByDilation(Pix pixs, PointerByReference ppixm, IntByReference psize, Pixa pixadb);
+
+    /**
+     * Original signature :
+     * <code>l_int32 pixWordBoxesByDilation(PIX*, l_int32, l_int32, l_int32, l_int32, BOXA**, l_int32*, PIXA*)</code><br>
      * <i>native declaration : allheaders.h:1996</i>
      */
-    int pixWordMaskByDilation(Pix pixs, int maxdil, PointerByReference ppixm, IntBuffer psize);
+    int pixWordBoxesByDilation(Pix pixs, int minwidth, int minheight, int maxwidth, int maxheight, PointerByReference pboxa, IntBuffer psize, Pixa pixadb);
 
     /**
      * Original signature :
-     * <code>l_int32 pixWordMaskByDilation(PIX*, l_int32, PIX**, l_int32*)</code><br>
+     * <code>l_int32 pixWordBoxesByDilation(PIX*, l_int32, l_int32, l_int32, l_int32, BOXA**, l_int32*, PIXA*)</code><br>
      * <i>native declaration : allheaders.h:1996</i>
      */
-    int pixWordMaskByDilation(Pix pixs, int maxdil, PointerByReference ppixm, IntByReference psize);
-
-    /**
-     * Original signature :
-     * <code>l_int32 pixWordBoxesByDilation(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, BOXA**, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:1998</i>
-     */
-    int pixWordBoxesByDilation(Pix pixs, int maxdil, int minwidth, int minheight, int maxwidth, int maxheight, PointerByReference pboxa, IntBuffer psize);
-
-    /**
-     * Original signature :
-     * <code>l_int32 pixWordBoxesByDilation(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, BOXA**, l_int32*)</code><br>
-     * <i>native declaration : allheaders.h:1998</i>
-     */
-    int pixWordBoxesByDilation(Pix pixs, int maxdil, int minwidth, int minheight, int maxwidth, int maxheight, PointerByReference pboxa, IntByReference psize);
+    int pixWordBoxesByDilation(Pix pixs, int minwidth, int minheight, int maxwidth, int maxheight, PointerByReference pboxa, IntByReference psize, Pixa pixadb);
 
     /**
      * Original signature :
@@ -16729,6 +16729,11 @@ public interface Leptonica extends Library, ILeptonica {
 //       * <i>native declaration : allheaders.h:5174</i>
 //       */
 //      int stringSplitOnToken(ByteBuffer cstr, String seps, PointerByReference phead, PointerByReference ptail);
+//      /**
+//       * Original signature : <code>l_int32 stringCheckForChars(const char*, const char*, l_int32*)</code><br>
+//       * <i>native declaration : allheaders.h:5118</i>
+//       */
+//      int stringCheckForChars(String src, String chars, IntBuffer pfound);
 //      /**
 //       * Original signature :
 //       * <code>char* stringRemoveChars(const char*, const char*)</code><br>

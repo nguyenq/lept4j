@@ -2719,17 +2719,17 @@ public class Leptonica1 implements Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixGetWordsInTextlines(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, BOXA**, PIXA**, NUMA**)</code><br>
+     * <code>l_int32 pixGetWordsInTextlines(PIX*, l_int32, l_int32, l_int32, l_int32, BOXA**, PIXA**, NUMA**)</code><br>
      * <i>native declaration : allheaders.h:764</i>
      */
-    public static native int pixGetWordsInTextlines(Pix pixs, int reduction, int minwidth, int minheight, int maxwidth, int maxheight, PointerByReference pboxad, PointerByReference ppixad, PointerByReference pnai);
+    public static native int pixGetWordsInTextlines(Pix pixs, int minwidth, int minheight, int maxwidth, int maxheight, PointerByReference pboxad, PointerByReference ppixad, PointerByReference pnai);
 
     /**
      * Original signature :
-     * <code>l_int32 pixGetWordBoxesInTextlines(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, BOXA**, NUMA**)</code><br>
+     * <code>l_int32 pixGetWordBoxesInTextlines(PIX*, l_int32, l_int32, l_int32, l_int32, BOXA**, NUMA**)</code><br>
      * <i>native declaration : allheaders.h:766</i>
      */
-    public static native int pixGetWordBoxesInTextlines(Pix pixs, int reduction, int minwidth, int minheight, int maxwidth, int maxheight, PointerByReference pboxad, PointerByReference pnai);
+    public static native int pixGetWordBoxesInTextlines(Pix pixs, int minwidth, int minheight, int maxwidth, int maxheight, PointerByReference pboxad, PointerByReference pnai);
 
     /**
      * Original signature :
@@ -6988,32 +6988,28 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int jbGetComponents(Pix pixs, int components, int maxwidth, int maxheight, PointerByReference pboxad, PointerByReference ppixad);
 
     /**
-     * Original signature :
-     * <code>l_int32 pixWordMaskByDilation(PIX*, l_int32, PIX**, l_int32*)</code><br>
+     * Original signature : <code>l_int32 pixWordMaskByDilation(PIX*, PIX**, l_int32*, PIXA*)</code><br>
      * <i>native declaration : allheaders.h:1994</i>
      */
-    public static native int pixWordMaskByDilation(Pix pixs, int maxdil, PointerByReference ppixm, IntBuffer psize);
+    public static native int pixWordMaskByDilation(Pix pixs, PointerByReference ppixm, IntBuffer psize, Pixa pixadb);
 
     /**
-     * Original signature :
-     * <code>l_int32 pixWordMaskByDilation(PIX*, l_int32, PIX**, l_int32*)</code><br>
+     * Original signature : <code>l_int32 pixWordMaskByDilation(PIX*, PIX**, l_int32*, PIXA*)</code><br>
      * <i>native declaration : allheaders.h:1994</i>
      */
-    public static native int pixWordMaskByDilation(Pix pixs, int maxdil, PointerByReference ppixm, IntByReference psize);
+    public static native int pixWordMaskByDilation(Pix pixs, PointerByReference ppixm, IntByReference psize, Pixa pixadb);
 
     /**
-     * Original signature :
-     * <code>l_int32 pixWordBoxesByDilation(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, BOXA**, l_int32*)</code><br>
+     * Original signature : <code>l_int32 pixWordBoxesByDilation(PIX*, l_int32, l_int32, l_int32, l_int32, BOXA**, l_int32*, PIXA*)</code><br>
      * <i>native declaration : allheaders.h:1996</i>
      */
-    public static native int pixWordBoxesByDilation(Pix pixs, int maxdil, int minwidth, int minheight, int maxwidth, int maxheight, PointerByReference pboxa, IntBuffer psize);
+    public static native int pixWordBoxesByDilation(Pix pixs, int minwidth, int minheight, int maxwidth, int maxheight, PointerByReference pboxa, IntBuffer psize, Pixa pixadb);
 
     /**
-     * Original signature :
-     * <code>l_int32 pixWordBoxesByDilation(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, BOXA**, l_int32*)</code><br>
+     * Original signature : <code>l_int32 pixWordBoxesByDilation(PIX*, l_int32, l_int32, l_int32, l_int32, BOXA**, l_int32*, PIXA*)</code><br>
      * <i>native declaration : allheaders.h:1996</i>
      */
-    public static native int pixWordBoxesByDilation(Pix pixs, int maxdil, int minwidth, int minheight, int maxwidth, int maxheight, PointerByReference pboxa, IntByReference psize);
+    public static native int pixWordBoxesByDilation(Pix pixs, int minwidth, int minheight, int maxwidth, int maxheight, PointerByReference pboxa, IntByReference psize, Pixa pixadb);
 
     /**
      * Original signature :
@@ -17835,6 +17831,12 @@ public class Leptonica1 implements Library, ILeptonica {
      * <i>native declaration : allheaders.h:5116</i>
      */
     public static native int stringSplitOnToken(ByteBuffer cstr, String seps, PointerByReference phead, PointerByReference ptail);
+
+    /**
+     * Original signature : <code>l_int32 stringCheckForChars(const char*, const char*, l_int32*)</code><br>
+     * <i>native declaration : allheaders.h:5118</i>
+     */
+    public static native int stringCheckForChars(String src, String chars, IntBuffer pfound);
 
     /**
      * Original signature :

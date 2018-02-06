@@ -1277,12 +1277,12 @@ public class LeptonicaImpl implements Leptonica {
     }
 
     @Override
-    public int pixGetWordsInTextlines(Pix pixs, int reduction, int minwidth, int minheight, int maxwidth, int maxheight, PointerByReference pboxad, PointerByReference ppixad, PointerByReference pnai) {
+    public int pixGetWordsInTextlines(Pix pixs, int minwidth, int minheight, int maxwidth, int maxheight, PointerByReference pboxad, PointerByReference ppixad, PointerByReference pnai) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
-    public int pixGetWordBoxesInTextlines(Pix pixs, int reduction, int minwidth, int minheight, int maxwidth, int maxheight, PointerByReference pboxad, PointerByReference pnai) {
+    public int pixGetWordBoxesInTextlines(Pix pixs, int minwidth, int minheight, int maxwidth, int maxheight, PointerByReference pboxad, PointerByReference pnai) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
@@ -3122,22 +3122,22 @@ public class LeptonicaImpl implements Leptonica {
     }
 
     @Override
-    public int pixWordMaskByDilation(Pix pixs, int maxdil, PointerByReference ppixm, IntBuffer psize) {
+    public int pixWordMaskByDilation(Pix pixs, PointerByReference ppixm, IntBuffer psize, Pixa pixadb) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
-    public int pixWordMaskByDilation(Pix pixs, int maxdil, PointerByReference ppixm, IntByReference psize) {
+    public int pixWordMaskByDilation(Pix pixs, PointerByReference ppixm, IntByReference psize, Pixa pixadb) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
-    public int pixWordBoxesByDilation(Pix pixs, int maxdil, int minwidth, int minheight, int maxwidth, int maxheight, PointerByReference pboxa, IntBuffer psize) {
+    public int pixWordBoxesByDilation(Pix pixs, int minwidth, int minheight, int maxwidth, int maxheight, PointerByReference pboxa, IntBuffer psize, Pixa pixadb) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
-    public int pixWordBoxesByDilation(Pix pixs, int maxdil, int minwidth, int minheight, int maxwidth, int maxheight, PointerByReference pboxa, IntByReference psize) {
+    public int pixWordBoxesByDilation(Pix pixs, int minwidth, int minheight, int maxwidth, int maxheight, PointerByReference pboxa, IntByReference psize, Pixa pixadb) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
@@ -6745,5 +6745,5 @@ public class LeptonicaImpl implements Leptonica {
     public Pointer zlibUncompress(ByteBuffer datain, NativeSize nin, NativeSizeByReference pnout) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
-
+   
 }
