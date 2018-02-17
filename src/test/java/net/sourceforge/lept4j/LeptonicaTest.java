@@ -42133,7 +42133,7 @@ public class LeptonicaTest {
     @Test
     public void testGetLeptonicaVersion() {
         System.out.println("getLeptonicaVersion");
-        String expResult = "leptonica-1.75.1";
+        String expResult = "leptonica-1.75.3";
         Pointer result = instance.getLeptonicaVersion();
         assertTrue(result.getString(0).startsWith(expResult));
     }
