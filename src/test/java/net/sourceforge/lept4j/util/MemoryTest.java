@@ -26,7 +26,8 @@ public class MemoryTest {
         LeptUtilsTest test = new LeptUtilsTest();
         for (int i = 0; i < 10000; i++) {
             System.out.println("Run: " + i);
-            test.testConvertImageToPix();
+//            test.testConvertImageToPix();
+            test.testConvertPixToImage();
         }
     }
 }
