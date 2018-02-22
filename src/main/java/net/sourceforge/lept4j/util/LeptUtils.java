@@ -68,10 +68,10 @@ public class LeptUtils {
         InputStream in = new ByteArrayInputStream(b);
         BufferedImage bi = ImageIO.read(in);
         in.close();
-        Leptonica1.bbufferDestroy(pdata);
+        Leptonica1.lept_free(pdata.getValue());
         return bi;
     }
-
+    
     /**
      * Converts <code>BufferedImage</code> to Leptonica <code>Pix</code> .
      *
