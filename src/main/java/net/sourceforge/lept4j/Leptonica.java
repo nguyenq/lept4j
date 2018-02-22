@@ -10715,23 +10715,23 @@ public interface Leptonica extends Library, ILeptonica {
 //       */
 //      Pix pixRankColumnTransform(Pix pixs);
 //  
-//      /**
-//       * Original signature : <code>PIXA* pixaCreate(l_int32)</code><br>
-//       * <i>native declaration : allheaders.h:3210</i>
-//       */
-//      Pixa pixaCreate(int n);
-//      /**
-//       * Original signature :
-//       * <code>PIXA* pixaCreateFromPix(PIX*, l_int32, l_int32, l_int32)</code><br>
-//       * <i>native declaration : allheaders.h:3212</i>
-//       */
-//      Pixa pixaCreateFromPix(Pix pixs, int n, int cellw, int cellh);
-//      /**
-//       * Original signature :
-//       * <code>PIXA* pixaCreateFromBoxa(PIX*, BOXA*, l_int32*)</code><br>
-//       * <i>native declaration : allheaders.h:3214</i>
-//       */
-//      Pixa pixaCreateFromBoxa(Pix pixs, Boxa boxa, IntBuffer pcropwarn);
+      /**
+       * Original signature : <code>PIXA* pixaCreate(l_int32)</code><br>
+       * <i>native declaration : allheaders.h:3210</i>
+       */
+      Pixa pixaCreate(int n);
+      /**
+       * Original signature :
+       * <code>PIXA* pixaCreateFromPix(PIX*, l_int32, l_int32, l_int32)</code><br>
+       * <i>native declaration : allheaders.h:3212</i>
+       */
+      Pixa pixaCreateFromPix(Pix pixs, int n, int cellw, int cellh);
+      /**
+       * Original signature :
+       * <code>PIXA* pixaCreateFromBoxa(PIX*, BOXA*, l_int32*)</code><br>
+       * <i>native declaration : allheaders.h:3214</i>
+       */
+      Pixa pixaCreateFromBoxa(Pix pixs, Boxa boxa, IntBuffer pcropwarn);
 //      /**
 //       * Original signature :
 //       * <code>PIXA* pixaSplitPix(PIX*, l_int32, l_int32, l_int32, l_uint32)</code><br>
@@ -10739,29 +10739,29 @@ public interface Leptonica extends Library, ILeptonica {
 //       */
 //      Pixa pixaSplitPix(Pix pixs, int nx, int ny, int borderwidth, int bordercolor);
 //  
-//      /**
-//       * Original signature : <code>void pixaDestroy(PIXA**)</code><br>
-//       * <i>native declaration : allheaders.h:3218</i>
-//       */
-//      void pixaDestroy(PointerByReference ppixa);
-//  
-//      /**
-//       * Original signature : <code>PIXA* pixaCopy(PIXA*, l_int32)</code><br>
-//       * <i>native declaration : allheaders.h:3220</i>
-//       */
-//      Pixa pixaCopy(Pixa pixa, int copyflag);
-//      /**
-//       * Original signature :
-//       * <code>l_int32 pixaAddPix(PIXA*, PIX*, l_int32)</code><br>
-//       * <i>native declaration : allheaders.h:3222</i>
-//       */
-//      int pixaAddPix(Pixa pixa, Pix pix, int copyflag);
-//      /**
-//       * Original signature :
-//       * <code>l_int32 pixaAddBox(PIXA*, BOX*, l_int32)</code><br>
-//       * <i>native declaration : allheaders.h:3224</i>
-//       */
-//      int pixaAddBox(Pixa pixa, Box box, int copyflag);
+      /**
+       * Original signature : <code>void pixaDestroy(PIXA**)</code><br>
+       * <i>native declaration : allheaders.h:3218</i>
+       */
+      void pixaDestroy(PointerByReference ppixa);
+  
+      /**
+       * Original signature : <code>PIXA* pixaCopy(PIXA*, l_int32)</code><br>
+       * <i>native declaration : allheaders.h:3220</i>
+       */
+      Pixa pixaCopy(Pixa pixa, int copyflag);
+      /**
+       * Original signature :
+       * <code>l_int32 pixaAddPix(PIXA*, PIX*, l_int32)</code><br>
+       * <i>native declaration : allheaders.h:3222</i>
+       */
+      int pixaAddPix(Pixa pixa, Pix pix, int copyflag);
+      /**
+       * Original signature :
+       * <code>l_int32 pixaAddBox(PIXA*, BOX*, l_int32)</code><br>
+       * <i>native declaration : allheaders.h:3224</i>
+       */
+      int pixaAddBox(Pixa pixa, Box box, int copyflag);
 //      /**
 //       * Original signature :
 //       * <code>l_int32 pixaExtendArrayToSize(PIXA*, l_int32)</code><br>
@@ -10793,35 +10793,35 @@ public interface Leptonica extends Library, ILeptonica {
 //       */
 //      int pixaGetPixDimensions(Pixa pixa, int index, IntBuffer pw, IntBuffer ph, IntBuffer pd);
 //  
-//      /**
-//       * Original signature : <code>BOXA* pixaGetBoxa(PIXA*, l_int32)</code><br>
-//       * <i>native declaration : allheaders.h:3236</i>
-//       */
-//      Boxa pixaGetBoxa(Pixa pixa, int accesstype);
-//  
-//      /**
-//       * Original signature : <code>l_int32 pixaGetBoxaCount(PIXA*)</code><br>
-//       * <i>native declaration : allheaders.h:3238</i>
-//       */
-//      int pixaGetBoxaCount(Pixa pixa);
-//      /**
-//       * Original signature :
-//       * <code>BOX* pixaGetBox(PIXA*, l_int32, l_int32)</code><br>
-//       * <i>native declaration : allheaders.h:3240</i>
-//       */
-//      Box pixaGetBox(Pixa pixa, int index, int accesstype);
-//      /**
-//       * Original signature :
-//       * <code>l_int32 pixaGetBoxGeometry(PIXA*, l_int32, l_int32*, l_int32*, l_int32*, l_int32*)</code><br>
-//       * <i>native declaration : allheaders.h:3242</i>
-//       */
-//      int pixaGetBoxGeometry(Pixa pixa, int index, IntBuffer px, IntBuffer py, IntBuffer pw, IntBuffer ph);
-//      /**
-//       * Original signature :
-//       * <code>l_int32 pixaSetBoxa(PIXA*, BOXA*, l_int32)</code><br>
-//       * <i>native declaration : allheaders.h:3244</i>
-//       */
-//      int pixaSetBoxa(Pixa pixa, Boxa boxa, int accesstype);
+      /**
+       * Original signature : <code>BOXA* pixaGetBoxa(PIXA*, l_int32)</code><br>
+       * <i>native declaration : allheaders.h:3236</i>
+       */
+      Boxa pixaGetBoxa(Pixa pixa, int accesstype);
+  
+      /**
+       * Original signature : <code>l_int32 pixaGetBoxaCount(PIXA*)</code><br>
+       * <i>native declaration : allheaders.h:3238</i>
+       */
+      int pixaGetBoxaCount(Pixa pixa);
+      /**
+       * Original signature :
+       * <code>BOX* pixaGetBox(PIXA*, l_int32, l_int32)</code><br>
+       * <i>native declaration : allheaders.h:3240</i>
+       */
+      Box pixaGetBox(Pixa pixa, int index, int accesstype);
+      /**
+       * Original signature :
+       * <code>l_int32 pixaGetBoxGeometry(PIXA*, l_int32, l_int32*, l_int32*, l_int32*, l_int32*)</code><br>
+       * <i>native declaration : allheaders.h:3242</i>
+       */
+      int pixaGetBoxGeometry(Pixa pixa, int index, IntBuffer px, IntBuffer py, IntBuffer pw, IntBuffer ph);
+      /**
+       * Original signature :
+       * <code>l_int32 pixaSetBoxa(PIXA*, BOXA*, l_int32)</code><br>
+       * <i>native declaration : allheaders.h:3244</i>
+       */
+      int pixaSetBoxa(Pixa pixa, Boxa boxa, int accesstype);
     /**
      * Original signature : <code>PIX** pixaGetPixArray(PIXA*)</code><br>
      * <i>native declaration : allheaders.h:3246</i>
@@ -15526,30 +15526,30 @@ public interface Leptonica extends Library, ILeptonica {
 //       * <i>native declaration : allheaders.h:4796</i>
 //       */
 //      void selaDestroy(PointerByReference psela);
-//      /**
-//       * Original signature :
-//       * <code>SEL* selCreate(l_int32, l_int32, const char*)</code><br>
-//       * <i>native declaration : allheaders.h:4798</i>
-//       */
-//      Sel selCreate(int height, int width, String name);
-//  
-//      /**
-//       * Original signature : <code>void selDestroy(SEL**)</code><br>
-//       * <i>native declaration : allheaders.h:4800</i>
-//       */
-//      void selDestroy(PointerByReference psel);
-//  
-//      /**
-//       * Original signature : <code>SEL* selCopy(SEL*)</code><br>
-//       * <i>native declaration : allheaders.h:4802</i>
-//       */
-//      Sel selCopy(Pointer sel);
-//      /**
-//       * Original signature :
-//       * <code>SEL* selCreateBrick(l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
-//       * <i>native declaration : allheaders.h:4804</i>
-//       */
-//      Sel selCreateBrick(int h, int w, int cy, int cx, int type);
+      /**
+       * Original signature :
+       * <code>SEL* selCreate(l_int32, l_int32, const char*)</code><br>
+       * <i>native declaration : allheaders.h:4798</i>
+       */
+      Sel selCreate(int height, int width, String name);
+  
+      /**
+       * Original signature : <code>void selDestroy(SEL**)</code><br>
+       * <i>native declaration : allheaders.h:4800</i>
+       */
+      void selDestroy(PointerByReference psel);
+  
+      /**
+       * Original signature : <code>SEL* selCopy(SEL*)</code><br>
+       * <i>native declaration : allheaders.h:4802</i>
+       */
+      Sel selCopy(Pointer sel);
+      /**
+       * Original signature :
+       * <code>SEL* selCreateBrick(l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
+       * <i>native declaration : allheaders.h:4804</i>
+       */
+      Sel selCreateBrick(int h, int w, int cy, int cx, int type);
 //      /**
 //       * Original signature :
 //       * <code>SEL* selCreateComb(l_int32, l_int32, l_int32)</code><br>
@@ -15712,12 +15712,12 @@ public interface Leptonica extends Library, ILeptonica {
 //       * <i>native declaration : allheaders.h:4858</i>
 //       */
 //      int selWriteStream(FILE fp, Pointer sel);
-//      /**
-//       * Original signature :
-//       * <code>SEL* selCreateFromString(const char*, l_int32, l_int32, const char*)</code><br>
-//       * <i>native declaration : allheaders.h:4860</i>
-//       */
-//      Sel selCreateFromString(String text, int h, int w, String name);
+      /**
+       * Original signature :
+       * <code>SEL* selCreateFromString(const char*, l_int32, l_int32, const char*)</code><br>
+       * <i>native declaration : allheaders.h:4860</i>
+       */
+      Sel selCreateFromString(String text, int h, int w, String name);
 //  
 //      /**
 //       * Original signature : <code>char* selPrintToString(SEL*)</code><br>

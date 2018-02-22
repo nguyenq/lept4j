@@ -1336,10 +1336,10 @@ public interface ILeptonica {
     public static final int HAVE_LIBZ = (int) 1;
     /** <i>native declaration : environ.h</i>
      */
-    public static final int HAVE_LIBGIF = (int) 0;
+    public static final int HAVE_LIBGIF = (int) 1;
     /** <i>native declaration : environ.h</i>
      */
-    public static final int HAVE_LIBUNGIF = (int) 0;
+    public static final int HAVE_LIBUNGIF = (int) 1;
     /** <i>native declaration : environ.h</i>
      */
     public static final int HAVE_LIBWEBP = (int) 1;

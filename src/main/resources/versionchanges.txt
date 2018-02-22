@@ -63,7 +63,7 @@ Version 1.6.1 (22 September 2017)
 Version 1.6.2 (30 October 2017)
 - Update libpng, libtiff, and libopenjp2 libraries
 
-Version 1.6.3 (22 February 2017)
+Version 1.6.3 (22 February 2018)
 - Fix convertPixToImage method, which caused JVM crash in round-trip conversion
 
 Version 1.7.0 (28 January 2018):
@@ -77,3 +77,6 @@ Version 1.9.0 (17 February 2018):
 
 Version 1.9.1 (22 February 2018):
 - Fix convertPixToImage method, which caused JVM crash in round-trip conversion
+
+Version 1.9.2 (24 February 2018):
+- Implement despeckle method
