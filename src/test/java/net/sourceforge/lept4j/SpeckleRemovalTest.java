@@ -1,3 +1,18 @@
+/*
+ * Copyright 2018 Quan Nguyen
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package net.sourceforge.lept4j;
 
 import java.io.File;
@@ -11,14 +26,17 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 /**
- * Despeckle algorithm based on original C code example demonstrating morphological method of removing speckle.
- * 
- * https://github.com/DanBloomberg/leptonica/blob/master/prog/speckle_reg.c
+ * Java version of <code>speckle_reg.c</code>, demonstrating morphological
+ * method of removing speckle.
+ *
+ * See
+ * <a href="https://github.com/DanBloomberg/leptonica/blob/master/prog/speckle_reg.c">speckle_reg.c</a>
  */
 public class SpeckleRemovalTest {
+
     private final String testResourcesPath = "src/test/resources/test-data";
-    private final String testResultsPath ="target/test-classes/test-results/";
-    
+    private final String testResultsPath = "target/test-classes/test-results/";
+
     Leptonica instance;
 
     public SpeckleRemovalTest() {
@@ -42,14 +60,26 @@ public class SpeckleRemovalTest {
     }
 
     /* HMT (with just misses) for speckle up to 2x2 */
+    /*
+    "oooo"
+    "oC o"
+    "o  o"
+    "oooo"
+    */
     public static final String selstr2 = "oooooC oo  ooooo";
     /* HMT (with just misses) for speckle up to 3x3 */
+    /*
+    "ooooo"
+    "oC  o"
+    "o   o"
+    "o   o"
+    "ooooo"
+    */
     public static final String selstr3 = "ooooooC  oo   oo   oooooo";
-        
+
     /**
      * Test of Despeckle algorithm.
      *
-     * @throws java.lang.Exception
      */
     @Test
     public void testDespeckle() {
@@ -57,7 +87,7 @@ public class SpeckleRemovalTest {
         Pix pix6, pix7, pix8, pix9, pix10;
         Pixa pixa1;
         Sel sel1, sel2, sel3, sel4;
-        
+
         String filename = "w91frag.jpg";
         File image = new File(testResourcesPath, filename);
         Pix pixs = instance.pixRead(image.getPath());
@@ -105,7 +135,7 @@ public class SpeckleRemovalTest {
         pix10 = instance.pixaDisplayTiledInColumns(pixa1, 3, 1.0f, 30, 2);
 
         instance.pixWrite(testResultsPath + "result8.jpg", pix10, ILeptonica.IFF_JFIF_JPEG);        /* 8 */
-        
+
         LeptUtils.dispose(sel1);
         LeptUtils.dispose(sel2);
         LeptUtils.dispose(sel3);

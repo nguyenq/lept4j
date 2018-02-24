@@ -55,8 +55,8 @@ public class LeptUtils {
     /**
      * Converts Leptonica <code>Pix</code> to <code>BufferedImage</code>.
      *
-     * @param pix
-     * @return BufferedImage
+     * @param pix source pix
+     * @return BufferedImage output image
      * @throws IOException
      */
     public static BufferedImage convertPixToImage(Pix pix) throws IOException {
@@ -75,8 +75,8 @@ public class LeptUtils {
     /**
      * Converts <code>BufferedImage</code> to Leptonica <code>Pix</code> .
      *
-     * @param image
-     * @return Pix
+     * @param image source image
+     * @return Pix output pix
      * @throws IOException
      */
     public static Pix convertImageToPix(BufferedImage image) throws IOException {
@@ -95,8 +95,8 @@ public class LeptUtils {
      * @see
      * <a href="http://www.leptonica.com/line-removal.html">line-removal</a>
      *
-     * @param pixs input image
-     * @return image with lines removed
+     * @param pixs input pix
+     * @return pix with lines removed
      */
     public static Pix removeLines(Pix pixs) {
         float angle, conf;
@@ -153,9 +153,22 @@ public class LeptUtils {
         return pix8;
     }
 
-    /* HMT (with just misses) for speckle up to 2x2 */
+    /**
+     * HMT (with just misses) for speckle up to 2x2
+     * <blockquote><pre>"oooo"
+     *"oC o"
+     *"o  o"
+     *"oooo"</pre></blockquote>
+     */
     public static final String SEL_STR2 = "oooooC oo  ooooo";
-    /* HMT (with just misses) for speckle up to 3x3 */
+    /**
+     * HMT (with just misses) for speckle up to 3x3
+     * <blockquote><pre>"ooooo"
+     *"oC  o"
+     *"o   o"
+     *"o   o"
+     *"ooooo"</pre></blockquote>
+     */
     public static final String SEL_STR3 = "ooooooC  oo   oo   oooooo";
 
     /**
@@ -163,10 +176,10 @@ public class LeptUtils {
      * <code>speckle_reg.c</code> example demonstrating morphological method of
      * removing speckle.
      *
-     * @param pixs input image
-     * @param selStr hit-miss sels in 2D layout
-     * @param selSize 2 for 2x2, 3 for 3x3; SEL_STR2 and SEL_STR3 are predefined values
-     * @return image with speckle removed
+     * @param pixs input pix
+     * @param selStr hit-miss sels in 2D layout; SEL_STR2 and SEL_STR3 are predefined values
+     * @param selSize 2 for 2x2, 3 for 3x3
+     * @return pix with speckle removed
      */
     public static Pix despeckle(Pix pixs, String selStr, int selSize) {
         Pix pix1, pix2, pix3;
