@@ -42,6 +42,10 @@ import com.sun.jna.Structure;
 import net.sourceforge.lept4j.*;
 import static net.sourceforge.lept4j.ILeptonica.IFF_TIFF;
 
+//import org.opencv.core.Mat;
+//import org.opencv.core.MatOfByte;
+//import org.opencv.imgcodecs.Imgcodecs;
+
 /**
  * Various utility methods for Leptonica.
  *
@@ -177,7 +181,8 @@ public class LeptUtils {
      * removing speckle.
      *
      * @param pixs input pix
-     * @param selStr hit-miss sels in 2D layout; SEL_STR2 and SEL_STR3 are predefined values
+     * @param selStr hit-miss sels in 2D layout; SEL_STR2 and SEL_STR3 are
+     * predefined values
      * @param selSize 2 for 2x2, 3 for 3x3
      * @return pix with speckle removed
      */
@@ -367,4 +372,31 @@ public class LeptUtils {
         buf.flip();
         return buf;
     }
+
+//    /**
+//     * Converts OpenCV Mat to Leptonica Pix.
+//     * 
+//     * @param mat source mat
+//     * @return output pix
+//     */
+//    public static Pix convertMatToPix(Mat mat) {
+//        MatOfByte bytes = new MatOfByte();
+//        Imgcodecs.imencode(".tif", mat, bytes);
+//        ByteBuffer buff = ByteBuffer.wrap(bytes.toArray());
+//        return Leptonica1.pixReadMem(buff, new NativeSize(buff.capacity()));
+//    }
+//
+//    /**
+//     * Converts Leptonica Pix to OpenCV Mat.
+//     * @param pix source pix
+//     * @return output mat
+//     */
+//    public static Mat convertPixToMat(Pix pix) {
+//        PointerByReference pdata = new PointerByReference();
+//        NativeSizeByReference psize = new NativeSizeByReference();
+//        Leptonica1.pixWriteMem(pdata, psize, pix, ILeptonica.IFF_TIFF);
+//        byte[] b = pdata.getValue().getByteArray(0, psize.getValue().intValue());
+//        Leptonica1.lept_free(pdata.getValue());
+//        return Imgcodecs.imdecode(new MatOfByte(b), Imgcodecs.CV_LOAD_IMAGE_UNCHANGED);
+//    }
 }
