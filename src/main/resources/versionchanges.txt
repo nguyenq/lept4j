@@ -65,3 +65,6 @@ Version 1.6.2 (30 October 2017)
 
 Version 1.6.3 (22 February 2018)
 - Fix convertPixToImage method, which caused JVM crash in round-trip conversion
+
+Version 1.6.4 (16 April 2018):
+- Update jai-imageio-core to 1.4.0 for Java 9 fixes
