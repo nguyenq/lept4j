@@ -80,3 +80,6 @@ Version 1.9.1 (22 February 2018):
 
 Version 1.9.2 (24 February 2018):
 - Implement despeckle method
+
+Version 1.9.3 (16 April 2018):
+- Update jai-imageio-core to 1.4.0 for Java 9 fixes
