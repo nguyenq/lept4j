@@ -132,8 +132,11 @@ public class LoadLibs {
     static void copyJarResourceToDirectory(JarURLConnection jarConnection, File destDir) {
         try {
             JarFile jarFile = jarConnection.getJarFile();
-            String jarConnectionEntryName = jarConnection.getEntryName() + "/";
-
+            String jarConnectionEntryName = jarConnection.getEntryName();
+            if (!jarConnectionEntryName.endsWith("/")) {
+                jarConnectionEntryName += "/";
+            }
+            
             /**
              * Iterate all entries in the jar file.
              */
