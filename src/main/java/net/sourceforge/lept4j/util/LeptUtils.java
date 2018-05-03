@@ -42,6 +42,10 @@ import com.sun.jna.Structure;
 import net.sourceforge.lept4j.*;
 import static net.sourceforge.lept4j.ILeptonica.IFF_TIFF;
 
+//import org.opencv.core.Mat;
+//import org.opencv.core.MatOfByte;
+//import org.opencv.imgcodecs.Imgcodecs;
+
 /**
  * Various utility methods for Leptonica.
  *
@@ -55,8 +59,8 @@ public class LeptUtils {
     /**
      * Converts Leptonica <code>Pix</code> to <code>BufferedImage</code>.
      *
-     * @param pix
-     * @return BufferedImage
+     * @param pix source pix
+     * @return BufferedImage output image
      * @throws IOException
      */
     public static BufferedImage convertPixToImage(Pix pix) throws IOException {
@@ -71,12 +75,12 @@ public class LeptUtils {
         Leptonica1.lept_free(pdata.getValue());
         return bi;
     }
-    
+
     /**
      * Converts <code>BufferedImage</code> to Leptonica <code>Pix</code> .
      *
-     * @param image
-     * @return Pix
+     * @param image source image
+     * @return Pix output pix
      * @throws IOException
      */
     public static Pix convertImageToPix(BufferedImage image) throws IOException {
@@ -95,8 +99,8 @@ public class LeptUtils {
      * @see
      * <a href="http://www.leptonica.com/line-removal.html">line-removal</a>
      *
-     * @param pixs input image
-     * @return image with lines removed
+     * @param pixs input pix
+     * @return pix with lines removed
      */
     public static Pix removeLines(Pix pixs) {
         float angle, conf;
@@ -151,6 +155,67 @@ public class LeptUtils {
         disposePix(pix9);
 
         return pix8;
+    }
+
+    /**
+     * HMT (with just misses) for speckle up to 2x2
+     * <blockquote><pre>"oooo"
+     *"oC o"
+     *"o  o"
+     *"oooo"</pre></blockquote>
+     */
+    public static final String SEL_STR2 = "oooooC oo  ooooo";
+    /**
+     * HMT (with just misses) for speckle up to 3x3
+     * <blockquote><pre>"ooooo"
+     *"oC  o"
+     *"o   o"
+     *"o   o"
+     *"ooooo"</pre></blockquote>
+     */
+    public static final String SEL_STR3 = "ooooooC  oo   oo   oooooo";
+
+    /**
+     * Reduces speckle noise in image. The algorithm is based on Leptonica
+     * <code>speckle_reg.c</code> example demonstrating morphological method of
+     * removing speckle.
+     *
+     * @param pixs input pix
+     * @param selStr hit-miss sels in 2D layout; SEL_STR2 and SEL_STR3 are
+     * predefined values
+     * @param selSize 2 for 2x2, 3 for 3x3
+     * @return pix with speckle removed
+     */
+    public static Pix despeckle(Pix pixs, String selStr, int selSize) {
+        Pix pix1, pix2, pix3;
+        Pix pix4, pix5, pix6;
+        Sel sel1, sel2;
+
+        /*  Normalize for rapidly varying background */
+        pix1 = Leptonica1.pixBackgroundNormFlex(pixs, 7, 7, 1, 1, 10);
+
+        /* Remove the background */
+        pix2 = Leptonica1.pixGammaTRCMasked(null, pix1, null, 1.0f, 100, 175);
+        /* Binarize */
+        pix3 = Leptonica1.pixThresholdToBinary(pix2, 180);
+
+        /* Remove the speckle noise up to selSize x selSize */
+        sel1 = Leptonica1.selCreateFromString(selStr, selSize + 2, selSize + 2, "speckle" + selSize);
+        pix4 = Leptonica1.pixHMT(null, pix3, sel1.getPointer());
+        sel2 = Leptonica1.selCreateBrick(selSize, selSize, 0, 0, ILeptonica.SEL_HIT);
+        pix5 = Leptonica1.pixDilate(null, pix4, sel2.getPointer());
+        pix6 = Leptonica1.pixSubtract(null, pix3, pix5);
+
+        LeptUtils.dispose(sel1);
+        LeptUtils.dispose(sel2);
+
+        LeptUtils.dispose(pix1);
+        LeptUtils.dispose(pix2);
+        LeptUtils.dispose(pix3);
+        LeptUtils.dispose(pix4);
+        LeptUtils.dispose(pix5);
+
+        return pix6;
     }
 
     /**
@@ -249,6 +314,8 @@ public class LeptUtils {
             Leptonica1.recogDestroy(pRef);
         } else if (resource instanceof Sarray) {
             Leptonica1.sarrayDestroy(pRef);
+        } else if (resource instanceof Sel) {
+            Leptonica1.selDestroy(pRef);
         } else if (resource instanceof Sela) {
             Leptonica1.selaDestroy(pRef);
         } else if (resource instanceof L_Sudoku) {
@@ -305,4 +372,31 @@ public class LeptUtils {
         buf.flip();
         return buf;
     }
+
+//    /**
+//     * Converts OpenCV Mat to Leptonica Pix.
+//     * 
+//     * @param mat source mat
+//     * @return output pix
+//     */
+//    public static Pix convertMatToPix(Mat mat) {
+//        MatOfByte bytes = new MatOfByte();
+//        Imgcodecs.imencode(".tif", mat, bytes);
+//        ByteBuffer buff = ByteBuffer.wrap(bytes.toArray());
+//        return Leptonica1.pixReadMem(buff, new NativeSize(buff.capacity()));
+//    }
+//
+//    /**
+//     * Converts Leptonica Pix to OpenCV Mat.
+//     * @param pix source pix
+//     * @return output mat
+//     */
+//    public static Mat convertPixToMat(Pix pix) {
+//        PointerByReference pdata = new PointerByReference();
+//        NativeSizeByReference psize = new NativeSizeByReference();
+//        Leptonica1.pixWriteMem(pdata, psize, pix, ILeptonica.IFF_TIFF);
+//        byte[] b = pdata.getValue().getByteArray(0, psize.getValue().intValue());
+//        Leptonica1.lept_free(pdata.getValue());
+//        return Imgcodecs.imdecode(new MatOfByte(b), Imgcodecs.CV_LOAD_IMAGE_UNCHANGED);
+//    }
 }
