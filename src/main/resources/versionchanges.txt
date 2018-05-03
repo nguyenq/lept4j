@@ -84,5 +84,6 @@ Version 1.9.2 (24 February 2018):
 Version 1.9.3 (16 April 2018):
 - Update jai-imageio-core to 1.4.0 for Java 9 fixes
 
-Version 1.9.4 (2 May 2018):
-Fix a path issue when extracting native resources from JAR to temp directory on Windows server
+Version 1.9.4 (3 May 2018):
+- Fix a path issue when extracting native resources from JAR to temp directory on Windows server
+- Replace JNA string constant Platform.RESOURCE_PREFIX
