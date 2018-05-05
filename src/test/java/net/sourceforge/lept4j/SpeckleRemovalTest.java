@@ -103,6 +103,7 @@ public class SpeckleRemovalTest {
         /* Remove the background */
         pix2 = instance.pixGammaTRCMasked(null, pix1, null, 1.0f, 100, 175);
         instance.pixWrite(testResultsPath + "result2.jpg", pix2, ILeptonica.IFF_JFIF_JPEG);        /* 2 */
+
         /* Binarize */
         pix3 = instance.pixThresholdToBinary(pix2, 180);
         instance.pixaAddPix(pixa1, pix3, ILeptonica.L_INSERT);
@@ -133,6 +134,7 @@ public class SpeckleRemovalTest {
         instance.pixWrite(testResultsPath + "result7.png", pix9, ILeptonica.IFF_PNG);        /* 7 */
 
         pix10 = instance.pixaDisplayTiledInColumns(pixa1, 3, 1.0f, 30, 2);
+        instance.pixDisplayWithTitle(pix10, 0, 0, null, 1);
 
         instance.pixWrite(testResultsPath + "result8.jpg", pix10, ILeptonica.IFF_JFIF_JPEG);        /* 8 */
 

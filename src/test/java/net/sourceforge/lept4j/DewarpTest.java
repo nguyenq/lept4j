@@ -76,6 +76,9 @@ public class DewarpTest {
         Pix pixs2, pixn2, pixg2, pixb2, pixd2;
 
         instance = new LeptonicaImpl().getInstance();
+        
+        instance.setLeptDebugOK(1);
+        instance.lept_mkdir("lept/model");
 
         /*    pixs = instance.pixRead("1555-7.jpg"); */
         String filename = "cat-35.jpg";
@@ -93,15 +96,14 @@ public class DewarpTest {
         instance.dewarpaUseBothArrays(dewa, 1);
         dew1 = instance.dewarpCreate(pixb, 35);
         instance.dewarpaInsertDewarp(dewa, dew1);
-        instance.dewarpBuildPageModel(dew1, "/tmp/lept/dewarp_model1.pdf");
+        instance.dewarpBuildPageModel(dew1, "/tmp/lept/model/dewarp_model1.pdf");
         PointerByReference ppixd = new PointerByReference();
-        instance.dewarpaApplyDisparity(dewa, 35, pixg, 200, 0, 0, ppixd, "/tmp/lept/dewarp_apply1.pdf");
+        instance.dewarpaApplyDisparity(dewa, 35, pixg, 200, 0, 0, ppixd, "/tmp/lept/model/dewarp_apply1.pdf");
         pixd = new Pix(ppixd.getValue());
 
         /* Write out some of the files to be imaged */
-        instance.lept_mkdir("lept");
-        instance.lept_rmdir("dewtest");
-        instance.lept_mkdir("dewtest");
+        instance.lept_rmdir("lept/dewtest");
+        instance.lept_mkdir("lept/dewtest");
         instance.pixWrite("/tmp/dewtest/001.jpg", pixs, IFF_JFIF_JPEG);
         instance.pixWrite("/tmp/dewtest/002.jpg", pixn, IFF_JFIF_JPEG);
         instance.pixWrite("/tmp/dewtest/003.jpg", pixg, IFF_JFIF_JPEG);
@@ -158,7 +160,7 @@ public class DewarpTest {
         instance.dewarpaInsertRefModels(dewa, 0, 1);
 //        dewarpaInfo(stderr, dewa);
 
-        instance.dewarpaApplyDisparity(dewa, 7, pixg2, 200, 0, 0, ppixd, "/tmp/lept/dewarp_apply2.pdf");
+        instance.dewarpaApplyDisparity(dewa, 7, pixg2, 200, 0, 0, ppixd, "/tmp/lept/model/dewarp_apply2.pdf");
         pixd2 = new Pix(ppixd.getValue());
         PointerByReference dewaRef = new PointerByReference();
         dewaRef.setValue(dewa.getPointer());
@@ -189,16 +191,16 @@ public class DewarpTest {
         pixDestroy(pixt2);
 
         /* Generate the big pdf file */
-        instance.convertFilesToPdf("/tmp/dewtest", null, 135, 1.0f, 0, 0, "Dewarp Test", "/tmp/lept/dewarptest1.pdf");
+        instance.convertFilesToPdf("/tmp/lept/dewtest", null, 135, 1.0f, 0, 0, "Dewarp Test", "/tmp/lept/dewarptest1.pdf");
 
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
-            System.out.println("pdf file made: " + System.getProperty("java.io.tmpdir") + "lept\\dewarptest1.pdf");
+            System.out.println("pdf file made: " + System.getProperty("java.io.tmpdir") + "lept\\model\\dewarptest1.pdf");
         } else {
-            System.out.println("pdf file made: /tmp/lept/dewarptest1.pdf");
+            System.out.println("pdf file made: /tmp/lept/model/dewarptest1.pdf");
         }
 
-        instance.lept_rmdir("dewmod");
-        instance.lept_rmdir("dewtest");
+        instance.lept_rmdir("lept/dewmod");
+        instance.lept_rmdir("lept/dewtest");
         pixDestroy(pixs);
         pixDestroy(pixn);
         pixDestroy(pixg);

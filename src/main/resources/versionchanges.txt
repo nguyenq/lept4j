@@ -88,5 +88,6 @@ Version 1.9.4 (3 May 2018):
 - Fix a path issue when extracting native resources from JAR to temp directory on Windows server
 - Replace JNA string constant Platform.RESOURCE_PREFIX
 
-Version 1.10.0 (4 May 2018):
+Version 1.10.0 (5 May 2018):
 - Upgrade to Leptonica 1.76.0
+- Update unit tests

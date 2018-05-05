@@ -17236,11 +17236,11 @@ public interface Leptonica extends Library, ILeptonica {
 //     * Original signature : <code>l_int32 l_jpegSetQuality(l_int32)</code><br>
 //     */
 //    int l_jpegSetQuality(int new_quality);
-//    
-//    /**
-//     * Original signature : <code>void setLeptDebugOK(l_int32)</code><br>
-//     */
-//    void setLeptDebugOK(int allow);
+    
+    /**
+     * Original signature : <code>void setLeptDebugOK(l_int32)</code><br>
+     */
+    void setLeptDebugOK(int allow);
     
     /**
      * Original signature : <code>l_int32 pixaWriteFiles(const char*, PIXA*, l_int32)</code><br>

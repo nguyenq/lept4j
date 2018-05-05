@@ -20,6 +20,8 @@ import java.io.File;
 import java.nio.IntBuffer;
 import static net.sourceforge.lept4j.ILeptonica.*;
 import net.sourceforge.lept4j.util.LeptUtils;
+import static net.sourceforge.lept4j.util.LeptUtils.dispose;
+
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -44,24 +46,24 @@ import org.junit.Test;
  * much cleaner binarization.
  */
 public class OtsuTest {
-    
+
     private final String testResourcesPath = "src/test/resources/test-data";
-    
+
     public OtsuTest() {
     }
-    
+
     @BeforeClass
     public static void setUpClass() {
     }
-    
+
     @AfterClass
     public static void tearDownClass() {
     }
-    
+
     @Before
     public void setUp() {
     }
-    
+
     @After
     public void tearDown() {
     }
@@ -80,91 +82,76 @@ public class OtsuTest {
         IntBuffer bgval = IntBuffer.allocate(1);
         float scorefract;
         L_Bmf bmf;
-        Pix pixs, pixb, pixb2, pixb3, pixg, pixp, pixt1, pixt2;
-        Pixa pixa;
-        
+        Pix pixs, pixb, pixg, pixp, pix1, pix2, pix3;
+        Pixa pixa1, pixad;
+
+        Leptonica1.setLeptDebugOK(1);
+//        Leptonica1.lept_mkdir("lept/otsu");
+
         String filename = "1555-7.jpg";
         File image = new File(testResourcesPath, filename);
         pixs = Leptonica1.pixRead(image.getPath());
         pixg = Leptonica1.pixConvertTo8(pixs, 0);
-        bmf = Leptonica1.bmfCreate("fonts", 8);
+        bmf = Leptonica1.bmfCreate(null, 8);
+        pixad = Leptonica1.pixaCreate(0);
+
         for (int i = 0; i < 3; i++) {
-            pixa = Leptonica1.pixaCreate(3);
+            pixa1 = Leptonica1.pixaCreate(2);
             scorefract = 0.1f * i;
             PointerByReference ppixb = new PointerByReference();
+            /* Get a 1 bpp version; use a single tile */
             int result = Leptonica1.pixOtsuAdaptiveThreshold(pixg, 2000, 2000, 0, 0, scorefract, null, ppixb);
             pixb = new Pix(ppixb.getValue());
-            Leptonica1.pixSaveTiledOutline(pixb, pixa, 0.5f, 1, 20, 2, 32);
+            Leptonica1.pixSaveTiledOutline(pixb, pixa1, 0.5f, 1, 20, 2, 32);
             thresh.rewind();
             fgval.rewind();
             bgval.rewind();
-            Leptonica1.pixSplitDistributionFgBg(pixg, scorefract, 1, thresh, fgval, bgval, null);
-            System.err.printf("thresh = %d, fgval = %d, bgval = %d\n", thresh.get(), fgval.get(), bgval.get());
+            PointerByReference ppixp = new PointerByReference();
+            /* Show the histogram of gray values and the split location */
+            Leptonica1.pixSplitDistributionFgBg(pixg, scorefract, 1, thresh, fgval, bgval, ppixp);
+            System.out.printf("thresh = %d, fgval = %d, bgval = %d\n", thresh.get(), fgval.get(), bgval.get());
             thresh.rewind();
             /* Give gnuplot time to write out the plot */
             Thread.sleep(1000);
-            pixp = Leptonica1.pixRead(System.getProperty("java.io.tmpdir") + "/redout/histplot.png");
-            Leptonica1.pixSaveTiled(pixp, pixa, 1.0f, 0, 20, 1);
-            pixt1 = Leptonica1.pixaDisplay(pixa, 0, 0);
+            pixp = new Pix(ppixb.getValue());
+            Leptonica1.pixSaveTiled(pixp, pixa1, 1.0f, 0, 20, 1);
+            /* Join these together and add some text */
+            pix1 = Leptonica1.pixaDisplay(pixa1, 0, 0);
             textstr = String.format("Scorefract = %3.1f ........... Thresh = %d", scorefract, thresh.get());
-            pixt2 = Leptonica1.pixAddSingleTextblock(pixt1, bmf, textstr, 0x00ff0000, L_ADD_BELOW, null);
-            Leptonica1.pixDisplay(pixt2, 100, 100);
+            pix2 = Leptonica1.pixAddSingleTextblock(pix1, bmf, textstr, 0x00ff0000, L_ADD_BELOW, null);
+            /* Save and display the result */
+            Leptonica1.pixaAddPix(pixad, pix2, L_INSERT);
             textstr = String.format("target/test-classes/test-results/otsu.%d.png", i);
-            Leptonica1.pixWrite(textstr, pixt2, IFF_PNG);
-            pixDestroy(pixb);
-            pixDestroy(pixp);
-            pixDestroy(pixt1);
-            pixDestroy(pixt2);
-            pixaDestroy(pixa);
+            Leptonica1.pixWrite(textstr, pix2, IFF_PNG);
+            Leptonica1.pixDisplay(pix2, 100, 100);
+            LeptUtils.dispose(pixb);
+//            LeptUtils.dispose(pixp); // caused crash
+            LeptUtils.dispose(pix1);
+            LeptUtils.dispose(pixa1);
         }
-        
-        pixa = Leptonica1.pixaCreate(2);
+
+        /* Use a smaller tile for Otsu */
         for (int i = 0; i < 2; i++) {
             scorefract = 0.1f * i;
             PointerByReference ppixb = new PointerByReference();
             int result = Leptonica1.pixOtsuAdaptiveThreshold(pixg, 300, 300, 0, 0, scorefract, null, ppixb);
             pixb = new Pix(ppixb.getValue());
-            pixb2 = Leptonica1.pixAddBlackOrWhiteBorder(pixb, 2, 2, 2, 2, L_GET_BLACK_VAL);
+            pix1 = Leptonica1.pixAddBlackOrWhiteBorder(pixb, 2, 2, 2, 2, L_GET_BLACK_VAL);
+            pix2 = Leptonica1.pixScale(pix1, 0.5f, 0.5f);
             textstr = String.format("Scorefract = %3.1f", scorefract);
-            pixb3 = Leptonica1.pixAddSingleTextblock(pixb2, bmf, textstr, 1, L_ADD_BELOW, null);
-            Leptonica1.pixSaveTiled(pixb3, pixa, 2, (i + 1) % 1, 20, 32);
-            pixDestroy(pixb);
-            pixDestroy(pixb2);
+            pix3 = Leptonica1.pixAddSingleTextblock(pix2, bmf, textstr, 1, L_ADD_BELOW, null);
+            Leptonica1.pixaAddPix(pixad, pix3, L_INSERT);
+            LeptUtils.dispose(pixb);
+            LeptUtils.dispose(pix1);
+            LeptUtils.dispose(pix2);
         }
-        pixb = Leptonica1.pixaDisplay(pixa, 0, 0);
-        Leptonica1.pixWrite("target/test-classes/test-results/otsu-tiled.jpg", pixb, IFF_PNG);
-        pixDestroy(pixb);
-        pixaDestroy(pixa);
-        
-        bmfDestroy(bmf);
-        pixDestroy(pixs);
-        pixDestroy(pixg);
-    }
 
-    /**
-     * Disposes of Pix resource.
-     *
-     * @param pix
-     */
-    void pixDestroy(Pix pix) {
-        LeptUtils.disposePix(pix);
-    }
-
-    /**
-     * Disposes of Pixa resource.
-     *
-     * @param pixa
-     */
-    void pixaDestroy(Pixa pixa) {
-        LeptUtils.dispose(pixa);
-    }
-
-    /**
-     * Disposes of L_Bmf resource.
-     *
-     * @param bmf
-     */
-    void bmfDestroy(L_Bmf bmf) {
+        System.out.println("Writing to: target/test-classes/test-results/result1.pdf");
+        Leptonica1.pixaConvertToPdf(pixad, 75, 1.0f, 0, 0, "Otsu thresholding",
+                     "target/test-classes/test-results/result1.pdf");
         LeptUtils.dispose(bmf);
+        LeptUtils.dispose(pixs);
+        LeptUtils.dispose(pixg);
+        LeptUtils.dispose(pixad);
     }
 }
