@@ -192,7 +192,7 @@ public class DewarpTest {
         instance.convertFilesToPdf("/tmp/dewtest", null, 135, 1.0f, 0, 0, "Dewarp Test", "/tmp/lept/dewarptest1.pdf");
 
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
-            System.out.println("pdf file made: " + System.getProperty("java.io.tmpdir") + "leptonica\\lept\\dewarptest1.pdf");
+            System.out.println("pdf file made: " + System.getProperty("java.io.tmpdir") + "lept\\dewarptest1.pdf");
         } else {
             System.out.println("pdf file made: /tmp/lept/dewarptest1.pdf");
         }
