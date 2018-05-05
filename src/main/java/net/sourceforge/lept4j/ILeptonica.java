@@ -426,6 +426,10 @@ public interface ILeptonica {
      */
     public static final int L_NOCOPY = 0;
     /**
+     * stuff it in; do not copy or clone
+     */
+    public static final int L_INSERT = L_NOCOPY;
+    /**
      * make/use a copy of the object
      */
     public static final int L_COPY = 1;
@@ -434,7 +438,7 @@ public interface ILeptonica {
      */
     public static final int L_CLONE = 2;
     /**
-     * make a new object and fill each object in the
+     * make a new array object (e.g., <code>pixa</code>) and fill
      */
     public static final int L_COPY_CLONE = 3;
     /**
@@ -1309,19 +1313,15 @@ public interface ILeptonica {
      * Percept. weight for blue
      */
     public static final float L_BLUE_WEIGHT = 0.2f;
-    /**
-     * stuff it in; no copy or clone
-     */
-    public static final int L_INSERT = 0;
     /** <i>native declaration : allheaders.h</i>
      */
     public static final int LIBLEPT_MAJOR_VERSION = (int) 1;
     /** <i>native declaration : allheaders.h</i>
      */
-    public static final int LIBLEPT_MINOR_VERSION = (int) 75;
+    public static final int LIBLEPT_MINOR_VERSION = (int) 76;
     /** <i>native declaration : allheaders.h</i>
      */
-    public static final int LIBLEPT_PATCH_VERSION = (int) 3;
+    public static final int LIBLEPT_PATCH_VERSION = (int) 0;
     /** <i>native declaration : environ.h</i>
      */
     public static final int HAVE_LIBJPEG = (int) 1;
@@ -1361,6 +1361,9 @@ public interface ILeptonica {
     /** <i>native declaration : environ.h</i>
      */
     public static final int USE_PSIO = (int) 1;
+    /** <i>native declaration : environ.h</i>
+     */
+    public static final int HAVE_FSTATAT = (int) 0;
     /** <i>native declaration : environ.h</i>
      */
     public static final int UNDEF = (int) -1;

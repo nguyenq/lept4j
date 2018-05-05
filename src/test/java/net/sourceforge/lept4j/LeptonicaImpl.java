@@ -2652,6 +2652,11 @@ public class LeptonicaImpl implements Leptonica {
     }
 
     @Override
+    public Pix pixDarkenGray(Pix pixd, Pix pixs, int thresh, int satlimit) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
     public Pix pixMultConstantColor(Pix pixs, float rfact, float gfact, float bfact) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
@@ -4012,7 +4017,7 @@ public class LeptonicaImpl implements Leptonica {
     }
 
     @Override
-    public Box pixFindPageForeground(Pix pixs, int threshold, int mindist, int erasedist, int pagenum, int showmorph, int display, String pdfdir) {
+    public Box pixFindPageForeground(Pix pixs, int threshold, int mindist, int erasedist, int showmorph, PixaComp pixac) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
@@ -4963,6 +4968,66 @@ public class LeptonicaImpl implements Leptonica {
 
     @Override
     public int pixFractionFgInMask(Pix pix1, Pix pix2, FloatBuffer pfract) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public Pixa pixaCreate(int n) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public Pixa pixaCreateFromPix(Pix pixs, int n, int cellw, int cellh) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public Pixa pixaCreateFromBoxa(Pix pixs, Boxa boxa, IntBuffer pcropwarn) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public void pixaDestroy(PointerByReference ppixa) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public Pixa pixaCopy(Pixa pixa, int copyflag) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int pixaAddPix(Pixa pixa, Pix pix, int copyflag) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int pixaAddBox(Pixa pixa, Box box, int copyflag) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public Boxa pixaGetBoxa(Pixa pixa, int accesstype) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int pixaGetBoxaCount(Pixa pixa) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public Box pixaGetBox(Pixa pixa, int index, int accesstype) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int pixaGetBoxGeometry(Pixa pixa, int index, IntBuffer px, IntBuffer py, IntBuffer pw, IntBuffer ph) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int pixaSetBoxa(Pixa pixa, Boxa boxa, int accesstype) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
@@ -6162,6 +6227,31 @@ public class LeptonicaImpl implements Leptonica {
     }
 
     @Override
+    public Sel selCreate(int height, int width, String name) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public void selDestroy(PointerByReference psel) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public Sel selCopy(Pointer sel) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public Sel selCreateBrick(int h, int w, int cy, int cx, int type) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public Sel selCreateFromString(String text, int h, int w, String name) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
     public Sela sela4ccThin(Sela sela) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
@@ -6727,16 +6817,6 @@ public class LeptonicaImpl implements Leptonica {
     }
 
     @Override
-    public int pixDisplayWriteFormat(Pix pixs, int reduction, int format) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public int pixDisplayMultiple(int res, float scalefactor, String fileout) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
     public Pointer zlibCompress(ByteBuffer datain, NativeSize nin, NativeSizeByReference pnout) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
@@ -6746,88 +6826,5 @@ public class LeptonicaImpl implements Leptonica {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
-    @Override
-    public Pixa pixaCreate(int n) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public Pixa pixaCreateFromPix(Pix pixs, int n, int cellw, int cellh) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public Pixa pixaCreateFromBoxa(Pix pixs, Boxa boxa, IntBuffer pcropwarn) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public void pixaDestroy(PointerByReference ppixa) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public Pixa pixaCopy(Pixa pixa, int copyflag) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public int pixaAddPix(Pixa pixa, Pix pix, int copyflag) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public int pixaAddBox(Pixa pixa, Box box, int copyflag) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public Boxa pixaGetBoxa(Pixa pixa, int accesstype) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public int pixaGetBoxaCount(Pixa pixa) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public Box pixaGetBox(Pixa pixa, int index, int accesstype) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public int pixaGetBoxGeometry(Pixa pixa, int index, IntBuffer px, IntBuffer py, IntBuffer pw, IntBuffer ph) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public int pixaSetBoxa(Pixa pixa, Boxa boxa, int accesstype) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public Sel selCreate(int height, int width, String name) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public void selDestroy(PointerByReference psel) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public Sel selCopy(Pointer sel) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public Sel selCreateBrick(int h, int w, int cy, int cx, int type) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public Sel selCreateFromString(String text, int h, int w, String name) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
+    
 }

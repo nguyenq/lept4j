@@ -1480,7 +1480,12 @@ public class Leptonica1 implements Library, ILeptonica {
      * <i>native declaration : allheaders.h:420</i>
      */
     public static native Boxa boxaReadMem(ByteBuffer data, NativeSize size);
-
+    
+    /**
+     * Original signature : <code>l_int32 boxaWriteDebug(const char*, BOXA*)</code><br>
+     */
+    public static native int boxaWriteDebug(String filename, Boxa boxa);
+    
     /**
      * Original signature :
      * <code>l_int32 boxaWrite(const char*, BOXA*)</code><br>
@@ -2278,6 +2283,11 @@ public class Leptonica1 implements Library, ILeptonica {
      * <i>native declaration : allheaders.h:638</i>
      */
     public static native Boxa boxaFillSequence(Boxa boxas, int useflag, int debug);
+    
+    /**
+     * Original signature : <code>l_int32 boxaSizeVariation(BOXA*, l_int32, l_float32*, l_float32*, l_float32*, l_float32*)</code><br>
+     */
+    public static native int boxaSizeVariation(Boxa boxa, int type, FloatBuffer pdel_evenodd, FloatBuffer prms_even, FloatBuffer prms_odd, FloatBuffer prms_all);
 
     /**
      * Original signature :
@@ -5309,6 +5319,11 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Pix pixColorShiftRGB(Pix pixs, float rfract, float gfract, float bfract);
 
     /**
+     * Original signature : <code>PIX* pixDarkenGray(PIX*, PIX*, l_int32, l_int32)</code><br>
+     */
+    public static native Pix pixDarkenGray(Pix pixd, Pix pixs, int thresh, int satlimit);
+        
+    /**
      * Original signature :
      * <code>PIX* pixMultConstantColor(PIX*, l_float32, l_float32, l_float32)</code><br>
      * <i>native declaration : allheaders.h:1500</i>
@@ -7222,7 +7237,12 @@ public class Leptonica1 implements Library, ILeptonica {
      * <i>native declaration : allheaders.h:2058</i>
      */
     public static native int readHeaderMemJpeg(ByteBuffer data, NativeSize size, IntBuffer pw, IntBuffer ph, IntBuffer pspp, IntBuffer pycck, IntBuffer pcmyk);
-
+	
+    /**
+    * Original signature : <code>l_int32 readResolutionMemJpeg(const l_uint8*, size_t, l_int32*, l_int32*)</code><br>
+    */
+    public static native int readResolutionMemJpeg(ByteBuffer data, NativeSize size, IntBuffer pxres, IntBuffer pyres);
+        
     /**
      * Original signature :
      * <code>l_int32 pixWriteMemJpeg(l_uint8**, size_t*, PIX*, l_int32, l_int32)</code><br>
@@ -8291,6 +8311,11 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Numa numaReadMem(ByteBuffer data, NativeSize size);
 
     /**
+     * Original signature : <code>l_int32 numaWriteDebug(const char*, NUMA*)</code><br>
+     */
+    public static native int numaWriteDebug(String filename, Numa na);
+        
+    /**
      * Original signature :
      * <code>l_int32 numaWrite(const char*, NUMA*)</code><br>
      * <i>native declaration : allheaders.h:2372</i>
@@ -9171,12 +9196,10 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Pix pixGenTextblockMask(Pix pixs, Pix pixvws, Pixa pixadb);
 
     /**
-     * Original signature :
-     * <code>BOX* pixFindPageForeground(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, const char*)</code><br>
-     * <i>native declaration : allheaders.h:2620</i>
+     * Original signature : <code>BOX* pixFindPageForeground(PIX*, l_int32, l_int32, l_int32, l_int32, PIXAC*)</code><br>
      */
-    public static native Box pixFindPageForeground(Pix pixs, int threshold, int mindist, int erasedist, int pagenum, int showmorph, int display, String pdfdir);
-
+    public static native Box pixFindPageForeground(Pix pixs, int threshold, int mindist, int erasedist, int showmorph, PixaComp pixac);
+        
     /**
      * Original signature :
      * <code>l_int32 pixSplitIntoCharacters(PIX*, l_int32, l_int32, BOXA**, PIXA**, PIX**)</code><br>
@@ -9618,6 +9641,11 @@ public class Leptonica1 implements Library, ILeptonica {
      */
     public static native L_Compressed_Data l_generateJpegData(String fname, int ascii85flag);
 
+    /**
+     * Original signature : <code>L_COMP_DATA* l_generateJpegDataMem(l_uint8*, size_t, l_int32)</code><br>
+     */
+    public static native L_Compressed_Data l_generateJpegDataMem(ByteBuffer data, NativeSize nbytes, int ascii85flag);
+        
     /**
      * Original signature :
      * <code>l_int32 l_generateCIData(const char*, l_int32, l_int32, l_int32, L_COMP_DATA**)</code><br>
@@ -11645,6 +11673,11 @@ public class Leptonica1 implements Library, ILeptonica {
      * <i>native declaration : allheaders.h:3326</i>
      */
     public static native Pixa pixaReadMem(ByteBuffer data, NativeSize size);
+    
+    /**
+     * Original signature : <code>l_int32 pixaWriteDebug(const char*, PIXA*)</code><br>
+     */
+    public static native int pixaWriteDebug(String fname, Pixa pixa);
 
     /**
      * Original signature :
@@ -12499,6 +12532,11 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int pixcompGetDimensions(PixComp pixc, IntBuffer pw, IntBuffer ph, IntBuffer pd);
 
     /**
+     * Original signature : <code>l_int32 pixcompGetParameters(PIXC*, l_int32*, l_int32*, l_int32*, l_int32*)</code><br>
+     */
+    public static native int pixcompGetParameters(PixComp pixc, IntBuffer pxres, IntBuffer pyres, IntBuffer pcomptype, IntBuffer pcmapflag);
+        
+    /**
      * Original signature :
      * <code>l_int32 pixcompDetermineFormat(l_int32, l_int32, l_int32, l_int32*)</code><br>
      * <i>native declaration : allheaders.h:3574</i>
@@ -12730,6 +12768,11 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int pixacompConvertToPdfData(PixaComp pixac, int res, float scalefactor, int type, int quality, String title, PointerByReference pdata, NativeSizeByReference pnbytes);
 
     /**
+     * Original signature : <code>l_int32 pixacompFastConvertToPdfData(PIXAC*, const char*, l_uint8**, size_t*)</code><br>
+     */
+    public static native int pixacompFastConvertToPdfData(PixaComp pixac, String title, PointerByReference pdata, NativeSizeByReference pnbytes);
+
+    /**
      * Original signature :
      * <code>l_int32 pixacompWriteStreamInfo(FILE*, PIXAC*, const char*)</code><br>
      * <i>native declaration : allheaders.h:3642</i>
@@ -12750,6 +12793,16 @@ public class Leptonica1 implements Library, ILeptonica {
      */
     public static native Pix pixacompDisplayTiledAndScaled(PixaComp pixac, int outdepth, int tilewidth, int ncols, int background, int spacing, int border);
 
+    /**
+     * Original signature : <code>l_int32 pixacompWriteFiles(PIXAC*, const char*)</code><br>
+     */
+    public static native int pixacompWriteFiles(PixaComp pixac, String subdir);
+
+    /**
+     * Original signature : <code>l_int32 pixcompWriteFile(const char*, PIXC*)</code><br>
+     */
+    public static native int pixcompWriteFile(String rootname, PixComp pixc);
+        
     /**
      * Original signature :
      * <code>PIX* pixThreshold8(PIX*, l_int32, l_int32, l_int32)</code><br>
@@ -13837,6 +13890,11 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Pta ptaReadMem(ByteBuffer data, NativeSize size);
 
     /**
+     * Original signature : <code>l_int32 ptaWriteDebug(const char*, PTA*, l_int32)</code><br>
+     */
+    public static native int ptaWriteDebug(String filename, Pta pta, int type);
+        
+    /**
      * Original signature :
      * <code>l_int32 ptaWrite(const char*, PTA*, l_int32)</code><br>
      * <i>native declaration : allheaders.h:3966</i>
@@ -13941,6 +13999,11 @@ public class Leptonica1 implements Library, ILeptonica {
      */
     public static native Ptaa ptaaReadMem(ByteBuffer data, NativeSize size);
 
+    /**
+     * Original signature : <code>l_int32 ptaaWriteDebug(const char*, PTAA*, l_int32)</code><br>
+     */
+    public static native int ptaaWriteDebug(String filename, Ptaa ptaa, int type);
+        
     /**
      * Original signature :
      * <code>l_int32 ptaaWrite(const char*, PTAA*, l_int32)</code><br>
@@ -17689,17 +17752,17 @@ public class Leptonica1 implements Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_uint32 convertBinaryToGrayCode(l_uint32)</code><br>
+     * <code>l_uint32 convertIntToGrayCode(l_uint32)</code><br>
      * <i>native declaration : allheaders.h:5074</i>
      */
-    public static native int convertBinaryToGrayCode(int val);
+    public static native int convertIntToGrayCode(int val);
 
     /**
      * Original signature :
-     * <code>l_uint32 convertGrayCodeToBinary(l_uint32)</code><br>
+     * <code>l_uint32 convertGrayCodeToInt(l_uint32)</code><br>
      * <i>native declaration : allheaders.h:5076</i>
      */
-    public static native int convertGrayCodeToBinary(int val);
+    public static native int convertGrayCodeToInt(int val);
 
     /**
      * Original signature : <code>char* getLeptonicaVersion()</code><br>
@@ -18292,11 +18355,24 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int pixWriteMemWebP(PointerByReference pencdata, NativeSizeByReference pencsize, Pix pixs, int quality, int lossless);
 
     /**
-     * Original signature :
-     * <code>l_int32 pixaWriteFiles(const char*, PIXA*, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:5252</i>
+     * Original signature : <code>l_int32 l_jpegSetQuality(l_int32)</code><br>
+     */
+    public static native int l_jpegSetQuality(int new_quality);
+    
+    /**
+     * Original signature : <code>void setLeptDebugOK(l_int32)</code><br>
+     */
+    public static native void setLeptDebugOK(int allow);
+    
+    /**
+     * Original signature : <code>l_int32 pixaWriteFiles(const char*, PIXA*, l_int32)</code><br>
      */
     public static native int pixaWriteFiles(String rootname, Pixa pixa, int format);
+    
+    /**
+     * Original signature : <code>l_int32 pixWriteDebug(const char*, PIX*, l_int32)</code><br>
+     */
+    public static native int pixWriteDebug(String fname, Pix pix, int format);
 
     /**
      * Original signature :
@@ -18413,20 +18489,6 @@ public class Leptonica1 implements Library, ILeptonica {
      * <i>native declaration : allheaders.h:5286</i>
      */
     public static native int pixDisplayWrite(Pix pixs, int reduction);
-
-    /**
-     * Original signature :
-     * <code>l_int32 pixDisplayWriteFormat(PIX*, l_int32, l_int32)</code><br>
-     * <i>native declaration : allheaders.h:5288</i>
-     */
-    public static native int pixDisplayWriteFormat(Pix pixs, int reduction, int format);
-
-    /**
-     * Original signature :
-     * <code>l_int32 pixDisplayMultiple(l_int32, l_float32, const char*)</code><br>
-     * <i>native declaration : allheaders.h:5290</i>
-     */
-    public static native int pixDisplayMultiple(int res, float scalefactor, String fileout);
 
     /**
      * Original signature :

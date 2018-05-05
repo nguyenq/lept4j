@@ -134,13 +134,11 @@ public class LeptUtilsTest {
         Leptonica1.pixWrite(outfile, result3, ILeptonica.IFF_PNG);
         Leptonica1.pixDisplayWrite(result3, 1);
 
-        Leptonica1.pixDisplayMultiple(300, 1f, "target/test-classes/test-results/result-*.png");
-
         // resource cleanup
-        LeptUtils.disposePix(pixs);
-        LeptUtils.disposePix(result2);
-        LeptUtils.disposePix(result3);
-        LeptUtils.disposePix(result);
+        LeptUtils.dispose(pixs);
+        LeptUtils.dispose(result2);
+        LeptUtils.dispose(result3);
+        LeptUtils.dispose(result);
         assertTrue(new File(outfile).exists());
     }
 
