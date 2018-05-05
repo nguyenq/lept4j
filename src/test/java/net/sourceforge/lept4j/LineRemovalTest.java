@@ -27,7 +27,7 @@ import static net.sourceforge.lept4j.ILeptonica.*;
 import static net.sourceforge.lept4j.util.LeptUtils.dispose;
 
 /**
- * Java version of <code>lineremoval.c</code>, demonstrating line removal from a
+ * Java version of <code>lineremoval_reg.c</code>, demonstrating line removal from a
  * grayscale sketch.<br>
  * <br>
  * Note: Leptonica uses gthumb on Unix and IrfanView (<code>i_view32</code>) on
@@ -38,8 +38,7 @@ private final String testResourcesPath = "src/test/resources/test-data";
     Leptonica instance;
 
     public LineRemovalTest() {
-//        File outputDir = new File("test/test-results");
-//        outputDir.mkdirs();
+        instance = new LeptonicaImpl().getInstance();
     }
 
     @BeforeClass
@@ -66,21 +65,18 @@ private final String testResourcesPath = "src/test/resources/test-data";
     @Test
     public void testLineRemoval() throws Exception {
         System.out.println("Line Removal");
-        String filein;
-        float angle, conf, deg2rad;
+        float angle, conf;
+        final float deg2rad = (float) (3.14159 / 180.);
         Pix pixs, pix1, pix2, pix3, pix4, pix5;
         Pix pix6, pix7, pix8, pix9;
         Pixa pixa;
-        
-        filein = "dave-orig.png";
-        File image = new File(testResourcesPath, filein);
-        deg2rad = (float) (3.14159 / 180.);
 
-        instance = new LeptonicaImpl().getInstance();
+        String filein = "dave-orig.png";
+        File image = new File(testResourcesPath, filein);
 
         if ((pixs = instance.pixRead(image.getPath())) == null) {
-            System.err.print("pix not made");
-            throw new Exception("pix not made");
+            System.err.print("pix not read");
+            throw new Exception("pix not read");
         }
         
         pixa = instance.pixaCreate(0);
@@ -152,7 +148,7 @@ private final String testResourcesPath = "src/test/resources/test-data";
         instance.pixDisplayWrite(pix8, 1);
         instance.pixaAddPix(pixa, pix8, L_INSERT);
         
-        System.err.print("Writing to: target/test-classes/test-results/lineremoval.pdf\n");
+        System.err.println("Writing to: target/test-classes/test-results/lineremoval.pdf");
         instance.pixaConvertToPdf(pixa, 0, 1.0f, L_FLATE_ENCODE, 0, "lineremoval example",
                          "target/test-classes/test-results/lineremoval.pdf");
         pix1 = instance.pixaDisplayTiledInColumns(pixa, 5, 0.5f, 30, 2);
@@ -165,96 +161,4 @@ private final String testResourcesPath = "src/test/resources/test-data";
         dispose(pix1);
         dispose(pix6);
     }
-
-//    /**
-//     * Test of LineRemoval algorithm.
-//     *
-//     * @throws java.lang.Exception
-//     */
-//    @Test
-//    public void testLineRemoval1() throws Exception {
-//        String filein;
-//        float angle, conf, deg2rad;
-//        Pix pixs, pix1, pix2, pix3, pix4, pix5;
-//        Pix pix6, pix7, pix8, pix9;
-//
-//        filein = "dave-orig.png";
-//        deg2rad = (float) (3.14159 / 180.);
-//
-//        if ((pixs = Leptonica1.pixRead(filein)) == null) {
-//            System.err.print("pix not made");
-//            return;
-//        }
-//
-//        /* threshold to binary, extracting much of the lines */
-//        pix1 = Leptonica1.pixThresholdToBinary(pixs, 170);
-//        Leptonica1.pixWrite("target/test-classes/test-results/dave-proc1.png", pix1, IFF_PNG);
-//        Leptonica1.pixDisplayWrite(pix1, 1);
-//
-//        /* find the skew angle and deskew using an interpolated
-//         * rotator for anti-aliasing (to avoid jaggies) */
-//        FloatBuffer pangle = FloatBuffer.allocate(1);
-//        FloatBuffer pconf = FloatBuffer.allocate(1);
-//        Leptonica1.pixFindSkew(pix1, pangle, pconf);
-//        angle = pangle.get();
-//        conf = pconf.get();
-//        pix2 = Leptonica1.pixRotateAMGray(pixs, (float) (deg2rad * angle), (byte) 255);
-//        Leptonica1.pixWrite("target/test-classes/test-results/dave-proc2.png", pix2, IFF_PNG);
-//        Leptonica1.pixDisplayWrite(pix2, 1);
-//
-//        /* extract the lines to be removed */
-//        pix3 = Leptonica1.pixCloseGray(pix2, 51, 1);
-//        Leptonica1.pixWrite("target/test-classes/test-results/dave-proc3.png", pix3, IFF_PNG);
-//        Leptonica1.pixDisplayWrite(pix3, 1);
-//
-//        /* solidify the lines to be removed */
-//        pix4 = Leptonica1.pixErodeGray(pix3, 1, 5);
-//        Leptonica1.pixWrite("target/test-classes/test-results/dave-proc4.png", pix4, IFF_PNG);
-//        Leptonica1.pixDisplayWrite(pix4, 1);
-//
-//        /* clean the background of those lines */
-//        pix5 = Leptonica1.pixThresholdToValue(null, pix4, 210, 255);
-//        Leptonica1.pixWrite("target/test-classes/test-results/dave-proc5.png", pix5, IFF_PNG);
-//        Leptonica1.pixDisplayWrite(pix5, 1);
-//
-//        pix6 = Leptonica1.pixThresholdToValue(null, pix5, 200, 0);
-//        Leptonica1.pixWrite("target/test-classes/test-results/dave-proc6.png", pix6, IFF_PNG);
-//        Leptonica1.pixDisplayWrite(pix6, 1);
-//
-//        /* get paint-through mask for changed pixels */
-//        pix7 = Leptonica1.pixThresholdToBinary(pix6, 210);
-//        Leptonica1.pixWrite("target/test-classes/test-results/dave-proc7.png", pix7, IFF_PNG);
-//        Leptonica1.pixDisplayWrite(pix7, 1);
-//
-//        /* add the inverted, cleaned lines to orig.  Because
-//         * the background was cleaned, the inversion is 0,
-//         * so when you add, it doesn't lighten those pixels.
-//         * It only lightens (to white) the pixels in the lines! */
-//        Leptonica1.pixInvert(pix6, pix6);
-//        pix8 = Leptonica1.pixAddGray(null, pix2, pix6);
-//        Leptonica1.pixWrite("target/test-classes/test-results/dave-proc8.png", pix8, IFF_PNG);
-//        Leptonica1.pixDisplayWrite(pix8, 1);
-//
-//        pix9 = Leptonica1.pixOpenGray(pix8, 1, 9);
-//        Leptonica1.pixWrite("target/test-classes/test-results/dave-proc9.png", pix9, IFF_PNG);
-//        Leptonica1.pixDisplayWrite(pix9, 1);
-//
-//        Leptonica1.pixCombineMasked(pix8, pix9, pix7);
-//        Leptonica1.pixWrite("target/test-classes/test-results/dave-result.png", pix8, IFF_PNG);
-//        Leptonica1.pixDisplayWrite(pix8, 1);
-//
-//        Leptonica1.pixDisplayMultiple("target/test-classes/test-results/dave-proc*.png");
-//
-//        // resource cleanup
-//        disposePix(pixs);
-//        disposePix(pix1);
-//        disposePix(pix2);
-//        disposePix(pix3);
-//        disposePix(pix4);
-//        disposePix(pix5);
-//        disposePix(pix6);
-//        disposePix(pix7);
-//        disposePix(pix8);
-//        disposePix(pix9);
-//    }
 }

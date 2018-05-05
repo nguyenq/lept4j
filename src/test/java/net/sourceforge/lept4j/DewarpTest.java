@@ -43,7 +43,7 @@ public class DewarpTest {
     Leptonica instance;
 
     public DewarpTest() {
-
+        instance = new LeptonicaImpl().getInstance();
     }
 
     @BeforeClass
@@ -75,8 +75,6 @@ public class DewarpTest {
         Pix pixs, pixn, pixg, pixb, pixd, pixt1, pixt2;
         Pix pixs2, pixn2, pixg2, pixb2, pixd2;
 
-        instance = new LeptonicaImpl().getInstance();
-        
         instance.setLeptDebugOK(1);
         instance.lept_mkdir("lept/model");
 
@@ -104,43 +102,43 @@ public class DewarpTest {
         /* Write out some of the files to be imaged */
         instance.lept_rmdir("lept/dewtest");
         instance.lept_mkdir("lept/dewtest");
-        instance.pixWrite("/tmp/dewtest/001.jpg", pixs, IFF_JFIF_JPEG);
-        instance.pixWrite("/tmp/dewtest/002.jpg", pixn, IFF_JFIF_JPEG);
-        instance.pixWrite("/tmp/dewtest/003.jpg", pixg, IFF_JFIF_JPEG);
-        instance.pixWrite("/tmp/dewtest/004.png", pixb, IFF_TIFF_G4);
-        instance.pixWrite("/tmp/dewtest/005.jpg", pixd, IFF_JFIF_JPEG);
-        pixt1 = instance.pixRead("/tmp/dewmod/0020.png");
-        instance.pixWrite("/tmp/dewtest/006.png", pixt1, IFF_PNG);
+        instance.pixWrite("/tmp/lept/dewtest/001.jpg", pixs, IFF_JFIF_JPEG);
+        instance.pixWrite("/tmp/lept/dewtest/002.jpg", pixn, IFF_JFIF_JPEG);
+        instance.pixWrite("/tmp/lept/dewtest/003.jpg", pixg, IFF_JFIF_JPEG);
+        instance.pixWrite("/tmp/lept/dewtest/004.png", pixb, IFF_TIFF_G4);
+        instance.pixWrite("/tmp/lept/dewtest/005.jpg", pixd, IFF_JFIF_JPEG);
+        pixt1 = instance.pixRead("/tmp/lept/dewmod/0020.png");
+        instance.pixWrite("/tmp/lept/dewtest/006.png", pixt1, IFF_PNG);
         pixDestroy(pixt1);
-        pixt1 = instance.pixRead("/tmp/dewmod/0030.png");
-        instance.pixWrite("/tmp/dewtest/007.png", pixt1, IFF_PNG);
+        pixt1 = instance.pixRead("/tmp/lept/dewmod/0030.png");
+        instance.pixWrite("/tmp/lept/dewtest/007.png", pixt1, IFF_PNG);
         pixDestroy(pixt1);
-        pixt1 = instance.pixRead("/tmp/dewmod/0060.png");
-        instance.pixWrite("/tmp/dewtest/008.png", pixt1, IFF_PNG);
+        pixt1 = instance.pixRead("/tmp/lept/dewmod/0060.png");
+        instance.pixWrite("/tmp/lept/dewtest/008.png", pixt1, IFF_PNG);
         pixDestroy(pixt1);
-        pixt1 = instance.pixRead("/tmp/dewmod/0070.png");
-        instance.pixWrite("/tmp/dewtest/009.png", pixt1, IFF_PNG);
+        pixt1 = instance.pixRead("/tmp/lept/dewmod/0070.png");
+        instance.pixWrite("/tmp/lept/dewtest/009.png", pixt1, IFF_PNG);
         pixDestroy(pixt1);
-        pixt1 = instance.pixRead("/tmp/dewapply/002.png");
-        instance.pixWrite("/tmp/dewtest/010.png", pixt1, IFF_PNG);
+        pixt1 = instance.pixRead("/tmp/lept/dewapply/002.png");
+        instance.pixWrite("/tmp/lept/dewtest/010.png", pixt1, IFF_PNG);
         pixDestroy(pixt1);
-        pixt1 = instance.pixRead("/tmp/dewapply/003.png");
-        instance.pixWrite("/tmp/dewtest/011.png", pixt1, IFF_PNG);
+        pixt1 = instance.pixRead("/tmp/lept/dewapply/003.png");
+        instance.pixWrite("/tmp/lept/dewtest/011.png", pixt1, IFF_PNG);
         pixt2 = instance.pixThresholdToBinary(pixt1, 130);
-        instance.pixWrite("/tmp/dewtest/012.png", pixt2, IFF_TIFF_G4);
+        instance.pixWrite("/tmp/lept/dewtest/012.png", pixt2, IFF_TIFF_G4);
         pixDestroy(pixt1);
         pixDestroy(pixt2);
-        pixt1 = instance.pixRead("/tmp/dewmod/0041.png");
-        instance.pixWrite("/tmp/dewtest/013.png", pixt1, IFF_PNG);
+        pixt1 = instance.pixRead("/tmp/lept/dewmod/0041.png");
+        instance.pixWrite("/tmp/lept/dewtest/013.png", pixt1, IFF_PNG);
         pixDestroy(pixt1);
-        pixt1 = instance.pixRead("/tmp/dewmod/0042.png");
-        instance.pixWrite("/tmp/dewtest/014.png", pixt1, IFF_PNG);
+        pixt1 = instance.pixRead("/tmp/lept/dewmod/0042.png");
+        instance.pixWrite("/tmp/lept/dewtest/014.png", pixt1, IFF_PNG);
         pixDestroy(pixt1);
-        pixt1 = instance.pixRead("/tmp/dewmod/0051.png");
-        instance.pixWrite("/tmp/dewtest/015.png", pixt1, IFF_PNG);
+        pixt1 = instance.pixRead("/tmp/lept/dewmod/0051.png");
+        instance.pixWrite("/tmp/lept/dewtest/015.png", pixt1, IFF_PNG);
         pixDestroy(pixt1);
-        pixt1 = instance.pixRead("/tmp/dewmod/0052.png");
-        instance.pixWrite("/tmp/dewtest/016.png", pixt1, IFF_PNG);
+        pixt1 = instance.pixRead("/tmp/lept/dewmod/0052.png");
+        instance.pixWrite("/tmp/lept/dewtest/016.png", pixt1, IFF_PNG);
         pixDestroy(pixt1);
 
         /* Normalize another image, that may not have enough textlines
@@ -162,31 +160,29 @@ public class DewarpTest {
 
         instance.dewarpaApplyDisparity(dewa, 7, pixg2, 200, 0, 0, ppixd, "/tmp/lept/model/dewarp_apply2.pdf");
         pixd2 = new Pix(ppixd.getValue());
-        PointerByReference dewaRef = new PointerByReference();
-        dewaRef.setValue(dewa.getPointer());
-        instance.dewarpaDestroy(dewaRef);
+        LeptUtils.dispose(dewa);
 
         /* Write out files for the second image */
-        instance.pixWrite("/tmp/dewtest/017.jpg", pixs2, IFF_JFIF_JPEG);
-        instance.pixWrite("/tmp/dewtest/018.jpg", pixg2, IFF_JFIF_JPEG);
-        instance.pixWrite("/tmp/dewtest/019.png", pixb2, IFF_TIFF_G4);
-        instance.pixWrite("/tmp/dewtest/020.jpg", pixd2, IFF_JFIF_JPEG);
-        pixt1 = instance.pixRead("/tmp/dewmod/0060.png");
-        instance.pixWrite("/tmp/dewtest/021.png", pixt1, IFF_PNG);
+        instance.pixWrite("/tmp/lept/dewtest/017.jpg", pixs2, IFF_JFIF_JPEG);
+        instance.pixWrite("/tmp/lept/dewtest/018.jpg", pixg2, IFF_JFIF_JPEG);
+        instance.pixWrite("/tmp/lept/dewtest/019.png", pixb2, IFF_TIFF_G4);
+        instance.pixWrite("/tmp/lept/dewtest/020.jpg", pixd2, IFF_JFIF_JPEG);
+        pixt1 = instance.pixRead("/tmp/lept/dewmod/0060.png");
+        instance.pixWrite("/tmp/lept/dewtest/021.png", pixt1, IFF_PNG);
         pixDestroy(pixt1);
-        pixt1 = instance.pixRead("/tmp/dewapply/002.png");
-        instance.pixWrite("/tmp/dewtest/022.png", pixt1, IFF_PNG);
+        pixt1 = instance.pixRead("/tmp/lept/dewapply/002.png");
+        instance.pixWrite("/tmp/lept/dewtest/022.png", pixt1, IFF_PNG);
         pixt2 = instance.pixThresholdToBinary(pixt1, 130);
-        instance.pixWrite("/tmp/dewtest/023.png", pixt2, IFF_TIFF_G4);
+        instance.pixWrite("/tmp/lept/dewtest/023.png", pixt2, IFF_TIFF_G4);
         pixDestroy(pixt1);
         pixDestroy(pixt2);
-        pixt1 = instance.pixRead("/tmp/dewmod/0070.png");
-        instance.pixWrite("/tmp/dewtest/024.png", pixt1, IFF_PNG);
+        pixt1 = instance.pixRead("/tmp/lept/dewmod/0070.png");
+        instance.pixWrite("/tmp/lept/dewtest/024.png", pixt1, IFF_PNG);
         pixDestroy(pixt1);
-        pixt1 = instance.pixRead("/tmp/dewapply/003.png");
-        instance.pixWrite("/tmp/dewtest/025.png", pixt1, IFF_PNG);
+        pixt1 = instance.pixRead("/tmp/lept/dewapply/003.png");
+        instance.pixWrite("/tmp/lept/dewtest/025.png", pixt1, IFF_PNG);
         pixt2 = instance.pixThresholdToBinary(pixt1, 130);
-        instance.pixWrite("/tmp/dewtest/026.png", pixt2, IFF_TIFF_G4);
+        instance.pixWrite("/tmp/lept/dewtest/026.png", pixt2, IFF_TIFF_G4);
         pixDestroy(pixt1);
         pixDestroy(pixt2);
 

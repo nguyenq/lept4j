@@ -20,7 +20,6 @@ import java.io.File;
 import java.nio.IntBuffer;
 import static net.sourceforge.lept4j.ILeptonica.*;
 import net.sourceforge.lept4j.util.LeptUtils;
-import static net.sourceforge.lept4j.util.LeptUtils.dispose;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -108,12 +107,14 @@ public class OtsuTest {
             bgval.rewind();
             PointerByReference ppixp = new PointerByReference();
             /* Show the histogram of gray values and the split location */
-            Leptonica1.pixSplitDistributionFgBg(pixg, scorefract, 1, thresh, fgval, bgval, ppixp);
+            result = Leptonica1.pixSplitDistributionFgBg(pixg, scorefract, 1, thresh, fgval, bgval, ppixp);
+            pixp = new Pix(ppixp.getValue());
             System.out.printf("thresh = %d, fgval = %d, bgval = %d\n", thresh.get(), fgval.get(), bgval.get());
             thresh.rewind();
+            
             /* Give gnuplot time to write out the plot */
             Thread.sleep(1000);
-            pixp = new Pix(ppixb.getValue());
+
             Leptonica1.pixSaveTiled(pixp, pixa1, 1.0f, 0, 20, 1);
             /* Join these together and add some text */
             pix1 = Leptonica1.pixaDisplay(pixa1, 0, 0);
