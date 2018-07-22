@@ -1892,7 +1892,7 @@ public class LeptonicaImpl implements Leptonica {
     }
 
     @Override
-    public int pixaComparePhotoRegionsByHisto(Pixa pixa, float minratio, float textthresh, int factor, int nx, int ny, float simthresh, PointerByReference pnai, PointerByReference pscores, PointerByReference ppixd) {
+    public int pixaComparePhotoRegionsByHisto(Pixa pixa, float minratio, float textthresh, int factor, int nx, int ny, float simthresh, PointerByReference pnai, PointerByReference pscores, PointerByReference ppixd, int debug) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
@@ -1902,12 +1902,12 @@ public class LeptonicaImpl implements Leptonica {
     }
 
     @Override
-    public int pixGenPhotoHistos(Pix pixs, Box box, int factor, float thresh, int nx, int ny, PointerByReference pnaa, IntBuffer pw, IntBuffer ph, int debugflag) {
+    public int pixGenPhotoHistos(Pix pixs, Box box, int factor, float thresh, int nx, int ny, PointerByReference pnaa, IntBuffer pw, IntBuffer ph, int debugindex) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
-    public int pixGenPhotoHistos(Pix pixs, Box box, int factor, float thresh, int nx, int ny, PointerByReference pnaa, IntByReference pw, IntByReference ph, int debugflag) {
+    public int pixGenPhotoHistos(Pix pixs, Box box, int factor, float thresh, int nx, int ny, PointerByReference pnaa, IntByReference pw, IntByReference ph, int debugindex) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
@@ -2752,7 +2752,7 @@ public class LeptonicaImpl implements Leptonica {
     }
 
     @Override
-    public Pix pixFlipFHMTGen(Pix pixd, Pix pixs, ByteBuffer selname) {
+    public Pix pixFlipFHMTGen(Pix pixd, Pix pixs, String selname) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
@@ -5092,12 +5092,27 @@ public class LeptonicaImpl implements Leptonica {
     }
 
     @Override
-    public int pixaClipToForeground(Pixa pixas, PointerByReference ppixad, PointerByReference pboxa) {
+    public Pixa pixaScaleBySampling(Pixa pixas, float scalex, float scaley) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public Pixa pixaRotate(Pixa pixas, float angle, int type, int incolor, int width, int height) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
     public Pixa pixaRotateOrth(Pixa pixas, int rotation) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public Pixa pixaTranslate(Pixa pixas, int hshift, int vshift, int incolor) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int pixaClipToForeground(Pixa pixas, PointerByReference ppixad, PointerByReference pboxa) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
@@ -5962,7 +5977,7 @@ public class LeptonicaImpl implements Leptonica {
     }
 
     @Override
-    public Sarray sarrayCreateInitialized(int n, ByteBuffer initstr) {
+    public Sarray sarrayCreateInitialized(int n, String initstr) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
@@ -5972,7 +5987,7 @@ public class LeptonicaImpl implements Leptonica {
     }
 
     @Override
-    public int sarrayAddString(Sarray sa, ByteBuffer string, int copyflag) {
+    public int sarrayAddString(Sarray sa, String string, int copyflag) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
@@ -5987,7 +6002,7 @@ public class LeptonicaImpl implements Leptonica {
     }
 
     @Override
-    public int sarrayPadToSameSize(Sarray sa1, Sarray sa2, ByteBuffer padstring) {
+    public int sarrayPadToSameSize(Sarray sa1, Sarray sa2, String padstring) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
@@ -6472,17 +6487,17 @@ public class LeptonicaImpl implements Leptonica {
     }
 
     @Override
-    public int readHeaderTiff(String filename, int n, IntBuffer pwidth, IntBuffer pheight, IntBuffer pbps, IntBuffer pspp, IntBuffer pres, IntBuffer pcmap, IntBuffer pformat) {
+    public int readHeaderTiff(String filename, int n, IntBuffer pw, IntBuffer ph, IntBuffer pbps, IntBuffer pspp, IntBuffer pres, IntBuffer pcmap, IntBuffer pformat) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
-    public int freadHeaderTiff(FILE fp, int n, IntBuffer pwidth, IntBuffer pheight, IntBuffer pbps, IntBuffer pspp, IntBuffer pres, IntBuffer pcmap, IntBuffer pformat) {
+    public int freadHeaderTiff(FILE fp, int n, IntBuffer pw, IntBuffer ph, IntBuffer pbps, IntBuffer pspp, IntBuffer pres, IntBuffer pcmap, IntBuffer pformat) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
-    public int readHeaderMemTiff(ByteBuffer cdata, NativeSize size, int n, IntBuffer pwidth, IntBuffer pheight, IntBuffer pbps, IntBuffer pspp, IntBuffer pres, IntBuffer pcmap, IntBuffer pformat) {
+    public int readHeaderMemTiff(ByteBuffer cdata, NativeSize size, int n, IntBuffer pw, IntBuffer ph, IntBuffer pbps, IntBuffer pspp, IntBuffer pres, IntBuffer pcmap, IntBuffer pformat) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
@@ -6593,6 +6608,11 @@ public class LeptonicaImpl implements Leptonica {
 
     @Override
     public int lept_rm(String subdir, String tail) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public void callSystemDebug(String cmd) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
@@ -6727,6 +6747,11 @@ public class LeptonicaImpl implements Leptonica {
     }
 
     @Override
+    public void setLeptDebugOK(int allow) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
     public int pixaWriteFiles(String rootname, Pixa pixa, int format) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
@@ -6824,11 +6849,6 @@ public class LeptonicaImpl implements Leptonica {
     @Override
     public Pointer zlibUncompress(ByteBuffer datain, NativeSize nin, NativeSizeByReference pnout) {
         throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public void setLeptDebugOK(int allow) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }

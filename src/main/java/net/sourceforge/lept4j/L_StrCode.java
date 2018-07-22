@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * stringcode.h<br>
  *     Data structure to hold accumulating generated code for storing<br>
- *     and extracing serializable leptonica objects (e.g., pixa, recog).<br>
+ *     and extracting serializable leptonica objects (e.g., pixa, recog).<br>
  *     Also a flag for selecting a string from the L_GenAssoc struct<br>
  *     in stringcode.<br>
  * <i>native declaration : stringcode.h:12</i><br>

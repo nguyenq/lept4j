@@ -1318,7 +1318,7 @@ public interface ILeptonica {
     public static final int LIBLEPT_MAJOR_VERSION = (int) 1;
     /** <i>native declaration : allheaders.h</i>
      */
-    public static final int LIBLEPT_MINOR_VERSION = (int) 76;
+    public static final int LIBLEPT_MINOR_VERSION = (int) 77;
     /** <i>native declaration : allheaders.h</i>
      */
     public static final int LIBLEPT_PATCH_VERSION = (int) 0;

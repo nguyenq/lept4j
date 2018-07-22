@@ -91,3 +91,6 @@ Version 1.9.4 (3 May 2018):
 Version 1.10.0 (5 May 2018):
 - Upgrade to Leptonica 1.76.0
 - Update unit tests
+
+Version 1.11.0 (21 July 2018):
+- Upgrade to Leptonica 1.77.0
