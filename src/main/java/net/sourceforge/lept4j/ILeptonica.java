@@ -223,8 +223,9 @@ public interface ILeptonica {
     public static final int IFF_JP2 = 14;
     public static final int IFF_WEBP = 15;
     public static final int IFF_LPDF = 16;
-    public static final int IFF_DEFAULT = 17;
-    public static final int IFF_SPIX = 18;
+    public static final int IFF_TIFF_JPEG = 17;
+    public static final int IFF_DEFAULT = 18;
+    public static final int IFF_SPIX = 19;
     /**
      * BM - for bitmaps
      */
@@ -542,6 +543,42 @@ public interface ILeptonica {
      */
     public static final int L_FLIP_PIXELS = 3;
     /**
+     * save if value is less than threshold
+     */
+    public static final int L_SELECT_IF_LT = 1;
+    /**
+     * save if value is more than threshold
+     */
+    public static final int L_SELECT_IF_GT = 2;
+    /**
+     * save if value is &lt;= to the threshold
+     */
+    public static final int L_SELECT_IF_LTE = 3;
+    /**
+     * save if value is &gt;= to the threshold
+     */
+    public static final int L_SELECT_IF_GTE = 4;
+    /**
+     * select by width
+     */
+    public static final int L_SELECT_BY_WIDTH = 1;
+    /**
+     * select by height
+     */
+    public static final int L_SELECT_BY_HEIGHT = 2;
+    /**
+     * select by max of width and height
+     */
+    public static final int L_SELECT_BY_MAX_DIMENSION = 3;
+    /**
+     * select by foreground area
+     */
+    public static final int L_SELECT_BY_AREA = 4;
+    /**
+     * select by perimeter
+     */
+    public static final int L_SELECT_BY_PERIMETER = 5;
+    /**
      * width must satisfy constraint
      */
     public static final int L_SELECT_WIDTH = 1;
@@ -566,21 +603,17 @@ public interface ILeptonica {
      */
     public static final int L_SELECT_IF_BOTH = 6;
     /**
-     * save if value is less than threshold
+     * check and possibly modify width
      */
-    public static final int L_SELECT_IF_LT = 1;
+    public static final int L_CHECK_WIDTH = 1;
     /**
-     * save if value is more than threshold
+     * check and possibly modify height
      */
-    public static final int L_SELECT_IF_GT = 2;
+    public static final int L_CHECK_HEIGHT = 2;
     /**
-     * save if value is &lt;= to the threshold
+     * check and possibly modify both
      */
-    public static final int L_SELECT_IF_LTE = 3;
-    /**
-     * save if value is &gt;= to the threshold
-     */
-    public static final int L_SELECT_IF_GTE = 4;
+    public static final int L_CHECK_BOTH = 3;
     /**
      * use red component
      */
@@ -861,7 +894,7 @@ public interface ILeptonica {
      * neither horizontal nor vertical
      */
     public static final int L_OBLIQUE_LINE = 4;
-    /** 
+    /**
      * typical: page is viewed with height &gt; width
      */
     public static final int L_PORTRAIT_MODE = 0;

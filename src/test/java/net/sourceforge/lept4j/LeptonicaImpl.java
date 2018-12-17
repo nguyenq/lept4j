@@ -1987,11 +1987,6 @@ public class LeptonicaImpl implements Leptonica {
     }
 
     @Override
-    public int nextOnPixelInRasterLow(IntBuffer data, int w, int h, int wpl, int xstart, int ystart, IntBuffer px, IntBuffer py) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
     public Box pixSeedfillBB(Pix pixs, L_Stack stack, int x, int y, int connectivity) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
