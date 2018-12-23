@@ -64,55 +64,55 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixBackgroundNormGrayArray(PIX*, PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, PIX**)</code>
+     * <code>l_ok pixBackgroundNormGrayArray(PIX*, PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, PIX**)</code>
      */
     int pixBackgroundNormGrayArray(Pix pixs, Pix pixim, int sx, int sy, int thresh, int mincount, int bgval, int smoothx, int smoothy, PointerByReference ppixd);
 
     /**
      * Original signature :
-     * <code>l_int32 pixBackgroundNormRGBArrays(PIX*, PIX*, PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, PIX**, PIX**, PIX**)</code>
+     * <code>l_ok pixBackgroundNormRGBArrays(PIX*, PIX*, PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, PIX**, PIX**, PIX**)</code>
      */
     int pixBackgroundNormRGBArrays(Pix pixs, Pix pixim, Pix pixg, int sx, int sy, int thresh, int mincount, int bgval, int smoothx, int smoothy, PointerByReference ppixr, PointerByReference ppixg, PointerByReference ppixb);
 
     /**
      * Original signature :
-     * <code>l_int32 pixBackgroundNormGrayArrayMorph(PIX*, PIX*, l_int32, l_int32, l_int32, PIX**)</code>
+     * <code>l_ok pixBackgroundNormGrayArrayMorph(PIX*, PIX*, l_int32, l_int32, l_int32, PIX**)</code>
      */
     int pixBackgroundNormGrayArrayMorph(Pix pixs, Pix pixim, int reduction, int size, int bgval, PointerByReference ppixd);
 
     /**
      * Original signature :
-     * <code>l_int32 pixBackgroundNormRGBArraysMorph(PIX*, PIX*, l_int32, l_int32, l_int32, PIX**, PIX**, PIX**)</code>
+     * <code>l_ok pixBackgroundNormRGBArraysMorph(PIX*, PIX*, l_int32, l_int32, l_int32, PIX**, PIX**, PIX**)</code>
      */
     int pixBackgroundNormRGBArraysMorph(Pix pixs, Pix pixim, int reduction, int size, int bgval, PointerByReference ppixr, PointerByReference ppixg, PointerByReference ppixb);
 
     /**
      * Original signature :
-     * <code>l_int32 pixGetBackgroundGrayMap(PIX*, PIX*, l_int32, l_int32, l_int32, l_int32, PIX**)</code>
+     * <code>l_ok pixGetBackgroundGrayMap(PIX*, PIX*, l_int32, l_int32, l_int32, l_int32, PIX**)</code>
      */
     int pixGetBackgroundGrayMap(Pix pixs, Pix pixim, int sx, int sy, int thresh, int mincount, PointerByReference ppixd);
 
     /**
      * Original signature :
-     * <code>l_int32 pixGetBackgroundRGBMap(PIX*, PIX*, PIX*, l_int32, l_int32, l_int32, l_int32, PIX**, PIX**, PIX**)</code>
+     * <code>l_ok pixGetBackgroundRGBMap(PIX*, PIX*, PIX*, l_int32, l_int32, l_int32, l_int32, PIX**, PIX**, PIX**)</code>
      */
     int pixGetBackgroundRGBMap(Pix pixs, Pix pixim, Pix pixg, int sx, int sy, int thresh, int mincount, PointerByReference ppixmr, PointerByReference ppixmg, PointerByReference ppixmb);
 
     /**
      * Original signature :
-     * <code>l_int32 pixGetBackgroundGrayMapMorph(PIX*, PIX*, l_int32, l_int32, PIX**)</code>
+     * <code>l_ok pixGetBackgroundGrayMapMorph(PIX*, PIX*, l_int32, l_int32, PIX**)</code>
      */
     int pixGetBackgroundGrayMapMorph(Pix pixs, Pix pixim, int reduction, int size, PointerByReference ppixm);
 
     /**
      * Original signature :
-     * <code>l_int32 pixGetBackgroundRGBMapMorph(PIX*, PIX*, l_int32, l_int32, PIX**, PIX**, PIX**)</code>
+     * <code>l_ok pixGetBackgroundRGBMapMorph(PIX*, PIX*, l_int32, l_int32, PIX**, PIX**, PIX**)</code>
      */
     int pixGetBackgroundRGBMapMorph(Pix pixs, Pix pixim, int reduction, int size, PointerByReference ppixmr, PointerByReference ppixmg, PointerByReference ppixmb);
 
     /**
      * Original signature :
-     * <code>l_int32 pixFillMapHoles(PIX*, l_int32, l_int32, l_int32)</code>
+     * <code>l_ok pixFillMapHoles(PIX*, l_int32, l_int32, l_int32)</code>
      */
     int pixFillMapHoles(Pix pix, int nx, int ny, int filltype);
 
@@ -124,7 +124,7 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixSmoothConnectedRegions(PIX*, PIX*, l_int32)</code>
+     * <code>l_ok pixSmoothConnectedRegions(PIX*, PIX*, l_int32)</code>
      */
     int pixSmoothConnectedRegions(Pix pixs, Pix pixm, int factor);
 
@@ -166,7 +166,7 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixThresholdSpreadNorm(PIX*, l_int32, l_int32, l_int32, l_int32, l_float32, l_int32, l_int32, l_int32, PIX**, PIX**, PIX**)</code>
+     * <code>l_ok pixThresholdSpreadNorm(PIX*, l_int32, l_int32, l_int32, l_int32, l_float32, l_int32, l_int32, l_int32, PIX**, PIX**, PIX**)</code>
      */
     int pixThresholdSpreadNorm(Pix pixs, int filtertype, int edgethresh, int smoothx, int smoothy, float gamma, int minval, int maxval, int targetthresh, PointerByReference ppixth, PointerByReference ppixb, PointerByReference ppixd);
 
@@ -184,13 +184,13 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixMinMaxTiles(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, PIX**, PIX**)</code>
+     * <code>l_ok pixMinMaxTiles(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, PIX**, PIX**)</code>
      */
     int pixMinMaxTiles(Pix pixs, int sx, int sy, int mindiff, int smoothx, int smoothy, PointerByReference ppixmin, PointerByReference ppixmax);
 
     /**
      * Original signature :
-     * <code>l_int32 pixSetLowContrast(PIX*, PIX*, l_int32)</code>
+     * <code>l_ok pixSetLowContrast(PIX*, PIX*, l_int32)</code>
      */
     int pixSetLowContrast(Pix pixs1, Pix pixs2, int mindiff);
 
@@ -256,32 +256,32 @@ public interface Leptonica extends Library, ILeptonica {
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 getAffineXformCoeffs(PTA*, PTA*, l_float32**)</code>
+//       * <code>l_ok getAffineXformCoeffs(PTA*, PTA*, l_float32**)</code>
 //       */
 //      int getAffineXformCoeffs(Pta ptas, Pta ptad, PointerByReference pvc);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 affineInvertXform(l_float32*, l_float32**)</code>
+//       * <code>l_ok affineInvertXform(l_float32*, l_float32**)</code>
 //       */
 //      int affineInvertXform(FloatBuffer vc, PointerByReference pvci);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 affineXformSampledPt(l_float32*, l_int32, l_int32, l_int32*, l_int32*)</code>
+//       * <code>l_ok affineXformSampledPt(l_float32*, l_int32, l_int32, l_int32*, l_int32*)</code>
 //       */
 //      int affineXformSampledPt(FloatBuffer vc, int x, int y, IntBuffer pxp, IntBuffer pyp);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 affineXformPt(l_float32*, l_int32, l_int32, l_float32*, l_float32*)</code>
+//       * <code>l_ok affineXformPt(l_float32*, l_int32, l_int32, l_float32*, l_float32*)</code>
 //       */
 //      int affineXformPt(FloatBuffer vc, int x, int y, FloatBuffer pxp, FloatBuffer pyp);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 linearInterpolatePixelColor(l_uint32*, l_int32, l_int32, l_int32, l_float32, l_float32, l_uint32, l_uint32*)</code>
+//       * <code>l_ok linearInterpolatePixelColor(l_uint32*, l_int32, l_int32, l_int32, l_float32, l_float32, l_uint32, l_uint32*)</code>
 //       */
 //      int linearInterpolatePixelColor(IntBuffer datas, int wpls, int w, int h, float x, float y, int colorval, IntBuffer pval);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 linearInterpolatePixelGray(l_uint32*, l_int32, l_int32, l_int32, l_float32, l_float32, l_int32, l_int32*)</code>
+//       * <code>l_ok linearInterpolatePixelGray(l_uint32*, l_int32, l_int32, l_int32, l_float32, l_float32, l_int32, l_int32*)</code>
 //       */
 //      int linearInterpolatePixelGray(IntBuffer datas, int wpls, int w, int h, float x, float y, int grayval, IntBuffer pval);
 //      /**
@@ -359,22 +359,22 @@ public interface Leptonica extends Library, ILeptonica {
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 l_productMatVec(l_float32*, l_float32*, l_float32*, l_int32)</code>
+//       * <code>l_ok l_productMatVec(l_float32*, l_float32*, l_float32*, l_int32)</code>
 //       */
 //      int l_productMatVec(FloatBuffer mat, FloatBuffer vecs, FloatBuffer vecd, int size);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 l_productMat2(l_float32*, l_float32*, l_float32*, l_int32)</code>
+//       * <code>l_ok l_productMat2(l_float32*, l_float32*, l_float32*, l_int32)</code>
 //       */
 //      int l_productMat2(FloatBuffer mat1, FloatBuffer mat2, FloatBuffer matd, int size);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 l_productMat3(l_float32*, l_float32*, l_float32*, l_float32*, l_int32)</code>
+//       * <code>l_ok l_productMat3(l_float32*, l_float32*, l_float32*, l_float32*, l_int32)</code>
 //       */
 //      int l_productMat3(FloatBuffer mat1, FloatBuffer mat2, FloatBuffer mat3, FloatBuffer matd, int size);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 l_productMat4(l_float32*, l_float32*, l_float32*, l_float32*, l_float32*, l_int32)</code>
+//       * <code>l_ok l_productMat4(l_float32*, l_float32*, l_float32*, l_float32*, l_float32*, l_int32)</code>
 //       */
 //      int l_productMat4(FloatBuffer mat1, FloatBuffer mat2, FloatBuffer mat3, FloatBuffer mat4, FloatBuffer matd, int size);
 //      /**
@@ -481,7 +481,7 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixGetLocalSkewTransform(PIX*, l_int32, l_int32, l_int32, l_float32, l_float32, l_float32, PTA**, PTA**)</code>
+     * <code>l_ok pixGetLocalSkewTransform(PIX*, l_int32, l_int32, l_int32, l_float32, l_float32, l_float32, PTA**, PTA**)</code>
      */
     int pixGetLocalSkewTransform(Pix pixs, int nslices, int redsweep, int redsearch, float sweeprange, float sweepdelta, float minbsdelta, PointerByReference pptas, PointerByReference pptad);
 
@@ -510,30 +510,30 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 bbufferRead(L_BBUFFER*, l_uint8*, l_int32)</code>
+     * <code>l_ok bbufferRead(L_BBUFFER*, l_uint8*, l_int32)</code>
      */
     int bbufferRead(L_ByteBuffer bb, ByteBuffer src, int nbytes);
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 bbufferReadStream(L_BBUFFER*, FILE*, l_int32)</code>
+//       * <code>l_ok bbufferReadStream(L_BBUFFER*, FILE*, l_int32)</code>
 //       */
 //      int bbufferReadStream(L_ByteBuffer bb, FILE fp, int nbytes);
     /**
      * Original signature :
-     * <code>l_int32 bbufferExtendArray(L_BBUFFER*, l_int32)</code>
+     * <code>l_ok bbufferExtendArray(L_BBUFFER*, l_int32)</code>
      */
     int bbufferExtendArray(L_ByteBuffer bb, int nbytes);
 
     /**
      * Original signature :
-     * <code>l_int32 bbufferWrite(L_BBUFFER*, l_uint8*, size_t, size_t*)</code>
+     * <code>l_ok bbufferWrite(L_BBUFFER*, l_uint8*, size_t, size_t*)</code>
      */
     int bbufferWrite(L_ByteBuffer bb, ByteBuffer dest, NativeSize nbytes, NativeSizeByReference pnout);
 
     /**
      * Original signature :
-     * <code>l_int32 bbufferWriteStream(L_BBUFFER*, FILE*, size_t, size_t*)</code>
+     * <code>l_ok bbufferWriteStream(L_BBUFFER*, FILE*, size_t, size_t*)</code>
      */
     int bbufferWriteStream(L_ByteBuffer bb, FILE fp, NativeSize nbytes, NativeSizeByReference pnout);
 
@@ -614,22 +614,22 @@ public interface Leptonica extends Library, ILeptonica {
 //      Pix pixBilinearPtaWithAlpha(Pix pixs, Pta ptad, Pta ptas, Pix pixg, float fract, int border);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 getBilinearXformCoeffs(PTA*, PTA*, l_float32**)</code>
+//       * <code>l_ok getBilinearXformCoeffs(PTA*, PTA*, l_float32**)</code>
 //       */
 //      int getBilinearXformCoeffs(Pta ptas, Pta ptad, PointerByReference pvc);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 bilinearXformSampledPt(l_float32*, l_int32, l_int32, l_int32*, l_int32*)</code>
+//       * <code>l_ok bilinearXformSampledPt(l_float32*, l_int32, l_int32, l_int32*, l_int32*)</code>
 //       */
 //      int bilinearXformSampledPt(FloatBuffer vc, int x, int y, IntBuffer pxp, IntBuffer pyp);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 bilinearXformPt(l_float32*, l_int32, l_int32, l_float32*, l_float32*)</code>
+//       * <code>l_ok bilinearXformPt(l_float32*, l_int32, l_int32, l_float32*, l_float32*)</code>
 //       */
 //      int bilinearXformPt(FloatBuffer vc, int x, int y, FloatBuffer pxp, FloatBuffer pyp);
     /**
      * Original signature :
-     * <code>l_int32 pixOtsuAdaptiveThreshold(PIX*, l_int32, l_int32, l_int32, l_int32, l_float32, PIX**, PIX**)</code>
+     * <code>l_ok pixOtsuAdaptiveThreshold(PIX*, l_int32, l_int32, l_int32, l_int32, l_float32, PIX**, PIX**)</code>
      */
     int pixOtsuAdaptiveThreshold(Pix pixs, int sx, int sy, int smoothx, int smoothy, float scorefract, PointerByReference ppixth, PointerByReference ppixd);
 
@@ -647,13 +647,13 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixSauvolaBinarizeTiled(PIX*, l_int32, l_float32, l_int32, l_int32, PIX**, PIX**)</code>
+     * <code>l_ok pixSauvolaBinarizeTiled(PIX*, l_int32, l_float32, l_int32, l_int32, PIX**, PIX**)</code>
      */
     int pixSauvolaBinarizeTiled(Pix pixs, int whsize, float factor, int nx, int ny, PointerByReference ppixth, PointerByReference ppixd);
 
     /**
      * Original signature :
-     * <code>l_int32 pixSauvolaBinarize(PIX*, l_int32, l_float32, l_int32, PIX**, PIX**, PIX**, PIX**)</code>
+     * <code>l_ok pixSauvolaBinarize(PIX*, l_int32, l_float32, l_int32, PIX**, PIX**, PIX**, PIX**)</code>
      */
     int pixSauvolaBinarize(Pix pixs, int whsize, float factor, int addborder, PointerByReference ppixm, PointerByReference ppixsd, PointerByReference ppixth, PointerByReference ppixd);
 
@@ -671,13 +671,13 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixThresholdByConnComp(PIX*, PIX*, l_int32, l_int32, l_int32, l_float32, l_float32, l_int32*, PIX**, l_int32)</code>
+     * <code>l_ok pixThresholdByConnComp(PIX*, PIX*, l_int32, l_int32, l_int32, l_float32, l_float32, l_int32*, PIX**, l_int32)</code>
      */
     int pixThresholdByConnComp(Pix pixs, Pix pixm, int start, int end, int incr, float thresh48, float threshdiff, IntBuffer pglobthresh, PointerByReference ppixd, int debugflag);
 
     /**
      * Original signature :
-     * <code>l_int32 pixThresholdByConnComp(PIX*, PIX*, l_int32, l_int32, l_int32, l_float32, l_float32, l_int32*, PIX**, l_int32)</code>
+     * <code>l_ok pixThresholdByConnComp(PIX*, PIX*, l_int32, l_int32, l_int32, l_float32, l_float32, l_int32*, PIX**, l_int32)</code>
      */
     int pixThresholdByConnComp(Pix pixs, Pix pixm, int start, int end, int incr, float thresh48, float threshdiff, IntByReference pglobthresh, PointerByReference ppixd, int debugflag);
 
@@ -772,7 +772,7 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixBlendCmap(PIX*, PIX*, l_int32, l_int32, l_int32)</code>
+     * <code>l_ok pixBlendCmap(PIX*, PIX*, l_int32, l_int32, l_int32)</code>
      */
     int pixBlendCmap(Pix pixs, Pix pixb, int x, int y, int sindex);
 
@@ -829,13 +829,13 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 bmfGetWidth(L_BMF*, char, l_int32*)</code>
+     * <code>l_ok bmfGetWidth(L_BMF*, char, l_int32*)</code>
      */
     int bmfGetWidth(L_Bmf bmf, byte chr, IntBuffer pw);
 
     /**
      * Original signature :
-     * <code>l_int32 bmfGetBaseline(L_BMF*, char, l_int32*)</code>
+     * <code>l_ok bmfGetBaseline(L_BMF*, char, l_int32*)</code>
      */
     int bmfGetBaseline(L_Bmf bmf, byte chr, IntBuffer pbaseline);
 
@@ -847,7 +847,7 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixaSaveFont(const char*, const char*, l_int32)</code>
+     * <code>l_ok pixaSaveFont(const char*, const char*, l_int32)</code>
      */
     int pixaSaveFont(String indir, String outdir, int fontsize);
 //  
@@ -864,12 +864,12 @@ public interface Leptonica extends Library, ILeptonica {
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixWriteStreamBmp(FILE*, PIX*)</code>
+//       * <code>l_ok pixWriteStreamBmp(FILE*, PIX*)</code>
 //       */
 //      int pixWriteStreamBmp(FILE fp, Pix pix);
     /**
      * Original signature :
-     * <code>l_int32 pixWriteMemBmp(l_uint8**, size_t*, PIX*)</code>
+     * <code>l_ok pixWriteMemBmp(l_uint8**, size_t*, PIX*)</code>
      */
     int pixWriteMemBmp(PointerByReference pfdata, NativeSizeByReference pfsize, Pix pixs);
 
@@ -917,25 +917,25 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 boxGetGeometry(BOX*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
+     * <code>l_ok boxGetGeometry(BOX*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
      */
     int boxGetGeometry(Box box, IntBuffer px, IntBuffer py, IntBuffer pw, IntBuffer ph);
 
     /**
      * Original signature :
-     * <code>l_int32 boxSetGeometry(BOX*, l_int32, l_int32, l_int32, l_int32)</code>
+     * <code>l_ok boxSetGeometry(BOX*, l_int32, l_int32, l_int32, l_int32)</code>
      */
     int boxSetGeometry(Box box, int x, int y, int w, int h);
 
     /**
      * Original signature :
-     * <code>l_int32 boxGetSideLocations(BOX*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
+     * <code>l_ok boxGetSideLocations(BOX*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
      */
     int boxGetSideLocations(Box box, IntBuffer pl, IntBuffer pr, IntBuffer pt, IntBuffer pb);
 
     /**
      * Original signature :
-     * <code>l_int32 boxSetSideLocations(BOX*, l_int32, l_int32, l_int32, l_int32)</code>
+     * <code>l_ok boxSetSideLocations(BOX*, l_int32, l_int32, l_int32, l_int32)</code>
      */
     int boxSetSideLocations(Box box, int l, int r, int t, int b);
 
@@ -946,12 +946,12 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 boxChangeRefcount(BOX*, l_int32)</code>
+     * <code>l_ok boxChangeRefcount(BOX*, l_int32)</code>
      */
     int boxChangeRefcount(Box box, int delta);
 
     /**
-     * Original signature : <code>l_int32 boxIsValid(BOX*, l_int32*)</code>
+     * Original signature : <code>l_ok boxIsValid(BOX*, l_int32*)</code>
      */
     int boxIsValid(Box box, IntBuffer pvalid);
 
@@ -972,18 +972,18 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 boxaAddBox(BOXA*, BOX*, l_int32)</code>
+     * <code>l_ok boxaAddBox(BOXA*, BOX*, l_int32)</code>
      */
     int boxaAddBox(Boxa boxa, Box box, int copyflag);
 
     /**
-     * Original signature : <code>l_int32 boxaExtendArray(BOXA*)</code>
+     * Original signature : <code>l_ok boxaExtendArray(BOXA*)</code>
      */
     int boxaExtendArray(Boxa boxa);
 
     /**
      * Original signature :
-     * <code>l_int32 boxaExtendArrayToSize(BOXA*, l_int32)</code>
+     * <code>l_ok boxaExtendArrayToSize(BOXA*, l_int32)</code>
      */
     int boxaExtendArrayToSize(Boxa boxa, int size);
 
@@ -1016,36 +1016,36 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 boxaGetBoxGeometry(BOXA*, l_int32, l_int32*, l_int32*, l_int32*, l_int32*)</code>
+     * <code>l_ok boxaGetBoxGeometry(BOXA*, l_int32, l_int32*, l_int32*, l_int32*, l_int32*)</code>
      */
     int boxaGetBoxGeometry(Boxa boxa, int index, IntBuffer px, IntBuffer py, IntBuffer pw, IntBuffer ph);
 
     /**
-     * Original signature : <code>l_int32 boxaIsFull(BOXA*, l_int32*)</code>
+     * Original signature : <code>l_ok boxaIsFull(BOXA*, l_int32*)</code>
      */
     int boxaIsFull(Boxa boxa, IntBuffer pfull);
 
     /**
      * Original signature :
-     * <code>l_int32 boxaReplaceBox(BOXA*, l_int32, BOX*)</code>
+     * <code>l_ok boxaReplaceBox(BOXA*, l_int32, BOX*)</code>
      */
     int boxaReplaceBox(Boxa boxa, int index, Box box);
 
     /**
      * Original signature :
-     * <code>l_int32 boxaInsertBox(BOXA*, l_int32, BOX*)</code>
+     * <code>l_ok boxaInsertBox(BOXA*, l_int32, BOX*)</code>
      */
     int boxaInsertBox(Boxa boxa, int index, Box box);
 
     /**
      * Original signature :
-     * <code>l_int32 boxaRemoveBox(BOXA*, l_int32)</code>
+     * <code>l_ok boxaRemoveBox(BOXA*, l_int32)</code>
      */
     int boxaRemoveBox(Boxa boxa, int index);
 
     /**
      * Original signature :
-     * <code>l_int32 boxaRemoveBoxAndSave(BOXA*, l_int32, BOX**)</code>
+     * <code>l_ok boxaRemoveBoxAndSave(BOXA*, l_int32, BOX**)</code>
      */
     int boxaRemoveBoxAndSave(Boxa boxa, int index, PointerByReference pbox);
 
@@ -1055,12 +1055,12 @@ public interface Leptonica extends Library, ILeptonica {
     Boxa boxaSaveValid(Boxa boxas, int copyflag);
 
     /**
-     * Original signature : <code>l_int32 boxaInitFull(BOXA*, BOX*)</code>
+     * Original signature : <code>l_ok boxaInitFull(BOXA*, BOX*)</code>
      */
     int boxaInitFull(Boxa boxa, Box box);
 
     /**
-     * Original signature : <code>l_int32 boxaClear(BOXA*)</code>
+     * Original signature : <code>l_ok boxaClear(BOXA*)</code>
      */
     int boxaClear(Boxa boxa);
 //  
@@ -1081,17 +1081,17 @@ public interface Leptonica extends Library, ILeptonica {
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 boxaaAddBoxa(BOXAA*, BOXA*, l_int32)</code>
+//       * <code>l_ok boxaaAddBoxa(BOXAA*, BOXA*, l_int32)</code>
 //       */
 //      int boxaaAddBoxa(Boxaa baa, Boxa ba, int copyflag);
 //  
 //      /**
-//       * Original signature : <code>l_int32 boxaaExtendArray(BOXAA*)</code>
+//       * Original signature : <code>l_ok boxaaExtendArray(BOXAA*)</code>
 //       */
 //      int boxaaExtendArray(Boxaa baa);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 boxaaExtendArrayToSize(BOXAA*, l_int32)</code>
+//       * <code>l_ok boxaaExtendArrayToSize(BOXAA*, l_int32)</code>
 //       */
 //      int boxaaExtendArrayToSize(Boxaa baa, int size);
 //  
@@ -1116,35 +1116,35 @@ public interface Leptonica extends Library, ILeptonica {
 //      Box boxaaGetBox(Boxaa baa, int iboxa, int ibox, int accessflag);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 boxaaInitFull(BOXAA*, BOXA*)</code>
+//       * <code>l_ok boxaaInitFull(BOXAA*, BOXA*)</code>
 //       */
 //      int boxaaInitFull(Boxaa baa, Boxa boxa);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 boxaaExtendWithInit(BOXAA*, l_int32, BOXA*)</code>
+//       * <code>l_ok boxaaExtendWithInit(BOXAA*, l_int32, BOXA*)</code>
 //       */
 //      int boxaaExtendWithInit(Boxaa baa, int maxindex, Boxa boxa);
     /**
      * Original signature :
-     * <code>l_int32 boxaaReplaceBoxa(BOXAA*, l_int32, BOXA*)</code>
+     * <code>l_ok boxaaReplaceBoxa(BOXAA*, l_int32, BOXA*)</code>
      */
     int boxaaReplaceBoxa(Boxaa baa, int index, Boxa boxa);
 
     /**
      * Original signature :
-     * <code>l_int32 boxaaInsertBoxa(BOXAA*, l_int32, BOXA*)</code>
+     * <code>l_ok boxaaInsertBoxa(BOXAA*, l_int32, BOXA*)</code>
      */
     int boxaaInsertBoxa(Boxaa baa, int index, Boxa boxa);
 
     /**
      * Original signature :
-     * <code>l_int32 boxaaRemoveBoxa(BOXAA*, l_int32)</code>
+     * <code>l_ok boxaaRemoveBoxa(BOXAA*, l_int32)</code>
      */
     int boxaaRemoveBoxa(Boxaa baa, int index);
 
     /**
      * Original signature :
-     * <code>l_int32 boxaaAddBox(BOXAA*, l_int32, BOX*, l_int32)</code>
+     * <code>l_ok boxaaAddBox(BOXAA*, l_int32, BOX*, l_int32)</code>
      */
     int boxaaAddBox(Boxaa baa, int index, Box box, int accessflag);
 
@@ -1172,18 +1172,18 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 boxaaWrite(const char*, BOXAA*)</code>
+     * <code>l_ok boxaaWrite(const char*, BOXAA*)</code>
      */
     int boxaaWrite(String filename, Boxaa baa);
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 boxaaWriteStream(FILE*, BOXAA*)</code>
+//       * <code>l_ok boxaaWriteStream(FILE*, BOXAA*)</code>
 //       */
 //      int boxaaWriteStream(FILE fp, Boxaa baa);
     /**
      * Original signature :
-     * <code>l_int32 boxaaWriteMem(l_uint8**, size_t*, BOXAA*)</code>
+     * <code>l_ok boxaaWriteMem(l_uint8**, size_t*, BOXAA*)</code>
      */
     int boxaaWriteMem(PointerByReference pdata, NativeSizeByReference psize, Boxaa baa);
 
@@ -1204,41 +1204,41 @@ public interface Leptonica extends Library, ILeptonica {
     Boxa boxaReadMem(ByteBuffer data, NativeSize size);
     
 //    /**
-//     * Original signature : <code>l_int32 boxaWriteDebug(const char*, BOXA*)</code>
+//     * Original signature : <code>l_ok boxaWriteDebug(const char*, BOXA*)</code>
 //     */
 //    int boxaWriteDebug(String filename, Boxa boxa);
 
     /**
      * Original signature :
-     * <code>l_int32 boxaWrite(const char*, BOXA*)</code>
+     * <code>l_ok boxaWrite(const char*, BOXA*)</code>
      */
     int boxaWrite(String filename, Boxa boxa);
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 boxaWriteStream(FILE*, BOXA*)</code>
+//       * <code>l_ok boxaWriteStream(FILE*, BOXA*)</code>
 //       */
 //      int boxaWriteStream(FILE fp, Boxa boxa);
     /**
      * Original signature :
-     * <code>l_int32 boxaWriteMem(l_uint8**, size_t*, BOXA*)</code>
+     * <code>l_ok boxaWriteMem(l_uint8**, size_t*, BOXA*)</code>
      */
     int boxaWriteMem(PointerByReference pdata, NativeSizeByReference psize, Boxa boxa);
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 boxPrintStreamInfo(FILE*, BOX*)</code>
+//       * <code>l_ok boxPrintStreamInfo(FILE*, BOX*)</code>
 //       */
 //      int boxPrintStreamInfo(FILE fp, Box box);
     /**
      * Original signature :
-     * <code>l_int32 boxContains(BOX*, BOX*, l_int32*)</code>
+     * <code>l_ok boxContains(BOX*, BOX*, l_int32*)</code>
      */
     int boxContains(Box box1, Box box2, IntBuffer presult);
 
     /**
      * Original signature :
-     * <code>l_int32 boxIntersects(BOX*, BOX*, l_int32*)</code>
+     * <code>l_ok boxIntersects(BOX*, BOX*, l_int32*)</code>
      */
     int boxIntersects(Box box1, Box box2, IntBuffer presult);
 
@@ -1250,13 +1250,13 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 boxaContainedInBoxCount(BOXA*, BOX*, l_int32*)</code>
+     * <code>l_ok boxaContainedInBoxCount(BOXA*, BOX*, l_int32*)</code>
      */
     int boxaContainedInBoxCount(Boxa boxa, Box box, IntBuffer pcount);
 
     /**
      * Original signature :
-     * <code>l_int32 boxaContainedInBoxa(BOXA*, BOXA*, l_int32*)</code>
+     * <code>l_ok boxaContainedInBoxa(BOXA*, BOXA*, l_int32*)</code>
      */
     int boxaContainedInBoxa(Boxa boxa1, Boxa boxa2, IntBuffer pcontained);
 
@@ -1268,7 +1268,7 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 boxaIntersectsBoxCount(BOXA*, BOX*, l_int32*)</code>
+     * <code>l_ok boxaIntersectsBoxCount(BOXA*, BOX*, l_int32*)</code>
      */
     int boxaIntersectsBoxCount(Boxa boxa, Box box, IntBuffer pcount);
 
@@ -1285,7 +1285,7 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 boxaCombineOverlapsInPair(BOXA*, BOXA*, BOXA**, BOXA**, PIXA*)</code>
+     * <code>l_ok boxaCombineOverlapsInPair(BOXA*, BOXA*, BOXA**, BOXA**, PIXA*)</code>
      */
     int boxaCombineOverlapsInPair(Boxa boxas1, Boxa boxas2, PointerByReference pboxad1, PointerByReference pboxad2, Pixa pixadb);
 
@@ -1301,13 +1301,13 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 boxOverlapFraction(BOX*, BOX*, l_float32*)</code>
+     * <code>l_ok boxOverlapFraction(BOX*, BOX*, l_float32*)</code>
      */
     int boxOverlapFraction(Box box1, Box box2, FloatBuffer pfract);
 
     /**
      * Original signature :
-     * <code>l_int32 boxOverlapArea(BOX*, BOX*, l_int32*)</code>
+     * <code>l_ok boxOverlapArea(BOX*, BOX*, l_int32*)</code>
      */
     int boxOverlapArea(Box box1, Box box2, IntBuffer parea);
 
@@ -1319,19 +1319,19 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 boxSeparationDistance(BOX*, BOX*, l_int32*, l_int32*)</code>
+     * <code>l_ok boxSeparationDistance(BOX*, BOX*, l_int32*, l_int32*)</code>
      */
     int boxSeparationDistance(Box box1, Box box2, IntBuffer ph_sep, IntBuffer pv_sep);
 
     /**
      * Original signature :
-     * <code>l_int32 boxCompareSize(BOX*, BOX*, l_int32, l_int32*)</code>
+     * <code>l_ok boxCompareSize(BOX*, BOX*, l_int32, l_int32*)</code>
      */
     int boxCompareSize(Box box1, Box box2, int type, IntBuffer prel);
 
     /**
      * Original signature :
-     * <code>l_int32 boxContainsPt(BOX*, l_float32, l_float32, l_int32*)</code>
+     * <code>l_ok boxContainsPt(BOX*, l_float32, l_float32, l_int32*)</code>
      */
     int boxContainsPt(Box box, float x, float y, IntBuffer pcontains);
 
@@ -1349,13 +1349,13 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 boxGetCenter(BOX*, l_float32*, l_float32*)</code>
+     * <code>l_ok boxGetCenter(BOX*, l_float32*, l_float32*)</code>
      */
     int boxGetCenter(Box box, FloatBuffer pcx, FloatBuffer pcy);
 
     /**
      * Original signature :
-     * <code>l_int32 boxIntersectByLine(BOX*, l_int32, l_int32, l_float32, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
+     * <code>l_ok boxIntersectByLine(BOX*, l_int32, l_int32, l_float32, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
      */
     int boxIntersectByLine(Box box, int x, int y, float slope, IntBuffer px1, IntBuffer py1, IntBuffer px2, IntBuffer py2, IntBuffer pn);
 
@@ -1367,7 +1367,7 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 boxClipToRectangleParams(BOX*, l_int32, l_int32, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
+     * <code>l_ok boxClipToRectangleParams(BOX*, l_int32, l_int32, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
      */
     int boxClipToRectangleParams(Box box, int w, int h, IntBuffer pxstart, IntBuffer pystart, IntBuffer pxend, IntBuffer pyend, IntBuffer pbw, IntBuffer pbh);
 
@@ -1409,55 +1409,55 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 boxEqual(BOX*, BOX*, l_int32*)</code>
+     * <code>l_ok boxEqual(BOX*, BOX*, l_int32*)</code>
      */
     int boxEqual(Box box1, Box box2, IntBuffer psame);
 
     /**
      * Original signature :
-     * <code>l_int32 boxaEqual(BOXA*, BOXA*, l_int32, NUMA**, l_int32*)</code>
+     * <code>l_ok boxaEqual(BOXA*, BOXA*, l_int32, NUMA**, l_int32*)</code>
      */
     int boxaEqual(Boxa boxa1, Boxa boxa2, int maxdist, PointerByReference pnaindex, IntBuffer psame);
 
     /**
      * Original signature :
-     * <code>l_int32 boxaEqual(BOXA*, BOXA*, l_int32, NUMA**, l_int32*)</code>
+     * <code>l_ok boxaEqual(BOXA*, BOXA*, l_int32, NUMA**, l_int32*)</code>
      */
     int boxaEqual(Boxa boxa1, Boxa boxa2, int maxdist, PointerByReference pnaindex, IntByReference psame);
 
     /**
      * Original signature :
-     * <code>l_int32 boxSimilar(BOX*, BOX*, l_int32, l_int32, l_int32, l_int32, l_int32*)</code>
+     * <code>l_ok boxSimilar(BOX*, BOX*, l_int32, l_int32, l_int32, l_int32, l_int32*)</code>
      */
     int boxSimilar(Box box1, Box box2, int leftdiff, int rightdiff, int topdiff, int botdiff, IntBuffer psimilar);
 
     /**
      * Original signature :
-     * <code>l_int32 boxaSimilar(BOXA*, BOXA*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32*, NUMA**)</code>
+     * <code>l_ok boxaSimilar(BOXA*, BOXA*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32*, NUMA**)</code>
      */
     int boxaSimilar(Boxa boxa1, Boxa boxa2, int leftdiff, int rightdiff, int topdiff, int botdiff, int debug, IntBuffer psimilar, PointerByReference pnasim);
 
     /**
      * Original signature :
-     * <code>l_int32 boxaSimilar(BOXA*, BOXA*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32*, NUMA**)</code>
+     * <code>l_ok boxaSimilar(BOXA*, BOXA*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32*, NUMA**)</code>
      */
     int boxaSimilar(Boxa boxa1, Boxa boxa2, int leftdiff, int rightdiff, int topdiff, int botdiff, int debug, IntByReference psimilar, PointerByReference pnasim);
 
     /**
      * Original signature :
-     * <code>l_int32 boxaJoin(BOXA*, BOXA*, l_int32, l_int32)</code>
+     * <code>l_ok boxaJoin(BOXA*, BOXA*, l_int32, l_int32)</code>
      */
     int boxaJoin(Boxa boxad, Boxa boxas, int istart, int iend);
 
     /**
      * Original signature :
-     * <code>l_int32 boxaaJoin(BOXAA*, BOXAA*, l_int32, l_int32)</code>
+     * <code>l_ok boxaaJoin(BOXAA*, BOXAA*, l_int32, l_int32)</code>
      */
     int boxaaJoin(Boxaa baad, Boxaa baas, int istart, int iend);
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 boxaSplitEvenOdd(BOXA*, l_int32, BOXA**, BOXA**)</code>
+//       * <code>l_ok boxaSplitEvenOdd(BOXA*, l_int32, BOXA**, BOXA**)</code>
 //       */
 //      int boxaSplitEvenOdd(Boxa boxa, int fillflag, PointerByReference pboxae, PointerByReference pboxao);
 //      /**
@@ -1522,37 +1522,37 @@ public interface Leptonica extends Library, ILeptonica {
 //      Boxaa boxaSort2dByIndex(Boxa boxas, Numaa naa);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 boxaExtractAsNuma(BOXA*, NUMA**, NUMA**, NUMA**, NUMA**, NUMA**, NUMA**, l_int32)</code>
+//       * <code>l_ok boxaExtractAsNuma(BOXA*, NUMA**, NUMA**, NUMA**, NUMA**, NUMA**, NUMA**, l_int32)</code>
 //       */
 //      int boxaExtractAsNuma(Boxa boxa, PointerByReference pnal, PointerByReference pnat, PointerByReference pnar, PointerByReference pnab, PointerByReference pnaw, PointerByReference pnah, int keepinvalid);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 boxaExtractAsPta(BOXA*, PTA**, PTA**, PTA**, PTA**, PTA**, PTA**, l_int32)</code>
+//       * <code>l_ok boxaExtractAsPta(BOXA*, PTA**, PTA**, PTA**, PTA**, PTA**, PTA**, l_int32)</code>
 //       */
 //      int boxaExtractAsPta(Boxa boxa, PointerByReference pptal, PointerByReference pptat, PointerByReference pptar, PointerByReference pptab, PointerByReference pptaw, PointerByReference pptah, int keepinvalid);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 boxaGetRankVals(BOXA*, l_float32, l_int32*, l_int32*, l_int32*, l_int32*)</code>
+//       * <code>l_ok boxaGetRankVals(BOXA*, l_float32, l_int32*, l_int32*, l_int32*, l_int32*)</code>
 //       */
 //      int boxaGetRankVals(Boxa boxa, float fract, IntBuffer px, IntBuffer py, IntBuffer pw, IntBuffer ph);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 boxaGetMedianVals(BOXA*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
+//       * <code>l_ok boxaGetMedianVals(BOXA*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
 //       */
 //      int boxaGetMedianVals(Boxa boxa, IntBuffer px, IntBuffer py, IntBuffer pw, IntBuffer ph);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 boxaGetAverageSize(BOXA*, l_float32*, l_float32*)</code>
+//       * <code>l_ok boxaGetAverageSize(BOXA*, l_float32*, l_float32*)</code>
 //       */
 //      int boxaGetAverageSize(Boxa boxa, FloatBuffer pw, FloatBuffer ph);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 boxaaGetExtent(BOXAA*, l_int32*, l_int32*, BOX**, BOXA**)</code>
+//       * <code>l_ok boxaaGetExtent(BOXAA*, l_int32*, l_int32*, BOX**, BOXA**)</code>
 //       */
 //      int boxaaGetExtent(Boxaa baa, IntBuffer pw, IntBuffer ph, PointerByReference pbox, PointerByReference pboxa);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 boxaaGetExtent(BOXAA*, l_int32*, l_int32*, BOX**, BOXA**)</code>
+//       * <code>l_ok boxaaGetExtent(BOXAA*, l_int32*, l_int32*, BOX**, BOXA**)</code>
 //       */
 //      int boxaaGetExtent(Boxaa baa, IntByReference pw, IntByReference ph, PointerByReference pbox, PointerByReference pboxa);
 //      /**
@@ -1577,7 +1577,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      Boxaa boxaaTranspose(Boxaa baas);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 boxaaAlignBox(BOXAA*, BOX*, l_int32, l_int32*)</code>
+//       * <code>l_ok boxaaAlignBox(BOXAA*, BOX*, l_int32, l_int32*)</code>
 //       */
 //      int boxaaAlignBox(Boxaa baa, Box box, int delta, IntBuffer pindex);
     /**
@@ -1660,13 +1660,13 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 boxaCompareRegions(BOXA*, BOXA*, l_int32, l_int32*, l_float32*, l_float32*, PIX**)</code>
+     * <code>l_ok boxaCompareRegions(BOXA*, BOXA*, l_int32, l_int32*, l_float32*, l_float32*, PIX**)</code>
      */
     int boxaCompareRegions(Boxa boxa1, Boxa boxa2, int areathresh, IntBuffer pnsame, FloatBuffer pdiffarea, FloatBuffer pdiffxor, PointerByReference ppixdb);
 
     /**
      * Original signature :
-     * <code>l_int32 boxaCompareRegions(BOXA*, BOXA*, l_int32, l_int32*, l_float32*, l_float32*, PIX**)</code>
+     * <code>l_ok boxaCompareRegions(BOXA*, BOXA*, l_int32, l_int32*, l_float32*, l_float32*, PIX**)</code>
      */
     int boxaCompareRegions(Boxa boxa1, Boxa boxa2, int areathresh, IntByReference pnsame, FloatByReference pdiffarea, FloatByReference pdiffxor, PointerByReference ppixdb);
 
@@ -1748,7 +1748,7 @@ public interface Leptonica extends Library, ILeptonica {
 //    Boxa boxaPermuteRandom(Boxa boxad, Boxa boxas);
     /**
      * Original signature :
-     * <code>l_int32 boxaSwapBoxes(BOXA*, l_int32, l_int32)</code>
+     * <code>l_ok boxaSwapBoxes(BOXA*, l_int32, l_int32)</code>
      */
     int boxaSwapBoxes(Boxa boxa, int i, int j);
 
@@ -1824,25 +1824,25 @@ public interface Leptonica extends Library, ILeptonica {
 //
 //    /**
 //     * Original signature :
-//     * <code>l_int32 boxaPlotSides(BOXA*, const char*, NUMA**, NUMA**, NUMA**, NUMA**, PIX**)</code>
+//     * <code>l_ok boxaPlotSides(BOXA*, const char*, NUMA**, NUMA**, NUMA**, NUMA**, PIX**)</code>
 //     */
 //    int boxaPlotSides(Boxa boxa, String plotname, PointerByReference pnal, PointerByReference pnat, PointerByReference pnar, PointerByReference pnab, PointerByReference ppixd);
 //
 //    /**
 //     * Original signature :
-//     * <code>l_int32 boxaPlotSides(BOXA*, const char*, NUMA**, NUMA**, NUMA**, NUMA**, PIX**)</code>
+//     * <code>l_ok boxaPlotSides(BOXA*, const char*, NUMA**, NUMA**, NUMA**, NUMA**, PIX**)</code>
 //     */
 //    int boxaPlotSides(Boxa boxa, Pointer plotname, PointerByReference pnal, PointerByReference pnat, PointerByReference pnar, PointerByReference pnab, PointerByReference ppixd);
 //
 //    /**
 //     * Original signature :
-//     * <code>l_int32 boxaPlotSizes(BOXA*, const char*, NUMA**, NUMA**, PIX**)</code>
+//     * <code>l_ok boxaPlotSizes(BOXA*, const char*, NUMA**, NUMA**, PIX**)</code>
 //     */
 //    int boxaPlotSizes(Boxa boxa, String plotname, PointerByReference pnaw, PointerByReference pnah, PointerByReference ppixd);
 //
 //    /**
 //     * Original signature :
-//     * <code>l_int32 boxaPlotSizes(BOXA*, const char*, NUMA**, NUMA**, PIX**)</code>
+//     * <code>l_ok boxaPlotSizes(BOXA*, const char*, NUMA**, NUMA**, PIX**)</code>
 //     */
 //    int boxaPlotSizes(Boxa boxa, Pointer plotname, PointerByReference pnaw, PointerByReference pnah, PointerByReference ppixd);
 //
@@ -1853,54 +1853,54 @@ public interface Leptonica extends Library, ILeptonica {
 //    Boxa boxaFillSequence(Boxa boxas, int useflag, int debug);
 //
 //    /**
-//     * Original signature : <code>l_int32 boxaSizeVariation(BOXA*, l_int32, l_float32*, l_float32*, l_float32*, l_float32*)</code>
+//     * Original signature : <code>l_ok boxaSizeVariation(BOXA*, l_int32, l_float32*, l_float32*, l_float32*, l_float32*)</code>
 //     */
 //    int boxaSizeVariation(Boxa boxa, int type, FloatBuffer pdel_evenodd, FloatBuffer prms_even, FloatBuffer prms_odd, FloatBuffer prms_all);
 
 //    /**
 //     * Original signature :
-//     * <code>l_int32 boxaGetExtent(BOXA*, l_int32*, l_int32*, BOX**)</code>
+//     * <code>l_ok boxaGetExtent(BOXA*, l_int32*, l_int32*, BOX**)</code>
 //     */
 //    int boxaGetExtent(Boxa boxa, IntBuffer pw, IntBuffer ph, PointerByReference pbox);
 //
 //    /**
 //     * Original signature :
-//     * <code>l_int32 boxaGetExtent(BOXA*, l_int32*, l_int32*, BOX**)</code>
+//     * <code>l_ok boxaGetExtent(BOXA*, l_int32*, l_int32*, BOX**)</code>
 //     */
 //    int boxaGetExtent(Boxa boxa, IntByReference pw, IntByReference ph, PointerByReference pbox);
     /**
      * Original signature :
-     * <code>l_int32 boxaGetCoverage(BOXA*, l_int32, l_int32, l_int32, l_float32*)</code>
+     * <code>l_ok boxaGetCoverage(BOXA*, l_int32, l_int32, l_int32, l_float32*)</code>
      */
     int boxaGetCoverage(Boxa boxa, int wc, int hc, int exactflag, FloatBuffer pfract);
 
     /**
      * Original signature :
-     * <code>l_int32 boxaaSizeRange(BOXAA*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
+     * <code>l_ok boxaaSizeRange(BOXAA*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
      */
     int boxaaSizeRange(Boxaa baa, IntBuffer pminw, IntBuffer pminh, IntBuffer pmaxw, IntBuffer pmaxh);
 
     /**
      * Original signature :
-     * <code>l_int32 boxaSizeRange(BOXA*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
+     * <code>l_ok boxaSizeRange(BOXA*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
      */
     int boxaSizeRange(Boxa boxa, IntBuffer pminw, IntBuffer pminh, IntBuffer pmaxw, IntBuffer pmaxh);
 
     /**
      * Original signature :
-     * <code>l_int32 boxaLocationRange(BOXA*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
+     * <code>l_ok boxaLocationRange(BOXA*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
      */
     int boxaLocationRange(Boxa boxa, IntBuffer pminx, IntBuffer pminy, IntBuffer pmaxx, IntBuffer pmaxy);
 
     /**
      * Original signature :
-     * <code>l_int32 boxaGetSizes(BOXA*, NUMA**, NUMA**)</code>
+     * <code>l_ok boxaGetSizes(BOXA*, NUMA**, NUMA**)</code>
      */
     int boxaGetSizes(Boxa boxa, PointerByReference pnaw, PointerByReference pnah);
 
     /**
      * Original signature :
-     * <code>l_int32 boxaGetArea(BOXA*, l_int32*)</code>
+     * <code>l_ok boxaGetArea(BOXA*, l_int32*)</code>
      */
     int boxaGetArea(Boxa boxa, IntBuffer parea);
 
@@ -1957,42 +1957,42 @@ public interface Leptonica extends Library, ILeptonica {
 //      Pointer l_byteaCopyData(L_Bytea ba, NativeSizeByReference psize);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 l_byteaAppendData(L_BYTEA*, l_uint8*, size_t)</code>
+//       * <code>l_ok l_byteaAppendData(L_BYTEA*, l_uint8*, size_t)</code>
 //       */
 //      int l_byteaAppendData(L_Bytea ba, ByteBuffer newdata, NativeSize newbytes);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 l_byteaAppendString(L_BYTEA*, const char*)</code>
+//       * <code>l_ok l_byteaAppendString(L_BYTEA*, const char*)</code>
 //       */
 //      int l_byteaAppendString(L_Bytea ba, String str);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 l_byteaJoin(L_BYTEA*, L_BYTEA**)</code>
+//       * <code>l_ok l_byteaJoin(L_BYTEA*, L_BYTEA**)</code>
 //       */
 //      int l_byteaJoin(L_Bytea ba1, PointerByReference pba2);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 l_byteaSplit(L_BYTEA*, size_t, L_BYTEA**)</code>
+//       * <code>l_ok l_byteaSplit(L_BYTEA*, size_t, L_BYTEA**)</code>
 //       */
 //      int l_byteaSplit(L_Bytea ba1, NativeSize splitloc, PointerByReference pba2);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 l_byteaFindEachSequence(L_BYTEA*, l_uint8*, size_t, L_DNA**)</code>
+//       * <code>l_ok l_byteaFindEachSequence(L_BYTEA*, l_uint8*, size_t, L_DNA**)</code>
 //       */
 //      int l_byteaFindEachSequence(L_Bytea ba, ByteBuffer sequence, NativeSize seqlen, PointerByReference pda);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 l_byteaFindEachSequence(L_BYTEA*, l_uint8*, size_t, L_DNA**)</code>
+//       * <code>l_ok l_byteaFindEachSequence(L_BYTEA*, l_uint8*, size_t, L_DNA**)</code>
 //       */
 //      int l_byteaFindEachSequence(L_Bytea ba, Pointer sequence, NativeSize seqlen, PointerByReference pda);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 l_byteaWrite(const char*, L_BYTEA*, size_t, size_t)</code>
+//       * <code>l_ok l_byteaWrite(const char*, L_BYTEA*, size_t, size_t)</code>
 //       */
 //      int l_byteaWrite(String fname, L_Bytea ba, NativeSize startloc, NativeSize endloc);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 l_byteaWriteStream(FILE*, L_BYTEA*, size_t, size_t)</code>
+//       * <code>l_ok l_byteaWriteStream(FILE*, L_BYTEA*, size_t, size_t)</code>
 //       */
 //      int l_byteaWriteStream(FILE fp, L_Bytea ba, NativeSize startloc, NativeSize endloc);
     /**
@@ -2017,7 +2017,7 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 ccbaAddCcb(CCBORDA*, CCBORD*)</code>
+     * <code>l_ok ccbaAddCcb(CCBORDA*, CCBORD*)</code>
      */
     int ccbaAddCcb(CCBorda ccba, CCBord ccb);
 
@@ -2055,13 +2055,13 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixGetOuterBorder(CCBORD*, PIX*, BOX*)</code>
+     * <code>l_ok pixGetOuterBorder(CCBORD*, PIX*, BOX*)</code>
      */
     int pixGetOuterBorder(CCBord ccb, Pix pixs, Box box);
 
     /**
      * Original signature :
-     * <code>l_int32 pixGetHoleBorder(CCBORD*, PIX*, BOX*, l_int32, l_int32)</code>
+     * <code>l_ok pixGetHoleBorder(CCBORD*, PIX*, BOX*, l_int32, l_int32)</code>
      */
     int pixGetHoleBorder(CCBord ccb, Pix pixs, Box box, int xs, int ys);
 
@@ -2079,31 +2079,31 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 ccbaGenerateGlobalLocs(CCBORDA*)</code>
+     * <code>l_ok ccbaGenerateGlobalLocs(CCBORDA*)</code>
      */
     int ccbaGenerateGlobalLocs(CCBorda ccba);
 
     /**
      * Original signature :
-     * <code>l_int32 ccbaGenerateStepChains(CCBORDA*)</code>
+     * <code>l_ok ccbaGenerateStepChains(CCBORDA*)</code>
      */
     int ccbaGenerateStepChains(CCBorda ccba);
 
     /**
      * Original signature :
-     * <code>l_int32 ccbaStepChainsToPixCoords(CCBORDA*, l_int32)</code>
+     * <code>l_ok ccbaStepChainsToPixCoords(CCBORDA*, l_int32)</code>
      */
     int ccbaStepChainsToPixCoords(CCBorda ccba, int coordtype);
 
     /**
      * Original signature :
-     * <code>l_int32 ccbaGenerateSPGlobalLocs(CCBORDA*, l_int32)</code>
+     * <code>l_ok ccbaGenerateSPGlobalLocs(CCBORDA*, l_int32)</code>
      */
     int ccbaGenerateSPGlobalLocs(CCBorda ccba, int ptsflag);
 
     /**
      * Original signature :
-     * <code>l_int32 ccbaGenerateSinglePath(CCBORDA*)</code>
+     * <code>l_ok ccbaGenerateSinglePath(CCBORDA*)</code>
      */
     int ccbaGenerateSinglePath(CCBorda ccba);
 
@@ -2135,13 +2135,13 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 ccbaWrite(const char*, CCBORDA*)</code>
+     * <code>l_ok ccbaWrite(const char*, CCBORDA*)</code>
      */
     int ccbaWrite(String filename, CCBorda ccba);
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 ccbaWriteStream(FILE*, CCBORDA*)</code>
+//       * <code>l_ok ccbaWriteStream(FILE*, CCBORDA*)</code>
 //       */
 //      int ccbaWriteStream(FILE fp, CCBorda ccba);
     /**
@@ -2156,7 +2156,7 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 ccbaWriteSVG(const char*, CCBORDA*)</code>
+     * <code>l_ok ccbaWriteSVG(const char*, CCBORDA*)</code>
      */
     int ccbaWriteSVG(String filename, CCBorda ccba);
 
@@ -2192,13 +2192,13 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 jbCorrelation(const char*, l_float32, l_float32, l_int32, const char*, l_int32, l_int32, l_int32)</code>
+     * <code>l_ok jbCorrelation(const char*, l_float32, l_float32, l_int32, const char*, l_int32, l_int32, l_int32)</code>
      */
     int jbCorrelation(String dirin, float thresh, float weight, int components, String rootname, int firstpage, int npages, int renderflag);
 
     /**
      * Original signature :
-     * <code>l_int32 jbRankHaus(const char*, l_int32, l_float32, l_int32, const char*, l_int32, l_int32, l_int32)</code>
+     * <code>l_ok jbRankHaus(const char*, l_int32, l_float32, l_int32, const char*, l_int32, l_int32, l_int32)</code>
      */
     int jbRankHaus(String dirin, int size, float rank, int components, String rootname, int firstpage, int npages, int renderflag);
 
@@ -2216,13 +2216,13 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixGetWordsInTextlines(PIX*, l_int32, l_int32, l_int32, l_int32, BOXA**, PIXA**, NUMA**)</code>
+     * <code>l_ok pixGetWordsInTextlines(PIX*, l_int32, l_int32, l_int32, l_int32, BOXA**, PIXA**, NUMA**)</code>
      */
     int pixGetWordsInTextlines(Pix pixs, int minwidth, int minheight, int maxwidth, int maxheight, PointerByReference pboxad, PointerByReference ppixad, PointerByReference pnai);
 
     /**
      * Original signature :
-     * <code>l_int32 pixGetWordBoxesInTextlines(PIX*, l_int32, l_int32, l_int32, l_int32, BOXA**, NUMA**)</code>
+     * <code>l_ok pixGetWordBoxesInTextlines(PIX*, l_int32, l_int32, l_int32, l_int32, BOXA**, NUMA**)</code>
      */
     int pixGetWordBoxesInTextlines(Pix pixs, int minwidth, int minheight, int maxwidth, int maxheight, PointerByReference pboxad, PointerByReference pnai);
 
@@ -2234,13 +2234,13 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 numaaCompareImagesByBoxes(NUMAA*, NUMAA*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32*, l_int32)</code>
+     * <code>l_ok numaaCompareImagesByBoxes(NUMAA*, NUMAA*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32*, l_int32)</code>
      */
     int numaaCompareImagesByBoxes(Numaa naa1, Numaa naa2, int nperline, int nreq, int maxshiftx, int maxshifty, int delx, int dely, IntBuffer psame, int debugflag);
 
     /**
      * Original signature :
-     * <code>l_int32 pixColorContent(PIX*, l_int32, l_int32, l_int32, l_int32, PIX**, PIX**, PIX**)</code>
+     * <code>l_ok pixColorContent(PIX*, l_int32, l_int32, l_int32, l_int32, PIX**, PIX**, PIX**)</code>
      */
     int pixColorContent(Pix pixs, int rwhite, int gwhite, int bwhite, int mingray, PointerByReference ppixr, PointerByReference ppixg, PointerByReference ppixb);
 
@@ -2264,43 +2264,43 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixColorFraction(PIX*, l_int32, l_int32, l_int32, l_int32, l_float32*, l_float32*)</code>
+     * <code>l_ok pixColorFraction(PIX*, l_int32, l_int32, l_int32, l_int32, l_float32*, l_float32*)</code>
      */
     int pixColorFraction(Pix pixs, int darkthresh, int lightthresh, int diffthresh, int factor, FloatBuffer ppixfract, FloatBuffer pcolorfract);
 
     /**
      * Original signature :
-     * <code>l_int32 pixFindColorRegions(PIX*, PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_float32, l_float32*, PIX**, PIX**, PIXA*)</code>
+     * <code>l_ok pixFindColorRegions(PIX*, PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_float32, l_float32*, PIX**, PIX**, PIXA*)</code>
      */
     int pixFindColorRegions(Pix pixs, Pix pixm, int factor, int lightthresh, int darkthresh, int mindiff, int colordiff, float edgefract, FloatBuffer pcolorfract, PointerByReference pcolormask1, PointerByReference pcolormask2, Pixa pixadb);
 
     /**
      * Original signature :
-     * <code>l_int32 pixFindColorRegions(PIX*, PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_float32, l_float32*, PIX**, PIX**, PIXA*)</code>
+     * <code>l_ok pixFindColorRegions(PIX*, PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_float32, l_float32*, PIX**, PIX**, PIXA*)</code>
      */
     int pixFindColorRegions(Pix pixs, Pix pixm, int factor, int lightthresh, int darkthresh, int mindiff, int colordiff, float edgefract, FloatByReference pcolorfract, PointerByReference pcolormask1, PointerByReference pcolormask2, Pixa pixadb);
 
     /**
      * Original signature :
-     * <code>l_int32 pixNumSignificantGrayColors(PIX*, l_int32, l_int32, l_float32, l_int32, l_int32*)</code>
+     * <code>l_ok pixNumSignificantGrayColors(PIX*, l_int32, l_int32, l_float32, l_int32, l_int32*)</code>
      */
     int pixNumSignificantGrayColors(Pix pixs, int darkthresh, int lightthresh, float minfract, int factor, IntBuffer pncolors);
 
     /**
      * Original signature :
-     * <code>l_int32 pixColorsForQuantization(PIX*, l_int32, l_int32*, l_int32*, l_int32)</code>
+     * <code>l_ok pixColorsForQuantization(PIX*, l_int32, l_int32*, l_int32*, l_int32)</code>
      */
     int pixColorsForQuantization(Pix pixs, int thresh, IntBuffer pncolors, IntBuffer piscolor, int debug);
 
     /**
      * Original signature :
-     * <code>l_int32 pixNumColors(PIX*, l_int32, l_int32*)</code>
+     * <code>l_ok pixNumColors(PIX*, l_int32, l_int32*)</code>
      */
     int pixNumColors(Pix pixs, int factor, IntBuffer pncolors);
 
     /**
      * Original signature :
-     * <code>l_int32 pixGetMostPopulatedColors(PIX*, l_int32, l_int32, l_int32, l_uint32**, PIXCMAP**)</code>
+     * <code>l_ok pixGetMostPopulatedColors(PIX*, l_int32, l_int32, l_int32, l_uint32**, PIXCMAP**)</code>
      */
     int pixGetMostPopulatedColors(Pix pixs, int sigbits, int factor, int ncolors, PointerByReference parray, PointerByReference pcmap);
 
@@ -2318,25 +2318,25 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 makeRGBIndexTables(l_uint32**, l_uint32**, l_uint32**, l_int32)</code>
+     * <code>l_ok makeRGBIndexTables(l_uint32**, l_uint32**, l_uint32**, l_int32)</code>
      */
     int makeRGBIndexTables(PointerByReference prtab, PointerByReference pgtab, PointerByReference pbtab, int sigbits);
 
     /**
      * Original signature :
-     * <code>l_int32 getRGBFromIndex(l_uint32, l_int32, l_int32*, l_int32*, l_int32*)</code>
+     * <code>l_ok getRGBFromIndex(l_uint32, l_int32, l_int32*, l_int32*, l_int32*)</code>
      */
     int getRGBFromIndex(int index, int sigbits, IntBuffer prval, IntBuffer pgval, IntBuffer pbval);
 
     /**
      * Original signature :
-     * <code>l_int32 pixHasHighlightRed(PIX*, l_int32, l_float32, l_float32, l_int32*, l_float32*, PIX**)</code>
+     * <code>l_ok pixHasHighlightRed(PIX*, l_int32, l_float32, l_float32, l_int32*, l_float32*, PIX**)</code>
      */
     int pixHasHighlightRed(Pix pixs, int factor, float fract, float fthresh, IntBuffer phasred, FloatBuffer pratio, PointerByReference ppixdb);
 
     /**
      * Original signature :
-     * <code>l_int32 pixHasHighlightRed(PIX*, l_int32, l_float32, l_float32, l_int32*, l_float32*, PIX**)</code>
+     * <code>l_ok pixHasHighlightRed(PIX*, l_int32, l_float32, l_float32, l_int32*, l_float32*, PIX**)</code>
      */
     int pixHasHighlightRed(Pix pixs, int factor, float fract, float fthresh, IntByReference phasred, FloatByReference pratio, PointerByReference ppixdb);
 
@@ -2348,7 +2348,7 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixColorGray(PIX*, BOX*, l_int32, l_int32, l_int32, l_int32, l_int32)</code>
+     * <code>l_ok pixColorGray(PIX*, BOX*, l_int32, l_int32, l_int32, l_int32, l_int32)</code>
      */
     int pixColorGray(Pix pixs, Box box, int type, int thresh, int rval, int gval, int bval);
 
@@ -2378,7 +2378,7 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixelLinearMapToTargetColor(l_uint32, l_uint32, l_uint32, l_uint32*)</code>
+     * <code>l_ok pixelLinearMapToTargetColor(l_uint32, l_uint32, l_uint32, l_uint32*)</code>
      */
     int pixelLinearMapToTargetColor(int scolor, int srcmap, int dstmap, IntBuffer pdcolor);
 
@@ -2390,12 +2390,12 @@ public interface Leptonica extends Library, ILeptonica {
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixelShiftByComponent(l_int32, l_int32, l_int32, l_uint32, l_uint32, l_uint32*)</code>
+//       * <code>l_ok pixelShiftByComponent(l_int32, l_int32, l_int32, l_uint32, l_uint32, l_uint32*)</code>
 //       */
 //      int pixelShiftByComponent(int rval, int gval, int bval, int srcval, int dstval, IntBuffer ppixel);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixelFractionalShift(l_int32, l_int32, l_int32, l_float32, l_uint32*)</code>
+//       * <code>l_ok pixelFractionalShift(l_int32, l_int32, l_int32, l_float32, l_uint32*)</code>
 //       */
 //      int pixelFractionalShift(int rval, int gval, int bval, float fraction, IntBuffer ppixel);
 //  
@@ -2425,37 +2425,37 @@ public interface Leptonica extends Library, ILeptonica {
 //      void pixcmapDestroy(PointerByReference pcmap);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixcmapAddColor(PIXCMAP*, l_int32, l_int32, l_int32)</code>
+//       * <code>l_ok pixcmapAddColor(PIXCMAP*, l_int32, l_int32, l_int32)</code>
 //       */
 //      int pixcmapAddColor(PixColormap cmap, int rval, int gval, int bval);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixcmapAddRGBA(PIXCMAP*, l_int32, l_int32, l_int32, l_int32)</code>
+//       * <code>l_ok pixcmapAddRGBA(PIXCMAP*, l_int32, l_int32, l_int32, l_int32)</code>
 //       */
 //      int pixcmapAddRGBA(PixColormap cmap, int rval, int gval, int bval, int aval);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixcmapAddNewColor(PIXCMAP*, l_int32, l_int32, l_int32, l_int32*)</code>
+//       * <code>l_ok pixcmapAddNewColor(PIXCMAP*, l_int32, l_int32, l_int32, l_int32*)</code>
 //       */
 //      int pixcmapAddNewColor(PixColormap cmap, int rval, int gval, int bval, IntBuffer pindex);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixcmapAddNearestColor(PIXCMAP*, l_int32, l_int32, l_int32, l_int32*)</code>
+//       * <code>l_ok pixcmapAddNearestColor(PIXCMAP*, l_int32, l_int32, l_int32, l_int32*)</code>
 //       */
 //      int pixcmapAddNearestColor(PixColormap cmap, int rval, int gval, int bval, IntBuffer pindex);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixcmapUsableColor(PIXCMAP*, l_int32, l_int32, l_int32, l_int32*)</code>
+//       * <code>l_ok pixcmapUsableColor(PIXCMAP*, l_int32, l_int32, l_int32, l_int32*)</code>
 //       */
 //      int pixcmapUsableColor(PixColormap cmap, int rval, int gval, int bval, IntBuffer pusable);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixcmapAddBlackOrWhite(PIXCMAP*, l_int32, l_int32*)</code>
+//       * <code>l_ok pixcmapAddBlackOrWhite(PIXCMAP*, l_int32, l_int32*)</code>
 //       */
 //      int pixcmapAddBlackOrWhite(PixColormap cmap, int color, IntBuffer pindex);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixcmapSetBlackAndWhite(PIXCMAP*, l_int32, l_int32)</code>
+//       * <code>l_ok pixcmapSetBlackAndWhite(PIXCMAP*, l_int32, l_int32)</code>
 //       */
 //      int pixcmapSetBlackAndWhite(PixColormap cmap, int setblack, int setwhite);
 //  
@@ -2475,42 +2475,42 @@ public interface Leptonica extends Library, ILeptonica {
 //      int pixcmapGetDepth(PixColormap cmap);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixcmapGetMinDepth(PIXCMAP*, l_int32*)</code>
+//       * <code>l_ok pixcmapGetMinDepth(PIXCMAP*, l_int32*)</code>
 //       */
 //      int pixcmapGetMinDepth(PixColormap cmap, IntBuffer pmindepth);
 //  
 //      /**
-//       * Original signature : <code>l_int32 pixcmapClear(PIXCMAP*)</code>
+//       * Original signature : <code>l_ok pixcmapClear(PIXCMAP*)</code>
 //       */
 //      int pixcmapClear(PixColormap cmap);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixcmapGetColor(PIXCMAP*, l_int32, l_int32*, l_int32*, l_int32*)</code>
+//       * <code>l_ok pixcmapGetColor(PIXCMAP*, l_int32, l_int32*, l_int32*, l_int32*)</code>
 //       */
 //      int pixcmapGetColor(PixColormap cmap, int index, IntBuffer prval, IntBuffer pgval, IntBuffer pbval);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixcmapGetColor32(PIXCMAP*, l_int32, l_uint32*)</code>
+//       * <code>l_ok pixcmapGetColor32(PIXCMAP*, l_int32, l_uint32*)</code>
 //       */
 //      int pixcmapGetColor32(PixColormap cmap, int index, IntBuffer pval32);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixcmapGetRGBA(PIXCMAP*, l_int32, l_int32*, l_int32*, l_int32*, l_int32*)</code>
+//       * <code>l_ok pixcmapGetRGBA(PIXCMAP*, l_int32, l_int32*, l_int32*, l_int32*, l_int32*)</code>
 //       */
 //      int pixcmapGetRGBA(PixColormap cmap, int index, IntBuffer prval, IntBuffer pgval, IntBuffer pbval, IntBuffer paval);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixcmapGetRGBA32(PIXCMAP*, l_int32, l_uint32*)</code>
+//       * <code>l_ok pixcmapGetRGBA32(PIXCMAP*, l_int32, l_uint32*)</code>
 //       */
 //      int pixcmapGetRGBA32(PixColormap cmap, int index, IntBuffer pval32);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixcmapResetColor(PIXCMAP*, l_int32, l_int32, l_int32, l_int32)</code>
+//       * <code>l_ok pixcmapResetColor(PIXCMAP*, l_int32, l_int32, l_int32, l_int32)</code>
 //       */
 //      int pixcmapResetColor(PixColormap cmap, int index, int rval, int gval, int bval);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixcmapSetAlpha(PIXCMAP*, l_int32, l_int32)</code>
+//       * <code>l_ok pixcmapSetAlpha(PIXCMAP*, l_int32, l_int32)</code>
 //       */
 //      int pixcmapSetAlpha(PixColormap cmap, int index, int aval);
 //      /**
@@ -2520,48 +2520,48 @@ public interface Leptonica extends Library, ILeptonica {
 //      int pixcmapGetIndex(PixColormap cmap, int rval, int gval, int bval, IntBuffer pindex);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixcmapHasColor(PIXCMAP*, l_int32*)</code>
+//       * <code>l_ok pixcmapHasColor(PIXCMAP*, l_int32*)</code>
 //       */
 //      int pixcmapHasColor(PixColormap cmap, IntBuffer pcolor);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixcmapIsOpaque(PIXCMAP*, l_int32*)</code>
+//       * <code>l_ok pixcmapIsOpaque(PIXCMAP*, l_int32*)</code>
 //       */
 //      int pixcmapIsOpaque(PixColormap cmap, IntBuffer popaque);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixcmapIsBlackAndWhite(PIXCMAP*, l_int32*)</code>
+//       * <code>l_ok pixcmapIsBlackAndWhite(PIXCMAP*, l_int32*)</code>
 //       */
 //      int pixcmapIsBlackAndWhite(PixColormap cmap, IntBuffer pblackwhite);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixcmapCountGrayColors(PIXCMAP*, l_int32*)</code>
+//       * <code>l_ok pixcmapCountGrayColors(PIXCMAP*, l_int32*)</code>
 //       */
 //      int pixcmapCountGrayColors(PixColormap cmap, IntBuffer pngray);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixcmapGetRankIntensity(PIXCMAP*, l_float32, l_int32*)</code>
+//       * <code>l_ok pixcmapGetRankIntensity(PIXCMAP*, l_float32, l_int32*)</code>
 //       */
 //      int pixcmapGetRankIntensity(PixColormap cmap, float rankval, IntBuffer pindex);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixcmapGetNearestIndex(PIXCMAP*, l_int32, l_int32, l_int32, l_int32*)</code>
+//       * <code>l_ok pixcmapGetNearestIndex(PIXCMAP*, l_int32, l_int32, l_int32, l_int32*)</code>
 //       */
 //      int pixcmapGetNearestIndex(PixColormap cmap, int rval, int gval, int bval, IntBuffer pindex);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixcmapGetNearestGrayIndex(PIXCMAP*, l_int32, l_int32*)</code>
+//       * <code>l_ok pixcmapGetNearestGrayIndex(PIXCMAP*, l_int32, l_int32*)</code>
 //       */
 //      int pixcmapGetNearestGrayIndex(PixColormap cmap, int val, IntBuffer pindex);
     /**
      * Original signature :
-     * <code>l_int32 pixcmapGetDistanceToColor(PIXCMAP*, l_int32, l_int32, l_int32, l_int32, l_int32*)</code>
+     * <code>l_ok pixcmapGetDistanceToColor(PIXCMAP*, l_int32, l_int32, l_int32, l_int32, l_int32*)</code>
      */
     int pixcmapGetDistanceToColor(PixColormap cmap, int index, int rval, int gval, int bval, IntBuffer pdist);
 
     /**
      * Original signature :
-     * <code>l_int32 pixcmapGetRangeValues(PIXCMAP*, l_int32, l_int32*, l_int32*, l_int32*, l_int32*)</code>
+     * <code>l_ok pixcmapGetRangeValues(PIXCMAP*, l_int32, l_int32*, l_int32*, l_int32*, l_int32*)</code>
      */
     int pixcmapGetRangeValues(PixColormap cmap, int select, IntBuffer pminval, IntBuffer pmaxval, IntBuffer pminindex, IntBuffer pmaxindex);
 
@@ -2605,34 +2605,34 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixcmapWrite(const char*, PIXCMAP*)</code>
+     * <code>l_ok pixcmapWrite(const char*, PIXCMAP*)</code>
      */
     int pixcmapWrite(String filename, PixColormap cmap);
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixcmapWriteStream(FILE*, PIXCMAP*)</code>
+//       * <code>l_ok pixcmapWriteStream(FILE*, PIXCMAP*)</code>
 //       */
 //      int pixcmapWriteStream(FILE fp, PixColormap cmap);
     /**
      * Original signature :
-     * <code>l_int32 pixcmapWriteMem(l_uint8**, size_t*, PIXCMAP*)</code>
+     * <code>l_ok pixcmapWriteMem(l_uint8**, size_t*, PIXCMAP*)</code>
      */
     int pixcmapWriteMem(PointerByReference pdata, NativeSizeByReference psize, PixColormap cmap);
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixcmapToArrays(PIXCMAP*, l_int32**, l_int32**, l_int32**, l_int32**)</code>
+//       * <code>l_ok pixcmapToArrays(PIXCMAP*, l_int32**, l_int32**, l_int32**, l_int32**)</code>
 //       */
 //      int pixcmapToArrays(PixColormap cmap, PointerByReference prmap, PointerByReference pgmap, PointerByReference pbmap, PointerByReference pamap);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixcmapToRGBTable(PIXCMAP*, l_uint32**, l_int32*)</code>
+//       * <code>l_ok pixcmapToRGBTable(PIXCMAP*, l_uint32**, l_int32*)</code>
 //       */
 //      int pixcmapToRGBTable(PixColormap cmap, PointerByReference ptab, IntBuffer pncolors);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixcmapSerializeToMemory(PIXCMAP*, l_int32, l_int32*, l_uint8**)</code>
+//       * <code>l_ok pixcmapSerializeToMemory(PIXCMAP*, l_int32, l_int32*, l_uint8**)</code>
 //       */
 //      int pixcmapSerializeToMemory(PixColormap cmap, int cpc, IntBuffer pncolors, PointerByReference pdata);
 //      /**
@@ -2647,22 +2647,22 @@ public interface Leptonica extends Library, ILeptonica {
 //      Pointer pixcmapConvertToHex(ByteBuffer data, int ncolors);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixcmapGammaTRC(PIXCMAP*, l_float32, l_int32, l_int32)</code>
+//       * <code>l_ok pixcmapGammaTRC(PIXCMAP*, l_float32, l_int32, l_int32)</code>
 //       */
 //      int pixcmapGammaTRC(PixColormap cmap, float gamma, int minval, int maxval);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixcmapContrastTRC(PIXCMAP*, l_float32)</code>
+//       * <code>l_ok pixcmapContrastTRC(PIXCMAP*, l_float32)</code>
 //       */
 //      int pixcmapContrastTRC(PixColormap cmap, float factor);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixcmapShiftIntensity(PIXCMAP*, l_float32)</code>
+//       * <code>l_ok pixcmapShiftIntensity(PIXCMAP*, l_float32)</code>
 //       */
 //      int pixcmapShiftIntensity(PixColormap cmap, float fraction);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixcmapShiftByComponent(PIXCMAP*, l_uint32, l_uint32)</code>
+//       * <code>l_ok pixcmapShiftByComponent(PIXCMAP*, l_uint32, l_uint32)</code>
 //       */
 //      int pixcmapShiftByComponent(PixColormap cmap, int srcval, int dstval);
     /**
@@ -2685,7 +2685,7 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 makeRGBToIndexTables(l_uint32**, l_uint32**, l_uint32**, l_int32)</code>
+     * <code>l_ok makeRGBToIndexTables(l_uint32**, l_uint32**, l_uint32**, l_int32)</code>
      */
     int makeRGBToIndexTables(PointerByReference prtab, PointerByReference pgtab, PointerByReference pbtab, int cqlevels);
 
@@ -2768,13 +2768,13 @@ public interface Leptonica extends Library, ILeptonica {
     IntByReference pixcmapToOctcubeLUT(PixColormap cmap, int level, int metric);
 
     /**
-     * Original signature : <code>l_int32 pixRemoveUnusedColors(PIX*)</code>
+     * Original signature : <code>l_ok pixRemoveUnusedColors(PIX*)</code>
      */
     int pixRemoveUnusedColors(Pix pixs);
 
     /**
      * Original signature :
-     * <code>l_int32 pixNumberOccupiedOctcubes(PIX*, l_int32, l_int32, l_float32, l_int32*)</code>
+     * <code>l_ok pixNumberOccupiedOctcubes(PIX*, l_int32, l_int32, l_float32, l_int32*)</code>
      */
     int pixNumberOccupiedOctcubes(Pix pix, int level, int mincount, float minfract, IntBuffer pncolors);
 
@@ -2822,19 +2822,19 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixAssignToNearestColor(PIX*, PIX*, PIX*, l_int32, l_int32*)</code>
+     * <code>l_ok pixAssignToNearestColor(PIX*, PIX*, PIX*, l_int32, l_int32*)</code>
      */
     int pixAssignToNearestColor(Pix pixd, Pix pixs, Pix pixm, int level, IntBuffer countarray);
 
     /**
      * Original signature :
-     * <code>l_int32 pixColorSegmentClean(PIX*, l_int32, l_int32*)</code>
+     * <code>l_ok pixColorSegmentClean(PIX*, l_int32, l_int32*)</code>
      */
     int pixColorSegmentClean(Pix pixs, int selsize, IntBuffer countarray);
 
     /**
      * Original signature :
-     * <code>l_int32 pixColorSegmentRemoveColors(PIX*, PIX*, l_int32)</code>
+     * <code>l_ok pixColorSegmentRemoveColors(PIX*, PIX*, l_int32)</code>
      */
     int pixColorSegmentRemoveColors(Pix pixd, Pix pixs, int finalcolors);
 
@@ -2850,25 +2850,25 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 convertRGBToHSV(l_int32, l_int32, l_int32, l_int32*, l_int32*, l_int32*)</code>
+     * <code>l_ok convertRGBToHSV(l_int32, l_int32, l_int32, l_int32*, l_int32*, l_int32*)</code>
      */
     int convertRGBToHSV(int rval, int gval, int bval, IntBuffer phval, IntBuffer psval, IntBuffer pvval);
 
     /**
      * Original signature :
-     * <code>l_int32 convertHSVToRGB(l_int32, l_int32, l_int32, l_int32*, l_int32*, l_int32*)</code>
+     * <code>l_ok convertHSVToRGB(l_int32, l_int32, l_int32, l_int32*, l_int32*, l_int32*)</code>
      */
     int convertHSVToRGB(int hval, int sval, int vval, IntBuffer prval, IntBuffer pgval, IntBuffer pbval);
 
     /**
      * Original signature :
-     * <code>l_int32 pixcmapConvertRGBToHSV(PIXCMAP*)</code>
+     * <code>l_ok pixcmapConvertRGBToHSV(PIXCMAP*)</code>
      */
     int pixcmapConvertRGBToHSV(PixColormap cmap);
 
     /**
      * Original signature :
-     * <code>l_int32 pixcmapConvertHSVToRGB(PIXCMAP*)</code>
+     * <code>l_ok pixcmapConvertHSVToRGB(PIXCMAP*)</code>
      */
     int pixcmapConvertHSVToRGB(PixColormap cmap);
 
@@ -2926,7 +2926,7 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixFindHistoPeaksHSV(PIX*, l_int32, l_int32, l_int32, l_int32, l_float32, PTA**, NUMA**, PIXA**)</code>
+     * <code>l_ok pixFindHistoPeaksHSV(PIX*, l_int32, l_int32, l_int32, l_int32, l_float32, PTA**, NUMA**, PIXA**)</code>
      */
     int pixFindHistoPeaksHSV(Pix pixs, int type, int width, int height, int npeaks, float erasefactor, PointerByReference ppta, PointerByReference pnatot, PointerByReference ppixa);
 
@@ -2948,25 +2948,25 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 convertRGBToYUV(l_int32, l_int32, l_int32, l_int32*, l_int32*, l_int32*)</code>
+     * <code>l_ok convertRGBToYUV(l_int32, l_int32, l_int32, l_int32*, l_int32*, l_int32*)</code>
      */
     int convertRGBToYUV(int rval, int gval, int bval, IntBuffer pyval, IntBuffer puval, IntBuffer pvval);
 
     /**
      * Original signature :
-     * <code>l_int32 convertYUVToRGB(l_int32, l_int32, l_int32, l_int32*, l_int32*, l_int32*)</code>
+     * <code>l_ok convertYUVToRGB(l_int32, l_int32, l_int32, l_int32*, l_int32*, l_int32*)</code>
      */
     int convertYUVToRGB(int yval, int uval, int vval, IntBuffer prval, IntBuffer pgval, IntBuffer pbval);
 
     /**
      * Original signature :
-     * <code>l_int32 pixcmapConvertRGBToYUV(PIXCMAP*)</code>
+     * <code>l_ok pixcmapConvertRGBToYUV(PIXCMAP*)</code>
      */
     int pixcmapConvertRGBToYUV(PixColormap cmap);
 
     /**
      * Original signature :
-     * <code>l_int32 pixcmapConvertYUVToRGB(PIXCMAP*)</code>
+     * <code>l_ok pixcmapConvertYUVToRGB(PIXCMAP*)</code>
      */
     int pixcmapConvertYUVToRGB(PixColormap cmap);
 
@@ -2982,13 +2982,13 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 convertRGBToXYZ(l_int32, l_int32, l_int32, l_float32*, l_float32*, l_float32*)</code>
+     * <code>l_ok convertRGBToXYZ(l_int32, l_int32, l_int32, l_float32*, l_float32*, l_float32*)</code>
      */
     int convertRGBToXYZ(int rval, int gval, int bval, FloatBuffer pfxval, FloatBuffer pfyval, FloatBuffer pfzval);
 
     /**
      * Original signature :
-     * <code>l_int32 convertXYZToRGB(l_float32, l_float32, l_float32, l_int32, l_int32*, l_int32*, l_int32*)</code>
+     * <code>l_ok convertXYZToRGB(l_float32, l_float32, l_float32, l_int32, l_int32*, l_int32*, l_int32*)</code>
      */
     int convertXYZToRGB(float fxval, float fyval, float fzval, int blackout, IntBuffer prval, IntBuffer pgval, IntBuffer pbval);
 
@@ -3004,13 +3004,13 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 convertXYZToLAB(l_float32, l_float32, l_float32, l_float32*, l_float32*, l_float32*)</code>
+     * <code>l_ok convertXYZToLAB(l_float32, l_float32, l_float32, l_float32*, l_float32*, l_float32*)</code>
      */
     int convertXYZToLAB(float xval, float yval, float zval, FloatBuffer plval, FloatBuffer paval, FloatBuffer pbval);
 
     /**
      * Original signature :
-     * <code>l_int32 convertLABToXYZ(l_float32, l_float32, l_float32, l_float32*, l_float32*, l_float32*)</code>
+     * <code>l_ok convertLABToXYZ(l_float32, l_float32, l_float32, l_float32*, l_float32*, l_float32*)</code>
      */
     int convertLABToXYZ(float lval, float aval, float bval, FloatBuffer pxval, FloatBuffer pyval, FloatBuffer pzval);
 
@@ -3026,49 +3026,49 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 convertRGBToLAB(l_int32, l_int32, l_int32, l_float32*, l_float32*, l_float32*)</code>
+     * <code>l_ok convertRGBToLAB(l_int32, l_int32, l_int32, l_float32*, l_float32*, l_float32*)</code>
      */
     int convertRGBToLAB(int rval, int gval, int bval, FloatBuffer pflval, FloatBuffer pfaval, FloatBuffer pfbval);
 
     /**
      * Original signature :
-     * <code>l_int32 convertLABToRGB(l_float32, l_float32, l_float32, l_int32*, l_int32*, l_int32*)</code>
+     * <code>l_ok convertLABToRGB(l_float32, l_float32, l_float32, l_int32*, l_int32*, l_int32*)</code>
      */
     int convertLABToRGB(float flval, float faval, float fbval, IntBuffer prval, IntBuffer pgval, IntBuffer pbval);
 
     /**
      * Original signature :
-     * <code>l_int32 pixEqual(PIX*, PIX*, l_int32*)</code>
+     * <code>l_ok pixEqual(PIX*, PIX*, l_int32*)</code>
      */
     int pixEqual(Pix pix1, Pix pix2, IntBuffer psame);
 
     /**
      * Original signature :
-     * <code>l_int32 pixEqualWithAlpha(PIX*, PIX*, l_int32, l_int32*)</code>
+     * <code>l_ok pixEqualWithAlpha(PIX*, PIX*, l_int32, l_int32*)</code>
      */
     int pixEqualWithAlpha(Pix pix1, Pix pix2, int use_alpha, IntBuffer psame);
 
     /**
      * Original signature :
-     * <code>l_int32 pixEqualWithCmap(PIX*, PIX*, l_int32*)</code>
+     * <code>l_ok pixEqualWithCmap(PIX*, PIX*, l_int32*)</code>
      */
     int pixEqualWithCmap(Pix pix1, Pix pix2, IntBuffer psame);
 
     /**
      * Original signature :
-     * <code>l_int32 cmapEqual(PIXCMAP*, PIXCMAP*, l_int32, l_int32*)</code>
+     * <code>l_ok cmapEqual(PIXCMAP*, PIXCMAP*, l_int32, l_int32*)</code>
      */
     int cmapEqual(PixColormap cmap1, PixColormap cmap2, int ncomps, IntBuffer psame);
 
     /**
      * Original signature :
-     * <code>l_int32 pixUsesCmapColor(PIX*, l_int32*)</code>
+     * <code>l_ok pixUsesCmapColor(PIX*, l_int32*)</code>
      */
     int pixUsesCmapColor(Pix pixs, IntBuffer pcolor);
 
     /**
      * Original signature :
-     * <code>l_int32 pixCorrelationBinary(PIX*, PIX*, l_float32*)</code>
+     * <code>l_ok pixCorrelationBinary(PIX*, PIX*, l_float32*)</code>
      */
     int pixCorrelationBinary(Pix pix1, Pix pix2, FloatBuffer pval);
 
@@ -3080,55 +3080,55 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixCompareBinary(PIX*, PIX*, l_int32, l_float32*, PIX**)</code>
+     * <code>l_ok pixCompareBinary(PIX*, PIX*, l_int32, l_float32*, PIX**)</code>
      */
     int pixCompareBinary(Pix pix1, Pix pix2, int comptype, FloatBuffer pfract, PointerByReference ppixdiff);
 
     /**
      * Original signature :
-     * <code>l_int32 pixCompareBinary(PIX*, PIX*, l_int32, l_float32*, PIX**)</code>
+     * <code>l_ok pixCompareBinary(PIX*, PIX*, l_int32, l_float32*, PIX**)</code>
      */
     int pixCompareBinary(Pix pix1, Pix pix2, int comptype, FloatByReference pfract, PointerByReference ppixdiff);
 
     /**
      * Original signature :
-     * <code>l_int32 pixCompareGrayOrRGB(PIX*, PIX*, l_int32, l_int32, l_int32*, l_float32*, l_float32*, PIX**)</code>
+     * <code>l_ok pixCompareGrayOrRGB(PIX*, PIX*, l_int32, l_int32, l_int32*, l_float32*, l_float32*, PIX**)</code>
      */
     int pixCompareGrayOrRGB(Pix pix1, Pix pix2, int comptype, int plottype, IntBuffer psame, FloatBuffer pdiff, FloatBuffer prmsdiff, PointerByReference ppixdiff);
 
     /**
      * Original signature :
-     * <code>l_int32 pixCompareGrayOrRGB(PIX*, PIX*, l_int32, l_int32, l_int32*, l_float32*, l_float32*, PIX**)</code>
+     * <code>l_ok pixCompareGrayOrRGB(PIX*, PIX*, l_int32, l_int32, l_int32*, l_float32*, l_float32*, PIX**)</code>
      */
     int pixCompareGrayOrRGB(Pix pix1, Pix pix2, int comptype, int plottype, IntByReference psame, FloatByReference pdiff, FloatByReference prmsdiff, PointerByReference ppixdiff);
 
     /**
      * Original signature :
-     * <code>l_int32 pixCompareGray(PIX*, PIX*, l_int32, l_int32, l_int32*, l_float32*, l_float32*, PIX**)</code>
+     * <code>l_ok pixCompareGray(PIX*, PIX*, l_int32, l_int32, l_int32*, l_float32*, l_float32*, PIX**)</code>
      */
     int pixCompareGray(Pix pix1, Pix pix2, int comptype, int plottype, IntBuffer psame, FloatBuffer pdiff, FloatBuffer prmsdiff, PointerByReference ppixdiff);
 
     /**
      * Original signature :
-     * <code>l_int32 pixCompareGray(PIX*, PIX*, l_int32, l_int32, l_int32*, l_float32*, l_float32*, PIX**)</code>
+     * <code>l_ok pixCompareGray(PIX*, PIX*, l_int32, l_int32, l_int32*, l_float32*, l_float32*, PIX**)</code>
      */
     int pixCompareGray(Pix pix1, Pix pix2, int comptype, int plottype, IntByReference psame, FloatByReference pdiff, FloatByReference prmsdiff, PointerByReference ppixdiff);
 
     /**
      * Original signature :
-     * <code>l_int32 pixCompareRGB(PIX*, PIX*, l_int32, l_int32, l_int32*, l_float32*, l_float32*, PIX**)</code>
+     * <code>l_ok pixCompareRGB(PIX*, PIX*, l_int32, l_int32, l_int32*, l_float32*, l_float32*, PIX**)</code>
      */
     int pixCompareRGB(Pix pix1, Pix pix2, int comptype, int plottype, IntBuffer psame, FloatBuffer pdiff, FloatBuffer prmsdiff, PointerByReference ppixdiff);
 
     /**
      * Original signature :
-     * <code>l_int32 pixCompareRGB(PIX*, PIX*, l_int32, l_int32, l_int32*, l_float32*, l_float32*, PIX**)</code>
+     * <code>l_ok pixCompareRGB(PIX*, PIX*, l_int32, l_int32, l_int32*, l_float32*, l_float32*, PIX**)</code>
      */
     int pixCompareRGB(Pix pix1, Pix pix2, int comptype, int plottype, IntByReference psame, FloatByReference pdiff, FloatByReference prmsdiff, PointerByReference ppixdiff);
 
     /**
      * Original signature :
-     * <code>l_int32 pixCompareTiled(PIX*, PIX*, l_int32, l_int32, l_int32, PIX**)</code>
+     * <code>l_ok pixCompareTiled(PIX*, PIX*, l_int32, l_int32, l_int32, PIX**)</code>
      */
     int pixCompareTiled(Pix pix1, Pix pix2, int sx, int sy, int type, PointerByReference ppixdiff);
 
@@ -3140,13 +3140,13 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixTestForSimilarity(PIX*, PIX*, l_int32, l_int32, l_float32, l_float32, l_int32*, l_int32)</code>
+     * <code>l_ok pixTestForSimilarity(PIX*, PIX*, l_int32, l_int32, l_float32, l_float32, l_int32*, l_int32)</code>
      */
     int pixTestForSimilarity(Pix pix1, Pix pix2, int factor, int mindiff, float maxfract, float maxave, IntBuffer psimilar, int details);
 
     /**
      * Original signature :
-     * <code>l_int32 pixGetDifferenceStats(PIX*, PIX*, l_int32, l_int32, l_float32*, l_float32*, l_int32)</code>
+     * <code>l_ok pixGetDifferenceStats(PIX*, PIX*, l_int32, l_int32, l_float32*, l_float32*, l_int32)</code>
      */
     int pixGetDifferenceStats(Pix pix1, Pix pix2, int factor, int mindiff, FloatBuffer pfractdiff, FloatBuffer pavediff, int details);
 
@@ -3158,43 +3158,43 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixGetPerceptualDiff(PIX*, PIX*, l_int32, l_int32, l_int32, l_float32*, PIX**, PIX**)</code>
+     * <code>l_ok pixGetPerceptualDiff(PIX*, PIX*, l_int32, l_int32, l_int32, l_float32*, PIX**, PIX**)</code>
      */
     int pixGetPerceptualDiff(Pix pixs1, Pix pixs2, int sampling, int dilation, int mindiff, FloatBuffer pfract, PointerByReference ppixdiff1, PointerByReference ppixdiff2);
 
     /**
      * Original signature :
-     * <code>l_int32 pixGetPerceptualDiff(PIX*, PIX*, l_int32, l_int32, l_int32, l_float32*, PIX**, PIX**)</code>
+     * <code>l_ok pixGetPerceptualDiff(PIX*, PIX*, l_int32, l_int32, l_int32, l_float32*, PIX**, PIX**)</code>
      */
     int pixGetPerceptualDiff(Pix pixs1, Pix pixs2, int sampling, int dilation, int mindiff, FloatByReference pfract, PointerByReference ppixdiff1, PointerByReference ppixdiff2);
 
     /**
      * Original signature :
-     * <code>l_int32 pixGetPSNR(PIX*, PIX*, l_int32, l_float32*)</code>
+     * <code>l_ok pixGetPSNR(PIX*, PIX*, l_int32, l_float32*)</code>
      */
     int pixGetPSNR(Pix pix1, Pix pix2, int factor, FloatBuffer ppsnr);
 
     /**
      * Original signature :
-     * <code>l_int32 pixaComparePhotoRegionsByHisto(PIXA*, l_float32, l_float32, l_int32, l_int32, l_int32, l_float32, NUMA**, l_float32**, PIX**, l_int32)</code>
+     * <code>l_ok pixaComparePhotoRegionsByHisto(PIXA*, l_float32, l_float32, l_int32, l_int32, l_int32, l_float32, NUMA**, l_float32**, PIX**, l_int32)</code>
      */
     int pixaComparePhotoRegionsByHisto(Pixa pixa, float minratio, float textthresh, int factor, int nx, int ny, float simthresh, PointerByReference pnai, PointerByReference pscores, PointerByReference ppixd, int debug);
 
     /**
      * Original signature :
-     * <code>l_int32 pixComparePhotoRegionsByHisto(PIX*, PIX*, BOX*, BOX*, l_float32, l_int32, l_int32, l_int32, l_float32*, l_int32)</code>
+     * <code>l_ok pixComparePhotoRegionsByHisto(PIX*, PIX*, BOX*, BOX*, l_float32, l_int32, l_int32, l_int32, l_float32*, l_int32)</code>
      */
     int pixComparePhotoRegionsByHisto(Pix pix1, Pix pix2, Box box1, Box box2, float minratio, int factor, int nx, int ny, FloatBuffer pscore, int debugflag);
 
     /**
      * Original signature :
-     * <code>l_int32 pixGenPhotoHistos(PIX*, BOX*, l_int32, l_float32, l_int32, l_int32, NUMAA**, l_int32*, l_int32*, l_int32)</code>
+     * <code>l_ok pixGenPhotoHistos(PIX*, BOX*, l_int32, l_float32, l_int32, l_int32, NUMAA**, l_int32*, l_int32*, l_int32)</code>
      */
     int pixGenPhotoHistos(Pix pixs, Box box, int factor, float thresh, int nx, int ny, PointerByReference pnaa, IntBuffer pw, IntBuffer ph, int debugindex);
 
     /**
      * Original signature :
-     * <code>l_int32 pixGenPhotoHistos(PIX*, BOX*, l_int32, l_float32, l_int32, l_int32, NUMAA**, l_int32*, l_int32*, l_int32)</code>
+     * <code>l_ok pixGenPhotoHistos(PIX*, BOX*, l_int32, l_float32, l_int32, l_int32, NUMAA**, l_int32*, l_int32*, l_int32)</code>
      */
     int pixGenPhotoHistos(Pix pixs, Box box, int factor, float thresh, int nx, int ny, PointerByReference pnaa, IntByReference pw, IntByReference ph, int debugindex);
 
@@ -3206,31 +3206,31 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixCentroid8(PIX*, l_int32, l_float32*, l_float32*)</code>
+     * <code>l_ok pixCentroid8(PIX*, l_int32, l_float32*, l_float32*)</code>
      */
     int pixCentroid8(Pix pixs, int factor, FloatBuffer pcx, FloatBuffer pcy);
 
     /**
      * Original signature :
-     * <code>l_int32 pixDecideIfPhotoImage(PIX*, l_int32, l_int32, l_int32, l_float32, NUMAA**, PIXA*)</code>
+     * <code>l_ok pixDecideIfPhotoImage(PIX*, l_int32, l_int32, l_int32, l_float32, NUMAA**, PIXA*)</code>
      */
     int pixDecideIfPhotoImage(Pix pix, int factor, int nx, int ny, float thresh, PointerByReference pnaa, Pixa pixadebug);
 
     /**
      * Original signature :
-     * <code>l_int32 compareTilesByHisto(NUMAA*, NUMAA*, l_float32, l_int32, l_int32, l_int32, l_int32, l_float32*, PIXA*)</code>
+     * <code>l_ok compareTilesByHisto(NUMAA*, NUMAA*, l_float32, l_int32, l_int32, l_int32, l_int32, l_float32*, PIXA*)</code>
      */
     int compareTilesByHisto(Numaa naa1, Numaa naa2, float minratio, int w1, int h1, int w2, int h2, FloatBuffer pscore, Pixa pixadebug);
 
     /**
      * Original signature :
-     * <code>l_int32 pixCompareGrayByHisto(PIX*, PIX*, BOX*, BOX*, l_float32, l_int32, l_int32, l_int32, l_int32, l_float32*, l_int32)</code>
+     * <code>l_ok pixCompareGrayByHisto(PIX*, PIX*, BOX*, BOX*, l_float32, l_int32, l_int32, l_int32, l_int32, l_float32*, l_int32)</code>
      */
     int pixCompareGrayByHisto(Pix pix1, Pix pix2, Box box1, Box box2, float minratio, int maxgray, int factor, int nx, int ny, FloatBuffer pscore, int debugflag);
 
     /**
      * Original signature :
-     * <code>l_int32 pixCropAlignedToCentroid(PIX*, PIX*, l_int32, BOX**, BOX**)</code>
+     * <code>l_ok pixCropAlignedToCentroid(PIX*, PIX*, l_int32, BOX**, BOX**)</code>
      */
     int pixCropAlignedToCentroid(Pix pix1, Pix pix2, int factor, PointerByReference pbox1, PointerByReference pbox2);
 
@@ -3248,13 +3248,13 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixCompareWithTranslation(PIX*, PIX*, l_int32, l_int32*, l_int32*, l_float32*, l_int32)</code>
+     * <code>l_ok pixCompareWithTranslation(PIX*, PIX*, l_int32, l_int32*, l_int32*, l_float32*, l_int32)</code>
      */
     int pixCompareWithTranslation(Pix pix1, Pix pix2, int thresh, IntBuffer pdelx, IntBuffer pdely, FloatBuffer pscore, int debugflag);
 
     /**
      * Original signature :
-     * <code>l_int32 pixBestCorrelation(PIX*, PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32*, l_int32*, l_int32*, l_float32*, l_int32)</code>
+     * <code>l_ok pixBestCorrelation(PIX*, PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32*, l_int32*, l_int32*, l_float32*, l_int32)</code>
      */
     int pixBestCorrelation(Pix pix1, Pix pix2, int area1, int area2, int etransx, int etransy, int maxshift, IntBuffer tab8, IntBuffer pdelx, IntBuffer pdely, FloatBuffer pscore, int debugflag);
 
@@ -3277,7 +3277,7 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixCountConnComp(PIX*, l_int32, l_int32*)</code>
+     * <code>l_ok pixCountConnComp(PIX*, l_int32, l_int32*)</code>
      */
     int pixCountConnComp(Pix pixs, int connectivity, IntBuffer pcount);
 
@@ -3307,25 +3307,25 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixSeedfill(PIX*, L_STACK*, l_int32, l_int32, l_int32)</code>
+     * <code>l_ok pixSeedfill(PIX*, L_STACK*, l_int32, l_int32, l_int32)</code>
      */
     int pixSeedfill(Pix pixs, L_Stack stack, int x, int y, int connectivity);
 
     /**
      * Original signature :
-     * <code>l_int32 pixSeedfill4(PIX*, L_STACK*, l_int32, l_int32)</code>
+     * <code>l_ok pixSeedfill4(PIX*, L_STACK*, l_int32, l_int32)</code>
      */
     int pixSeedfill4(Pix pixs, L_Stack stack, int x, int y);
 
     /**
      * Original signature :
-     * <code>l_int32 pixSeedfill8(PIX*, L_STACK*, l_int32, l_int32)</code>
+     * <code>l_ok pixSeedfill8(PIX*, L_STACK*, l_int32, l_int32)</code>
      */
     int pixSeedfill8(Pix pixs, L_Stack stack, int x, int y);
 
     /**
      * Original signature :
-     * <code>l_int32 convertFilesTo1bpp(const char*, const char*, l_int32, l_int32, l_int32, l_int32, const char*, l_int32)</code>
+     * <code>l_ok convertFilesTo1bpp(const char*, const char*, l_int32, l_int32, l_int32, l_int32, const char*, l_int32)</code>
      */
     int convertFilesTo1bpp(String dirin, String substr, int upscaling, int thresh, int firstpage, int npages, String dirout, int outformat);
 
@@ -3366,7 +3366,7 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixWindowedStats(PIX*, l_int32, l_int32, l_int32, PIX**, PIX**, FPIX**, FPIX**)</code>
+     * <code>l_ok pixWindowedStats(PIX*, l_int32, l_int32, l_int32, PIX**, PIX**, FPIX**, FPIX**)</code>
      */
     int pixWindowedStats(Pix pixs, int wc, int hc, int hasborder, PointerByReference ppixm, PointerByReference ppixms, PointerByReference pfpixv, PointerByReference pfpixrv);
 
@@ -3384,7 +3384,7 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixWindowedVariance(PIX*, PIX*, FPIX**, FPIX**)</code>
+     * <code>l_ok pixWindowedVariance(PIX*, PIX*, FPIX**, FPIX**)</code>
      */
     int pixWindowedVariance(Pix pixm, Pix pixms, PointerByReference pfpixv, PointerByReference pfpixrv);
 
@@ -3472,22 +3472,22 @@ public interface Leptonica extends Library, ILeptonica {
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixCorrelationScore(PIX*, PIX*, l_int32, l_int32, l_float32, l_float32, l_int32, l_int32, l_int32*, l_float32*)</code>
+//       * <code>l_ok pixCorrelationScore(PIX*, PIX*, l_int32, l_int32, l_float32, l_float32, l_int32, l_int32, l_int32*, l_float32*)</code>
 //       */
 //      int pixCorrelationScore(Pix pix1, Pix pix2, int area1, int area2, float delx, float dely, int maxdiffw, int maxdiffh, IntBuffer tab, FloatBuffer pscore);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixCorrelationScoreThresholded(PIX*, PIX*, l_int32, l_int32, l_float32, l_float32, l_int32, l_int32, l_int32*, l_int32*, l_float32)</code>
+//       * <code>l_ok pixCorrelationScoreThresholded(PIX*, PIX*, l_int32, l_int32, l_float32, l_float32, l_int32, l_int32, l_int32*, l_int32*, l_float32)</code>
 //       */
 //      int pixCorrelationScoreThresholded(Pix pix1, Pix pix2, int area1, int area2, float delx, float dely, int maxdiffw, int maxdiffh, IntBuffer tab, IntBuffer downcount, float score_threshold);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixCorrelationScoreSimple(PIX*, PIX*, l_int32, l_int32, l_float32, l_float32, l_int32, l_int32, l_int32*, l_float32*)</code>
+//       * <code>l_ok pixCorrelationScoreSimple(PIX*, PIX*, l_int32, l_int32, l_float32, l_float32, l_int32, l_int32, l_int32*, l_float32*)</code>
 //       */
 //      int pixCorrelationScoreSimple(Pix pix1, Pix pix2, int area1, int area2, float delx, float dely, int maxdiffw, int maxdiffh, IntBuffer tab, FloatBuffer pscore);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixCorrelationScoreShifted(PIX*, PIX*, l_int32, l_int32, l_int32, l_int32, l_int32*, l_float32*)</code>
+//       * <code>l_ok pixCorrelationScoreShifted(PIX*, PIX*, l_int32, l_int32, l_int32, l_int32, l_int32*, l_float32*)</code>
 //       */
 //      int pixCorrelationScoreShifted(Pix pix1, Pix pix2, int area1, int area2, int delx, int dely, IntBuffer tab, FloatBuffer pscore);
     /**
@@ -3526,13 +3526,13 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 dewarpaDestroyDewarp(L_DEWARPA*, l_int32)</code>
+     * <code>l_ok dewarpaDestroyDewarp(L_DEWARPA*, l_int32)</code>
      */
     int dewarpaDestroyDewarp(L_Dewarpa dewa, int pageno);
 
     /**
      * Original signature :
-     * <code>l_int32 dewarpaInsertDewarp(L_DEWARPA*, L_DEWARP*)</code>
+     * <code>l_ok dewarpaInsertDewarp(L_DEWARPA*, L_DEWARP*)</code>
      */
     int dewarpaInsertDewarp(L_Dewarpa dewa, L_Dewarp dew);
 
@@ -3544,25 +3544,25 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 dewarpaSetCurvatures(L_DEWARPA*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32)</code>
+     * <code>l_ok dewarpaSetCurvatures(L_DEWARPA*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32)</code>
      */
     int dewarpaSetCurvatures(L_Dewarpa dewa, int max_linecurv, int min_diff_linecurv, int max_diff_linecurv, int max_edgecurv, int max_diff_edgecurv, int max_edgeslope);
 
     /**
      * Original signature :
-     * <code>l_int32 dewarpaUseBothArrays(L_DEWARPA*, l_int32)</code>
+     * <code>l_ok dewarpaUseBothArrays(L_DEWARPA*, l_int32)</code>
      */
     int dewarpaUseBothArrays(L_Dewarpa dewa, int useboth);
 
     /**
      * Original signature :
-     * <code>l_int32 dewarpaSetCheckColumns(L_DEWARPA*, l_int32)</code>
+     * <code>l_ok dewarpaSetCheckColumns(L_DEWARPA*, l_int32)</code>
      */
     int dewarpaSetCheckColumns(L_Dewarpa dewa, int check_columns);
 
     /**
      * Original signature :
-     * <code>l_int32 dewarpaSetMaxDistance(L_DEWARPA*, l_int32)</code>
+     * <code>l_ok dewarpaSetMaxDistance(L_DEWARPA*, l_int32)</code>
      */
     int dewarpaSetMaxDistance(L_Dewarpa dewa, int maxdist);
 
@@ -3584,18 +3584,18 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 dewarpWrite(const char*, L_DEWARP*)</code>
+     * <code>l_ok dewarpWrite(const char*, L_DEWARP*)</code>
      */
     int dewarpWrite(String filename, L_Dewarp dew);
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 dewarpWriteStream(FILE*, L_DEWARP*)</code>
+//       * <code>l_ok dewarpWriteStream(FILE*, L_DEWARP*)</code>
 //       */
 //      int dewarpWriteStream(FILE fp, L_Dewarp dew);
     /**
      * Original signature :
-     * <code>l_int32 dewarpWriteMem(l_uint8**, size_t*, L_DEWARP*)</code>
+     * <code>l_ok dewarpWriteMem(l_uint8**, size_t*, L_DEWARP*)</code>
      */
     int dewarpWriteMem(PointerByReference pdata, NativeSizeByReference psize, L_Dewarp dew);
 
@@ -3617,36 +3617,36 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 dewarpaWrite(const char*, L_DEWARPA*)</code>
+     * <code>l_ok dewarpaWrite(const char*, L_DEWARPA*)</code>
      */
     int dewarpaWrite(String filename, L_Dewarpa dewa);
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 dewarpaWriteStream(FILE*, L_DEWARPA*)</code>
+//       * <code>l_ok dewarpaWriteStream(FILE*, L_DEWARPA*)</code>
 //       */
 //      int dewarpaWriteStream(FILE fp, L_Dewarpa dewa);
     /**
      * Original signature :
-     * <code>l_int32 dewarpaWriteMem(l_uint8**, size_t*, L_DEWARPA*)</code>
+     * <code>l_ok dewarpaWriteMem(l_uint8**, size_t*, L_DEWARPA*)</code>
      */
     int dewarpaWriteMem(PointerByReference pdata, NativeSizeByReference psize, L_Dewarpa dewa);
 
     /**
      * Original signature :
-     * <code>l_int32 dewarpBuildPageModel(L_DEWARP*, const char*)</code>
+     * <code>l_ok dewarpBuildPageModel(L_DEWARP*, const char*)</code>
      */
     int dewarpBuildPageModel(L_Dewarp dew, String debugfile);
 
     /**
      * Original signature :
-     * <code>l_int32 dewarpFindVertDisparity(L_DEWARP*, PTAA*, l_int32)</code>
+     * <code>l_ok dewarpFindVertDisparity(L_DEWARP*, PTAA*, l_int32)</code>
      */
     int dewarpFindVertDisparity(L_Dewarp dew, Ptaa ptaa, int rotflag);
 
     /**
      * Original signature :
-     * <code>l_int32 dewarpFindHorizDisparity(L_DEWARP*, PTAA*)</code>
+     * <code>l_ok dewarpFindHorizDisparity(L_DEWARP*, PTAA*)</code>
      */
     int dewarpFindHorizDisparity(L_Dewarp dew, Ptaa ptaa);
 
@@ -3664,131 +3664,131 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 dewarpFindHorizSlopeDisparity(L_DEWARP*, PIX*, l_float32, l_int32)</code>
+     * <code>l_ok dewarpFindHorizSlopeDisparity(L_DEWARP*, PIX*, l_float32, l_int32)</code>
      */
     int dewarpFindHorizSlopeDisparity(L_Dewarp dew, Pix pixb, float fractthresh, int parity);
 
     /**
      * Original signature :
-     * <code>l_int32 dewarpBuildLineModel(L_DEWARP*, l_int32, const char*)</code>
+     * <code>l_ok dewarpBuildLineModel(L_DEWARP*, l_int32, const char*)</code>
      */
     int dewarpBuildLineModel(L_Dewarp dew, int opensize, String debugfile);
 
     /**
      * Original signature :
-     * <code>l_int32 dewarpaModelStatus(L_DEWARPA*, l_int32, l_int32*, l_int32*)</code>
+     * <code>l_ok dewarpaModelStatus(L_DEWARPA*, l_int32, l_int32*, l_int32*)</code>
      */
     int dewarpaModelStatus(L_Dewarpa dewa, int pageno, IntBuffer pvsuccess, IntBuffer phsuccess);
 
     /**
      * Original signature :
-     * <code>l_int32 dewarpaApplyDisparity(L_DEWARPA*, l_int32, PIX*, l_int32, l_int32, l_int32, PIX**, const char*)</code>
+     * <code>l_ok dewarpaApplyDisparity(L_DEWARPA*, l_int32, PIX*, l_int32, l_int32, l_int32, PIX**, const char*)</code>
      */
     int dewarpaApplyDisparity(L_Dewarpa dewa, int pageno, Pix pixs, int grayin, int x, int y, PointerByReference ppixd, String debugfile);
 
     /**
      * Original signature :
-     * <code>l_int32 dewarpaApplyDisparity(L_DEWARPA*, l_int32, PIX*, l_int32, l_int32, l_int32, PIX**, const char*)</code>
+     * <code>l_ok dewarpaApplyDisparity(L_DEWARPA*, l_int32, PIX*, l_int32, l_int32, l_int32, PIX**, const char*)</code>
      */
     int dewarpaApplyDisparity(L_Dewarpa dewa, int pageno, Pix pixs, int grayin, int x, int y, PointerByReference ppixd, Pointer debugfile);
 
     /**
      * Original signature :
-     * <code>l_int32 dewarpaApplyDisparityBoxa(L_DEWARPA*, l_int32, PIX*, BOXA*, l_int32, l_int32, l_int32, BOXA**, const char*)</code>
+     * <code>l_ok dewarpaApplyDisparityBoxa(L_DEWARPA*, l_int32, PIX*, BOXA*, l_int32, l_int32, l_int32, BOXA**, const char*)</code>
      */
     int dewarpaApplyDisparityBoxa(L_Dewarpa dewa, int pageno, Pix pixs, Boxa boxas, int mapdir, int x, int y, PointerByReference pboxad, String debugfile);
 
     /**
      * Original signature :
-     * <code>l_int32 dewarpaApplyDisparityBoxa(L_DEWARPA*, l_int32, PIX*, BOXA*, l_int32, l_int32, l_int32, BOXA**, const char*)</code>
+     * <code>l_ok dewarpaApplyDisparityBoxa(L_DEWARPA*, l_int32, PIX*, BOXA*, l_int32, l_int32, l_int32, BOXA**, const char*)</code>
      */
     int dewarpaApplyDisparityBoxa(L_Dewarpa dewa, int pageno, Pix pixs, Boxa boxas, int mapdir, int x, int y, PointerByReference pboxad, Pointer debugfile);
 
     /**
-     * Original signature : <code>l_int32 dewarpMinimize(L_DEWARP*)</code>
+     * Original signature : <code>l_ok dewarpMinimize(L_DEWARP*)</code>
      */
     int dewarpMinimize(L_Dewarp dew);
 
     /**
      * Original signature :
-     * <code>l_int32 dewarpPopulateFullRes(L_DEWARP*, PIX*, l_int32, l_int32)</code>
+     * <code>l_ok dewarpPopulateFullRes(L_DEWARP*, PIX*, l_int32, l_int32)</code>
      */
     int dewarpPopulateFullRes(L_Dewarp dew, Pix pix, int x, int y);
 
     /**
      * Original signature :
-     * <code>l_int32 dewarpSinglePage(PIX*, l_int32, l_int32, l_int32, l_int32, PIX**, L_DEWARPA**, l_int32)</code>
+     * <code>l_ok dewarpSinglePage(PIX*, l_int32, l_int32, l_int32, l_int32, PIX**, L_DEWARPA**, l_int32)</code>
      */
     int dewarpSinglePage(Pix pixs, int thresh, int adaptive, int useboth, int check_columns, PointerByReference ppixd, PointerByReference pdewa, int debug);
 
     /**
      * Original signature :
-     * <code>l_int32 dewarpSinglePageInit(PIX*, l_int32, l_int32, l_int32, l_int32, PIX**, L_DEWARPA**)</code>
+     * <code>l_ok dewarpSinglePageInit(PIX*, l_int32, l_int32, l_int32, l_int32, PIX**, L_DEWARPA**)</code>
      */
     int dewarpSinglePageInit(Pix pixs, int thresh, int adaptive, int useboth, int check_columns, PointerByReference ppixb, PointerByReference pdewa);
 
     /**
      * Original signature :
-     * <code>l_int32 dewarpSinglePageRun(PIX*, PIX*, L_DEWARPA*, PIX**, l_int32)</code>
+     * <code>l_ok dewarpSinglePageRun(PIX*, PIX*, L_DEWARPA*, PIX**, l_int32)</code>
      */
     int dewarpSinglePageRun(Pix pixs, Pix pixb, L_Dewarpa dewa, PointerByReference ppixd, int debug);
 
     /**
      * Original signature :
-     * <code>l_int32 dewarpaListPages(L_DEWARPA*)</code>
+     * <code>l_ok dewarpaListPages(L_DEWARPA*)</code>
      */
     int dewarpaListPages(L_Dewarpa dewa);
 
     /**
      * Original signature :
-     * <code>l_int32 dewarpaSetValidModels(L_DEWARPA*, l_int32, l_int32)</code>
+     * <code>l_ok dewarpaSetValidModels(L_DEWARPA*, l_int32, l_int32)</code>
      */
     int dewarpaSetValidModels(L_Dewarpa dewa, int notests, int debug);
 
     /**
      * Original signature :
-     * <code>l_int32 dewarpaInsertRefModels(L_DEWARPA*, l_int32, l_int32)</code>
+     * <code>l_ok dewarpaInsertRefModels(L_DEWARPA*, l_int32, l_int32)</code>
      */
     int dewarpaInsertRefModels(L_Dewarpa dewa, int notests, int debug);
 
     /**
      * Original signature :
-     * <code>l_int32 dewarpaStripRefModels(L_DEWARPA*)</code>
+     * <code>l_ok dewarpaStripRefModels(L_DEWARPA*)</code>
      */
     int dewarpaStripRefModels(L_Dewarpa dewa);
 
     /**
      * Original signature :
-     * <code>l_int32 dewarpaRestoreModels(L_DEWARPA*)</code>
+     * <code>l_ok dewarpaRestoreModels(L_DEWARPA*)</code>
      */
     int dewarpaRestoreModels(L_Dewarpa dewa);
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 dewarpaInfo(FILE*, L_DEWARPA*)</code>
+//       * <code>l_ok dewarpaInfo(FILE*, L_DEWARPA*)</code>
 //       */
 //      int dewarpaInfo(FILE fp, L_Dewarpa dewa);
     /**
      * Original signature :
-     * <code>l_int32 dewarpaModelStats(L_DEWARPA*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
+     * <code>l_ok dewarpaModelStats(L_DEWARPA*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
      */
     int dewarpaModelStats(L_Dewarpa dewa, IntBuffer pnnone, IntBuffer pnvsuccess, IntBuffer pnvvalid, IntBuffer pnhsuccess, IntBuffer pnhvalid, IntBuffer pnref);
 
     /**
      * Original signature :
-     * <code>l_int32 dewarpaShowArrays(L_DEWARPA*, l_float32, l_int32, l_int32)</code>
+     * <code>l_ok dewarpaShowArrays(L_DEWARPA*, l_float32, l_int32, l_int32)</code>
      */
     int dewarpaShowArrays(L_Dewarpa dewa, float scalefact, int first, int last);
 
     /**
      * Original signature :
-     * <code>l_int32 dewarpDebug(L_DEWARP*, const char*, l_int32)</code>
+     * <code>l_ok dewarpDebug(L_DEWARP*, const char*, l_int32)</code>
      */
     int dewarpDebug(L_Dewarp dew, String subdirs, int index);
 
     /**
      * Original signature :
-     * <code>l_int32 dewarpShowResults(L_DEWARPA*, SARRAY*, BOXA*, l_int32, l_int32, const char*)</code>
+     * <code>l_ok dewarpShowResults(L_DEWARPA*, SARRAY*, BOXA*, l_int32, l_int32, const char*)</code>
      */
     int dewarpShowResults(L_Dewarpa dewa, Sarray sa, Boxa boxa, int firstpage, int lastpage, String pdfout);
 //  
@@ -3829,27 +3829,27 @@ public interface Leptonica extends Library, ILeptonica {
 //      L_Dna l_dnaClone(L_Dna da);
 //  
 //      /**
-//       * Original signature : <code>l_int32 l_dnaEmpty(L_DNA*)</code>
+//       * Original signature : <code>l_ok l_dnaEmpty(L_DNA*)</code>
 //       */
 //      int l_dnaEmpty(L_Dna da);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 l_dnaAddNumber(L_DNA*, l_float64)</code>
+//       * <code>l_ok l_dnaAddNumber(L_DNA*, l_float64)</code>
 //       */
 //      int l_dnaAddNumber(L_Dna da, double val);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 l_dnaInsertNumber(L_DNA*, l_int32, l_float64)</code>
+//       * <code>l_ok l_dnaInsertNumber(L_DNA*, l_int32, l_float64)</code>
 //       */
 //      int l_dnaInsertNumber(L_Dna da, int index, double val);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 l_dnaRemoveNumber(L_DNA*, l_int32)</code>
+//       * <code>l_ok l_dnaRemoveNumber(L_DNA*, l_int32)</code>
 //       */
 //      int l_dnaRemoveNumber(L_Dna da, int index);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 l_dnaReplaceNumber(L_DNA*, l_int32, l_float64)</code>
+//       * <code>l_ok l_dnaReplaceNumber(L_DNA*, l_int32, l_float64)</code>
 //       */
 //      int l_dnaReplaceNumber(L_Dna da, int index, double val);
 //  
@@ -3859,27 +3859,27 @@ public interface Leptonica extends Library, ILeptonica {
 //      int l_dnaGetCount(L_Dna da);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 l_dnaSetCount(L_DNA*, l_int32)</code>
+//       * <code>l_ok l_dnaSetCount(L_DNA*, l_int32)</code>
 //       */
 //      int l_dnaSetCount(L_Dna da, int newcount);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 l_dnaGetDValue(L_DNA*, l_int32, l_float64*)</code>
+//       * <code>l_ok l_dnaGetDValue(L_DNA*, l_int32, l_float64*)</code>
 //       */
 //      int l_dnaGetDValue(L_Dna da, int index, DoubleBuffer pval);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 l_dnaGetIValue(L_DNA*, l_int32, l_int32*)</code>
+//       * <code>l_ok l_dnaGetIValue(L_DNA*, l_int32, l_int32*)</code>
 //       */
 //      int l_dnaGetIValue(L_Dna da, int index, IntBuffer pival);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 l_dnaSetValue(L_DNA*, l_int32, l_float64)</code>
+//       * <code>l_ok l_dnaSetValue(L_DNA*, l_int32, l_float64)</code>
 //       */
 //      int l_dnaSetValue(L_Dna da, int index, double val);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 l_dnaShiftValue(L_DNA*, l_int32, l_float64)</code>
+//       * <code>l_ok l_dnaShiftValue(L_DNA*, l_int32, l_float64)</code>
 //       */
 //      int l_dnaShiftValue(L_Dna da, int index, double diff);
 //  
@@ -3899,22 +3899,22 @@ public interface Leptonica extends Library, ILeptonica {
 //      int l_dnaGetRefcount(L_Dna da);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 l_dnaChangeRefcount(L_DNA*, l_int32)</code>
+//       * <code>l_ok l_dnaChangeRefcount(L_DNA*, l_int32)</code>
 //       */
 //      int l_dnaChangeRefcount(L_Dna da, int delta);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 l_dnaGetParameters(L_DNA*, l_float64*, l_float64*)</code>
+//       * <code>l_ok l_dnaGetParameters(L_DNA*, l_float64*, l_float64*)</code>
 //       */
 //      int l_dnaGetParameters(L_Dna da, DoubleBuffer pstartx, DoubleBuffer pdelx);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 l_dnaSetParameters(L_DNA*, l_float64, l_float64)</code>
+//       * <code>l_ok l_dnaSetParameters(L_DNA*, l_float64, l_float64)</code>
 //       */
 //      int l_dnaSetParameters(L_Dna da, double startx, double delx);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 l_dnaCopyParameters(L_DNA*, L_DNA*)</code>
+//       * <code>l_ok l_dnaCopyParameters(L_DNA*, L_DNA*)</code>
 //       */
 //      int l_dnaCopyParameters(L_Dna dad, L_Dna das);
 //  
@@ -3929,12 +3929,12 @@ public interface Leptonica extends Library, ILeptonica {
 //      L_Dna l_dnaReadStream(FILE fp);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 l_dnaWrite(const char*, L_DNA*)</code>
+//       * <code>l_ok l_dnaWrite(const char*, L_DNA*)</code>
 //       */
 //      int l_dnaWrite(String filename, L_Dna da);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 l_dnaWriteStream(FILE*, L_DNA*)</code>
+//       * <code>l_ok l_dnaWriteStream(FILE*, L_DNA*)</code>
 //       */
 //      int l_dnaWriteStream(FILE fp, L_Dna da);
 //  
@@ -3949,7 +3949,7 @@ public interface Leptonica extends Library, ILeptonica {
     L_Dnaa l_dnaaCreateFull(int nptr, int n);
 
     /**
-     * Original signature : <code>l_int32 l_dnaaTruncate(L_DNAA*)</code>
+     * Original signature : <code>l_ok l_dnaaTruncate(L_DNAA*)</code>
      */
     int l_dnaaTruncate(L_Dnaa daa);
 //  
@@ -3960,7 +3960,7 @@ public interface Leptonica extends Library, ILeptonica {
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 l_dnaaAddDna(L_DNAA*, L_DNA*, l_int32)</code>
+//       * <code>l_ok l_dnaaAddDna(L_DNAA*, L_DNA*, l_int32)</code>
 //       */
 //      int l_dnaaAddDna(L_Dnaa daa, L_Dna da, int copyflag);
 //  
@@ -3985,17 +3985,17 @@ public interface Leptonica extends Library, ILeptonica {
 //      L_Dna l_dnaaGetDna(L_Dnaa daa, int index, int accessflag);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 l_dnaaReplaceDna(L_DNAA*, l_int32, L_DNA*)</code>
+//       * <code>l_ok l_dnaaReplaceDna(L_DNAA*, l_int32, L_DNA*)</code>
 //       */
 //      int l_dnaaReplaceDna(L_Dnaa daa, int index, L_Dna da);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 l_dnaaGetValue(L_DNAA*, l_int32, l_int32, l_float64*)</code>
+//       * <code>l_ok l_dnaaGetValue(L_DNAA*, l_int32, l_int32, l_float64*)</code>
 //       */
 //      int l_dnaaGetValue(L_Dnaa daa, int i, int j, DoubleBuffer pval);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 l_dnaaAddNumber(L_DNAA*, l_int32, l_float64)</code>
+//       * <code>l_ok l_dnaaAddNumber(L_DNAA*, l_int32, l_float64)</code>
 //       */
 //      int l_dnaaAddNumber(L_Dnaa daa, int index, double val);
 //  
@@ -4010,17 +4010,17 @@ public interface Leptonica extends Library, ILeptonica {
 //      L_Dnaa l_dnaaReadStream(FILE fp);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 l_dnaaWrite(const char*, L_DNAA*)</code>
+//       * <code>l_ok l_dnaaWrite(const char*, L_DNAA*)</code>
 //       */
 //      int l_dnaaWrite(String filename, L_Dnaa daa);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 l_dnaaWriteStream(FILE*, L_DNAA*)</code>
+//       * <code>l_ok l_dnaaWriteStream(FILE*, L_DNAA*)</code>
 //       */
 //      int l_dnaaWriteStream(FILE fp, L_Dnaa daa);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 l_dnaJoin(L_DNA*, L_DNA*, l_int32, l_int32)</code>
+//       * <code>l_ok l_dnaJoin(L_DNA*, L_DNA*, l_int32, l_int32)</code>
 //       */
 //      int l_dnaJoin(L_Dna dad, L_Dna das, int istart, int iend);
     /**
@@ -4097,7 +4097,7 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 l_dnaHashAdd(L_DNAHASH*, l_uint64, l_float64)</code>
+     * <code>l_ok l_dnaHashAdd(L_DNAHASH*, l_uint64, l_float64)</code>
      */
     int l_dnaHashAdd(L_DnaHash dahash, long key, double value);
 
@@ -4109,13 +4109,13 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 l_dnaRemoveDupsByHash(L_DNA*, L_DNA**, L_DNAHASH**)</code>
+     * <code>l_ok l_dnaRemoveDupsByHash(L_DNA*, L_DNA**, L_DNAHASH**)</code>
      */
     int l_dnaRemoveDupsByHash(L_Dna das, PointerByReference pdad, PointerByReference pdahash);
 
     /**
      * Original signature :
-     * <code>l_int32 l_dnaMakeHistoByHash(L_DNA*, L_DNAHASH**, L_DNA**, L_DNA**)</code>
+     * <code>l_ok l_dnaMakeHistoByHash(L_DNA*, L_DNAHASH**, L_DNA**, L_DNA**)</code>
      */
     int l_dnaMakeHistoByHash(L_Dna das, PointerByReference pdahash, PointerByReference pdav, PointerByReference pdac);
 
@@ -4127,7 +4127,7 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 l_dnaFindValByHash(L_DNA*, L_DNAHASH*, l_float64, l_int32*)</code>
+     * <code>l_ok l_dnaFindValByHash(L_DNA*, L_DNAHASH*, l_float64, l_int32*)</code>
      */
     int l_dnaFindValByHash(L_Dna da, L_DnaHash dahash, double val, IntBuffer pindex);
 
@@ -4163,7 +4163,7 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixMeasureEdgeSmoothness(PIX*, l_int32, l_int32, l_int32, l_float32*, l_float32*, l_float32*, const char*)</code>
+     * <code>l_ok pixMeasureEdgeSmoothness(PIX*, l_int32, l_int32, l_int32, l_float32*, l_float32*, l_float32*, const char*)</code>
      */
     int pixMeasureEdgeSmoothness(Pix pixs, int side, int minjump, int minreversal, FloatBuffer pjpl, FloatBuffer pjspl, FloatBuffer prpl, String debugfile);
 
@@ -4365,19 +4365,19 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 fhmtautogen(SELA*, l_int32, const char*)</code>
+     * <code>l_ok fhmtautogen(SELA*, l_int32, const char*)</code>
      */
     int fhmtautogen(Sela sela, int fileindex, String filename);
 
     /**
      * Original signature :
-     * <code>l_int32 fhmtautogen1(SELA*, l_int32, const char*)</code>
+     * <code>l_ok fhmtautogen1(SELA*, l_int32, const char*)</code>
      */
     int fhmtautogen1(Sela sela, int fileindex, String filename);
 
     /**
      * Original signature :
-     * <code>l_int32 fhmtautogen2(SELA*, l_int32, const char*)</code>
+     * <code>l_ok fhmtautogen2(SELA*, l_int32, const char*)</code>
      */
     int fhmtautogen2(Sela sela, int fileindex, String filename);
 
@@ -4401,61 +4401,61 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixItalicWords(PIX*, BOXA*, PIX*, BOXA**, l_int32)</code>
+     * <code>l_ok pixItalicWords(PIX*, BOXA*, PIX*, BOXA**, l_int32)</code>
      */
     int pixItalicWords(Pix pixs, Boxa boxaw, Pix pixw, PointerByReference pboxa, int debugflag);
 
     /**
      * Original signature :
-     * <code>l_int32 pixOrientDetect(PIX*, l_float32*, l_float32*, l_int32, l_int32)</code>
+     * <code>l_ok pixOrientDetect(PIX*, l_float32*, l_float32*, l_int32, l_int32)</code>
      */
     int pixOrientDetect(Pix pixs, FloatBuffer pupconf, FloatBuffer pleftconf, int mincount, int debug);
 
     /**
      * Original signature :
-     * <code>l_int32 makeOrientDecision(l_float32, l_float32, l_float32, l_float32, l_int32*, l_int32)</code>
+     * <code>l_ok makeOrientDecision(l_float32, l_float32, l_float32, l_float32, l_int32*, l_int32)</code>
      */
     int makeOrientDecision(float upconf, float leftconf, float minupconf, float minratio, IntBuffer porient, int debug);
 
     /**
      * Original signature :
-     * <code>l_int32 pixUpDownDetect(PIX*, l_float32*, l_int32, l_int32)</code>
+     * <code>l_ok pixUpDownDetect(PIX*, l_float32*, l_int32, l_int32)</code>
      */
     int pixUpDownDetect(Pix pixs, FloatBuffer pconf, int mincount, int debug);
 
     /**
      * Original signature :
-     * <code>l_int32 pixUpDownDetectGeneral(PIX*, l_float32*, l_int32, l_int32, l_int32)</code>
+     * <code>l_ok pixUpDownDetectGeneral(PIX*, l_float32*, l_int32, l_int32, l_int32)</code>
      */
     int pixUpDownDetectGeneral(Pix pixs, FloatBuffer pconf, int mincount, int npixels, int debug);
 
     /**
      * Original signature :
-     * <code>l_int32 pixOrientDetectDwa(PIX*, l_float32*, l_float32*, l_int32, l_int32)</code>
+     * <code>l_ok pixOrientDetectDwa(PIX*, l_float32*, l_float32*, l_int32, l_int32)</code>
      */
     int pixOrientDetectDwa(Pix pixs, FloatBuffer pupconf, FloatBuffer pleftconf, int mincount, int debug);
 
     /**
      * Original signature :
-     * <code>l_int32 pixUpDownDetectDwa(PIX*, l_float32*, l_int32, l_int32)</code>
+     * <code>l_ok pixUpDownDetectDwa(PIX*, l_float32*, l_int32, l_int32)</code>
      */
     int pixUpDownDetectDwa(Pix pixs, FloatBuffer pconf, int mincount, int debug);
 
     /**
      * Original signature :
-     * <code>l_int32 pixUpDownDetectGeneralDwa(PIX*, l_float32*, l_int32, l_int32, l_int32)</code>
+     * <code>l_ok pixUpDownDetectGeneralDwa(PIX*, l_float32*, l_int32, l_int32, l_int32)</code>
      */
     int pixUpDownDetectGeneralDwa(Pix pixs, FloatBuffer pconf, int mincount, int npixels, int debug);
 
     /**
      * Original signature :
-     * <code>l_int32 pixMirrorDetect(PIX*, l_float32*, l_int32, l_int32)</code>
+     * <code>l_ok pixMirrorDetect(PIX*, l_float32*, l_int32, l_int32)</code>
      */
     int pixMirrorDetect(Pix pixs, FloatBuffer pconf, int mincount, int debug);
 
     /**
      * Original signature :
-     * <code>l_int32 pixMirrorDetectDwa(PIX*, l_float32*, l_int32, l_int32)</code>
+     * <code>l_ok pixMirrorDetectDwa(PIX*, l_float32*, l_int32, l_int32)</code>
      */
     int pixMirrorDetectDwa(Pix pixs, FloatBuffer pconf, int mincount, int debug);
 
@@ -4467,19 +4467,19 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 fmorphautogen(SELA*, l_int32, const char*)</code>
+     * <code>l_ok fmorphautogen(SELA*, l_int32, const char*)</code>
      */
     int fmorphautogen(Sela sela, int fileindex, String filename);
 
     /**
      * Original signature :
-     * <code>l_int32 fmorphautogen1(SELA*, l_int32, const char*)</code>
+     * <code>l_ok fmorphautogen1(SELA*, l_int32, const char*)</code>
      */
     int fmorphautogen1(Sela sela, int fileindex, String filename);
 
     /**
      * Original signature :
-     * <code>l_int32 fmorphautogen2(SELA*, l_int32, const char*)</code>
+     * <code>l_ok fmorphautogen2(SELA*, l_int32, const char*)</code>
      */
     int fmorphautogen2(Sela sela, int fileindex, String filename);
 
@@ -4522,7 +4522,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      FPix fpixCopy(FPix fpixd, FPix fpixs);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 fpixResizeImageData(FPIX*, FPIX*)</code>
+//       * <code>l_ok fpixResizeImageData(FPIX*, FPIX*)</code>
 //       */
 //      int fpixResizeImageData(FPix fpixd, FPix fpixs);
 //  
@@ -4532,12 +4532,12 @@ public interface Leptonica extends Library, ILeptonica {
 //      void fpixDestroy(PointerByReference pfpix);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 fpixGetDimensions(FPIX*, l_int32*, l_int32*)</code>
+//       * <code>l_ok fpixGetDimensions(FPIX*, l_int32*, l_int32*)</code>
 //       */
 //      int fpixGetDimensions(FPix fpix, IntBuffer pw, IntBuffer ph);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 fpixSetDimensions(FPIX*, l_int32, l_int32)</code>
+//       * <code>l_ok fpixSetDimensions(FPIX*, l_int32, l_int32)</code>
 //       */
 //      int fpixSetDimensions(FPix fpix, int w, int h);
 //  
@@ -4547,7 +4547,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      int fpixGetWpl(FPix fpix);
 //  
 //      /**
-//       * Original signature : <code>l_int32 fpixSetWpl(FPIX*, l_int32)</code>
+//       * Original signature : <code>l_ok fpixSetWpl(FPIX*, l_int32)</code>
 //       */
 //      int fpixSetWpl(FPix fpix, int wpl);
 //  
@@ -4557,22 +4557,22 @@ public interface Leptonica extends Library, ILeptonica {
 //      int fpixGetRefcount(FPix fpix);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 fpixChangeRefcount(FPIX*, l_int32)</code>
+//       * <code>l_ok fpixChangeRefcount(FPIX*, l_int32)</code>
 //       */
 //      int fpixChangeRefcount(FPix fpix, int delta);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 fpixGetResolution(FPIX*, l_int32*, l_int32*)</code>
+//       * <code>l_ok fpixGetResolution(FPIX*, l_int32*, l_int32*)</code>
 //       */
 //      int fpixGetResolution(FPix fpix, IntBuffer pxres, IntBuffer pyres);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 fpixSetResolution(FPIX*, l_int32, l_int32)</code>
+//       * <code>l_ok fpixSetResolution(FPIX*, l_int32, l_int32)</code>
 //       */
 //      int fpixSetResolution(FPix fpix, int xres, int yres);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 fpixCopyResolution(FPIX*, FPIX*)</code>
+//       * <code>l_ok fpixCopyResolution(FPIX*, FPIX*)</code>
 //       */
 //      int fpixCopyResolution(FPix fpixd, FPix fpixs);
 //  
@@ -4582,17 +4582,17 @@ public interface Leptonica extends Library, ILeptonica {
 //      FloatByReference fpixGetData(FPix fpix);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 fpixSetData(FPIX*, l_float32*)</code>
+//       * <code>l_ok fpixSetData(FPIX*, l_float32*)</code>
 //       */
 //      int fpixSetData(FPix fpix, FloatBuffer data);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 fpixGetPixel(FPIX*, l_int32, l_int32, l_float32*)</code>
+//       * <code>l_ok fpixGetPixel(FPIX*, l_int32, l_int32, l_float32*)</code>
 //       */
 //      int fpixGetPixel(FPix fpix, int x, int y, FloatBuffer pval);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 fpixSetPixel(FPIX*, l_int32, l_int32, l_float32)</code>
+//       * <code>l_ok fpixSetPixel(FPIX*, l_int32, l_int32, l_float32)</code>
 //       */
 //      int fpixSetPixel(FPix fpix, int x, int y, float val);
 //  
@@ -4612,7 +4612,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      void fpixaDestroy(PointerByReference pfpixa);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 fpixaAddFPix(FPIXA*, FPIX*, l_int32)</code>
+//       * <code>l_ok fpixaAddFPix(FPIXA*, FPIX*, l_int32)</code>
 //       */
 //      int fpixaAddFPix(FPixa fpixa, FPix fpix, int copyflag);
 //  
@@ -4622,7 +4622,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      int fpixaGetCount(FPixa fpixa);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 fpixaChangeRefcount(FPIXA*, l_int32)</code>
+//       * <code>l_ok fpixaChangeRefcount(FPIXA*, l_int32)</code>
 //       */
 //      int fpixaChangeRefcount(FPixa fpixa, int delta);
 //      /**
@@ -4632,7 +4632,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      FPix fpixaGetFPix(FPixa fpixa, int index, int accesstype);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 fpixaGetFPixDimensions(FPIXA*, l_int32, l_int32*, l_int32*)</code>
+//       * <code>l_ok fpixaGetFPixDimensions(FPIXA*, l_int32, l_int32*, l_int32*)</code>
 //       */
 //      int fpixaGetFPixDimensions(FPixa fpixa, int index, IntBuffer pw, IntBuffer ph);
 //      /**
@@ -4642,12 +4642,12 @@ public interface Leptonica extends Library, ILeptonica {
 //      FloatByReference fpixaGetData(FPixa fpixa, int index);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 fpixaGetPixel(FPIXA*, l_int32, l_int32, l_int32, l_float32*)</code>
+//       * <code>l_ok fpixaGetPixel(FPIXA*, l_int32, l_int32, l_int32, l_float32*)</code>
 //       */
 //      int fpixaGetPixel(FPixa fpixa, int index, int x, int y, FloatBuffer pval);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 fpixaSetPixel(FPIXA*, l_int32, l_int32, l_int32, l_float32)</code>
+//       * <code>l_ok fpixaSetPixel(FPIXA*, l_int32, l_int32, l_int32, l_float32)</code>
 //       */
 //      int fpixaSetPixel(FPixa fpixa, int index, int x, int y, float val);
 //  
@@ -4672,7 +4672,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      DPix dpixCopy(DPix dpixd, DPix dpixs);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 dpixResizeImageData(DPIX*, DPIX*)</code>
+//       * <code>l_ok dpixResizeImageData(DPIX*, DPIX*)</code>
 //       */
 //      int dpixResizeImageData(DPix dpixd, DPix dpixs);
 //  
@@ -4682,12 +4682,12 @@ public interface Leptonica extends Library, ILeptonica {
 //      void dpixDestroy(PointerByReference pdpix);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 dpixGetDimensions(DPIX*, l_int32*, l_int32*)</code>
+//       * <code>l_ok dpixGetDimensions(DPIX*, l_int32*, l_int32*)</code>
 //       */
 //      int dpixGetDimensions(DPix dpix, IntBuffer pw, IntBuffer ph);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 dpixSetDimensions(DPIX*, l_int32, l_int32)</code>
+//       * <code>l_ok dpixSetDimensions(DPIX*, l_int32, l_int32)</code>
 //       */
 //      int dpixSetDimensions(DPix dpix, int w, int h);
 //  
@@ -4697,7 +4697,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      int dpixGetWpl(DPix dpix);
 //  
 //      /**
-//       * Original signature : <code>l_int32 dpixSetWpl(DPIX*, l_int32)</code>
+//       * Original signature : <code>l_ok dpixSetWpl(DPIX*, l_int32)</code>
 //       */
 //      int dpixSetWpl(DPix dpix, int wpl);
 //  
@@ -4707,22 +4707,22 @@ public interface Leptonica extends Library, ILeptonica {
 //      int dpixGetRefcount(DPix dpix);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 dpixChangeRefcount(DPIX*, l_int32)</code>
+//       * <code>l_ok dpixChangeRefcount(DPIX*, l_int32)</code>
 //       */
 //      int dpixChangeRefcount(DPix dpix, int delta);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 dpixGetResolution(DPIX*, l_int32*, l_int32*)</code>
+//       * <code>l_ok dpixGetResolution(DPIX*, l_int32*, l_int32*)</code>
 //       */
 //      int dpixGetResolution(DPix dpix, IntBuffer pxres, IntBuffer pyres);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 dpixSetResolution(DPIX*, l_int32, l_int32)</code>
+//       * <code>l_ok dpixSetResolution(DPIX*, l_int32, l_int32)</code>
 //       */
 //      int dpixSetResolution(DPix dpix, int xres, int yres);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 dpixCopyResolution(DPIX*, DPIX*)</code>
+//       * <code>l_ok dpixCopyResolution(DPIX*, DPIX*)</code>
 //       */
 //      int dpixCopyResolution(DPix dpixd, DPix dpixs);
 //  
@@ -4732,17 +4732,17 @@ public interface Leptonica extends Library, ILeptonica {
 //      DoubleByReference dpixGetData(DPix dpix);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 dpixSetData(DPIX*, l_float64*)</code>
+//       * <code>l_ok dpixSetData(DPIX*, l_float64*)</code>
 //       */
 //      int dpixSetData(DPix dpix, DoubleBuffer data);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 dpixGetPixel(DPIX*, l_int32, l_int32, l_float64*)</code>
+//       * <code>l_ok dpixGetPixel(DPIX*, l_int32, l_int32, l_float64*)</code>
 //       */
 //      int dpixGetPixel(DPix dpix, int x, int y, DoubleBuffer pval);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 dpixSetPixel(DPIX*, l_int32, l_int32, l_float64)</code>
+//       * <code>l_ok dpixSetPixel(DPIX*, l_int32, l_int32, l_float64)</code>
 //       */
 //      int dpixSetPixel(DPix dpix, int x, int y, double val);
 //  
@@ -4763,17 +4763,17 @@ public interface Leptonica extends Library, ILeptonica {
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 fpixWrite(const char*, FPIX*)</code>
+//       * <code>l_ok fpixWrite(const char*, FPIX*)</code>
 //       */
 //      int fpixWrite(String filename, FPix fpix);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 fpixWriteStream(FILE*, FPIX*)</code>
+//       * <code>l_ok fpixWriteStream(FILE*, FPIX*)</code>
 //       */
 //      int fpixWriteStream(FILE fp, FPix fpix);
     /**
      * Original signature :
-     * <code>l_int32 fpixWriteMem(l_uint8**, size_t*, FPIX*)</code>
+     * <code>l_ok fpixWriteMem(l_uint8**, size_t*, FPIX*)</code>
      */
     int fpixWriteMem(PointerByReference pdata, NativeSizeByReference psize, FPix fpix);
 
@@ -4800,17 +4800,17 @@ public interface Leptonica extends Library, ILeptonica {
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 dpixWrite(const char*, DPIX*)</code>
+//       * <code>l_ok dpixWrite(const char*, DPIX*)</code>
 //       */
 //      int dpixWrite(String filename, DPix dpix);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 dpixWriteStream(FILE*, DPIX*)</code>
+//       * <code>l_ok dpixWriteStream(FILE*, DPIX*)</code>
 //       */
 //      int dpixWriteStream(FILE fp, DPix dpix);
     /**
      * Original signature :
-     * <code>l_int32 dpixWriteMem(l_uint8**, size_t*, DPIX*)</code>
+     * <code>l_ok dpixWriteMem(l_uint8**, size_t*, DPIX*)</code>
      */
     int dpixWriteMem(PointerByReference pdata, NativeSizeByReference psize, DPix dpix);
 
@@ -4821,7 +4821,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      DPix dpixEndianByteSwap(DPix dpixd, DPix dpixs);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 fpixPrintStream(FILE*, FPIX*, l_int32)</code>
+//       * <code>l_ok fpixPrintStream(FILE*, FPIX*, l_int32)</code>
 //       */
 //      int fpixPrintStream(FILE fp, FPix fpix, int factor);
 //      /**
@@ -4861,22 +4861,22 @@ public interface Leptonica extends Library, ILeptonica {
 //      FPix dpixConvertToFPix(DPix dpix);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 fpixGetMin(FPIX*, l_float32*, l_int32*, l_int32*)</code>
+//       * <code>l_ok fpixGetMin(FPIX*, l_float32*, l_int32*, l_int32*)</code>
 //       */
 //      int fpixGetMin(FPix fpix, FloatBuffer pminval, IntBuffer pxminloc, IntBuffer pyminloc);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 fpixGetMax(FPIX*, l_float32*, l_int32*, l_int32*)</code>
+//       * <code>l_ok fpixGetMax(FPIX*, l_float32*, l_int32*, l_int32*)</code>
 //       */
 //      int fpixGetMax(FPix fpix, FloatBuffer pmaxval, IntBuffer pxmaxloc, IntBuffer pymaxloc);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 dpixGetMin(DPIX*, l_float64*, l_int32*, l_int32*)</code>
+//       * <code>l_ok dpixGetMin(DPIX*, l_float64*, l_int32*, l_int32*)</code>
 //       */
 //      int dpixGetMin(DPix dpix, DoubleBuffer pminval, IntBuffer pxminloc, IntBuffer pyminloc);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 dpixGetMax(DPIX*, l_float64*, l_int32*, l_int32*)</code>
+//       * <code>l_ok dpixGetMax(DPIX*, l_float64*, l_int32*, l_int32*)</code>
 //       */
 //      int dpixGetMax(DPix dpix, DoubleBuffer pmaxval, IntBuffer pxmaxloc, IntBuffer pymaxloc);
 //      /**
@@ -4896,7 +4896,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      FPix fpixLinearCombination(FPix fpixd, FPix fpixs1, FPix fpixs2, float a, float b);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 fpixAddMultConstant(FPIX*, l_float32, l_float32)</code>
+//       * <code>l_ok fpixAddMultConstant(FPIX*, l_float32, l_float32)</code>
 //       */
 //      int fpixAddMultConstant(FPix fpix, float addc, float multc);
 //      /**
@@ -4906,17 +4906,17 @@ public interface Leptonica extends Library, ILeptonica {
 //      DPix dpixLinearCombination(DPix dpixd, DPix dpixs1, DPix dpixs2, float a, float b);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 dpixAddMultConstant(DPIX*, l_float64, l_float64)</code>
+//       * <code>l_ok dpixAddMultConstant(DPIX*, l_float64, l_float64)</code>
 //       */
 //      int dpixAddMultConstant(DPix dpix, double addc, double multc);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 fpixSetAllArbitrary(FPIX*, l_float32)</code>
+//       * <code>l_ok fpixSetAllArbitrary(FPIX*, l_float32)</code>
 //       */
 //      int fpixSetAllArbitrary(FPix fpix, float inval);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 dpixSetAllArbitrary(DPIX*, l_float64)</code>
+//       * <code>l_ok dpixSetAllArbitrary(DPIX*, l_float64)</code>
 //       */
 //      int dpixSetAllArbitrary(DPix dpix, double inval);
 //      /**
@@ -4946,7 +4946,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      FPix fpixAddSlopeBorder(FPix fpixs, int left, int right, int top, int bot);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 fpixRasterop(FPIX*, l_int32, l_int32, l_int32, l_int32, FPIX*, l_int32, l_int32)</code>
+//       * <code>l_ok fpixRasterop(FPIX*, l_int32, l_int32, l_int32, l_int32, FPIX*, l_int32, l_int32)</code>
 //       */
 //      int fpixRasterop(FPix fpixd, int dx, int dy, int dw, int dh, FPix fpixs, int sx, int sy);
 //      /**
@@ -4996,7 +4996,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      FPix fpixProjective(FPix fpixs, FloatBuffer vc, float inval);
     /**
      * Original signature :
-     * <code>l_int32 linearInterpolatePixelFloat(l_float32*, l_int32, l_int32, l_float32, l_float32, l_float32, l_float32*)</code>
+     * <code>l_ok linearInterpolatePixelFloat(l_float32*, l_int32, l_int32, l_float32, l_float32, l_float32, l_float32*)</code>
      */
     int linearInterpolatePixelFloat(FloatBuffer datas, int w, int h, float x, float y, float inval, FloatBuffer pval);
 
@@ -5019,7 +5019,7 @@ public interface Leptonica extends Library, ILeptonica {
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixWriteStreamGif(FILE*, PIX*)</code>
+//       * <code>l_ok pixWriteStreamGif(FILE*, PIX*)</code>
 //       */
 //      int pixWriteStreamGif(FILE fp, Pix pix);
     /**
@@ -5030,7 +5030,7 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixWriteMemGif(l_uint8**, size_t*, PIX*)</code>
+     * <code>l_ok pixWriteMemGif(l_uint8**, size_t*, PIX*)</code>
      */
     int pixWriteMemGif(PointerByReference pdata, NativeSizeByReference psize, Pix pix);
 
@@ -5046,57 +5046,57 @@ public interface Leptonica extends Library, ILeptonica {
 //      void gplotDestroy(PointerByReference pgplot);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 gplotAddPlot(GPLOT*, NUMA*, NUMA*, l_int32, const char*)</code>
+//       * <code>l_ok gplotAddPlot(GPLOT*, NUMA*, NUMA*, l_int32, const char*)</code>
 //       */
 //      int gplotAddPlot(GPlot gplot, Numa nax, Numa nay, int plotstyle, String plottitle);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 gplotSetScaling(GPLOT*, l_int32)</code>
+//       * <code>l_ok gplotSetScaling(GPLOT*, l_int32)</code>
 //       */
 //      int gplotSetScaling(GPlot gplot, int scaling);
 //  
 //      /**
-//       * Original signature : <code>l_int32 gplotMakeOutput(GPLOT*)</code>
+//       * Original signature : <code>l_ok gplotMakeOutput(GPLOT*)</code>
 //       */
 //      int gplotMakeOutput(GPlot gplot);
 //  
 //      /**
-//       * Original signature : <code>l_int32 gplotGenCommandFile(GPLOT*)</code>
+//       * Original signature : <code>l_ok gplotGenCommandFile(GPLOT*)</code>
 //       */
 //      int gplotGenCommandFile(GPlot gplot);
 //  
 //      /**
-//       * Original signature : <code>l_int32 gplotGenDataFiles(GPLOT*)</code>
+//       * Original signature : <code>l_ok gplotGenDataFiles(GPLOT*)</code>
 //       */
 //      int gplotGenDataFiles(GPlot gplot);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 gplotSimple1(NUMA*, l_int32, const char*, const char*)</code>
+//       * <code>l_ok gplotSimple1(NUMA*, l_int32, const char*, const char*)</code>
 //       */
 //      int gplotSimple1(Numa na, int outformat, String outroot, String title);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 gplotSimple2(NUMA*, NUMA*, l_int32, const char*, const char*)</code>
+//       * <code>l_ok gplotSimple2(NUMA*, NUMA*, l_int32, const char*, const char*)</code>
 //       */
 //      int gplotSimple2(Numa na1, Numa na2, int outformat, String outroot, String title);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 gplotSimpleN(NUMAA*, l_int32, const char*, const char*)</code>
+//       * <code>l_ok gplotSimpleN(NUMAA*, l_int32, const char*, const char*)</code>
 //       */
 //      int gplotSimpleN(Numaa naa, int outformat, String outroot, String title);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 gplotSimpleXY1(NUMA*, NUMA*, l_int32, l_int32, const char*, const char*)</code>
+//       * <code>l_ok gplotSimpleXY1(NUMA*, NUMA*, l_int32, l_int32, const char*, const char*)</code>
 //       */
 //      int gplotSimpleXY1(Numa nax, Numa nay, int plotstyle, int outformat, String outroot, String title);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 gplotSimpleXY2(NUMA*, NUMA*, NUMA*, l_int32, l_int32, const char*, const char*)</code>
+//       * <code>l_ok gplotSimpleXY2(NUMA*, NUMA*, NUMA*, l_int32, l_int32, const char*, const char*)</code>
 //       */
 //      int gplotSimpleXY2(Numa nax, Numa nay1, Numa nay2, int plotstyle, int outformat, String outroot, String title);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 gplotSimpleXYN(NUMA*, NUMAA*, l_int32, l_int32, const char*, const char*)</code>
+//       * <code>l_ok gplotSimpleXYN(NUMA*, NUMAA*, l_int32, l_int32, const char*, const char*)</code>
 //       */
 //      int gplotSimpleXYN(Numa nax, Numaa naay, int plotstyle, int outformat, String outroot, String title);
 //  
@@ -5106,7 +5106,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      GPlot gplotRead(String filename);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 gplotWrite(const char*, GPLOT*)</code>
+//       * <code>l_ok gplotWrite(const char*, GPLOT*)</code>
 //       */
 //      int gplotWrite(String filename, GPlot gplot);
 //      /**
@@ -5182,12 +5182,12 @@ public interface Leptonica extends Library, ILeptonica {
 //      Pta generatePtaLineFromPt(int x, int y, double length, double radang);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 locatePtRadially(l_int32, l_int32, l_float64, l_float64, l_float64*, l_float64*)</code>
+//       * <code>l_ok locatePtRadially(l_int32, l_int32, l_float64, l_float64, l_float64*, l_float64*)</code>
 //       */
 //      int locatePtRadially(int xr, int yr, double dist, double radang, DoubleBuffer px, DoubleBuffer py);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixRenderPlotFromNuma(PIX**, NUMA*, l_int32, l_int32, l_int32, l_uint32)</code>
+//       * <code>l_ok pixRenderPlotFromNuma(PIX**, NUMA*, l_int32, l_int32, l_int32, l_uint32)</code>
 //       */
 //      int pixRenderPlotFromNuma(PointerByReference ppix, Numa na, int plotloc, int linewidth, int max, int color);
 //      /**
@@ -5197,7 +5197,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      Pta makePlotPtaFromNuma(Numa na, int size, int plotloc, int linewidth, int max);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixRenderPlotFromNumaGen(PIX**, NUMA*, l_int32, l_int32, l_int32, l_int32, l_int32, l_uint32)</code>
+//       * <code>l_ok pixRenderPlotFromNumaGen(PIX**, NUMA*, l_int32, l_int32, l_int32, l_int32, l_int32, l_uint32)</code>
 //       */
 //      int pixRenderPlotFromNumaGen(PointerByReference ppix, Numa na, int orient, int linewidth, int refpos, int max, int drawref, int color);
 //      /**
@@ -5207,136 +5207,136 @@ public interface Leptonica extends Library, ILeptonica {
 //      Pta makePlotPtaFromNumaGen(Numa na, int orient, int linewidth, int refpos, int max, int drawref);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixRenderPta(PIX*, PTA*, l_int32)</code>
+//       * <code>l_ok pixRenderPta(PIX*, PTA*, l_int32)</code>
 //       */
 //      int pixRenderPta(Pix pix, Pta pta, int op);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixRenderPtaArb(PIX*, PTA*, l_uint8, l_uint8, l_uint8)</code>
+//       * <code>l_ok pixRenderPtaArb(PIX*, PTA*, l_uint8, l_uint8, l_uint8)</code>
 //       */
 //      int pixRenderPtaArb(Pix pix, Pta pta, byte rval, byte gval, byte bval);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixRenderPtaBlend(PIX*, PTA*, l_uint8, l_uint8, l_uint8, l_float32)</code>
+//       * <code>l_ok pixRenderPtaBlend(PIX*, PTA*, l_uint8, l_uint8, l_uint8, l_float32)</code>
 //       */
 //      int pixRenderPtaBlend(Pix pix, Pta pta, byte rval, byte gval, byte bval, float fract);
     /**
      * Original signature :
-     * <code>l_int32 pixRenderLine(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32)</code>
+     * <code>l_ok pixRenderLine(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32)</code>
      */
     int pixRenderLine(Pix pix, int x1, int y1, int x2, int y2, int width, int op);
 
     /**
      * Original signature :
-     * <code>l_int32 pixRenderLineArb(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_uint8, l_uint8, l_uint8)</code>
+     * <code>l_ok pixRenderLineArb(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_uint8, l_uint8, l_uint8)</code>
      */
     int pixRenderLineArb(Pix pix, int x1, int y1, int x2, int y2, int width, byte rval, byte gval, byte bval);
 
     /**
      * Original signature :
-     * <code>l_int32 pixRenderLineBlend(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_uint8, l_uint8, l_uint8, l_float32)</code>
+     * <code>l_ok pixRenderLineBlend(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_uint8, l_uint8, l_uint8, l_float32)</code>
      */
     int pixRenderLineBlend(Pix pix, int x1, int y1, int x2, int y2, int width, byte rval, byte gval, byte bval, float fract);
 
     /**
      * Original signature :
-     * <code>l_int32 pixRenderBox(PIX*, BOX*, l_int32, l_int32)</code>
+     * <code>l_ok pixRenderBox(PIX*, BOX*, l_int32, l_int32)</code>
      */
     int pixRenderBox(Pix pix, Box box, int width, int op);
 
     /**
      * Original signature :
-     * <code>l_int32 pixRenderBoxArb(PIX*, BOX*, l_int32, l_uint8, l_uint8, l_uint8)</code>
+     * <code>l_ok pixRenderBoxArb(PIX*, BOX*, l_int32, l_uint8, l_uint8, l_uint8)</code>
      */
     int pixRenderBoxArb(Pix pix, Box box, int width, byte rval, byte gval, byte bval);
 
     /**
      * Original signature :
-     * <code>l_int32 pixRenderBoxBlend(PIX*, BOX*, l_int32, l_uint8, l_uint8, l_uint8, l_float32)</code>
+     * <code>l_ok pixRenderBoxBlend(PIX*, BOX*, l_int32, l_uint8, l_uint8, l_uint8, l_float32)</code>
      */
     int pixRenderBoxBlend(Pix pix, Box box, int width, byte rval, byte gval, byte bval, float fract);
 
     /**
      * Original signature :
-     * <code>l_int32 pixRenderBoxa(PIX*, BOXA*, l_int32, l_int32)</code>
+     * <code>l_ok pixRenderBoxa(PIX*, BOXA*, l_int32, l_int32)</code>
      */
     int pixRenderBoxa(Pix pix, Boxa boxa, int width, int op);
 
     /**
      * Original signature :
-     * <code>l_int32 pixRenderBoxaArb(PIX*, BOXA*, l_int32, l_uint8, l_uint8, l_uint8)</code>
+     * <code>l_ok pixRenderBoxaArb(PIX*, BOXA*, l_int32, l_uint8, l_uint8, l_uint8)</code>
      */
     int pixRenderBoxaArb(Pix pix, Boxa boxa, int width, byte rval, byte gval, byte bval);
 
     /**
      * Original signature :
-     * <code>l_int32 pixRenderBoxaBlend(PIX*, BOXA*, l_int32, l_uint8, l_uint8, l_uint8, l_float32, l_int32)</code>
+     * <code>l_ok pixRenderBoxaBlend(PIX*, BOXA*, l_int32, l_uint8, l_uint8, l_uint8, l_float32, l_int32)</code>
      */
     int pixRenderBoxaBlend(Pix pix, Boxa boxa, int width, byte rval, byte gval, byte bval, float fract, int removedups);
 
     /**
      * Original signature :
-     * <code>l_int32 pixRenderHashBox(PIX*, BOX*, l_int32, l_int32, l_int32, l_int32, l_int32)</code>
+     * <code>l_ok pixRenderHashBox(PIX*, BOX*, l_int32, l_int32, l_int32, l_int32, l_int32)</code>
      */
     int pixRenderHashBox(Pix pix, Box box, int spacing, int width, int orient, int outline, int op);
 
     /**
      * Original signature :
-     * <code>l_int32 pixRenderHashBoxArb(PIX*, BOX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32)</code>
+     * <code>l_ok pixRenderHashBoxArb(PIX*, BOX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32)</code>
      */
     int pixRenderHashBoxArb(Pix pix, Box box, int spacing, int width, int orient, int outline, int rval, int gval, int bval);
 
     /**
      * Original signature :
-     * <code>l_int32 pixRenderHashBoxBlend(PIX*, BOX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_float32)</code>
+     * <code>l_ok pixRenderHashBoxBlend(PIX*, BOX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_float32)</code>
      */
     int pixRenderHashBoxBlend(Pix pix, Box box, int spacing, int width, int orient, int outline, int rval, int gval, int bval, float fract);
 
     /**
      * Original signature :
-     * <code>l_int32 pixRenderHashMaskArb(PIX*, PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32)</code>
+     * <code>l_ok pixRenderHashMaskArb(PIX*, PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32)</code>
      */
     int pixRenderHashMaskArb(Pix pix, Pix pixm, int x, int y, int spacing, int width, int orient, int outline, int rval, int gval, int bval);
 
     /**
      * Original signature :
-     * <code>l_int32 pixRenderHashBoxa(PIX*, BOXA*, l_int32, l_int32, l_int32, l_int32, l_int32)</code>
+     * <code>l_ok pixRenderHashBoxa(PIX*, BOXA*, l_int32, l_int32, l_int32, l_int32, l_int32)</code>
      */
     int pixRenderHashBoxa(Pix pix, Boxa boxa, int spacing, int width, int orient, int outline, int op);
 
     /**
      * Original signature :
-     * <code>l_int32 pixRenderHashBoxaArb(PIX*, BOXA*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32)</code>
+     * <code>l_ok pixRenderHashBoxaArb(PIX*, BOXA*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32)</code>
      */
     int pixRenderHashBoxaArb(Pix pix, Boxa boxa, int spacing, int width, int orient, int outline, int rval, int gval, int bval);
 
     /**
      * Original signature :
-     * <code>l_int32 pixRenderHashBoxaBlend(PIX*, BOXA*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_float32)</code>
+     * <code>l_ok pixRenderHashBoxaBlend(PIX*, BOXA*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_float32)</code>
      */
     int pixRenderHashBoxaBlend(Pix pix, Boxa boxa, int spacing, int width, int orient, int outline, int rval, int gval, int bval, float fract);
 
     /**
      * Original signature :
-     * <code>l_int32 pixRenderPolyline(PIX*, PTA*, l_int32, l_int32, l_int32)</code>
+     * <code>l_ok pixRenderPolyline(PIX*, PTA*, l_int32, l_int32, l_int32)</code>
      */
     int pixRenderPolyline(Pix pix, Pta ptas, int width, int op, int closeflag);
 
     /**
      * Original signature :
-     * <code>l_int32 pixRenderPolylineArb(PIX*, PTA*, l_int32, l_uint8, l_uint8, l_uint8, l_int32)</code>
+     * <code>l_ok pixRenderPolylineArb(PIX*, PTA*, l_int32, l_uint8, l_uint8, l_uint8, l_int32)</code>
      */
     int pixRenderPolylineArb(Pix pix, Pta ptas, int width, byte rval, byte gval, byte bval, int closeflag);
 
     /**
      * Original signature :
-     * <code>l_int32 pixRenderPolylineBlend(PIX*, PTA*, l_int32, l_uint8, l_uint8, l_uint8, l_float32, l_int32, l_int32)</code>
+     * <code>l_ok pixRenderPolylineBlend(PIX*, PTA*, l_int32, l_uint8, l_uint8, l_uint8, l_float32, l_int32, l_int32)</code>
      */
     int pixRenderPolylineBlend(Pix pix, Pta ptas, int width, byte rval, byte gval, byte bval, float fract, int closeflag, int removedups);
 
     /**
      * Original signature :
-     * <code>l_int32 pixRenderGridArb(PIX*, l_int32, l_int32, l_int32, l_uint8, l_uint8, l_uint8)</code>
+     * <code>l_ok pixRenderGridArb(PIX*, l_int32, l_int32, l_int32, l_uint8, l_uint8, l_uint8)</code>
      */
     int pixRenderGridArb(Pix pix, int nx, int ny, int width, byte rval, byte gval, byte bval);
 
@@ -5519,7 +5519,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      IntByReference makeGrayQuantIndexTable(int nlevels);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 makeGrayQuantTableArb(NUMA*, l_int32, l_int32**, PIXCMAP**)</code>
+//       * <code>l_ok makeGrayQuantTableArb(NUMA*, l_int32, l_int32**, PIXCMAP**)</code>
 //       */
 //      int makeGrayQuantTableArb(Numa na, int outdepth, PointerByReference ptab, PointerByReference pcmap);
 //      /**
@@ -5566,7 +5566,7 @@ public interface Leptonica extends Library, ILeptonica {
     void lheapDestroy(PointerByReference plh, int freeflag);
 
     /**
-     * Original signature : <code>l_int32 lheapAdd(L_HEAP*, void*)</code>
+     * Original signature : <code>l_ok lheapAdd(L_HEAP*, void*)</code>
      */
     int lheapAdd(L_Heap lh, Pointer item);
 
@@ -5582,28 +5582,28 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 lheapSwapUp(L_HEAP*, l_int32)</code>
+     * <code>l_ok lheapSwapUp(L_HEAP*, l_int32)</code>
      */
     int lheapSwapUp(L_Heap lh, int index);
 
     /**
-     * Original signature : <code>l_int32 lheapSwapDown(L_HEAP*)</code>
+     * Original signature : <code>l_ok lheapSwapDown(L_HEAP*)</code>
      */
     int lheapSwapDown(L_Heap lh);
 
     /**
-     * Original signature : <code>l_int32 lheapSort(L_HEAP*)</code>
+     * Original signature : <code>l_ok lheapSort(L_HEAP*)</code>
      */
     int lheapSort(L_Heap lh);
 
     /**
      * Original signature :
-     * <code>l_int32 lheapSortStrictOrder(L_HEAP*)</code>
+     * <code>l_ok lheapSortStrictOrder(L_HEAP*)</code>
      */
     int lheapSortStrictOrder(L_Heap lh);
 //  
 //      /**
-//       * Original signature : <code>l_int32 lheapPrint(FILE*, L_HEAP*)</code>
+//       * Original signature : <code>l_ok lheapPrint(FILE*, L_HEAP*)</code>
 //       */
 //      int lheapPrint(FILE fp, L_Heap lh);
 
@@ -5624,22 +5624,22 @@ public interface Leptonica extends Library, ILeptonica {
 //      JbClasser jbCorrelationInitWithoutComponents(int components, int maxwidth, int maxheight, float thresh, float weightfactor);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 jbAddPages(JBCLASSER*, SARRAY*)</code>
+//       * <code>l_ok jbAddPages(JBCLASSER*, SARRAY*)</code>
 //       */
 //      int jbAddPages(JbClasser classer, Sarray safiles);
 //  
 //      /**
-//       * Original signature : <code>l_int32 jbAddPage(JBCLASSER*, PIX*)</code>
+//       * Original signature : <code>l_ok jbAddPage(JBCLASSER*, PIX*)</code>
 //       */
 //      int jbAddPage(JbClasser classer, Pix pixs);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 jbAddPageComponents(JBCLASSER*, PIX*, BOXA*, PIXA*)</code>
+//       * <code>l_ok jbAddPageComponents(JBCLASSER*, PIX*, BOXA*, PIXA*)</code>
 //       */
 //      int jbAddPageComponents(JbClasser classer, Pix pixs, Boxa boxas, Pixa pixas);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 jbClassifyRankHaus(JBCLASSER*, BOXA*, PIXA*)</code>
+//       * <code>l_ok jbClassifyRankHaus(JBCLASSER*, BOXA*, PIXA*)</code>
 //       */
 //      int jbClassifyRankHaus(JbClasser classer, Boxa boxa, Pixa pixas);
 //      /**
@@ -5654,35 +5654,35 @@ public interface Leptonica extends Library, ILeptonica {
 //      int pixRankHaustest(Pix pix1, Pix pix2, Pix pix3, Pix pix4, float delx, float dely, int maxdiffw, int maxdiffh, int area1, int area3, float rank, IntBuffer tab8);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 jbClassifyCorrelation(JBCLASSER*, BOXA*, PIXA*)</code>
+//       * <code>l_ok jbClassifyCorrelation(JBCLASSER*, BOXA*, PIXA*)</code>
 //       */
 //      int jbClassifyCorrelation(JbClasser classer, Boxa boxa, Pixa pixas);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 jbGetComponents(PIX*, l_int32, l_int32, l_int32, BOXA**, PIXA**)</code>
+//       * <code>l_ok jbGetComponents(PIX*, l_int32, l_int32, l_int32, BOXA**, PIXA**)</code>
 //       */
 //      int jbGetComponents(Pix pixs, int components, int maxwidth, int maxheight, PointerByReference pboxad, PointerByReference ppixad);
     /**
      * Original signature :
-     * <code>l_int32 pixWordMaskByDilation(PIX*, PIX**, l_int32*, PIXA*)</code>
+     * <code>l_ok pixWordMaskByDilation(PIX*, PIX**, l_int32*, PIXA*)</code>
      */
     int pixWordMaskByDilation(Pix pixs, PointerByReference ppixm, IntBuffer psize, Pixa pixadb);
 
     /**
      * Original signature :
-     * <code>l_int32 pixWordMaskByDilation(PIX*, PIX**, l_int32*, PIXA*)</code>
+     * <code>l_ok pixWordMaskByDilation(PIX*, PIX**, l_int32*, PIXA*)</code>
      */
     int pixWordMaskByDilation(Pix pixs, PointerByReference ppixm, IntByReference psize, Pixa pixadb);
 
     /**
      * Original signature :
-     * <code>l_int32 pixWordBoxesByDilation(PIX*, l_int32, l_int32, l_int32, l_int32, BOXA**, l_int32*, PIXA*)</code>
+     * <code>l_ok pixWordBoxesByDilation(PIX*, l_int32, l_int32, l_int32, l_int32, BOXA**, l_int32*, PIXA*)</code>
      */
     int pixWordBoxesByDilation(Pix pixs, int minwidth, int minheight, int maxwidth, int maxheight, PointerByReference pboxa, IntBuffer psize, Pixa pixadb);
 
     /**
      * Original signature :
-     * <code>l_int32 pixWordBoxesByDilation(PIX*, l_int32, l_int32, l_int32, l_int32, BOXA**, l_int32*, PIXA*)</code>
+     * <code>l_ok pixWordBoxesByDilation(PIX*, l_int32, l_int32, l_int32, l_int32, BOXA**, l_int32*, PIXA*)</code>
      */
     int pixWordBoxesByDilation(Pix pixs, int minwidth, int minheight, int maxwidth, int maxheight, PointerByReference pboxa, IntByReference psize, Pixa pixadb);
 
@@ -5721,7 +5721,7 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 jbDataWrite(const char*, JBDATA*)</code>
+     * <code>l_ok jbDataWrite(const char*, JBDATA*)</code>
      */
     int jbDataWrite(String rootout, JbData jbdata);
 
@@ -5738,29 +5738,29 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 jbGetULCorners(JBCLASSER*, PIX*, BOXA*)</code>
+     * <code>l_ok jbGetULCorners(JBCLASSER*, PIX*, BOXA*)</code>
      */
     int jbGetULCorners(JbClasser classer, Pix pixs, Boxa boxa);
 
     /**
-     * Original signature : <code>l_int32 jbGetLLCorners(JBCLASSER*)</code>
+     * Original signature : <code>l_ok jbGetLLCorners(JBCLASSER*)</code>
      */
     int jbGetLLCorners(JbClasser classer);
 
     /**
      * Original signature :
-     * <code>l_int32 readHeaderJp2k(const char*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
+     * <code>l_ok readHeaderJp2k(const char*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
      */
     int readHeaderJp2k(String filename, IntBuffer pw, IntBuffer ph, IntBuffer pbps, IntBuffer pspp);
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 freadHeaderJp2k(FILE*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
+//       * <code>l_ok freadHeaderJp2k(FILE*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
 //       */
 //      int freadHeaderJp2k(FILE fp, IntBuffer pw, IntBuffer ph, IntBuffer pbps, IntBuffer pspp);
     /**
      * Original signature :
-     * <code>l_int32 readHeaderMemJp2k(const l_uint8*, size_t, l_int32*, l_int32*, l_int32*, l_int32*)</code>
+     * <code>l_ok readHeaderMemJp2k(const l_uint8*, size_t, l_int32*, l_int32*, l_int32*, l_int32*)</code>
      */
     int readHeaderMemJp2k(ByteBuffer data, NativeSize size, IntBuffer pw, IntBuffer ph, IntBuffer pbps, IntBuffer pspp);
 
@@ -5782,13 +5782,13 @@ public interface Leptonica extends Library, ILeptonica {
 //      Pix pixReadStreamJp2k(FILE fp, int reduction, Box box, int hint, int debug);
     /**
      * Original signature :
-     * <code>l_int32 pixWriteJp2k(const char*, PIX*, l_int32, l_int32, l_int32, l_int32)</code>
+     * <code>l_ok pixWriteJp2k(const char*, PIX*, l_int32, l_int32, l_int32, l_int32)</code>
      */
     int pixWriteJp2k(String filename, Pix pix, int quality, int nlevels, int hint, int debug);
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixWriteStreamJp2k(FILE*, PIX*, l_int32, l_int32, l_int32, l_int32)</code>
+//       * <code>l_ok pixWriteStreamJp2k(FILE*, PIX*, l_int32, l_int32, l_int32, l_int32)</code>
 //       */
 //      int pixWriteStreamJp2k(FILE fp, Pix pix, int quality, int nlevels, int hint, int debug);
     /**
@@ -5799,7 +5799,7 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixWriteMemJp2k(l_uint8**, size_t*, PIX*, l_int32, l_int32, l_int32, l_int32)</code>
+     * <code>l_ok pixWriteMemJp2k(l_uint8**, size_t*, PIX*, l_int32, l_int32, l_int32, l_int32)</code>
      */
     int pixWriteMemJp2k(PointerByReference pdata, NativeSizeByReference psize, Pix pix, int quality, int nlevels, int hint, int debug);
 
@@ -5816,13 +5816,13 @@ public interface Leptonica extends Library, ILeptonica {
 //      Pix pixReadStreamJpeg(FILE fp, int cmapflag, int reduction, IntBuffer pnwarn, int hint);
     /**
      * Original signature :
-     * <code>l_int32 readHeaderJpeg(const char*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
+     * <code>l_ok readHeaderJpeg(const char*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
      */
     int readHeaderJpeg(String filename, IntBuffer pw, IntBuffer ph, IntBuffer pspp, IntBuffer pycck, IntBuffer pcmyk);
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 freadHeaderJpeg(FILE*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
+//       * <code>l_ok freadHeaderJpeg(FILE*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
 //       */
 //      int freadHeaderJpeg(FILE fp, IntBuffer pw, IntBuffer ph, IntBuffer pspp, IntBuffer pycck, IntBuffer pcmyk);
 //      /**
@@ -5837,13 +5837,13 @@ public interface Leptonica extends Library, ILeptonica {
 //      int fgetJpegComment(FILE fp, PointerByReference pcomment);
     /**
      * Original signature :
-     * <code>l_int32 pixWriteJpeg(const char*, PIX*, l_int32, l_int32)</code>
+     * <code>l_ok pixWriteJpeg(const char*, PIX*, l_int32, l_int32)</code>
      */
     int pixWriteJpeg(String filename, Pix pix, int quality, int progressive);
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixWriteStreamJpeg(FILE*, PIX*, l_int32, l_int32)</code>
+//       * <code>l_ok pixWriteStreamJpeg(FILE*, PIX*, l_int32, l_int32)</code>
 //       */
 //      int pixWriteStreamJpeg(FILE fp, Pix pixs, int quality, int progressive);
     /**
@@ -5854,24 +5854,24 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 readHeaderMemJpeg(const l_uint8*, size_t, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
+     * <code>l_ok readHeaderMemJpeg(const l_uint8*, size_t, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
      */
     int readHeaderMemJpeg(ByteBuffer data, NativeSize size, IntBuffer pw, IntBuffer ph, IntBuffer pspp, IntBuffer pycck, IntBuffer pcmyk);
 
 //    /**
-//    * Original signature : <code>l_int32 readResolutionMemJpeg(const l_uint8*, size_t, l_int32*, l_int32*)</code>
+//    * Original signature : <code>l_ok readResolutionMemJpeg(const l_uint8*, size_t, l_int32*, l_int32*)</code>
 //    */
 //    int readResolutionMemJpeg(ByteBuffer data, NativeSize size, IntBuffer pxres, IntBuffer pyres);
 
     /**
      * Original signature :
-     * <code>l_int32 pixWriteMemJpeg(l_uint8**, size_t*, PIX*, l_int32, l_int32)</code>
+     * <code>l_ok pixWriteMemJpeg(l_uint8**, size_t*, PIX*, l_int32, l_int32)</code>
      */
     int pixWriteMemJpeg(PointerByReference pdata, NativeSizeByReference psize, Pix pix, int quality, int progressive);
 
     /**
      * Original signature :
-     * <code>l_int32 pixSetChromaSampling(PIX*, l_int32)</code>
+     * <code>l_ok pixSetChromaSampling(PIX*, l_int32)</code>
      */
     int pixSetChromaSampling(Pix pix, int sampling);
 
@@ -5893,37 +5893,37 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 kernelGetElement(L_KERNEL*, l_int32, l_int32, l_float32*)</code>
+     * <code>l_ok kernelGetElement(L_KERNEL*, l_int32, l_int32, l_float32*)</code>
      */
     int kernelGetElement(L_Kernel kel, int row, int col, FloatBuffer pval);
 
     /**
      * Original signature :
-     * <code>l_int32 kernelSetElement(L_KERNEL*, l_int32, l_int32, l_float32)</code>
+     * <code>l_ok kernelSetElement(L_KERNEL*, l_int32, l_int32, l_float32)</code>
      */
     int kernelSetElement(L_Kernel kel, int row, int col, float val);
 
     /**
      * Original signature :
-     * <code>l_int32 kernelGetParameters(L_KERNEL*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
+     * <code>l_ok kernelGetParameters(L_KERNEL*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
      */
     int kernelGetParameters(L_Kernel kel, IntBuffer psy, IntBuffer psx, IntBuffer pcy, IntBuffer pcx);
 
     /**
      * Original signature :
-     * <code>l_int32 kernelSetOrigin(L_KERNEL*, l_int32, l_int32)</code>
+     * <code>l_ok kernelSetOrigin(L_KERNEL*, l_int32, l_int32)</code>
      */
     int kernelSetOrigin(L_Kernel kel, int cy, int cx);
 
     /**
      * Original signature :
-     * <code>l_int32 kernelGetSum(L_KERNEL*, l_float32*)</code>
+     * <code>l_ok kernelGetSum(L_KERNEL*, l_float32*)</code>
      */
     int kernelGetSum(L_Kernel kel, FloatBuffer psum);
 
     /**
      * Original signature :
-     * <code>l_int32 kernelGetMinMax(L_KERNEL*, l_float32*, l_float32*)</code>
+     * <code>l_ok kernelGetMinMax(L_KERNEL*, l_float32*, l_float32*)</code>
      */
     int kernelGetMinMax(L_Kernel kel, FloatBuffer pmin, FloatBuffer pmax);
 
@@ -5956,13 +5956,13 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 kernelWrite(const char*, L_KERNEL*)</code>
+     * <code>l_ok kernelWrite(const char*, L_KERNEL*)</code>
      */
     int kernelWrite(String fname, L_Kernel kel);
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 kernelWriteStream(FILE*, L_KERNEL*)</code>
+//       * <code>l_ok kernelWriteStream(FILE*, L_KERNEL*)</code>
 //       */
 //      int kernelWriteStream(FILE fp, L_Kernel kel);
     /**
@@ -6009,7 +6009,7 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 makeGaussianKernelSep(l_int32, l_int32, l_float32, l_float32, L_KERNEL**, L_KERNEL**)</code>
+     * <code>l_ok makeGaussianKernelSep(l_int32, l_int32, l_float32, l_float32, L_KERNEL**, L_KERNEL**)</code>
      */
     int makeGaussianKernelSep(int halfheight, int halfwidth, float stdev, float max, PointerByReference pkelx, PointerByReference pkely);
 
@@ -6031,25 +6031,25 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 listAddToHead(DLLIST**, void*)</code>
+     * <code>l_ok listAddToHead(DLLIST**, void*)</code>
      */
     int listAddToHead(PointerByReference phead, Pointer data);
 
     /**
      * Original signature :
-     * <code>l_int32 listAddToTail(DLLIST**, DLLIST**, void*)</code>
+     * <code>l_ok listAddToTail(DLLIST**, DLLIST**, void*)</code>
      */
     int listAddToTail(PointerByReference phead, PointerByReference ptail, Pointer data);
 
     /**
      * Original signature :
-     * <code>l_int32 listInsertBefore(DLLIST**, DLLIST*, void*)</code>
+     * <code>l_ok listInsertBefore(DLLIST**, DLLIST*, void*)</code>
      */
     int listInsertBefore(PointerByReference phead, DoubleLinkedList elem, Pointer data);
 
     /**
      * Original signature :
-     * <code>l_int32 listInsertAfter(DLLIST**, DLLIST*, void*)</code>
+     * <code>l_ok listInsertAfter(DLLIST**, DLLIST*, void*)</code>
      */
     int listInsertAfter(PointerByReference phead, DoubleLinkedList elem, Pointer data);
 
@@ -6087,13 +6087,13 @@ public interface Leptonica extends Library, ILeptonica {
     int listGetCount(DoubleLinkedList head);
 
     /**
-     * Original signature : <code>l_int32 listReverse(DLLIST**)</code>
+     * Original signature : <code>l_ok listReverse(DLLIST**)</code>
      */
     int listReverse(PointerByReference phead);
 
     /**
      * Original signature :
-     * <code>l_int32 listJoin(DLLIST**, DLLIST**)</code>
+     * <code>l_ok listJoin(DLLIST**, DLLIST**)</code>
      */
     int listJoin(PointerByReference phead1, PointerByReference phead2);
 
@@ -6304,7 +6304,7 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 selectComposableSizes(l_int32, l_int32*, l_int32*)</code>
+     * <code>l_ok selectComposableSizes(l_int32, l_int32*, l_int32*)</code>
      */
     int selectComposableSizes(int size, IntBuffer pfactor1, IntBuffer pfactor2);
 
@@ -6418,7 +6418,7 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixRemoveMatchedPattern(PIX*, PIX*, PIX*, l_int32, l_int32, l_int32)</code>
+     * <code>l_ok pixRemoveMatchedPattern(PIX*, PIX*, PIX*, l_int32, l_int32, l_int32)</code>
      */
     int pixRemoveMatchedPattern(Pix pixs, Pix pixp, Pix pixe, int x0, int y0, int dsize);
 
@@ -6483,7 +6483,7 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixCentroid(PIX*, l_int32*, l_int32*, l_float32*, l_float32*)</code>
+     * <code>l_ok pixCentroid(PIX*, l_int32*, l_int32*, l_float32*, l_float32*)</code>
      */
     int pixCentroid(Pix pix, IntBuffer centtab, IntBuffer sumtab, FloatBuffer pxave, FloatBuffer pyave);
 
@@ -6561,7 +6561,7 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 getExtendedCompositeParameters(l_int32, l_int32*, l_int32*, l_int32*)</code>
+     * <code>l_ok getExtendedCompositeParameters(l_int32, l_int32*, l_int32*, l_int32*)</code>
      */
     int getExtendedCompositeParameters(int size, IntBuffer pn, IntBuffer pextra, IntBuffer pactualsize);
 
@@ -6644,27 +6644,27 @@ public interface Leptonica extends Library, ILeptonica {
 //      Numa numaClone(Numa na);
 //  
 //      /**
-//       * Original signature : <code>l_int32 numaEmpty(NUMA*)</code>
+//       * Original signature : <code>l_ok numaEmpty(NUMA*)</code>
 //       */
 //      int numaEmpty(Numa na);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 numaAddNumber(NUMA*, l_float32)</code>
+//       * <code>l_ok numaAddNumber(NUMA*, l_float32)</code>
 //       */
 //      int numaAddNumber(Numa na, float val);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 numaInsertNumber(NUMA*, l_int32, l_float32)</code>
+//       * <code>l_ok numaInsertNumber(NUMA*, l_int32, l_float32)</code>
 //       */
 //      int numaInsertNumber(Numa na, int index, float val);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 numaRemoveNumber(NUMA*, l_int32)</code>
+//       * <code>l_ok numaRemoveNumber(NUMA*, l_int32)</code>
 //       */
 //      int numaRemoveNumber(Numa na, int index);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 numaReplaceNumber(NUMA*, l_int32, l_float32)</code>
+//       * <code>l_ok numaReplaceNumber(NUMA*, l_int32, l_float32)</code>
 //       */
 //      int numaReplaceNumber(Numa na, int index, float val);
 //  
@@ -6674,27 +6674,27 @@ public interface Leptonica extends Library, ILeptonica {
 //      int numaGetCount(Numa na);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 numaSetCount(NUMA*, l_int32)</code>
+//       * <code>l_ok numaSetCount(NUMA*, l_int32)</code>
 //       */
 //      int numaSetCount(Numa na, int newcount);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 numaGetFValue(NUMA*, l_int32, l_float32*)</code>
+//       * <code>l_ok numaGetFValue(NUMA*, l_int32, l_float32*)</code>
 //       */
 //      int numaGetFValue(Numa na, int index, FloatBuffer pval);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 numaGetIValue(NUMA*, l_int32, l_int32*)</code>
+//       * <code>l_ok numaGetIValue(NUMA*, l_int32, l_int32*)</code>
 //       */
 //      int numaGetIValue(Numa na, int index, IntBuffer pival);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 numaSetValue(NUMA*, l_int32, l_float32)</code>
+//       * <code>l_ok numaSetValue(NUMA*, l_int32, l_float32)</code>
 //       */
 //      int numaSetValue(Numa na, int index, float val);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 numaShiftValue(NUMA*, l_int32, l_float32)</code>
+//       * <code>l_ok numaShiftValue(NUMA*, l_int32, l_float32)</code>
 //       */
 //      int numaShiftValue(Numa na, int index, float diff);
 //  
@@ -6714,22 +6714,22 @@ public interface Leptonica extends Library, ILeptonica {
 //      int numaGetRefcount(Numa na);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 numaChangeRefcount(NUMA*, l_int32)</code>
+//       * <code>l_ok numaChangeRefcount(NUMA*, l_int32)</code>
 //       */
 //      int numaChangeRefcount(Numa na, int delta);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 numaGetParameters(NUMA*, l_float32*, l_float32*)</code>
+//       * <code>l_ok numaGetParameters(NUMA*, l_float32*, l_float32*)</code>
 //       */
 //      int numaGetParameters(Numa na, FloatBuffer pstartx, FloatBuffer pdelx);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 numaSetParameters(NUMA*, l_float32, l_float32)</code>
+//       * <code>l_ok numaSetParameters(NUMA*, l_float32, l_float32)</code>
 //       */
 //      int numaSetParameters(Numa na, float startx, float delx);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 numaCopyParameters(NUMA*, NUMA*)</code>
+//       * <code>l_ok numaCopyParameters(NUMA*, NUMA*)</code>
 //       */
 //      int numaCopyParameters(Numa nad, Numa nas);
 //      /**
@@ -6754,24 +6754,24 @@ public interface Leptonica extends Library, ILeptonica {
     Numa numaReadMem(ByteBuffer data, NativeSize size);
 
 //    /**
-//     * Original signature : <code>l_int32 numaWriteDebug(const char*, NUMA*)</code>
+//     * Original signature : <code>l_ok numaWriteDebug(const char*, NUMA*)</code>
 //     */
 //    int numaWriteDebug(String filename, Numa na);
 
     /**
      * Original signature :
-     * <code>l_int32 numaWrite(const char*, NUMA*)</code>
+     * <code>l_ok numaWrite(const char*, NUMA*)</code>
      */
     int numaWrite(String filename, Numa na);
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 numaWriteStream(FILE*, NUMA*)</code>
+//       * <code>l_ok numaWriteStream(FILE*, NUMA*)</code>
 //       */
 //      int numaWriteStream(FILE fp, Numa na);
     /**
      * Original signature :
-     * <code>l_int32 numaWriteMem(l_uint8**, size_t*, NUMA*)</code>
+     * <code>l_ok numaWriteMem(l_uint8**, size_t*, NUMA*)</code>
      */
     int numaWriteMem(PointerByReference pdata, NativeSizeByReference psize, Numa na);
 
@@ -6787,7 +6787,7 @@ public interface Leptonica extends Library, ILeptonica {
     Numaa numaaCreateFull(int nptr, int n);
 
     /**
-     * Original signature : <code>l_int32 numaaTruncate(NUMAA*)</code>
+     * Original signature : <code>l_ok numaaTruncate(NUMAA*)</code>
      */
     int numaaTruncate(Numaa naa);
 
@@ -6798,7 +6798,7 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 numaaAddNuma(NUMAA*, NUMA*, l_int32)</code>
+     * <code>l_ok numaaAddNuma(NUMAA*, NUMA*, l_int32)</code>
      */
     int numaaAddNuma(Numaa naa, Numa na, int copyflag);
 
@@ -6830,17 +6830,17 @@ public interface Leptonica extends Library, ILeptonica {
 //      Numa numaaGetNuma(Numaa naa, int index, int accessflag);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 numaaReplaceNuma(NUMAA*, l_int32, NUMA*)</code>
+//       * <code>l_ok numaaReplaceNuma(NUMAA*, l_int32, NUMA*)</code>
 //       */
 //      int numaaReplaceNuma(Numaa naa, int index, Numa na);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 numaaGetValue(NUMAA*, l_int32, l_int32, l_float32*, l_int32*)</code>
+//       * <code>l_ok numaaGetValue(NUMAA*, l_int32, l_int32, l_float32*, l_int32*)</code>
 //       */
 //      int numaaGetValue(Numaa naa, int i, int j, FloatBuffer pfval, IntBuffer pival);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 numaaAddNumber(NUMAA*, l_int32, l_float32)</code>
+//       * <code>l_ok numaaAddNumber(NUMAA*, l_int32, l_float32)</code>
 //       */
 //      int numaaAddNumber(Numaa naa, int index, float val);
 //  
@@ -6861,17 +6861,17 @@ public interface Leptonica extends Library, ILeptonica {
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 numaaWrite(const char*, NUMAA*)</code>
+//       * <code>l_ok numaaWrite(const char*, NUMAA*)</code>
 //       */
 //      int numaaWrite(String filename, Numaa naa);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 numaaWriteStream(FILE*, NUMAA*)</code>
+//       * <code>l_ok numaaWriteStream(FILE*, NUMAA*)</code>
 //       */
 //      int numaaWriteStream(FILE fp, Numaa naa);
     /**
      * Original signature :
-     * <code>l_int32 numaaWriteMem(l_uint8**, size_t*, NUMAA*)</code>
+     * <code>l_ok numaaWriteMem(l_uint8**, size_t*, NUMAA*)</code>
      */
     int numaaWriteMem(PointerByReference pdata, NativeSizeByReference psize, Numaa naa);
 
@@ -6897,22 +6897,22 @@ public interface Leptonica extends Library, ILeptonica {
 //      int numaSimilar(Numa na1, Numa na2, float maxdiff, IntBuffer psimilar);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 numaAddToNumber(NUMA*, l_int32, l_float32)</code>
+//       * <code>l_ok numaAddToNumber(NUMA*, l_int32, l_float32)</code>
 //       */
 //      int numaAddToNumber(Numa na, int index, float val);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 numaGetMin(NUMA*, l_float32*, l_int32*)</code>
+//       * <code>l_ok numaGetMin(NUMA*, l_float32*, l_int32*)</code>
 //       */
 //      int numaGetMin(Numa na, FloatBuffer pminval, IntBuffer piminloc);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 numaGetMax(NUMA*, l_float32*, l_int32*)</code>
+//       * <code>l_ok numaGetMax(NUMA*, l_float32*, l_int32*)</code>
 //       */
 //      int numaGetMax(Numa na, FloatBuffer pmaxval, IntBuffer pimaxloc);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 numaGetSum(NUMA*, l_float32*)</code>
+//       * <code>l_ok numaGetSum(NUMA*, l_float32*)</code>
 //       */
 //      int numaGetSum(Numa na, FloatBuffer psum);
 //  
@@ -6922,12 +6922,12 @@ public interface Leptonica extends Library, ILeptonica {
 //      Numa numaGetPartialSums(Numa na);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 numaGetSumOnInterval(NUMA*, l_int32, l_int32, l_float32*)</code>
+//       * <code>l_ok numaGetSumOnInterval(NUMA*, l_int32, l_int32, l_float32*)</code>
 //       */
 //      int numaGetSumOnInterval(Numa na, int first, int last, FloatBuffer psum);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 numaHasOnlyIntegers(NUMA*, l_int32, l_int32*)</code>
+//       * <code>l_ok numaHasOnlyIntegers(NUMA*, l_int32, l_int32*)</code>
 //       */
 //      int numaHasOnlyIntegers(Numa na, int maxsamples, IntBuffer pallints);
 //  
@@ -6972,17 +6972,17 @@ public interface Leptonica extends Library, ILeptonica {
 //      Numa numaRemoveBorder(Numa nas, int left, int right);
 //    /**
 //     * Original signature :
-//     * <code>l_int32 numaCountNonzeroRuns(NUMA*, l_int32*)</code>
+//     * <code>l_ok numaCountNonzeroRuns(NUMA*, l_int32*)</code>
 //     */
 //    int numaCountNonzeroRuns(Numa na, IntBuffer pcount);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 numaGetNonzeroRange(NUMA*, l_float32, l_int32*, l_int32*)</code>
+//       * <code>l_ok numaGetNonzeroRange(NUMA*, l_float32, l_int32*, l_int32*)</code>
 //       */
 //      int numaGetNonzeroRange(Numa na, float eps, IntBuffer pfirst, IntBuffer plast);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 numaGetCountRelativeToZero(NUMA*, l_int32, l_int32*)</code>
+//       * <code>l_ok numaGetCountRelativeToZero(NUMA*, l_int32, l_int32*)</code>
 //       */
 //      int numaGetCountRelativeToZero(Numa na, int type, IntBuffer pcount);
 //      /**
@@ -7027,42 +7027,42 @@ public interface Leptonica extends Library, ILeptonica {
 //      int numaGetEdgeValues(Numa na, int edge, IntBuffer pstart, IntBuffer pend, IntBuffer psign);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 numaInterpolateEqxVal(l_float32, l_float32, NUMA*, l_int32, l_float32, l_float32*)</code>
+//       * <code>l_ok numaInterpolateEqxVal(l_float32, l_float32, NUMA*, l_int32, l_float32, l_float32*)</code>
 //       */
 //      int numaInterpolateEqxVal(float startx, float deltax, Numa nay, int type, float xval, FloatBuffer pyval);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 numaInterpolateArbxVal(NUMA*, NUMA*, l_int32, l_float32, l_float32*)</code>
+//       * <code>l_ok numaInterpolateArbxVal(NUMA*, NUMA*, l_int32, l_float32, l_float32*)</code>
 //       */
 //      int numaInterpolateArbxVal(Numa nax, Numa nay, int type, float xval, FloatBuffer pyval);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 numaInterpolateEqxInterval(l_float32, l_float32, NUMA*, l_int32, l_float32, l_float32, l_int32, NUMA**, NUMA**)</code>
+//       * <code>l_ok numaInterpolateEqxInterval(l_float32, l_float32, NUMA*, l_int32, l_float32, l_float32, l_int32, NUMA**, NUMA**)</code>
 //       */
 //      int numaInterpolateEqxInterval(float startx, float deltax, Numa nasy, int type, float x0, float x1, int npts, PointerByReference pnax, PointerByReference pnay);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 numaInterpolateArbxInterval(NUMA*, NUMA*, l_int32, l_float32, l_float32, l_int32, NUMA**, NUMA**)</code>
+//       * <code>l_ok numaInterpolateArbxInterval(NUMA*, NUMA*, l_int32, l_float32, l_float32, l_int32, NUMA**, NUMA**)</code>
 //       */
 //      int numaInterpolateArbxInterval(Numa nax, Numa nay, int type, float x0, float x1, int npts, PointerByReference pnadx, PointerByReference pnady);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 numaFitMax(NUMA*, l_float32*, NUMA*, l_float32*)</code>
+//       * <code>l_ok numaFitMax(NUMA*, l_float32*, NUMA*, l_float32*)</code>
 //       */
 //      int numaFitMax(Numa na, FloatBuffer pmaxval, Numa naloc, FloatBuffer pmaxloc);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 numaDifferentiateInterval(NUMA*, NUMA*, l_float32, l_float32, l_int32, NUMA**, NUMA**)</code>
+//       * <code>l_ok numaDifferentiateInterval(NUMA*, NUMA*, l_float32, l_float32, l_int32, NUMA**, NUMA**)</code>
 //       */
 //      int numaDifferentiateInterval(Numa nax, Numa nay, float x0, float x1, int npts, PointerByReference pnadx, PointerByReference pnady);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 numaIntegrateInterval(NUMA*, NUMA*, l_float32, l_float32, l_int32, l_float32*)</code>
+//       * <code>l_ok numaIntegrateInterval(NUMA*, NUMA*, l_float32, l_float32, l_int32, l_float32*)</code>
 //       */
 //      int numaIntegrateInterval(Numa nax, Numa nay, float x0, float x1, int npts, FloatBuffer psum);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 numaSortGeneral(NUMA*, NUMA**, NUMA**, NUMA**, l_int32, l_int32)</code>
+//       * <code>l_ok numaSortGeneral(NUMA*, NUMA**, NUMA**, NUMA**, l_int32, l_int32)</code>
 //       */
 //      int numaSortGeneral(Numa na, PointerByReference pnasort, PointerByReference pnaindex, PointerByReference pnainvert, int sortorder, int sorttype);
 //      /**
@@ -7112,7 +7112,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      int numaIsSorted(Numa nas, int sortorder, IntBuffer psorted);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 numaSortPair(NUMA*, NUMA*, l_int32, NUMA**, NUMA**)</code>
+//       * <code>l_ok numaSortPair(NUMA*, NUMA*, l_int32, NUMA**, NUMA**)</code>
 //       */
 //      int numaSortPair(Numa nax, Numa nay, int sortorder, PointerByReference pnasx, PointerByReference pnasy);
 //  
@@ -7132,32 +7132,32 @@ public interface Leptonica extends Library, ILeptonica {
 //      Numa numaRandomPermutation(Numa nas, int seed);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 numaGetRankValue(NUMA*, l_float32, NUMA*, l_int32, l_float32*)</code>
+//       * <code>l_ok numaGetRankValue(NUMA*, l_float32, NUMA*, l_int32, l_float32*)</code>
 //       */
 //      int numaGetRankValue(Numa na, float fract, Numa nasort, int usebins, FloatBuffer pval);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 numaGetMedian(NUMA*, l_float32*)</code>
+//       * <code>l_ok numaGetMedian(NUMA*, l_float32*)</code>
 //       */
 //      int numaGetMedian(Numa na, FloatBuffer pval);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 numaGetBinnedMedian(NUMA*, l_int32*)</code>
+//       * <code>l_ok numaGetBinnedMedian(NUMA*, l_int32*)</code>
 //       */
 //      int numaGetBinnedMedian(Numa na, IntBuffer pval);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 numaGetMode(NUMA*, l_float32*, l_int32*)</code>
+//       * <code>l_ok numaGetMode(NUMA*, l_float32*, l_int32*)</code>
 //       */
 //      int numaGetMode(Numa na, FloatBuffer pval, IntBuffer pcount);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 numaJoin(NUMA*, NUMA*, l_int32, l_int32)</code>
+//       * <code>l_ok numaJoin(NUMA*, NUMA*, l_int32, l_int32)</code>
 //       */
 //      int numaJoin(Numa nad, Numa nas, int istart, int iend);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 numaaJoin(NUMAA*, NUMAA*, l_int32, l_int32)</code>
+//       * <code>l_ok numaaJoin(NUMAA*, NUMAA*, l_int32, l_int32)</code>
 //       */
 //      int numaaJoin(Numaa naad, Numaa naas, int istart, int iend);
 //  
@@ -7192,13 +7192,13 @@ public interface Leptonica extends Library, ILeptonica {
 //      Numa numaTransform(Numa nas, float shift, float scale);
     /**
      * Original signature :
-     * <code>l_int32 numaSimpleStats(NUMA*, l_int32, l_int32, l_float32*, l_float32*, l_float32*)</code>
+     * <code>l_ok numaSimpleStats(NUMA*, l_int32, l_int32, l_float32*, l_float32*, l_float32*)</code>
      */
     int numaSimpleStats(Numa na, int first, int last, FloatBuffer pmean, FloatBuffer pvar, FloatBuffer prvar);
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 numaWindowedStats(NUMA*, l_int32, NUMA**, NUMA**, NUMA**, NUMA**)</code>
+//       * <code>l_ok numaWindowedStats(NUMA*, l_int32, NUMA**, NUMA**, NUMA**, NUMA**)</code>
 //       */
 //      int numaWindowedStats(Numa nas, int wc, PointerByReference pnam, PointerByReference pnams, PointerByReference pnav, PointerByReference pnarv);
 //      /**
@@ -7213,7 +7213,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      Numa numaWindowedMeanSquare(Numa nas, int wc);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 numaWindowedVariance(NUMA*, NUMA*, NUMA**, NUMA**)</code>
+//       * <code>l_ok numaWindowedVariance(NUMA*, NUMA*, NUMA**, NUMA**)</code>
 //       */
 //      int numaWindowedVariance(Numa nam, Numa nams, PointerByReference pnav, PointerByReference pnarv);
 //      /**
@@ -7253,73 +7253,73 @@ public interface Leptonica extends Library, ILeptonica {
 //      Numa numaNormalizeHistogram(Numa nas, float tsum);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 numaGetStatsUsingHistogram(NUMA*, l_int32, l_float32*, l_float32*, l_float32*, l_float32*, l_float32*, l_float32, l_float32*, NUMA**)</code>
+//       * <code>l_ok numaGetStatsUsingHistogram(NUMA*, l_int32, l_float32*, l_float32*, l_float32*, l_float32*, l_float32*, l_float32, l_float32*, NUMA**)</code>
 //       */
 //      int numaGetStatsUsingHistogram(Numa na, int maxbins, FloatBuffer pmin, FloatBuffer pmax, FloatBuffer pmean, FloatBuffer pvariance, FloatBuffer pmedian, float rank, FloatBuffer prval, PointerByReference phisto);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 numaGetStatsUsingHistogram(NUMA*, l_int32, l_float32*, l_float32*, l_float32*, l_float32*, l_float32*, l_float32, l_float32*, NUMA**)</code>
+//       * <code>l_ok numaGetStatsUsingHistogram(NUMA*, l_int32, l_float32*, l_float32*, l_float32*, l_float32*, l_float32*, l_float32, l_float32*, NUMA**)</code>
 //       */
 //      int numaGetStatsUsingHistogram(Numa na, int maxbins, FloatByReference pmin, FloatByReference pmax, FloatByReference pmean, FloatByReference pvariance, FloatByReference pmedian, float rank, FloatByReference prval, PointerByReference phisto);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 numaGetHistogramStats(NUMA*, l_float32, l_float32, l_float32*, l_float32*, l_float32*, l_float32*)</code>
+//       * <code>l_ok numaGetHistogramStats(NUMA*, l_float32, l_float32, l_float32*, l_float32*, l_float32*, l_float32*)</code>
 //       */
 //      int numaGetHistogramStats(Numa nahisto, float startx, float deltax, FloatBuffer pxmean, FloatBuffer pxmedian, FloatBuffer pxmode, FloatBuffer pxvariance);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 numaGetHistogramStatsOnInterval(NUMA*, l_float32, l_float32, l_int32, l_int32, l_float32*, l_float32*, l_float32*, l_float32*)</code>
+//       * <code>l_ok numaGetHistogramStatsOnInterval(NUMA*, l_float32, l_float32, l_int32, l_int32, l_float32*, l_float32*, l_float32*, l_float32*)</code>
 //       */
 //      int numaGetHistogramStatsOnInterval(Numa nahisto, float startx, float deltax, int ifirst, int ilast, FloatBuffer pxmean, FloatBuffer pxmedian, FloatBuffer pxmode, FloatBuffer pxvariance);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 numaMakeRankFromHistogram(l_float32, l_float32, NUMA*, l_int32, NUMA**, NUMA**)</code>
+//       * <code>l_ok numaMakeRankFromHistogram(l_float32, l_float32, NUMA*, l_int32, NUMA**, NUMA**)</code>
 //       */
 //      int numaMakeRankFromHistogram(float startx, float deltax, Numa nasy, int npts, PointerByReference pnax, PointerByReference pnay);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 numaHistogramGetRankFromVal(NUMA*, l_float32, l_float32*)</code>
+//       * <code>l_ok numaHistogramGetRankFromVal(NUMA*, l_float32, l_float32*)</code>
 //       */
 //      int numaHistogramGetRankFromVal(Numa na, float rval, FloatBuffer prank);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 numaHistogramGetValFromRank(NUMA*, l_float32, l_float32*)</code>
+//       * <code>l_ok numaHistogramGetValFromRank(NUMA*, l_float32, l_float32*)</code>
 //       */
 //      int numaHistogramGetValFromRank(Numa na, float rank, FloatBuffer prval);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 numaDiscretizeRankAndIntensity(NUMA*, l_int32, NUMA**, NUMA**, NUMA**, NUMA**)</code>
+//       * <code>l_ok numaDiscretizeRankAndIntensity(NUMA*, l_int32, NUMA**, NUMA**, NUMA**, NUMA**)</code>
 //       */
 //      int numaDiscretizeRankAndIntensity(Numa na, int nbins, PointerByReference pnarbin, PointerByReference pnam, PointerByReference pnar, PointerByReference pnabb);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 numaGetRankBinValues(NUMA*, l_int32, NUMA**, NUMA**)</code>
+//       * <code>l_ok numaGetRankBinValues(NUMA*, l_int32, NUMA**, NUMA**)</code>
 //       */
 //      int numaGetRankBinValues(Numa na, int nbins, PointerByReference pnarbin, PointerByReference pnam);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 numaSplitDistribution(NUMA*, l_float32, l_int32*, l_float32*, l_float32*, l_float32*, l_float32*, NUMA**)</code>
+//       * <code>l_ok numaSplitDistribution(NUMA*, l_float32, l_int32*, l_float32*, l_float32*, l_float32*, l_float32*, NUMA**)</code>
 //       */
 //      int numaSplitDistribution(Numa na, float scorefract, IntBuffer psplitindex, FloatBuffer pave1, FloatBuffer pave2, FloatBuffer pnum1, FloatBuffer pnum2, PointerByReference pnascore);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 numaSplitDistribution(NUMA*, l_float32, l_int32*, l_float32*, l_float32*, l_float32*, l_float32*, NUMA**)</code>
+//       * <code>l_ok numaSplitDistribution(NUMA*, l_float32, l_int32*, l_float32*, l_float32*, l_float32*, l_float32*, NUMA**)</code>
 //       */
 //      int numaSplitDistribution(Numa na, float scorefract, IntByReference psplitindex, FloatByReference pave1, FloatByReference pave2, FloatByReference pnum1, FloatByReference pnum2, PointerByReference pnascore);
     /**
      * Original signature :
-     * <code>l_int32 grayHistogramsToEMD(NUMAA*, NUMAA*, NUMA**)</code>
+     * <code>l_ok grayHistogramsToEMD(NUMAA*, NUMAA*, NUMA**)</code>
      */
     int grayHistogramsToEMD(Numaa naa1, Numaa naa2, PointerByReference pnad);
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 numaEarthMoverDistance(NUMA*, NUMA*, l_float32*)</code>
+//       * <code>l_ok numaEarthMoverDistance(NUMA*, NUMA*, l_float32*)</code>
 //       */
 //      int numaEarthMoverDistance(Numa na1, Numa na2, FloatBuffer pdist);
     /**
      * Original signature :
-     * <code>l_int32 grayInterHistogramStats(NUMAA*, l_int32, NUMA**, NUMA**, NUMA**, NUMA**)</code>
+     * <code>l_ok grayInterHistogramStats(NUMAA*, l_int32, NUMA**, NUMA**, NUMA**, NUMA**)</code>
      */
     int grayInterHistogramStats(Numaa naa, int wc, PointerByReference pnam, PointerByReference pnams, PointerByReference pnav, PointerByReference pnarv);
 
@@ -7335,12 +7335,12 @@ public interface Leptonica extends Library, ILeptonica {
 //      Numa numaFindExtrema(Numa nas, float delta, PointerByReference pnav);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 numaCountReversals(NUMA*, l_float32, l_int32*, l_float32*)</code>
+//       * <code>l_ok numaCountReversals(NUMA*, l_float32, l_int32*, l_float32*)</code>
 //       */
 //      int numaCountReversals(Numa nas, float minreversal, IntBuffer pnr, FloatBuffer pnrpl);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 numaSelectCrossingThreshold(NUMA*, NUMA*, l_float32, l_float32*)</code>
+//       * <code>l_ok numaSelectCrossingThreshold(NUMA*, NUMA*, l_float32, l_float32*)</code>
 //       */
 //      int numaSelectCrossingThreshold(Numa nax, Numa nay, float estthresh, FloatBuffer pbestthresh);
 //      /**
@@ -7355,12 +7355,12 @@ public interface Leptonica extends Library, ILeptonica {
 //      Numa numaCrossingsByPeaks(Numa nax, Numa nay, float delta);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 numaEvalBestHaarParameters(NUMA*, l_float32, l_int32, l_int32, l_float32, l_float32, l_float32*, l_float32*, l_float32*)</code>
+//       * <code>l_ok numaEvalBestHaarParameters(NUMA*, l_float32, l_int32, l_int32, l_float32, l_float32, l_float32*, l_float32*, l_float32*)</code>
 //       */
 //      int numaEvalBestHaarParameters(Numa nas, float relweight, int nwidth, int nshift, float minwidth, float maxwidth, FloatBuffer pbestwidth, FloatBuffer pbestshift, FloatBuffer pbestscore);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 numaEvalHaarSum(NUMA*, l_float32, l_float32, l_float32, l_float32*)</code>
+//       * <code>l_ok numaEvalHaarSum(NUMA*, l_float32, l_float32, l_float32, l_float32*)</code>
 //       */
 //      int numaEvalHaarSum(Numa nas, float width, float shift, float relweight, FloatBuffer pscore);
     /**
@@ -7371,7 +7371,7 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixGetRegionsBinary(PIX*, PIX**, PIX**, PIX**, PIXA*)</code>
+     * <code>l_ok pixGetRegionsBinary(PIX*, PIX**, PIX**, PIX**, PIXA*)</code>
      */
     int pixGetRegionsBinary(Pix pixs, PointerByReference ppixhm, PointerByReference ppixtm, PointerByReference ppixtb, Pixa pixadb);
 
@@ -7424,7 +7424,7 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixSplitIntoCharacters(PIX*, l_int32, l_int32, BOXA**, PIXA**, PIX**)</code>
+     * <code>l_ok pixSplitIntoCharacters(PIX*, l_int32, l_int32, BOXA**, PIXA**, PIX**)</code>
      */
     int pixSplitIntoCharacters(Pix pixs, int minw, int minh, PointerByReference pboxa, PointerByReference ppixa, PointerByReference ppixdebug);
 
@@ -7448,25 +7448,25 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixCountTextColumns(PIX*, l_float32, l_float32, l_float32, l_int32*, PIXA*)</code>
+     * <code>l_ok pixCountTextColumns(PIX*, l_float32, l_float32, l_float32, l_int32*, PIXA*)</code>
      */
     int pixCountTextColumns(Pix pixs, float deltafract, float peakfract, float clipfract, IntBuffer pncols, Pixa pixadb);
 
     /**
      * Original signature :
-     * <code>l_int32 pixDecideIfText(PIX*, BOX*, l_int32*, PIXA*)</code>
+     * <code>l_ok pixDecideIfText(PIX*, BOX*, l_int32*, PIXA*)</code>
      */
     int pixDecideIfText(Pix pixs, Box box, IntBuffer pistext, Pixa pixadb);
 
     /**
      * Original signature :
-     * <code>l_int32 pixFindThreshFgExtent(PIX*, l_int32, l_int32*, l_int32*)</code>
+     * <code>l_ok pixFindThreshFgExtent(PIX*, l_int32, l_int32*, l_int32*)</code>
      */
     int pixFindThreshFgExtent(Pix pixs, int thresh, IntBuffer ptop, IntBuffer pbot);
 
     /**
      * Original signature :
-     * <code>l_int32 pixDecideIfTable(PIX*, BOX*, l_int32*, PIXA*)</code>
+     * <code>l_ok pixDecideIfTable(PIX*, BOX*, l_int32*, PIXA*)</code>
      */
     int pixDecideIfTable(Pix pixs, Box box, IntBuffer pistable, Pixa pixadb);
 
@@ -7478,61 +7478,61 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixEstimateBackground(PIX*, l_int32, l_float32, l_int32*)</code>
+     * <code>l_ok pixEstimateBackground(PIX*, l_int32, l_float32, l_int32*)</code>
      */
     int pixEstimateBackground(Pix pixs, int darkthresh, float edgecrop, IntBuffer pbg);
 
     /**
      * Original signature :
-     * <code>l_int32 pixFindLargeRectangles(PIX*, l_int32, l_int32, BOXA**, PIX**)</code>
+     * <code>l_ok pixFindLargeRectangles(PIX*, l_int32, l_int32, BOXA**, PIX**)</code>
      */
     int pixFindLargeRectangles(Pix pixs, int polarity, int nrect, PointerByReference pboxa, PointerByReference ppixdb);
 
     /**
      * Original signature :
-     * <code>l_int32 pixFindLargestRectangle(PIX*, l_int32, BOX**, PIX**)</code>
+     * <code>l_ok pixFindLargestRectangle(PIX*, l_int32, BOX**, PIX**)</code>
      */
     int pixFindLargestRectangle(Pix pixs, int polarity, PointerByReference pbox, PointerByReference ppixdb);
 
     /**
      * Original signature :
-     * <code>l_int32 pixSetSelectCmap(PIX*, BOX*, l_int32, l_int32, l_int32, l_int32)</code>
+     * <code>l_ok pixSetSelectCmap(PIX*, BOX*, l_int32, l_int32, l_int32, l_int32)</code>
      */
     int pixSetSelectCmap(Pix pixs, Box box, int sindex, int rval, int gval, int bval);
 
     /**
      * Original signature :
-     * <code>l_int32 pixColorGrayRegionsCmap(PIX*, BOXA*, l_int32, l_int32, l_int32, l_int32)</code>
+     * <code>l_ok pixColorGrayRegionsCmap(PIX*, BOXA*, l_int32, l_int32, l_int32, l_int32)</code>
      */
     int pixColorGrayRegionsCmap(Pix pixs, Boxa boxa, int type, int rval, int gval, int bval);
 
     /**
      * Original signature :
-     * <code>l_int32 pixColorGrayCmap(PIX*, BOX*, l_int32, l_int32, l_int32, l_int32)</code>
+     * <code>l_ok pixColorGrayCmap(PIX*, BOX*, l_int32, l_int32, l_int32, l_int32)</code>
      */
     int pixColorGrayCmap(Pix pixs, Box box, int type, int rval, int gval, int bval);
 
     /**
      * Original signature :
-     * <code>l_int32 pixColorGrayMaskedCmap(PIX*, PIX*, l_int32, l_int32, l_int32, l_int32)</code>
+     * <code>l_ok pixColorGrayMaskedCmap(PIX*, PIX*, l_int32, l_int32, l_int32, l_int32)</code>
      */
     int pixColorGrayMaskedCmap(Pix pixs, Pix pixm, int type, int rval, int gval, int bval);
 
     /**
      * Original signature :
-     * <code>l_int32 addColorizedGrayToCmap(PIXCMAP*, l_int32, l_int32, l_int32, l_int32, NUMA**)</code>
+     * <code>l_ok addColorizedGrayToCmap(PIXCMAP*, l_int32, l_int32, l_int32, l_int32, NUMA**)</code>
      */
     int addColorizedGrayToCmap(PixColormap cmap, int type, int rval, int gval, int bval, PointerByReference pna);
 
     /**
      * Original signature :
-     * <code>l_int32 pixSetSelectMaskedCmap(PIX*, PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32)</code>
+     * <code>l_ok pixSetSelectMaskedCmap(PIX*, PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32)</code>
      */
     int pixSetSelectMaskedCmap(Pix pixs, Pix pixm, int x, int y, int sindex, int rval, int gval, int bval);
 
     /**
      * Original signature :
-     * <code>l_int32 pixSetMaskedCmap(PIX*, PIX*, l_int32, l_int32, l_int32, l_int32, l_int32)</code>
+     * <code>l_ok pixSetMaskedCmap(PIX*, PIX*, l_int32, l_int32, l_int32, l_int32, l_int32)</code>
      */
     int pixSetMaskedCmap(Pix pixs, Pix pixm, int x, int y, int rval, int gval, int bval);
 
@@ -7556,138 +7556,138 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 convertFilesToPdf(const char*, const char*, l_int32, l_float32, l_int32, l_int32, const char*, const char*)</code>
+     * <code>l_ok convertFilesToPdf(const char*, const char*, l_int32, l_float32, l_int32, l_int32, const char*, const char*)</code>
      */
     int convertFilesToPdf(String dirname, String substr, int res, float scalefactor, int type, int quality, String title, String fileout);
 
     /**
      * Original signature :
-     * <code>l_int32 saConvertFilesToPdf(SARRAY*, l_int32, l_float32, l_int32, l_int32, const char*, const char*)</code>
+     * <code>l_ok saConvertFilesToPdf(SARRAY*, l_int32, l_float32, l_int32, l_int32, const char*, const char*)</code>
      */
     int saConvertFilesToPdf(Sarray sa, int res, float scalefactor, int type, int quality, String title, String fileout);
 
     /**
      * Original signature :
-     * <code>l_int32 saConvertFilesToPdfData(SARRAY*, l_int32, l_float32, l_int32, l_int32, const char*, l_uint8**, size_t*)</code>
+     * <code>l_ok saConvertFilesToPdfData(SARRAY*, l_int32, l_float32, l_int32, l_int32, const char*, l_uint8**, size_t*)</code>
      */
     int saConvertFilesToPdfData(Sarray sa, int res, float scalefactor, int type, int quality, String title, PointerByReference pdata, NativeSizeByReference pnbytes);
 
     /**
      * Original signature :
-     * <code>l_int32 selectDefaultPdfEncoding(PIX*, l_int32*)</code>
+     * <code>l_ok selectDefaultPdfEncoding(PIX*, l_int32*)</code>
      */
     int selectDefaultPdfEncoding(Pix pix, IntBuffer ptype);
 
     /**
      * Original signature :
-     * <code>l_int32 convertUnscaledFilesToPdf(const char*, const char*, const char*, const char*)</code>
+     * <code>l_ok convertUnscaledFilesToPdf(const char*, const char*, const char*, const char*)</code>
      */
     int convertUnscaledFilesToPdf(String dirname, String substr, String title, String fileout);
 
     /**
      * Original signature :
-     * <code>l_int32 saConvertUnscaledFilesToPdf(SARRAY*, const char*, const char*)</code>
+     * <code>l_ok saConvertUnscaledFilesToPdf(SARRAY*, const char*, const char*)</code>
      */
     int saConvertUnscaledFilesToPdf(Sarray sa, String title, String fileout);
 
     /**
      * Original signature :
-     * <code>l_int32 saConvertUnscaledFilesToPdfData(SARRAY*, const char*, l_uint8**, size_t*)</code>
+     * <code>l_ok saConvertUnscaledFilesToPdfData(SARRAY*, const char*, l_uint8**, size_t*)</code>
      */
     int saConvertUnscaledFilesToPdfData(Sarray sa, String title, PointerByReference pdata, NativeSizeByReference pnbytes);
 
     /**
      * Original signature :
-     * <code>l_int32 convertUnscaledToPdfData(const char*, const char*, l_uint8**, size_t*)</code>
+     * <code>l_ok convertUnscaledToPdfData(const char*, const char*, l_uint8**, size_t*)</code>
      */
     int convertUnscaledToPdfData(String fname, String title, PointerByReference pdata, NativeSizeByReference pnbytes);
 
     /**
      * Original signature :
-     * <code>l_int32 pixaConvertToPdf(PIXA*, l_int32, l_float32, l_int32, l_int32, const char*, const char*)</code>
+     * <code>l_ok pixaConvertToPdf(PIXA*, l_int32, l_float32, l_int32, l_int32, const char*, const char*)</code>
      */
     int pixaConvertToPdf(Pixa pixa, int res, float scalefactor, int type, int quality, String title, String fileout);
 
     /**
      * Original signature :
-     * <code>l_int32 pixaConvertToPdfData(PIXA*, l_int32, l_float32, l_int32, l_int32, const char*, l_uint8**, size_t*)</code>
+     * <code>l_ok pixaConvertToPdfData(PIXA*, l_int32, l_float32, l_int32, l_int32, const char*, l_uint8**, size_t*)</code>
      */
     int pixaConvertToPdfData(Pixa pixa, int res, float scalefactor, int type, int quality, String title, PointerByReference pdata, NativeSizeByReference pnbytes);
 
     /**
      * Original signature :
-     * <code>l_int32 convertToPdf(const char*, l_int32, l_int32, const char*, l_int32, l_int32, l_int32, const char*, L_PDF_DATA**, l_int32)</code>
+     * <code>l_ok convertToPdf(const char*, l_int32, l_int32, const char*, l_int32, l_int32, l_int32, const char*, L_PDF_DATA**, l_int32)</code>
      */
     int convertToPdf(String filein, int type, int quality, String fileout, int x, int y, int res, String title, PointerByReference plpd, int position);
 
     /**
      * Original signature :
-     * <code>l_int32 convertToPdf(const char*, l_int32, l_int32, const char*, l_int32, l_int32, l_int32, const char*, L_PDF_DATA**, l_int32)</code>
+     * <code>l_ok convertToPdf(const char*, l_int32, l_int32, const char*, l_int32, l_int32, l_int32, const char*, L_PDF_DATA**, l_int32)</code>
      */
     int convertToPdf(Pointer filein, int type, int quality, Pointer fileout, int x, int y, int res, Pointer title, PointerByReference plpd, int position);
 
     /**
      * Original signature :
-     * <code>l_int32 convertImageDataToPdf(l_uint8*, size_t, l_int32, l_int32, const char*, l_int32, l_int32, l_int32, const char*, L_PDF_DATA**, l_int32)</code>
+     * <code>l_ok convertImageDataToPdf(l_uint8*, size_t, l_int32, l_int32, const char*, l_int32, l_int32, l_int32, const char*, L_PDF_DATA**, l_int32)</code>
      */
     int convertImageDataToPdf(ByteBuffer imdata, NativeSize size, int type, int quality, String fileout, int x, int y, int res, String title, PointerByReference plpd, int position);
 
     /**
      * Original signature :
-     * <code>l_int32 convertImageDataToPdf(l_uint8*, size_t, l_int32, l_int32, const char*, l_int32, l_int32, l_int32, const char*, L_PDF_DATA**, l_int32)</code>
+     * <code>l_ok convertImageDataToPdf(l_uint8*, size_t, l_int32, l_int32, const char*, l_int32, l_int32, l_int32, const char*, L_PDF_DATA**, l_int32)</code>
      */
     int convertImageDataToPdf(Pointer imdata, NativeSize size, int type, int quality, Pointer fileout, int x, int y, int res, Pointer title, PointerByReference plpd, int position);
 
     /**
      * Original signature :
-     * <code>l_int32 convertToPdfData(const char*, l_int32, l_int32, l_uint8**, size_t*, l_int32, l_int32, l_int32, const char*, L_PDF_DATA**, l_int32)</code>
+     * <code>l_ok convertToPdfData(const char*, l_int32, l_int32, l_uint8**, size_t*, l_int32, l_int32, l_int32, const char*, L_PDF_DATA**, l_int32)</code>
      */
     int convertToPdfData(String filein, int type, int quality, PointerByReference pdata, NativeSizeByReference pnbytes, int x, int y, int res, String title, PointerByReference plpd, int position);
 
     /**
      * Original signature :
-     * <code>l_int32 convertToPdfData(const char*, l_int32, l_int32, l_uint8**, size_t*, l_int32, l_int32, l_int32, const char*, L_PDF_DATA**, l_int32)</code>
+     * <code>l_ok convertToPdfData(const char*, l_int32, l_int32, l_uint8**, size_t*, l_int32, l_int32, l_int32, const char*, L_PDF_DATA**, l_int32)</code>
      */
     int convertToPdfData(Pointer filein, int type, int quality, PointerByReference pdata, NativeSizeByReference pnbytes, int x, int y, int res, Pointer title, PointerByReference plpd, int position);
 
     /**
      * Original signature :
-     * <code>l_int32 convertImageDataToPdfData(l_uint8*, size_t, l_int32, l_int32, l_uint8**, size_t*, l_int32, l_int32, l_int32, const char*, L_PDF_DATA**, l_int32)</code>
+     * <code>l_ok convertImageDataToPdfData(l_uint8*, size_t, l_int32, l_int32, l_uint8**, size_t*, l_int32, l_int32, l_int32, const char*, L_PDF_DATA**, l_int32)</code>
      */
     int convertImageDataToPdfData(ByteBuffer imdata, NativeSize size, int type, int quality, PointerByReference pdata, NativeSizeByReference pnbytes, int x, int y, int res, String title, PointerByReference plpd, int position);
 
     /**
      * Original signature :
-     * <code>l_int32 convertImageDataToPdfData(l_uint8*, size_t, l_int32, l_int32, l_uint8**, size_t*, l_int32, l_int32, l_int32, const char*, L_PDF_DATA**, l_int32)</code>
+     * <code>l_ok convertImageDataToPdfData(l_uint8*, size_t, l_int32, l_int32, l_uint8**, size_t*, l_int32, l_int32, l_int32, const char*, L_PDF_DATA**, l_int32)</code>
      */
     int convertImageDataToPdfData(Pointer imdata, NativeSize size, int type, int quality, PointerByReference pdata, NativeSizeByReference pnbytes, int x, int y, int res, Pointer title, PointerByReference plpd, int position);
 
     /**
      * Original signature :
-     * <code>l_int32 pixConvertToPdf(PIX*, l_int32, l_int32, const char*, l_int32, l_int32, l_int32, const char*, L_PDF_DATA**, l_int32)</code>
+     * <code>l_ok pixConvertToPdf(PIX*, l_int32, l_int32, const char*, l_int32, l_int32, l_int32, const char*, L_PDF_DATA**, l_int32)</code>
      */
     int pixConvertToPdf(Pix pix, int type, int quality, String fileout, int x, int y, int res, String title, PointerByReference plpd, int position);
 
     /**
      * Original signature :
-     * <code>l_int32 pixConvertToPdf(PIX*, l_int32, l_int32, const char*, l_int32, l_int32, l_int32, const char*, L_PDF_DATA**, l_int32)</code>
+     * <code>l_ok pixConvertToPdf(PIX*, l_int32, l_int32, const char*, l_int32, l_int32, l_int32, const char*, L_PDF_DATA**, l_int32)</code>
      */
     int pixConvertToPdf(Pix pix, int type, int quality, Pointer fileout, int x, int y, int res, Pointer title, PointerByReference plpd, int position);
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixWriteStreamPdf(FILE*, PIX*, l_int32, const char*)</code>
+//       * <code>l_ok pixWriteStreamPdf(FILE*, PIX*, l_int32, const char*)</code>
 //       */
 //      int pixWriteStreamPdf(FILE fp, Pix pix, int res, String title);
     /**
      * Original signature :
-     * <code>l_int32 pixWriteMemPdf(l_uint8**, size_t*, PIX*, l_int32, const char*)</code>
+     * <code>l_ok pixWriteMemPdf(l_uint8**, size_t*, PIX*, l_int32, const char*)</code>
      */
     int pixWriteMemPdf(PointerByReference pdata, NativeSizeByReference pnbytes, Pix pix, int res, String title);
 
     /**
      * Original signature :
-     * <code>l_int32 convertSegmentedFilesToPdf(const char*, const char*, l_int32, l_int32, l_int32, BOXAA*, l_int32, l_float32, const char*, const char*)</code>
+     * <code>l_ok convertSegmentedFilesToPdf(const char*, const char*, l_int32, l_int32, l_int32, BOXAA*, l_int32, l_float32, const char*, const char*)</code>
      */
     int convertSegmentedFilesToPdf(String dirname, String substr, int res, int type, int thresh, Boxaa baa, int quality, float scalefactor, String title, String fileout);
 
@@ -7699,91 +7699,91 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 convertToPdfSegmented(const char*, l_int32, l_int32, l_int32, BOXA*, l_int32, l_float32, const char*, const char*)</code>
+     * <code>l_ok convertToPdfSegmented(const char*, l_int32, l_int32, l_int32, BOXA*, l_int32, l_float32, const char*, const char*)</code>
      */
     int convertToPdfSegmented(String filein, int res, int type, int thresh, Boxa boxa, int quality, float scalefactor, String title, String fileout);
 
     /**
      * Original signature :
-     * <code>l_int32 pixConvertToPdfSegmented(PIX*, l_int32, l_int32, l_int32, BOXA*, l_int32, l_float32, const char*, const char*)</code>
+     * <code>l_ok pixConvertToPdfSegmented(PIX*, l_int32, l_int32, l_int32, BOXA*, l_int32, l_float32, const char*, const char*)</code>
      */
     int pixConvertToPdfSegmented(Pix pixs, int res, int type, int thresh, Boxa boxa, int quality, float scalefactor, String title, String fileout);
 
     /**
      * Original signature :
-     * <code>l_int32 convertToPdfDataSegmented(const char*, l_int32, l_int32, l_int32, BOXA*, l_int32, l_float32, const char*, l_uint8**, size_t*)</code>
+     * <code>l_ok convertToPdfDataSegmented(const char*, l_int32, l_int32, l_int32, BOXA*, l_int32, l_float32, const char*, l_uint8**, size_t*)</code>
      */
     int convertToPdfDataSegmented(String filein, int res, int type, int thresh, Boxa boxa, int quality, float scalefactor, String title, PointerByReference pdata, NativeSizeByReference pnbytes);
 
     /**
      * Original signature :
-     * <code>l_int32 pixConvertToPdfDataSegmented(PIX*, l_int32, l_int32, l_int32, BOXA*, l_int32, l_float32, const char*, l_uint8**, size_t*)</code>
+     * <code>l_ok pixConvertToPdfDataSegmented(PIX*, l_int32, l_int32, l_int32, BOXA*, l_int32, l_float32, const char*, l_uint8**, size_t*)</code>
      */
     int pixConvertToPdfDataSegmented(Pix pixs, int res, int type, int thresh, Boxa boxa, int quality, float scalefactor, String title, PointerByReference pdata, NativeSizeByReference pnbytes);
 
     /**
      * Original signature :
-     * <code>l_int32 concatenatePdf(const char*, const char*, const char*)</code>
+     * <code>l_ok concatenatePdf(const char*, const char*, const char*)</code>
      */
     int concatenatePdf(String dirname, String substr, String fileout);
 
     /**
      * Original signature :
-     * <code>l_int32 saConcatenatePdf(SARRAY*, const char*)</code>
+     * <code>l_ok saConcatenatePdf(SARRAY*, const char*)</code>
      */
     int saConcatenatePdf(Sarray sa, String fileout);
 
     /**
      * Original signature :
-     * <code>l_int32 ptraConcatenatePdf(L_PTRA*, const char*)</code>
+     * <code>l_ok ptraConcatenatePdf(L_PTRA*, const char*)</code>
      */
     int ptraConcatenatePdf(L_Ptra pa, String fileout);
 
     /**
      * Original signature :
-     * <code>l_int32 concatenatePdfToData(const char*, const char*, l_uint8**, size_t*)</code>
+     * <code>l_ok concatenatePdfToData(const char*, const char*, l_uint8**, size_t*)</code>
      */
     int concatenatePdfToData(String dirname, String substr, PointerByReference pdata, NativeSizeByReference pnbytes);
 
     /**
      * Original signature :
-     * <code>l_int32 saConcatenatePdfToData(SARRAY*, l_uint8**, size_t*)</code>
+     * <code>l_ok saConcatenatePdfToData(SARRAY*, l_uint8**, size_t*)</code>
      */
     int saConcatenatePdfToData(Sarray sa, PointerByReference pdata, NativeSizeByReference pnbytes);
 
     /**
      * Original signature :
-     * <code>l_int32 pixConvertToPdfData(PIX*, l_int32, l_int32, l_uint8**, size_t*, l_int32, l_int32, l_int32, const char*, L_PDF_DATA**, l_int32)</code>
+     * <code>l_ok pixConvertToPdfData(PIX*, l_int32, l_int32, l_uint8**, size_t*, l_int32, l_int32, l_int32, const char*, L_PDF_DATA**, l_int32)</code>
      */
     int pixConvertToPdfData(Pix pix, int type, int quality, PointerByReference pdata, NativeSizeByReference pnbytes, int x, int y, int res, String title, PointerByReference plpd, int position);
 
     /**
      * Original signature :
-     * <code>l_int32 pixConvertToPdfData(PIX*, l_int32, l_int32, l_uint8**, size_t*, l_int32, l_int32, l_int32, const char*, L_PDF_DATA**, l_int32)</code>
+     * <code>l_ok pixConvertToPdfData(PIX*, l_int32, l_int32, l_uint8**, size_t*, l_int32, l_int32, l_int32, const char*, L_PDF_DATA**, l_int32)</code>
      */
     int pixConvertToPdfData(Pix pix, int type, int quality, PointerByReference pdata, NativeSizeByReference pnbytes, int x, int y, int res, Pointer title, PointerByReference plpd, int position);
 
     /**
      * Original signature :
-     * <code>l_int32 ptraConcatenatePdfToData(L_PTRA*, SARRAY*, l_uint8**, size_t*)</code>
+     * <code>l_ok ptraConcatenatePdfToData(L_PTRA*, SARRAY*, l_uint8**, size_t*)</code>
      */
     int ptraConcatenatePdfToData(L_Ptra pa_data, Sarray sa, PointerByReference pdata, NativeSizeByReference pnbytes);
 
     /**
      * Original signature :
-     * <code>l_int32 convertTiffMultipageToPdf(const char*, const char*)</code>
+     * <code>l_ok convertTiffMultipageToPdf(const char*, const char*)</code>
      */
     int convertTiffMultipageToPdf(String filein, String fileout);
 
     /**
      * Original signature :
-     * <code>l_int32 l_generateCIDataForPdf(const char*, PIX*, l_int32, L_COMP_DATA**)</code>
+     * <code>l_ok l_generateCIDataForPdf(const char*, PIX*, l_int32, L_COMP_DATA**)</code>
      */
     int l_generateCIDataForPdf(String fname, Pix pix, int quality, PointerByReference pcid);
 
     /**
      * Original signature :
-     * <code>l_int32 l_generateCIDataForPdf(const char*, PIX*, l_int32, L_COMP_DATA**)</code>
+     * <code>l_ok l_generateCIDataForPdf(const char*, PIX*, l_int32, L_COMP_DATA**)</code>
      */
     int l_generateCIDataForPdf(Pointer fname, Pix pix, int quality, PointerByReference pcid);
 
@@ -7806,19 +7806,19 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 l_generateCIData(const char*, l_int32, l_int32, l_int32, L_COMP_DATA**)</code>
+     * <code>l_ok l_generateCIData(const char*, l_int32, l_int32, l_int32, L_COMP_DATA**)</code>
      */
     int l_generateCIData(String fname, int type, int quality, int ascii85, PointerByReference pcid);
 
     /**
      * Original signature :
-     * <code>l_int32 l_generateCIData(const char*, l_int32, l_int32, l_int32, L_COMP_DATA**)</code>
+     * <code>l_ok l_generateCIData(const char*, l_int32, l_int32, l_int32, L_COMP_DATA**)</code>
      */
     int l_generateCIData(Pointer fname, int type, int quality, int ascii85, PointerByReference pcid);
 
     /**
      * Original signature :
-     * <code>l_int32 pixGenerateCIData(PIX*, l_int32, l_int32, l_int32, L_COMP_DATA**)</code>
+     * <code>l_ok pixGenerateCIData(PIX*, l_int32, l_int32, l_int32, L_COMP_DATA**)</code>
      */
     int pixGenerateCIData(Pix pixs, int type, int quality, int ascii85, PointerByReference pcid);
 
@@ -7836,7 +7836,7 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 cidConvertToPdfData(L_COMP_DATA*, const char*, l_uint8**, size_t*)</code>
+     * <code>l_ok cidConvertToPdfData(L_COMP_DATA*, const char*, l_uint8**, size_t*)</code>
      */
     int cidConvertToPdfData(L_Compressed_Data cid, String title, PointerByReference pdata, NativeSizeByReference pnbytes);
 
@@ -7907,12 +7907,12 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixResizeImageData(PIX*, PIX*)</code>
+     * <code>l_ok pixResizeImageData(PIX*, PIX*)</code>
      */
     int pixResizeImageData(Pix pixd, Pix pixs);
 
     /**
-     * Original signature : <code>l_int32 pixCopyColormap(PIX*, PIX*)</code>
+     * Original signature : <code>l_ok pixCopyColormap(PIX*, PIX*)</code>
      */
     int pixCopyColormap(Pix pixd, Pix pixs);
 
@@ -7923,13 +7923,13 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixTransferAllData(PIX*, PIX**, l_int32, l_int32)</code>
+     * <code>l_ok pixTransferAllData(PIX*, PIX**, l_int32, l_int32)</code>
      */
     int pixTransferAllData(Pix pixd, PointerByReference ppixs, int copytext, int copyformat);
 
     /**
      * Original signature :
-     * <code>l_int32 pixSwapAndDestroy(PIX**, PIX**)</code>
+     * <code>l_ok pixSwapAndDestroy(PIX**, PIX**)</code>
      */
     int pixSwapAndDestroy(PointerByReference ppixd, PointerByReference ppixs);
 
@@ -7965,19 +7965,19 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixGetDimensions(PIX*, l_int32*, l_int32*, l_int32*)</code>
+     * <code>l_ok pixGetDimensions(PIX*, l_int32*, l_int32*, l_int32*)</code>
      */
     int pixGetDimensions(Pix pix, IntBuffer pw, IntBuffer ph, IntBuffer pd);
 
     /**
      * Original signature :
-     * <code>l_int32 pixSetDimensions(PIX*, l_int32, l_int32, l_int32)</code>
+     * <code>l_ok pixSetDimensions(PIX*, l_int32, l_int32, l_int32)</code>
      */
     int pixSetDimensions(Pix pix, int w, int h, int d);
 
     /**
      * Original signature :
-     * <code>l_int32 pixCopyDimensions(PIX*, PIX*)</code>
+     * <code>l_ok pixCopyDimensions(PIX*, PIX*)</code>
      */
     int pixCopyDimensions(Pix pixd, Pix pixs);
 
@@ -7992,7 +7992,7 @@ public interface Leptonica extends Library, ILeptonica {
     int pixSetSpp(Pix pix, int spp);
 
     /**
-     * Original signature : <code>l_int32 pixCopySpp(PIX*, PIX*)</code>
+     * Original signature : <code>l_ok pixCopySpp(PIX*, PIX*)</code>
      */
     int pixCopySpp(Pix pixd, Pix pixs);
 
@@ -8039,13 +8039,13 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixGetResolution(PIX*, l_int32*, l_int32*)</code>
+     * <code>l_ok pixGetResolution(PIX*, l_int32*, l_int32*)</code>
      */
     int pixGetResolution(Pix pix, IntBuffer pxres, IntBuffer pyres);
 
     /**
      * Original signature :
-     * <code>l_int32 pixSetResolution(PIX*, l_int32, l_int32)</code>
+     * <code>l_ok pixSetResolution(PIX*, l_int32, l_int32)</code>
      */
     int pixSetResolution(Pix pix, int xres, int yres);
 
@@ -8091,13 +8091,13 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixSetText(PIX*, const char*)</code>
+     * <code>l_ok pixSetText(PIX*, const char*)</code>
      */
     int pixSetText(Pix pix, String textstring);
 
     /**
      * Original signature :
-     * <code>l_int32 pixAddText(PIX*, const char*)</code>
+     * <code>l_ok pixAddText(PIX*, const char*)</code>
      */
     int pixAddText(Pix pix, String textstring);
 
@@ -8113,12 +8113,12 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixSetColormap(PIX*, PIXCMAP*)</code>
+     * <code>l_ok pixSetColormap(PIX*, PIXCMAP*)</code>
      */
     int pixSetColormap(Pix pix, PixColormap colormap);
 
     /**
-     * Original signature : <code>l_int32 pixDestroyColormap(PIX*)</code>
+     * Original signature : <code>l_ok pixDestroyColormap(PIX*)</code>
      */
     int pixDestroyColormap(Pix pix);
 
@@ -8150,48 +8150,48 @@ public interface Leptonica extends Library, ILeptonica {
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixPrintStreamInfo(FILE*, PIX*, const char*)</code>
+//       * <code>l_ok pixPrintStreamInfo(FILE*, PIX*, const char*)</code>
 //       */
 //      int pixPrintStreamInfo(FILE fp, Pix pix, String text);
     /**
      * Original signature :
-     * <code>l_int32 pixGetPixel(PIX*, l_int32, l_int32, l_uint32*)</code>
+     * <code>l_ok pixGetPixel(PIX*, l_int32, l_int32, l_uint32*)</code>
      */
     int pixGetPixel(Pix pix, int x, int y, IntBuffer pval);
 
     /**
      * Original signature :
-     * <code>l_int32 pixSetPixel(PIX*, l_int32, l_int32, l_uint32)</code>
+     * <code>l_ok pixSetPixel(PIX*, l_int32, l_int32, l_uint32)</code>
      */
     int pixSetPixel(Pix pix, int x, int y, int val);
 
     /**
      * Original signature :
-     * <code>l_int32 pixGetRGBPixel(PIX*, l_int32, l_int32, l_int32*, l_int32*, l_int32*)</code>
+     * <code>l_ok pixGetRGBPixel(PIX*, l_int32, l_int32, l_int32*, l_int32*, l_int32*)</code>
      */
     int pixGetRGBPixel(Pix pix, int x, int y, IntBuffer prval, IntBuffer pgval, IntBuffer pbval);
 
     /**
      * Original signature :
-     * <code>l_int32 pixSetRGBPixel(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32)</code>
+     * <code>l_ok pixSetRGBPixel(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32)</code>
      */
     int pixSetRGBPixel(Pix pix, int x, int y, int rval, int gval, int bval);
 
     /**
      * Original signature :
-     * <code>l_int32 pixGetRandomPixel(PIX*, l_uint32*, l_int32*, l_int32*)</code>
+     * <code>l_ok pixGetRandomPixel(PIX*, l_uint32*, l_int32*, l_int32*)</code>
      */
     int pixGetRandomPixel(Pix pix, IntBuffer pval, IntBuffer px, IntBuffer py);
 
     /**
      * Original signature :
-     * <code>l_int32 pixClearPixel(PIX*, l_int32, l_int32)</code>
+     * <code>l_ok pixClearPixel(PIX*, l_int32, l_int32)</code>
      */
     int pixClearPixel(Pix pix, int x, int y);
 
     /**
      * Original signature :
-     * <code>l_int32 pixFlipPixel(PIX*, l_int32, l_int32)</code>
+     * <code>l_ok pixFlipPixel(PIX*, l_int32, l_int32)</code>
      */
     int pixFlipPixel(Pix pix, int x, int y);
 
@@ -8203,99 +8203,99 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixGetBlackOrWhiteVal(PIX*, l_int32, l_uint32*)</code>
+     * <code>l_ok pixGetBlackOrWhiteVal(PIX*, l_int32, l_uint32*)</code>
      */
     int pixGetBlackOrWhiteVal(Pix pixs, int op, IntBuffer pval);
 
     /**
-     * Original signature : <code>l_int32 pixClearAll(PIX*)</code>
+     * Original signature : <code>l_ok pixClearAll(PIX*)</code>
      */
     int pixClearAll(Pix pix);
 
     /**
-     * Original signature : <code>l_int32 pixSetAll(PIX*)</code>
+     * Original signature : <code>l_ok pixSetAll(PIX*)</code>
      */
     int pixSetAll(Pix pix);
 
     /**
      * Original signature :
-     * <code>l_int32 pixSetAllGray(PIX*, l_int32)</code>
+     * <code>l_ok pixSetAllGray(PIX*, l_int32)</code>
      */
     int pixSetAllGray(Pix pix, int grayval);
 
     /**
      * Original signature :
-     * <code>l_int32 pixSetAllArbitrary(PIX*, l_uint32)</code>
+     * <code>l_ok pixSetAllArbitrary(PIX*, l_uint32)</code>
      */
     int pixSetAllArbitrary(Pix pix, int val);
 
     /**
      * Original signature :
-     * <code>l_int32 pixSetBlackOrWhite(PIX*, l_int32)</code>
+     * <code>l_ok pixSetBlackOrWhite(PIX*, l_int32)</code>
      */
     int pixSetBlackOrWhite(Pix pixs, int op);
 
     /**
      * Original signature :
-     * <code>l_int32 pixSetComponentArbitrary(PIX*, l_int32, l_int32)</code>
+     * <code>l_ok pixSetComponentArbitrary(PIX*, l_int32, l_int32)</code>
      */
     int pixSetComponentArbitrary(Pix pix, int comp, int val);
 
     /**
-     * Original signature : <code>l_int32 pixClearInRect(PIX*, BOX*)</code>
+     * Original signature : <code>l_ok pixClearInRect(PIX*, BOX*)</code>
      */
     int pixClearInRect(Pix pix, Box box);
 
     /**
-     * Original signature : <code>l_int32 pixSetInRect(PIX*, BOX*)</code>
+     * Original signature : <code>l_ok pixSetInRect(PIX*, BOX*)</code>
      */
     int pixSetInRect(Pix pix, Box box);
 
     /**
      * Original signature :
-     * <code>l_int32 pixSetInRectArbitrary(PIX*, BOX*, l_uint32)</code>
+     * <code>l_ok pixSetInRectArbitrary(PIX*, BOX*, l_uint32)</code>
      */
     int pixSetInRectArbitrary(Pix pix, Box box, int val);
 
     /**
      * Original signature :
-     * <code>l_int32 pixBlendInRect(PIX*, BOX*, l_uint32, l_float32)</code>
+     * <code>l_ok pixBlendInRect(PIX*, BOX*, l_uint32, l_float32)</code>
      */
     int pixBlendInRect(Pix pixs, Box box, int val, float fract);
 
     /**
      * Original signature :
-     * <code>l_int32 pixSetPadBits(PIX*, l_int32)</code>
+     * <code>l_ok pixSetPadBits(PIX*, l_int32)</code>
      */
     int pixSetPadBits(Pix pix, int val);
 
     /**
      * Original signature :
-     * <code>l_int32 pixSetPadBitsBand(PIX*, l_int32, l_int32, l_int32)</code>
+     * <code>l_ok pixSetPadBitsBand(PIX*, l_int32, l_int32, l_int32)</code>
      */
     int pixSetPadBitsBand(Pix pix, int by, int bh, int val);
 
     /**
      * Original signature :
-     * <code>l_int32 pixSetOrClearBorder(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32)</code>
+     * <code>l_ok pixSetOrClearBorder(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32)</code>
      */
     int pixSetOrClearBorder(Pix pixs, int left, int right, int top, int bot, int op);
 
     /**
      * Original signature :
-     * <code>l_int32 pixSetBorderVal(PIX*, l_int32, l_int32, l_int32, l_int32, l_uint32)</code>
+     * <code>l_ok pixSetBorderVal(PIX*, l_int32, l_int32, l_int32, l_int32, l_uint32)</code>
      */
     int pixSetBorderVal(Pix pixs, int left, int right, int top, int bot, int val);
 
     /**
      * Original signature :
-     * <code>l_int32 pixSetBorderRingVal(PIX*, l_int32, l_uint32)</code>
+     * <code>l_ok pixSetBorderRingVal(PIX*, l_int32, l_uint32)</code>
      */
     int pixSetBorderRingVal(Pix pixs, int dist, int val);
 
     /**
      * Original signature :
-     * <code>l_int32 pixSetMirroredBorder(PIX*, l_int32, l_int32, l_int32, l_int32)</code>
+     * <code>l_ok pixSetMirroredBorder(PIX*, l_int32, l_int32, l_int32, l_int32)</code>
      */
     int pixSetMirroredBorder(Pix pixs, int left, int right, int top, int bot);
 
@@ -8359,7 +8359,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      Pix pixAddContinuedBorder(Pix pixs, int left, int right, int top, int bot);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixShiftAndTransferAlpha(PIX*, PIX*, l_float32, l_float32)</code>
+//       * <code>l_ok pixShiftAndTransferAlpha(PIX*, PIX*, l_float32, l_float32)</code>
 //       */
 //      int pixShiftAndTransferAlpha(Pix pixd, Pix pixs, float shiftx, float shifty);
 //      /**
@@ -8379,7 +8379,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      Pix pixGetRGBComponent(Pix pixs, int comp);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixSetRGBComponent(PIX*, PIX*, l_int32)</code>
+//       * <code>l_ok pixSetRGBComponent(PIX*, PIX*, l_int32)</code>
 //       */
 //      int pixSetRGBComponent(Pix pixd, Pix pixs, int comp);
 //      /**
@@ -8389,17 +8389,17 @@ public interface Leptonica extends Library, ILeptonica {
 //      Pix pixGetRGBComponentCmap(Pix pixs, int comp);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixCopyRGBComponent(PIX*, PIX*, l_int32)</code>
+//       * <code>l_ok pixCopyRGBComponent(PIX*, PIX*, l_int32)</code>
 //       */
 //      int pixCopyRGBComponent(Pix pixd, Pix pixs, int comp);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 composeRGBPixel(l_int32, l_int32, l_int32, l_uint32*)</code>
+//       * <code>l_ok composeRGBPixel(l_int32, l_int32, l_int32, l_uint32*)</code>
 //       */
 //      int composeRGBPixel(int rval, int gval, int bval, IntBuffer ppixel);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 composeRGBAPixel(l_int32, l_int32, l_int32, l_int32, l_uint32*)</code>
+//       * <code>l_ok composeRGBAPixel(l_int32, l_int32, l_int32, l_int32, l_uint32*)</code>
 //       */
 //      int composeRGBAPixel(int rval, int gval, int bval, int aval, IntBuffer ppixel);
 //      /**
@@ -8419,7 +8419,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      int extractMinMaxComponent(int pixel, int type);
     /**
      * Original signature :
-     * <code>l_int32 pixGetRGBLine(PIX*, l_int32, l_uint8*, l_uint8*, l_uint8*)</code>
+     * <code>l_ok pixGetRGBLine(PIX*, l_int32, l_uint8*, l_uint8*, l_uint8*)</code>
      */
     int pixGetRGBLine(Pix pixs, int row, ByteBuffer bufr, ByteBuffer bufg, ByteBuffer bufb);
 
@@ -8429,7 +8429,7 @@ public interface Leptonica extends Library, ILeptonica {
     Pix pixEndianByteSwapNew(Pix pixs);
 
     /**
-     * Original signature : <code>l_int32 pixEndianByteSwap(PIX*)</code>
+     * Original signature : <code>l_ok pixEndianByteSwap(PIX*)</code>
      */
     int pixEndianByteSwap(Pix pixs);
 
@@ -8445,19 +8445,19 @@ public interface Leptonica extends Library, ILeptonica {
     Pix pixEndianTwoByteSwapNew(Pix pixs);
 
     /**
-     * Original signature : <code>l_int32 pixEndianTwoByteSwap(PIX*)</code>
+     * Original signature : <code>l_ok pixEndianTwoByteSwap(PIX*)</code>
      */
     int pixEndianTwoByteSwap(Pix pixs);
 
     /**
      * Original signature :
-     * <code>l_int32 pixGetRasterData(PIX*, l_uint8**, size_t*)</code>
+     * <code>l_ok pixGetRasterData(PIX*, l_uint8**, size_t*)</code>
      */
     int pixGetRasterData(Pix pixs, PointerByReference pdata, NativeSizeByReference pnbytes);
 
     /**
      * Original signature :
-     * <code>l_int32 pixAlphaIsOpaque(PIX*, l_int32*)</code>
+     * <code>l_ok pixAlphaIsOpaque(PIX*, l_int32*)</code>
      */
     int pixAlphaIsOpaque(Pix pix, IntBuffer popaque);
 
@@ -8468,7 +8468,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      PointerByReference pixSetupByteProcessing(Pix pix, IntBuffer pw, IntBuffer ph);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixCleanupByteProcessing(PIX*, l_uint8**)</code>
+//       * <code>l_ok pixCleanupByteProcessing(PIX*, l_uint8**)</code>
 //       */
 //      int pixCleanupByteProcessing(Pix pix, PointerByReference lineptrs);
 //      /**
@@ -8478,37 +8478,37 @@ public interface Leptonica extends Library, ILeptonica {
 //      void l_setAlphaMaskBorder(float val1, float val2);
     /**
      * Original signature :
-     * <code>l_int32 pixSetMasked(PIX*, PIX*, l_uint32)</code>
+     * <code>l_ok pixSetMasked(PIX*, PIX*, l_uint32)</code>
      */
     int pixSetMasked(Pix pixd, Pix pixm, int val);
 
     /**
      * Original signature :
-     * <code>l_int32 pixSetMaskedGeneral(PIX*, PIX*, l_uint32, l_int32, l_int32)</code>
+     * <code>l_ok pixSetMaskedGeneral(PIX*, PIX*, l_uint32, l_int32, l_int32)</code>
      */
     int pixSetMaskedGeneral(Pix pixd, Pix pixm, int val, int x, int y);
 
     /**
      * Original signature :
-     * <code>l_int32 pixCombineMasked(PIX*, PIX*, PIX*)</code>
+     * <code>l_ok pixCombineMasked(PIX*, PIX*, PIX*)</code>
      */
     int pixCombineMasked(Pix pixd, Pix pixs, Pix pixm);
 
     /**
      * Original signature :
-     * <code>l_int32 pixCombineMaskedGeneral(PIX*, PIX*, PIX*, l_int32, l_int32)</code>
+     * <code>l_ok pixCombineMaskedGeneral(PIX*, PIX*, PIX*, l_int32, l_int32)</code>
      */
     int pixCombineMaskedGeneral(Pix pixd, Pix pixs, Pix pixm, int x, int y);
 
     /**
      * Original signature :
-     * <code>l_int32 pixPaintThroughMask(PIX*, PIX*, l_int32, l_int32, l_uint32)</code>
+     * <code>l_ok pixPaintThroughMask(PIX*, PIX*, l_int32, l_int32, l_uint32)</code>
      */
     int pixPaintThroughMask(Pix pixd, Pix pixm, int x, int y, int val);
 
     /**
      * Original signature :
-     * <code>l_int32 pixPaintSelfThroughMask(PIX*, PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32)</code>
+     * <code>l_ok pixPaintSelfThroughMask(PIX*, PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32)</code>
      */
     int pixPaintSelfThroughMask(Pix pixd, Pix pixm, int x, int y, int searchdir, int mindist, int tilesize, int ntiles, int distblend);
 
@@ -8544,7 +8544,7 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixGetColorNearMaskBoundary(PIX*, PIX*, BOX*, l_int32, l_uint32*, l_int32)</code>
+     * <code>l_ok pixGetColorNearMaskBoundary(PIX*, PIX*, BOX*, l_int32, l_uint32*, l_int32)</code>
      */
     int pixGetColorNearMaskBoundary(Pix pixs, Pix pixm, Box box, int dist, IntBuffer pval, int debug);
 
@@ -8574,13 +8574,13 @@ public interface Leptonica extends Library, ILeptonica {
     Pix pixSubtract(Pix pixd, Pix pixs1, Pix pixs2);
 
     /**
-     * Original signature : <code>l_int32 pixZero(PIX*, l_int32*)</code>
+     * Original signature : <code>l_ok pixZero(PIX*, l_int32*)</code>
      */
     int pixZero(Pix pix, IntBuffer pempty);
 
     /**
      * Original signature :
-     * <code>l_int32 pixForegroundFraction(PIX*, l_float32*)</code>
+     * <code>l_ok pixForegroundFraction(PIX*, l_float32*)</code>
      */
     int pixForegroundFraction(Pix pix, FloatBuffer pfract);
 //  
@@ -8591,7 +8591,7 @@ public interface Leptonica extends Library, ILeptonica {
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixCountPixels(PIX*, l_int32*, l_int32*)</code>
+//       * <code>l_ok pixCountPixels(PIX*, l_int32*, l_int32*)</code>
 //       */
 //      int pixCountPixels(Pix pix, IntBuffer pcount, IntBuffer tab8);
 //  
@@ -8616,7 +8616,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      Numa pixCountPixelsByColumn(Pix pix);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixCountPixelsInRow(PIX*, l_int32, l_int32*, l_int32*)</code>
+//       * <code>l_ok pixCountPixelsInRow(PIX*, l_int32, l_int32*, l_int32*)</code>
 //       */
 //      int pixCountPixelsInRow(Pix pix, int row, IntBuffer pcount, IntBuffer tab8);
 //      /**
@@ -8626,7 +8626,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      Numa pixGetMomentByColumn(Pix pix, int order);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixThresholdPixelSum(PIX*, l_int32, l_int32*, l_int32*)</code>
+//       * <code>l_ok pixThresholdPixelSum(PIX*, l_int32, l_int32*, l_int32*)</code>
 //       */
 //      int pixThresholdPixelSum(Pix pix, int thresh, IntBuffer pabove, IntBuffer tab8);
 //  
@@ -8651,7 +8651,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      Numa pixAverageByColumn(Pix pix, Box box, int type);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixAverageInRect(PIX*, BOX*, l_float32*)</code>
+//       * <code>l_ok pixAverageInRect(PIX*, BOX*, l_float32*)</code>
 //       */
 //      int pixAverageInRect(Pix pix, Box box, FloatBuffer pave);
 //  
@@ -8666,7 +8666,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      Numa pixVarianceByColumn(Pix pix, Box box);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixVarianceInRect(PIX*, BOX*, l_float32*)</code>
+//       * <code>l_ok pixVarianceInRect(PIX*, BOX*, l_float32*)</code>
 //       */
 //      int pixVarianceInRect(Pix pix, Box box, FloatBuffer prootvar);
 //  
@@ -8681,12 +8681,12 @@ public interface Leptonica extends Library, ILeptonica {
 //      Numa pixAbsDiffByColumn(Pix pix, Box box);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixAbsDiffInRect(PIX*, BOX*, l_int32, l_float32*)</code>
+//       * <code>l_ok pixAbsDiffInRect(PIX*, BOX*, l_int32, l_float32*)</code>
 //       */
 //      int pixAbsDiffInRect(Pix pix, Box box, int dir, FloatBuffer pabsdiff);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixAbsDiffOnLine(PIX*, l_int32, l_int32, l_int32, l_int32, l_float32*)</code>
+//       * <code>l_ok pixAbsDiffOnLine(PIX*, l_int32, l_int32, l_int32, l_int32, l_float32*)</code>
 //       */
 //      int pixAbsDiffOnLine(Pix pix, int x1, int y1, int x2, int y2, FloatBuffer pabsdiff);
 //      /**
@@ -8701,7 +8701,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      Pix pixMirroredTiling(Pix pixs, int w, int h);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixFindRepCloseTile(PIX*, BOX*, l_int32, l_int32, l_int32, l_int32, BOX**, l_int32)</code>
+//       * <code>l_ok pixFindRepCloseTile(PIX*, BOX*, l_int32, l_int32, l_int32, l_int32, BOX**, l_int32)</code>
 //       */
 //      int pixFindRepCloseTile(Pix pixs, Box box, int searchdir, int mindist, int tsize, int ntiles, PointerByReference pboxtile, int debug);
 //      /**
@@ -8727,12 +8727,12 @@ public interface Leptonica extends Library, ILeptonica {
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixGetColorHistogram(PIX*, l_int32, NUMA**, NUMA**, NUMA**)</code>
+//       * <code>l_ok pixGetColorHistogram(PIX*, l_int32, NUMA**, NUMA**, NUMA**)</code>
 //       */
 //      int pixGetColorHistogram(Pix pixs, int factor, PointerByReference pnar, PointerByReference pnag, PointerByReference pnab);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixGetColorHistogramMasked(PIX*, PIX*, l_int32, l_int32, l_int32, NUMA**, NUMA**, NUMA**)</code>
+//       * <code>l_ok pixGetColorHistogramMasked(PIX*, PIX*, l_int32, l_int32, l_int32, NUMA**, NUMA**, NUMA**)</code>
 //       */
 //      int pixGetColorHistogramMasked(Pix pixs, Pix pixm, int x, int y, int factor, PointerByReference pnar, PointerByReference pnag, PointerByReference pnab);
 //      /**
@@ -8769,37 +8769,37 @@ public interface Leptonica extends Library, ILeptonica {
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixGetRankValue(PIX*, l_int32, l_float32, l_uint32*)</code>
+//       * <code>l_ok pixGetRankValue(PIX*, l_int32, l_float32, l_uint32*)</code>
 //       */
 //      int pixGetRankValue(Pix pixs, int factor, float rank, IntBuffer pvalue);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixGetRankValueMaskedRGB(PIX*, PIX*, l_int32, l_int32, l_int32, l_float32, l_float32*, l_float32*, l_float32*)</code>
+//       * <code>l_ok pixGetRankValueMaskedRGB(PIX*, PIX*, l_int32, l_int32, l_int32, l_float32, l_float32*, l_float32*, l_float32*)</code>
 //       */
 //      int pixGetRankValueMaskedRGB(Pix pixs, Pix pixm, int x, int y, int factor, float rank, FloatBuffer prval, FloatBuffer pgval, FloatBuffer pbval);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixGetRankValueMasked(PIX*, PIX*, l_int32, l_int32, l_int32, l_float32, l_float32*, NUMA**)</code>
+//       * <code>l_ok pixGetRankValueMasked(PIX*, PIX*, l_int32, l_int32, l_int32, l_float32, l_float32*, NUMA**)</code>
 //       */
 //      int pixGetRankValueMasked(Pix pixs, Pix pixm, int x, int y, int factor, float rank, FloatBuffer pval, PointerByReference pna);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixGetRankValueMasked(PIX*, PIX*, l_int32, l_int32, l_int32, l_float32, l_float32*, NUMA**)</code>
+//       * <code>l_ok pixGetRankValueMasked(PIX*, PIX*, l_int32, l_int32, l_int32, l_float32, l_float32*, NUMA**)</code>
 //       */
 //      int pixGetRankValueMasked(Pix pixs, Pix pixm, int x, int y, int factor, float rank, FloatByReference pval, PointerByReference pna);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixGetAverageMaskedRGB(PIX*, PIX*, l_int32, l_int32, l_int32, l_int32, l_float32*, l_float32*, l_float32*)</code>
+//       * <code>l_ok pixGetAverageMaskedRGB(PIX*, PIX*, l_int32, l_int32, l_int32, l_int32, l_float32*, l_float32*, l_float32*)</code>
 //       */
 //      int pixGetAverageMaskedRGB(Pix pixs, Pix pixm, int x, int y, int factor, int type, FloatBuffer prval, FloatBuffer pgval, FloatBuffer pbval);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixGetAverageMasked(PIX*, PIX*, l_int32, l_int32, l_int32, l_int32, l_float32*)</code>
+//       * <code>l_ok pixGetAverageMasked(PIX*, PIX*, l_int32, l_int32, l_int32, l_int32, l_float32*)</code>
 //       */
 //      int pixGetAverageMasked(Pix pixs, Pix pixm, int x, int y, int factor, int type, FloatBuffer pval);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixGetAverageTiledRGB(PIX*, l_int32, l_int32, l_int32, PIX**, PIX**, PIX**)</code>
+//       * <code>l_ok pixGetAverageTiledRGB(PIX*, l_int32, l_int32, l_int32, PIX**, PIX**, PIX**)</code>
 //       */
 //      int pixGetAverageTiledRGB(Pix pixs, int sx, int sy, int type, PointerByReference ppixr, PointerByReference ppixg, PointerByReference ppixb);
 //      /**
@@ -8819,35 +8819,35 @@ public interface Leptonica extends Library, ILeptonica {
 //      int pixColumnStats(Pix pixs, Box box, PointerByReference pnamean, PointerByReference pnamedian, PointerByReference pnamode, PointerByReference pnamodecount, PointerByReference pnavar, PointerByReference pnarootvar);
     /**
      * Original signature :
-     * <code>l_int32 pixGetRangeValues(PIX*, l_int32, l_int32, l_int32*, l_int32*)</code>
+     * <code>l_ok pixGetRangeValues(PIX*, l_int32, l_int32, l_int32*, l_int32*)</code>
      */
     int pixGetRangeValues(Pix pixs, int factor, int color, IntBuffer pminval, IntBuffer pmaxval);
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixGetExtremeValue(PIX*, l_int32, l_int32, l_int32*, l_int32*, l_int32*, l_int32*)</code>
+//       * <code>l_ok pixGetExtremeValue(PIX*, l_int32, l_int32, l_int32*, l_int32*, l_int32*, l_int32*)</code>
 //       */
 //      int pixGetExtremeValue(Pix pixs, int factor, int type, IntBuffer prval, IntBuffer pgval, IntBuffer pbval, IntBuffer pgrayval);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixGetMaxValueInRect(PIX*, BOX*, l_uint32*, l_int32*, l_int32*)</code>
+//       * <code>l_ok pixGetMaxValueInRect(PIX*, BOX*, l_uint32*, l_int32*, l_int32*)</code>
 //       */
 //      int pixGetMaxValueInRect(Pix pixs, Box box, IntBuffer pmaxval, IntBuffer pxmax, IntBuffer pymax);
     /**
      * Original signature :
-     * <code>l_int32 pixGetBinnedComponentRange(PIX*, l_int32, l_int32, l_int32, l_int32*, l_int32*, l_uint32**, l_int32)</code>
+     * <code>l_ok pixGetBinnedComponentRange(PIX*, l_int32, l_int32, l_int32, l_int32*, l_int32*, l_uint32**, l_int32)</code>
      */
     int pixGetBinnedComponentRange(Pix pixs, int nbins, int factor, int color, IntBuffer pminval, IntBuffer pmaxval, PointerByReference pcarray, int fontsize);
 
     /**
      * Original signature :
-     * <code>l_int32 pixGetRankColorArray(PIX*, l_int32, l_int32, l_int32, l_uint32**, l_int32, l_int32)</code>
+     * <code>l_ok pixGetRankColorArray(PIX*, l_int32, l_int32, l_int32, l_uint32**, l_int32, l_int32)</code>
      */
     int pixGetRankColorArray(Pix pixs, int nbins, int type, int factor, PointerByReference pcarray, int debugflag, int fontsize);
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixGetBinnedColor(PIX*, PIX*, l_int32, l_int32, NUMA*, l_uint32**, l_int32)</code>
+//       * <code>l_ok pixGetBinnedColor(PIX*, PIX*, l_int32, l_int32, NUMA*, l_uint32**, l_int32)</code>
 //       */
 //      int pixGetBinnedColor(Pix pixs, Pix pixg, int factor, int nbins, Numa nalut, PointerByReference pcarray, int debugflag);
     /**
@@ -8868,48 +8868,48 @@ public interface Leptonica extends Library, ILeptonica {
 //      Pix pixaGetAlignedStats(Pixa pixa, int type, int nbins, int thresh);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixaExtractColumnFromEachPix(PIXA*, l_int32, PIX*)</code>
+//       * <code>l_ok pixaExtractColumnFromEachPix(PIXA*, l_int32, PIX*)</code>
 //       */
 //      int pixaExtractColumnFromEachPix(Pixa pixa, int col, Pix pixd);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixGetRowStats(PIX*, l_int32, l_int32, l_int32, l_float32*)</code>
+//       * <code>l_ok pixGetRowStats(PIX*, l_int32, l_int32, l_int32, l_float32*)</code>
 //       */
 //      int pixGetRowStats(Pix pixs, int type, int nbins, int thresh, FloatBuffer colvect);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixGetColumnStats(PIX*, l_int32, l_int32, l_int32, l_float32*)</code>
+//       * <code>l_ok pixGetColumnStats(PIX*, l_int32, l_int32, l_int32, l_float32*)</code>
 //       */
 //      int pixGetColumnStats(Pix pixs, int type, int nbins, int thresh, FloatBuffer rowvect);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixSetPixelColumn(PIX*, l_int32, l_float32*)</code>
+//       * <code>l_ok pixSetPixelColumn(PIX*, l_int32, l_float32*)</code>
 //       */
 //      int pixSetPixelColumn(Pix pix, int col, FloatBuffer colvect);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixThresholdForFgBg(PIX*, l_int32, l_int32, l_int32*, l_int32*)</code>
+//       * <code>l_ok pixThresholdForFgBg(PIX*, l_int32, l_int32, l_int32*, l_int32*)</code>
 //       */
 //      int pixThresholdForFgBg(Pix pixs, int factor, int thresh, IntBuffer pfgval, IntBuffer pbgval);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixSplitDistributionFgBg(PIX*, l_float32, l_int32, l_int32*, l_int32*, l_int32*, PIX**)</code>
+//       * <code>l_ok pixSplitDistributionFgBg(PIX*, l_float32, l_int32, l_int32*, l_int32*, l_int32*, PIX**)</code>
 //       */
 //      int pixSplitDistributionFgBg(Pix pixs, float scorefract, int factor, IntBuffer pthresh, IntBuffer pfgval, IntBuffer pbgval, PointerByReference ppixdb);
     /**
      * Original signature :
-     * <code>l_int32 pixSplitDistributionFgBg(PIX*, l_float32, l_int32, l_int32*, l_int32*, l_int32*, PIX**)</code>
+     * <code>l_ok pixSplitDistributionFgBg(PIX*, l_float32, l_int32, l_int32*, l_int32*, l_int32*, PIX**)</code>
      */
     int pixSplitDistributionFgBg(Pix pixs, float scorefract, int factor, IntByReference pthresh, IntByReference pfgval, IntByReference pbgval, PointerByReference ppixdb);
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixaFindDimensions(PIXA*, NUMA**, NUMA**)</code>
+//       * <code>l_ok pixaFindDimensions(PIXA*, NUMA**, NUMA**)</code>
 //       */
 //      int pixaFindDimensions(Pixa pixa, PointerByReference pnaw, PointerByReference pnah);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixFindAreaPerimRatio(PIX*, l_int32*, l_float32*)</code>
+//       * <code>l_ok pixFindAreaPerimRatio(PIX*, l_int32*, l_float32*)</code>
 //       */
 //      int pixFindAreaPerimRatio(Pix pixs, IntBuffer tab, FloatBuffer pfract);
 //      /**
@@ -8919,7 +8919,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      Numa pixaFindPerimToAreaRatio(Pixa pixa);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixFindPerimToAreaRatio(PIX*, l_int32*, l_float32*)</code>
+//       * <code>l_ok pixFindPerimToAreaRatio(PIX*, l_int32*, l_float32*)</code>
 //       */
 //      int pixFindPerimToAreaRatio(Pix pixs, IntBuffer tab, FloatBuffer pfract);
 //  
@@ -8929,7 +8929,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      Numa pixaFindPerimSizeRatio(Pixa pixa);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixFindPerimSizeRatio(PIX*, l_int32*, l_float32*)</code>
+//       * <code>l_ok pixFindPerimSizeRatio(PIX*, l_int32*, l_float32*)</code>
 //       */
 //      int pixFindPerimSizeRatio(Pix pixs, IntBuffer tab, FloatBuffer pratio);
 //  
@@ -8939,7 +8939,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      Numa pixaFindAreaFraction(Pixa pixa);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixFindAreaFraction(PIX*, l_int32*, l_float32*)</code>
+//       * <code>l_ok pixFindAreaFraction(PIX*, l_int32*, l_float32*)</code>
 //       */
 //      int pixFindAreaFraction(Pix pixs, IntBuffer tab, FloatBuffer pfract);
 //      /**
@@ -8949,7 +8949,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      Numa pixaFindAreaFractionMasked(Pixa pixa, Pix pixm, int debug);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixFindAreaFractionMasked(PIX*, BOX*, PIX*, l_int32*, l_float32*)</code>
+//       * <code>l_ok pixFindAreaFractionMasked(PIX*, BOX*, PIX*, l_int32*, l_float32*)</code>
 //       */
 //      int pixFindAreaFractionMasked(Pix pixs, Box box, Pix pixm, IntBuffer tab, FloatBuffer pfract);
 //      /**
@@ -8964,7 +8964,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      Numa pixaFindWidthHeightProduct(Pixa pixa);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixFindOverlapFraction(PIX*, PIX*, l_int32, l_int32, l_int32*, l_float32*, l_int32*)</code>
+//       * <code>l_ok pixFindOverlapFraction(PIX*, PIX*, l_int32, l_int32, l_int32*, l_float32*, l_int32*)</code>
 //       */
 //      int pixFindOverlapFraction(Pix pixs1, Pix pixs2, int x2, int y2, IntBuffer tab, FloatBuffer pratio, IntBuffer pnoverlap);
 //      /**
@@ -8974,7 +8974,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      Boxa pixFindRectangleComps(Pix pixs, int dist, int minw, int minh);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixConformsToRectangle(PIX*, BOX*, l_int32, l_int32*)</code>
+//       * <code>l_ok pixConformsToRectangle(PIX*, BOX*, l_int32, l_int32*)</code>
 //       */
 //      int pixConformsToRectangle(Pix pixs, Box box, int dist, IntBuffer pconforms);
 //      /**
@@ -8994,7 +8994,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      Pix pixClipMasked(Pix pixs, Pix pixm, int x, int y, int outval);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixCropToMatch(PIX*, PIX*, PIX**, PIX**)</code>
+//       * <code>l_ok pixCropToMatch(PIX*, PIX*, PIX**, PIX**)</code>
 //       */
 //      int pixCropToMatch(Pix pixs1, Pix pixs2, PointerByReference ppixd1, PointerByReference ppixd2);
 //      /**
@@ -9019,38 +9019,38 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixFractionFgInMask(PIX*, PIX*, l_float32*)</code>
+     * <code>l_ok pixFractionFgInMask(PIX*, PIX*, l_float32*)</code>
      */
     int pixFractionFgInMask(Pix pix1, Pix pix2, FloatBuffer pfract);
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixClipToForeground(PIX*, PIX**, BOX**)</code>
+//       * <code>l_ok pixClipToForeground(PIX*, PIX**, BOX**)</code>
 //       */
 //      int pixClipToForeground(Pix pixs, PointerByReference ppixd, PointerByReference pbox);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixTestClipToForeground(PIX*, l_int32*)</code>
+//       * <code>l_ok pixTestClipToForeground(PIX*, l_int32*)</code>
 //       */
 //      int pixTestClipToForeground(Pix pixs, IntBuffer pcanclip);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixClipBoxToForeground(PIX*, BOX*, PIX**, BOX**)</code>
+//       * <code>l_ok pixClipBoxToForeground(PIX*, BOX*, PIX**, BOX**)</code>
 //       */
 //      int pixClipBoxToForeground(Pix pixs, Box boxs, PointerByReference ppixd, PointerByReference pboxd);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixScanForForeground(PIX*, BOX*, l_int32, l_int32*)</code>
+//       * <code>l_ok pixScanForForeground(PIX*, BOX*, l_int32, l_int32*)</code>
 //       */
 //      int pixScanForForeground(Pix pixs, Box box, int scanflag, IntBuffer ploc);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixClipBoxToEdges(PIX*, BOX*, l_int32, l_int32, l_int32, l_int32, PIX**, BOX**)</code>
+//       * <code>l_ok pixClipBoxToEdges(PIX*, BOX*, l_int32, l_int32, l_int32, l_int32, PIX**, BOX**)</code>
 //       */
 //      int pixClipBoxToEdges(Pix pixs, Box boxs, int lowthresh, int highthresh, int maxwidth, int factor, PointerByReference ppixd, PointerByReference pboxd);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixScanForEdge(PIX*, BOX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32*)</code>
+//       * <code>l_ok pixScanForEdge(PIX*, BOX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32*)</code>
 //       */
 //      int pixScanForEdge(Pix pixs, Box box, int lowthresh, int highthresh, int maxwidth, int factor, int scanflag, IntBuffer ploc);
 //      /**
@@ -9075,17 +9075,17 @@ public interface Leptonica extends Library, ILeptonica {
 //      Numa pixReversalProfile(Pix pixs, float fract, int dir, int first, int last, int minreversal, int factor1, int factor2);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixWindowedVarianceOnLine(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, NUMA**)</code>
+//       * <code>l_ok pixWindowedVarianceOnLine(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, NUMA**)</code>
 //       */
 //      int pixWindowedVarianceOnLine(Pix pixs, int dir, int loc, int c1, int c2, int size, PointerByReference pnad);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixMinMaxNearLine(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, NUMA**, NUMA**, l_float32*, l_float32*)</code>
+//       * <code>l_ok pixMinMaxNearLine(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, NUMA**, NUMA**, l_float32*, l_float32*)</code>
 //       */
 //      int pixMinMaxNearLine(Pix pixs, int x1, int y1, int x2, int y2, int dist, int direction, PointerByReference pnamin, PointerByReference pnamax, FloatBuffer pminave, FloatBuffer pmaxave);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixMinMaxNearLine(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, NUMA**, NUMA**, l_float32*, l_float32*)</code>
+//       * <code>l_ok pixMinMaxNearLine(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, NUMA**, NUMA**, l_float32*, l_float32*)</code>
 //       */
 //      int pixMinMaxNearLine(Pix pixs, int x1, int y1, int x2, int y2, int dist, int direction, PointerByReference pnamin, PointerByReference pnamax, FloatByReference pminave, FloatByReference pmaxave);
 //  
@@ -9130,17 +9130,17 @@ public interface Leptonica extends Library, ILeptonica {
       Pixa pixaCopy(Pixa pixa, int copyflag);
       /**
        * Original signature :
-       * <code>l_int32 pixaAddPix(PIXA*, PIX*, l_int32)</code>
+       * <code>l_ok pixaAddPix(PIXA*, PIX*, l_int32)</code>
        */
       int pixaAddPix(Pixa pixa, Pix pix, int copyflag);
       /**
        * Original signature :
-       * <code>l_int32 pixaAddBox(PIXA*, BOX*, l_int32)</code>
+       * <code>l_ok pixaAddBox(PIXA*, BOX*, l_int32)</code>
        */
       int pixaAddBox(Pixa pixa, Box box, int copyflag);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixaExtendArrayToSize(PIXA*, l_int32)</code>
+//       * <code>l_ok pixaExtendArrayToSize(PIXA*, l_int32)</code>
 //       */
 //      int pixaExtendArrayToSize(Pixa pixa, int size);
 //  
@@ -9150,7 +9150,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      int pixaGetCount(Pixa pixa);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixaChangeRefcount(PIXA*, l_int32)</code>
+//       * <code>l_ok pixaChangeRefcount(PIXA*, l_int32)</code>
 //       */
 //      int pixaChangeRefcount(Pixa pixa, int delta);
 //      /**
@@ -9160,7 +9160,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      Pix pixaGetPix(Pixa pixa, int index, int accesstype);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixaGetPixDimensions(PIXA*, l_int32, l_int32*, l_int32*, l_int32*)</code>
+//       * <code>l_ok pixaGetPixDimensions(PIXA*, l_int32, l_int32*, l_int32*, l_int32*)</code>
 //       */
 //      int pixaGetPixDimensions(Pixa pixa, int index, IntBuffer pw, IntBuffer ph, IntBuffer pd);
 //  
@@ -9180,12 +9180,12 @@ public interface Leptonica extends Library, ILeptonica {
       Box pixaGetBox(Pixa pixa, int index, int accesstype);
       /**
        * Original signature :
-       * <code>l_int32 pixaGetBoxGeometry(PIXA*, l_int32, l_int32*, l_int32*, l_int32*, l_int32*)</code>
+       * <code>l_ok pixaGetBoxGeometry(PIXA*, l_int32, l_int32*, l_int32*, l_int32*, l_int32*)</code>
        */
       int pixaGetBoxGeometry(Pixa pixa, int index, IntBuffer px, IntBuffer py, IntBuffer pw, IntBuffer ph);
       /**
        * Original signature :
-       * <code>l_int32 pixaSetBoxa(PIXA*, BOXA*, l_int32)</code>
+       * <code>l_ok pixaSetBoxa(PIXA*, BOXA*, l_int32)</code>
        */
       int pixaSetBoxa(Pixa pixa, Boxa boxa, int accesstype);
     /**
@@ -9195,21 +9195,21 @@ public interface Leptonica extends Library, ILeptonica {
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixaVerifyDepth(PIXA*, l_int32*, l_int32*)</code>
+//       * <code>l_ok pixaVerifyDepth(PIXA*, l_int32*, l_int32*)</code>
 //       */
 //      int pixaVerifyDepth(Pixa pixa, IntBuffer psame, IntBuffer pmaxd);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixaIsFull(PIXA*, l_int32*, l_int32*)</code>
+//       * <code>l_ok pixaIsFull(PIXA*, l_int32*, l_int32*)</code>
 //       */
 //      int pixaIsFull(Pixa pixa, IntBuffer pfullpa, IntBuffer pfullba);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixaCountText(PIXA*, l_int32*)</code>
+//       * <code>l_ok pixaCountText(PIXA*, l_int32*)</code>
 //       */
 //      int pixaCountText(Pixa pixa, IntBuffer pntext);
     /**
-     * Original signature : <code>l_int32 pixaSetText(PIXA*, SARRAY*)</code>
+     * Original signature : <code>l_ok pixaSetText(PIXA*, SARRAY*)</code>
      */
     int pixaSetText(Pixa pixa, Sarray sa);
 
@@ -9220,42 +9220,42 @@ public interface Leptonica extends Library, ILeptonica {
 //      PointerByReference pixaGetLinePtrs(Pixa pixa, IntBuffer psize);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixaWriteStreamInfo(FILE*, PIXA*)</code>
+//       * <code>l_ok pixaWriteStreamInfo(FILE*, PIXA*)</code>
 //       */
 //      int pixaWriteStreamInfo(FILE fp, Pixa pixa);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixaReplacePix(PIXA*, l_int32, PIX*, BOX*)</code>
+//       * <code>l_ok pixaReplacePix(PIXA*, l_int32, PIX*, BOX*)</code>
 //       */
 //      int pixaReplacePix(Pixa pixa, int index, Pix pix, Box box);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixaInsertPix(PIXA*, l_int32, PIX*, BOX*)</code>
+//       * <code>l_ok pixaInsertPix(PIXA*, l_int32, PIX*, BOX*)</code>
 //       */
 //      int pixaInsertPix(Pixa pixa, int index, Pix pixs, Box box);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixaRemovePix(PIXA*, l_int32)</code>
+//       * <code>l_ok pixaRemovePix(PIXA*, l_int32)</code>
 //       */
 //      int pixaRemovePix(Pixa pixa, int index);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixaRemovePixAndSave(PIXA*, l_int32, PIX**, BOX**)</code>
+//       * <code>l_ok pixaRemovePixAndSave(PIXA*, l_int32, PIX**, BOX**)</code>
 //       */
 //      int pixaRemovePixAndSave(Pixa pixa, int index, PointerByReference ppix, PointerByReference pbox);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixaInitFull(PIXA*, PIX*, BOX*)</code>
+//       * <code>l_ok pixaInitFull(PIXA*, PIX*, BOX*)</code>
 //       */
 //      int pixaInitFull(Pixa pixa, Pix pix, Box box);
 //  
 //      /**
-//       * Original signature : <code>l_int32 pixaClear(PIXA*)</code>
+//       * Original signature : <code>l_ok pixaClear(PIXA*)</code>
 //       */
 //      int pixaClear(Pixa pixa);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixaJoin(PIXA*, PIXA*, l_int32, l_int32)</code>
+//       * <code>l_ok pixaJoin(PIXA*, PIXA*, l_int32, l_int32)</code>
 //       */
 //      int pixaJoin(Pixa pixad, Pixa pixas, int istart, int iend);
     /**
@@ -9266,7 +9266,7 @@ public interface Leptonica extends Library, ILeptonica {
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixaaJoin(PIXAA*, PIXAA*, l_int32, l_int32)</code>
+//       * <code>l_ok pixaaJoin(PIXAA*, PIXAA*, l_int32, l_int32)</code>
 //       */
 //      int pixaaJoin(Pixaa paad, Pixaa paas, int istart, int iend);
 //  
@@ -9286,22 +9286,22 @@ public interface Leptonica extends Library, ILeptonica {
 //      void pixaaDestroy(PointerByReference ppaa);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixaaAddPixa(PIXAA*, PIXA*, l_int32)</code>
+//       * <code>l_ok pixaaAddPixa(PIXAA*, PIXA*, l_int32)</code>
 //       */
 //      int pixaaAddPixa(Pixaa paa, Pixa pixa, int copyflag);
 //  
 //      /**
-//       * Original signature : <code>l_int32 pixaaExtendArray(PIXAA*)</code>
+//       * Original signature : <code>l_ok pixaaExtendArray(PIXAA*)</code>
 //       */
 //      int pixaaExtendArray(Pixaa paa);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixaaAddPix(PIXAA*, l_int32, PIX*, BOX*, l_int32)</code>
+//       * <code>l_ok pixaaAddPix(PIXAA*, l_int32, PIX*, BOX*, l_int32)</code>
 //       */
 //      int pixaaAddPix(Pixaa paa, int index, Pix pix, Box box, int copyflag);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixaaAddBox(PIXAA*, BOX*, l_int32)</code>
+//       * <code>l_ok pixaaAddBox(PIXAA*, BOX*, l_int32)</code>
 //       */
 //      int pixaaAddBox(Pixaa paa, Box box, int copyflag);
 //      /**
@@ -9326,7 +9326,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      Pix pixaaGetPix(Pixaa paa, int index, int ipix, int accessflag);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixaaVerifyDepth(PIXAA*, l_int32*)</code>
+//       * <code>l_ok pixaaVerifyDepth(PIXAA*, l_int32*)</code>
 //       */
 //      int pixaaVerifyDepth(Pixaa paa, IntBuffer pmaxdepth);
 //      /**
@@ -9336,22 +9336,22 @@ public interface Leptonica extends Library, ILeptonica {
 //      int pixaaIsFull(Pixaa paa, IntBuffer pfull);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixaaInitFull(PIXAA*, PIXA*)</code>
+//       * <code>l_ok pixaaInitFull(PIXAA*, PIXA*)</code>
 //       */
 //      int pixaaInitFull(Pixaa paa, Pixa pixa);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixaaReplacePixa(PIXAA*, l_int32, PIXA*)</code>
+//       * <code>l_ok pixaaReplacePixa(PIXAA*, l_int32, PIXA*)</code>
 //       */
 //      int pixaaReplacePixa(Pixaa paa, int index, Pixa pixa);
 //  
 //      /**
-//       * Original signature : <code>l_int32 pixaaClear(PIXAA*)</code>
+//       * Original signature : <code>l_ok pixaaClear(PIXAA*)</code>
 //       */
 //      int pixaaClear(Pixaa paa);
 //  
 //      /**
-//       * Original signature : <code>l_int32 pixaaTruncate(PIXAA*)</code>
+//       * Original signature : <code>l_ok pixaaTruncate(PIXAA*)</code>
 //       */
 //      int pixaaTruncate(Pixaa paa);
 //  
@@ -9371,23 +9371,23 @@ public interface Leptonica extends Library, ILeptonica {
     Pixa pixaReadMem(ByteBuffer data, NativeSize size);
 
 //    /**
-//     * Original signature : <code>l_int32 pixaWriteDebug(const char*, PIXA*)</code>
+//     * Original signature : <code>l_ok pixaWriteDebug(const char*, PIXA*)</code>
 //     */
 //    int pixaWriteDebug(String fname, Pixa pixa);
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixaWrite(const char*, PIXA*)</code>
+//       * <code>l_ok pixaWrite(const char*, PIXA*)</code>
 //       */
 //      int pixaWrite(String filename, Pixa pixa);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixaWriteStream(FILE*, PIXA*)</code>
+//       * <code>l_ok pixaWriteStream(FILE*, PIXA*)</code>
 //       */
 //      int pixaWriteStream(FILE fp, Pixa pixa);
     /**
      * Original signature :
-     * <code>l_int32 pixaWriteMem(l_uint8**, size_t*, PIXA*)</code>
+     * <code>l_ok pixaWriteMem(l_uint8**, size_t*, PIXA*)</code>
      */
     int pixaWriteMem(PointerByReference pdata, NativeSizeByReference psize, Pixa pixa);
 
@@ -9419,17 +9419,17 @@ public interface Leptonica extends Library, ILeptonica {
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixaaWrite(const char*, PIXAA*)</code>
+//       * <code>l_ok pixaaWrite(const char*, PIXAA*)</code>
 //       */
 //      int pixaaWrite(String filename, Pixaa paa);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixaaWriteStream(FILE*, PIXAA*)</code>
+//       * <code>l_ok pixaaWriteStream(FILE*, PIXAA*)</code>
 //       */
 //      int pixaaWriteStream(FILE fp, Pixaa paa);
     /**
      * Original signature :
-     * <code>l_int32 pixaaWriteMem(l_uint8**, size_t*, PIXAA*)</code>
+     * <code>l_ok pixaaWriteMem(l_uint8**, size_t*, PIXAA*)</code>
      */
     int pixaaWriteMem(PointerByReference pdata, NativeSizeByReference psize, Pixaa paa);
 
@@ -9465,22 +9465,22 @@ public interface Leptonica extends Library, ILeptonica {
 //      int pixaccGetOffset(Pixacc pixacc);
 //  
 //      /**
-//       * Original signature : <code>l_int32 pixaccAdd(PIXACC*, PIX*)</code>
+//       * Original signature : <code>l_ok pixaccAdd(PIXACC*, PIX*)</code>
 //       */
 //      int pixaccAdd(Pixacc pixacc, Pix pix);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixaccSubtract(PIXACC*, PIX*)</code>
+//       * <code>l_ok pixaccSubtract(PIXACC*, PIX*)</code>
 //       */
 //      int pixaccSubtract(Pixacc pixacc, Pix pix);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixaccMultConst(PIXACC*, l_float32)</code>
+//       * <code>l_ok pixaccMultConst(PIXACC*, l_float32)</code>
 //       */
 //      int pixaccMultConst(Pixacc pixacc, float factor);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixaccMultConstAccumulate(PIXACC*, PIX*, l_float32)</code>
+//       * <code>l_ok pixaccMultConstAccumulate(PIXACC*, PIX*, l_float32)</code>
 //       */
 //      int pixaccMultConstAccumulate(Pixacc pixacc, Pix pix, float factor);
 //      /**
@@ -9551,12 +9551,12 @@ public interface Leptonica extends Library, ILeptonica {
 //      Pixa pixaSelectWithIndicator(Pixa pixas, Numa na, IntBuffer pchanged);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixRemoveWithIndicator(PIX*, PIXA*, NUMA*)</code>
+//       * <code>l_ok pixRemoveWithIndicator(PIX*, PIXA*, NUMA*)</code>
 //       */
 //      int pixRemoveWithIndicator(Pix pixs, Pixa pixa, Numa na);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixAddWithIndicator(PIX*, PIXA*, NUMA*)</code>
+//       * <code>l_ok pixAddWithIndicator(PIX*, PIXA*, NUMA*)</code>
 //       */
 //      int pixAddWithIndicator(Pix pixs, Pixa pixa, Numa na);
     /**
@@ -9660,12 +9660,12 @@ public interface Leptonica extends Library, ILeptonica {
 //      Pixa pixaaFlattenToPixa(Pixaa paa, PointerByReference pnaindex, int copyflag);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixaaSizeRange(PIXAA*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
+//       * <code>l_ok pixaaSizeRange(PIXAA*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
 //       */
 //      int pixaaSizeRange(Pixaa paa, IntBuffer pminw, IntBuffer pminh, IntBuffer pmaxw, IntBuffer pmaxh);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixaSizeRange(PIXA*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
+//       * <code>l_ok pixaSizeRange(PIXA*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
 //       */
 //      int pixaSizeRange(Pixa pixa, IntBuffer pminw, IntBuffer pminh, IntBuffer pmaxw, IntBuffer pmaxh);
 //  
@@ -9675,28 +9675,28 @@ public interface Leptonica extends Library, ILeptonica {
 //      Pixa pixaClipToPix(Pixa pixas, Pix pixs);
     /**
      * Original signature :
-     * <code>l_int32 pixaClipToForeground(PIXA*, PIXA**, BOXA**)</code>
+     * <code>l_ok pixaClipToForeground(PIXA*, PIXA**, BOXA**)</code>
      */
     int pixaClipToForeground(Pixa pixas, PointerByReference ppixad, PointerByReference pboxa);
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixaGetRenderingDepth(PIXA*, l_int32*)</code>
+//       * <code>l_ok pixaGetRenderingDepth(PIXA*, l_int32*)</code>
 //       */
 //      int pixaGetRenderingDepth(Pixa pixa, IntBuffer pdepth);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixaHasColor(PIXA*, l_int32*)</code>
+//       * <code>l_ok pixaHasColor(PIXA*, l_int32*)</code>
 //       */
 //      int pixaHasColor(Pixa pixa, IntBuffer phascolor);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixaAnyColormaps(PIXA*, l_int32*)</code>
+//       * <code>l_ok pixaAnyColormaps(PIXA*, l_int32*)</code>
 //       */
 //      int pixaAnyColormaps(Pixa pixa, IntBuffer phascmap);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixaGetDepthInfo(PIXA*, l_int32*, l_int32*)</code>
+//       * <code>l_ok pixaGetDepthInfo(PIXA*, l_int32*, l_int32*)</code>
 //       */
 //      int pixaGetDepthInfo(Pixa pixa, IntBuffer pmaxdepth, IntBuffer psame);
 //  
@@ -9706,17 +9706,17 @@ public interface Leptonica extends Library, ILeptonica {
 //      Pixa pixaConvertToSameDepth(Pixa pixas);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixaEqual(PIXA*, PIXA*, l_int32, NUMA**, l_int32*)</code>
+//       * <code>l_ok pixaEqual(PIXA*, PIXA*, l_int32, NUMA**, l_int32*)</code>
 //       */
 //      int pixaEqual(Pixa pixa1, Pixa pixa2, int maxdist, PointerByReference pnaindex, IntBuffer psame);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixaEqual(PIXA*, PIXA*, l_int32, NUMA**, l_int32*)</code>
+//       * <code>l_ok pixaEqual(PIXA*, PIXA*, l_int32, NUMA**, l_int32*)</code>
 //       */
 //      int pixaEqual(Pixa pixa1, Pixa pixa2, int maxdist, PointerByReference pnaindex, IntByReference psame);
 
     /**
-     * Original signature : <code>l_int32 pixaSetFullSizeBoxa(PIXA*)</code>
+     * Original signature : <code>l_ok pixaSetFullSizeBoxa(PIXA*)</code>
      */
     int pixaSetFullSizeBoxa(Pixa pixa);
 
@@ -9830,7 +9830,7 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixaSelectToPdf(PIXA*, l_int32, l_int32, l_int32, l_float32, l_int32, l_int32, l_uint32, l_int32, const char*)</code>
+     * <code>l_ok pixaSelectToPdf(PIXA*, l_int32, l_int32, l_int32, l_float32, l_int32, l_int32, l_uint32, l_int32, const char*)</code>
      */
     int pixaSelectToPdf(Pixa pixas, int first, int last, int res, float scalefactor, int type, int quality, int color, int fontsize, String fileout);
 
@@ -9842,13 +9842,13 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixaSplitIntoFiles(PIXA*, l_int32, l_float32, l_int32, l_int32, l_int32, l_int32)</code>
+     * <code>l_ok pixaSplitIntoFiles(PIXA*, l_int32, l_float32, l_int32, l_int32, l_int32, l_int32)</code>
      */
     int pixaSplitIntoFiles(Pixa pixas, int nsplit, float scale, int outwidth, int write_pixa, int write_pix, int write_pdf);
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 convertToNUpFiles(const char*, const char*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, const char*)</code>
+//       * <code>l_ok convertToNUpFiles(const char*, const char*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, const char*)</code>
 //       */
 //      int convertToNUpFiles(String dir, String substr, int nx, int ny, int tw, int spacing, int border, int fontsize, String outdir);
 //      /**
@@ -9864,13 +9864,13 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixaCompareInPdf(PIXA*, PIXA*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, const char*)</code>
+     * <code>l_ok pixaCompareInPdf(PIXA*, PIXA*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32, const char*)</code>
      */
     int pixaCompareInPdf(Pixa pixa1, Pixa pixa2, int nx, int ny, int tw, int spacing, int border, int fontsize, String fileout);
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pmsCreate(size_t, size_t, NUMA*, const char*)</code>
+//       * <code>l_ok pmsCreate(size_t, size_t, NUMA*, const char*)</code>
 //       */
 //      int pmsCreate(NativeSize minsize, NativeSize smallest, Numa numalloc, String logfile);
 //  
@@ -9895,12 +9895,12 @@ public interface Leptonica extends Library, ILeptonica {
 //      Pointer pmsGetAlloc(NativeSize nbytes);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pmsGetLevelForAlloc(size_t, l_int32*)</code>
+//       * <code>l_ok pmsGetLevelForAlloc(size_t, l_int32*)</code>
 //       */
 //      int pmsGetLevelForAlloc(NativeSize nbytes, IntBuffer plevel);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pmsGetLevelForDealloc(void*, l_int32*)</code>
+//       * <code>l_ok pmsGetLevelForDealloc(void*, l_int32*)</code>
 //       */
 //      int pmsGetLevelForDealloc(Pointer data, IntBuffer plevel);
 //  
@@ -9910,13 +9910,13 @@ public interface Leptonica extends Library, ILeptonica {
 //      void pmsLogInfo();
     /**
      * Original signature :
-     * <code>l_int32 pixAddConstantGray(PIX*, l_int32)</code>
+     * <code>l_ok pixAddConstantGray(PIX*, l_int32)</code>
      */
     int pixAddConstantGray(Pix pixs, int val);
 
     /**
      * Original signature :
-     * <code>l_int32 pixMultConstantGray(PIX*, l_float32)</code>
+     * <code>l_ok pixMultConstantGray(PIX*, l_float32)</code>
      */
     int pixMultConstantGray(Pix pixs, float val);
 
@@ -9957,13 +9957,13 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixAccumulate(PIX*, PIX*, l_int32)</code>
+     * <code>l_ok pixAccumulate(PIX*, PIX*, l_int32)</code>
      */
     int pixAccumulate(Pix pixd, Pix pixs, int op);
 
     /**
      * Original signature :
-     * <code>l_int32 pixMultConstAccumulate(PIX*, l_float32, l_uint32)</code>
+     * <code>l_ok pixMultConstAccumulate(PIX*, l_float32, l_uint32)</code>
      */
     int pixMultConstAccumulate(Pix pixs, float factor, int offset);
 
@@ -10045,18 +10045,18 @@ public interface Leptonica extends Library, ILeptonica {
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixcompGetDimensions(PIXC*, l_int32*, l_int32*, l_int32*)</code>
+//       * <code>l_ok pixcompGetDimensions(PIXC*, l_int32*, l_int32*, l_int32*)</code>
 //       */
 //      int pixcompGetDimensions(PixComp pixc, IntBuffer pw, IntBuffer ph, IntBuffer pd);
     
 //        /**
-//        * Original signature : <code>l_int32 pixcompGetParameters(PIXC*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
+//        * Original signature : <code>l_ok pixcompGetParameters(PIXC*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
 //        */
 //        int pixcompGetParameters(PixComp pixc, IntBuffer pxres, IntBuffer pyres, IntBuffer pcomptype, IntBuffer pcmapflag);
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixcompDetermineFormat(l_int32, l_int32, l_int32, l_int32*)</code>
+//       * <code>l_ok pixcompDetermineFormat(l_int32, l_int32, l_int32, l_int32*)</code>
 //       */
 //      int pixcompDetermineFormat(int comptype, int d, int cmapflag, IntBuffer pformat);
 //  
@@ -10096,27 +10096,27 @@ public interface Leptonica extends Library, ILeptonica {
 //      void pixacompDestroy(PointerByReference ppixac);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixacompAddPix(PIXAC*, PIX*, l_int32)</code>
+//       * <code>l_ok pixacompAddPix(PIXAC*, PIX*, l_int32)</code>
 //       */
 //      int pixacompAddPix(PixaComp pixac, Pix pix, int comptype);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixacompAddPixcomp(PIXAC*, PIXC*, l_int32)</code>
+//       * <code>l_ok pixacompAddPixcomp(PIXAC*, PIXC*, l_int32)</code>
 //       */
 //      int pixacompAddPixcomp(PixaComp pixac, PixComp pixc, int copyflag);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixacompReplacePix(PIXAC*, l_int32, PIX*, l_int32)</code>
+//       * <code>l_ok pixacompReplacePix(PIXAC*, l_int32, PIX*, l_int32)</code>
 //       */
 //      int pixacompReplacePix(PixaComp pixac, int index, Pix pix, int comptype);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixacompReplacePixcomp(PIXAC*, l_int32, PIXC*)</code>
+//       * <code>l_ok pixacompReplacePixcomp(PIXAC*, l_int32, PIXC*)</code>
 //       */
 //      int pixacompReplacePixcomp(PixaComp pixac, int index, PixComp pixc);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixacompAddBox(PIXAC*, BOX*, l_int32)</code>
+//       * <code>l_ok pixacompAddBox(PIXAC*, BOX*, l_int32)</code>
 //       */
 //      int pixacompAddBox(PixaComp pixac, Box box, int copyflag);
 //  
@@ -10136,7 +10136,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      Pix pixacompGetPix(PixaComp pixac, int index);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixacompGetPixDimensions(PIXAC*, l_int32, l_int32*, l_int32*, l_int32*)</code>
+//       * <code>l_ok pixacompGetPixDimensions(PIXAC*, l_int32, l_int32*, l_int32*, l_int32*)</code>
 //       */
 //      int pixacompGetPixDimensions(PixaComp pixac, int index, IntBuffer pw, IntBuffer ph, IntBuffer pd);
 //      /**
@@ -10156,7 +10156,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      Box pixacompGetBox(PixaComp pixac, int index, int accesstype);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixacompGetBoxGeometry(PIXAC*, l_int32, l_int32*, l_int32*, l_int32*, l_int32*)</code>
+//       * <code>l_ok pixacompGetBoxGeometry(PIXAC*, l_int32, l_int32*, l_int32*, l_int32*, l_int32*)</code>
 //       */
 //      int pixacompGetBoxGeometry(PixaComp pixac, int index, IntBuffer px, IntBuffer py, IntBuffer pw, IntBuffer ph);
 //  
@@ -10166,7 +10166,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      int pixacompGetOffset(PixaComp pixac);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixacompSetOffset(PIXAC*, l_int32)</code>
+//       * <code>l_ok pixacompSetOffset(PIXAC*, l_int32)</code>
 //       */
 //      int pixacompSetOffset(PixaComp pixac, int offset);
 //      /**
@@ -10176,7 +10176,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      Pixa pixaCreateFromPixacomp(PixaComp pixac, int accesstype);
     /**
      * Original signature :
-     * <code>l_int32 pixacompJoin(PIXAC*, PIXAC*, l_int32, l_int32)</code>
+     * <code>l_ok pixacompJoin(PIXAC*, PIXAC*, l_int32, l_int32)</code>
      */
     int pixacompJoin(PixaComp pixacd, PixaComp pixacs, int istart, int iend);
 
@@ -10204,44 +10204,44 @@ public interface Leptonica extends Library, ILeptonica {
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixacompWrite(const char*, PIXAC*)</code>
+//       * <code>l_ok pixacompWrite(const char*, PIXAC*)</code>
 //       */
 //      int pixacompWrite(String filename, PixaComp pixac);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixacompWriteStream(FILE*, PIXAC*)</code>
+//       * <code>l_ok pixacompWriteStream(FILE*, PIXAC*)</code>
 //       */
 //      int pixacompWriteStream(FILE fp, PixaComp pixac);
     /**
      * Original signature :
-     * <code>l_int32 pixacompWriteMem(l_uint8**, size_t*, PIXAC*)</code>
+     * <code>l_ok pixacompWriteMem(l_uint8**, size_t*, PIXAC*)</code>
      */
     int pixacompWriteMem(PointerByReference pdata, NativeSizeByReference psize, PixaComp pixac);
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixacompConvertToPdf(PIXAC*, l_int32, l_float32, l_int32, l_int32, const char*, const char*)</code>
+//       * <code>l_ok pixacompConvertToPdf(PIXAC*, l_int32, l_float32, l_int32, l_int32, const char*, const char*)</code>
 //       */
 //      int pixacompConvertToPdf(PixaComp pixac, int res, float scalefactor, int type, int quality, String title, String fileout);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixacompConvertToPdfData(PIXAC*, l_int32, l_float32, l_int32, l_int32, const char*, l_uint8**, size_t*)</code>
+//       * <code>l_ok pixacompConvertToPdfData(PIXAC*, l_int32, l_float32, l_int32, l_int32, const char*, l_uint8**, size_t*)</code>
 //       */
 //      int pixacompConvertToPdfData(PixaComp pixac, int res, float scalefactor, int type, int quality, String title, PointerByReference pdata, NativeSizeByReference pnbytes);
 
 //        /**
-//        * Original signature : <code>l_int32 pixacompFastConvertToPdfData(PIXAC*, const char*, l_uint8**, size_t*)</code>
+//        * Original signature : <code>l_ok pixacompFastConvertToPdfData(PIXAC*, const char*, l_uint8**, size_t*)</code>
 //        */
 //        int pixacompFastConvertToPdfData(PixaComp pixac, String title, PointerByReference pdata, NativeSizeByReference pnbytes);
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixacompWriteStreamInfo(FILE*, PIXAC*, const char*)</code>
+//       * <code>l_ok pixacompWriteStreamInfo(FILE*, PIXAC*, const char*)</code>
 //       */
 //      int pixacompWriteStreamInfo(FILE fp, PixaComp pixac, String text);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixcompWriteStreamInfo(FILE*, PIXC*, const char*)</code>
+//       * <code>l_ok pixcompWriteStreamInfo(FILE*, PIXC*, const char*)</code>
 //       */
 //      int pixcompWriteStreamInfo(FILE fp, PixComp pixc, String text);
 //      /**
@@ -10251,12 +10251,12 @@ public interface Leptonica extends Library, ILeptonica {
 //      Pix pixacompDisplayTiledAndScaled(PixaComp pixac, int outdepth, int tilewidth, int ncols, int background, int spacing, int border);
 //    
 //    /**
-//     * Original signature : <code>l_int32 pixacompWriteFiles(PIXAC*, const char*)</code>
+//     * Original signature : <code>l_ok pixacompWriteFiles(PIXAC*, const char*)</code>
 //     */
 //    int pixacompWriteFiles(PixaComp pixac, String subdir);
 //
 //    /**
-//     * Original signature : <code>l_int32 pixcompWriteFile(const char*, PIXC*)</code>
+//     * Original signature : <code>l_ok pixcompWriteFile(const char*, PIXC*)</code>
 //     */
 //    int pixcompWriteFile(String rootname, PixComp pixc);
      
@@ -10279,7 +10279,7 @@ public interface Leptonica extends Library, ILeptonica {
     Pix pixRemoveColormap(Pix pixs, int type);
 
     /**
-     * Original signature : <code>l_int32 pixAddGrayColormap8(PIX*)</code>
+     * Original signature : <code>l_ok pixAddGrayColormap8(PIX*)</code>
      */
     int pixAddGrayColormap8(Pix pixs);
 
@@ -10359,7 +10359,7 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixQuantizeIfFewColors(PIX*, l_int32, l_int32, l_int32, PIX**)</code>
+     * <code>l_ok pixQuantizeIfFewColors(PIX*, l_int32, l_int32, l_int32, PIX**)</code>
      */
     int pixQuantizeIfFewColors(Pix pixs, int maxcolors, int mingraycolors, int octlevel, PointerByReference ppixd);
 
@@ -10594,13 +10594,13 @@ public interface Leptonica extends Library, ILeptonica {
 //      Pix pixConnCompAreaTransform(Pix pixs, int connect);
     /**
      * Original signature :
-     * <code>l_int32 pixConnCompIncrInit(PIX*, l_int32, PIX**, PTAA**, l_int32*)</code>
+     * <code>l_ok pixConnCompIncrInit(PIX*, l_int32, PIX**, PTAA**, l_int32*)</code>
      */
     int pixConnCompIncrInit(Pix pixs, int conn, PointerByReference ppixd, PointerByReference pptaa, IntBuffer pncc);
 
     /**
      * Original signature :
-     * <code>l_int32 pixConnCompIncrInit(PIX*, l_int32, PIX**, PTAA**, l_int32*)</code>
+     * <code>l_ok pixConnCompIncrInit(PIX*, l_int32, PIX**, PTAA**, l_int32*)</code>
      */
     int pixConnCompIncrInit(Pix pixs, int conn, PointerByReference ppixd, PointerByReference pptaa, IntByReference pncc);
 
@@ -10612,7 +10612,7 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixGetSortedNeighborValues(PIX*, l_int32, l_int32, l_int32, l_int32**, l_int32*)</code>
+     * <code>l_ok pixGetSortedNeighborValues(PIX*, l_int32, l_int32, l_int32, l_int32**, l_int32*)</code>
      */
     int pixGetSortedNeighborValues(Pix pixs, int x, int y, int conn, PointerByReference pneigh, IntBuffer pnvals);
 //  
@@ -10633,12 +10633,12 @@ public interface Leptonica extends Library, ILeptonica {
 //      void pixTilingDestroy(PointerByReference ppt);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixTilingGetCount(PIXTILING*, l_int32*, l_int32*)</code>
+//       * <code>l_ok pixTilingGetCount(PIXTILING*, l_int32*, l_int32*)</code>
 //       */
 //      int pixTilingGetCount(PixTiling pt, IntBuffer pnx, IntBuffer pny);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixTilingGetSize(PIXTILING*, l_int32*, l_int32*)</code>
+//       * <code>l_ok pixTilingGetSize(PIXTILING*, l_int32*, l_int32*)</code>
 //       */
 //      int pixTilingGetSize(PixTiling pt, IntBuffer pw, IntBuffer ph);
 //      /**
@@ -10648,12 +10648,12 @@ public interface Leptonica extends Library, ILeptonica {
 //      Pix pixTilingGetTile(PixTiling pt, int i, int j);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixTilingNoStripOnPaint(PIXTILING*)</code>
+//       * <code>l_ok pixTilingNoStripOnPaint(PIXTILING*)</code>
 //       */
 //      int pixTilingNoStripOnPaint(PixTiling pt);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixTilingPaintTile(PIX*, l_int32, l_int32, PIX*, PIXTILING*)</code>
+//       * <code>l_ok pixTilingPaintTile(PIX*, l_int32, l_int32, PIX*, PIXTILING*)</code>
 //       */
 //      int pixTilingPaintTile(Pix pixd, int i, int j, Pix pixs, PixTiling pt);
     /**
@@ -10663,19 +10663,19 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 readHeaderPng(const char*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
+     * <code>l_ok readHeaderPng(const char*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
      */
     int readHeaderPng(String filename, IntBuffer pw, IntBuffer ph, IntBuffer pbps, IntBuffer pspp, IntBuffer piscmap);
 
     /**
      * Original signature :
-     * <code>l_int32 freadHeaderPng(FILE*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
+     * <code>l_ok freadHeaderPng(FILE*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
      */
     int freadHeaderPng(FILE fp, IntBuffer pw, IntBuffer ph, IntBuffer pbps, IntBuffer pspp, IntBuffer piscmap);
 
     /**
      * Original signature :
-     * <code>l_int32 readHeaderMemPng(const l_uint8*, size_t, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
+     * <code>l_ok readHeaderMemPng(const l_uint8*, size_t, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
      */
     int readHeaderMemPng(ByteBuffer data, NativeSize size, IntBuffer pw, IntBuffer ph, IntBuffer pbps, IntBuffer pspp, IntBuffer piscmap);
 
@@ -10687,36 +10687,36 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 isPngInterlaced(const char*, l_int32*)</code>
+     * <code>l_ok isPngInterlaced(const char*, l_int32*)</code>
      */
     int isPngInterlaced(String filename, IntBuffer pinterlaced);
 
     /**
      * Original signature :
-     * <code>l_int32 fgetPngColormapInfo(FILE*, PIXCMAP**, l_int32*)</code>
+     * <code>l_ok fgetPngColormapInfo(FILE*, PIXCMAP**, l_int32*)</code>
      */
     int fgetPngColormapInfo(FILE fp, PointerByReference pcmap, IntBuffer ptransparency);
 
     /**
      * Original signature :
-     * <code>l_int32 fgetPngColormapInfo(FILE*, PIXCMAP**, l_int32*)</code>
+     * <code>l_ok fgetPngColormapInfo(FILE*, PIXCMAP**, l_int32*)</code>
      */
     int fgetPngColormapInfo(FILE fp, PointerByReference pcmap, IntByReference ptransparency);
 
     /**
      * Original signature :
-     * <code>l_int32 pixWritePng(const char*, PIX*, l_float32)</code>
+     * <code>l_ok pixWritePng(const char*, PIX*, l_float32)</code>
      */
     int pixWritePng(String filename, Pix pix, float gamma);
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixWriteStreamPng(FILE*, PIX*, l_float32)</code>
+//       * <code>l_ok pixWriteStreamPng(FILE*, PIX*, l_float32)</code>
 //       */
 //      int pixWriteStreamPng(FILE fp, Pix pix, float gamma);
     /**
      * Original signature :
-     * <code>l_int32 pixSetZlibCompression(PIX*, l_int32)</code>
+     * <code>l_ok pixSetZlibCompression(PIX*, l_int32)</code>
      */
     int pixSetZlibCompression(Pix pix, int compval);
 
@@ -10734,7 +10734,7 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixWriteMemPng(l_uint8**, size_t*, PIX*, l_float32)</code>
+     * <code>l_ok pixWriteMemPng(l_uint8**, size_t*, PIX*, l_float32)</code>
      */
     int pixWriteMemPng(PointerByReference pfiledata, NativeSizeByReference pfilesize, Pix pix, float gamma);
 //  
@@ -10745,27 +10745,27 @@ public interface Leptonica extends Library, ILeptonica {
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 readHeaderPnm(const char*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
+//       * <code>l_ok readHeaderPnm(const char*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
 //       */
 //      int readHeaderPnm(String filename, IntBuffer pw, IntBuffer ph, IntBuffer pd, IntBuffer ptype, IntBuffer pbps, IntBuffer pspp);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 freadHeaderPnm(FILE*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
+//       * <code>l_ok freadHeaderPnm(FILE*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
 //       */
 //      int freadHeaderPnm(FILE fp, IntBuffer pw, IntBuffer ph, IntBuffer pd, IntBuffer ptype, IntBuffer pbps, IntBuffer pspp);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixWriteStreamPnm(FILE*, PIX*)</code>
+//       * <code>l_ok pixWriteStreamPnm(FILE*, PIX*)</code>
 //       */
 //      int pixWriteStreamPnm(FILE fp, Pix pix);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixWriteStreamAsciiPnm(FILE*, PIX*)</code>
+//       * <code>l_ok pixWriteStreamAsciiPnm(FILE*, PIX*)</code>
 //       */
 //      int pixWriteStreamAsciiPnm(FILE fp, Pix pix);
     /**
      * Original signature :
-     * <code>l_int32 pixWriteStreamPam(FILE*, PIX*)</code>
+     * <code>l_ok pixWriteStreamPam(FILE*, PIX*)</code>
      */
     int pixWriteStreamPam(FILE fp, Pix pix);
 
@@ -10777,18 +10777,18 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 readHeaderMemPnm(const l_uint8*, size_t, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
+     * <code>l_ok readHeaderMemPnm(const l_uint8*, size_t, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
      */
     int readHeaderMemPnm(ByteBuffer data, NativeSize size, IntBuffer pw, IntBuffer ph, IntBuffer pd, IntBuffer ptype, IntBuffer pbps, IntBuffer pspp);
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixWriteMemPnm(l_uint8**, size_t*, PIX*)</code>
+//       * <code>l_ok pixWriteMemPnm(l_uint8**, size_t*, PIX*)</code>
 //       */
 //      int pixWriteMemPnm(PointerByReference pdata, NativeSizeByReference psize, Pix pix);
     /**
      * Original signature :
-     * <code>l_int32 pixWriteMemPam(l_uint8**, size_t*, PIX*)</code>
+     * <code>l_ok pixWriteMemPam(l_uint8**, size_t*, PIX*)</code>
      */
     int pixWriteMemPam(PointerByReference pdata, NativeSizeByReference psize, Pix pix);
 
@@ -10839,77 +10839,77 @@ public interface Leptonica extends Library, ILeptonica {
 //      Pix pixProjectivePtaWithAlpha(Pix pixs, Pta ptad, Pta ptas, Pix pixg, float fract, int border);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 getProjectiveXformCoeffs(PTA*, PTA*, l_float32**)</code>
+//       * <code>l_ok getProjectiveXformCoeffs(PTA*, PTA*, l_float32**)</code>
 //       */
 //      int getProjectiveXformCoeffs(Pta ptas, Pta ptad, PointerByReference pvc);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 projectiveXformSampledPt(l_float32*, l_int32, l_int32, l_int32*, l_int32*)</code>
+//       * <code>l_ok projectiveXformSampledPt(l_float32*, l_int32, l_int32, l_int32*, l_int32*)</code>
 //       */
 //      int projectiveXformSampledPt(FloatBuffer vc, int x, int y, IntBuffer pxp, IntBuffer pyp);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 projectiveXformPt(l_float32*, l_int32, l_int32, l_float32*, l_float32*)</code>
+//       * <code>l_ok projectiveXformPt(l_float32*, l_int32, l_int32, l_float32*, l_float32*)</code>
 //       */
 //      int projectiveXformPt(FloatBuffer vc, int x, int y, FloatBuffer pxp, FloatBuffer pyp);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 convertFilesToPS(const char*, const char*, l_int32, const char*)</code>
+//       * <code>l_ok convertFilesToPS(const char*, const char*, l_int32, const char*)</code>
 //       */
 //      int convertFilesToPS(String dirin, String substr, int res, String fileout);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 sarrayConvertFilesToPS(SARRAY*, l_int32, const char*)</code>
+//       * <code>l_ok sarrayConvertFilesToPS(SARRAY*, l_int32, const char*)</code>
 //       */
 //      int sarrayConvertFilesToPS(Sarray sa, int res, String fileout);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 convertFilesFittedToPS(const char*, const char*, l_float32, l_float32, const char*)</code>
+//       * <code>l_ok convertFilesFittedToPS(const char*, const char*, l_float32, l_float32, const char*)</code>
 //       */
 //      int convertFilesFittedToPS(String dirin, String substr, float xpts, float ypts, String fileout);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 sarrayConvertFilesFittedToPS(SARRAY*, l_float32, l_float32, const char*)</code>
+//       * <code>l_ok sarrayConvertFilesFittedToPS(SARRAY*, l_float32, l_float32, const char*)</code>
 //       */
 //      int sarrayConvertFilesFittedToPS(Sarray sa, float xpts, float ypts, String fileout);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 writeImageCompressedToPSFile(const char*, const char*, l_int32, l_int32*, l_int32*)</code>
+//       * <code>l_ok writeImageCompressedToPSFile(const char*, const char*, l_int32, l_int32*, l_int32*)</code>
 //       */
 //      int writeImageCompressedToPSFile(String filein, String fileout, int res, IntBuffer pfirstfile, IntBuffer pindex);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 convertSegmentedPagesToPS(const char*, const char*, l_int32, const char*, const char*, l_int32, l_int32, l_int32, l_float32, l_float32, l_int32, const char*)</code>
+//       * <code>l_ok convertSegmentedPagesToPS(const char*, const char*, l_int32, const char*, const char*, l_int32, l_int32, l_int32, l_float32, l_float32, l_int32, const char*)</code>
 //       */
 //      int convertSegmentedPagesToPS(String pagedir, String pagestr, int page_numpre, String maskdir, String maskstr, int mask_numpre, int numpost, int maxnum, float textscale, float imagescale, int threshold, String fileout);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixWriteSegmentedPageToPS(PIX*, PIX*, l_float32, l_float32, l_int32, l_int32, const char*)</code>
+//       * <code>l_ok pixWriteSegmentedPageToPS(PIX*, PIX*, l_float32, l_float32, l_int32, l_int32, const char*)</code>
 //       */
 //      int pixWriteSegmentedPageToPS(Pix pixs, Pix pixm, float textscale, float imagescale, int threshold, int pageno, String fileout);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixWriteMixedToPS(PIX*, PIX*, l_float32, l_int32, const char*)</code>
+//       * <code>l_ok pixWriteMixedToPS(PIX*, PIX*, l_float32, l_int32, const char*)</code>
 //       */
 //      int pixWriteMixedToPS(Pix pixb, Pix pixc, float scale, int pageno, String fileout);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 convertToPSEmbed(const char*, const char*, l_int32)</code>
+//       * <code>l_ok convertToPSEmbed(const char*, const char*, l_int32)</code>
 //       */
 //      int convertToPSEmbed(String filein, String fileout, int level);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixaWriteCompressedToPS(PIXA*, const char*, l_int32, l_int32)</code>
+//       * <code>l_ok pixaWriteCompressedToPS(PIXA*, const char*, l_int32, l_int32)</code>
 //       */
 //      int pixaWriteCompressedToPS(Pixa pixa, String fileout, int res, int level);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixWritePSEmbed(const char*, const char*)</code>
+//       * <code>l_ok pixWritePSEmbed(const char*, const char*)</code>
 //       */
 //      int pixWritePSEmbed(String filein, String fileout);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixWriteStreamPS(FILE*, PIX*, BOX*, l_int32, l_float32)</code>
+//       * <code>l_ok pixWriteStreamPS(FILE*, PIX*, BOX*, l_int32, l_float32)</code>
 //       */
 //      int pixWriteStreamPS(FILE fp, Pix pix, Box box, int res, float scale);
 //      /**
@@ -10936,17 +10936,17 @@ public interface Leptonica extends Library, ILeptonica {
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 convertJpegToPSEmbed(const char*, const char*)</code>
+//       * <code>l_ok convertJpegToPSEmbed(const char*, const char*)</code>
 //       */
 //      int convertJpegToPSEmbed(String filein, String fileout);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 convertJpegToPS(const char*, const char*, const char*, l_int32, l_int32, l_int32, l_float32, l_int32, l_int32)</code>
+//       * <code>l_ok convertJpegToPS(const char*, const char*, const char*, l_int32, l_int32, l_int32, l_float32, l_int32, l_int32)</code>
 //       */
 //      int convertJpegToPS(String filein, String fileout, String operation, int x, int y, int res, float scale, int pageno, int endpage);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 convertJpegToPSString(const char*, char**, l_int32*, l_int32, l_int32, l_int32, l_float32, l_int32, l_int32)</code>
+//       * <code>l_ok convertJpegToPSString(const char*, char**, l_int32*, l_int32, l_int32, l_int32, l_float32, l_int32, l_int32)</code>
 //       */
 //      int convertJpegToPSString(String filein, PointerByReference poutstr, IntBuffer pnbytes, int x, int y, int res, float scale, int pageno, int endpage);
 //      /**
@@ -10956,17 +10956,17 @@ public interface Leptonica extends Library, ILeptonica {
 //      Pointer generateJpegPS(String filein, L_Compressed_Data cid, float xpt, float ypt, float wpt, float hpt, int pageno, int endpage);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 convertG4ToPSEmbed(const char*, const char*)</code>
+//       * <code>l_ok convertG4ToPSEmbed(const char*, const char*)</code>
 //       */
 //      int convertG4ToPSEmbed(String filein, String fileout);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 convertG4ToPS(const char*, const char*, const char*, l_int32, l_int32, l_int32, l_float32, l_int32, l_int32, l_int32)</code>
+//       * <code>l_ok convertG4ToPS(const char*, const char*, const char*, l_int32, l_int32, l_int32, l_float32, l_int32, l_int32, l_int32)</code>
 //       */
 //      int convertG4ToPS(String filein, String fileout, String operation, int x, int y, int res, float scale, int pageno, int maskflag, int endpage);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 convertG4ToPSString(const char*, char**, l_int32*, l_int32, l_int32, l_int32, l_float32, l_int32, l_int32, l_int32)</code>
+//       * <code>l_ok convertG4ToPSString(const char*, char**, l_int32*, l_int32, l_int32, l_int32, l_float32, l_int32, l_int32, l_int32)</code>
 //       */
 //      int convertG4ToPSString(String filein, PointerByReference poutstr, IntBuffer pnbytes, int x, int y, int res, float scale, int pageno, int maskflag, int endpage);
 //      /**
@@ -10976,22 +10976,22 @@ public interface Leptonica extends Library, ILeptonica {
 //      Pointer generateG4PS(String filein, L_Compressed_Data cid, float xpt, float ypt, float wpt, float hpt, int maskflag, int pageno, int endpage);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 convertTiffMultipageToPS(const char*, const char*, l_float32)</code>
+//       * <code>l_ok convertTiffMultipageToPS(const char*, const char*, l_float32)</code>
 //       */
 //      int convertTiffMultipageToPS(String filein, String fileout, float fillfract);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 convertFlateToPSEmbed(const char*, const char*)</code>
+//       * <code>l_ok convertFlateToPSEmbed(const char*, const char*)</code>
 //       */
 //      int convertFlateToPSEmbed(String filein, String fileout);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 convertFlateToPS(const char*, const char*, const char*, l_int32, l_int32, l_int32, l_float32, l_int32, l_int32)</code>
+//       * <code>l_ok convertFlateToPS(const char*, const char*, const char*, l_int32, l_int32, l_int32, l_float32, l_int32, l_int32)</code>
 //       */
 //      int convertFlateToPS(String filein, String fileout, String operation, int x, int y, int res, float scale, int pageno, int endpage);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 convertFlateToPSString(const char*, char**, l_int32*, l_int32, l_int32, l_int32, l_float32, l_int32, l_int32)</code>
+//       * <code>l_ok convertFlateToPSString(const char*, char**, l_int32*, l_int32, l_int32, l_int32, l_float32, l_int32, l_int32)</code>
 //       */
 //      int convertFlateToPSString(String filein, PointerByReference poutstr, IntBuffer pnbytes, int x, int y, int res, float scale, int pageno, int endpage);
 //      /**
@@ -11001,7 +11001,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      Pointer generateFlatePS(String filein, L_Compressed_Data cid, float xpt, float ypt, float wpt, float hpt, int pageno, int endpage);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixWriteMemPS(l_uint8**, size_t*, PIX*, BOX*, l_int32, l_float32)</code>
+//       * <code>l_ok pixWriteMemPS(l_uint8**, size_t*, PIX*, BOX*, l_int32, l_float32)</code>
 //       */
 //      int pixWriteMemPS(PointerByReference pdata, NativeSizeByReference psize, Pix pix, Box box, int res, float scale);
 //      /**
@@ -11051,22 +11051,22 @@ public interface Leptonica extends Library, ILeptonica {
 //      Pta ptaClone(Pta pta);
 //  
 //      /**
-//       * Original signature : <code>l_int32 ptaEmpty(PTA*)</code>
+//       * Original signature : <code>l_ok ptaEmpty(PTA*)</code>
 //       */
 //      int ptaEmpty(Pta pta);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 ptaAddPt(PTA*, l_float32, l_float32)</code>
+//       * <code>l_ok ptaAddPt(PTA*, l_float32, l_float32)</code>
 //       */
 //      int ptaAddPt(Pta pta, float x, float y);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 ptaInsertPt(PTA*, l_int32, l_int32, l_int32)</code>
+//       * <code>l_ok ptaInsertPt(PTA*, l_int32, l_int32, l_int32)</code>
 //       */
 //      int ptaInsertPt(Pta pta, int index, int x, int y);
 //  
 //      /**
-//       * Original signature : <code>l_int32 ptaRemovePt(PTA*, l_int32)</code>
+//       * Original signature : <code>l_ok ptaRemovePt(PTA*, l_int32)</code>
 //       */
 //      int ptaRemovePt(Pta pta, int index);
 //  
@@ -11086,22 +11086,22 @@ public interface Leptonica extends Library, ILeptonica {
 //      int ptaGetCount(Pta pta);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 ptaGetPt(PTA*, l_int32, l_float32*, l_float32*)</code>
+//       * <code>l_ok ptaGetPt(PTA*, l_int32, l_float32*, l_float32*)</code>
 //       */
 //      int ptaGetPt(Pta pta, int index, FloatBuffer px, FloatBuffer py);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 ptaGetIPt(PTA*, l_int32, l_int32*, l_int32*)</code>
+//       * <code>l_ok ptaGetIPt(PTA*, l_int32, l_int32*, l_int32*)</code>
 //       */
 //      int ptaGetIPt(Pta pta, int index, IntBuffer px, IntBuffer py);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 ptaSetPt(PTA*, l_int32, l_float32, l_float32)</code>
+//       * <code>l_ok ptaSetPt(PTA*, l_int32, l_float32, l_float32)</code>
 //       */
 //      int ptaSetPt(Pta pta, int index, float x, float y);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 ptaGetArrays(PTA*, NUMA**, NUMA**)</code>
+//       * <code>l_ok ptaGetArrays(PTA*, NUMA**, NUMA**)</code>
 //       */
 //      int ptaGetArrays(Pta pta, PointerByReference pnax, PointerByReference pnay);
 //  
@@ -11121,23 +11121,23 @@ public interface Leptonica extends Library, ILeptonica {
     Pta ptaReadMem(ByteBuffer data, NativeSize size);
     
 //    /**
-//     * Original signature : <code>l_int32 ptaWriteDebug(const char*, PTA*, l_int32)</code>
+//     * Original signature : <code>l_ok ptaWriteDebug(const char*, PTA*, l_int32)</code>
 //     */
 //    int ptaWriteDebug(String filename, Pta pta, int type);
  
 //      /**
 //       * Original signature :
-//       * <code>l_int32 ptaWrite(const char*, PTA*, l_int32)</code>
+//       * <code>l_ok ptaWrite(const char*, PTA*, l_int32)</code>
 //       */
 //      int ptaWrite(String filename, Pta pta, int type);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 ptaWriteStream(FILE*, PTA*, l_int32)</code>
+//       * <code>l_ok ptaWriteStream(FILE*, PTA*, l_int32)</code>
 //       */
 //      int ptaWriteStream(FILE fp, Pta pta, int type);
     /**
      * Original signature :
-     * <code>l_int32 ptaWriteMem(l_uint8**, size_t*, PTA*, l_int32)</code>
+     * <code>l_ok ptaWriteMem(l_uint8**, size_t*, PTA*, l_int32)</code>
      */
     int ptaWriteMem(PointerByReference pdata, NativeSizeByReference psize, Pta pta, int type);
 //  
@@ -11153,7 +11153,7 @@ public interface Leptonica extends Library, ILeptonica {
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 ptaaAddPta(PTAA*, PTA*, l_int32)</code>
+//       * <code>l_ok ptaaAddPta(PTAA*, PTA*, l_int32)</code>
 //       */
 //      int ptaaAddPta(Ptaa ptaa, Pta pta, int copyflag);
 //  
@@ -11168,27 +11168,27 @@ public interface Leptonica extends Library, ILeptonica {
 //      Pta ptaaGetPta(Ptaa ptaa, int index, int accessflag);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 ptaaGetPt(PTAA*, l_int32, l_int32, l_float32*, l_float32*)</code>
+//       * <code>l_ok ptaaGetPt(PTAA*, l_int32, l_int32, l_float32*, l_float32*)</code>
 //       */
 //      int ptaaGetPt(Ptaa ptaa, int ipta, int jpt, FloatBuffer px, FloatBuffer py);
 //  
 //      /**
-//       * Original signature : <code>l_int32 ptaaInitFull(PTAA*, PTA*)</code>
+//       * Original signature : <code>l_ok ptaaInitFull(PTAA*, PTA*)</code>
 //       */
 //      int ptaaInitFull(Ptaa ptaa, Pta pta);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 ptaaReplacePta(PTAA*, l_int32, PTA*)</code>
+//       * <code>l_ok ptaaReplacePta(PTAA*, l_int32, PTA*)</code>
 //       */
 //      int ptaaReplacePta(Ptaa ptaa, int index, Pta pta);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 ptaaAddPt(PTAA*, l_int32, l_float32, l_float32)</code>
+//       * <code>l_ok ptaaAddPt(PTAA*, l_int32, l_float32, l_float32)</code>
 //       */
 //      int ptaaAddPt(Ptaa ptaa, int ipta, float x, float y);
 //  
 //      /**
-//       * Original signature : <code>l_int32 ptaaTruncate(PTAA*)</code>
+//       * Original signature : <code>l_ok ptaaTruncate(PTAA*)</code>
 //       */
 //      int ptaaTruncate(Ptaa ptaa);
 //  
@@ -11208,23 +11208,23 @@ public interface Leptonica extends Library, ILeptonica {
     Ptaa ptaaReadMem(ByteBuffer data, NativeSize size);
     
 //    /**
-//     * Original signature : <code>l_int32 ptaaWriteDebug(const char*, PTAA*, l_int32)</code>
+//     * Original signature : <code>l_ok ptaaWriteDebug(const char*, PTAA*, l_int32)</code>
 //     */
 //    int ptaaWriteDebug(String filename, Ptaa ptaa, int type);
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 ptaaWrite(const char*, PTAA*, l_int32)</code>
+//       * <code>l_ok ptaaWrite(const char*, PTAA*, l_int32)</code>
 //       */
 //      int ptaaWrite(String filename, Ptaa ptaa, int type);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 ptaaWriteStream(FILE*, PTAA*, l_int32)</code>
+//       * <code>l_ok ptaaWriteStream(FILE*, PTAA*, l_int32)</code>
 //       */
 //      int ptaaWriteStream(FILE fp, Ptaa ptaa, int type);
     /**
      * Original signature :
-     * <code>l_int32 ptaaWriteMem(l_uint8**, size_t*, PTAA*, l_int32)</code>
+     * <code>l_ok ptaaWriteMem(l_uint8**, size_t*, PTAA*, l_int32)</code>
      */
     int ptaaWriteMem(PointerByReference pdata, NativeSizeByReference psize, Ptaa ptaa, int type);
 //  
@@ -11235,12 +11235,12 @@ public interface Leptonica extends Library, ILeptonica {
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 ptaJoin(PTA*, PTA*, l_int32, l_int32)</code>
+//       * <code>l_ok ptaJoin(PTA*, PTA*, l_int32, l_int32)</code>
 //       */
 //      int ptaJoin(Pta ptad, Pta ptas, int istart, int iend);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 ptaaJoin(PTAA*, PTAA*, l_int32, l_int32)</code>
+//       * <code>l_ok ptaaJoin(PTAA*, PTAA*, l_int32, l_int32)</code>
 //       */
 //      int ptaaJoin(Ptaa ptaad, Ptaa ptaas, int istart, int iend);
 //  
@@ -11271,7 +11271,7 @@ public interface Leptonica extends Library, ILeptonica {
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 ptaGetRange(PTA*, l_float32*, l_float32*, l_float32*, l_float32*)</code>
+//       * <code>l_ok ptaGetRange(PTA*, l_float32*, l_float32*, l_float32*, l_float32*)</code>
 //       */
 //      int ptaGetRange(Pta pta, FloatBuffer pminx, FloatBuffer pmaxx, FloatBuffer pminy, FloatBuffer pmaxy);
 //  
@@ -11311,7 +11311,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      float l_angleBetweenVectors(float x1, float y1, float x2, float y2);
     /**
      * Original signature :
-     * <code>l_int32 ptaGetMinMax(PTA*, l_float32*, l_float32*, l_float32*, l_float32*)</code>
+     * <code>l_ok ptaGetMinMax(PTA*, l_float32*, l_float32*, l_float32*, l_float32*)</code>
      */
     int ptaGetMinMax(Pta pta, FloatBuffer pxmin, FloatBuffer pymin, FloatBuffer pxmax, FloatBuffer pymax);
 
@@ -11328,87 +11328,87 @@ public interface Leptonica extends Library, ILeptonica {
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 ptaGetLinearLSF(PTA*, l_float32*, l_float32*, NUMA**)</code>
+//       * <code>l_ok ptaGetLinearLSF(PTA*, l_float32*, l_float32*, NUMA**)</code>
 //       */
 //      int ptaGetLinearLSF(Pta pta, FloatBuffer pa, FloatBuffer pb, PointerByReference pnafit);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 ptaGetLinearLSF(PTA*, l_float32*, l_float32*, NUMA**)</code>
+//       * <code>l_ok ptaGetLinearLSF(PTA*, l_float32*, l_float32*, NUMA**)</code>
 //       */
 //      int ptaGetLinearLSF(Pta pta, FloatByReference pa, FloatByReference pb, PointerByReference pnafit);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 ptaGetQuadraticLSF(PTA*, l_float32*, l_float32*, l_float32*, NUMA**)</code>
+//       * <code>l_ok ptaGetQuadraticLSF(PTA*, l_float32*, l_float32*, l_float32*, NUMA**)</code>
 //       */
 //      int ptaGetQuadraticLSF(Pta pta, FloatBuffer pa, FloatBuffer pb, FloatBuffer pc, PointerByReference pnafit);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 ptaGetQuadraticLSF(PTA*, l_float32*, l_float32*, l_float32*, NUMA**)</code>
+//       * <code>l_ok ptaGetQuadraticLSF(PTA*, l_float32*, l_float32*, l_float32*, NUMA**)</code>
 //       */
 //      int ptaGetQuadraticLSF(Pta pta, FloatByReference pa, FloatByReference pb, FloatByReference pc, PointerByReference pnafit);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 ptaGetCubicLSF(PTA*, l_float32*, l_float32*, l_float32*, l_float32*, NUMA**)</code>
+//       * <code>l_ok ptaGetCubicLSF(PTA*, l_float32*, l_float32*, l_float32*, l_float32*, NUMA**)</code>
 //       */
 //      int ptaGetCubicLSF(Pta pta, FloatBuffer pa, FloatBuffer pb, FloatBuffer pc, FloatBuffer pd, PointerByReference pnafit);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 ptaGetCubicLSF(PTA*, l_float32*, l_float32*, l_float32*, l_float32*, NUMA**)</code>
+//       * <code>l_ok ptaGetCubicLSF(PTA*, l_float32*, l_float32*, l_float32*, l_float32*, NUMA**)</code>
 //       */
 //      int ptaGetCubicLSF(Pta pta, FloatByReference pa, FloatByReference pb, FloatByReference pc, FloatByReference pd, PointerByReference pnafit);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 ptaGetQuarticLSF(PTA*, l_float32*, l_float32*, l_float32*, l_float32*, l_float32*, NUMA**)</code>
+//       * <code>l_ok ptaGetQuarticLSF(PTA*, l_float32*, l_float32*, l_float32*, l_float32*, l_float32*, NUMA**)</code>
 //       */
 //      int ptaGetQuarticLSF(Pta pta, FloatBuffer pa, FloatBuffer pb, FloatBuffer pc, FloatBuffer pd, FloatBuffer pe, PointerByReference pnafit);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 ptaGetQuarticLSF(PTA*, l_float32*, l_float32*, l_float32*, l_float32*, l_float32*, NUMA**)</code>
+//       * <code>l_ok ptaGetQuarticLSF(PTA*, l_float32*, l_float32*, l_float32*, l_float32*, l_float32*, NUMA**)</code>
 //       */
 //      int ptaGetQuarticLSF(Pta pta, FloatByReference pa, FloatByReference pb, FloatByReference pc, FloatByReference pd, FloatByReference pe, PointerByReference pnafit);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 ptaNoisyLinearLSF(PTA*, l_float32, PTA**, l_float32*, l_float32*, l_float32*, NUMA**)</code>
+//       * <code>l_ok ptaNoisyLinearLSF(PTA*, l_float32, PTA**, l_float32*, l_float32*, l_float32*, NUMA**)</code>
 //       */
 //      int ptaNoisyLinearLSF(Pta pta, float factor, PointerByReference pptad, FloatBuffer pa, FloatBuffer pb, FloatBuffer pmederr, PointerByReference pnafit);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 ptaNoisyLinearLSF(PTA*, l_float32, PTA**, l_float32*, l_float32*, l_float32*, NUMA**)</code>
+//       * <code>l_ok ptaNoisyLinearLSF(PTA*, l_float32, PTA**, l_float32*, l_float32*, l_float32*, NUMA**)</code>
 //       */
 //      int ptaNoisyLinearLSF(Pta pta, float factor, PointerByReference pptad, FloatByReference pa, FloatByReference pb, FloatByReference pmederr, PointerByReference pnafit);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 ptaNoisyQuadraticLSF(PTA*, l_float32, PTA**, l_float32*, l_float32*, l_float32*, l_float32*, NUMA**)</code>
+//       * <code>l_ok ptaNoisyQuadraticLSF(PTA*, l_float32, PTA**, l_float32*, l_float32*, l_float32*, l_float32*, NUMA**)</code>
 //       */
 //      int ptaNoisyQuadraticLSF(Pta pta, float factor, PointerByReference pptad, FloatBuffer pa, FloatBuffer pb, FloatBuffer pc, FloatBuffer pmederr, PointerByReference pnafit);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 ptaNoisyQuadraticLSF(PTA*, l_float32, PTA**, l_float32*, l_float32*, l_float32*, l_float32*, NUMA**)</code>
+//       * <code>l_ok ptaNoisyQuadraticLSF(PTA*, l_float32, PTA**, l_float32*, l_float32*, l_float32*, l_float32*, NUMA**)</code>
 //       */
 //      int ptaNoisyQuadraticLSF(Pta pta, float factor, PointerByReference pptad, FloatByReference pa, FloatByReference pb, FloatByReference pc, FloatByReference pmederr, PointerByReference pnafit);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 applyLinearFit(l_float32, l_float32, l_float32, l_float32*)</code>
+//       * <code>l_ok applyLinearFit(l_float32, l_float32, l_float32, l_float32*)</code>
 //       */
 //      int applyLinearFit(float a, float b, float x, FloatBuffer py);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 applyQuadraticFit(l_float32, l_float32, l_float32, l_float32, l_float32*)</code>
+//       * <code>l_ok applyQuadraticFit(l_float32, l_float32, l_float32, l_float32, l_float32*)</code>
 //       */
 //      int applyQuadraticFit(float a, float b, float c, float x, FloatBuffer py);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 applyCubicFit(l_float32, l_float32, l_float32, l_float32, l_float32, l_float32*)</code>
+//       * <code>l_ok applyCubicFit(l_float32, l_float32, l_float32, l_float32, l_float32, l_float32*)</code>
 //       */
 //      int applyCubicFit(float a, float b, float c, float d, float x, FloatBuffer py);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 applyQuarticFit(l_float32, l_float32, l_float32, l_float32, l_float32, l_float32, l_float32*)</code>
+//       * <code>l_ok applyQuarticFit(l_float32, l_float32, l_float32, l_float32, l_float32, l_float32, l_float32*)</code>
 //       */
 //      int applyQuarticFit(float a, float b, float c, float d, float e, float x, FloatBuffer py);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixPlotAlongPta(PIX*, PTA*, l_int32, const char*)</code>
+//       * <code>l_ok pixPlotAlongPta(PIX*, PTA*, l_int32, const char*)</code>
 //       */
 //      int pixPlotAlongPta(Pix pixs, Pta pta, int outformat, String title);
 //      /**
@@ -11456,7 +11456,7 @@ public interface Leptonica extends Library, ILeptonica {
 //
 //    /**
 //     * Original signature :
-//     * <code>l_int32 ptaConvertToNuma(PTA*, NUMA**, NUMA**)</code>
+//     * <code>l_ok ptaConvertToNuma(PTA*, NUMA**, NUMA**)</code>
 //     */
 //    int ptaConvertToNuma(Pta pta, PointerByReference pnax, PointerByReference pnay);
 //      /**
@@ -11491,7 +11491,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      Pta ptaSort(Pta ptas, int sorttype, int sortorder, PointerByReference pnaindex);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 ptaGetSortIndex(PTA*, l_int32, l_int32, NUMA**)</code>
+//       * <code>l_ok ptaGetSortIndex(PTA*, l_int32, l_int32, NUMA**)</code>
 //       */
 //      int ptaGetSortIndex(Pta ptas, int sorttype, int sortorder, PointerByReference pnaindex);
 //  
@@ -11506,7 +11506,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      Ptaa ptaaSortByIndex(Ptaa ptaas, Numa naindex);
     /**
      * Original signature :
-     * <code>l_int32 ptaGetRankValue(PTA*, l_float32, PTA*, l_int32, l_float32*)</code>
+     * <code>l_ok ptaGetRankValue(PTA*, l_float32, PTA*, l_int32, l_float32*)</code>
      */
     int ptaGetRankValue(Pta pta, float fract, Pta ptasort, int sorttype, FloatBuffer pval);
 
@@ -11538,7 +11538,7 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 ptaRemoveDupsByHash(PTA*, PTA**, L_DNAHASH**)</code>
+     * <code>l_ok ptaRemoveDupsByHash(PTA*, PTA**, L_DNAHASH**)</code>
      */
     int ptaRemoveDupsByHash(Pta ptas, PointerByReference pptad, PointerByReference pdahash);
 
@@ -11550,7 +11550,7 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 ptaFindPtByHash(PTA*, L_DNAHASH*, l_int32, l_int32, l_int32*)</code>
+     * <code>l_ok ptaFindPtByHash(PTA*, L_DNAHASH*, l_int32, l_int32, l_int32*)</code>
      */
     int ptaFindPtByHash(Pta pta, L_DnaHash dahash, int x, int y, IntBuffer pindex);
 
@@ -11572,12 +11572,12 @@ public interface Leptonica extends Library, ILeptonica {
 //      void ptraDestroy(PointerByReference ppa, int freeflag, int warnflag);
 //  
 //      /**
-//       * Original signature : <code>l_int32 ptraAdd(L_PTRA*, void*)</code>
+//       * Original signature : <code>l_ok ptraAdd(L_PTRA*, void*)</code>
 //       */
 //      int ptraAdd(L_Ptra pa, Pointer item);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 ptraInsert(L_PTRA*, l_int32, void*, l_int32)</code>
+//       * <code>l_ok ptraInsert(L_PTRA*, l_int32, void*, l_int32)</code>
 //       */
 //      int ptraInsert(L_Ptra pa, int index, Pointer item, int shiftflag);
 //      /**
@@ -11597,32 +11597,32 @@ public interface Leptonica extends Library, ILeptonica {
 //      Pointer ptraReplace(L_Ptra pa, int index, Pointer item, int freeflag);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 ptraSwap(L_PTRA*, l_int32, l_int32)</code>
+//       * <code>l_ok ptraSwap(L_PTRA*, l_int32, l_int32)</code>
 //       */
 //      int ptraSwap(L_Ptra pa, int index1, int index2);
 //  
 //      /**
-//       * Original signature : <code>l_int32 ptraCompactArray(L_PTRA*)</code>
+//       * Original signature : <code>l_ok ptraCompactArray(L_PTRA*)</code>
 //       */
 //      int ptraCompactArray(L_Ptra pa);
 //  
 //      /**
-//       * Original signature : <code>l_int32 ptraReverse(L_PTRA*)</code>
+//       * Original signature : <code>l_ok ptraReverse(L_PTRA*)</code>
 //       */
 //      int ptraReverse(L_Ptra pa);
 //  
 //      /**
-//       * Original signature : <code>l_int32 ptraJoin(L_PTRA*, L_PTRA*)</code>
+//       * Original signature : <code>l_ok ptraJoin(L_PTRA*, L_PTRA*)</code>
 //       */
 //      int ptraJoin(L_Ptra pa1, L_Ptra pa2);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 ptraGetMaxIndex(L_PTRA*, l_int32*)</code>
+//       * <code>l_ok ptraGetMaxIndex(L_PTRA*, l_int32*)</code>
 //       */
 //      int ptraGetMaxIndex(L_Ptra pa, IntBuffer pmaxindex);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 ptraGetActualCount(L_PTRA*, l_int32*)</code>
+//       * <code>l_ok ptraGetActualCount(L_PTRA*, l_int32*)</code>
 //       */
 //      int ptraGetActualCount(L_Ptra pa, IntBuffer pcount);
 //      /**
@@ -11642,12 +11642,12 @@ public interface Leptonica extends Library, ILeptonica {
 //      void ptraaDestroy(PointerByReference ppaa, int freeflag, int warnflag);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 ptraaGetSize(L_PTRAA*, l_int32*)</code>
+//       * <code>l_ok ptraaGetSize(L_PTRAA*, l_int32*)</code>
 //       */
 //      int ptraaGetSize(L_Ptraa paa, IntBuffer psize);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 ptraaInsertPtra(L_PTRAA*, l_int32, L_PTRA*)</code>
+//       * <code>l_ok ptraaInsertPtra(L_PTRAA*, l_int32, L_PTRA*)</code>
 //       */
 //      int ptraaInsertPtra(L_Ptraa paa, int index, L_Ptra pa);
 //      /**
@@ -11662,22 +11662,22 @@ public interface Leptonica extends Library, ILeptonica {
 //      L_Ptra ptraaFlattenToPtra(L_Ptraa paa);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixQuadtreeMean(PIX*, l_int32, PIX*, FPIXA**)</code>
+//       * <code>l_ok pixQuadtreeMean(PIX*, l_int32, PIX*, FPIXA**)</code>
 //       */
 //      int pixQuadtreeMean(Pix pixs, int nlevels, Pix pix_ma, PointerByReference pfpixa);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixQuadtreeVariance(PIX*, l_int32, PIX*, DPIX*, FPIXA**, FPIXA**)</code>
+//       * <code>l_ok pixQuadtreeVariance(PIX*, l_int32, PIX*, DPIX*, FPIXA**, FPIXA**)</code>
 //       */
 //      int pixQuadtreeVariance(Pix pixs, int nlevels, Pix pix_ma, DPix dpix_msa, PointerByReference pfpixa_v, PointerByReference pfpixa_rv);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixMeanInRectangle(PIX*, BOX*, PIX*, l_float32*)</code>
+//       * <code>l_ok pixMeanInRectangle(PIX*, BOX*, PIX*, l_float32*)</code>
 //       */
 //      int pixMeanInRectangle(Pix pixs, Box box, Pix pixma, FloatBuffer pval);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixVarianceInRectangle(PIX*, BOX*, PIX*, DPIX*, l_float32*, l_float32*)</code>
+//       * <code>l_ok pixVarianceInRectangle(PIX*, BOX*, PIX*, DPIX*, l_float32*, l_float32*)</code>
 //       */
 //      int pixVarianceInRectangle(Pix pixs, Box box, Pix pix_ma, DPix dpix_msa, FloatBuffer pvar, FloatBuffer prvar);
 //      /**
@@ -11687,12 +11687,12 @@ public interface Leptonica extends Library, ILeptonica {
 //      Boxaa boxaaQuadtreeRegions(int w, int h, int nlevels);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 quadtreeGetParent(FPIXA*, l_int32, l_int32, l_int32, l_float32*)</code>
+//       * <code>l_ok quadtreeGetParent(FPIXA*, l_int32, l_int32, l_int32, l_float32*)</code>
 //       */
 //      int quadtreeGetParent(FPixa fpixa, int level, int x, int y, FloatBuffer pval);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 quadtreeGetChildren(FPIXA*, l_int32, l_int32, l_int32, l_float32*, l_float32*, l_float32*, l_float32*)</code>
+//       * <code>l_ok quadtreeGetChildren(FPIXA*, l_int32, l_int32, l_int32, l_float32*, l_float32*, l_float32*, l_float32*)</code>
 //       */
 //      int quadtreeGetChildren(FPixa fpixa, int level, int x, int y, FloatBuffer pval00, FloatBuffer pval10, FloatBuffer pval01, FloatBuffer pval11);
 //      /**
@@ -11717,7 +11717,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      void lqueueDestroy(PointerByReference plq, int freeflag);
 //  
 //      /**
-//       * Original signature : <code>l_int32 lqueueAdd(L_QUEUE*, void*)</code>
+//       * Original signature : <code>l_ok lqueueAdd(L_QUEUE*, void*)</code>
 //       */
 //      int lqueueAdd(L_Queue lq, Pointer item);
 //  
@@ -11732,7 +11732,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      int lqueueGetCount(L_Queue lq);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 lqueuePrint(FILE*, L_QUEUE*)</code>
+//       * <code>l_ok lqueuePrint(FILE*, L_QUEUE*)</code>
 //       */
 //      int lqueuePrint(FILE fp, L_Queue lq);
 //      /**
@@ -11915,24 +11915,24 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixReadHeader(const char*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
+     * <code>l_ok pixReadHeader(const char*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
      */
     int pixReadHeader(String filename, IntBuffer pformat, IntBuffer pw, IntBuffer ph, IntBuffer pbps, IntBuffer pspp, IntBuffer piscmap);
 
     /**
      * Original signature :
-     * <code>l_int32 findFileFormat(const char*, l_int32*)</code>
+     * <code>l_ok findFileFormat(const char*, l_int32*)</code>
      */
     int findFileFormat(String filename, IntBuffer pformat);
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 findFileFormatStream(FILE*, l_int32*)</code>
+//       * <code>l_ok findFileFormatStream(FILE*, l_int32*)</code>
 //       */
 //      int findFileFormatStream(FILE fp, IntBuffer pformat);
     /**
      * Original signature :
-     * <code>l_int32 findFileFormatBuffer(const l_uint8*, l_int32*)</code>
+     * <code>l_ok findFileFormatBuffer(const l_uint8*, l_int32*)</code>
      */
     int findFileFormatBuffer(ByteBuffer buf, IntBuffer pformat);
 
@@ -11949,18 +11949,18 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixReadHeaderMem(const l_uint8*, size_t, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
+     * <code>l_ok pixReadHeaderMem(const l_uint8*, size_t, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
      */
     int pixReadHeaderMem(ByteBuffer data, NativeSize size, IntBuffer pformat, IntBuffer pw, IntBuffer ph, IntBuffer pbps, IntBuffer pspp, IntBuffer piscmap);
 
     /**
      * Original signature :
-     * <code>l_int32 writeImageFileInfo(const char*, FILE*, l_int32)</code>
+     * <code>l_ok writeImageFileInfo(const char*, FILE*, l_int32)</code>
      */
     int writeImageFileInfo(String filename, FILE fpout, int headeronly);
 
     /**
-     * Original signature : <code>l_int32 ioFormatTest(const char*)</code>
+     * Original signature : <code>l_ok ioFormatTest(const char*)</code>
      */
     int ioFormatTest(String filename);
 
@@ -11997,7 +11997,7 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 recogSetParams(L_RECOG*, l_int32, l_int32, l_float32, l_float32)</code>
+     * <code>l_ok recogSetParams(L_RECOG*, l_int32, l_int32, l_float32, l_float32)</code>
      */
     int recogSetParams(L_Recog recog, int type, int min_nopad, float max_wh_ratio, float max_ht_ratio);
 
@@ -12008,7 +12008,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      int recogGetClassIndex(L_Recog recog, int val, ByteBuffer text, IntBuffer pindex);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 recogStringToIndex(L_RECOG*, char*, l_int32*)</code>
+//       * <code>l_ok recogStringToIndex(L_RECOG*, char*, l_int32*)</code>
 //       */
 //      int recogStringToIndex(L_Recog recog, ByteBuffer text, IntBuffer pindex);
 //      /**
@@ -12018,7 +12018,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      int recogGetClassString(L_Recog recog, int index, PointerByReference pcharstr);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 l_convertCharstrToInt(const char*, l_int32*)</code>
+//       * <code>l_ok l_convertCharstrToInt(const char*, l_int32*)</code>
 //       */
 //      int l_convertCharstrToInt(String str, IntBuffer pval);
 //  
@@ -12039,17 +12039,17 @@ public interface Leptonica extends Library, ILeptonica {
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 recogWrite(const char*, L_RECOG*)</code>
+//       * <code>l_ok recogWrite(const char*, L_RECOG*)</code>
 //       */
 //      int recogWrite(String filename, L_Recog recog);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 recogWriteStream(FILE*, L_RECOG*)</code>
+//       * <code>l_ok recogWriteStream(FILE*, L_RECOG*)</code>
 //       */
 //      int recogWriteStream(FILE fp, L_Recog recog);
 //    /**
 //     * Original signature :
-//     * <code>l_int32 recogWriteMem(l_uint8**, size_t*, L_RECOG*)</code>
+//     * <code>l_ok recogWriteMem(l_uint8**, size_t*, L_RECOG*)</code>
 //     */
 //    int recogWriteMem(PointerByReference pdata, NativeSizeByReference psize, L_Recog recog);
 //
@@ -12065,12 +12065,12 @@ public interface Leptonica extends Library, ILeptonica {
 //    Boxa recogDecode(L_Recog recog, Pix pixs, int nlevels, PointerByReference ppixdb);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 recogCreateDid(L_RECOG*, PIX*)</code>
+//       * <code>l_ok recogCreateDid(L_RECOG*, PIX*)</code>
 //       */
 //      int recogCreateDid(L_Recog recog, Pix pixs);
 //  
 //      /**
-//       * Original signature : <code>l_int32 recogDestroyDid(L_RECOG*)</code>
+//       * Original signature : <code>l_ok recogDestroyDid(L_RECOG*)</code>
 //       */
 //      int recogDestroyDid(L_Recog recog);
 //  
@@ -12085,47 +12085,47 @@ public interface Leptonica extends Library, ILeptonica {
 //      L_Rdid recogGetDid(L_Recog recog);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 recogSetChannelParams(L_RECOG*, l_int32)</code>
+//       * <code>l_ok recogSetChannelParams(L_RECOG*, l_int32)</code>
 //       */
 //      int recogSetChannelParams(L_Recog recog, int nlevels);
 //    /**
 //     * Original signature :
-//     * <code>l_int32 recogIdentifyMultiple(L_RECOG*, PIX*, l_int32, l_int32, BOXA**, PIXA**, PIX**, l_int32)</code>
+//     * <code>l_ok recogIdentifyMultiple(L_RECOG*, PIX*, l_int32, l_int32, BOXA**, PIXA**, PIX**, l_int32)</code>
 //     */
 //    int recogIdentifyMultiple(L_Recog recog, Pix pixs, int minh, int skipsplit, PointerByReference pboxa, PointerByReference ppixa, PointerByReference ppixdb, int debugsplit);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 recogSplitIntoCharacters(L_RECOG*, PIX*, l_int32, l_int32, BOXA**, PIXA**, l_int32)</code>
+//       * <code>l_ok recogSplitIntoCharacters(L_RECOG*, PIX*, l_int32, l_int32, BOXA**, PIXA**, l_int32)</code>
 //       */
 //      int recogSplitIntoCharacters(L_Recog recog, Pix pixs, int minh, int skipsplit, PointerByReference pboxa, PointerByReference ppixa, int debug);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 recogCorrelationBestRow(L_RECOG*, PIX*, BOXA**, NUMA**, NUMA**, SARRAY**, l_int32)</code>
+//       * <code>l_ok recogCorrelationBestRow(L_RECOG*, PIX*, BOXA**, NUMA**, NUMA**, SARRAY**, l_int32)</code>
 //       */
 //      int recogCorrelationBestRow(L_Recog recog, Pix pixs, PointerByReference pboxa, PointerByReference pnascore, PointerByReference pnaindex, PointerByReference psachar, int debug);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 recogCorrelationBestChar(L_RECOG*, PIX*, BOX**, l_float32*, l_int32*, char**, PIX**)</code>
+//       * <code>l_ok recogCorrelationBestChar(L_RECOG*, PIX*, BOX**, l_float32*, l_int32*, char**, PIX**)</code>
 //       */
 //      int recogCorrelationBestChar(L_Recog recog, Pix pixs, PointerByReference pbox, FloatBuffer pscore, IntBuffer pindex, PointerByReference pcharstr, PointerByReference ppixdb);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 recogCorrelationBestChar(L_RECOG*, PIX*, BOX**, l_float32*, l_int32*, char**, PIX**)</code>
+//       * <code>l_ok recogCorrelationBestChar(L_RECOG*, PIX*, BOX**, l_float32*, l_int32*, char**, PIX**)</code>
 //       */
 //      int recogCorrelationBestChar(L_Recog recog, Pix pixs, PointerByReference pbox, FloatByReference pscore, IntByReference pindex, PointerByReference pcharstr, PointerByReference ppixdb);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 recogIdentifyPixa(L_RECOG*, PIXA*, PIX**)</code>
+//       * <code>l_ok recogIdentifyPixa(L_RECOG*, PIXA*, PIX**)</code>
 //       */
 //      int recogIdentifyPixa(L_Recog recog, Pixa pixa, PointerByReference ppixdb);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 recogIdentifyPix(L_RECOG*, PIX*, PIX**)</code>
+//       * <code>l_ok recogIdentifyPix(L_RECOG*, PIX*, PIX**)</code>
 //       */
 //      int recogIdentifyPix(L_Recog recog, Pix pixs, PointerByReference ppixdb);
 //  
 //      /**
-//       * Original signature : <code>l_int32 recogSkipIdentify(L_RECOG*)</code>
+//       * Original signature : <code>l_ok recogSkipIdentify(L_RECOG*)</code>
 //       */
 //      int recogSkipIdentify(L_Recog recog);
 //  
@@ -12140,12 +12140,12 @@ public interface Leptonica extends Library, ILeptonica {
 //      void rchDestroy(PointerByReference prch);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 rchaExtract(L_RCHA*, NUMA**, NUMA**, SARRAY**, NUMA**, NUMA**, NUMA**, NUMA**)</code>
+//       * <code>l_ok rchaExtract(L_RCHA*, NUMA**, NUMA**, SARRAY**, NUMA**, NUMA**, NUMA**, NUMA**)</code>
 //       */
 //      int rchaExtract(L_Rcha rcha, PointerByReference pnaindex, PointerByReference pnascore, PointerByReference psatext, PointerByReference pnasample, PointerByReference pnaxloc, PointerByReference pnayloc, PointerByReference pnawidth);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 rchExtract(L_RCH*, l_int32*, l_float32*, char**, l_int32*, l_int32*, l_int32*, l_int32*)</code>
+//       * <code>l_ok rchExtract(L_RCH*, l_int32*, l_float32*, char**, l_int32*, l_int32*, l_int32*, l_int32*)</code>
 //       */
 //      int rchExtract(L_Rch rch, IntBuffer pindex, FloatBuffer pscore, PointerByReference ptext, IntBuffer psample, IntBuffer pxloc, IntBuffer pyloc, IntBuffer pwidth);
 //      /**
@@ -12166,25 +12166,25 @@ public interface Leptonica extends Library, ILeptonica {
 //    Pixa showExtractNumbers(Pix pixs, Sarray sa, Boxaa baa, Numaa naa, PointerByReference ppixdb);
 //    /**
 //     * Original signature :
-//     * <code>l_int32 recogTrainLabeled(L_RECOG*, PIX*, BOX*, char*, l_int32)</code>
+//     * <code>l_ok recogTrainLabeled(L_RECOG*, PIX*, BOX*, char*, l_int32)</code>
 //     */
 //    int recogTrainLabeled(L_Recog recog, Pix pixs, Box box, ByteBuffer text, int debug);
 //
 //    /**
 //     * Original signature :
-//     * <code>l_int32 recogProcessLabeled(L_RECOG*, PIX*, BOX*, char*, PIX**)</code>
+//     * <code>l_ok recogProcessLabeled(L_RECOG*, PIX*, BOX*, char*, PIX**)</code>
 //     */
 //    int recogProcessLabeled(L_Recog recog, Pix pixs, Box box, ByteBuffer text, PointerByReference ppix);
 //
 //    /**
 //     * Original signature :
-//     * <code>l_int32 recogProcessLabeled(L_RECOG*, PIX*, BOX*, char*, PIX**)</code>
+//     * <code>l_ok recogProcessLabeled(L_RECOG*, PIX*, BOX*, char*, PIX**)</code>
 //     */
 //    int recogProcessLabeled(L_Recog recog, Pix pixs, Box box, Pointer text, PointerByReference ppix);
 //
 //    /**
 //     * Original signature :
-//     * <code>l_int32 recogAddSample(L_RECOG*, PIX*, l_int32)</code>
+//     * <code>l_ok recogAddSample(L_RECOG*, PIX*, l_int32)</code>
 //     */
 //    int recogAddSample(L_Recog recog, Pix pix, int debug);
 //
@@ -12210,7 +12210,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      int pixaAccumulateSamples(Pixa pixa, Pta pta, PointerByReference ppixd, FloatByReference px, FloatByReference py);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 recogTrainingFinished(L_RECOG**, l_int32, l_int32, l_float32)</code>
+//       * <code>l_ok recogTrainingFinished(L_RECOG**, l_int32, l_int32, l_float32)</code>
 //       */
 //      int recogTrainingFinished(PointerByReference precog, int modifyflag, int minsize, float minfract);
 //    /**
@@ -12225,7 +12225,7 @@ public interface Leptonica extends Library, ILeptonica {
 //    Pixaa recogSortPixaByClass(Pixa pixa, int setsize);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 recogRemoveOutliers1(L_RECOG**, l_float32, l_int32, l_int32, PIX**, PIX**)</code>
+//       * <code>l_ok recogRemoveOutliers1(L_RECOG**, l_float32, l_int32, l_int32, PIX**, PIX**)</code>
 //       */
 //      int recogRemoveOutliers1(PointerByReference precog, float minscore, int mintarget, int minsize, PointerByReference ppixsave, PointerByReference ppixrem);
 //    /**
@@ -12236,7 +12236,7 @@ public interface Leptonica extends Library, ILeptonica {
 //
 //    /**
 //     * Original signature :
-//     * <code>l_int32 recogRemoveOutliers2(L_RECOG**, l_float32, l_int32, PIX**, PIX**)</code>
+//     * <code>l_ok recogRemoveOutliers2(L_RECOG**, l_float32, l_int32, PIX**, PIX**)</code>
 //     */
 //    int recogRemoveOutliers2(PointerByReference precog, float minscore, int minsize, PointerByReference ppixsave, PointerByReference ppixrem);
 //
@@ -12254,7 +12254,7 @@ public interface Leptonica extends Library, ILeptonica {
 //
 //    /**
 //     * Original signature :
-//     * <code>l_int32 recogPadDigitTrainingSet(L_RECOG**, l_int32, l_int32)</code>
+//     * <code>l_ok recogPadDigitTrainingSet(L_RECOG**, l_int32, l_int32)</code>
 //     */
 //    int recogPadDigitTrainingSet(PointerByReference precog, int scaleh, int linew);
 //
@@ -12283,12 +12283,12 @@ public interface Leptonica extends Library, ILeptonica {
 //    Pixa recogMakeBootDigitTemplates(int debug);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 recogShowContent(FILE*, L_RECOG*, l_int32, l_int32)</code>
+//       * <code>l_ok recogShowContent(FILE*, L_RECOG*, l_int32, l_int32)</code>
 //       */
 //      int recogShowContent(FILE fp, L_Recog recog, int index, int display);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 recogDebugAverages(L_RECOG**, l_int32)</code>
+//       * <code>l_ok recogDebugAverages(L_RECOG**, l_int32)</code>
 //       */
 //      int recogDebugAverages(PointerByReference precog, int debug);
 //      /**
@@ -12298,7 +12298,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      int recogShowAverageTemplates(L_Recog recog);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 recogShowMatchesInRange(L_RECOG*, PIXA*, l_float32, l_float32, l_int32)</code>
+//       * <code>l_ok recogShowMatchesInRange(L_RECOG*, PIXA*, l_float32, l_float32, l_int32)</code>
 //       */
 //      int recogShowMatchesInRange(L_Recog recog, Pixa pixa, float minscore, float maxscore, int display);
 //      /**
@@ -12308,47 +12308,47 @@ public interface Leptonica extends Library, ILeptonica {
 //      Pix recogShowMatch(L_Recog recog, Pix pix1, Pix pix2, Box box, int index, float score);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 regTestSetup(l_int32, char**, L_REGPARAMS**)</code>
+//       * <code>l_ok regTestSetup(l_int32, char**, L_REGPARAMS**)</code>
 //       */
 //      int regTestSetup(int argc, PointerByReference argv, PointerByReference prp);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 regTestCleanup(L_REGPARAMS*)</code>
+//       * <code>l_ok regTestCleanup(L_REGPARAMS*)</code>
 //       */
 //      int regTestCleanup(L_RegParams rp);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 regTestCompareValues(L_REGPARAMS*, l_float32, l_float32, l_float32)</code>
+//       * <code>l_ok regTestCompareValues(L_REGPARAMS*, l_float32, l_float32, l_float32)</code>
 //       */
 //      int regTestCompareValues(L_RegParams rp, float val1, float val2, float delta);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 regTestCompareStrings(L_REGPARAMS*, l_uint8*, size_t, l_uint8*, size_t)</code>
+//       * <code>l_ok regTestCompareStrings(L_REGPARAMS*, l_uint8*, size_t, l_uint8*, size_t)</code>
 //       */
 //      int regTestCompareStrings(L_RegParams rp, ByteBuffer string1, NativeSize bytes1, ByteBuffer string2, NativeSize bytes2);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 regTestComparePix(L_REGPARAMS*, PIX*, PIX*)</code>
+//       * <code>l_ok regTestComparePix(L_REGPARAMS*, PIX*, PIX*)</code>
 //       */
 //      int regTestComparePix(L_RegParams rp, Pix pix1, Pix pix2);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 regTestCompareSimilarPix(L_REGPARAMS*, PIX*, PIX*, l_int32, l_float32, l_int32)</code>
+//       * <code>l_ok regTestCompareSimilarPix(L_REGPARAMS*, PIX*, PIX*, l_int32, l_float32, l_int32)</code>
 //       */
 //      int regTestCompareSimilarPix(L_RegParams rp, Pix pix1, Pix pix2, int mindiff, float maxfract, int printstats);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 regTestCheckFile(L_REGPARAMS*, const char*)</code>
+//       * <code>l_ok regTestCheckFile(L_REGPARAMS*, const char*)</code>
 //       */
 //      int regTestCheckFile(L_RegParams rp, String localname);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 regTestCompareFiles(L_REGPARAMS*, l_int32, l_int32)</code>
+//       * <code>l_ok regTestCompareFiles(L_REGPARAMS*, l_int32, l_int32)</code>
 //       */
 //      int regTestCompareFiles(L_RegParams rp, int index1, int index2);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 regTestWritePixAndCheck(L_REGPARAMS*, PIX*, l_int32)</code>
+//       * <code>l_ok regTestWritePixAndCheck(L_REGPARAMS*, PIX*, l_int32)</code>
 //       */
 //      int regTestWritePixAndCheck(L_RegParams rp, Pix pix, int format);
 //    /**
@@ -12358,17 +12358,17 @@ public interface Leptonica extends Library, ILeptonica {
 //    Pointer regTestGenLocalFilename(L_RegParams rp, int index, int format);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixRasterop(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, PIX*, l_int32, l_int32)</code>
+//       * <code>l_ok pixRasterop(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, PIX*, l_int32, l_int32)</code>
 //       */
 //      int pixRasterop(Pix pixd, int dx, int dy, int dw, int dh, int op, Pix pixs, int sx, int sy);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixRasteropVip(PIX*, l_int32, l_int32, l_int32, l_int32)</code>
+//       * <code>l_ok pixRasteropVip(PIX*, l_int32, l_int32, l_int32, l_int32)</code>
 //       */
 //      int pixRasteropVip(Pix pixd, int bx, int bw, int vshift, int incolor);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixRasteropHip(PIX*, l_int32, l_int32, l_int32, l_int32)</code>
+//       * <code>l_ok pixRasteropHip(PIX*, l_int32, l_int32, l_int32, l_int32)</code>
 //       */
 //      int pixRasteropHip(Pix pixd, int by, int bh, int hshift, int incolor);
 //      /**
@@ -12378,12 +12378,12 @@ public interface Leptonica extends Library, ILeptonica {
 //      Pix pixTranslate(Pix pixd, Pix pixs, int hshift, int vshift, int incolor);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixRasteropIP(PIX*, l_int32, l_int32, l_int32)</code>
+//       * <code>l_ok pixRasteropIP(PIX*, l_int32, l_int32, l_int32)</code>
 //       */
 //      int pixRasteropIP(Pix pixd, int hshift, int vshift, int incolor);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixRasteropFullImage(PIX*, PIX*, l_int32)</code>
+//       * <code>l_ok pixRasteropFullImage(PIX*, PIX*, l_int32)</code>
 //       */
 //      int pixRasteropFullImage(Pix pixd, Pix pixs, int op);
 //      /**
@@ -12523,7 +12523,7 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixRotateShearIP(PIX*, l_int32, l_int32, l_float32, l_int32)</code>
+     * <code>l_ok pixRotateShearIP(PIX*, l_int32, l_int32, l_float32, l_int32)</code>
      */
     int pixRotateShearIP(Pix pixs, int xcen, int ycen, float angle, int incolor);
 
@@ -12535,7 +12535,7 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixRotateShearCenterIP(PIX*, l_float32, l_int32)</code>
+     * <code>l_ok pixRotateShearCenterIP(PIX*, l_float32, l_int32)</code>
      */
     int pixRotateShearCenterIP(Pix pixs, float angle, int incolor);
 
@@ -12551,12 +12551,12 @@ public interface Leptonica extends Library, ILeptonica {
 //      Pix pixRunlengthTransform(Pix pixs, int color, int direction, int depth);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixFindHorizontalRuns(PIX*, l_int32, l_int32*, l_int32*, l_int32*)</code>
+//       * <code>l_ok pixFindHorizontalRuns(PIX*, l_int32, l_int32*, l_int32*, l_int32*)</code>
 //       */
 //      int pixFindHorizontalRuns(Pix pix, int y, IntBuffer xstart, IntBuffer xend, IntBuffer pn);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixFindVerticalRuns(PIX*, l_int32, l_int32*, l_int32*, l_int32*)</code>
+//       * <code>l_ok pixFindVerticalRuns(PIX*, l_int32, l_int32*, l_int32*, l_int32*)</code>
 //       */
 //      int pixFindVerticalRuns(Pix pix, int x, IntBuffer ystart, IntBuffer yend, IntBuffer pn);
 //      /**
@@ -12566,17 +12566,17 @@ public interface Leptonica extends Library, ILeptonica {
 //      Numa pixFindMaxRuns(Pix pix, int direction, PointerByReference pnastart);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixFindMaxHorizontalRunOnLine(PIX*, l_int32, l_int32*, l_int32*)</code>
+//       * <code>l_ok pixFindMaxHorizontalRunOnLine(PIX*, l_int32, l_int32*, l_int32*)</code>
 //       */
 //      int pixFindMaxHorizontalRunOnLine(Pix pix, int y, IntBuffer pxstart, IntBuffer psize);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixFindMaxVerticalRunOnLine(PIX*, l_int32, l_int32*, l_int32*)</code>
+//       * <code>l_ok pixFindMaxVerticalRunOnLine(PIX*, l_int32, l_int32*, l_int32*)</code>
 //       */
 //      int pixFindMaxVerticalRunOnLine(Pix pix, int x, IntBuffer pystart, IntBuffer psize);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 runlengthMembershipOnLine(l_int32*, l_int32, l_int32, l_int32*, l_int32*, l_int32)</code>
+//       * <code>l_ok runlengthMembershipOnLine(l_int32*, l_int32, l_int32, l_int32*, l_int32*, l_int32)</code>
 //       */
 //      int runlengthMembershipOnLine(IntBuffer buffer, int size, int depth, IntBuffer start, IntBuffer end, int n);
 //  
@@ -12623,7 +12623,7 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 sarrayAddString(SARRAY*, const char*, l_int32)</code>
+     * <code>l_ok sarrayAddString(SARRAY*, const char*, l_int32)</code>
      */
     int sarrayAddString(Sarray sa, String string, int copyflag);
 
@@ -12634,12 +12634,12 @@ public interface Leptonica extends Library, ILeptonica {
 //      Pointer sarrayRemoveString(Sarray sa, int index);
     /**
      * Original signature :
-     * <code>l_int32 sarrayReplaceString(SARRAY*, l_int32, char*, l_int32)</code>
+     * <code>l_ok sarrayReplaceString(SARRAY*, l_int32, char*, l_int32)</code>
      */
     int sarrayReplaceString(Sarray sa, int index, ByteBuffer newstr, int copyflag);
 //  
 //      /**
-//       * Original signature : <code>l_int32 sarrayClear(SARRAY*)</code>
+//       * Original signature : <code>l_ok sarrayClear(SARRAY*)</code>
 //       */
 //      int sarrayClear(Sarray sa);
 //  
@@ -12665,7 +12665,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      int sarrayGetRefcount(Sarray sa);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 sarrayChangeRefcount(SARRAY*, l_int32)</code>
+//       * <code>l_ok sarrayChangeRefcount(SARRAY*, l_int32)</code>
 //       */
 //      int sarrayChangeRefcount(Sarray sa, int delta);
 //      /**
@@ -12680,18 +12680,18 @@ public interface Leptonica extends Library, ILeptonica {
 //      Pointer sarrayToStringRange(Sarray sa, int first, int nstrings, int addnlflag);
     /**
      * Original signature :
-     * <code>l_int32 sarrayJoin(SARRAY*, SARRAY*)</code>
+     * <code>l_ok sarrayJoin(SARRAY*, SARRAY*)</code>
      */
     int sarrayJoin(Sarray sa1, Sarray sa2);
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 sarrayAppendRange(SARRAY*, SARRAY*, l_int32, l_int32)</code>
+//       * <code>l_ok sarrayAppendRange(SARRAY*, SARRAY*, l_int32, l_int32)</code>
 //       */
 //      int sarrayAppendRange(Sarray sa1, Sarray sa2, int start, int end);
     /**
      * Original signature :
-     * <code>l_int32 sarrayPadToSameSize(SARRAY*, SARRAY*, const char*)</code>
+     * <code>l_ok sarrayPadToSameSize(SARRAY*, SARRAY*, const char*)</code>
      */
     int sarrayPadToSameSize(Sarray sa1, Sarray sa2, String padstring);
 
@@ -12738,23 +12738,23 @@ public interface Leptonica extends Library, ILeptonica {
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 sarrayWrite(const char*, SARRAY*)</code>
+//       * <code>l_ok sarrayWrite(const char*, SARRAY*)</code>
 //       */
 //      int sarrayWrite(String filename, Sarray sa);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 sarrayWriteStream(FILE*, SARRAY*)</code>
+//       * <code>l_ok sarrayWriteStream(FILE*, SARRAY*)</code>
 //       */
 //      int sarrayWriteStream(FILE fp, Sarray sa);
     /**
      * Original signature :
-     * <code>l_int32 sarrayWriteMem(l_uint8**, size_t*, SARRAY*)</code>
+     * <code>l_ok sarrayWriteMem(l_uint8**, size_t*, SARRAY*)</code>
      */
     int sarrayWriteMem(PointerByReference pdata, NativeSizeByReference psize, Sarray sa);
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 sarrayAppend(const char*, SARRAY*)</code>
+//       * <code>l_ok sarrayAppend(const char*, SARRAY*)</code>
 //       */
 //      int sarrayAppend(String filename, Sarray sa);
 //      /**
@@ -12814,7 +12814,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      L_Rbtree l_asetCreateFromSarray(Sarray sa);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 sarrayRemoveDupsByHash(SARRAY*, SARRAY**, L_DNAHASH**)</code>
+//       * <code>l_ok sarrayRemoveDupsByHash(SARRAY*, SARRAY**, L_DNAHASH**)</code>
 //       */
 //      int sarrayRemoveDupsByHash(Sarray sas, PointerByReference psad, PointerByReference pdahash);
 //      /**
@@ -12824,7 +12824,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      Sarray sarrayIntersectionByHash(Sarray sa1, Sarray sa2);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 sarrayFindStringByHash(SARRAY*, L_DNAHASH*, const char*, l_int32*)</code>
+//       * <code>l_ok sarrayFindStringByHash(SARRAY*, L_DNAHASH*, const char*, l_int32*)</code>
 //       */
 //      int sarrayFindStringByHash(Sarray sa, L_DnaHash dahash, String str, IntBuffer pindex);
 //      /**
@@ -13079,7 +13079,7 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixScaleAndTransferAlpha(PIX*, PIX*, l_float32, l_float32)</code>
+     * <code>l_ok pixScaleAndTransferAlpha(PIX*, PIX*, l_float32, l_float32)</code>
      */
     int pixScaleAndTransferAlpha(Pix pixd, Pix pixs, float scalex, float scaley);
 
@@ -13132,22 +13132,22 @@ public interface Leptonica extends Library, ILeptonica {
 //      Pix pixFillHolesToBoundingRect(Pix pixs, int minsize, float maxhfract, float minfgfract);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixSeedfillGray(PIX*, PIX*, l_int32)</code>
+//       * <code>l_ok pixSeedfillGray(PIX*, PIX*, l_int32)</code>
 //       */
 //      int pixSeedfillGray(Pix pixs, Pix pixm, int connectivity);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixSeedfillGrayInv(PIX*, PIX*, l_int32)</code>
+//       * <code>l_ok pixSeedfillGrayInv(PIX*, PIX*, l_int32)</code>
 //       */
 //      int pixSeedfillGrayInv(Pix pixs, Pix pixm, int connectivity);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixSeedfillGraySimple(PIX*, PIX*, l_int32)</code>
+//       * <code>l_ok pixSeedfillGraySimple(PIX*, PIX*, l_int32)</code>
 //       */
 //      int pixSeedfillGraySimple(Pix pixs, Pix pixm, int connectivity);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixSeedfillGrayInvSimple(PIX*, PIX*, l_int32)</code>
+//       * <code>l_ok pixSeedfillGrayInvSimple(PIX*, PIX*, l_int32)</code>
 //       */
 //      int pixSeedfillGrayInvSimple(Pix pixs, Pix pixm, int connectivity);
 //      /**
@@ -13167,12 +13167,12 @@ public interface Leptonica extends Library, ILeptonica {
 //      Pix pixSeedspread(Pix pixs, int connectivity);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixLocalExtrema(PIX*, l_int32, l_int32, PIX**, PIX**)</code>
+//       * <code>l_ok pixLocalExtrema(PIX*, l_int32, l_int32, PIX**, PIX**)</code>
 //       */
 //      int pixLocalExtrema(Pix pixs, int maxmin, int minmax, PointerByReference ppixmin, PointerByReference ppixmax);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixSelectedLocalExtrema(PIX*, l_int32, PIX**, PIX**)</code>
+//       * <code>l_ok pixSelectedLocalExtrema(PIX*, l_int32, PIX**, PIX**)</code>
 //       */
 //      int pixSelectedLocalExtrema(Pix pixs, int mindist, PointerByReference ppixmin, PointerByReference ppixmax);
 //  
@@ -13182,7 +13182,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      Pix pixFindEqualValues(Pix pixs1, Pix pixs2);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixSelectMinInConnComp(PIX*, PIX*, PTA**, NUMA**)</code>
+//       * <code>l_ok pixSelectMinInConnComp(PIX*, PIX*, PTA**, NUMA**)</code>
 //       */
 //      int pixSelectMinInConnComp(Pix pixs, Pix pixm, PointerByReference ppta, PointerByReference pnav);
 //      /**
@@ -13232,7 +13232,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      PointerByReference create2dIntArray(int sy, int sx);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 selaAddSel(SELA*, SEL*, const char*, l_int32)</code>
+//       * <code>l_ok selaAddSel(SELA*, SEL*, const char*, l_int32)</code>
 //       */
 //      int selaAddSel(Sela sela, Pointer sel, String selname, int copyflag);
 //  
@@ -13252,37 +13252,37 @@ public interface Leptonica extends Library, ILeptonica {
 //      Pointer selGetName(Pointer sel);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 selSetName(SEL*, const char*)</code>
+//       * <code>l_ok selSetName(SEL*, const char*)</code>
 //       */
 //      int selSetName(Pointer sel, String name);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 selaFindSelByName(SELA*, const char*, l_int32*, SEL**)</code>
+//       * <code>l_ok selaFindSelByName(SELA*, const char*, l_int32*, SEL**)</code>
 //       */
 //      int selaFindSelByName(Sela sela, String name, IntBuffer pindex, PointerByReference psel);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 selGetElement(SEL*, l_int32, l_int32, l_int32*)</code>
+//       * <code>l_ok selGetElement(SEL*, l_int32, l_int32, l_int32*)</code>
 //       */
 //      int selGetElement(Pointer sel, int row, int col, IntBuffer ptype);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 selSetElement(SEL*, l_int32, l_int32, l_int32)</code>
+//       * <code>l_ok selSetElement(SEL*, l_int32, l_int32, l_int32)</code>
 //       */
 //      int selSetElement(Pointer sel, int row, int col, int type);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 selGetParameters(SEL*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
+//       * <code>l_ok selGetParameters(SEL*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
 //       */
 //      int selGetParameters(Pointer sel, IntBuffer psy, IntBuffer psx, IntBuffer pcy, IntBuffer pcx);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 selSetOrigin(SEL*, l_int32, l_int32)</code>
+//       * <code>l_ok selSetOrigin(SEL*, l_int32, l_int32)</code>
 //       */
 //      int selSetOrigin(Pointer sel, int cy, int cx);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 selGetTypeAtOrigin(SEL*, l_int32*)</code>
+//       * <code>l_ok selGetTypeAtOrigin(SEL*, l_int32*)</code>
 //       */
 //      int selGetTypeAtOrigin(Pointer sel, IntBuffer ptype);
 //      /**
@@ -13297,7 +13297,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      Pointer selaGetCombName(Sela sela, int size, int direction);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 getCompositeParameters(l_int32, l_int32*, l_int32*, char**, char**, char**, char**)</code>
+//       * <code>l_ok getCompositeParameters(l_int32, l_int32*, l_int32*, char**, char**, char**, char**)</code>
 //       */
 //      int getCompositeParameters(int size, IntBuffer psize1, IntBuffer psize2, PointerByReference pnameh1, PointerByReference pnameh2, PointerByReference pnamev1, PointerByReference pnamev2);
 //  
@@ -13307,7 +13307,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      Sarray selaGetSelnames(Sela sela);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 selFindMaxTranslations(SEL*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
+//       * <code>l_ok selFindMaxTranslations(SEL*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
 //       */
 //      int selFindMaxTranslations(Pointer sel, IntBuffer pxp, IntBuffer pyp, IntBuffer pxn, IntBuffer pyn);
 //  
@@ -13337,22 +13337,22 @@ public interface Leptonica extends Library, ILeptonica {
 //      Sel selReadStream(FILE fp);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 selaWrite(const char*, SELA*)</code>
+//       * <code>l_ok selaWrite(const char*, SELA*)</code>
 //       */
 //      int selaWrite(String fname, Sela sela);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 selaWriteStream(FILE*, SELA*)</code>
+//       * <code>l_ok selaWriteStream(FILE*, SELA*)</code>
 //       */
 //      int selaWriteStream(FILE fp, Sela sela);
 //  
 //      /**
-//       * Original signature : <code>l_int32 selWrite(const char*, SEL*)</code>
+//       * Original signature : <code>l_ok selWrite(const char*, SEL*)</code>
 //       */
 //      int selWrite(String fname, Pointer sel);
 //  
 //      /**
-//       * Original signature : <code>l_int32 selWriteStream(FILE*, SEL*)</code>
+//       * Original signature : <code>l_ok selWriteStream(FILE*, SEL*)</code>
 //       */
 //      int selWriteStream(FILE fp, Pointer sel);
       /**
@@ -13517,12 +13517,12 @@ public interface Leptonica extends Library, ILeptonica {
 //      Pix pixVShearCenter(Pix pixd, Pix pixs, float radang, int incolor);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixHShearIP(PIX*, l_int32, l_float32, l_int32)</code>
+//       * <code>l_ok pixHShearIP(PIX*, l_int32, l_float32, l_int32)</code>
 //       */
 //      int pixHShearIP(Pix pixs, int yloc, float radang, int incolor);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixVShearIP(PIX*, l_int32, l_float32, l_int32)</code>
+//       * <code>l_ok pixVShearIP(PIX*, l_int32, l_float32, l_int32)</code>
 //       */
 //      int pixVShearIP(Pix pixs, int xloc, float radang, int incolor);
 //      /**
@@ -13559,49 +13559,49 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixFindSkew(PIX*, l_float32*, l_float32*)</code>
+     * <code>l_ok pixFindSkew(PIX*, l_float32*, l_float32*)</code>
      */
     int pixFindSkew(Pix pixs, FloatBuffer pangle, FloatBuffer pconf);
 
     /**
      * Original signature :
-     * <code>l_int32 pixFindSkewSweep(PIX*, l_float32*, l_int32, l_float32, l_float32)</code>
+     * <code>l_ok pixFindSkewSweep(PIX*, l_float32*, l_int32, l_float32, l_float32)</code>
      */
     int pixFindSkewSweep(Pix pixs, FloatBuffer pangle, int reduction, float sweeprange, float sweepdelta);
 
     /**
      * Original signature :
-     * <code>l_int32 pixFindSkewSweepAndSearch(PIX*, l_float32*, l_float32*, l_int32, l_int32, l_float32, l_float32, l_float32)</code>
+     * <code>l_ok pixFindSkewSweepAndSearch(PIX*, l_float32*, l_float32*, l_int32, l_int32, l_float32, l_float32, l_float32)</code>
      */
     int pixFindSkewSweepAndSearch(Pix pixs, FloatBuffer pangle, FloatBuffer pconf, int redsweep, int redsearch, float sweeprange, float sweepdelta, float minbsdelta);
 
     /**
      * Original signature :
-     * <code>l_int32 pixFindSkewSweepAndSearchScore(PIX*, l_float32*, l_float32*, l_float32*, l_int32, l_int32, l_float32, l_float32, l_float32, l_float32)</code>
+     * <code>l_ok pixFindSkewSweepAndSearchScore(PIX*, l_float32*, l_float32*, l_float32*, l_int32, l_int32, l_float32, l_float32, l_float32, l_float32)</code>
      */
     int pixFindSkewSweepAndSearchScore(Pix pixs, FloatBuffer pangle, FloatBuffer pconf, FloatBuffer pendscore, int redsweep, int redsearch, float sweepcenter, float sweeprange, float sweepdelta, float minbsdelta);
 
     /**
      * Original signature :
-     * <code>l_int32 pixFindSkewSweepAndSearchScorePivot(PIX*, l_float32*, l_float32*, l_float32*, l_int32, l_int32, l_float32, l_float32, l_float32, l_float32, l_int32)</code>
+     * <code>l_ok pixFindSkewSweepAndSearchScorePivot(PIX*, l_float32*, l_float32*, l_float32*, l_int32, l_int32, l_float32, l_float32, l_float32, l_float32, l_int32)</code>
      */
     int pixFindSkewSweepAndSearchScorePivot(Pix pixs, FloatBuffer pangle, FloatBuffer pconf, FloatBuffer pendscore, int redsweep, int redsearch, float sweepcenter, float sweeprange, float sweepdelta, float minbsdelta, int pivot);
 
     /**
      * Original signature :
-     * <code>l_int32 pixFindSkewOrthogonalRange(PIX*, l_float32*, l_float32*, l_int32, l_int32, l_float32, l_float32, l_float32, l_float32)</code>
+     * <code>l_ok pixFindSkewOrthogonalRange(PIX*, l_float32*, l_float32*, l_int32, l_int32, l_float32, l_float32, l_float32, l_float32)</code>
      */
     int pixFindSkewOrthogonalRange(Pix pixs, FloatBuffer pangle, FloatBuffer pconf, int redsweep, int redsearch, float sweeprange, float sweepdelta, float minbsdelta, float confprior);
 
     /**
      * Original signature :
-     * <code>l_int32 pixFindDifferentialSquareSum(PIX*, l_float32*)</code>
+     * <code>l_ok pixFindDifferentialSquareSum(PIX*, l_float32*)</code>
      */
     int pixFindDifferentialSquareSum(Pix pixs, FloatBuffer psum);
 
     /**
      * Original signature :
-     * <code>l_int32 pixFindNormalizedSquareSum(PIX*, l_float32*, l_float32*, l_float32*)</code>
+     * <code>l_ok pixFindNormalizedSquareSum(PIX*, l_float32*, l_float32*, l_float32*)</code>
      */
     int pixFindNormalizedSquareSum(Pix pixs, FloatBuffer phratio, FloatBuffer pvratio, FloatBuffer pfract);
 //  
@@ -13612,22 +13612,22 @@ public interface Leptonica extends Library, ILeptonica {
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 readHeaderSpix(const char*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
+//       * <code>l_ok readHeaderSpix(const char*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
 //       */
 //      int readHeaderSpix(String filename, IntBuffer pwidth, IntBuffer pheight, IntBuffer pbps, IntBuffer pspp, IntBuffer piscmap);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 freadHeaderSpix(FILE*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
+//       * <code>l_ok freadHeaderSpix(FILE*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
 //       */
 //      int freadHeaderSpix(FILE fp, IntBuffer pwidth, IntBuffer pheight, IntBuffer pbps, IntBuffer pspp, IntBuffer piscmap);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 sreadHeaderSpix(const l_uint32*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
+//       * <code>l_ok sreadHeaderSpix(const l_uint32*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
 //       */
 //      int sreadHeaderSpix(IntBuffer data, IntBuffer pwidth, IntBuffer pheight, IntBuffer pbps, IntBuffer pspp, IntBuffer piscmap);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixWriteStreamSpix(FILE*, PIX*)</code>
+//       * <code>l_ok pixWriteStreamSpix(FILE*, PIX*)</code>
 //       */
 //      int pixWriteStreamSpix(FILE fp, Pix pix);
     /**
@@ -13638,12 +13638,12 @@ public interface Leptonica extends Library, ILeptonica {
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixWriteMemSpix(l_uint8**, size_t*, PIX*)</code>
+//       * <code>l_ok pixWriteMemSpix(l_uint8**, size_t*, PIX*)</code>
 //       */
 //      int pixWriteMemSpix(PointerByReference pdata, NativeSizeByReference psize, Pix pix);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixSerializeToMemory(PIX*, l_uint32**, size_t*)</code>
+//       * <code>l_ok pixSerializeToMemory(PIX*, l_uint32**, size_t*)</code>
 //       */
 //      int pixSerializeToMemory(Pix pixs, PointerByReference pdata, NativeSizeByReference pnbytes);
 //      /**
@@ -13663,7 +13663,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      void lstackDestroy(PointerByReference plstack, int freeflag);
 //  
 //      /**
-//       * Original signature : <code>l_int32 lstackAdd(L_STACK*, void*)</code>
+//       * Original signature : <code>l_ok lstackAdd(L_STACK*, void*)</code>
 //       */
 //      int lstackAdd(L_Stack lstack, Pointer item);
 //  
@@ -13678,7 +13678,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      int lstackGetCount(L_Stack lstack);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 lstackPrint(FILE*, L_STACK*)</code>
+//       * <code>l_ok lstackPrint(FILE*, L_STACK*)</code>
 //       */
 //      int lstackPrint(FILE fp, L_Stack lstack);
 //  
@@ -13688,12 +13688,12 @@ public interface Leptonica extends Library, ILeptonica {
 //      L_StrCode strcodeCreate(int fileno);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 strcodeCreateFromFile(const char*, l_int32, const char*)</code>
+//       * <code>l_ok strcodeCreateFromFile(const char*, l_int32, const char*)</code>
 //       */
 //      int strcodeCreateFromFile(String filein, int fileno, String outdir);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 strcodeGenerate(L_STRCODE*, const char*, const char*)</code>
+//       * <code>l_ok strcodeGenerate(L_STRCODE*, const char*, const char*)</code>
 //       */
 //      int strcodeGenerate(L_StrCode strcode, String filein, String type);
 //      /**
@@ -13715,19 +13715,19 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixFindStrokeLength(PIX*, l_int32*, l_int32*)</code>
+     * <code>l_ok pixFindStrokeLength(PIX*, l_int32*, l_int32*)</code>
      */
     int pixFindStrokeLength(Pix pixs, IntBuffer tab8, IntBuffer plength);
 
     /**
      * Original signature :
-     * <code>l_int32 pixFindStrokeWidth(PIX*, l_float32, l_int32*, l_float32*, NUMA**)</code>
+     * <code>l_ok pixFindStrokeWidth(PIX*, l_float32, l_int32*, l_float32*, NUMA**)</code>
      */
     int pixFindStrokeWidth(Pix pixs, float thresh, IntBuffer tab8, FloatBuffer pwidth, PointerByReference pnahisto);
 
     /**
      * Original signature :
-     * <code>l_int32 pixFindStrokeWidth(PIX*, l_float32, l_int32*, l_float32*, NUMA**)</code>
+     * <code>l_ok pixFindStrokeWidth(PIX*, l_float32, l_int32*, l_float32*, NUMA**)</code>
      */
     int pixFindStrokeWidth(Pix pixs, float thresh, IntByReference tab8, FloatByReference pwidth, PointerByReference pnahisto);
 
@@ -13788,7 +13788,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      int sudokuSolve(L_Sudoku sud);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 sudokuTestUniqueness(l_int32*, l_int32*)</code>
+//       * <code>l_ok sudokuTestUniqueness(l_int32*, l_int32*)</code>
 //       */
 //      int sudokuTestUniqueness(IntBuffer array, IntBuffer punique);
 //      /**
@@ -13814,12 +13814,12 @@ public interface Leptonica extends Library, ILeptonica {
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixSetTextblock(PIX*, L_BMF*, const char*, l_uint32, l_int32, l_int32, l_int32, l_int32, l_int32*)</code>
+//       * <code>l_ok pixSetTextblock(PIX*, L_BMF*, const char*, l_uint32, l_int32, l_int32, l_int32, l_int32, l_int32*)</code>
 //       */
 //      int pixSetTextblock(Pix pixs, L_Bmf bmf, String textstr, int val, int x0, int y0, int wtext, int firstindent, IntBuffer poverflow);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixSetTextline(PIX*, L_BMF*, const char*, l_uint32, l_int32, l_int32, l_int32*, l_int32*)</code>
+//       * <code>l_ok pixSetTextline(PIX*, L_BMF*, const char*, l_uint32, l_int32, l_int32, l_int32*, l_int32*)</code>
 //       */
 //      int pixSetTextline(Pix pixs, L_Bmf bmf, String textstr, int val, int x0, int y0, IntBuffer pwidth, IntBuffer poverflow);
 //      /**
@@ -13835,7 +13835,7 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixaAddPixWithText(PIXA*, PIX*, l_int32, L_BMF*, const char*, l_uint32, l_int32)</code>
+     * <code>l_ok pixaAddPixWithText(PIXA*, PIX*, l_int32, L_BMF*, const char*, l_uint32, l_int32)</code>
      */
     int pixaAddPixWithText(Pixa pixa, Pix pixs, int reduction, L_Bmf bmf, String textstr, int val, int location);
 
@@ -13851,7 +13851,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      Numa bmfGetWordWidths(L_Bmf bmf, String textstr, Sarray sa);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 bmfGetStringWidth(L_BMF*, const char*, l_int32*)</code>
+//       * <code>l_ok bmfGetStringWidth(L_BMF*, const char*, l_int32*)</code>
 //       */
 //      int bmfGetStringWidth(L_Bmf bmf, String textstr, IntBuffer pw);
     /**
@@ -13874,25 +13874,25 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixWriteTiff(const char*, PIX*, l_int32, const char*)</code>
+     * <code>l_ok pixWriteTiff(const char*, PIX*, l_int32, const char*)</code>
      */
     int pixWriteTiff(String filename, Pix pix, int comptype, String modestr);
 
     /**
      * Original signature :
-     * <code>l_int32 pixWriteTiffCustom(const char*, PIX*, l_int32, const char*, NUMA*, SARRAY*, SARRAY*, NUMA*)</code>
+     * <code>l_ok pixWriteTiffCustom(const char*, PIX*, l_int32, const char*, NUMA*, SARRAY*, SARRAY*, NUMA*)</code>
      */
     int pixWriteTiffCustom(String filename, Pix pix, int comptype, String modestr, Numa natags, Sarray savals, Sarray satypes, Numa nasizes);
 
     /**
      * Original signature :
-     * <code>l_int32 pixWriteStreamTiff(FILE*, PIX*, l_int32)</code>
+     * <code>l_ok pixWriteStreamTiff(FILE*, PIX*, l_int32)</code>
      */
     int pixWriteStreamTiff(FILE fp, Pix pix, int comptype);
 
     /**
      * Original signature :
-     * <code>l_int32 pixWriteStreamTiffWA(FILE*, PIX*, l_int32, const char*)</code>
+     * <code>l_ok pixWriteStreamTiffWA(FILE*, PIX*, l_int32, const char*)</code>
      */
     int pixWriteStreamTiffWA(FILE fp, Pix pix, int comptype, String modestr);
 
@@ -13910,67 +13910,67 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixaWriteMultipageTiff(const char*, PIXA*)</code>
+     * <code>l_ok pixaWriteMultipageTiff(const char*, PIXA*)</code>
      */
     int pixaWriteMultipageTiff(String fname, Pixa pixa);
 
     /**
      * Original signature :
-     * <code>l_int32 writeMultipageTiff(const char*, const char*, const char*)</code>
+     * <code>l_ok writeMultipageTiff(const char*, const char*, const char*)</code>
      */
     int writeMultipageTiff(String dirin, String substr, String fileout);
 
     /**
      * Original signature :
-     * <code>l_int32 writeMultipageTiffSA(SARRAY*, const char*)</code>
+     * <code>l_ok writeMultipageTiffSA(SARRAY*, const char*)</code>
      */
     int writeMultipageTiffSA(Sarray sa, String fileout);
 
     /**
      * Original signature :
-     * <code>l_int32 fprintTiffInfo(FILE*, const char*)</code>
+     * <code>l_ok fprintTiffInfo(FILE*, const char*)</code>
      */
     int fprintTiffInfo(FILE fpout, String tiffile);
 
     /**
      * Original signature :
-     * <code>l_int32 tiffGetCount(FILE*, l_int32*)</code>
+     * <code>l_ok tiffGetCount(FILE*, l_int32*)</code>
      */
     int tiffGetCount(FILE fp, IntBuffer pn);
 
     /**
      * Original signature :
-     * <code>l_int32 getTiffResolution(FILE*, l_int32*, l_int32*)</code>
+     * <code>l_ok getTiffResolution(FILE*, l_int32*, l_int32*)</code>
      */
     int getTiffResolution(FILE fp, IntBuffer pxres, IntBuffer pyres);
 
     /**
      * Original signature :
-     * <code>l_int32 readHeaderTiff(const char*, l_int32, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
+     * <code>l_ok readHeaderTiff(const char*, l_int32, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
      */
     int readHeaderTiff(String filename, int n, IntBuffer pw, IntBuffer ph, IntBuffer pbps, IntBuffer pspp, IntBuffer pres, IntBuffer pcmap, IntBuffer pformat);
 
     /**
      * Original signature :
-     * <code>l_int32 freadHeaderTiff(FILE*, l_int32, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
+     * <code>l_ok freadHeaderTiff(FILE*, l_int32, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
      */
     int freadHeaderTiff(FILE fp, int n, IntBuffer pw, IntBuffer ph, IntBuffer pbps, IntBuffer pspp, IntBuffer pres, IntBuffer pcmap, IntBuffer pformat);
 
     /**
      * Original signature :
-     * <code>l_int32 readHeaderMemTiff(const l_uint8*, size_t, l_int32, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
+     * <code>l_ok readHeaderMemTiff(const l_uint8*, size_t, l_int32, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*, l_int32*)</code>
      */
     int readHeaderMemTiff(ByteBuffer cdata, NativeSize size, int n, IntBuffer pw, IntBuffer ph, IntBuffer pbps, IntBuffer pspp, IntBuffer pres, IntBuffer pcmap, IntBuffer pformat);
 
     /**
      * Original signature :
-     * <code>l_int32 findTiffCompression(FILE*, l_int32*)</code>
+     * <code>l_ok findTiffCompression(FILE*, l_int32*)</code>
      */
     int findTiffCompression(FILE fp, IntBuffer pcomptype);
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 extractG4DataFromFile(const char*, l_uint8**, size_t*, l_int32*, l_int32*, l_int32*)</code>
+//       * <code>l_ok extractG4DataFromFile(const char*, l_uint8**, size_t*, l_int32*, l_int32*, l_int32*)</code>
 //       */
 //      int extractG4DataFromFile(String filein, PointerByReference pdata, NativeSizeByReference pnbytes, IntBuffer pw, IntBuffer ph, IntBuffer pminisblack);
     /**
@@ -13993,19 +13993,19 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixaWriteMemMultipageTiff(l_uint8**, size_t*, PIXA*)</code>
+     * <code>l_ok pixaWriteMemMultipageTiff(l_uint8**, size_t*, PIXA*)</code>
      */
     int pixaWriteMemMultipageTiff(PointerByReference pdata, NativeSizeByReference psize, Pixa pixa);
 
     /**
      * Original signature :
-     * <code>l_int32 pixWriteMemTiff(l_uint8**, size_t*, PIX*, l_int32)</code>
+     * <code>l_ok pixWriteMemTiff(l_uint8**, size_t*, PIX*, l_int32)</code>
      */
     int pixWriteMemTiff(PointerByReference pdata, NativeSizeByReference psize, Pix pix, int comptype);
 
     /**
      * Original signature :
-     * <code>l_int32 pixWriteMemTiffCustom(l_uint8**, size_t*, PIX*, l_int32, NUMA*, SARRAY*, SARRAY*, NUMA*)</code>
+     * <code>l_ok pixWriteMemTiffCustom(l_uint8**, size_t*, PIX*, l_int32, NUMA*, SARRAY*, SARRAY*, NUMA*)</code>
      */
     int pixWriteMemTiffCustom(PointerByReference pdata, NativeSizeByReference psize, Pix pix, int comptype, Numa natags, Sarray savals, Sarray satypes, Numa nasizes);
 //  
@@ -14031,7 +14031,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      Pointer returnErrorPtr(String msg, String procname, Pointer pval);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 filesAreIdentical(const char*, const char*, l_int32*)</code>
+//       * <code>l_ok filesAreIdentical(const char*, const char*, l_int32*)</code>
 //       */
 //      int filesAreIdentical(String fname1, String fname2, IntBuffer psame);
 //      /**
@@ -14056,17 +14056,17 @@ public interface Leptonica extends Library, ILeptonica {
 //      int convertOnBigEnd32(int wordin);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 fileCorruptByDeletion(const char*, l_float32, l_float32, const char*)</code>
+//       * <code>l_ok fileCorruptByDeletion(const char*, l_float32, l_float32, const char*)</code>
 //       */
 //      int fileCorruptByDeletion(String filein, float loc, float size, String fileout);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 fileCorruptByMutation(const char*, l_float32, l_float32, const char*)</code>
+//       * <code>l_ok fileCorruptByMutation(const char*, l_float32, l_float32, const char*)</code>
 //       */
 //      int fileCorruptByMutation(String filein, float loc, float size, String fileout);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 genRandomIntegerInRange(l_int32, l_int32, l_int32*)</code>
+//       * <code>l_ok genRandomIntegerInRange(l_int32, l_int32, l_int32*)</code>
 //       */
 //      int genRandomIntegerInRange(int range, int seed, IntBuffer pval);
 //  
@@ -14076,27 +14076,27 @@ public interface Leptonica extends Library, ILeptonica {
 //      int lept_roundftoi(float fval);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 l_hashStringToUint64(const char*, l_uint64*)</code>
+//       * <code>l_ok l_hashStringToUint64(const char*, l_uint64*)</code>
 //       */
 //      int l_hashStringToUint64(String str, LongBuffer phash);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 l_hashPtToUint64(l_int32, l_int32, l_uint64*)</code>
+//       * <code>l_ok l_hashPtToUint64(l_int32, l_int32, l_uint64*)</code>
 //       */
 //      int l_hashPtToUint64(int x, int y, LongBuffer phash);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 l_hashFloat64ToUint64(l_int32, l_float64, l_uint64*)</code>
+//       * <code>l_ok l_hashFloat64ToUint64(l_int32, l_float64, l_uint64*)</code>
 //       */
 //      int l_hashFloat64ToUint64(int nbuckets, double val, LongBuffer phash);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 findNextLargerPrime(l_int32, l_uint32*)</code>
+//       * <code>l_ok findNextLargerPrime(l_int32, l_uint32*)</code>
 //       */
 //      int findNextLargerPrime(int start, IntBuffer pprime);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 lept_isPrime(l_uint64, l_int32*, l_uint32*)</code>
+//       * <code>l_ok lept_isPrime(l_uint64, l_int32*, l_uint32*)</code>
 //       */
 //      int lept_isPrime(long n, IntBuffer pis_prime, IntBuffer pfactor);
 
@@ -14166,12 +14166,12 @@ public interface Leptonica extends Library, ILeptonica {
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 stringCopy(char*, const char*, l_int32)</code>
+//       * <code>l_ok stringCopy(char*, const char*, l_int32)</code>
 //       */
 //      int stringCopy(ByteBuffer dest, String src, int n);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 stringReplace(char**, const char*)</code>
+//       * <code>l_ok stringReplace(char**, const char*)</code>
 //       */
 //      int stringReplace(PointerByReference pdest, String src);
 //      /**
@@ -14196,7 +14196,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      Pointer stringJoin(String src1, String src2);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 stringJoinIP(char**, const char*)</code>
+//       * <code>l_ok stringJoinIP(char**, const char*)</code>
 //       */
 //      int stringJoinIP(PointerByReference psrc1, String src2);
 //  
@@ -14211,11 +14211,11 @@ public interface Leptonica extends Library, ILeptonica {
 //      Pointer strtokSafe(ByteBuffer cstr, String seps, PointerByReference psaveptr);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 stringSplitOnToken(char*, const char*, char**, char**)</code>
+//       * <code>l_ok stringSplitOnToken(char*, const char*, char**, char**)</code>
 //       */
 //      int stringSplitOnToken(ByteBuffer cstr, String seps, PointerByReference phead, PointerByReference ptail);
 //      /**
-//       * Original signature : <code>l_int32 stringCheckForChars(const char*, const char*, l_int32*)</code>
+//       * Original signature : <code>l_ok stringCheckForChars(const char*, const char*, l_int32*)</code>
 //       */
 //      int stringCheckForChars(String src, String chars, IntBuffer pfound);
 //      /**
@@ -14246,7 +14246,7 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 arrayFindSequence(const l_uint8*, size_t, const l_uint8*, size_t, l_int32*, l_int32*)</code>
+     * <code>l_ok arrayFindSequence(const l_uint8*, size_t, const l_uint8*, size_t, l_int32*, l_int32*)</code>
      */
     int arrayFindSequence(ByteBuffer data, NativeSize datalen, ByteBuffer sequence, NativeSize seqlen, IntBuffer poffset, IntBuffer pfound);
 
@@ -14277,7 +14277,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      Pointer l_binaryReadSelectStream(FILE fp, NativeSize start, NativeSize nbytes, NativeSizeByReference pnread);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 l_binaryWrite(const char*, const char*, const void*, size_t)</code>
+//       * <code>l_ok l_binaryWrite(const char*, const char*, const void*, size_t)</code>
 //       */
 //      int l_binaryWrite(String filename, String operation, Pointer data, NativeSize nbytes);
 //  
@@ -14298,17 +14298,17 @@ public interface Leptonica extends Library, ILeptonica {
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 fileCopy(const char*, const char*)</code>
+//       * <code>l_ok fileCopy(const char*, const char*)</code>
 //       */
 //      int fileCopy(String srcfile, String newfile);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 fileConcatenate(const char*, const char*)</code>
+//       * <code>l_ok fileConcatenate(const char*, const char*)</code>
 //       */
 //      int fileConcatenate(String srcfile, String destfile);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 fileAppendString(const char*, const char*)</code>
+//       * <code>l_ok fileAppendString(const char*, const char*)</code>
 //       */
 //      int fileAppendString(String filename, String str);
 //  
@@ -14339,7 +14339,7 @@ public interface Leptonica extends Library, ILeptonica {
 //      FILE lept_fopen(String filename, String mode);
 //  
 //      /**
-//       * Original signature : <code>l_int32 lept_fclose(FILE*)</code>
+//       * Original signature : <code>l_ok lept_fclose(FILE*)</code>
 //       */
 //      int lept_fclose(FILE fp);
 //  
@@ -14401,12 +14401,12 @@ public interface Leptonica extends Library, ILeptonica {
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 splitPathAtDirectory(const char*, char**, char**)</code>
+//       * <code>l_ok splitPathAtDirectory(const char*, char**, char**)</code>
 //       */
 //      int splitPathAtDirectory(String pathname, PointerByReference pdir, PointerByReference ptail);
 //      /**
 //       * Original signature :
-//       * <code>l_int32 splitPathAtExtension(const char*, char**, char**)</code>
+//       * <code>l_ok splitPathAtExtension(const char*, char**, char**)</code>
 //       */
 //      int splitPathAtExtension(String pathname, PointerByReference pbasename, PointerByReference pextension);
 //      /**
@@ -14422,7 +14422,7 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 convertSepCharsInPath(char*, l_int32)</code>
+     * <code>l_ok convertSepCharsInPath(char*, l_int32)</code>
      */
     int convertSepCharsInPath(ByteBuffer path, int type);
 
@@ -14433,13 +14433,13 @@ public interface Leptonica extends Library, ILeptonica {
 //      Pointer genPathname(String dir, String fname);
     /**
      * Original signature :
-     * <code>l_int32 makeTempDirname(char*, size_t, const char*)</code>
+     * <code>l_ok makeTempDirname(char*, size_t, const char*)</code>
      */
     int makeTempDirname(ByteBuffer result, NativeSize nbytes, String subdir);
 
     /**
      * Original signature :
-     * <code>l_int32 modifyTrailingSlash(char*, size_t, l_int32)</code>
+     * <code>l_ok modifyTrailingSlash(char*, size_t, l_int32)</code>
      */
     int modifyTrailingSlash(ByteBuffer path, NativeSize nbytes, int flag);
 
@@ -14525,13 +14525,13 @@ public interface Leptonica extends Library, ILeptonica {
     void wshedDestroy(PointerByReference pwshed);
 
     /**
-     * Original signature : <code>l_int32 wshedApply(L_WSHED*)</code>
+     * Original signature : <code>l_ok wshedApply(L_WSHED*)</code>
      */
     int wshedApply(L_WShed wshed);
 
     /**
      * Original signature :
-     * <code>l_int32 wshedBasins(L_WSHED*, PIXA**, NUMA**)</code>
+     * <code>l_ok wshedBasins(L_WSHED*, PIXA**, NUMA**)</code>
      */
     int wshedBasins(L_WShed wshed, PointerByReference ppixa, PointerByReference pnalevels);
 
@@ -14558,30 +14558,30 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 readHeaderWebP(const char*, l_int32*, l_int32*, l_int32*)</code>
+     * <code>l_ok readHeaderWebP(const char*, l_int32*, l_int32*, l_int32*)</code>
      */
     int readHeaderWebP(String filename, IntBuffer pw, IntBuffer ph, IntBuffer pspp);
 
     /**
      * Original signature :
-     * <code>l_int32 readHeaderMemWebP(const l_uint8*, size_t, l_int32*, l_int32*, l_int32*)</code>
+     * <code>l_ok readHeaderMemWebP(const l_uint8*, size_t, l_int32*, l_int32*, l_int32*)</code>
      */
     int readHeaderMemWebP(ByteBuffer data, NativeSize size, IntBuffer pw, IntBuffer ph, IntBuffer pspp);
 
     /**
      * Original signature :
-     * <code>l_int32 pixWriteWebP(const char*, PIX*, l_int32, l_int32)</code>
+     * <code>l_ok pixWriteWebP(const char*, PIX*, l_int32, l_int32)</code>
      */
     int pixWriteWebP(String filename, Pix pixs, int quality, int lossless);
 
 //      /**
 //       * Original signature :
-//       * <code>l_int32 pixWriteStreamWebP(FILE*, PIX*, l_int32, l_int32)</code>
+//       * <code>l_ok pixWriteStreamWebP(FILE*, PIX*, l_int32, l_int32)</code>
 //       */
 //      int pixWriteStreamWebP(FILE fp, Pix pixs, int quality, int lossless);
     /**
      * Original signature :
-     * <code>l_int32 pixWriteMemWebP(l_uint8**, size_t*, PIX*, l_int32, l_int32)</code>
+     * <code>l_ok pixWriteMemWebP(l_uint8**, size_t*, PIX*, l_int32, l_int32)</code>
      */
     int pixWriteMemWebP(PointerByReference pencdata, NativeSizeByReference pencsize, Pix pixs, int quality, int lossless);
 
@@ -14596,36 +14596,36 @@ public interface Leptonica extends Library, ILeptonica {
     void setLeptDebugOK(int allow);
     
     /**
-     * Original signature : <code>l_int32 pixaWriteFiles(const char*, PIXA*, l_int32)</code>
+     * Original signature : <code>l_ok pixaWriteFiles(const char*, PIXA*, l_int32)</code>
      */
     int pixaWriteFiles(String rootname, Pixa pixa, int format);
     
 //    /**
-//     * Original signature : <code>l_int32 pixWriteDebug(const char*, PIX*, l_int32)</code>
+//     * Original signature : <code>l_ok pixWriteDebug(const char*, PIX*, l_int32)</code>
 //     */
 //    int pixWriteDebug(String fname, Pix pix, int format);
 
     /**
      * Original signature :
-     * <code>l_int32 pixWrite(const char*, PIX*, l_int32)</code>
+     * <code>l_ok pixWrite(const char*, PIX*, l_int32)</code>
      */
     int pixWrite(String fname, Pix pix, int format);
 
     /**
      * Original signature :
-     * <code>l_int32 pixWriteAutoFormat(const char*, PIX*)</code>
+     * <code>l_ok pixWriteAutoFormat(const char*, PIX*)</code>
      */
     int pixWriteAutoFormat(String filename, Pix pix);
 
     /**
      * Original signature :
-     * <code>l_int32 pixWriteStream(FILE*, PIX*, l_int32)</code>
+     * <code>l_ok pixWriteStream(FILE*, PIX*, l_int32)</code>
      */
     int pixWriteStream(FILE fp, Pix pix, int format);
 
     /**
      * Original signature :
-     * <code>l_int32 pixWriteImpliedFormat(const char*, PIX*, l_int32, l_int32)</code>
+     * <code>l_ok pixWriteImpliedFormat(const char*, PIX*, l_int32, l_int32)</code>
      */
     int pixWriteImpliedFormat(String filename, Pix pix, int quality, int progressive);
 
@@ -14642,7 +14642,7 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixGetAutoFormat(PIX*, l_int32*)</code>
+     * <code>l_ok pixGetAutoFormat(PIX*, l_int32*)</code>
      */
     int pixGetAutoFormat(Pix pix, IntBuffer pformat);
 
@@ -14653,43 +14653,43 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixWriteMem(l_uint8**, size_t*, PIX*, l_int32)</code>
+     * <code>l_ok pixWriteMem(l_uint8**, size_t*, PIX*, l_int32)</code>
      */
     int pixWriteMem(PointerByReference pdata, NativeSizeByReference psize, Pix pix, int format);
 
     /**
      * Original signature :
-     * <code>l_int32 l_fileDisplay(const char*, l_int32, l_int32, l_float32)</code>
+     * <code>l_ok l_fileDisplay(const char*, l_int32, l_int32, l_float32)</code>
      */
     int l_fileDisplay(String fname, int x, int y, float scale);
 
     /**
      * Original signature :
-     * <code>l_int32 pixDisplay(PIX*, l_int32, l_int32)</code>
+     * <code>l_ok pixDisplay(PIX*, l_int32, l_int32)</code>
      */
     int pixDisplay(Pix pixs, int x, int y);
 
     /**
      * Original signature :
-     * <code>l_int32 pixDisplayWithTitle(PIX*, l_int32, l_int32, const char*, l_int32)</code>
+     * <code>l_ok pixDisplayWithTitle(PIX*, l_int32, l_int32, const char*, l_int32)</code>
      */
     int pixDisplayWithTitle(Pix pixs, int x, int y, String title, int dispflag);
 
     /**
      * Original signature :
-     * <code>l_int32 pixSaveTiled(PIX*, PIXA*, l_float32, l_int32, l_int32, l_int32)</code>
+     * <code>l_ok pixSaveTiled(PIX*, PIXA*, l_float32, l_int32, l_int32, l_int32)</code>
      */
     int pixSaveTiled(Pix pixs, Pixa pixa, float scalefactor, int newrow, int space, int dp);
 
     /**
      * Original signature :
-     * <code>l_int32 pixSaveTiledOutline(PIX*, PIXA*, l_float32, l_int32, l_int32, l_int32, l_int32)</code>
+     * <code>l_ok pixSaveTiledOutline(PIX*, PIXA*, l_float32, l_int32, l_int32, l_int32, l_int32)</code>
      */
     int pixSaveTiledOutline(Pix pixs, Pixa pixa, float scalefactor, int newrow, int space, int linewidth, int dp);
 
     /**
      * Original signature :
-     * <code>l_int32 pixSaveTiledWithText(PIX*, PIXA*, l_int32, l_int32, l_int32, l_int32, L_BMF*, const char*, l_uint32, l_int32)</code>
+     * <code>l_ok pixSaveTiledWithText(PIX*, PIXA*, l_int32, l_int32, l_int32, l_int32, L_BMF*, const char*, l_uint32, l_int32)</code>
      */
     int pixSaveTiledWithText(Pix pixs, Pixa pixa, int outwidth, int newrow, int space, int linewidth, L_Bmf bmf, String textstr, int val, int location);
 
@@ -14700,7 +14700,7 @@ public interface Leptonica extends Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_int32 pixDisplayWrite(PIX*, l_int32)</code>
+     * <code>l_ok pixDisplayWrite(PIX*, l_int32)</code>
      */
     int pixDisplayWrite(Pix pixs, int reduction);
 
