@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>net.sourceforge.lept4j</groupId>
 	<artifactId>lept4j</artifactId>
-	<version>1.11.0</version>
+	<version>1.11.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<properties>
@@ -40,9 +40,9 @@
 	</licenses>
 
 	<scm>
-		<connection>scm:svn:https://github.com/nguyenq/lept4j/tags/lept4j-1.11.0</connection>
-		<developerConnection>scm:svn:https://github.com/nguyenq/lept4j/tags/lept4j-1.11.0</developerConnection>
-		<url>https://github.com/nguyenq/lept4j/tags/lept4j-1.11.0</url>
+		<connection>scm:svn:https://github.com/nguyenq/lept4j/trunk</connection>
+		<developerConnection>scm:svn:https://github.com/nguyenq/lept4j/trunk</developerConnection>
+		<url>https://github.com/nguyenq/lept4j/trunk</url>
 	</scm>
 
 	<developers>
