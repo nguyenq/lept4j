@@ -80,7 +80,12 @@ public class Pix extends Structure {
 	public Pix() {
 		super();
 	}
-	protected List<? > getFieldOrder() {
+	/**
+	 * Gets this Structure's field names in their proper order.
+	 * @return list of ordered field names
+	 */
+	@Override
+	protected List<String> getFieldOrder() {
 		return Arrays.asList("w", "h", "d", "spp", "wpl", "refcount", "xres", "yres", "informat", "special", "text", "colormap", "data");
 	}
 	public Pix(Pointer peer) {

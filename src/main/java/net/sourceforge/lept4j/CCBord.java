@@ -58,7 +58,12 @@ public class CCBord extends Structure {
 	public CCBord() {
 		super();
 	}
-	protected List<? > getFieldOrder() {
+	/**
+	 * Gets this Structure's field names in their proper order.
+	 * @return list of ordered field names
+	 */
+	@Override
+	protected List<String> getFieldOrder() {
 		return Arrays.asList("pix", "boxa", "start", "refcount", "local", "global", "step", "splocal", "spglobal");
 	}
 	/**

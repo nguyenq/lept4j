@@ -63,7 +63,12 @@ public class JbData extends Structure {
 	public JbData() {
 		super();
 	}
-	protected List<? > getFieldOrder() {
+	/**
+	 * Gets this Structure's field names in their proper order.
+	 * @return list of ordered field names
+	 */
+	@Override
+	protected List<String> getFieldOrder() {
 		return Arrays.asList("pix", "npages", "w", "h", "nclass", "latticew", "latticeh", "naclass", "napage", "ptaul");
 	}
 	public JbData(Pointer peer) {

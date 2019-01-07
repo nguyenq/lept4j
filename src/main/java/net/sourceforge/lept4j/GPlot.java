@@ -84,7 +84,12 @@ public class GPlot extends Structure {
 	public GPlot() {
 		super();
 	}
-	protected List<? > getFieldOrder() {
+	/**
+	 * Gets this Structure's field names in their proper order.
+	 * @return list of ordered field names
+	 */
+	@Override
+	protected List<String> getFieldOrder() {
 		return Arrays.asList("rootname", "cmdname", "cmddata", "datanames", "plotdata", "plottitles", "plotstyles", "nplots", "outname", "outformat", "scaling", "title", "xlabel", "ylabel");
 	}
 	public GPlot(Pointer peer) {

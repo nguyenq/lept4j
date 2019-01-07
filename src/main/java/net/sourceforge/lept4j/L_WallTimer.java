@@ -22,7 +22,12 @@ public class L_WallTimer extends Structure {
 	public L_WallTimer() {
 		super();
 	}
-	protected List<? > getFieldOrder() {
+	/**
+	 * Gets this Structure's field names in their proper order.
+	 * @return list of ordered field names
+	 */
+	@Override
+	protected List<String> getFieldOrder() {
 		return Arrays.asList("start_sec", "start_usec", "stop_sec", "stop_usec");
 	}
 	/**

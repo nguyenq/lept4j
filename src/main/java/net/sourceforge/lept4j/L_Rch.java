@@ -49,7 +49,13 @@ public class L_Rch extends Structure {
 	public L_Rch() {
 		super();
 	}
-	protected List<? > getFieldOrder() {
+
+	/**
+	 * Gets this Structure's field names in their proper order.
+	 * @return list of ordered field names
+	 */
+	@Override
+	protected List<String> getFieldOrder() {
 		return Arrays.asList("index", "score", "text", "sample", "xloc", "yloc", "width");
 	}
 	/**

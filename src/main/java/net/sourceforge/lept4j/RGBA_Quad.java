@@ -33,7 +33,12 @@ public class RGBA_Quad extends Structure {
 	public RGBA_Quad() {
 		super();
 	}
-	protected List<? > getFieldOrder() {
+	/**
+	 * Gets this Structure's field names in their proper order.
+	 * @return list of ordered field names
+	 */
+	@Override
+	protected List<String> getFieldOrder() {
 		return Arrays.asList("blue", "green", "red", "alpha");
 	}
 	/**

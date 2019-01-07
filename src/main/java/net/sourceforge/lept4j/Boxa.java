@@ -35,7 +35,12 @@ public class Boxa extends Structure {
 	public Boxa() {
 		super();
 	}
-	protected List<? > getFieldOrder() {
+	/**
+	 * Gets this Structure's field names in their proper order.
+	 * @return list of ordered field names
+	 */
+	@Override
+	protected List<String> getFieldOrder() {
 		return Arrays.asList("n", "nalloc", "refcount", "box");
 	}
 	/**

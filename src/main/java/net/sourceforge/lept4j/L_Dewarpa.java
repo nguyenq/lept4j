@@ -110,7 +110,12 @@ public class L_Dewarpa extends Structure {
 	public L_Dewarpa() {
 		super();
 	}
-	protected List<? > getFieldOrder() {
+	/**
+	 * Gets this Structure's field names in their proper order.
+	 * @return list of ordered field names
+	 */
+	@Override
+	protected List<String> getFieldOrder() {
 		return Arrays.asList("nalloc", "maxpage", "dewarp", "dewarpcache", "namodels", "napages", "redfactor", "sampling", "minlines", "maxdist", "max_linecurv", "min_diff_linecurv", "max_diff_linecurv", "max_edgeslope", "max_edgecurv", "max_diff_edgecurv", "useboth", "check_columns", "modelsready");
 	}
 	public L_Dewarpa(Pointer peer) {

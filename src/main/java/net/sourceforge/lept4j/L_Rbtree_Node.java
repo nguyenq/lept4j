@@ -25,7 +25,12 @@ public class L_Rbtree_Node extends Structure {
 	public L_Rbtree_Node() {
 		super();
 	}
-	protected List<? > getFieldOrder() {
+	/**
+	 * Gets this Structure's field names in their proper order.
+	 * @return list of ordered field names
+	 */
+	@Override
+	protected List<String> getFieldOrder() {
 		return Arrays.asList("key", "value", "left", "right", "parent", "color");
 	}
 	/**

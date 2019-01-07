@@ -86,7 +86,12 @@ public class L_Compressed_Data extends Structure {
 	public L_Compressed_Data() {
 		super();
 	}
-	protected List<? > getFieldOrder() {
+	/**
+	 * Gets this Structure's field names in their proper order.
+	 * @return list of ordered field names
+	 */
+	@Override
+	protected List<String> getFieldOrder() {
 		return Arrays.asList("type", "datacomp", "nbytescomp", "data85", "nbytes85", "cmapdata85", "cmapdatahex", "ncolors", "w", "h", "bps", "spp", "minisblack", "predictor", "nbytes", "res");
 	}
 	public L_Compressed_Data(Pointer peer) {

@@ -80,7 +80,12 @@ public class L_Bmf extends Structure {
 	public L_Bmf() {
 		super();
 	}
-	protected List<? > getFieldOrder() {
+	/**
+	 * Gets this Structure's field names in their proper order.
+	 * @return list of ordered field names
+	 */
+	@Override
+	protected List<String> getFieldOrder() {
 		return Arrays.asList("pixa", "size", "directory", "baseline1", "baseline2", "baseline3", "lineheight", "kernwidth", "spacewidth", "vertlinesep", "fonttab", "baselinetab", "widthtab");
 	}
 	public L_Bmf(Pointer peer) {

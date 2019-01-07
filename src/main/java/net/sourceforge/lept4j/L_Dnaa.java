@@ -29,7 +29,12 @@ public class L_Dnaa extends Structure {
 	public L_Dnaa() {
 		super();
 	}
-	protected List<? > getFieldOrder() {
+	/**
+	 * Gets this Structure's field names in their proper order.
+	 * @return list of ordered field names
+	 */
+	@Override
+	protected List<String> getFieldOrder() {
 		return Arrays.asList("nalloc", "n", "dna");
 	}
 	/**

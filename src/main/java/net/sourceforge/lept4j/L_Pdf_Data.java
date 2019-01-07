@@ -114,7 +114,12 @@ public class L_Pdf_Data extends Structure {
 	public L_Pdf_Data() {
 		super();
 	}
-	protected List<? > getFieldOrder() {
+	/**
+	 * Gets this Structure's field names in their proper order.
+	 * @return list of ordered field names
+	 */
+	@Override
+	protected List<String> getFieldOrder() {
 		return Arrays.asList("title", "n", "ncmap", "cida", "id", "obj1", "obj2", "obj3", "obj4", "obj5", "poststream", "trailer", "xy", "wh", "mediabox", "saprex", "sacmap", "objsize", "objloc", "xrefloc");
 	}
 	public L_Pdf_Data(Pointer peer) {

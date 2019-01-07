@@ -55,7 +55,12 @@ public class L_RegParams extends Structure {
 	public L_RegParams() {
 		super();
 	}
-	protected List<? > getFieldOrder() {
+	/**
+	 * Gets this Structure's field names in their proper order.
+	 * @return list of ordered field names
+	 */
+	@Override
+	protected List<String> getFieldOrder() {
 		return Arrays.asList("fp", "testname", "tempfile", "mode", "index", "success", "display", "tstart");
 	}
 	/**

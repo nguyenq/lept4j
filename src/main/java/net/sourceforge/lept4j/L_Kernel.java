@@ -40,7 +40,12 @@ public class L_Kernel extends Structure {
 	public L_Kernel() {
 		super();
 	}
-	protected List<? > getFieldOrder() {
+	/**
+	 * Gets this Structure's field names in their proper order.
+	 * @return list of ordered field names
+	 */
+	@Override
+	protected List<String> getFieldOrder() {
 		return Arrays.asList("sy", "sx", "cy", "cx", "data");
 	}
 	/**

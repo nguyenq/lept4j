@@ -44,7 +44,12 @@ public class L_Dna extends Structure {
 	public L_Dna() {
 		super();
 	}
-	protected List<? > getFieldOrder() {
+	/**
+	 * Gets this Structure's field names in their proper order.
+	 * @return list of ordered field names
+	 */
+	@Override
+	protected List<String> getFieldOrder() {
 		return Arrays.asList("nalloc", "n", "refcount", "startx", "delx", "array");
 	}
 	/**

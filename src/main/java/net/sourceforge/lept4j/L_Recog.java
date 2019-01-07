@@ -345,7 +345,12 @@ public class L_Recog extends Structure {
 	public L_Recog() {
 		super();
 	}
-	protected List<? > getFieldOrder() {
+	/**
+	 * Gets this Structure's field names in their proper order.
+	 * @return list of ordered field names
+	 */
+	@Override
+	protected List<String> getFieldOrder() {
 		return Arrays.asList("scalew", "scaleh", "linew", "templ_use", "maxarraysize", "setsize", "threshold", "maxyshift", "charset_type", "charset_size", "min_nopad", "num_samples", "minwidth_u", "maxwidth_u", "minheight_u", "maxheight_u", "minwidth", "maxwidth", "ave_done", "train_done", "max_wh_ratio", "max_ht_ratio", "min_splitw", "max_splith", "sa_text", "dna_tochar", "centtab", "sumtab", "pixaa_u", "ptaa_u", "naasum_u", "pixaa", "ptaa", "naasum", "pixa_u", "pta_u", "nasum_u", "pixa", "pta", "nasum", "pixa_tr", "pixadb_ave", "pixa_id", "pixdb_ave", "pixdb_range", "pixadb_boot", "pixadb_split", "bmf", "bmf_size", "did", "rch", "rcha");
 	}
 	public L_Recog(Pointer peer) {

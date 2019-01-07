@@ -62,7 +62,12 @@ public class PixComp extends Structure {
 	public PixComp() {
 		super();
 	}
-	protected List<? > getFieldOrder() {
+	/**
+	 * Gets this Structure's field names in their proper order.
+	 * @return list of ordered field names
+	 */
+	@Override
+	protected List<String> getFieldOrder() {
 		return Arrays.asList("w", "h", "d", "xres", "yres", "comptype", "text", "cmapflag", "data", "size");
 	}
 	public PixComp(Pointer peer) {

@@ -122,7 +122,12 @@ public class L_WShed extends Structure {
 	public L_WShed() {
 		super();
 	}
-	protected List<? > getFieldOrder() {
+	/**
+	 * Gets this Structure's field names in their proper order.
+	 * @return list of ordered field names
+	 */
+	@Override
+	protected List<String> getFieldOrder() {
 		return Arrays.asList("pixs", "pixm", "mindepth", "pixlab", "pixt", "lines8", "linem1", "linelab32", "linet1", "pixad", "ptas", "nasi", "nash", "namh", "nalevels", "nseeds", "nother", "lut", "links", "arraysize", "debug");
 	}
 	public L_WShed(Pointer peer) {

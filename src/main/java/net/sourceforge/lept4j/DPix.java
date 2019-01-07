@@ -50,7 +50,12 @@ public class DPix extends Structure {
 	public DPix() {
 		super();
 	}
-	protected List<? > getFieldOrder() {
+	/**
+	 * Gets this Structure's field names in their proper order.
+	 * @return list of ordered field names
+	 */
+	@Override
+	protected List<String> getFieldOrder() {
 		return Arrays.asList("w", "h", "wpl", "refcount", "xres", "yres", "data");
 	}
 	/**

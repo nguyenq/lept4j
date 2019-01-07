@@ -40,7 +40,12 @@ public class Pta extends Structure {
 	public Pta() {
 		super();
 	}
-	protected List<? > getFieldOrder() {
+	/**
+	 * Gets this Structure's field names in their proper order.
+	 * @return list of ordered field names
+	 */
+	@Override
+	protected List<String> getFieldOrder() {
 		return Arrays.asList("n", "nalloc", "refcount", "x", "y");
 	}
 	/**

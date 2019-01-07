@@ -67,7 +67,12 @@ public class L_Sudoku extends Structure {
 	public L_Sudoku() {
 		super();
 	}
-	protected List<? > getFieldOrder() {
+	/**
+	 * Gets this Structure's field names in their proper order.
+	 * @return list of ordered field names
+	 */
+	@Override
+	protected List<String> getFieldOrder() {
 		return Arrays.asList("num", "locs", "current", "init", "state", "nguess", "finished", "failure");
 	}
 	/**

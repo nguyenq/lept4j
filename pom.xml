@@ -79,7 +79,7 @@
 		<dependency>
 			<groupId>net.java.dev.jna</groupId>
 			<artifactId>jna</artifactId>
-			<version>4.1.0</version>
+			<version>5.2.0</version>
 		</dependency>
 		<dependency>
 			<groupId>commons-io</groupId>
@@ -95,7 +95,7 @@
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.12</version>
-			<scope>test</scope>
+                    <scope>test</scope>
 		</dependency>
 	</dependencies>
 </project>

@@ -142,7 +142,12 @@ public class L_Rdid extends Structure {
 	public L_Rdid() {
 		super();
 	}
-	protected List<? > getFieldOrder() {
+	/**
+	 * Gets this Structure's field names in their proper order.
+	 * @return list of ordered field names
+	 */
+	@Override
+	protected List<String> getFieldOrder() {
 		return Arrays.asList("pixs", "counta", "delya", "narray", "size", "setwidth", "nasum", "namoment", "fullarrays", "beta", "gamma", "trellisscore", "trellistempl", "natempl", "naxloc", "nadely", "nawidth", "boxa", "nascore", "natempl_r", "nasample_r", "naxloc_r", "nadely_r", "nawidth_r", "nascore_r");
 	}
 	public L_Rdid(Pointer peer) {

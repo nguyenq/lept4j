@@ -35,7 +35,12 @@ public class L_Heap extends Structure {
 	public L_Heap() {
 		super();
 	}
-	protected List<? > getFieldOrder() {
+	/**
+	 * Gets this Structure's field names in their proper order.
+	 * @return list of ordered field names
+	 */
+	@Override
+	protected List<String> getFieldOrder() {
 		return Arrays.asList("nalloc", "n", "array", "direction");
 	}
 	/**

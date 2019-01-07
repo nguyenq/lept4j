@@ -48,7 +48,12 @@ public class L_StrCode extends Structure {
 	public L_StrCode() {
 		super();
 	}
-	protected List<? > getFieldOrder() {
+	/**
+	 * Gets this Structure's field names in their proper order.
+	 * @return list of ordered field names
+	 */
+	@Override
+	protected List<String> getFieldOrder() {
 		return Arrays.asList("fileno", "ifunc", "function", "data", "descr", "n");
 	}
 	/**

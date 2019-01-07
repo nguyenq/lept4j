@@ -30,7 +30,12 @@ public class Sela extends Structure {
 	public Sela() {
 		super();
 	}
-	protected List<? > getFieldOrder() {
+	/**
+	 * Gets this Structure's field names in their proper order.
+	 * @return list of ordered field names
+	 */
+	@Override
+	protected List<String> getFieldOrder() {
 		return Arrays.asList("n", "nalloc", "sel");
 	}
 	/**

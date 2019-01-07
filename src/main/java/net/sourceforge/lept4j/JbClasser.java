@@ -153,7 +153,12 @@ public class JbClasser extends Structure {
 	public JbClasser() {
 		super();
 	}
-	protected List<? > getFieldOrder() {
+	/**
+	 * Gets this Structure's field names in their proper order.
+	 * @return list of ordered field names
+	 */
+	@Override
+	protected List<String> getFieldOrder() {
 		return Arrays.asList("safiles", "method", "components", "maxwidth", "maxheight", "npages", "baseindex", "nacomps", "sizehaus", "rankhaus", "thresh", "weightfactor", "naarea", "w", "h", "nclass", "keep_pixaa", "pixaa", "pixat", "pixatd", "dahash", "nafgt", "ptac", "ptact", "naclass", "napage", "ptaul", "ptall");
 	}
 	public JbClasser(Pointer peer) {

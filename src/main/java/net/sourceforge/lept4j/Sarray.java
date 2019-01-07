@@ -34,7 +34,12 @@ public class Sarray extends Structure {
 	public Sarray() {
 		super();
 	}
-	protected List<? > getFieldOrder() {
+	/**
+	 * Gets this Structure's field names in their proper order.
+	 * @return list of ordered field names
+	 */
+	@Override
+	protected List<String> getFieldOrder() {
 		return Arrays.asList("nalloc", "n", "refcount", "array");
 	}
 	/**

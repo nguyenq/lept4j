@@ -184,7 +184,12 @@ public class L_Dewarp extends Structure {
 	public L_Dewarp() {
 		super();
 	}
-	protected List<? > getFieldOrder() {
+	/**
+	 * Gets this Structure's field names in their proper order.
+	 * @return list of ordered field names
+	 */
+	@Override
+	protected List<String> getFieldOrder() {
 		return Arrays.asList("dewa", "pixs", "sampvdispar", "samphdispar", "sampydispar", "fullvdispar", "fullhdispar", "fullydispar", "namidys", "nacurves", "w", "h", "pageno", "sampling", "redfactor", "minlines", "nlines", "mincurv", "maxcurv", "leftslope", "rightslope", "leftcurv", "rightcurv", "nx", "ny", "hasref", "refpage", "vsuccess", "hsuccess", "ysuccess", "vvalid", "hvalid", "skip_horiz", "debug");
 	}
 	public L_Dewarp(Pointer peer) {

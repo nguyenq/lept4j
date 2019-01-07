@@ -26,7 +26,12 @@ public class L_DnaHash extends Structure {
 	public L_DnaHash() {
 		super();
 	}
-	protected List<? > getFieldOrder() {
+	/**
+	 * Gets this Structure's field names in their proper order.
+	 * @return list of ordered field names
+	 */
+	@Override
+	protected List<String> getFieldOrder() {
 		return Arrays.asList("nbuckets", "initsize", "dna");
 	}
 	/**
