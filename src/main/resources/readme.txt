@@ -34,7 +34,7 @@ java.lang.ExceptionInInitializerError
 java.lang.IllegalArgumentException: code size limit exceeded
 sun.misc.ProxyGenerator.generateStaticInitializer(ProxyGenerator.java:1261)
 
-The above exception is due to the limit set in ProxyGenerator.java:
+The above exception is due to the limit set in JDK's ProxyGenerator.java:
 
 if (minfo.code.size() > 65535) {
    throw new IllegalArgumentException("code size limit exceeded");
