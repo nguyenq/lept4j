@@ -50,7 +50,7 @@ public class LoadLibs {
     /**
      * Native library name.
      */
-    public static final String LIB_NAME = "liblept1770";
+    public static final String LIB_NAME = "liblept1780";
     public static final String LIB_NAME_NON_WIN = "lept";
 
     private final static Logger logger = Logger.getLogger(LoadLibs.class.getName());

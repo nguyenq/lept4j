@@ -559,23 +559,23 @@ public interface ILeptonica {
      */
     public static final int L_SELECT_IF_GTE = 4;
     /**
-     * select by width
+     * select by width; 1 bpp
      */
     public static final int L_SELECT_BY_WIDTH = 1;
     /**
-     * select by height
+     * select by height; 1 bpp
      */
     public static final int L_SELECT_BY_HEIGHT = 2;
     /**
-     * select by max of width and height
+     * select by max of width and height; 1 bpp
      */
     public static final int L_SELECT_BY_MAX_DIMENSION = 3;
     /**
-     * select by foreground area
+     * select by foreground area; 1 bpp
      */
     public static final int L_SELECT_BY_AREA = 4;
     /**
-     * select by perimeter
+     * select by perimeter; 1 bpp
      */
     public static final int L_SELECT_BY_PERIMETER = 5;
     /**
@@ -587,7 +587,7 @@ public interface ILeptonica {
      */
     public static final int L_SELECT_HEIGHT = 2;
     /**
-     * x value satisfy constraint
+     * x value must satisfy constraint
      */
     public static final int L_SELECT_XVAL = 3;
     /**
@@ -595,11 +595,11 @@ public interface ILeptonica {
      */
     public static final int L_SELECT_YVAL = 4;
     /**
-     * either width or height (or xval
+     * either width or height (or xval or yval) can satisfy constraint
      */
     public static final int L_SELECT_IF_EITHER = 5;
     /**
-     * both width and height (or xval
+     * both width and height (or xval or yval) can satisfy constraint
      */
     public static final int L_SELECT_IF_BOTH = 6;
     /**
@@ -1046,6 +1046,14 @@ public interface ILeptonica {
      * consider boxes with the same parity
      */
     public static final int L_USE_SAME_PARITY_BOXES = 2;
+    /** UL corner */
+    public static final int L_UPPER_LEFT = 1;
+    /** UR corner */
+    public static final int L_UPPER_RIGHT = 2;
+    /** LL corner */
+    public static final int L_LOWER_LEFT = 3;
+    /** LR corner */
+    public static final int L_LOWER_RIGHT = 4;
     /**
      * increasing stretch or contraction to left
      */
@@ -1123,11 +1131,11 @@ public interface ILeptonica {
      */
     public static final int L_SV_HISTO = 3;
     /**
-     * Use hue-saturation histogram
+     * Use pixels with specified HSV region
      */
     public static final int L_INCLUDE_REGION = 1;
     /**
-     * Use hue-value histogram
+     * Use pixels outside HSV region
      */
     public static final int L_EXCLUDE_REGION = 2;
     /**
@@ -1186,6 +1194,10 @@ public interface ILeptonica {
      * Plot vertically at right
      */
     public static final int L_PLOT_AT_RIGHT = 6;
+    /** Select the interior part */
+    public static final int L_USE_INNER = 1;
+    /** Select the outer part (e.g., a frame) */
+    public static final int L_USE_OUTER = 2;
     /**
      * Use xzgv with pixDisplay()
      */
@@ -1351,7 +1363,7 @@ public interface ILeptonica {
     public static final int LIBLEPT_MAJOR_VERSION = (int) 1;
     /** <i>native declaration : allheaders.h</i>
      */
-    public static final int LIBLEPT_MINOR_VERSION = (int) 77;
+    public static final int LIBLEPT_MINOR_VERSION = (int) 78;
     /** <i>native declaration : allheaders.h</i>
      */
     public static final int LIBLEPT_PATCH_VERSION = (int) 0;
