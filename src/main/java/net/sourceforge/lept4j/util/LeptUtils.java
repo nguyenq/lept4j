@@ -21,6 +21,7 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.Buffer;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.FloatBuffer;
@@ -369,7 +370,7 @@ public class LeptUtils {
         ByteBuffer buf = ByteBuffer.allocateDirect(b.length);
         buf.order(ByteOrder.nativeOrder());
         buf.put(b);
-        buf.flip();
+        ((Buffer) buf).flip();
         return buf;
     }
 
