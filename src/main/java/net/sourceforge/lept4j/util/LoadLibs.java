@@ -78,7 +78,7 @@ public class LoadLibs {
      * <code>Native.loadLibrary()</code>.
      */
     public static Leptonica getLeptonicaInstance() {
-        return (Leptonica) Native.load(getLeptonicaLibName(), Leptonica.class);
+        return (Leptonica) Native.loadLibrary(getLeptonicaLibName(), Leptonica.class);
     }
 
     /**

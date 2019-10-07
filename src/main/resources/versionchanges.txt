@@ -107,3 +107,6 @@ Version 1.12.1 (22 June 2019):
 
 Version 1.12.2 (23 June 2019):
 - Use explicit cast for compatibility with covariant return type on JDK 9's ByteBuffer methods, e.g., flip()
+
+Version 1.12.3 (7 October 2019):
+- Use Native.loadLibrary method for backward compatibility with older JNA versions
