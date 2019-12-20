@@ -15,9 +15,12 @@
  */
 package net.sourceforge.lept4j;
 
+import com.ochafik.lang.jnaerator.runtime.NativeSize;
+import com.ochafik.lang.jnaerator.runtime.NativeSizeByReference;
 import com.sun.jna.Pointer;
 import com.sun.jna.ptr.PointerByReference;
 import java.io.File;
+import java.nio.IntBuffer;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -38324,16 +38327,64 @@ public class Leptonica1Test {
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
 //    }
-//
+
+    /**
+     * Test of pixReadFromMultipageTiff method, of class Leptonica1.
+     */
+    @Test
+    public void testPixReadFromMultipageTiff() {
+        System.out.println("pixReadFromMultipageTiff");
+        String filename = "eurotext.tif";
+        File image = new File(testResourcesPath, filename);
+        NativeSizeByReference poffset = new NativeSizeByReference();
+        NativeSize index = new NativeSize(0);
+        poffset.setValue(index);
+        Pix expResult = Leptonica1.pixRead(image.getPath());
+        Pix result = Leptonica1.pixReadFromMultipageTiff(image.getPath(), poffset);
+        IntBuffer psame = IntBuffer.allocate(1);
+        Leptonica1.pixEqual(expResult, result, psame);
+        assertEquals(1, psame.get());
+    }
+
+    /**
+     * Test of pixaReadMultipageTiff method, of class Leptonica1.
+     */
+    @Test
+    public void testPixaReadMultipageTiff() {
+        System.out.println("pixaReadMultipageTiff");
+        String filename = "eurotext.tif";
+        File image = new File(testResourcesPath, filename);
+        int expResult = 1;
+        Pixa result = Leptonica1.pixaReadMultipageTiff(image.getPath());
+        assertEquals(expResult, Leptonica1.pixaGetCount(result));
+    }
+
 //    /**
-//     * Test of pixaReadMultipageTiff method, of class Leptonica1.
+//     * Test of pixReadMemFromMultipageTiff method, of class Leptonica1.
 //     */
 //    @Test
-//    public void testPixaReadMultipageTiff() {
-//        System.out.println("pixaReadMultipageTiff");
-//        String filename = "";
+//    public void testPixReadMemFromMultipageTiff() {
+//        System.out.println("pixReadMemFromMultipageTiff");
+//        ByteBuffer cdata = null;
+//        NativeSize size = null;
+//        NativeSizeByReference poffset = null;
+//        Pix expResult = null;
+//        Pix result = Leptonica1.pixReadMemFromMultipageTiff(cdata, size, poffset);
+//        assertEquals(expResult, result);
+//        // TODO review the generated test code and remove the default call to fail.
+//        fail("The test case is a prototype.");
+//    }
+//
+//    /**
+//     * Test of pixaReadMemMultipageTiff method, of class Leptonica1.
+//     */
+//    @Test
+//    public void testPixaReadMemMultipageTiff() {
+//        System.out.println("pixaReadMemMultipageTiff");
+//        ByteBuffer data = null;
+//        NativeSize size = null;
 //        Pixa expResult = null;
-//        Pixa result = Leptonica1.pixaReadMultipageTiff(filename);
+//        Pixa result = Leptonica1.pixaReadMemMultipageTiff(data, size);
 //        assertEquals(expResult, result);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
