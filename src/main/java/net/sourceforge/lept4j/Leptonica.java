@@ -9126,26 +9126,26 @@ public interface Leptonica extends Library, ILeptonica {
 //       */
 //      int pixaExtendArrayToSize(Pixa pixa, int size);
 //  
-//      /**
-//       * Original signature : <code>l_int32 pixaGetCount(PIXA*)</code>
-//       */
-//      int pixaGetCount(Pixa pixa);
-//      /**
-//       * Original signature :
-//       * <code>l_ok pixaChangeRefcount(PIXA*, l_int32)</code>
-//       */
-//      int pixaChangeRefcount(Pixa pixa, int delta);
-//      /**
-//       * Original signature :
-//       * <code>PIX* pixaGetPix(PIXA*, l_int32, l_int32)</code>
-//       */
-//      Pix pixaGetPix(Pixa pixa, int index, int accesstype);
-//      /**
-//       * Original signature :
-//       * <code>l_ok pixaGetPixDimensions(PIXA*, l_int32, l_int32*, l_int32*, l_int32*)</code>
-//       */
-//      int pixaGetPixDimensions(Pixa pixa, int index, IntBuffer pw, IntBuffer ph, IntBuffer pd);
-//  
+      /**
+       * Original signature : <code>l_int32 pixaGetCount(PIXA*)</code>
+       */
+      int pixaGetCount(Pixa pixa);
+      /**
+       * Original signature :
+       * <code>l_ok pixaChangeRefcount(PIXA*, l_int32)</code>
+       */
+      int pixaChangeRefcount(Pixa pixa, int delta);
+      /**
+       * Original signature :
+       * <code>PIX* pixaGetPix(PIXA*, l_int32, l_int32)</code>
+       */
+      Pix pixaGetPix(Pixa pixa, int index, int accesstype);
+      /**
+       * Original signature :
+       * <code>l_ok pixaGetPixDimensions(PIXA*, l_int32, l_int32*, l_int32*, l_int32*)</code>
+       */
+      int pixaGetPixDimensions(Pixa pixa, int index, IntBuffer pw, IntBuffer ph, IntBuffer pd);
+  
       /**
        * Original signature : <code>BOXA* pixaGetBoxa(PIXA*, l_int32)</code>
        */

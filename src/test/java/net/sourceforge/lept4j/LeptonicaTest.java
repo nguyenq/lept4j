@@ -18,16 +18,11 @@ package net.sourceforge.lept4j;
 import com.ochafik.lang.jnaerator.runtime.NativeSize;
 import com.ochafik.lang.jnaerator.runtime.NativeSizeByReference;
 import com.sun.jna.Pointer;
-import com.sun.jna.ptr.DoubleByReference;
-import com.sun.jna.ptr.FloatByReference;
-import com.sun.jna.ptr.IntByReference;
 import com.sun.jna.ptr.PointerByReference;
 import java.io.File;
-import java.nio.ByteBuffer;
-import java.nio.DoubleBuffer;
 import java.nio.FloatBuffer;
 import java.nio.IntBuffer;
-import static net.sourceforge.lept4j.ILeptonica.IFF_PNG;
+import net.sourceforge.lept4j.util.LeptUtils;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -40667,7 +40662,46 @@ public class LeptonicaTest {
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
 //    }
-//
+  
+    /**
+     * Test of pixReadFromMultipageTiff method, of class Leptonica.
+     */
+    @Test
+    public void testPixReadFromMultipageTiff() {
+        System.out.println("pixReadFromMultipageTiff");
+        String filename = "multi-page.tif";
+        File image = new File(testResourcesPath, filename);
+        Pixa pixa = instance.pixaReadMultipageTiff(image.getPath()); // read all pages at once
+        int i = 0;
+        NativeSizeByReference poffset = new NativeSizeByReference(new NativeSize(0));
+
+        do {
+            // read pages one at a time
+            Pix pix1 = instance.pixaGetPix(pixa, i++, ILeptonica.L_COPY);
+            Pix pix2 = instance.pixReadFromMultipageTiff(image.getPath(), poffset); // read pages one at a time
+            IntBuffer psame = IntBuffer.allocate(1);
+            instance.pixEqual(pix1, pix2, psame);
+            LeptUtils.dispose(pix1);
+            LeptUtils.dispose(pix2);
+            int result = psame.get();
+            assertEquals(1, result);
+        } while (poffset.getValue().intValue() != 0);
+
+        LeptUtils.dispose(pixa);
+    }
+
+    /**
+     * Test of pixaReadMultipageTiff method, of class Leptonica.
+     */
+    @Test
+    public void testPixaReadMultipageTiff() {
+        System.out.println("pixaReadMultipageTiff");
+        String filename = "multi-page.tif";
+        File image = new File(testResourcesPath, filename);
+        int expResult = 3;
+        Pixa result = instance.pixaReadMultipageTiff(image.getPath());
+        assertEquals(expResult, instance.pixaGetCount(result));
+    }
 //    /**
 //     * Test of pixWriteStreamTiff method, of class Leptonica.
 //     */
@@ -40677,24 +40711,8 @@ public class LeptonicaTest {
 //        PointerByReference fp = null;
 //        Pix pix = null;
 //        int comptype = 0;
-
 //        int expResult = 0;
 //        int result = instance.pixWriteStreamTiff(fp, pix, comptype);
-//        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of pixaReadMultipageTiff method, of class Leptonica.
-//     */
-//    @Test
-//    public void testPixaReadMultipageTiff() {
-//        System.out.println("pixaReadMultipageTiff");
-//        String filename = "";
-
-//        Pixa expResult = null;
-//        Pixa result = instance.pixaReadMultipageTiff(filename);
 //        assertEquals(expResult, result);
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");

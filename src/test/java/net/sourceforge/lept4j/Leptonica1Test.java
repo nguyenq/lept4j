@@ -30,23 +30,24 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class Leptonica1Test {
+
     private final String testResourcesPath = "src/test/resources/test-data";
-    
+
     public Leptonica1Test() {
     }
-    
+
     @BeforeClass
     public static void setUpClass() {
     }
-    
+
     @AfterClass
     public static void tearDownClass() {
     }
-    
+
     @Before
     public void setUp() {
     }
-    
+
     @After
     public void tearDown() {
     }
@@ -32224,7 +32225,6 @@ public class Leptonica1Test {
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
 //    }
-
     /**
      * Test of pixRead method, of class Leptonica1.
      */
@@ -38328,7 +38328,6 @@ public class Leptonica1Test {
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
 //    }
-
     /**
      * Test of pixReadFromMultipageTiff method, of class Leptonica1.
      */
@@ -38337,20 +38336,22 @@ public class Leptonica1Test {
         System.out.println("pixReadFromMultipageTiff");
         String filename = "multi-page.tif";
         File image = new File(testResourcesPath, filename);
-
+        Pixa pixa = Leptonica1.pixaReadMultipageTiff(image.getPath()); // read all pages at once
+        int i = 0;
         NativeSizeByReference poffset = new NativeSizeByReference(new NativeSize(0));
-        Pixa pixa = Leptonica1.pixaReadMultipageTiff(image.getPath());
-        int count = Leptonica1.pixaGetCount(pixa);
-        for (int i = 0; i < count; i++) {
-            Pix pix1 = Leptonica1.pixaGetPix(pixa, i, ILeptonica.L_COPY);
-            Pix pix2 = Leptonica1.pixReadFromMultipageTiff(image.getPath(), poffset);
+
+        do {
+            // read pages one at a time
+            Pix pix1 = Leptonica1.pixaGetPix(pixa, i++, ILeptonica.L_COPY);
+            Pix pix2 = Leptonica1.pixReadFromMultipageTiff(image.getPath(), poffset); // read pages one at a time
             IntBuffer psame = IntBuffer.allocate(1);
             Leptonica1.pixEqual(pix1, pix2, psame);
             LeptUtils.dispose(pix1);
             LeptUtils.dispose(pix2);
             int result = psame.get();
-            assertEquals(1, result);            
-        }
+            assertEquals(1, result);
+        } while (poffset.getValue().intValue() != 0);
+
         LeptUtils.dispose(pixa);
     }
 
@@ -40581,5 +40582,4 @@ public class Leptonica1Test {
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
 //    }
-    
 }

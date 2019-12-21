@@ -6831,4 +6831,23 @@ public class LeptonicaImpl implements Leptonica {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
+    @Override
+    public int pixaGetCount(Pixa pixa) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int pixaChangeRefcount(Pixa pixa, int delta) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public Pix pixaGetPix(Pixa pixa, int index, int accesstype) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int pixaGetPixDimensions(Pixa pixa, int index, IntBuffer pw, IntBuffer ph, IntBuffer pd) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
 }
