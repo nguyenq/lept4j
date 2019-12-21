@@ -21,6 +21,7 @@ import com.sun.jna.Pointer;
 import com.sun.jna.ptr.PointerByReference;
 import java.io.File;
 import java.nio.IntBuffer;
+import net.sourceforge.lept4j.util.LeptUtils;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -38334,16 +38335,23 @@ public class Leptonica1Test {
     @Test
     public void testPixReadFromMultipageTiff() {
         System.out.println("pixReadFromMultipageTiff");
-        String filename = "eurotext.tif";
+        String filename = "multi-page.tif";
         File image = new File(testResourcesPath, filename);
-        NativeSizeByReference poffset = new NativeSizeByReference();
-        NativeSize index = new NativeSize(0);
-        poffset.setValue(index);
-        Pix expResult = Leptonica1.pixRead(image.getPath());
-        Pix result = Leptonica1.pixReadFromMultipageTiff(image.getPath(), poffset);
-        IntBuffer psame = IntBuffer.allocate(1);
-        Leptonica1.pixEqual(expResult, result, psame);
-        assertEquals(1, psame.get());
+
+        NativeSizeByReference poffset = new NativeSizeByReference(new NativeSize(0));
+        Pixa pixa = Leptonica1.pixaReadMultipageTiff(image.getPath());
+        int count = Leptonica1.pixaGetCount(pixa);
+        for (int i = 0; i < count; i++) {
+            Pix pix1 = Leptonica1.pixaGetPix(pixa, i, ILeptonica.L_COPY);
+            Pix pix2 = Leptonica1.pixReadFromMultipageTiff(image.getPath(), poffset);
+            IntBuffer psame = IntBuffer.allocate(1);
+            Leptonica1.pixEqual(pix1, pix2, psame);
+            LeptUtils.dispose(pix1);
+            LeptUtils.dispose(pix2);
+            int result = psame.get();
+            assertEquals(1, result);            
+        }
+        LeptUtils.dispose(pixa);
     }
 
     /**
@@ -38352,9 +38360,9 @@ public class Leptonica1Test {
     @Test
     public void testPixaReadMultipageTiff() {
         System.out.println("pixaReadMultipageTiff");
-        String filename = "eurotext.tif";
+        String filename = "multi-page.tif";
         File image = new File(testResourcesPath, filename);
-        int expResult = 1;
+        int expResult = 3;
         Pixa result = Leptonica1.pixaReadMultipageTiff(image.getPath());
         assertEquals(expResult, Leptonica1.pixaGetCount(result));
     }
