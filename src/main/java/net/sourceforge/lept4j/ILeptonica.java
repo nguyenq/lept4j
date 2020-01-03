@@ -183,6 +183,8 @@ public interface ILeptonica {
         /** <i>native declaration : gplot.h:23</i>
          */
         public static final int GPLOT_LATEX = 4;
+        /** <i>native declaration : gplot.h:24</i> */
+        public static final int GPLOT_PNM = 5;
     };
 
     /**
@@ -1038,6 +1040,14 @@ public interface ILeptonica {
      * only remove smaller
      */
     public static final int L_REMOVE_SMALL = 2;
+    /** use union of two boxes */
+    public static final int L_GEOMETRIC_UNION = 1;
+    /** use intersection of two boxes */
+    public static final int L_GEOMETRIC_INTERSECTION = 2;
+    /** use box with largest area */
+    public static final int L_LARGEST_AREA = 3;
+    /** use box with smallest area */
+    public static final int L_SMALLEST_AREA = 4;
     /**
      * consider all boxes in the sequence
      */
@@ -1054,6 +1064,8 @@ public interface ILeptonica {
     public static final int L_LOWER_LEFT = 3;
     /** LR corner */
     public static final int L_LOWER_RIGHT = 4;
+    /** center */
+    public static final int L_BOX_CENTER = 5;
     /**
      * increasing stretch or contraction to left
      */
@@ -1363,7 +1375,7 @@ public interface ILeptonica {
     public static final int LIBLEPT_MAJOR_VERSION = (int) 1;
     /** <i>native declaration : allheaders.h</i>
      */
-    public static final int LIBLEPT_MINOR_VERSION = (int) 78;
+    public static final int LIBLEPT_MINOR_VERSION = (int) 79;
     /** <i>native declaration : allheaders.h</i>
      */
     public static final int LIBLEPT_PATCH_VERSION = (int) 0;
@@ -1388,6 +1400,8 @@ public interface ILeptonica {
     /** <i>native declaration : environ.h</i>
      */
     public static final int HAVE_LIBWEBP = (int) 1;
+    /** <i>native declaration : environ.h</i> */
+    public static final int HAVE_LIBWEBP_ANIM = (int) 0;
     /** <i>native declaration : environ.h</i>
      */
     public static final int HAVE_LIBJP2K = (int) 1;
@@ -1444,7 +1458,7 @@ public interface ILeptonica {
     public static final int NUM_GPLOT_STYLES = (int) 5;
     /** <i>native declaration : gplot.h</i>
      */
-    public static final int NUM_GPLOT_OUTPUTS = (int) 5;
+    public static final int NUM_GPLOT_OUTPUTS = (int) 6;
     /** <i>native declaration : jbclass.h</i>
      */
     public static final String JB_TEMPLATE_EXT = (String) ".templates.png";
@@ -1522,7 +1536,12 @@ public interface ILeptonica {
 
         void apply(Pointer voidPtr1);
     };
-
+    
+    /** <i>native declaration : allheaders.h:5431</i> */
+    public interface leptSetStderrHandler_handler_callback extends Callback {
+        void apply(Pointer charPtr1);
+    };
+    
     public static class HBITMAP extends PointerType {
 
         public HBITMAP(Pointer address) {

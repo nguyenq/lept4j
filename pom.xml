@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>net.sourceforge.lept4j</groupId>
 	<artifactId>lept4j</artifactId>
-	<version>1.12.4-SNAPSHOT</version>
+	<version>1.13.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<properties>
@@ -76,7 +76,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <version>3.1.0</version>
+                <version>3.1.1</version>
                 <configuration>
                     <detectJavaApiLink>false</detectJavaApiLink>
                     <offlineLinks>

@@ -110,3 +110,6 @@ Version 1.12.2 (23 June 2019):
 
 Version 1.12.3 (7 October 2019):
 - Use Native.loadLibrary method for backward compatibility with older JNA versions
+
+Version 1.13.0 (3 January 2020):
+- Upgrade to Leptonica 1.79.0

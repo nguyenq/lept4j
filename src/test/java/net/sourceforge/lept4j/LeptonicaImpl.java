@@ -1262,12 +1262,12 @@ public class LeptonicaImpl implements Leptonica {
     }
 
     @Override
-    public int pixColorContent(Pix pixs, int rwhite, int gwhite, int bwhite, int mingray, PointerByReference ppixr, PointerByReference ppixg, PointerByReference ppixb) {
+    public int pixColorContent(Pix pixs, int rref, int gref, int bref, int mingray, PointerByReference ppixr, PointerByReference ppixg, PointerByReference ppixb) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
-    public Pix pixColorMagnitude(Pix pixs, int rwhite, int gwhite, int bwhite, int type) {
+    public Pix pixColorMagnitude(Pix pixs, int rref, int gref, int bref, int type) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
@@ -3047,7 +3047,7 @@ public class LeptonicaImpl implements Leptonica {
     }
 
     @Override
-    public L_Heap lheapCreate(int nalloc, int direction) {
+    public L_Heap lheapCreate(int n, int direction) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
@@ -3072,12 +3072,7 @@ public class LeptonicaImpl implements Leptonica {
     }
 
     @Override
-    public int lheapSwapUp(L_Heap lh, int index) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public int lheapSwapDown(L_Heap lh) {
+    public Pointer lheapGetElement(L_Heap lh, int index) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
@@ -3332,17 +3327,17 @@ public class LeptonicaImpl implements Leptonica {
     }
 
     @Override
-    public L_Kernel makeGaussianKernel(int halfheight, int halfwidth, float stdev, float max) {
+    public L_Kernel makeGaussianKernel(int halfh, int halfw, float stdev, float max) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
-    public int makeGaussianKernelSep(int halfheight, int halfwidth, float stdev, float max, PointerByReference pkelx, PointerByReference pkely) {
+    public int makeGaussianKernelSep(int halfh, int halfw, float stdev, float max, PointerByReference pkelx, PointerByReference pkely) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
-    public L_Kernel makeDoGKernel(int halfheight, int halfwidth, float stdev, float ratio) {
+    public L_Kernel makeDoGKernel(int halfh, int halfw, float stdev, float ratio) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
@@ -4043,6 +4038,11 @@ public class LeptonicaImpl implements Leptonica {
 
     @Override
     public int pixFindLargestRectangle(Pix pixs, int polarity, PointerByReference pbox, PointerByReference ppixdb) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public Pix pixAutoPhotoinvert(Pix pixs, int thresh, PointerByReference ppixm, Pixa pixadb) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
@@ -4897,7 +4897,7 @@ public class LeptonicaImpl implements Leptonica {
     }
 
     @Override
-    public int pixCountRGBColors(Pix pixs) {
+    public int pixCountRGBColors(Pix pixs, int factor, IntBuffer pncolors) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
@@ -4922,7 +4922,7 @@ public class LeptonicaImpl implements Leptonica {
     }
 
     @Override
-    public int pixGetRankColorArray(Pix pixs, int nbins, int type, int factor, PointerByReference pcarray, int debugflag, int fontsize) {
+    public int pixGetRankColorArray(Pix pixs, int nbins, int type, int factor, PointerByReference pcarray, Pixa pixadb, int fontsize) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
@@ -4973,6 +4973,26 @@ public class LeptonicaImpl implements Leptonica {
 
     @Override
     public int pixaAddBox(Pixa pixa, Box box, int copyflag) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int pixaGetCount(Pixa pixa) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int pixaChangeRefcount(Pixa pixa, int delta) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public Pix pixaGetPix(Pixa pixa, int index, int accesstype) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int pixaGetPixDimensions(Pixa pixa, int index, IntBuffer pw, IntBuffer ph, IntBuffer pd) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
@@ -5153,6 +5173,11 @@ public class LeptonicaImpl implements Leptonica {
 
     @Override
     public Pix pixSubtractGray(Pix pixd, Pix pixs1, Pix pixs2) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public Pix pixMultiplyGray(Pix pixs, Pix pixg, float norm) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
@@ -5652,11 +5677,6 @@ public class LeptonicaImpl implements Leptonica {
     }
 
     @Override
-    public void convertByteToHexAscii(byte byteval, ByteBuffer pnib1, ByteBuffer pnib2) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
     public Pta ptaReadMem(ByteBuffer data, NativeSize size) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
@@ -5698,6 +5718,16 @@ public class LeptonicaImpl implements Leptonica {
 
     @Override
     public int ptaGetRankValue(Pta pta, float fract, Pta ptasort, int sorttype, FloatBuffer pval) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public Pta ptaSort2d(Pta pta) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int ptaEqual(Pta pta1, Pta pta2, IntBuffer psame) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
@@ -6507,6 +6537,21 @@ public class LeptonicaImpl implements Leptonica {
     }
 
     @Override
+    public void leptSetStderrHandler(leptSetStderrHandler_handler_callback handler) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public void lept_stderr(String fmt, PointerByReference varArgs1) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int fileReplaceBytes(String filein, int start, int nbytes, ByteBuffer newdata, NativeSize newsize, String fileout) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
     public Pointer getLeptonicaVersion() {
         throw new UnsupportedOperationException("Not supported yet.");
     }
@@ -6797,6 +6842,11 @@ public class LeptonicaImpl implements Leptonica {
     }
 
     @Override
+    public int pixDisplayWrite(Pix pixs, int reduction) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
     public int pixSaveTiled(Pix pixs, Pixa pixa, float scalefactor, int newrow, int space, int dp) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
@@ -6812,42 +6862,12 @@ public class LeptonicaImpl implements Leptonica {
     }
 
     @Override
-    public void l_chooseDisplayProg(int selection) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public int pixDisplayWrite(Pix pixs, int reduction) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
     public Pointer zlibCompress(ByteBuffer datain, NativeSize nin, NativeSizeByReference pnout) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
     public Pointer zlibUncompress(ByteBuffer datain, NativeSize nin, NativeSizeByReference pnout) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public int pixaGetCount(Pixa pixa) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public int pixaChangeRefcount(Pixa pixa, int delta) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public Pix pixaGetPix(Pixa pixa, int index, int accesstype) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public int pixaGetPixDimensions(Pixa pixa, int index, IntBuffer pw, IntBuffer ph, IntBuffer pd) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 }
