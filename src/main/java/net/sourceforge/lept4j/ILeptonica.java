@@ -361,9 +361,6 @@ public interface ILeptonica {
     public static final int L_COMPARE_XOR = 1;
     public static final int L_COMPARE_SUBTRACT = 2;
     public static final int L_COMPARE_ABS_DIFF = 3;
-    public static final int L_MAX_DIFF_FROM_AVERAGE_2 = 1;
-    public static final int L_MAX_MIN_DIFF_FROM_2 = 2;
-    public static final int L_MAX_DIFF = 3;
     /**
      * red color index in RGBA_QUAD
      */
@@ -648,6 +645,12 @@ public interface ILeptonica {
      * use saturation value (in HSV space)
      */
     public static final int L_SELECT_SATURATION = 8;
+    /** intermediate of diff component values */
+    public static final int L_INTERMED_DIFF = 1;
+    /** diff average closest comps to third */
+    public static final int L_AVE_MAX_DIFF_2 = 2;
+    /** maximum diff of component values */
+    public static final int L_MAX_DIFF = 3;
     /**
      * use LSB
      */
@@ -1375,7 +1378,7 @@ public interface ILeptonica {
     public static final int LIBLEPT_MAJOR_VERSION = (int) 1;
     /** <i>native declaration : allheaders.h</i>
      */
-    public static final int LIBLEPT_MINOR_VERSION = (int) 79;
+    public static final int LIBLEPT_MINOR_VERSION = (int) 80;
     /** <i>native declaration : allheaders.h</i>
      */
     public static final int LIBLEPT_PATCH_VERSION = (int) 0;

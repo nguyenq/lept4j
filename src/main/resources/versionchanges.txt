@@ -116,3 +116,6 @@ Version 1.13.0 (3 January 2020):
 
 Version 1.13.1 (13 May 2020):
 - Update giflib-5.2.1 and libjpeg-9d libraries
+
+Version 1.14.0 (1 August 2020):
+- Upgrade to Leptonica 1.80.0
