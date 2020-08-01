@@ -119,12 +119,12 @@ public class LeptUtilsTest {
         System.out.println("removeLines");
         File input = new File(testResourcesPath, "table.png");
         Pix pixs = Leptonica1.pixRead(input.getPath());
-        Leptonica1.pixDisplayWrite(pixs, 1);
+        Leptonica1.pixDisplay(pixs, 100, 100);
         // remove horizontal lines
         Pix result = LeptUtils.removeLines(pixs);
         String outfile = "target/test-classes/test-results/result-hlines-removed.png";
         Leptonica1.pixWrite(outfile, result, ILeptonica.IFF_PNG);
-        Leptonica1.pixDisplayWrite(result, 1);
+        Leptonica1.pixDisplay(result, 100, 100);
 
         // remove vertical lines
         Pix pix90 = Leptonica1.pixRotate90(result, 1); // rotate 90 degrees
@@ -132,7 +132,7 @@ public class LeptUtilsTest {
         Pix result3 = Leptonica1.pixRotate90(result2, -1); // rotate 90 degrees back
         outfile = "target/test-classes/test-results/result-vlines-removed.png";
         Leptonica1.pixWrite(outfile, result3, ILeptonica.IFF_PNG);
-        Leptonica1.pixDisplayWrite(result3, 1);
+        Leptonica1.pixDisplay(result3, 100, 100);
 
         // resource cleanup
         LeptUtils.dispose(pixs);
@@ -150,15 +150,15 @@ public class LeptUtilsTest {
         System.out.println("despeckle");
         File input = new File(testResourcesPath, "w91frag.jpg");
         Pix pixs = Leptonica1.pixRead(input.getPath());
-        Leptonica1.pixDisplayWrite(pixs, 1);
+        Leptonica1.pixDisplay(pixs, 100, 100);
         String outfile = "target/test-classes/test-results/result-despeckled2.png";
         Pix result = LeptUtils.despeckle(pixs, LeptUtils.SEL_STR2, 2);
         Leptonica1.pixWrite(outfile, result, ILeptonica.IFF_PNG);
-        Leptonica1.pixDisplayWrite(result, 1);
+        Leptonica1.pixDisplay(result, 100, 100);
         assertTrue(new File(outfile).exists());
         outfile = "target/test-classes/test-results/result-despeckled3.png";
         Pix result1 = LeptUtils.despeckle(pixs, LeptUtils.SEL_STR3, 3);
-        Leptonica1.pixDisplayWrite(result1, 1);
+        Leptonica1.pixDisplay(result1, 100, 100);
         Leptonica1.pixWrite(outfile, result1, ILeptonica.IFF_PNG);
         
         // resource cleanup

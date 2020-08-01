@@ -84,7 +84,7 @@ public class DewarpTest {
         pixs = instance.pixRead(image.getPath());
         /*    pixs =  instance.pixRead("cat-10.jpg"); */
 
- /* Normalize for varying background and binarize */
+        /* Normalize for varying background and binarize */
         pixn = instance.pixBackgroundNormSimple(pixs, null, null);
         pixg = instance.pixConvertRGBToGray(pixn, 0.5f, 0.3f, 0.2f);
         pixb = instance.pixThresholdToBinary(pixg, 130);

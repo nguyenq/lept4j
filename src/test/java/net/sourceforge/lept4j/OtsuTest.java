@@ -97,36 +97,37 @@ public class OtsuTest {
         for (int i = 0; i < 3; i++) {
             pixa1 = Leptonica1.pixaCreate(2);
             scorefract = 0.1f * i;
-            PointerByReference ppixb = new PointerByReference();
+
             /* Get a 1 bpp version; use a single tile */
+            PointerByReference ppixb = new PointerByReference();
             int result = Leptonica1.pixOtsuAdaptiveThreshold(pixg, 2000, 2000, 0, 0, scorefract, null, ppixb);
             pixb = new Pix(ppixb.getValue());
-            Leptonica1.pixSaveTiledOutline(pixb, pixa1, 0.5f, 1, 20, 2, 32);
+            Leptonica1.pixaAddPix(pixa1, pixg, L_COPY);
+            Leptonica1.pixaAddPix(pixa1, pixb, L_INSERT);
+
             thresh.rewind();
             fgval.rewind();
             bgval.rewind();
             PointerByReference ppixp = new PointerByReference();
-            /* Show the histogram of gray values and the split location */
-            result = Leptonica1.pixSplitDistributionFgBg(pixg, scorefract, 1, thresh, fgval, bgval, ppixp);
-            pixp = new Pix(ppixp.getValue());
-            System.out.printf("thresh = %d, fgval = %d, bgval = %d\n", thresh.get(), fgval.get(), bgval.get());
-            thresh.rewind();
-            
-            /* Give gnuplot time to write out the plot */
-            Thread.sleep(1000);
 
-            Leptonica1.pixSaveTiled(pixp, pixa1, 1.0f, 0, 20, 1);
+            /* Show the histogram of gray values and the split location */
+            Leptonica1.pixSplitDistributionFgBg(pixg, scorefract, 1, thresh, fgval, bgval, ppixp);
+            System.err.printf("thresh = %d, fgval = %d, bgval = %d\n", thresh.get(), fgval.get(), bgval.get());
+            thresh.rewind();
+
+            pixp = new Pix(ppixp.getValue());
+            Leptonica1.pixaAddPix(pixa1, pixp, L_INSERT);
+
             /* Join these together and add some text */
-            pix1 = Leptonica1.pixaDisplay(pixa1, 0, 0);
+            pix1 = Leptonica1.pixaDisplayTiledInColumns(pixa1, 3, 1.0f, 20, 2);
             textstr = String.format("Scorefract = %3.1f ........... Thresh = %d", scorefract, thresh.get());
             pix2 = Leptonica1.pixAddSingleTextblock(pix1, bmf, textstr, 0x00ff0000, L_ADD_BELOW, null);
+
             /* Save and display the result */
             Leptonica1.pixaAddPix(pixad, pix2, L_INSERT);
             textstr = String.format("target/test-classes/test-results/otsu.%d.png", i);
             Leptonica1.pixWrite(textstr, pix2, IFF_PNG);
             Leptonica1.pixDisplay(pix2, 100, 100);
-            LeptUtils.dispose(pixb);
-//            LeptUtils.dispose(pixp); // caused crash
             LeptUtils.dispose(pix1);
             LeptUtils.dispose(pixa1);
         }
@@ -147,9 +148,9 @@ public class OtsuTest {
             LeptUtils.dispose(pix2);
         }
 
-        System.out.println("Writing to: target/test-classes/test-results/result1.pdf");
+        System.err.println("Writing to: target/test-classes/test-results/result1.pdf");
         Leptonica1.pixaConvertToPdf(pixad, 75, 1.0f, 0, 0, "Otsu thresholding",
-                     "target/test-classes/test-results/result1.pdf");
+                "target/test-classes/test-results/result1.pdf");
         LeptUtils.dispose(bmf);
         LeptUtils.dispose(pixs);
         LeptUtils.dispose(pixg);
