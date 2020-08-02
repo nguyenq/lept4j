@@ -111,7 +111,7 @@ public class OtsuTest {
             PointerByReference ppixp = new PointerByReference();
 
             /* Show the histogram of gray values and the split location */
-            Leptonica1.pixSplitDistributionFgBg(pixg, scorefract, 1, thresh, fgval, bgval, ppixp);
+            result = Leptonica1.pixSplitDistributionFgBg(pixg, scorefract, 1, thresh, fgval, bgval, ppixp);
             System.err.printf("thresh = %d, fgval = %d, bgval = %d\n", thresh.get(), fgval.get(), bgval.get());
             thresh.rewind();
 

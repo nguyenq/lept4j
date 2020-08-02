@@ -79,12 +79,14 @@ public class LineRemovalTest {
         PointerByReference pargv = new PointerByReference(new StringArray(argv));
         PointerByReference prp = new PointerByReference();
 
-//        if (instance.regTestSetup(argc, pargv, prp) == 0) {
+//        if (instance.regTestSetup(argc, pargv, prp) == 1) {
 //            System.err.print("Failed Test Setup");
 //            throw new Exception("Failed Test Setup");
 //        }
         rp = new L_RegParams(prp.getValue());
-
+        rp.mode = 2;
+        rp.display = 1;
+        
         String filein = "dave-orig.png";
         File image = new File(testResourcesPath, filein);
 
