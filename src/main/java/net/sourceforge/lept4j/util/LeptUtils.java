@@ -42,6 +42,7 @@ import com.ochafik.lang.jnaerator.runtime.NativeSize;
 import com.ochafik.lang.jnaerator.runtime.NativeSizeByReference;
 import com.sun.jna.Structure;
 import net.sourceforge.lept4j.*;
+import static net.sourceforge.lept4j.ILeptonica.FALSE;
 import static net.sourceforge.lept4j.ILeptonica.IFF_TIFF;
 import static net.sourceforge.lept4j.ILeptonica.L_COPY;
 
@@ -184,7 +185,13 @@ public class LeptUtils {
 
         for (int i = 0; i < numpages; i++) {
             Pix pix = Leptonica1.pixaGetPix(pixa, i, L_COPY);
-            Pix pix1 = LeptUtils.removeLines(pix); // horizontal lines
+            Pix pixGray = null;
+            int depth = Leptonica1.pixGetDepth(pix);
+            if (depth != 8) {
+                pixGray = Leptonica1.pixConvertTo8(pix, FALSE);
+            }
+            
+            Pix pix1 = LeptUtils.removeLines(pixGray != null ? pixGray : pix); // horizontal lines
             Pix pix2 = Leptonica1.pixRotate90(pix1, 1); // rotate 90 deg CW
             Pix pix3 = LeptUtils.removeLines(pix2); // effectively vertical lines
             Pix pix4 = Leptonica1.pixRotate90(pix3, -1);  // rotate 90 deg CCW
@@ -192,6 +199,7 @@ public class LeptUtils {
             Leptonica1.pixaAddPix(pixb, pix4, L_COPY);
             
             LeptUtils.dispose(pix);
+            LeptUtils.dispose(pixGray);
             LeptUtils.dispose(pix1);
             LeptUtils.dispose(pix2);
             LeptUtils.dispose(pix3);
