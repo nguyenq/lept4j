@@ -6870,4 +6870,9 @@ public class LeptonicaImpl implements Leptonica {
     public Pointer zlibUncompress(ByteBuffer datain, NativeSize nin, NativeSizeByReference pnout) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
+
+    @Override
+    public int regTestWritePixAndCheck(L_RegParams rp, Pix pix, int format) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
 }

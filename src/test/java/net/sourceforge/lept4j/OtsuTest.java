@@ -116,7 +116,7 @@ public class OtsuTest {
             thresh.rewind();
 
             pixp = new Pix(ppixp.getValue());
-            Leptonica1.pixaAddPix(pixa1, pixp, L_INSERT);
+            Leptonica1.pixaAddPix(pixa1, pixp, L_COPY);
 
             /* Join these together and add some text */
             pix1 = Leptonica1.pixaDisplayTiledInColumns(pixa1, 3, 1.0f, 20, 2);

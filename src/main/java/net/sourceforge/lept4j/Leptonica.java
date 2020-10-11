@@ -12201,11 +12201,11 @@ public interface Leptonica extends Library, ILeptonica {
 //       * <code>l_ok regTestCompareFiles(L_REGPARAMS*, l_int32, l_int32)</code>
 //       */
 //      int regTestCompareFiles(L_RegParams rp, int index1, int index2);
-//      /**
-//       * Original signature :
-//       * <code>l_ok regTestWritePixAndCheck(L_REGPARAMS*, PIX*, l_int32)</code>
-//       */
-//      int regTestWritePixAndCheck(L_RegParams rp, Pix pix, int format);
+      /**
+       * Original signature :
+       * <code>l_ok regTestWritePixAndCheck(L_REGPARAMS*, PIX*, l_int32)</code>
+       */
+      int regTestWritePixAndCheck(L_RegParams rp, Pix pix, int format);
 //    /**
 //     * Original signature :
 //     * <code>char* regTestGenLocalFilename(L_REGPARAMS*, l_int32, l_int32)</code>
