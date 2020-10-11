@@ -19,6 +19,7 @@ import java.awt.image.BufferedImage;
 import java.awt.image.RenderedImage;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.Buffer;
@@ -42,6 +43,7 @@ import com.ochafik.lang.jnaerator.runtime.NativeSizeByReference;
 import com.sun.jna.Structure;
 import net.sourceforge.lept4j.*;
 import static net.sourceforge.lept4j.ILeptonica.IFF_TIFF;
+import static net.sourceforge.lept4j.ILeptonica.L_COPY;
 
 //import org.opencv.core.Mat;
 //import org.opencv.core.MatOfByte;
@@ -156,6 +158,52 @@ public class LeptUtils {
         disposePix(pix9);
 
         return pix8;
+    }
+    
+    /**
+     * Remove lines from image file.
+     *
+     * @param imageFile input image
+     * @return temporary multi-page TIFF image file
+     * @throws IOException
+     */
+    public static String removeLines(String imageFile) throws IOException {
+        Pixa pixa;
+        
+        if (imageFile.toLowerCase().endsWith(".tif") || imageFile.toLowerCase().endsWith(".tiff")) {
+            pixa = Leptonica1.pixaReadMultipageTiff(imageFile);
+        } else {
+            pixa = Leptonica1.pixaCreate(1);
+            Pix pix = Leptonica1.pixRead(imageFile);
+            Leptonica1.pixaAddPix(pixa, pix, L_COPY);
+            LeptUtils.dispose(pix);
+        }
+        
+        int numpages = Leptonica1.pixaGetCount(pixa);
+        Pixa pixb = Leptonica1.pixaCreate(numpages);
+
+        for (int i = 0; i < numpages; i++) {
+            Pix pix = Leptonica1.pixaGetPix(pixa, i, L_COPY);
+            Pix pix1 = LeptUtils.removeLines(pix); // horizontal lines
+            Pix pix2 = Leptonica1.pixRotate90(pix1, 1); // rotate 90 deg CW
+            Pix pix3 = LeptUtils.removeLines(pix2); // effectively vertical lines
+            Pix pix4 = Leptonica1.pixRotate90(pix3, -1);  // rotate 90 deg CCW
+            
+            Leptonica1.pixaAddPix(pixb, pix4, L_COPY);
+            
+            LeptUtils.dispose(pix);
+            LeptUtils.dispose(pix1);
+            LeptUtils.dispose(pix2);
+            LeptUtils.dispose(pix3);
+            LeptUtils.dispose(pix4);
+        }
+        
+        File file = File.createTempFile("temp", ".tif");
+        int result = Leptonica1.pixaWriteMultipageTiff(file.getPath(), pixb);
+        LeptUtils.dispose(pixa);
+        LeptUtils.dispose(pixb);
+
+        return file.getPath();
     }
 
     /**

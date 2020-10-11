@@ -21,6 +21,7 @@ import java.awt.image.BufferedImage;
 import java.awt.image.RenderedImage;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.IOException;
 import java.nio.ByteBuffer;
 import javax.imageio.ImageIO;
 
@@ -97,7 +98,7 @@ public class LeptUtilsTest {
         pRef.setValue(result.getPointer());
         Leptonica1.pixDestroy(pRef);
     }
-    
+
     /**
      * Test of getImageByteBuffer method, of class LeptUtils.
      */
@@ -143,6 +144,20 @@ public class LeptUtilsTest {
     }
 
     /**
+     * Test of removeLines method, of class LeptUtils.
+     */
+    @Test
+    public void testRemoveLinesFile() throws IOException {
+        System.out.println("removeLines from image file");
+        File input = new File(testResourcesPath, "lines.tif");
+        // remove lines
+        String outfile = LeptUtils.removeLines(input.getPath());
+        File outFile = new File(outfile);
+        assertTrue(outFile.exists());
+        outFile.deleteOnExit();
+    }
+
+    /**
      * Test of despeckle method, of class LeptUtils.
      */
     @Test
@@ -160,12 +175,12 @@ public class LeptUtilsTest {
         Pix result1 = LeptUtils.despeckle(pixs, LeptUtils.SEL_STR3, 3);
         Leptonica1.pixDisplay(result1, 100, 100);
         Leptonica1.pixWrite(outfile, result1, ILeptonica.IFF_PNG);
-        
+
         // resource cleanup
         LeptUtils.dispose(pixs);
         LeptUtils.dispose(result);
         LeptUtils.dispose(result1);
-        
+
         assertTrue(new File(outfile).exists());
     }
 

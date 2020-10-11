@@ -116,3 +116,6 @@ Version 1.13.0 (3 January 2020):
 
 Version 1.13.1 (13 May 2020):
 - Update giflib-5.2.1 and libjpeg-9d libraries
+
+Version 1.13.2 (11 October 2020):
+- Implement removeLines from image file method
