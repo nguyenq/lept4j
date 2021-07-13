@@ -122,3 +122,6 @@ Version 1.14.0 (1 August 2020):
 
 Version 1.14.1 (11 October 2020):
 - Implement removeLines from image file method
+
+Version 1.15.0 (12 July 2021):
+- Upgrade to Leptonica 1.81.1
