@@ -104,12 +104,11 @@
 			<artifactId>jai-imageio-core</artifactId>
 			<version>1.4.0</version>
 		</dependency>
-                <dependency>
-                        <groupId>junit</groupId>
-                        <artifactId>junit</artifactId>
-                        <version>4.13.2</version>
-                        <scope>test</scope>
-                        <type>jar</type>
-                </dependency>
-    </dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.13.2</version>
+                    <scope>test</scope>
+		</dependency>
+	</dependencies>
 </project>
