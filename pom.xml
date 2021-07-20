@@ -40,9 +40,9 @@
 	</licenses>
 
 	<scm>
-		<connection>scm:svn:https://github.com/nguyenq/lept4j/trunk</connection>
-		<developerConnection>scm:svn:https://github.com/nguyenq/lept4j/trunk</developerConnection>
-		<url>https://github.com/nguyenq/lept4j/trunk</url>
+		<connection>scm:svn:https://github.com/nguyenq/lept4j/branches/1.14/</connection>
+		<developerConnection>scm:svn:https://github.com/nguyenq/lept4j/branches/1.14/</developerConnection>
+		<url>https://github.com/nguyenq/lept4j/branches/1.14/</url>
 	</scm>
 
 	<developers>
