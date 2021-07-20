@@ -12,27 +12,27 @@ import java.util.List;
  */
 public class L_Hashmap extends Structure {
 	/**
-	 * < number of stored items<br>
+	 * number of stored items<br>
 	 * C type : l_int32
 	 */
 	public int nitems;
 	/**
-	 * < number of items to be stored<br>
+	 * number of items to be stored<br>
 	 * C type : l_int32
 	 */
 	public int ntogo;
 	/**
-	 * < max average occupancy allowed<br>
+	 * max average occupancy allowed<br>
 	 * C type : l_int32
 	 */
 	public int maxocc;
 	/**
-	 * < array of hash item ptrs<br>
+	 * array of hash item ptrs<br>
 	 * C type : L_Hashitem**
 	 */
 	public net.sourceforge.lept4j.L_Hashitem.ByReference[] hashtab;
 	/**
-	 * < size of array of hash item ptrs<br>
+	 * size of array of hash item ptrs<br>
 	 * C type : l_int32
 	 */
 	public int tabsize;
@@ -44,15 +44,15 @@ public class L_Hashmap extends Structure {
 		return Arrays.asList("nitems", "ntogo", "maxocc", "hashtab", "tabsize");
 	}
 	/**
-	 * @param nitems < number of stored items<br>
+	 * @param nitems number of stored items<br>
 	 * C type : l_int32<br>
-	 * @param ntogo < number of items to be stored<br>
+	 * @param ntogo number of items to be stored<br>
 	 * C type : l_int32<br>
-	 * @param maxocc < max average occupancy allowed<br>
+	 * @param maxocc max average occupancy allowed<br>
 	 * C type : l_int32<br>
-	 * @param hashtab < array of hash item ptrs<br>
+	 * @param hashtab array of hash item ptrs<br>
 	 * C type : L_Hashitem**<br>
-	 * @param tabsize < size of array of hash item ptrs<br>
+	 * @param tabsize size of array of hash item ptrs<br>
 	 * C type : l_int32
 	 */
 	public L_Hashmap(int nitems, int ntogo, int maxocc, net.sourceforge.lept4j.L_Hashitem.ByReference hashtab[], int tabsize) {

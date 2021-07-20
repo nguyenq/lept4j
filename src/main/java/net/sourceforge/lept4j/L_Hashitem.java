@@ -14,22 +14,22 @@ import java.util.List;
  */
 public class L_Hashitem extends Structure {
 	/**
-	 * < key is hashed into index into hashtab<br>
+	 * key is hashed into index into hashtab<br>
 	 * C type : l_uint64
 	 */
 	public long key;
 	/**
-	 * < number stored associated with the key<br>
+	 * number stored associated with the key<br>
 	 * C type : l_uint64
 	 */
 	public long val;
 	/**
-	 * < number of elements seen with this key<br>
+	 * number of elements seen with this key<br>
 	 * C type : l_int32
 	 */
 	public int count;
 	/**
-	 * < ptr to the next in the list<br>
+	 * ptr to the next in the list<br>
 	 * C type : L_Hashitem*
 	 */
 	public L_Hashitem.ByReference next;
@@ -41,13 +41,13 @@ public class L_Hashitem extends Structure {
 		return Arrays.asList("key", "val", "count", "next");
 	}
 	/**
-	 * @param key < key is hashed into index into hashtab<br>
+	 * @param key key is hashed into index into hashtab<br>
 	 * C type : l_uint64<br>
-	 * @param val < number stored associated with the key<br>
+	 * @param val number stored associated with the key<br>
 	 * C type : l_uint64<br>
-	 * @param count < number of elements seen with this key<br>
+	 * @param count number of elements seen with this key<br>
 	 * C type : l_int32<br>
-	 * @param next < ptr to the next in the list<br>
+	 * @param next ptr to the next in the list<br>
 	 * C type : L_Hashitem*
 	 */
 	public L_Hashitem(long key, long val, int count, L_Hashitem.ByReference next) {
