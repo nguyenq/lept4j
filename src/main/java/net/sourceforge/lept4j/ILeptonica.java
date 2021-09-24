@@ -775,8 +775,8 @@ public interface ILeptonica {
 	/** Percept. weight for blue */
 	public static final float L_BLUE_WEIGHT = 0.2f;
 	public static final int LIBLEPT_MAJOR_VERSION = (int)1;
-	public static final int LIBLEPT_MINOR_VERSION = (int)81;
-	public static final int LIBLEPT_PATCH_VERSION = (int)1;
+	public static final int LIBLEPT_MINOR_VERSION = (int)82;
+	public static final int LIBLEPT_PATCH_VERSION = (int)0;
 	public static final int HAVE_LIBJPEG = (int)1;
 	public static final int HAVE_LIBTIFF = (int)1;
 	public static final int HAVE_LIBPNG = (int)1;

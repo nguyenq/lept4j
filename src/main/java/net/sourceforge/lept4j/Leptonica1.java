@@ -2770,6 +2770,12 @@ public class Leptonica1 implements Library, ILeptonica {
 
     /**
      * Original signature :
+     * <code>l_ok pixcmapNonOpaqueColorsInfo(PIXCMAP*, l_int32*, l_int32*, l_int32*)</code>
+     */
+    public static native int pixcmapNonOpaqueColorsInfo(PixColormap cmap, IntBuffer pntrans, IntBuffer pmax_trans, IntBuffer pmin_opaque);
+
+    /**
+     * Original signature :
      * <code>l_ok pixcmapIsBlackAndWhite(PIXCMAP*, l_int32*)</code>
      */
     public static native int pixcmapIsBlackAndWhite(PixColormap cmap, IntBuffer pblackwhite);

@@ -2446,6 +2446,11 @@ public interface Leptonica extends Library, ILeptonica {
 //       * <code>l_ok pixcmapIsOpaque(PIXCMAP*, l_int32*)</code>
 //       */
 //      int pixcmapIsOpaque(PixColormap cmap, IntBuffer popaque);
+//    	/**
+//	 * Original signature :
+//       * <code>l_ok pixcmapNonOpaqueColorsInfo(PIXCMAP*, l_int32*, l_int32*, l_int32*)</code>
+//	 */
+//	int pixcmapNonOpaqueColorsInfo(PixColormap cmap, IntBuffer pntrans, IntBuffer pmax_trans, IntBuffer pmin_opaque);
 //      /**
 //       * Original signature :
 //       * <code>l_ok pixcmapIsBlackAndWhite(PIXCMAP*, l_int32*)</code>
