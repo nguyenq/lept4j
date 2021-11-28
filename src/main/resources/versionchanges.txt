@@ -129,6 +129,6 @@ Version 1.15.0 (12 July 2021):
 Version 1.16.0 (23 September 2021):
 - Upgrade to Leptonica 1.82.0
 
-Version 1.16.1 (10 November 2021):
+Version 1.16.1 (27 November 2021):
 - Update dependencies
 - Build Leptonica DLL with VS2022 (v143)
