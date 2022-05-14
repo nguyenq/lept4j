@@ -20,6 +20,7 @@ import com.ochafik.lang.jnaerator.runtime.NativeSizeByReference;
 import com.sun.jna.Pointer;
 import com.sun.jna.ptr.PointerByReference;
 import java.io.File;
+import java.nio.FloatBuffer;
 import java.nio.IntBuffer;
 import net.sourceforge.lept4j.util.LeptUtils;
 import org.junit.After;
@@ -37503,22 +37504,25 @@ public class Leptonica1Test {
 //        fail("The test case is a prototype.");
 //    }
 //
-//    /**
-//     * Test of pixFindSkewAndDeskew method, of class Leptonica1.
-//     */
-//    @Test
-//    public void testPixFindSkewAndDeskew() {
-//        System.out.println("pixFindSkewAndDeskew");
-//        Pix pixs = null;
-//        int redsearch = 0;
-//        FloatBuffer pangle = null;
-//        FloatBuffer pconf = null;
-//        Pix expResult = null;
-//        Pix result = Leptonica1.pixFindSkewAndDeskew(pixs, redsearch, pangle, pconf);
-//        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
+    /**
+     * Test of pixFindSkewAndDeskew method, of class Leptonica1.
+     */
+    @Test
+    public void testPixFindSkewAndDeskew() {
+        System.out.println("pixFindSkewAndDeskew");
+        File input = new File(testResourcesPath, "eurotext_deskew.png");
+        Pix pixs = Leptonica1.pixRead(input.getPath());
+        int redsearch = 0;
+        FloatBuffer pangle = FloatBuffer.allocate(1);
+        FloatBuffer pconf = FloatBuffer.allocate(1);
+        Pix result = Leptonica1.pixFindSkewAndDeskew(pixs, redsearch, pangle, pconf);
+        float angle = pangle.get();
+        float conf = pconf.get();
+        System.out.println(String.format("Confidence: %s, Angle: %s degree", conf , angle));
+        LeptUtils.dispose(pixs);
+        LeptUtils.dispose(result);
+        assertNotNull(result);
+    }
 //
 //    /**
 //     * Test of pixDeskewGeneral method, of class Leptonica1.
@@ -37541,21 +37545,32 @@ public class Leptonica1Test {
 //        fail("The test case is a prototype.");
 //    }
 //
-//    /**
-//     * Test of pixFindSkew method, of class Leptonica1.
-//     */
-//    @Test
-//    public void testPixFindSkew() {
-//        System.out.println("pixFindSkew");
-//        Pix pixs = null;
-//        FloatBuffer pangle = null;
-//        FloatBuffer pconf = null;
-//        int expResult = 0;
-//        int result = Leptonica1.pixFindSkew(pixs, pangle, pconf);
-//        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
+    /**
+     * Test of pixFindSkew method, of class Leptonica1.
+     */
+    @Test
+    public void testPixFindSkew() {
+        System.out.println("pixFindSkew");
+        int expResult = 0;
+        File input = new File(testResourcesPath, "eurotext_deskew.png");
+        Pix pix = Leptonica1.pixRead(input.getPath());
+        Pix pixb = Leptonica1.pixScaleRGBToBinaryFast(pix, 1, 1);
+        FloatBuffer pangle = FloatBuffer.allocate(1);
+        FloatBuffer pconf = FloatBuffer.allocate(1);
+        int result = Leptonica1.pixFindSkew(pixb, pangle, pconf);
+        LeptUtils.dispose(pix);
+        LeptUtils.dispose(pixb);
+        
+        if (result == 0) {
+            float angle = pangle.get();
+            float conf = pconf.get();
+            System.out.println(String.format("Confidence: %s, Angle: %s degree", conf , angle));
+            assertTrue(expResult < Math.abs(angle));
+        } else {
+            System.out.println("Need to binarize the image first");
+            assertTrue(false);
+        }
+    }
 //
 //    /**
 //     * Test of pixFindSkewSweep method, of class Leptonica1.
