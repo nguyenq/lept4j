@@ -57,9 +57,7 @@ public class LoadLibs {
 
     static {
         System.setProperty("jna.encoding", "UTF8");
-        String model = System.getProperty("sun.arch.data.model",
-                                          System.getProperty("com.ibm.vm.bitmode"));
-        String resourcePrefix = "32".equals(model) ? "win32-x86" : "win32-x86-64"; 
+        String resourcePrefix = Platform.RESOURCE_PREFIX;
         File targetTempFolder = extractNativeResources(resourcePrefix);
         if (targetTempFolder != null && targetTempFolder.exists()) {
             String userCustomizedPath = System.getProperty(JNA_LIBRARY_PATH);
@@ -78,7 +76,7 @@ public class LoadLibs {
      * <code>Native.loadLibrary()</code>.
      */
     public static Leptonica getLeptonicaInstance() {
-        return (Leptonica) Native.loadLibrary(getLeptonicaLibName(), Leptonica.class);
+        return (Leptonica) Native.load(getLeptonicaLibName(), Leptonica.class);
     }
 
     /**

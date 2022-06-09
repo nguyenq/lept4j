@@ -132,3 +132,8 @@ Version 1.16.0 (23 September 2021):
 Version 1.16.1 (27 November 2021):
 - Update dependencies
 - Build Leptonica DLL with VS2022 (v143)
+
+Version 1.16.2 (9 June 2022):
+- Replace JNA's deprecated method
+- Only extract resources appropriate to the platform
+- Update dependencies
