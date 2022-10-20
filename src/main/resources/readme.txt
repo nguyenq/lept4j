@@ -40,7 +40,34 @@ if (minfo.code.size() > 65535) {
    throw new IllegalArgumentException("code size limit exceeded");
 }
 
-http://www.docjar.com/html/api/sun/misc/ProxyGenerator.java.html
+https://github.com/openjdk/jdk/blob/master/src/java.base/share/classes/java/lang/reflect/ProxyGenerator.java
+
+Java 19 further limits the code size as it would throw:
+
+jdk.internal.org.objectweb.asm.MethodTooLargeException: Method too large: jdk/proxy2/$Proxy12.<clinit> ()V
+	at java.base/jdk.internal.org.objectweb.asm.MethodWriter.computeMethodInfoSize(MethodWriter.java:2120)
+	at java.base/jdk.internal.org.objectweb.asm.ClassWriter.toByteArray(ClassWriter.java:543)
+	at java.base/java.lang.reflect.ProxyGenerator.generateClassFile(ProxyGenerator.java:507)
+	at java.base/java.lang.reflect.ProxyGenerator.generateProxyClass(ProxyGenerator.java:179)
+	at java.base/java.lang.reflect.Proxy$ProxyBuilder.defineProxyClass(Proxy.java:558)
+	at java.base/java.lang.reflect.Proxy$ProxyBuilder.build(Proxy.java:670)
+	at java.base/java.lang.reflect.Proxy.lambda$getProxyConstructor$0(Proxy.java:429)
+	at java.base/jdk.internal.loader.AbstractClassLoaderValue$Memoizer.get(AbstractClassLoaderValue.java:329)
+	at java.base/jdk.internal.loader.AbstractClassLoaderValue.computeIfAbsent(AbstractClassLoaderValue.java:205)
+	at java.base/java.lang.reflect.Proxy.getProxyConstructor(Proxy.java:427)
+	at java.base/java.lang.reflect.Proxy.newProxyInstance(Proxy.java:1037)
+	at com.sun.jna.Native.load(Native.java:624)
+	at com.sun.jna.Native.load(Native.java:596)
+	at net.sourceforge.lept4j.util.LoadLibs.getLeptonicaInstance(LoadLibs.java:79)
+
+The above exception is due to the limit set in JDK's MethodWriter.java:
+
+if (code.length > 65535) {
+    throw new MethodTooLargeException(
+            symbolTable.getClassName(), name, descriptor, code.length);
+}
+
+https://github.com/openjdk/jdk/blob/master/src/java.base/share/classes/jdk/internal/org/objectweb/asm/MethodWriter.java
 
 DOCUMENTATION
 
