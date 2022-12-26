@@ -542,16 +542,6 @@ public class LeptonicaImpl implements Leptonica {
     }
 
     @Override
-    public int boxGetRefcount(Box box) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public int boxChangeRefcount(Box box, int delta) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
     public int boxIsValid(Box box, IntBuffer pvalid) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
@@ -1067,37 +1057,7 @@ public class LeptonicaImpl implements Leptonica {
     }
 
     @Override
-    public CCBorda ccbaCreate(Pix pixs, int n) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
     public void ccbaDestroy(PointerByReference pccba) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public CCBord ccbCreate(Pix pixs) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public void ccbDestroy(PointerByReference pccb) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public int ccbaAddCcb(CCBorda ccba, CCBord ccb) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public int ccbaGetCount(CCBorda ccba) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public CCBord ccbaGetCcb(CCBorda ccba, int index) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
@@ -1138,11 +1098,6 @@ public class LeptonicaImpl implements Leptonica {
 
     @Override
     public int ccbaGenerateSinglePath(CCBorda ccba) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public Pta getCutPathForHole(Pix pix, Pta pta, Box boxinner, IntBuffer pdir, IntBuffer plen) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
@@ -4442,16 +4397,6 @@ public class LeptonicaImpl implements Leptonica {
     }
 
     @Override
-    public int pixGetRefcount(Pix pix) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public int pixChangeRefcount(Pix pix, int delta) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
     public int pixGetXRes(Pix pix) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
@@ -4548,6 +4493,11 @@ public class LeptonicaImpl implements Leptonica {
 
     @Override
     public IntByReference pixGetData(Pix pix) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public int pixFreeAndSetData(Pix pix, IntBuffer data) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
@@ -4708,6 +4658,31 @@ public class LeptonicaImpl implements Leptonica {
 
     @Override
     public Pix pixAddBlackOrWhiteBorder(Pix pixs, int left, int right, int top, int bot, int op) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public Pix pixAddBorderGeneral(Pix pixs, int left, int right, int top, int bot, int val) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public Pix pixAddMultipleBlackWhiteBorders(Pix pixs, int nblack1, int nwhite1, int nblack2, int nwhite2, int nblack3, int nwhite3) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public Pix pixRemoveBorder(Pix pixs, int npix) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public Pix pixRemoveBorderGeneral(Pix pixs, int left, int right, int top, int bot) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public Pix pixRemoveBorderToSize(Pix pixs, int wd, int hd) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
@@ -4953,11 +4928,6 @@ public class LeptonicaImpl implements Leptonica {
 
     @Override
     public int pixaGetCount(Pixa pixa) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public int pixaChangeRefcount(Pixa pixa, int delta) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
@@ -6845,5 +6815,5 @@ public class LeptonicaImpl implements Leptonica {
     public Pointer zlibUncompress(ByteBuffer datain, NativeSize nin, NativeSizeByReference pnout) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
-    
+
 }

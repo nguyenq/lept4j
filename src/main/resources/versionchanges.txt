@@ -137,3 +137,6 @@ Version 1.16.2 (7 July 2022):
 - Replace JNA's deprecated method
 - Only extract resources appropriate to the platform
 - Update dependencies
+
+Version 1.17.0 (25 December 2022):
+- Upgrade to Leptonica 1.83.0

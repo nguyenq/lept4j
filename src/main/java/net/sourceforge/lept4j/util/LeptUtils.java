@@ -321,8 +321,6 @@ public class LeptUtils {
             Leptonica1.l_byteaDestroy(pRef);
         } else if (resource instanceof CCBorda) {
             Leptonica1.ccbaDestroy(pRef);
-        } else if (resource instanceof CCBord) {
-            Leptonica1.ccbDestroy(pRef);
         } else if (resource instanceof PixColormap) {
             Leptonica1.pixcmapDestroy(pRef);
         } else if (resource instanceof L_Dewarp) {
