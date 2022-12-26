@@ -38,10 +38,9 @@ import static net.sourceforge.lept4j.util.LeptUtils.dispose;
 public class LineRemovalTest {
 
     private final String testResourcesPath = "src/test/resources/test-data";
-    Leptonica instance;
 
     public LineRemovalTest() {
-        instance = new LeptonicaImpl().getInstance();
+
     }
 
     @BeforeClass
@@ -79,7 +78,7 @@ public class LineRemovalTest {
         PointerByReference pargv = new PointerByReference(new StringArray(argv));
         PointerByReference prp = new PointerByReference();
 
-//        if (instance.regTestSetup(argc, pargv, prp) == 1) {
+//        if (Leptonica1.regTestSetup(argc, pargv, prp) == 1) {
 //            System.err.print("Failed Test Setup");
 //            throw new Exception("Failed Test Setup");
 //        }
@@ -90,83 +89,83 @@ public class LineRemovalTest {
         String filein = "dave-orig.png";
         File image = new File(testResourcesPath, filein);
 
-        if ((pixs = instance.pixRead(image.getPath())) == null) {
+        if ((pixs = Leptonica1.pixRead(image.getPath())) == null) {
             System.err.print("pix not read");
             throw new Exception("pix not read");
         }
 
-        pixa = instance.pixaCreate(0);
+        pixa = Leptonica1.pixaCreate(0);
 
         /* Threshold to binary, extracting much of the lines */
-        pix1 = instance.pixThresholdToBinary(pixs, 170);
-        instance.pixWrite("target/test-classes/test-results/dave-proc1.png", pix1, IFF_PNG);
-        instance.regTestWritePixAndCheck(rp, pix1, IFF_PNG);        /* 0 */
-        instance.pixaAddPix(pixa, pix1, L_INSERT);
+        pix1 = Leptonica1.pixThresholdToBinary(pixs, 170);
+        Leptonica1.pixWrite("target/test-classes/test-results/dave-proc1.png", pix1, IFF_PNG);
+        Leptonica1.regTestWritePixAndCheck(rp, pix1, IFF_PNG);        /* 0 */
+        Leptonica1.pixaAddPix(pixa, pix1, L_INSERT);
 
         /* Find the skew angle and deskew using an interpolated
          * rotator for anti-aliasing (to avoid jaggies) */
         FloatBuffer pangle = FloatBuffer.allocate(1);
         FloatBuffer pconf = FloatBuffer.allocate(1);
-        instance.pixFindSkew(pix1, pangle, pconf);
+        Leptonica1.pixFindSkew(pix1, pangle, pconf);
         angle = pangle.get();
         conf = pconf.get();
-        pix2 = instance.pixRotateAMGray(pixs, (float) (deg2rad * angle), (byte) 255);
-        instance.regTestWritePixAndCheck(rp, pix2, IFF_PNG);        /* 1 */
-        instance.pixaAddPix(pixa, pix2, L_INSERT);
+        pix2 = Leptonica1.pixRotateAMGray(pixs, (float) (deg2rad * angle), (byte) 255);
+        Leptonica1.regTestWritePixAndCheck(rp, pix2, IFF_PNG);        /* 1 */
+        Leptonica1.pixaAddPix(pixa, pix2, L_INSERT);
 
         /* Extract the lines to be removed */
-        pix3 = instance.pixCloseGray(pix2, 51, 1);
-        instance.regTestWritePixAndCheck(rp, pix3, IFF_PNG);        /* 2 */
-        instance.pixaAddPix(pixa, pix3, L_INSERT);
+        pix3 = Leptonica1.pixCloseGray(pix2, 51, 1);
+        Leptonica1.regTestWritePixAndCheck(rp, pix3, IFF_PNG);        /* 2 */
+        Leptonica1.pixaAddPix(pixa, pix3, L_INSERT);
 
         /* Solidify the lines to be removed */
-        pix4 = instance.pixErodeGray(pix3, 1, 5);
-        instance.regTestWritePixAndCheck(rp, pix4, IFF_PNG);        /* 3 */
-        instance.pixaAddPix(pixa, pix4, L_INSERT);
+        pix4 = Leptonica1.pixErodeGray(pix3, 1, 5);
+        Leptonica1.regTestWritePixAndCheck(rp, pix4, IFF_PNG);        /* 3 */
+        Leptonica1.pixaAddPix(pixa, pix4, L_INSERT);
 
         /* Clean the background of those lines */
-        pix5 = instance.pixThresholdToValue(null, pix4, 210, 255);
-        instance.regTestWritePixAndCheck(rp, pix5, IFF_PNG);        /* 4 */
-        instance.pixaAddPix(pixa, pix5, L_INSERT);
+        pix5 = Leptonica1.pixThresholdToValue(null, pix4, 210, 255);
+        Leptonica1.regTestWritePixAndCheck(rp, pix5, IFF_PNG);        /* 4 */
+        Leptonica1.pixaAddPix(pixa, pix5, L_INSERT);
 
-        pix6 = instance.pixThresholdToValue(null, pix5, 200, 0);
-        instance.regTestWritePixAndCheck(rp, pix6, IFF_PNG);        /* 5 */
-        instance.pixaAddPix(pixa, pix6, L_COPY);
+        pix6 = Leptonica1.pixThresholdToValue(null, pix5, 200, 0);
+        Leptonica1.regTestWritePixAndCheck(rp, pix6, IFF_PNG);        /* 5 */
+        Leptonica1.pixaAddPix(pixa, pix6, L_COPY);
 
         /* Get paint-through mask for changed pixels */
-        pix7 = instance.pixThresholdToBinary(pix6, 210);
-        instance.regTestWritePixAndCheck(rp, pix7, IFF_PNG);        /* 6 */
-        instance.pixaAddPix(pixa, pix7, L_INSERT);
+        pix7 = Leptonica1.pixThresholdToBinary(pix6, 210);
+        Leptonica1.regTestWritePixAndCheck(rp, pix7, IFF_PNG);        /* 6 */
+        Leptonica1.pixaAddPix(pixa, pix7, L_INSERT);
 
         /* Add the inverted, cleaned lines to orig.  Because
          * the background was cleaned, the inversion is 0,
          * so when you add, it doesn't lighten those pixels.
          * It only lightens (to white) the pixels in the lines! */
-        instance.pixInvert(pix6, pix6);
-        pix8 = instance.pixAddGray(null, pix2, pix6);
-        instance.regTestWritePixAndCheck(rp, pix8, IFF_PNG);        /* 7 */
-        instance.pixaAddPix(pixa, pix8, L_COPY);
+        Leptonica1.pixInvert(pix6, pix6);
+        pix8 = Leptonica1.pixAddGray(null, pix2, pix6);
+        Leptonica1.regTestWritePixAndCheck(rp, pix8, IFF_PNG);        /* 7 */
+        Leptonica1.pixaAddPix(pixa, pix8, L_COPY);
 
-        pix9 = instance.pixOpenGray(pix8, 1, 9);
-        instance.regTestWritePixAndCheck(rp, pix9, IFF_PNG);        /* 8 */
-        instance.pixaAddPix(pixa, pix9, L_INSERT);
+        pix9 = Leptonica1.pixOpenGray(pix8, 1, 9);
+        Leptonica1.regTestWritePixAndCheck(rp, pix9, IFF_PNG);        /* 8 */
+        Leptonica1.pixaAddPix(pixa, pix9, L_INSERT);
 
-        instance.pixCombineMasked(pix8, pix9, pix7);
-        instance.regTestWritePixAndCheck(rp, pix8, IFF_PNG);        /* 9 */
-        instance.pixaAddPix(pixa, pix8, L_INSERT);
+        Leptonica1.pixCombineMasked(pix8, pix9, pix7);
+        Leptonica1.regTestWritePixAndCheck(rp, pix8, IFF_PNG);        /* 9 */
+        Leptonica1.pixaAddPix(pixa, pix8, L_INSERT);
 
         System.err.println("Writing to: target/test-classes/test-results/lineremoval.pdf");
-        instance.pixaConvertToPdf(pixa, 0, 1.0f, L_FLATE_ENCODE, 0, "lineremoval example",
+        Leptonica1.pixaConvertToPdf(pixa, 0, 1.0f, L_FLATE_ENCODE, 0, "lineremoval example",
                 "target/test-classes/test-results/lineremoval.pdf");
-        pix1 = instance.pixaDisplayTiledInColumns(pixa, 5, 0.5f, 30, 2);
-        instance.pixWrite("target/test-classes/test-results/lineremoval.jpg", pix1, IFF_JFIF_JPEG);
-        instance.pixDisplay(pix1, 100, 100);
+        pix1 = Leptonica1.pixaDisplayTiledInColumns(pixa, 5, 0.5f, 30, 2);
+        Leptonica1.pixWrite("target/test-classes/test-results/lineremoval.jpg", pix1, IFF_JFIF_JPEG);
+        Leptonica1.pixDisplay(pix1, 100, 100);
 
         // resource cleanup
         dispose(pixa);
         dispose(pixs);
         dispose(pix1);
         dispose(pix6);
-//        instance.regTestCleanup(rp);
+//        Leptonica1.regTestCleanup(rp);
     }
 }

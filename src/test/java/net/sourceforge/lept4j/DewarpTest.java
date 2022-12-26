@@ -40,10 +40,9 @@ import org.junit.Test;
 public class DewarpTest {
 
     private final String testResourcesPath = "src/test/resources/test-data";
-    Leptonica instance;
 
     public DewarpTest() {
-        instance = new LeptonicaImpl().getInstance();
+
     }
 
     @BeforeClass
@@ -75,119 +74,119 @@ public class DewarpTest {
         Pix pixs, pixn, pixg, pixb, pixd, pixt1, pixt2;
         Pix pixs2, pixn2, pixg2, pixb2, pixd2;
 
-        instance.setLeptDebugOK(1);
-        instance.lept_mkdir("lept/model");
+        Leptonica1.setLeptDebugOK(1);
+        Leptonica1.lept_mkdir("lept/model");
 
-        /*    pixs = instance.pixRead("1555-7.jpg"); */
+        /*    pixs = Leptonica1.pixRead("1555-7.jpg"); */
         String filename = "cat-35.jpg";
         File image = new File(testResourcesPath, filename);
-        pixs = instance.pixRead(image.getPath());
-        /*    pixs =  instance.pixRead("cat-10.jpg"); */
+        pixs = Leptonica1.pixRead(image.getPath());
+        /*    pixs =  Leptonica1.pixRead("cat-10.jpg"); */
 
         /* Normalize for varying background and binarize */
-        pixn = instance.pixBackgroundNormSimple(pixs, null, null);
-        pixg = instance.pixConvertRGBToGray(pixn, 0.5f, 0.3f, 0.2f);
-        pixb = instance.pixThresholdToBinary(pixg, 130);
+        pixn = Leptonica1.pixBackgroundNormSimple(pixs, null, null);
+        pixg = Leptonica1.pixConvertRGBToGray(pixn, 0.5f, 0.3f, 0.2f);
+        pixb = Leptonica1.pixThresholdToBinary(pixg, 130);
 
         /* Run the basic functions */
-        dewa = instance.dewarpaCreate(2, 30, 1, 10, 30);
-        instance.dewarpaUseBothArrays(dewa, 1);
-        dew1 = instance.dewarpCreate(pixb, 35);
-        instance.dewarpaInsertDewarp(dewa, dew1);
-        instance.dewarpBuildPageModel(dew1, "/tmp/lept/model/dewarp_model1.pdf");
+        dewa = Leptonica1.dewarpaCreate(2, 30, 1, 10, 30);
+        Leptonica1.dewarpaUseBothArrays(dewa, 1);
+        dew1 = Leptonica1.dewarpCreate(pixb, 35);
+        Leptonica1.dewarpaInsertDewarp(dewa, dew1);
+        Leptonica1.dewarpBuildPageModel(dew1, "/tmp/lept/model/dewarp_model1.pdf");
         PointerByReference ppixd = new PointerByReference();
-        instance.dewarpaApplyDisparity(dewa, 35, pixg, 200, 0, 0, ppixd, "/tmp/lept/model/dewarp_apply1.pdf");
+        Leptonica1.dewarpaApplyDisparity(dewa, 35, pixg, 200, 0, 0, ppixd, "/tmp/lept/model/dewarp_apply1.pdf");
         pixd = new Pix(ppixd.getValue());
 
         /* Write out some of the files to be imaged */
-        instance.lept_rmdir("lept/dewtest");
-        instance.lept_mkdir("lept/dewtest");
-        instance.pixWrite("/tmp/lept/dewtest/001.jpg", pixs, IFF_JFIF_JPEG);
-        instance.pixWrite("/tmp/lept/dewtest/002.jpg", pixn, IFF_JFIF_JPEG);
-        instance.pixWrite("/tmp/lept/dewtest/003.jpg", pixg, IFF_JFIF_JPEG);
-        instance.pixWrite("/tmp/lept/dewtest/004.png", pixb, IFF_TIFF_G4);
-        instance.pixWrite("/tmp/lept/dewtest/005.jpg", pixd, IFF_JFIF_JPEG);
-        pixt1 = instance.pixRead("/tmp/lept/dewmod/0020.png");
-        instance.pixWrite("/tmp/lept/dewtest/006.png", pixt1, IFF_PNG);
+        Leptonica1.lept_rmdir("lept/dewtest");
+        Leptonica1.lept_mkdir("lept/dewtest");
+        Leptonica1.pixWrite("/tmp/lept/dewtest/001.jpg", pixs, IFF_JFIF_JPEG);
+        Leptonica1.pixWrite("/tmp/lept/dewtest/002.jpg", pixn, IFF_JFIF_JPEG);
+        Leptonica1.pixWrite("/tmp/lept/dewtest/003.jpg", pixg, IFF_JFIF_JPEG);
+        Leptonica1.pixWrite("/tmp/lept/dewtest/004.png", pixb, IFF_TIFF_G4);
+        Leptonica1.pixWrite("/tmp/lept/dewtest/005.jpg", pixd, IFF_JFIF_JPEG);
+        pixt1 = Leptonica1.pixRead("/tmp/lept/dewmod/0020.png");
+        Leptonica1.pixWrite("/tmp/lept/dewtest/006.png", pixt1, IFF_PNG);
         pixDestroy(pixt1);
-        pixt1 = instance.pixRead("/tmp/lept/dewmod/0030.png");
-        instance.pixWrite("/tmp/lept/dewtest/007.png", pixt1, IFF_PNG);
+        pixt1 = Leptonica1.pixRead("/tmp/lept/dewmod/0030.png");
+        Leptonica1.pixWrite("/tmp/lept/dewtest/007.png", pixt1, IFF_PNG);
         pixDestroy(pixt1);
-        pixt1 = instance.pixRead("/tmp/lept/dewmod/0060.png");
-        instance.pixWrite("/tmp/lept/dewtest/008.png", pixt1, IFF_PNG);
+        pixt1 = Leptonica1.pixRead("/tmp/lept/dewmod/0060.png");
+        Leptonica1.pixWrite("/tmp/lept/dewtest/008.png", pixt1, IFF_PNG);
         pixDestroy(pixt1);
-        pixt1 = instance.pixRead("/tmp/lept/dewmod/0070.png");
-        instance.pixWrite("/tmp/lept/dewtest/009.png", pixt1, IFF_PNG);
+        pixt1 = Leptonica1.pixRead("/tmp/lept/dewmod/0070.png");
+        Leptonica1.pixWrite("/tmp/lept/dewtest/009.png", pixt1, IFF_PNG);
         pixDestroy(pixt1);
-        pixt1 = instance.pixRead("/tmp/lept/dewapply/002.png");
-        instance.pixWrite("/tmp/lept/dewtest/010.png", pixt1, IFF_PNG);
+        pixt1 = Leptonica1.pixRead("/tmp/lept/dewapply/002.png");
+        Leptonica1.pixWrite("/tmp/lept/dewtest/010.png", pixt1, IFF_PNG);
         pixDestroy(pixt1);
-        pixt1 = instance.pixRead("/tmp/lept/dewapply/003.png");
-        instance.pixWrite("/tmp/lept/dewtest/011.png", pixt1, IFF_PNG);
-        pixt2 = instance.pixThresholdToBinary(pixt1, 130);
-        instance.pixWrite("/tmp/lept/dewtest/012.png", pixt2, IFF_TIFF_G4);
+        pixt1 = Leptonica1.pixRead("/tmp/lept/dewapply/003.png");
+        Leptonica1.pixWrite("/tmp/lept/dewtest/011.png", pixt1, IFF_PNG);
+        pixt2 = Leptonica1.pixThresholdToBinary(pixt1, 130);
+        Leptonica1.pixWrite("/tmp/lept/dewtest/012.png", pixt2, IFF_TIFF_G4);
         pixDestroy(pixt1);
         pixDestroy(pixt2);
-        pixt1 = instance.pixRead("/tmp/lept/dewmod/0041.png");
-        instance.pixWrite("/tmp/lept/dewtest/013.png", pixt1, IFF_PNG);
+        pixt1 = Leptonica1.pixRead("/tmp/lept/dewmod/0041.png");
+        Leptonica1.pixWrite("/tmp/lept/dewtest/013.png", pixt1, IFF_PNG);
         pixDestroy(pixt1);
-        pixt1 = instance.pixRead("/tmp/lept/dewmod/0042.png");
-        instance.pixWrite("/tmp/lept/dewtest/014.png", pixt1, IFF_PNG);
+        pixt1 = Leptonica1.pixRead("/tmp/lept/dewmod/0042.png");
+        Leptonica1.pixWrite("/tmp/lept/dewtest/014.png", pixt1, IFF_PNG);
         pixDestroy(pixt1);
-        pixt1 = instance.pixRead("/tmp/lept/dewmod/0051.png");
-        instance.pixWrite("/tmp/lept/dewtest/015.png", pixt1, IFF_PNG);
+        pixt1 = Leptonica1.pixRead("/tmp/lept/dewmod/0051.png");
+        Leptonica1.pixWrite("/tmp/lept/dewtest/015.png", pixt1, IFF_PNG);
         pixDestroy(pixt1);
-        pixt1 = instance.pixRead("/tmp/lept/dewmod/0052.png");
-        instance.pixWrite("/tmp/lept/dewtest/016.png", pixt1, IFF_PNG);
+        pixt1 = Leptonica1.pixRead("/tmp/lept/dewmod/0052.png");
+        Leptonica1.pixWrite("/tmp/lept/dewtest/016.png", pixt1, IFF_PNG);
         pixDestroy(pixt1);
 
         /* Normalize another image, that may not have enough textlines
          * to build an accurate model */
- /*    pixs2 =  instance.pixRead("1555-3.jpg");  */
+ /*    pixs2 =  Leptonica1.pixRead("1555-3.jpg");  */
         filename = "cat-7.jpg";
         image = new File(testResourcesPath, filename);
-        pixs2 = instance.pixRead(image.getPath());
-        /*    pixs2 =  instance.pixRead("cat-14.jpg"); */
-        pixn2 = instance.pixBackgroundNormSimple(pixs2, null, null);
-        pixg2 = instance.pixConvertRGBToGray(pixn2, 0.5f, 0.3f, 0.2f);
-        pixb2 = instance.pixThresholdToBinary(pixg2, 130);
+        pixs2 = Leptonica1.pixRead(image.getPath());
+        /*    pixs2 =  Leptonica1.pixRead("cat-14.jpg"); */
+        pixn2 = Leptonica1.pixBackgroundNormSimple(pixs2, null, null);
+        pixg2 = Leptonica1.pixConvertRGBToGray(pixn2, 0.5f, 0.3f, 0.2f);
+        pixb2 = Leptonica1.pixThresholdToBinary(pixg2, 130);
 
         /* Apply the previous disparity model to this image */
-        dew2 = instance.dewarpCreate(pixb2, 7);
-        instance.dewarpaInsertDewarp(dewa, dew2);
-        instance.dewarpaInsertRefModels(dewa, 0, 1);
+        dew2 = Leptonica1.dewarpCreate(pixb2, 7);
+        Leptonica1.dewarpaInsertDewarp(dewa, dew2);
+        Leptonica1.dewarpaInsertRefModels(dewa, 0, 1);
 //        dewarpaInfo(stderr, dewa);
 
-        instance.dewarpaApplyDisparity(dewa, 7, pixg2, 200, 0, 0, ppixd, "/tmp/lept/model/dewarp_apply2.pdf");
+        Leptonica1.dewarpaApplyDisparity(dewa, 7, pixg2, 200, 0, 0, ppixd, "/tmp/lept/model/dewarp_apply2.pdf");
         pixd2 = new Pix(ppixd.getValue());
         LeptUtils.dispose(dewa);
 
         /* Write out files for the second image */
-        instance.pixWrite("/tmp/lept/dewtest/017.jpg", pixs2, IFF_JFIF_JPEG);
-        instance.pixWrite("/tmp/lept/dewtest/018.jpg", pixg2, IFF_JFIF_JPEG);
-        instance.pixWrite("/tmp/lept/dewtest/019.png", pixb2, IFF_TIFF_G4);
-        instance.pixWrite("/tmp/lept/dewtest/020.jpg", pixd2, IFF_JFIF_JPEG);
-        pixt1 = instance.pixRead("/tmp/lept/dewmod/0060.png");
-        instance.pixWrite("/tmp/lept/dewtest/021.png", pixt1, IFF_PNG);
+        Leptonica1.pixWrite("/tmp/lept/dewtest/017.jpg", pixs2, IFF_JFIF_JPEG);
+        Leptonica1.pixWrite("/tmp/lept/dewtest/018.jpg", pixg2, IFF_JFIF_JPEG);
+        Leptonica1.pixWrite("/tmp/lept/dewtest/019.png", pixb2, IFF_TIFF_G4);
+        Leptonica1.pixWrite("/tmp/lept/dewtest/020.jpg", pixd2, IFF_JFIF_JPEG);
+        pixt1 = Leptonica1.pixRead("/tmp/lept/dewmod/0060.png");
+        Leptonica1.pixWrite("/tmp/lept/dewtest/021.png", pixt1, IFF_PNG);
         pixDestroy(pixt1);
-        pixt1 = instance.pixRead("/tmp/lept/dewapply/002.png");
-        instance.pixWrite("/tmp/lept/dewtest/022.png", pixt1, IFF_PNG);
-        pixt2 = instance.pixThresholdToBinary(pixt1, 130);
-        instance.pixWrite("/tmp/lept/dewtest/023.png", pixt2, IFF_TIFF_G4);
+        pixt1 = Leptonica1.pixRead("/tmp/lept/dewapply/002.png");
+        Leptonica1.pixWrite("/tmp/lept/dewtest/022.png", pixt1, IFF_PNG);
+        pixt2 = Leptonica1.pixThresholdToBinary(pixt1, 130);
+        Leptonica1.pixWrite("/tmp/lept/dewtest/023.png", pixt2, IFF_TIFF_G4);
         pixDestroy(pixt1);
         pixDestroy(pixt2);
-        pixt1 = instance.pixRead("/tmp/lept/dewmod/0070.png");
-        instance.pixWrite("/tmp/lept/dewtest/024.png", pixt1, IFF_PNG);
+        pixt1 = Leptonica1.pixRead("/tmp/lept/dewmod/0070.png");
+        Leptonica1.pixWrite("/tmp/lept/dewtest/024.png", pixt1, IFF_PNG);
         pixDestroy(pixt1);
-        pixt1 = instance.pixRead("/tmp/lept/dewapply/003.png");
-        instance.pixWrite("/tmp/lept/dewtest/025.png", pixt1, IFF_PNG);
-        pixt2 = instance.pixThresholdToBinary(pixt1, 130);
-        instance.pixWrite("/tmp/lept/dewtest/026.png", pixt2, IFF_TIFF_G4);
+        pixt1 = Leptonica1.pixRead("/tmp/lept/dewapply/003.png");
+        Leptonica1.pixWrite("/tmp/lept/dewtest/025.png", pixt1, IFF_PNG);
+        pixt2 = Leptonica1.pixThresholdToBinary(pixt1, 130);
+        Leptonica1.pixWrite("/tmp/lept/dewtest/026.png", pixt2, IFF_TIFF_G4);
         pixDestroy(pixt1);
         pixDestroy(pixt2);
 
         /* Generate the big pdf file */
-        instance.convertFilesToPdf("/tmp/lept/dewtest", null, 135, 1.0f, 0, 0, "Dewarp Test", "/tmp/lept/dewarptest1.pdf");
+        Leptonica1.convertFilesToPdf("/tmp/lept/dewtest", null, 135, 1.0f, 0, 0, "Dewarp Test", "/tmp/lept/dewarptest1.pdf");
 
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
             System.out.println("pdf file made: " + System.getProperty("java.io.tmpdir") + "lept\\model\\dewarptest1.pdf");
@@ -195,8 +194,8 @@ public class DewarpTest {
             System.out.println("pdf file made: /tmp/lept/model/dewarptest1.pdf");
         }
 
-        instance.lept_rmdir("lept/dewmod");
-        instance.lept_rmdir("lept/dewtest");
+        Leptonica1.lept_rmdir("lept/dewmod");
+        Leptonica1.lept_rmdir("lept/dewtest");
         pixDestroy(pixs);
         pixDestroy(pixn);
         pixDestroy(pixg);
