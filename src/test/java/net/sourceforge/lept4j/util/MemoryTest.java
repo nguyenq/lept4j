@@ -15,13 +15,13 @@
  */
 package net.sourceforge.lept4j.util;
 
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 public class MemoryTest {
 
     @Test
-    @Ignore
+    @Disabled
     public void testConvert() throws Exception {
         LeptUtilsTest test = new LeptUtilsTest();
         for (int i = 0; i < 10000; i++) {

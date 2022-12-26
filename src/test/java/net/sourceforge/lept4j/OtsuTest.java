@@ -21,11 +21,7 @@ import java.nio.IntBuffer;
 import static net.sourceforge.lept4j.ILeptonica.*;
 import net.sourceforge.lept4j.util.LeptUtils;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.*;
 
 /**
  * Java version of <code>otsutest2.c</code>.
@@ -51,19 +47,19 @@ public class OtsuTest {
     public OtsuTest() {
     }
 
-    @BeforeClass
+    @BeforeAll
     public static void setUpClass() {
     }
 
-    @AfterClass
+    @AfterAll
     public static void tearDownClass() {
     }
 
-    @Before
+    @BeforeEach
     public void setUp() {
     }
 
-    @After
+    @AfterEach
     public void tearDown() {
     }
 

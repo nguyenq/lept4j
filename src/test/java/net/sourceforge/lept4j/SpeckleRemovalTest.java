@@ -23,11 +23,7 @@ import static net.sourceforge.lept4j.ILeptonica.IFF_JFIF_JPEG;
 import static net.sourceforge.lept4j.ILeptonica.IFF_PNG;
 import net.sourceforge.lept4j.util.LeptUtils;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.*;
 
 /**
  * Java version of <code>speckle_reg.c</code>, demonstrating morphological
@@ -47,19 +43,19 @@ public class SpeckleRemovalTest {
         instance = new LeptonicaImpl().getInstance();
     }
 
-    @BeforeClass
+    @BeforeAll
     public static void setUpClass() {
     }
 
-    @AfterClass
+    @AfterAll
     public static void tearDownClass() {
     }
 
-    @Before
+    @BeforeEach
     public void setUp() {
     }
 
-    @After
+    @AfterEach
     public void tearDown() {
     }
 

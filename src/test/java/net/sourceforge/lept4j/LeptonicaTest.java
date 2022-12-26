@@ -23,12 +23,8 @@ import java.io.File;
 import java.nio.FloatBuffer;
 import java.nio.IntBuffer;
 import net.sourceforge.lept4j.util.LeptUtils;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class LeptonicaTest {
     
@@ -39,20 +35,20 @@ public class LeptonicaTest {
     public LeptonicaTest() {
     }
     
-    @BeforeClass
+    @BeforeAll
     public static void setUpClass() {
     }
     
-    @AfterClass
+    @AfterAll
     public static void tearDownClass() {
     }
     
-    @Before
+    @BeforeEach
     public void setUp() {
         instance = new LeptonicaImpl().getInstance();
     }
     
-    @After
+    @AfterEach
     public void tearDown() {
     }
 

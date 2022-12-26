@@ -21,11 +21,7 @@ import static net.sourceforge.lept4j.ILeptonica.IFF_JFIF_JPEG;
 import static net.sourceforge.lept4j.ILeptonica.IFF_PNG;
 import static net.sourceforge.lept4j.ILeptonica.IFF_TIFF_G4;
 import net.sourceforge.lept4j.util.LeptUtils;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.*;
 
 /**
  * Java version of <code>dewarptest1.c</code>, this exercises functions in
@@ -45,19 +41,19 @@ public class DewarpTest {
 
     }
 
-    @BeforeClass
+    @BeforeAll
     public static void setUpClass() {
     }
 
-    @AfterClass
+    @AfterAll
     public static void tearDownClass() {
     }
 
-    @Before
+    @BeforeEach
     public void setUp() {
     }
 
-    @After
+    @AfterEach
     public void tearDown() {
     }
 

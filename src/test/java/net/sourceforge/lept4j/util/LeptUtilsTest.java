@@ -27,13 +27,8 @@ import javax.imageio.ImageIO;
 
 import net.sourceforge.lept4j.*;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import static org.junit.Assert.*;
-import org.junit.Ignore;
+import org.junit.jupiter.api.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class LeptUtilsTest {
 
@@ -42,19 +37,19 @@ public class LeptUtilsTest {
     public LeptUtilsTest() {
     }
 
-    @BeforeClass
+    @BeforeAll
     public static void setUpClass() {
     }
 
-    @AfterClass
+    @AfterAll
     public static void tearDownClass() {
     }
 
-    @Before
+    @BeforeEach
     public void setUp() {
     }
 
-    @After
+    @AfterEach
     public void tearDown() {
     }
 
@@ -67,8 +62,7 @@ public class LeptUtilsTest {
     public void testConvertPixToImage() throws Exception {
         System.out.println("convertPixToImage");
         File input = new File(testResourcesPath, "eurotext.png");
-        Leptonica leptInstance = Leptonica.INSTANCE;
-        Pix pix = leptInstance.pixRead(input.getPath());
+        Pix pix = Leptonica1.pixRead(input.getPath());
         BufferedImage result = LeptUtils.convertPixToImage(pix);
         assertEquals(pix.w, result.getWidth());
         assertEquals(pix.h, result.getHeight());
@@ -76,7 +70,7 @@ public class LeptUtilsTest {
         System.out.println(String.format("Image properties: width=%d, height=%d, depth=%d", result.getWidth(), result.getHeight(), result.getColorModel().getPixelSize()));
         PointerByReference pRef = new PointerByReference();
         pRef.setValue(pix.getPointer());
-        leptInstance.pixDestroy(pRef);
+        Leptonica1.pixDestroy(pRef);
     }
 
     /**
@@ -102,8 +96,8 @@ public class LeptUtilsTest {
     /**
      * Test of getImageByteBuffer method, of class LeptUtils.
      */
+    @Disabled("Disabled until finding a way")
     @Test
-    @Ignore
     public void testGetImageByteBuffer() throws Exception {
         System.out.println("getImageByteBuffer");
         RenderedImage image = null;

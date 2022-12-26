@@ -19,11 +19,7 @@ import com.sun.jna.StringArray;
 import com.sun.jna.ptr.PointerByReference;
 import java.io.File;
 import java.nio.FloatBuffer;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.*;
 
 import static net.sourceforge.lept4j.ILeptonica.*;
 import static net.sourceforge.lept4j.util.LeptUtils.dispose;
@@ -43,19 +39,19 @@ public class LineRemovalTest {
 
     }
 
-    @BeforeClass
+    @BeforeAll
     public static void setUpClass() {
     }
 
-    @AfterClass
+    @AfterAll
     public static void tearDownClass() {
     }
 
-    @Before
+    @BeforeEach
     public void setUp() {
     }
 
-    @After
+    @AfterEach
     public void tearDown() {
     }
 
