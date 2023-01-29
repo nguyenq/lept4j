@@ -140,3 +140,6 @@ Version 1.16.2 (7 July 2022):
 
 Version 1.17.0 (25 December 2022):
 - Upgrade to Leptonica 1.83.0
+
+Version 1.18.0 (29 January 2023):
+- Upgrade to Leptonica 1.83.1

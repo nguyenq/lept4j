@@ -776,7 +776,7 @@ public interface ILeptonica {
 	public static final float L_BLUE_WEIGHT = 0.2f;
 	public static final int LIBLEPT_MAJOR_VERSION = (int)1;
 	public static final int LIBLEPT_MINOR_VERSION = (int)83;
-	public static final int LIBLEPT_PATCH_VERSION = (int)0;
+	public static final int LIBLEPT_PATCH_VERSION = (int)1;
 	public static final int HAVE_LIBJPEG = (int)1;
 	public static final int HAVE_LIBTIFF = (int)1;
 	public static final int HAVE_LIBPNG = (int)1;
