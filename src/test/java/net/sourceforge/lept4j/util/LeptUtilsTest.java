@@ -117,6 +117,7 @@ public class LeptUtilsTest {
         Leptonica1.pixDisplay(pixs, 100, 100);
         // remove horizontal lines
         Pix result = LeptUtils.removeLines(pixs);
+        new File("target/test-classes/test-results").mkdirs();
         String outfile = "target/test-classes/test-results/result-hlines-removed.png";
         Leptonica1.pixWrite(outfile, result, ILeptonica.IFF_PNG);
         Leptonica1.pixDisplay(result, 100, 100);
@@ -160,6 +161,7 @@ public class LeptUtilsTest {
         File input = new File(testResourcesPath, "w91frag.jpg");
         Pix pixs = Leptonica1.pixRead(input.getPath());
         Leptonica1.pixDisplay(pixs, 100, 100);
+        new File("target/test-classes/test-results").mkdirs();
         String outfile = "target/test-classes/test-results/result-despeckled2.png";
         Pix result = LeptUtils.despeckle(pixs, LeptUtils.SEL_STR2, 2);
         Leptonica1.pixWrite(outfile, result, ILeptonica.IFF_PNG);
