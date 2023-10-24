@@ -146,3 +146,6 @@ Version 1.18.0 (29 January 2023):
 
 Version 1.18.1 (28 July 2023):
 - Update dependencies
+
+Version 1.18.2 (23 October 2023):
+- Update dependencies
