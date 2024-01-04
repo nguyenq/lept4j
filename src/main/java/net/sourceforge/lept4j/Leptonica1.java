@@ -187,6 +187,17 @@ public class Leptonica1 implements Library, ILeptonica {
 
     /**
      * Original signature :
+     * <code>PIX* pixBackgroundNormTo1MinMax(PIX*, l_int32, l_int32)</code>
+     */
+    public static native Pix pixBackgroundNormTo1MinMax(Pix pixs, int contrast, int scalefactor);
+
+    /**
+     * Original signature : <code>PIX* pixConvertTo8MinMax(PIX*)</code>
+     */
+    public static native Pix pixConvertTo8MinMax(Pix pixs);
+
+    /**
+     * Original signature :
      * <code>PIX* pixAffineSampledPta(PIX*, PTA*, PTA*, l_int32)</code>
      */
     public static native Pix pixAffineSampledPta(Pix pixs, Pta ptad, Pta ptas, int incolor);
@@ -412,8 +423,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native void l_setDataDibit(Pointer line, int n, int val);
 
     /**
-     * Original signature :
-     * <code>void l_clearDataDibit(void*, l_int32)</code>
+     * Original signature : <code>void l_clearDataDibit(void*, l_int32)</code>
      */
     public static native void l_clearDataDibit(Pointer line, int n);
 
@@ -430,8 +440,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native void l_setDataQbit(Pointer line, int n, int val);
 
     /**
-     * Original signature :
-     * <code>void l_clearDataQbit(void*, l_int32)</code>
+     * Original signature : <code>void l_clearDataQbit(void*, l_int32)</code>
      */
     public static native void l_clearDataQbit(Pointer line, int n);
 
@@ -585,8 +594,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Pix pixBlockBilateralExact(Pix pixs, float spatial_stdev, float range_stdev);
 
     /**
-     * Original signature :
-     * <code>L_KERNEL* makeRangeKernel(l_float32)</code>
+     * Original signature : <code>L_KERNEL* makeRangeKernel(l_float32)</code>
      */
     public static native L_Kernel makeRangeKernel(float range_stdev);
 
@@ -715,13 +723,16 @@ public class Leptonica1 implements Library, ILeptonica {
      * <code>l_ok pixThresholdByConnComp(PIX*, PIX*, l_int32, l_int32, l_int32, l_float32, l_float32, l_int32*, PIX**, l_int32)</code>
      */
     public static native int pixThresholdByConnComp(Pix pixs, Pix pixm, int start, int end, int incr, float thresh48, float threshdiff, IntByReference pglobthresh, PointerByReference ppixd, int debugflag);
-    
+
     /**
-     * Original signature : <code>l_ok pixThresholdByHisto(PIX*, l_int32, l_int32, l_int32, l_int32*, PIX**, NUMA**, PIX**)</code><br>
+     * Original signature :
+     * <code>l_ok pixThresholdByHisto(PIX*, l_int32, l_int32, l_int32, l_int32*, PIX**, NUMA**, PIX**)</code>
      */
     public static native int pixThresholdByHisto(Pix pixs, int factor, int halfw, int skip, IntBuffer pthresh, PointerByReference ppixd, PointerByReference pnahisto, PointerByReference ppixhisto);
+
     /**
-     * Original signature : <code>l_ok pixThresholdByHisto(PIX*, l_int32, l_int32, l_int32, l_int32*, PIX**, NUMA**, PIX**)</code><br>
+     * Original signature :
+     * <code>l_ok pixThresholdByHisto(PIX*, l_int32, l_int32, l_int32, l_int32*, PIX**, NUMA**, PIX**)</code>
      */
     public static native int pixThresholdByHisto(Pix pixs, int factor, int halfw, int skip, IntByReference pthresh, PointerByReference ppixd, PointerByReference pnahisto, PointerByReference ppixhisto);
 
@@ -738,8 +749,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Pix pixExpandBinaryPower2(Pix pixs, int factor);
 
     /**
-     * Original signature :
-     * <code>PIX* pixReduceBinary2(PIX*, l_uint8*)</code>
+     * Original signature : <code>PIX* pixReduceBinary2(PIX*, l_uint8*)</code>
      */
     public static native Pix pixReduceBinary2(Pix pixs, ByteBuffer intab);
 
@@ -862,8 +872,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int pixLinearEdgeFade(Pix pixs, int dir, int fadeto, float distfract, float maxfade);
 
     /**
-     * Original signature :
-     * <code>L_BMF* bmfCreate(const char*, l_int32)</code>
+     * Original signature : <code>L_BMF* bmfCreate(const char*, l_int32)</code>
      */
     public static native L_Bmf bmfCreate(String dir, int fontsize);
 
@@ -1015,8 +1024,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native void boxaDestroy(PointerByReference pboxa);
 
     /**
-     * Original signature :
-     * <code>l_ok boxaAddBox(BOXA*, BOX*, l_int32)</code>
+     * Original signature : <code>l_ok boxaAddBox(BOXA*, BOX*, l_int32)</code>
      */
     public static native int boxaAddBox(Boxa boxa, Box box, int copyflag);
 
@@ -1185,8 +1193,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int boxaaInsertBoxa(Boxaa baa, int index, Boxa boxa);
 
     /**
-     * Original signature :
-     * <code>l_ok boxaaRemoveBoxa(BOXAA*, l_int32)</code>
+     * Original signature : <code>l_ok boxaaRemoveBoxa(BOXAA*, l_int32)</code>
      */
     public static native int boxaaRemoveBoxa(Boxaa baa, int index);
 
@@ -1219,14 +1226,12 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Boxaa boxaaReadMem(ByteBuffer data, NativeSize size);
 
     /**
-     * Original signature :
-     * <code>l_ok boxaaWrite(const char*, BOXAA*)</code>
+     * Original signature : <code>l_ok boxaaWrite(const char*, BOXAA*)</code>
      */
     public static native int boxaaWrite(String filename, Boxaa baa);
 
     /**
-     * Original signature :
-     * <code>l_ok boxaaWriteStream(FILE*, BOXAA*)</code>
+     * Original signature : <code>l_ok boxaaWriteStream(FILE*, BOXAA*)</code>
      */
     public static native int boxaaWriteStream(FILE fp, Boxaa baa);
 
@@ -1253,8 +1258,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Boxa boxaReadMem(ByteBuffer data, NativeSize size);
 
     /**
-     * Original signature :
-     * <code>l_ok boxaWriteDebug(const char*, BOXA*)</code>
+     * Original signature : <code>l_ok boxaWriteDebug(const char*, BOXA*)</code>
      */
     public static native int boxaWriteDebug(String filename, Boxa boxa);
 
@@ -1280,14 +1284,12 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int boxaWriteMem(PointerByReference pdata, NativeSizeByReference psize, Boxa boxa);
 
     /**
-     * Original signature :
-     * <code>l_ok boxPrintStreamInfo(FILE*, BOX*)</code>
+     * Original signature : <code>l_ok boxPrintStreamInfo(FILE*, BOX*)</code>
      */
     public static native int boxPrintStreamInfo(FILE fp, Box box);
 
     /**
-     * Original signature :
-     * <code>l_ok boxContains(BOX*, BOX*, l_int32*)</code>
+     * Original signature : <code>l_ok boxContains(BOX*, BOX*, l_int32*)</code>
      */
     public static native int boxContains(Box box1, Box box2, IntBuffer presult);
 
@@ -1298,8 +1300,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int boxIntersects(Box box1, Box box2, IntBuffer presult);
 
     /**
-     * Original signature :
-     * <code>BOXA* boxaContainedInBox(BOXA*, BOX*)</code>
+     * Original signature : <code>BOXA* boxaContainedInBox(BOXA*, BOX*)</code>
      */
     public static native Boxa boxaContainedInBox(Boxa boxas, Box box);
 
@@ -1316,8 +1317,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int boxaContainedInBoxa(Boxa boxa1, Boxa boxa2, IntBuffer pcontained);
 
     /**
-     * Original signature :
-     * <code>BOXA* boxaIntersectsBox(BOXA*, BOX*)</code>
+     * Original signature : <code>BOXA* boxaIntersectsBox(BOXA*, BOX*)</code>
      */
     public static native Boxa boxaIntersectsBox(Boxa boxas, Box box);
 
@@ -1333,8 +1333,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Boxa boxaClipToBox(Boxa boxas, Box box);
 
     /**
-     * Original signature :
-     * <code>BOXA* boxaCombineOverlaps(BOXA*, PIXA*)</code>
+     * Original signature : <code>BOXA* boxaCombineOverlaps(BOXA*, PIXA*)</code>
      */
     public static native Boxa boxaCombineOverlaps(Boxa boxas, Pixa pixadb);
 
@@ -1617,8 +1616,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Boxaa boxaSort2d(Boxa boxas, PointerByReference pnaad, int delta1, int delta2, int minh1);
 
     /**
-     * Original signature :
-     * <code>BOXAA* boxaSort2dByIndex(BOXA*, NUMAA*)</code>
+     * Original signature : <code>BOXAA* boxaSort2dByIndex(BOXA*, NUMAA*)</code>
      */
     public static native Boxaa boxaSort2dByIndex(Boxa boxas, Numaa naa);
 
@@ -1635,8 +1633,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int boxaExtractAsPta(Boxa boxa, PointerByReference pptal, PointerByReference pptat, PointerByReference pptar, PointerByReference pptab, PointerByReference pptaw, PointerByReference pptah, int keepinvalid);
 
     /**
-     * Original signature :
-     * <code>PTA* boxaExtractCorners(BOXA*, l_int32)</code>
+     * Original signature : <code>PTA* boxaExtractCorners(BOXA*, l_int32)</code>
      */
     public static native Pta boxaExtractCorners(Boxa boxa, int loc);
 
@@ -1724,8 +1721,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Pix pixSetBlackOrWhiteBoxa(Pix pixs, Boxa boxa, int op);
 
     /**
-     * Original signature :
-     * <code>PIX* pixPaintBoxaRandom(PIX*, BOXA*)</code>
+     * Original signature : <code>PIX* pixPaintBoxaRandom(PIX*, BOXA*)</code>
      */
     public static native Pix pixPaintBoxaRandom(Pix pixs, Boxa boxa);
 
@@ -1856,14 +1852,12 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Boxa boxaSelectWithIndicator(Boxa boxas, Numa na, IntBuffer pchanged);
 
     /**
-     * Original signature :
-     * <code>BOXA* boxaPermutePseudorandom(BOXA*)</code>
+     * Original signature : <code>BOXA* boxaPermutePseudorandom(BOXA*)</code>
      */
     public static native Boxa boxaPermutePseudorandom(Boxa boxas);
 
     /**
-     * Original signature :
-     * <code>BOXA* boxaPermuteRandom(BOXA*, BOXA*)</code>
+     * Original signature : <code>BOXA* boxaPermuteRandom(BOXA*, BOXA*)</code>
      */
     public static native Boxa boxaPermuteRandom(Boxa boxad, Boxa boxas);
 
@@ -1874,14 +1868,12 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int boxaSwapBoxes(Boxa boxa, int i, int j);
 
     /**
-     * Original signature :
-     * <code>PTA* boxaConvertToPta(BOXA*, l_int32)</code>
+     * Original signature : <code>PTA* boxaConvertToPta(BOXA*, l_int32)</code>
      */
     public static native Pta boxaConvertToPta(Boxa boxa, int ncorners);
 
     /**
-     * Original signature :
-     * <code>BOXA* ptaConvertToBoxa(PTA*, l_int32)</code>
+     * Original signature : <code>BOXA* ptaConvertToBoxa(PTA*, l_int32)</code>
      */
     public static native Boxa ptaConvertToBoxa(Pta pta, int ncorners);
 
@@ -2068,14 +2060,12 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native L_Bytea l_byteaInitFromFile(String fname);
 
     /**
-     * Original signature :
-     * <code>L_BYTEA* l_byteaInitFromStream(FILE*)</code>
+     * Original signature : <code>L_BYTEA* l_byteaInitFromStream(FILE*)</code>
      */
     public static native L_Bytea l_byteaInitFromStream(FILE fp);
 
     /**
-     * Original signature :
-     * <code>L_BYTEA* l_byteaCopy(L_BYTEA*, l_int32)</code>
+     * Original signature : <code>L_BYTEA* l_byteaCopy(L_BYTEA*, l_int32)</code>
      */
     public static native L_Bytea l_byteaCopy(L_Bytea bas, int copyflag);
 
@@ -2114,8 +2104,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int l_byteaAppendString(L_Bytea ba, String str);
 
     /**
-     * Original signature :
-     * <code>l_ok l_byteaJoin(L_BYTEA*, L_BYTEA**)</code>
+     * Original signature : <code>l_ok l_byteaJoin(L_BYTEA*, L_BYTEA**)</code>
      */
     public static native int l_byteaJoin(L_Bytea ba1, PointerByReference pba2);
 
@@ -2171,14 +2160,12 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int pixGetOuterBorder(CCBord ccb, Pix pixs, Box box);
 
     /**
-     * Original signature :
-     * <code>l_ok ccbaGenerateGlobalLocs(CCBORDA*)</code>
+     * Original signature : <code>l_ok ccbaGenerateGlobalLocs(CCBORDA*)</code>
      */
     public static native int ccbaGenerateGlobalLocs(CCBorda ccba);
 
     /**
-     * Original signature :
-     * <code>l_ok ccbaGenerateStepChains(CCBORDA*)</code>
+     * Original signature : <code>l_ok ccbaGenerateStepChains(CCBORDA*)</code>
      */
     public static native int ccbaGenerateStepChains(CCBorda ccba);
 
@@ -2195,8 +2182,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int ccbaGenerateSPGlobalLocs(CCBorda ccba, int ptsflag);
 
     /**
-     * Original signature :
-     * <code>l_ok ccbaGenerateSinglePath(CCBORDA*)</code>
+     * Original signature : <code>l_ok ccbaGenerateSinglePath(CCBORDA*)</code>
      */
     public static native int ccbaGenerateSinglePath(CCBorda ccba);
 
@@ -2221,14 +2207,12 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Pix ccbaDisplayImage2(CCBorda ccba);
 
     /**
-     * Original signature :
-     * <code>l_ok ccbaWrite(const char*, CCBORDA*)</code>
+     * Original signature : <code>l_ok ccbaWrite(const char*, CCBORDA*)</code>
      */
     public static native int ccbaWrite(String filename, CCBorda ccba);
 
     /**
-     * Original signature :
-     * <code>l_ok ccbaWriteStream(FILE*, CCBORDA*)</code>
+     * Original signature : <code>l_ok ccbaWriteStream(FILE*, CCBORDA*)</code>
      */
     public static native int ccbaWriteStream(FILE fp, CCBorda ccba);
 
@@ -2416,8 +2400,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int pixNumColors(Pix pixs, int factor, IntBuffer pncolors);
 
     /**
-     * Original signature :
-     * <code>PIX* pixConvertRGBToCmapLossless(PIX*)</code>
+     * Original signature : <code>PIX* pixConvertRGBToCmapLossless(PIX*)</code>
      */
     public static native Pix pixConvertRGBToCmapLossless(Pix pixs);
 
@@ -2470,8 +2453,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native L_Colorfill l_colorfillCreate(Pix pixs, int nx, int ny);
 
     /**
-     * Original signature :
-     * <code>void l_colorfillDestroy(L_COLORFILL**)</code>
+     * Original signature : <code>void l_colorfillDestroy(L_COLORFILL**)</code>
      */
     public static native void l_colorfillDestroy(PointerByReference pcf);
 
@@ -2577,8 +2559,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native PixColormap pixcmapCreateLinear(int d, int nlevels);
 
     /**
-     * Original signature :
-     * <code>PIXCMAP* pixcmapCopy(const PIXCMAP*)</code>
+     * Original signature : <code>PIXCMAP* pixcmapCopy(const PIXCMAP*)</code>
      */
     public static native PixColormap pixcmapCopy(PixColormap cmaps);
 
@@ -2636,14 +2617,12 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int pixcmapSetBlackAndWhite(PixColormap cmap, int setblack, int setwhite);
 
     /**
-     * Original signature :
-     * <code>l_int32 pixcmapGetCount(const PIXCMAP*)</code>
+     * Original signature : <code>l_int32 pixcmapGetCount(const PIXCMAP*)</code>
      */
     public static native int pixcmapGetCount(PixColormap cmap);
 
     /**
-     * Original signature :
-     * <code>l_int32 pixcmapGetFreeCount(PIXCMAP*)</code>
+     * Original signature : <code>l_int32 pixcmapGetFreeCount(PIXCMAP*)</code>
      */
     public static native int pixcmapGetFreeCount(PixColormap cmap);
 
@@ -2772,8 +2751,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native PixColormap pixcmapGrayToFalseColor(float gamma);
 
     /**
-     * Original signature :
-     * <code>PIXCMAP* pixcmapGrayToColor(l_uint32)</code>
+     * Original signature : <code>PIXCMAP* pixcmapGrayToColor(l_uint32)</code>
      */
     public static native PixColormap pixcmapGrayToColor(int color);
 
@@ -2784,14 +2762,12 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native PixColormap pixcmapColorToGray(PixColormap cmaps, float rwt, float gwt, float bwt);
 
     /**
-     * Original signature :
-     * <code>PIXCMAP* pixcmapConvertTo4(PIXCMAP*)</code>
+     * Original signature : <code>PIXCMAP* pixcmapConvertTo4(PIXCMAP*)</code>
      */
     public static native PixColormap pixcmapConvertTo4(PixColormap cmaps);
 
     /**
-     * Original signature :
-     * <code>PIXCMAP* pixcmapConvertTo8(PIXCMAP*)</code>
+     * Original signature : <code>PIXCMAP* pixcmapConvertTo8(PIXCMAP*)</code>
      */
     public static native PixColormap pixcmapConvertTo8(PixColormap cmaps);
 
@@ -2997,8 +2973,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int pixNumberOccupiedOctcubes(Pix pix, int level, int mincount, float minfract, IntBuffer pncolors);
 
     /**
-     * Original signature :
-     * <code>PIX* pixMedianCutQuant(PIX*, l_int32)</code>
+     * Original signature : <code>PIX* pixMedianCutQuant(PIX*, l_int32)</code>
      */
     public static native Pix pixMedianCutQuant(Pix pixs, int ditherflag);
 
@@ -3079,14 +3054,12 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int convertHSVToRGB(int hval, int sval, int vval, IntBuffer prval, IntBuffer pgval, IntBuffer pbval);
 
     /**
-     * Original signature :
-     * <code>l_ok pixcmapConvertRGBToHSV(PIXCMAP*)</code>
+     * Original signature : <code>l_ok pixcmapConvertRGBToHSV(PIXCMAP*)</code>
      */
     public static native int pixcmapConvertRGBToHSV(PixColormap cmap);
 
     /**
-     * Original signature :
-     * <code>l_ok pixcmapConvertHSVToRGB(PIXCMAP*)</code>
+     * Original signature : <code>l_ok pixcmapConvertHSVToRGB(PIXCMAP*)</code>
      */
     public static native int pixcmapConvertHSVToRGB(PixColormap cmap);
 
@@ -3096,8 +3069,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Pix pixConvertRGBToHue(Pix pixs);
 
     /**
-     * Original signature :
-     * <code>PIX* pixConvertRGBToSaturation(PIX*)</code>
+     * Original signature : <code>PIX* pixConvertRGBToSaturation(PIX*)</code>
      */
     public static native Pix pixConvertRGBToSaturation(Pix pixs);
 
@@ -3177,14 +3149,12 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int convertYUVToRGB(int yval, int uval, int vval, IntBuffer prval, IntBuffer pgval, IntBuffer pbval);
 
     /**
-     * Original signature :
-     * <code>l_ok pixcmapConvertRGBToYUV(PIXCMAP*)</code>
+     * Original signature : <code>l_ok pixcmapConvertRGBToYUV(PIXCMAP*)</code>
      */
     public static native int pixcmapConvertRGBToYUV(PixColormap cmap);
 
     /**
-     * Original signature :
-     * <code>l_ok pixcmapConvertYUVToRGB(PIXCMAP*)</code>
+     * Original signature : <code>l_ok pixcmapConvertYUVToRGB(PIXCMAP*)</code>
      */
     public static native int pixcmapConvertYUVToRGB(PixColormap cmap);
 
@@ -3283,8 +3253,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int cmapEqual(PixColormap cmap1, PixColormap cmap2, int ncomps, IntBuffer psame);
 
     /**
-     * Original signature :
-     * <code>l_ok pixUsesCmapColor(PIX*, l_int32*)</code>
+     * Original signature : <code>l_ok pixUsesCmapColor(PIX*, l_int32*)</code>
      */
     public static native int pixUsesCmapColor(Pix pixs, IntBuffer pcolor);
 
@@ -3296,7 +3265,12 @@ public class Leptonica1 implements Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>PIX* pixDisplayDiffBinary(PIX*, PIX*)</code>
+     * <code>PIX* pixDisplayDiff(PIX*, PIX*, l_int32, l_int32, l_uint32)</code>
+     */
+    public static native Pix pixDisplayDiff(Pix pix1, Pix pix2, int showall, int mindiff, int diffcolor);
+
+    /**
+     * Original signature : <code>PIX* pixDisplayDiffBinary(PIX*, PIX*)</code>
      */
     public static native Pix pixDisplayDiffBinary(Pix pix1, Pix pix2);
 
@@ -3646,8 +3620,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Pix pixConvolveSep(Pix pixs, L_Kernel kelx, L_Kernel kely, int outdepth, int normflag);
 
     /**
-     * Original signature :
-     * <code>PIX* pixConvolveRGB(PIX*, L_KERNEL*)</code>
+     * Original signature : <code>PIX* pixConvolveRGB(PIX*, L_KERNEL*)</code>
      */
     public static native Pix pixConvolveRGB(Pix pixs, L_Kernel kel);
 
@@ -3717,8 +3690,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int pixCorrelationScoreShifted(Pix pix1, Pix pix2, int area1, int area2, int delx, int dely, IntBuffer tab, FloatBuffer pscore);
 
     /**
-     * Original signature :
-     * <code>L_DEWARP* dewarpCreate(PIX*, l_int32)</code>
+     * Original signature : <code>L_DEWARP* dewarpCreate(PIX*, l_int32)</code>
      */
     public static native L_Dewarp dewarpCreate(Pix pixs, int pageno);
 
@@ -3979,14 +3951,12 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int dewarpaInsertRefModels(L_Dewarpa dewa, int notests, int debug);
 
     /**
-     * Original signature :
-     * <code>l_ok dewarpaStripRefModels(L_DEWARPA*)</code>
+     * Original signature : <code>l_ok dewarpaStripRefModels(L_DEWARPA*)</code>
      */
     public static native int dewarpaStripRefModels(L_Dewarpa dewa);
 
     /**
-     * Original signature :
-     * <code>l_ok dewarpaRestoreModels(L_DEWARPA*)</code>
+     * Original signature : <code>l_ok dewarpaRestoreModels(L_DEWARPA*)</code>
      */
     public static native int dewarpaRestoreModels(L_Dewarpa dewa);
 
@@ -4063,8 +4033,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int l_dnaEmpty(L_Dna da);
 
     /**
-     * Original signature :
-     * <code>l_ok l_dnaAddNumber(L_DNA*, l_float64)</code>
+     * Original signature : <code>l_ok l_dnaAddNumber(L_DNA*, l_float64)</code>
      */
     public static native int l_dnaAddNumber(L_Dna da, double val);
 
@@ -4075,8 +4044,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int l_dnaInsertNumber(L_Dna da, int index, double val);
 
     /**
-     * Original signature :
-     * <code>l_ok l_dnaRemoveNumber(L_DNA*, l_int32)</code>
+     * Original signature : <code>l_ok l_dnaRemoveNumber(L_DNA*, l_int32)</code>
      */
     public static native int l_dnaRemoveNumber(L_Dna da, int index);
 
@@ -4166,14 +4134,12 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native L_Dna l_dnaReadMem(ByteBuffer data, NativeSize size);
 
     /**
-     * Original signature :
-     * <code>l_ok l_dnaWrite(const char*, L_DNA*)</code>
+     * Original signature : <code>l_ok l_dnaWrite(const char*, L_DNA*)</code>
      */
     public static native int l_dnaWrite(String filename, L_Dna da);
 
     /**
-     * Original signature :
-     * <code>l_ok l_dnaWriteStream(FILE*, L_DNA*)</code>
+     * Original signature : <code>l_ok l_dnaWriteStream(FILE*, L_DNA*)</code>
      */
     public static native int l_dnaWriteStream(FILE fp, L_Dna da);
 
@@ -4227,8 +4193,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int l_dnaaGetDnaCount(L_Dnaa daa, int index);
 
     /**
-     * Original signature :
-     * <code>l_int32 l_dnaaGetNumberCount(L_DNAA*)</code>
+     * Original signature : <code>l_int32 l_dnaaGetNumberCount(L_DNAA*)</code>
      */
     public static native int l_dnaaGetNumberCount(L_Dnaa daa);
 
@@ -4273,14 +4238,12 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native L_Dnaa l_dnaaReadMem(ByteBuffer data, NativeSize size);
 
     /**
-     * Original signature :
-     * <code>l_ok l_dnaaWrite(const char*, L_DNAA*)</code>
+     * Original signature : <code>l_ok l_dnaaWrite(const char*, L_DNAA*)</code>
      */
     public static native int l_dnaaWrite(String filename, L_Dnaa daa);
 
     /**
-     * Original signature :
-     * <code>l_ok l_dnaaWriteStream(FILE*, L_DNAA*)</code>
+     * Original signature : <code>l_ok l_dnaaWriteStream(FILE*, L_DNAA*)</code>
      */
     public static native int l_dnaaWriteStream(FILE fp, L_Dnaa daa);
 
@@ -4346,8 +4309,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int l_dnaIntersectionByAset(L_Dna da1, L_Dna da2, PointerByReference pdad);
 
     /**
-     * Original signature :
-     * <code>L_HASHMAP* l_hmapCreateFromDna(L_DNA*)</code>
+     * Original signature : <code>L_HASHMAP* l_hmapCreateFromDna(L_DNA*)</code>
      */
     public static native L_Hashmap l_hmapCreateFromDna(L_Dna da);
 
@@ -4422,8 +4384,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int fmorphopgen_low_2(IntBuffer datad, int w, int h, int wpld, IntBuffer datas, int wpls, int index);
 
     /**
-     * Original signature :
-     * <code>PIX* pixSobelEdgeFilter(PIX*, l_int32)</code>
+     * Original signature : <code>PIX* pixSobelEdgeFilter(PIX*, l_int32)</code>
      */
     public static native Pix pixSobelEdgeFilter(Pix pixs, int orientflag);
 
@@ -4553,8 +4514,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Numa numaEqualizeTRC(Pix pix, float fract, int factor);
 
     /**
-     * Original signature :
-     * <code>l_int32 pixTRCMap(PIX*, PIX*, NUMA*)</code>
+     * Original signature : <code>l_int32 pixTRCMap(PIX*, PIX*, NUMA*)</code>
      */
     public static native int pixTRCMap(Pix pixs, Pix pixm, Numa na);
 
@@ -4828,8 +4788,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int fpixSetResolution(FPix fpix, int xres, int yres);
 
     /**
-     * Original signature :
-     * <code>l_ok fpixCopyResolution(FPIX*, FPIX*)</code>
+     * Original signature : <code>l_ok fpixCopyResolution(FPIX*, FPIX*)</code>
      */
     public static native int fpixCopyResolution(FPix fpixd, FPix fpixs);
 
@@ -4971,8 +4930,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int dpixSetResolution(DPix dpix, int xres, int yres);
 
     /**
-     * Original signature :
-     * <code>l_ok dpixCopyResolution(DPIX*, DPIX*)</code>
+     * Original signature : <code>l_ok dpixCopyResolution(DPIX*, DPIX*)</code>
      */
     public static native int dpixCopyResolution(DPix dpixd, DPix dpixs);
 
@@ -5031,8 +4989,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int fpixWriteMem(PointerByReference pdata, NativeSizeByReference psize, FPix fpix);
 
     /**
-     * Original signature :
-     * <code>FPIX* fpixEndianByteSwap(FPIX*, FPIX*)</code>
+     * Original signature : <code>FPIX* fpixEndianByteSwap(FPIX*, FPIX*)</code>
      */
     public static native FPix fpixEndianByteSwap(FPix fpixd, FPix fpixs);
 
@@ -5069,8 +5026,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int dpixWriteMem(PointerByReference pdata, NativeSizeByReference psize, DPix dpix);
 
     /**
-     * Original signature :
-     * <code>DPIX* dpixEndianByteSwap(DPIX*, DPIX*)</code>
+     * Original signature : <code>DPIX* dpixEndianByteSwap(DPIX*, DPIX*)</code>
      */
     public static native DPix dpixEndianByteSwap(DPix dpixd, DPix dpixs);
 
@@ -5081,14 +5037,12 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int fpixPrintStream(FILE fp, FPix fpix, int factor);
 
     /**
-     * Original signature :
-     * <code>FPIX* pixConvertToFPix(PIX*, l_int32)</code>
+     * Original signature : <code>FPIX* pixConvertToFPix(PIX*, l_int32)</code>
      */
     public static native FPix pixConvertToFPix(Pix pixs, int ncomps);
 
     /**
-     * Original signature :
-     * <code>DPIX* pixConvertToDPix(PIX*, l_int32)</code>
+     * Original signature : <code>DPIX* pixConvertToDPix(PIX*, l_int32)</code>
      */
     public static native DPix pixConvertToDPix(Pix pixs, int ncomps);
 
@@ -5099,8 +5053,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Pix fpixConvertToPix(FPix fpixs, int outdepth, int negvals, int errorflag);
 
     /**
-     * Original signature :
-     * <code>PIX* fpixDisplayMaxDynamicRange(FPIX*)</code>
+     * Original signature : <code>PIX* fpixDisplayMaxDynamicRange(FPIX*)</code>
      */
     public static native Pix fpixDisplayMaxDynamicRange(FPix fpixs);
 
@@ -5229,8 +5182,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int fpixRasterop(FPix fpixd, int dx, int dy, int dw, int dh, FPix fpixs, int sx, int sy);
 
     /**
-     * Original signature :
-     * <code>FPIX* fpixRotateOrth(FPIX*, l_int32)</code>
+     * Original signature : <code>FPIX* fpixRotateOrth(FPIX*, l_int32)</code>
      */
     public static native FPix fpixRotateOrth(FPix fpixs, int quads);
 
@@ -5336,8 +5288,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int gplotAddPlot(GPlot gplot, Numa nax, Numa nay, int plotstyle, String plotlabel);
 
     /**
-     * Original signature :
-     * <code>l_ok gplotSetScaling(GPLOT*, l_int32)</code>
+     * Original signature : <code>l_ok gplotSetScaling(GPLOT*, l_int32)</code>
      */
     public static native int gplotSetScaling(GPlot gplot, int scaling);
 
@@ -5439,8 +5390,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native GPlot gplotRead(String filename);
 
     /**
-     * Original signature :
-     * <code>l_ok gplotWrite(const char*, GPLOT*)</code>
+     * Original signature : <code>l_ok gplotWrite(const char*, GPLOT*)</code>
      */
     public static native int gplotWrite(String filename, GPlot gplot);
 
@@ -5508,14 +5458,12 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Pta convertPtaLineTo4cc(Pta ptas);
 
     /**
-     * Original signature :
-     * <code>PTA* generatePtaFilledCircle(l_int32)</code>
+     * Original signature : <code>PTA* generatePtaFilledCircle(l_int32)</code>
      */
     public static native Pta generatePtaFilledCircle(int radius);
 
     /**
-     * Original signature :
-     * <code>PTA* generatePtaFilledSquare(l_int32)</code>
+     * Original signature : <code>PTA* generatePtaFilledSquare(l_int32)</code>
      */
     public static native Pta generatePtaFilledSquare(int side);
 
@@ -5556,8 +5504,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Pta makePlotPtaFromNumaGen(Numa na, int orient, int linewidth, int refpos, int max, int drawref);
 
     /**
-     * Original signature :
-     * <code>l_ok pixRenderPta(PIX*, PTA*, l_int32)</code>
+     * Original signature : <code>l_ok pixRenderPta(PIX*, PTA*, l_int32)</code>
      */
     public static native int pixRenderPta(Pix pix, Pta pta, int op);
 
@@ -5936,14 +5883,12 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int l_hmapRehash(L_Hashmap hmap);
 
     /**
-     * Original signature :
-     * <code>L_HEAP* lheapCreate(l_int32, l_int32)</code>
+     * Original signature : <code>L_HEAP* lheapCreate(l_int32, l_int32)</code>
      */
     public static native L_Heap lheapCreate(int n, int direction);
 
     /**
-     * Original signature :
-     * <code>void lheapDestroy(L_HEAP**, l_int32)</code>
+     * Original signature : <code>void lheapDestroy(L_HEAP**, l_int32)</code>
      */
     public static native void lheapDestroy(PointerByReference plh, int freeflag);
 
@@ -5963,8 +5908,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int lheapGetCount(L_Heap lh);
 
     /**
-     * Original signature :
-     * <code>void* lheapGetElement(L_HEAP*, l_int32)</code>
+     * Original signature : <code>void* lheapGetElement(L_HEAP*, l_int32)</code>
      */
     public static native Pointer lheapGetElement(L_Heap lh, int index);
 
@@ -6002,8 +5946,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native JbClasser jbCorrelationInitWithoutComponents(int components, int maxwidth, int maxheight, float thresh, float weightfactor);
 
     /**
-     * Original signature :
-     * <code>l_ok jbAddPages(JBCLASSER*, SARRAY*)</code>
+     * Original signature : <code>l_ok jbAddPages(JBCLASSER*, SARRAY*)</code>
      */
     public static native int jbAddPages(JbClasser classer, Sarray safiles);
 
@@ -6106,8 +6049,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native void jbDataDestroy(PointerByReference pdata);
 
     /**
-     * Original signature :
-     * <code>l_ok jbDataWrite(const char*, JBDATA*)</code>
+     * Original signature : <code>l_ok jbDataWrite(const char*, JBDATA*)</code>
      */
     public static native int jbDataWrite(String rootout, JbData jbdata);
 
@@ -6117,8 +6059,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native JbData jbDataRead(String rootname);
 
     /**
-     * Original signature :
-     * <code>PIXA* jbDataRender(JBDATA*, l_int32)</code>
+     * Original signature : <code>PIXA* jbDataRender(JBDATA*, l_int32)</code>
      */
     public static native Pixa jbDataRender(JbData data, int debugflag);
 
@@ -6467,8 +6408,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Pointer listRemoveFromTail(PointerByReference phead, PointerByReference ptail);
 
     /**
-     * Original signature :
-     * <code>DLLIST* listFindElement(DLLIST*, void*)</code>
+     * Original signature : <code>DLLIST* listFindElement(DLLIST*, void*)</code>
      */
     public static native DoubleLinkedList listFindElement(DoubleLinkedList head, Pointer data);
 
@@ -6498,8 +6438,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native L_Rbtree l_amapCreate(int keytype);
 
     /**
-     * Original signature :
-     * <code>RB_TYPE* l_amapFind(L_AMAP*, RB_TYPE)</code>
+     * Original signature : <code>RB_TYPE* l_amapFind(L_AMAP*, RB_TYPE)</code>
      */
     public static native Rb_Type l_amapFind(L_Rbtree m, Rb_Type.ByValue key);
 
@@ -6520,8 +6459,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native void l_amapDestroy(PointerByReference pm);
 
     /**
-     * Original signature :
-     * <code>L_AMAP_NODE* l_amapGetFirst(L_AMAP*)</code>
+     * Original signature : <code>L_AMAP_NODE* l_amapGetFirst(L_AMAP*)</code>
      */
     public static native L_Rbtree_Node l_amapGetFirst(L_Rbtree m);
 
@@ -6553,8 +6491,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native L_Rbtree l_asetCreate(int keytype);
 
     /**
-     * Original signature :
-     * <code>RB_TYPE* l_asetFind(L_ASET*, RB_TYPE)</code>
+     * Original signature : <code>RB_TYPE* l_asetFind(L_ASET*, RB_TYPE)</code>
      */
     public static native Rb_Type l_asetFind(L_Rbtree s, Rb_Type.ByValue key);
 
@@ -6574,8 +6511,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native void l_asetDestroy(PointerByReference ps);
 
     /**
-     * Original signature :
-     * <code>L_ASET_NODE* l_asetGetFirst(L_ASET*)</code>
+     * Original signature : <code>L_ASET_NODE* l_asetGetFirst(L_ASET*)</code>
      */
     public static native L_Rbtree_Node l_asetGetFirst(L_Rbtree s);
 
@@ -6746,8 +6682,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int getMorphBorderPixelColor(int type, int depth);
 
     /**
-     * Original signature :
-     * <code>PIX* pixExtractBoundary(PIX*, l_int32)</code>
+     * Original signature : <code>PIX* pixExtractBoundary(PIX*, l_int32)</code>
      */
     public static native Pix pixExtractBoundary(Pix pixs, int type);
 
@@ -6854,8 +6789,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Pix pixTophat(Pix pixs, int hsize, int vsize, int type);
 
     /**
-     * Original signature :
-     * <code>PIX* pixHDome(PIX*, l_int32, l_int32)</code>
+     * Original signature : <code>PIX* pixHDome(PIX*, l_int32, l_int32)</code>
      */
     public static native Pix pixHDome(Pix pixs, int height, int connectivity);
 
@@ -6985,8 +6919,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Pix pixMorphCompSequenceDwa(Pix pixs, String sequence, int dispsep);
 
     /**
-     * Original signature :
-     * <code>l_int32 morphSequenceVerify(SARRAY*)</code>
+     * Original signature : <code>l_int32 morphSequenceVerify(SARRAY*)</code>
      */
     public static native int morphSequenceVerify(Sarray sa);
 
@@ -7020,8 +6953,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Numa numaCreateFromFArray(FloatBuffer farray, int size, int copyflag);
 
     /**
-     * Original signature :
-     * <code>NUMA* numaCreateFromString(const char*)</code>
+     * Original signature : <code>NUMA* numaCreateFromString(const char*)</code>
      */
     public static native Numa numaCreateFromString(String str);
 
@@ -7046,8 +6978,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int numaEmpty(Numa na);
 
     /**
-     * Original signature :
-     * <code>l_ok numaAddNumber(NUMA*, l_float32)</code>
+     * Original signature : <code>l_ok numaAddNumber(NUMA*, l_float32)</code>
      */
     public static native int numaAddNumber(Numa na, float val);
 
@@ -7058,8 +6989,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int numaInsertNumber(Numa na, int index, float val);
 
     /**
-     * Original signature :
-     * <code>l_ok numaRemoveNumber(NUMA*, l_int32)</code>
+     * Original signature : <code>l_ok numaRemoveNumber(NUMA*, l_int32)</code>
      */
     public static native int numaRemoveNumber(Numa na, int index);
 
@@ -7127,8 +7057,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int numaSetParameters(Numa na, float startx, float delx);
 
     /**
-     * Original signature :
-     * <code>l_ok numaCopyParameters(NUMA*, NUMA*)</code>
+     * Original signature : <code>l_ok numaCopyParameters(NUMA*, NUMA*)</code>
      */
     public static native int numaCopyParameters(Numa nad, Numa nas);
 
@@ -7155,8 +7084,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Numa numaReadMem(ByteBuffer data, NativeSize size);
 
     /**
-     * Original signature :
-     * <code>l_ok numaWriteDebug(const char*, NUMA*)</code>
+     * Original signature : <code>l_ok numaWriteDebug(const char*, NUMA*)</code>
      */
     public static native int numaWriteDebug(String filename, Numa na);
 
@@ -7270,14 +7198,12 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Numaa numaaReadMem(ByteBuffer data, NativeSize size);
 
     /**
-     * Original signature :
-     * <code>l_ok numaaWrite(const char*, NUMAA*)</code>
+     * Original signature : <code>l_ok numaaWrite(const char*, NUMAA*)</code>
      */
     public static native int numaaWrite(String filename, Numaa naa);
 
     /**
-     * Original signature :
-     * <code>l_ok numaaWriteStream(FILE*, NUMAA*)</code>
+     * Original signature : <code>l_ok numaaWriteStream(FILE*, NUMAA*)</code>
      */
     public static native int numaaWriteStream(FILE fp, Numaa naa);
 
@@ -7537,8 +7463,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int numaChooseSortType(Numa nas);
 
     /**
-     * Original signature :
-     * <code>NUMA* numaSort(NUMA*, NUMA*, l_int32)</code>
+     * Original signature : <code>NUMA* numaSort(NUMA*, NUMA*, l_int32)</code>
      */
     public static native Numa numaSort(Numa naout, Numa nain, int sortorder);
 
@@ -7548,8 +7473,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Numa numaBinSort(Numa nas, int sortorder);
 
     /**
-     * Original signature :
-     * <code>NUMA* numaGetSortIndex(NUMA*, l_int32)</code>
+     * Original signature : <code>NUMA* numaGetSortIndex(NUMA*, l_int32)</code>
      */
     public static native Numa numaGetSortIndex(Numa na, int sortorder);
 
@@ -7582,8 +7506,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Numa numaInvertMap(Numa nas);
 
     /**
-     * Original signature :
-     * <code>l_ok numaAddSorted(NUMA*, l_float32)</code>
+     * Original signature : <code>l_ok numaAddSorted(NUMA*, l_float32)</code>
      */
     public static native int numaAddSorted(Numa na, float val);
 
@@ -7612,8 +7535,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int numaGetRankValue(Numa na, float fract, Numa nasort, int usebins, FloatBuffer pval);
 
     /**
-     * Original signature :
-     * <code>l_ok numaGetMedian(NUMA*, l_float32*)</code>
+     * Original signature : <code>l_ok numaGetMedian(NUMA*, l_float32*)</code>
      */
     public static native int numaGetMedian(Numa na, FloatBuffer pval);
 
@@ -7697,8 +7619,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int numaWindowedStats(Numa nas, int wc, PointerByReference pnam, PointerByReference pnams, PointerByReference pnav, PointerByReference pnarv);
 
     /**
-     * Original signature :
-     * <code>NUMA* numaWindowedMean(NUMA*, l_int32)</code>
+     * Original signature : <code>NUMA* numaWindowedMean(NUMA*, l_int32)</code>
      */
     public static native Numa numaWindowedMean(Numa nas, int wc);
 
@@ -7961,6 +7882,18 @@ public class Leptonica1 implements Library, ILeptonica {
 
     /**
      * Original signature :
+     * <code>PIX* pixCropImage(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_float32, const char*, BOX**)</code>
+     */
+    public static native Pix pixCropImage(Pix pixs, int lr_clear, int tb_clear, int edgeclean, int lr_add, int tb_add, float maxwiden, String debugfile, PointerByReference pcropbox);
+
+    /**
+     * Original signature :
+     * <code>PIX* pixCleanImage(PIX*, l_int32, l_int32, l_int32, l_int32)</code>
+     */
+    public static native Pix pixCleanImage(Pix pixs, int contrast, int rotation, int scale, int opensize);
+
+    /**
+     * Original signature :
      * <code>BOX* pixFindPageForeground(PIX*, l_int32, l_int32, l_int32, l_int32, PIXAC*)</code>
      */
     public static native Box pixFindPageForeground(Pix pixs, int threshold, int mindist, int erasedist, int showmorph, PixaComp pixac);
@@ -8120,6 +8053,24 @@ public class Leptonica1 implements Library, ILeptonica {
      * <code>BOXA* boxaPruneSortedOnOverlap(BOXA*, l_float32)</code>
      */
     public static native Boxa boxaPruneSortedOnOverlap(Boxa boxas, float maxoverlap);
+
+    /**
+     * Original signature :
+     * <code>l_ok compressFilesToPdf(SARRAY*, l_int32, l_int32, l_float32, l_int32, const char*, const char*)</code>
+     */
+    public static native int compressFilesToPdf(Sarray sa, int onebit, int savecolor, float scalefactor, int quality, String title, String fileout);
+
+    /**
+     * Original signature :
+     * <code>l_ok cropFilesToPdf(SARRAY*, l_int32, l_int32, l_int32, l_int32, l_int32, l_float32, const char*, const char*)</code>
+     */
+    public static native int cropFilesToPdf(Sarray sa, int lr_clear, int tb_clear, int edgeclean, int lr_add, int tb_add, float maxwiden, String title, String fileout);
+
+    /**
+     * Original signature :
+     * <code>l_ok cleanTo1bppFilesToPdf(SARRAY*, l_int32, l_int32, l_int32, l_int32, const char*, const char*)</code>
+     */
+    public static native int cleanTo1bppFilesToPdf(Sarray sa, int res, int contrast, int rotation, int opensize, String title, String fileout);
 
     /**
      * Original signature :
@@ -8415,13 +8366,36 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native void l_CIDataDestroy(PointerByReference pcid);
 
     /**
+     * Original signature :
+     * <code>l_ok getPdfPageCount(const char*, l_int32*)</code>
+     */
+    public static native int getPdfPageCount(String fname, IntBuffer pnpages);
+
+    /**
+     * Original signature :
+     * <code>l_ok getPdfPageSizes(const char*, NUMA**, NUMA**, l_int32*, l_int32*)</code>
+     */
+    public static native int getPdfPageSizes(String fname, PointerByReference pnaw, PointerByReference pnah, IntBuffer pmedw, IntBuffer pmedh);
+
+    /**
+     * Original signature :
+     * <code>l_ok getPdfMediaBoxSizes(const char*, NUMA**, NUMA**, l_int32*, l_int32*)</code>
+     */
+    public static native int getPdfMediaBoxSizes(String fname, PointerByReference pnaw, PointerByReference pnah, IntBuffer pmedw, IntBuffer pmedh);
+
+    /**
+     * Original signature :
+     * <code>l_ok getPdfRendererResolution(const char*, const char*, l_int32*)</code>
+     */
+    public static native int getPdfRendererResolution(String infile, String outdir, IntBuffer pres);
+
+    /**
      * Original signature : <code>void l_pdfSetG4ImageMask(l_int32)</code>
      */
     public static native void l_pdfSetG4ImageMask(int flag);
 
     /**
-     * Original signature :
-     * <code>void l_pdfSetDateAndVersion(l_int32)</code>
+     * Original signature : <code>void l_pdfSetDateAndVersion(l_int32)</code>
      */
     public static native void l_pdfSetDateAndVersion(int flag);
 
@@ -8488,8 +8462,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int pixResizeImageData(Pix pixd, Pix pixs);
 
     /**
-     * Original signature :
-     * <code>l_ok pixCopyColormap(PIX*, const PIX*)</code>
+     * Original signature : <code>l_ok pixCopyColormap(PIX*, const PIX*)</code>
      */
     public static native int pixCopyColormap(Pix pixd, Pix pixs);
 
@@ -8500,8 +8473,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int pixTransferAllData(Pix pixd, PointerByReference ppixs, int copytext, int copyformat);
 
     /**
-     * Original signature :
-     * <code>l_ok pixSwapAndDestroy(PIX**, PIX**)</code>
+     * Original signature : <code>l_ok pixSwapAndDestroy(PIX**, PIX**)</code>
      */
     public static native int pixSwapAndDestroy(PointerByReference ppixd, PointerByReference ppixs);
 
@@ -8623,8 +8595,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int pixScaleResolution(Pix pix, float xscale, float yscale);
 
     /**
-     * Original signature :
-     * <code>l_int32 pixGetInputFormat(const PIX*)</code>
+     * Original signature : <code>l_int32 pixGetInputFormat(const PIX*)</code>
      */
     public static native int pixGetInputFormat(Pix pix);
 
@@ -8641,8 +8612,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int pixCopyInputFormat(Pix pixd, Pix pixs);
 
     /**
-     * Original signature :
-     * <code>l_int32 pixSetSpecial(PIX*, l_int32)</code>
+     * Original signature : <code>l_int32 pixSetSpecial(PIX*, l_int32)</code>
      */
     public static native int pixSetSpecial(Pix pix, int special);
 
@@ -8662,8 +8632,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int pixAddText(Pix pix, String textstring);
 
     /**
-     * Original signature :
-     * <code>l_int32 pixCopyText(PIX*, const PIX*)</code>
+     * Original signature : <code>l_int32 pixCopyText(PIX*, const PIX*)</code>
      */
     public static native int pixCopyText(Pix pixd, Pix pixs);
 
@@ -8698,9 +8667,10 @@ public class Leptonica1 implements Library, ILeptonica {
      * Original signature : <code>l_uint32* pixGetData(PIX*)</code>
      */
     public static native IntByReference pixGetData(Pix pix);
-    
+
     /**
-     * Original signature : <code>l_int32 pixFreeAndSetData(PIX*, l_uint32*)</code><br>
+     * Original signature :
+     * <code>l_int32 pixFreeAndSetData(PIX*, l_uint32*)</code>
      */
     public static native int pixFreeAndSetData(Pix pix, IntBuffer data);
 
@@ -8720,8 +8690,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int pixFreeData(Pix pix);
 
     /**
-     * Original signature :
-     * <code>void** pixGetLinePtrs(PIX*, l_int32*)</code>
+     * Original signature : <code>void** pixGetLinePtrs(PIX*, l_int32*)</code>
      */
     public static native PointerByReference pixGetLinePtrs(Pix pix, IntBuffer psize);
 
@@ -8819,14 +8788,12 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int pixSetAllGray(Pix pix, int grayval);
 
     /**
-     * Original signature :
-     * <code>l_ok pixSetAllArbitrary(PIX*, l_uint32)</code>
+     * Original signature : <code>l_ok pixSetAllArbitrary(PIX*, l_uint32)</code>
      */
     public static native int pixSetAllArbitrary(Pix pix, int val);
 
     /**
-     * Original signature :
-     * <code>l_ok pixSetBlackOrWhite(PIX*, l_int32)</code>
+     * Original signature : <code>l_ok pixSetBlackOrWhite(PIX*, l_int32)</code>
      */
     public static native int pixSetBlackOrWhite(Pix pixs, int op);
 
@@ -8916,9 +8883,10 @@ public class Leptonica1 implements Library, ILeptonica {
      * <code>PIX* pixAddBorderGeneral(PIX*, l_int32, l_int32, l_int32, l_int32, l_uint32)</code>
      */
     public static native Pix pixAddBorderGeneral(Pix pixs, int left, int right, int top, int bot, int val);
-    
+
     /**
-     * Original signature : <code>PIX* pixAddMultipleBlackWhiteBorders(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32)</code><br>
+     * Original signature :
+     * <code>PIX* pixAddMultipleBlackWhiteBorders(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32)</code>
      */
     public static native Pix pixAddMultipleBlackWhiteBorders(Pix pixs, int nblack1, int nwhite1, int nblack2, int nwhite2, int nblack3, int nwhite3);
 
@@ -8982,8 +8950,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Pix pixCreateRGBImage(Pix pixr, Pix pixg, Pix pixb);
 
     /**
-     * Original signature :
-     * <code>PIX* pixGetRGBComponent(PIX*, l_int32)</code>
+     * Original signature : <code>PIX* pixGetRGBComponent(PIX*, l_int32)</code>
      */
     public static native Pix pixGetRGBComponent(Pix pixs, int comp);
 
@@ -9086,8 +9053,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int pixInferResolution(Pix pix, float longside, IntBuffer pres);
 
     /**
-     * Original signature :
-     * <code>l_ok pixAlphaIsOpaque(PIX*, l_int32*)</code>
+     * Original signature : <code>l_ok pixAlphaIsOpaque(PIX*, l_int32*)</code>
      */
     public static native int pixAlphaIsOpaque(Pix pix, IntBuffer popaque);
 
@@ -9110,8 +9076,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native void l_setAlphaMaskBorder(float val1, float val2);
 
     /**
-     * Original signature :
-     * <code>l_ok pixSetMasked(PIX*, PIX*, l_uint32)</code>
+     * Original signature : <code>l_ok pixSetMasked(PIX*, PIX*, l_uint32)</code>
      */
     public static native int pixSetMasked(Pix pixd, Pix pixm, int val);
 
@@ -9122,8 +9087,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int pixSetMaskedGeneral(Pix pixd, Pix pixm, int val, int x, int y);
 
     /**
-     * Original signature :
-     * <code>l_ok pixCombineMasked(PIX*, PIX*, PIX*)</code>
+     * Original signature : <code>l_ok pixCombineMasked(PIX*, PIX*, PIX*)</code>
      */
     public static native int pixCombineMasked(Pix pixd, Pix pixs, Pix pixm);
 
@@ -9152,14 +9116,12 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int pixPaintSelfThroughMask(Pix pixd, Pix pixm, int x, int y, int searchdir, int mindist, int tilesize, int ntiles, int distblend);
 
     /**
-     * Original signature :
-     * <code>PIX* pixMakeMaskFromVal(PIX*, l_int32)</code>
+     * Original signature : <code>PIX* pixMakeMaskFromVal(PIX*, l_int32)</code>
      */
     public static native Pix pixMakeMaskFromVal(Pix pixs, int val);
 
     /**
-     * Original signature :
-     * <code>PIX* pixMakeMaskFromLUT(PIX*, l_int32*)</code>
+     * Original signature : <code>PIX* pixMakeMaskFromLUT(PIX*, l_int32*)</code>
      */
     public static native Pix pixMakeMaskFromLUT(Pix pixs, IntBuffer tab);
 
@@ -9325,8 +9287,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Numa pixVarianceByRow(Pix pix, Box box);
 
     /**
-     * Original signature :
-     * <code>NUMA* pixVarianceByColumn(PIX*, BOX*)</code>
+     * Original signature : <code>NUMA* pixVarianceByColumn(PIX*, BOX*)</code>
      */
     public static native Numa pixVarianceByColumn(Pix pix, Box box);
 
@@ -9342,8 +9303,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Numa pixAbsDiffByRow(Pix pix, Box box);
 
     /**
-     * Original signature :
-     * <code>NUMA* pixAbsDiffByColumn(PIX*, BOX*)</code>
+     * Original signature : <code>NUMA* pixAbsDiffByColumn(PIX*, BOX*)</code>
      */
     public static native Numa pixAbsDiffByColumn(Pix pix, Box box);
 
@@ -9642,8 +9602,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int pixFindAreaPerimRatio(Pix pixs, IntBuffer tab, FloatBuffer pfract);
 
     /**
-     * Original signature :
-     * <code>NUMA* pixaFindPerimToAreaRatio(PIXA*)</code>
+     * Original signature : <code>NUMA* pixaFindPerimToAreaRatio(PIXA*)</code>
      */
     public static native Numa pixaFindPerimToAreaRatio(Pixa pixa);
 
@@ -9688,14 +9647,12 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int pixFindAreaFractionMasked(Pix pixs, Box box, Pix pixm, IntBuffer tab, FloatBuffer pfract);
 
     /**
-     * Original signature :
-     * <code>NUMA* pixaFindWidthHeightRatio(PIXA*)</code>
+     * Original signature : <code>NUMA* pixaFindWidthHeightRatio(PIXA*)</code>
      */
     public static native Numa pixaFindWidthHeightRatio(Pixa pixa);
 
     /**
-     * Original signature :
-     * <code>NUMA* pixaFindWidthHeightProduct(PIXA*)</code>
+     * Original signature : <code>NUMA* pixaFindWidthHeightProduct(PIXA*)</code>
      */
     public static native Numa pixaFindWidthHeightProduct(Pixa pixa);
 
@@ -9718,8 +9675,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int pixConformsToRectangle(Pix pixs, Box box, int dist, IntBuffer pconforms);
 
     /**
-     * Original signature :
-     * <code>PIXA* pixClipRectangles(PIX*, BOXA*)</code>
+     * Original signature : <code>PIXA* pixClipRectangles(PIX*, BOXA*)</code>
      */
     public static native Pixa pixClipRectangles(Pix pixs, Boxa boxa);
 
@@ -9917,14 +9873,12 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Pixa pixaCopy(Pixa pixa, int copyflag);
 
     /**
-     * Original signature :
-     * <code>l_ok pixaAddPix(PIXA*, PIX*, l_int32)</code>
+     * Original signature : <code>l_ok pixaAddPix(PIXA*, PIX*, l_int32)</code>
      */
     public static native int pixaAddPix(Pixa pixa, Pix pix, int copyflag);
 
     /**
-     * Original signature :
-     * <code>l_ok pixaAddBox(PIXA*, BOX*, l_int32)</code>
+     * Original signature : <code>l_ok pixaAddBox(PIXA*, BOX*, l_int32)</code>
      */
     public static native int pixaAddBox(Pixa pixa, Box box, int copyflag);
 
@@ -9974,8 +9928,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int pixaGetBoxGeometry(Pixa pixa, int index, IntBuffer px, IntBuffer py, IntBuffer pw, IntBuffer ph);
 
     /**
-     * Original signature :
-     * <code>l_ok pixaSetBoxa(PIXA*, BOXA*, l_int32)</code>
+     * Original signature : <code>l_ok pixaSetBoxa(PIXA*, BOXA*, l_int32)</code>
      */
     public static native int pixaSetBoxa(Pixa pixa, Boxa boxa, int accesstype);
 
@@ -10020,8 +9973,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native PointerByReference pixaGetLinePtrs(Pixa pixa, IntBuffer psize);
 
     /**
-     * Original signature :
-     * <code>l_ok pixaWriteStreamInfo(FILE*, PIXA*)</code>
+     * Original signature : <code>l_ok pixaWriteStreamInfo(FILE*, PIXA*)</code>
      */
     public static native int pixaWriteStreamInfo(FILE fp, Pixa pixa);
 
@@ -10049,14 +10001,12 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int pixaRemovePixAndSave(Pixa pixa, int index, PointerByReference ppix, PointerByReference pbox);
 
     /**
-     * Original signature :
-     * <code>l_ok pixaRemoveSelected(PIXA*, NUMA*)</code>
+     * Original signature : <code>l_ok pixaRemoveSelected(PIXA*, NUMA*)</code>
      */
     public static native int pixaRemoveSelected(Pixa pixa, Numa naindex);
 
     /**
-     * Original signature :
-     * <code>l_ok pixaInitFull(PIXA*, PIX*, BOX*)</code>
+     * Original signature : <code>l_ok pixaInitFull(PIXA*, PIX*, BOX*)</code>
      */
     public static native int pixaInitFull(Pixa pixa, Pix pix, Box box);
 
@@ -10112,14 +10062,12 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int pixaaAddPix(Pixaa paa, int index, Pix pix, Box box, int copyflag);
 
     /**
-     * Original signature :
-     * <code>l_ok pixaaAddBox(PIXAA*, BOX*, l_int32)</code>
+     * Original signature : <code>l_ok pixaaAddBox(PIXAA*, BOX*, l_int32)</code>
      */
     public static native int pixaaAddBox(Pixaa paa, Box box, int copyflag);
 
     /**
-     * Original signature :
-     * <code>l_int32 pixaaGetCount(PIXAA*, NUMA**)</code>
+     * Original signature : <code>l_int32 pixaaGetCount(PIXAA*, NUMA**)</code>
      */
     public static native int pixaaGetCount(Pixaa paa, PointerByReference pna);
 
@@ -10153,8 +10101,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int pixaaVerifyDimensions(Pixaa paa, IntBuffer psame, IntBuffer pmaxw, IntBuffer pmaxh);
 
     /**
-     * Original signature :
-     * <code>l_int32 pixaaIsFull(PIXAA*, l_int32*)</code>
+     * Original signature : <code>l_int32 pixaaIsFull(PIXAA*, l_int32*)</code>
      */
     public static native int pixaaIsFull(Pixaa paa, IntBuffer pfull);
 
@@ -10196,8 +10143,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Pixa pixaReadMem(ByteBuffer data, NativeSize size);
 
     /**
-     * Original signature :
-     * <code>l_ok pixaWriteDebug(const char*, PIXA*)</code>
+     * Original signature : <code>l_ok pixaWriteDebug(const char*, PIXA*)</code>
      */
     public static native int pixaWriteDebug(String fname, Pixa pixa);
 
@@ -10245,14 +10191,12 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Pixaa pixaaReadMem(ByteBuffer data, NativeSize size);
 
     /**
-     * Original signature :
-     * <code>l_ok pixaaWrite(const char*, PIXAA*)</code>
+     * Original signature : <code>l_ok pixaaWrite(const char*, PIXAA*)</code>
      */
     public static native int pixaaWrite(String filename, Pixaa paa);
 
     /**
-     * Original signature :
-     * <code>l_ok pixaaWriteStream(FILE*, PIXAA*)</code>
+     * Original signature : <code>l_ok pixaaWriteStream(FILE*, PIXAA*)</code>
      */
     public static native int pixaaWriteStream(FILE fp, Pixaa paa);
 
@@ -10509,8 +10453,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Pixa pixaRotate(Pixa pixas, float angle, int type, int incolor, int width, int height);
 
     /**
-     * Original signature :
-     * <code>PIXA* pixaRotateOrth(PIXA*, l_int32)</code>
+     * Original signature : <code>PIXA* pixaRotateOrth(PIXA*, l_int32)</code>
      */
     public static native Pixa pixaRotateOrth(Pixa pixas, int rotation);
 
@@ -10567,8 +10510,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int pixaHasColor(Pixa pixa, IntBuffer phascolor);
 
     /**
-     * Original signature :
-     * <code>l_ok pixaAnyColormaps(PIXA*, l_int32*)</code>
+     * Original signature : <code>l_ok pixaAnyColormaps(PIXA*, l_int32*)</code>
      */
     public static native int pixaAnyColormaps(Pixa pixa, IntBuffer phascmap);
 
@@ -10703,14 +10645,12 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Pixa pixaaDisplayTiledAndScaled(Pixaa paa, int outdepth, int tilewidth, int ncols, int background, int spacing, int border);
 
     /**
-     * Original signature :
-     * <code>PIXA* pixaConvertTo1(PIXA*, l_int32)</code>
+     * Original signature : <code>PIXA* pixaConvertTo1(PIXA*, l_int32)</code>
      */
     public static native Pixa pixaConvertTo1(Pixa pixas, int thresh);
 
     /**
-     * Original signature :
-     * <code>PIXA* pixaConvertTo8(PIXA*, l_int32)</code>
+     * Original signature : <code>PIXA* pixaConvertTo8(PIXA*, l_int32)</code>
      */
     public static native Pixa pixaConvertTo8(Pixa pixas, int cmapflag);
 
@@ -10750,8 +10690,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Pixa pixaMakeFromTiledPix(Pix pixs, int w, int h, int start, int num, Boxa boxa);
 
     /**
-     * Original signature :
-     * <code>l_ok pixGetTileCount(PIX*, l_int32*)</code>
+     * Original signature : <code>l_ok pixGetTileCount(PIX*, l_int32*)</code>
      */
     public static native int pixGetTileCount(Pix pix, IntBuffer pn);
 
@@ -10835,8 +10774,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native void pmsLogInfo();
 
     /**
-     * Original signature :
-     * <code>l_ok pixAddConstantGray(PIX*, l_int32)</code>
+     * Original signature : <code>l_ok pixAddConstantGray(PIX*, l_int32)</code>
      */
     public static native int pixAddConstantGray(Pix pixs, int val);
 
@@ -10852,8 +10790,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Pix pixAddGray(Pix pixd, Pix pixs1, Pix pixs2);
 
     /**
-     * Original signature :
-     * <code>PIX* pixSubtractGray(PIX*, PIX*, PIX*)</code>
+     * Original signature : <code>PIX* pixSubtractGray(PIX*, PIX*, PIX*)</code>
      */
     public static native Pix pixSubtractGray(Pix pixd, Pix pixs1, Pix pixs2);
 
@@ -10888,8 +10825,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Pix pixFinalAccumulateThreshold(Pix pixs, int offset, int threshold);
 
     /**
-     * Original signature :
-     * <code>l_ok pixAccumulate(PIX*, PIX*, l_int32)</code>
+     * Original signature : <code>l_ok pixAccumulate(PIX*, PIX*, l_int32)</code>
      */
     public static native int pixAccumulate(Pix pixd, Pix pixs, int op);
 
@@ -10916,8 +10852,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Pix pixMinOrMax(Pix pixd, Pix pixs1, Pix pixs2, int type);
 
     /**
-     * Original signature :
-     * <code>PIX* pixMaxDynamicRange(PIX*, l_int32)</code>
+     * Original signature : <code>PIX* pixMaxDynamicRange(PIX*, l_int32)</code>
      */
     public static native Pix pixMaxDynamicRange(Pix pixs, int type);
 
@@ -11077,8 +11012,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native PixComp pixacompGetPixcomp(PixaComp pixac, int index, int copyflag);
 
     /**
-     * Original signature :
-     * <code>PIX* pixacompGetPix(PIXAC*, l_int32)</code>
+     * Original signature : <code>PIX* pixacompGetPix(PIXAC*, l_int32)</code>
      */
     public static native Pix pixacompGetPix(PixaComp pixac, int index);
 
@@ -11089,14 +11023,12 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int pixacompGetPixDimensions(PixaComp pixac, int index, IntBuffer pw, IntBuffer ph, IntBuffer pd);
 
     /**
-     * Original signature :
-     * <code>BOXA* pixacompGetBoxa(PIXAC*, l_int32)</code>
+     * Original signature : <code>BOXA* pixacompGetBoxa(PIXAC*, l_int32)</code>
      */
     public static native Boxa pixacompGetBoxa(PixaComp pixac, int accesstype);
 
     /**
-     * Original signature :
-     * <code>l_int32 pixacompGetBoxaCount(PIXAC*)</code>
+     * Original signature : <code>l_int32 pixacompGetBoxaCount(PIXAC*)</code>
      */
     public static native int pixacompGetBoxaCount(PixaComp pixac);
 
@@ -11118,8 +11050,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int pixacompGetOffset(PixaComp pixac);
 
     /**
-     * Original signature :
-     * <code>l_ok pixacompSetOffset(PIXAC*, l_int32)</code>
+     * Original signature : <code>l_ok pixacompSetOffset(PIXAC*, l_int32)</code>
      */
     public static native int pixacompSetOffset(PixaComp pixac, int offset);
 
@@ -11158,14 +11089,12 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native PixaComp pixacompReadMem(ByteBuffer data, NativeSize size);
 
     /**
-     * Original signature :
-     * <code>l_ok pixacompWrite(const char*, PIXAC*)</code>
+     * Original signature : <code>l_ok pixacompWrite(const char*, PIXAC*)</code>
      */
     public static native int pixacompWrite(String filename, PixaComp pixac);
 
     /**
-     * Original signature :
-     * <code>l_ok pixacompWriteStream(FILE*, PIXAC*)</code>
+     * Original signature : <code>l_ok pixacompWriteStream(FILE*, PIXAC*)</code>
      */
     public static native int pixacompWriteStream(FILE fp, PixaComp pixac);
 
@@ -11236,8 +11165,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Pix pixRemoveColormapGeneral(Pix pixs, int type, int ifnocmap);
 
     /**
-     * Original signature :
-     * <code>PIX* pixRemoveColormap(PIX*, l_int32)</code>
+     * Original signature : <code>PIX* pixRemoveColormap(PIX*, l_int32)</code>
      */
     public static native Pix pixRemoveColormap(Pix pixs, int type);
 
@@ -11247,8 +11175,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int pixAddGrayColormap8(Pix pixs);
 
     /**
-     * Original signature :
-     * <code>PIX* pixAddMinimalGrayColormap8(PIX*)</code>
+     * Original signature : <code>PIX* pixAddMinimalGrayColormap8(PIX*)</code>
      */
     public static native Pix pixAddMinimalGrayColormap8(Pix pixs);
 
@@ -11501,8 +11428,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Pix pixConvert32To24(Pix pixs);
 
     /**
-     * Original signature :
-     * <code>PIX* pixConvert32To16(PIX*, l_int32)</code>
+     * Original signature : <code>PIX* pixConvert32To16(PIX*, l_int32)</code>
      */
     public static native Pix pixConvert32To16(Pix pixs, int type);
 
@@ -11523,8 +11449,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Pix pixAddAlphaTo1bpp(Pix pixd, Pix pixs);
 
     /**
-     * Original signature :
-     * <code>PIX* pixConvertLossless(PIX*, l_int32)</code>
+     * Original signature : <code>PIX* pixConvertLossless(PIX*, l_int32)</code>
      */
     public static native Pix pixConvertLossless(Pix pixs, int d);
 
@@ -11704,8 +11629,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int pixSetZlibCompression(Pix pix, int compval);
 
     /**
-     * Original signature :
-     * <code>void l_pngSetReadStrip16To8(l_int32)</code>
+     * Original signature : <code>void l_pngSetReadStrip16To8(l_int32)</code>
      */
     public static native void l_pngSetReadStrip16To8(int flag);
 
@@ -12011,8 +11935,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Pta ptaCreate(int n);
 
     /**
-     * Original signature :
-     * <code>PTA* ptaCreateFromNuma(NUMA*, NUMA*)</code>
+     * Original signature : <code>PTA* ptaCreateFromNuma(NUMA*, NUMA*)</code>
      */
     public static native Pta ptaCreateFromNuma(Numa nax, Numa nay);
 
@@ -12083,8 +12006,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int ptaSetPt(Pta pta, int index, float x, float y);
 
     /**
-     * Original signature :
-     * <code>l_ok ptaGetArrays(PTA*, NUMA**, NUMA**)</code>
+     * Original signature : <code>l_ok ptaGetArrays(PTA*, NUMA**, NUMA**)</code>
      */
     public static native int ptaGetArrays(Pta pta, PointerByReference pnax, PointerByReference pnay);
 
@@ -12099,8 +12021,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Pta ptaReadStream(FILE fp);
 
     /**
-     * Original signature :
-     * <code>PTA* ptaReadMem(const l_uint8*, size_t)</code>
+     * Original signature : <code>PTA* ptaReadMem(const l_uint8*, size_t)</code>
      */
     public static native Pta ptaReadMem(ByteBuffer data, NativeSize size);
 
@@ -12139,8 +12060,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native void ptaaDestroy(PointerByReference pptaa);
 
     /**
-     * Original signature :
-     * <code>l_ok ptaaAddPta(PTAA*, PTA*, l_int32)</code>
+     * Original signature : <code>l_ok ptaaAddPta(PTAA*, PTA*, l_int32)</code>
      */
     public static native int ptaaAddPta(Ptaa ptaa, Pta pta, int copyflag);
 
@@ -12290,8 +12210,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int ptaContainsPt(Pta pta, int x, int y);
 
     /**
-     * Original signature :
-     * <code>l_int32 ptaTestIntersection(PTA*, PTA*)</code>
+     * Original signature : <code>l_int32 ptaTestIntersection(PTA*, PTA*)</code>
      */
     public static native int ptaTestIntersection(Pta pta1, Pta pta2);
 
@@ -12439,8 +12358,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int pixPlotAlongPta(Pix pixs, Pta pta, int outformat, String title);
 
     /**
-     * Original signature :
-     * <code>PTA* ptaGetPixelsFromPix(PIX*, BOX*)</code>
+     * Original signature : <code>PTA* ptaGetPixelsFromPix(PIX*, BOX*)</code>
      */
     public static native Pta ptaGetPixelsFromPix(Pix pixs, Box box);
 
@@ -12480,8 +12398,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Pta numaConvertToPta1(Numa na);
 
     /**
-     * Original signature :
-     * <code>PTA* numaConvertToPta2(NUMA*, NUMA*)</code>
+     * Original signature : <code>PTA* numaConvertToPta2(NUMA*, NUMA*)</code>
      */
     public static native Pta numaConvertToPta2(Numa nax, Numa nay);
 
@@ -12492,8 +12409,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int ptaConvertToNuma(Pta pta, PointerByReference pnax, PointerByReference pnay);
 
     /**
-     * Original signature :
-     * <code>PIX* pixDisplayPta(PIX*, PIX*, PTA*)</code>
+     * Original signature : <code>PIX* pixDisplayPta(PIX*, PIX*, PTA*)</code>
      */
     public static native Pix pixDisplayPta(Pix pixd, Pix pixs, Pta pta);
 
@@ -12564,14 +12480,12 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native L_Rbtree l_asetCreateFromPta(Pta pta);
 
     /**
-     * Original signature :
-     * <code>l_ok ptaRemoveDupsByAset(PTA*, PTA**)</code>
+     * Original signature : <code>l_ok ptaRemoveDupsByAset(PTA*, PTA**)</code>
      */
     public static native int ptaRemoveDupsByAset(Pta ptas, PointerByReference pptad);
 
     /**
-     * Original signature :
-     * <code>l_ok ptaUnionByAset(PTA*, PTA*, PTA**)</code>
+     * Original signature : <code>l_ok ptaUnionByAset(PTA*, PTA*, PTA**)</code>
      */
     public static native int ptaUnionByAset(Pta pta1, Pta pta2, PointerByReference pptad);
 
@@ -12582,8 +12496,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int ptaIntersectionByAset(Pta pta1, Pta pta2, PointerByReference pptad);
 
     /**
-     * Original signature :
-     * <code>L_HASHMAP* l_hmapCreateFromPta(PTA*)</code>
+     * Original signature : <code>L_HASHMAP* l_hmapCreateFromPta(PTA*)</code>
      */
     public static native L_Hashmap l_hmapCreateFromPta(Pta pta);
 
@@ -12594,8 +12507,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int ptaRemoveDupsByHmap(Pta ptas, PointerByReference pptad, PointerByReference phmap);
 
     /**
-     * Original signature :
-     * <code>l_ok ptaUnionByHmap(PTA*, PTA*, PTA**)</code>
+     * Original signature : <code>l_ok ptaUnionByHmap(PTA*, PTA*, PTA**)</code>
      */
     public static native int ptaUnionByHmap(Pta pta1, Pta pta2, PointerByReference pptad);
 
@@ -12666,8 +12578,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int ptraJoin(L_Ptra pa1, L_Ptra pa2);
 
     /**
-     * Original signature :
-     * <code>l_ok ptraGetMaxIndex(L_PTRA*, l_int32*)</code>
+     * Original signature : <code>l_ok ptraGetMaxIndex(L_PTRA*, l_int32*)</code>
      */
     public static native int ptraGetMaxIndex(L_Ptra pa, IntBuffer pmaxindex);
 
@@ -12695,8 +12606,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native void ptraaDestroy(PointerByReference ppaa, int freeflag, int warnflag);
 
     /**
-     * Original signature :
-     * <code>l_ok ptraaGetSize(L_PTRAA*, l_int32*)</code>
+     * Original signature : <code>l_ok ptraaGetSize(L_PTRAA*, l_int32*)</code>
      */
     public static native int ptraaGetSize(L_Ptraa paa, IntBuffer psize);
 
@@ -12713,8 +12623,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native L_Ptra ptraaGetPtra(L_Ptraa paa, int index, int accessflag);
 
     /**
-     * Original signature :
-     * <code>L_PTRA* ptraaFlattenToPtra(L_PTRAA*)</code>
+     * Original signature : <code>L_PTRA* ptraaFlattenToPtra(L_PTRAA*)</code>
      */
     public static native L_Ptra ptraaFlattenToPtra(L_Ptraa paa);
 
@@ -12778,8 +12687,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native L_Queue lqueueCreate(int nalloc);
 
     /**
-     * Original signature :
-     * <code>void lqueueDestroy(L_QUEUE**, l_int32)</code>
+     * Original signature : <code>void lqueueDestroy(L_QUEUE**, l_int32)</code>
      */
     public static native void lqueueDestroy(PointerByReference plq, int freeflag);
 
@@ -12851,8 +12759,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native void l_rbtreeInsert(L_Rbtree t, Rb_Type.ByValue key, Rb_Type.ByValue value);
 
     /**
-     * Original signature :
-     * <code>void l_rbtreeDelete(L_RBTREE*, RB_TYPE)</code>
+     * Original signature : <code>void l_rbtreeDelete(L_RBTREE*, RB_TYPE)</code>
      */
     public static native void l_rbtreeDelete(L_Rbtree t, Rb_Type.ByValue key);
 
@@ -12891,8 +12798,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int l_rbtreeGetCount(L_Rbtree t);
 
     /**
-     * Original signature :
-     * <code>void l_rbtreePrint(FILE*, L_RBTREE*)</code>
+     * Original signature : <code>void l_rbtreePrint(FILE*, L_RBTREE*)</code>
      */
     public static native void l_rbtreePrint(FILE fp, L_Rbtree t);
 
@@ -12903,8 +12809,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Sarray pixProcessBarcodes(Pix pixs, int format, int method, PointerByReference psaw, int debugflag);
 
     /**
-     * Original signature :
-     * <code>PIXA* pixExtractBarcodes(PIX*, l_int32)</code>
+     * Original signature : <code>PIXA* pixExtractBarcodes(PIX*, l_int32)</code>
      */
     public static native Pixa pixExtractBarcodes(Pix pixs, int debugflag);
 
@@ -12997,8 +12902,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Pix pixReadWithHint(String filename, int hint);
 
     /**
-     * Original signature :
-     * <code>PIX* pixReadIndexed(SARRAY*, l_int32)</code>
+     * Original signature : <code>PIX* pixReadIndexed(SARRAY*, l_int32)</code>
      */
     public static native Pix pixReadIndexed(Sarray sa, int index);
 
@@ -13037,8 +12941,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int fileFormatIsTiff(FILE fp);
 
     /**
-     * Original signature :
-     * <code>PIX* pixReadMem(const l_uint8*, size_t)</code>
+     * Original signature : <code>PIX* pixReadMem(const l_uint8*, size_t)</code>
      */
     public static native Pix pixReadMem(ByteBuffer data, NativeSize size);
 
@@ -13140,14 +13043,12 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native L_Recog recogReadMem(ByteBuffer data, NativeSize size);
 
     /**
-     * Original signature :
-     * <code>l_ok recogWrite(const char*, L_RECOG*)</code>
+     * Original signature : <code>l_ok recogWrite(const char*, L_RECOG*)</code>
      */
     public static native int recogWrite(String filename, L_Recog recog);
 
     /**
-     * Original signature :
-     * <code>l_ok recogWriteStream(FILE*, L_RECOG*)</code>
+     * Original signature : <code>l_ok recogWriteStream(FILE*, L_RECOG*)</code>
      */
     public static native int recogWriteStream(FILE fp, L_Recog recog);
 
@@ -13827,8 +13728,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Pointer sarrayGetString(Sarray sa, int index, int copyflag);
 
     /**
-     * Original signature :
-     * <code>char* sarrayToString(SARRAY*, l_int32)</code>
+     * Original signature : <code>char* sarrayToString(SARRAY*, l_int32)</code>
      */
     public static native Pointer sarrayToString(Sarray sa, int addnlflag);
 
@@ -13908,14 +13808,12 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Sarray sarrayReadMem(ByteBuffer data, NativeSize size);
 
     /**
-     * Original signature :
-     * <code>l_ok sarrayWrite(const char*, SARRAY*)</code>
+     * Original signature : <code>l_ok sarrayWrite(const char*, SARRAY*)</code>
      */
     public static native int sarrayWrite(String filename, Sarray sa);
 
     /**
-     * Original signature :
-     * <code>l_ok sarrayWriteStream(FILE*, SARRAY*)</code>
+     * Original signature : <code>l_ok sarrayWriteStream(FILE*, SARRAY*)</code>
      */
     public static native int sarrayWriteStream(FILE fp, Sarray sa);
 
@@ -13931,8 +13829,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int sarrayWriteMem(PointerByReference pdata, NativeSizeByReference psize, Sarray sa);
 
     /**
-     * Original signature :
-     * <code>l_ok sarrayAppend(const char*, SARRAY*)</code>
+     * Original signature : <code>l_ok sarrayAppend(const char*, SARRAY*)</code>
      */
     public static native int sarrayAppend(String filename, Sarray sa);
 
@@ -13979,8 +13876,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int stringCompareLexical(String str1, String str2);
 
     /**
-     * Original signature :
-     * <code>L_ASET* l_asetCreateFromSarray(SARRAY*)</code>
+     * Original signature : <code>L_ASET* l_asetCreateFromSarray(SARRAY*)</code>
      */
     public static native L_Rbtree l_asetCreateFromSarray(Sarray sa);
 
@@ -14027,8 +13923,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int sarrayIntersectionByHmap(Sarray sa1, Sarray sa2, PointerByReference psad);
 
     /**
-     * Original signature :
-     * <code>SARRAY* sarrayGenerateIntegers(l_int32)</code>
+     * Original signature : <code>SARRAY* sarrayGenerateIntegers(l_int32)</code>
      */
     public static native Sarray sarrayGenerateIntegers(int n);
 
@@ -14136,6 +14031,12 @@ public class Leptonica1 implements Library, ILeptonica {
 
     /**
      * Original signature :
+     * <code>PIX* pixScaleBySamplingWithShift(PIX*, l_float32, l_float32, l_float32, l_float32)</code>
+     */
+    public static native Pix pixScaleBySamplingWithShift(Pix pixs, float scalex, float scaley, float shiftx, float shifty);
+
+    /**
+     * Original signature :
      * <code>PIX* pixScaleBySamplingToSize(PIX*, l_int32, l_int32)</code>
      */
     public static native Pix pixScaleBySamplingToSize(Pix pixs, int wd, int hd);
@@ -14207,7 +14108,12 @@ public class Leptonica1 implements Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>PIX* pixScaleToGray(PIX*, l_float32)</code>
+     * <code>PIX* pixScaleBinaryWithShift(PIX*, l_float32, l_float32, l_float32, l_float32)</code>
+     */
+    public static native Pix pixScaleBinaryWithShift(Pix pixs, float scalex, float scaley, float shiftx, float shifty);
+
+    /**
+     * Original signature : <code>PIX* pixScaleToGray(PIX*, l_float32)</code>
      */
     public static native Pix pixScaleToGray(Pix pixs, float scalefactor);
 
@@ -14260,8 +14166,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Pix pixScaleMipmap(Pix pixs1, Pix pixs2, float scale);
 
     /**
-     * Original signature :
-     * <code>PIX* pixExpandReplicate(PIX*, l_int32)</code>
+     * Original signature : <code>PIX* pixExpandReplicate(PIX*, l_int32)</code>
      */
     public static native Pix pixExpandReplicate(Pix pixs, int factor);
 
@@ -14272,8 +14177,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Pix pixScaleGrayMinMax(Pix pixs, int xfact, int yfact, int type);
 
     /**
-     * Original signature :
-     * <code>PIX* pixScaleGrayMinMax2(PIX*, l_int32)</code>
+     * Original signature : <code>PIX* pixScaleGrayMinMax2(PIX*, l_int32)</code>
      */
     public static native Pix pixScaleGrayMinMax2(Pix pixs, int type);
 
@@ -14284,8 +14188,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Pix pixScaleGrayRankCascade(Pix pixs, int level1, int level2, int level3, int level4);
 
     /**
-     * Original signature :
-     * <code>PIX* pixScaleGrayRank2(PIX*, l_int32)</code>
+     * Original signature : <code>PIX* pixScaleGrayRank2(PIX*, l_int32)</code>
      */
     public static native Pix pixScaleGrayRank2(Pix pixs, int rank);
 
@@ -14314,8 +14217,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Pix pixSeedfillBinaryRestricted(Pix pixd, Pix pixs, Pix pixm, int connectivity, int xmax, int ymax);
 
     /**
-     * Original signature :
-     * <code>PIX* pixHolesByFilling(PIX*, l_int32)</code>
+     * Original signature : <code>PIX* pixHolesByFilling(PIX*, l_int32)</code>
      */
     public static native Pix pixHolesByFilling(Pix pixs, int connectivity);
 
@@ -14338,8 +14240,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Pix pixRemoveBorderConnComps(Pix pixs, int connectivity);
 
     /**
-     * Original signature :
-     * <code>PIX* pixFillBgFromBorder(PIX*, l_int32)</code>
+     * Original signature : <code>PIX* pixFillBgFromBorder(PIX*, l_int32)</code>
      */
     public static native Pix pixFillBgFromBorder(Pix pixs, int connectivity);
 
@@ -14520,8 +14421,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int selSetOrigin(Pointer sel, int cy, int cx);
 
     /**
-     * Original signature :
-     * <code>l_ok selGetTypeAtOrigin(SEL*, l_int32*)</code>
+     * Original signature : <code>l_ok selGetTypeAtOrigin(SEL*, l_int32*)</code>
      */
     public static native int selGetTypeAtOrigin(Pointer sel, IntBuffer ptype);
 
@@ -14611,8 +14511,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Pointer selPrintToString(Pointer sel);
 
     /**
-     * Original signature :
-     * <code>SELA* selaCreateFromFile(const char*)</code>
+     * Original signature : <code>SELA* selaCreateFromFile(const char*)</code>
      */
     public static native Sela selaCreateFromFile(String filename);
 
@@ -14629,8 +14528,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Sel selCreateFromPix(Pix pix, int cy, int cx, String name);
 
     /**
-     * Original signature :
-     * <code>SEL* selReadFromColorImage(const char*)</code>
+     * Original signature : <code>SEL* selReadFromColorImage(const char*)</code>
      */
     public static native Sel selReadFromColorImage(String pathname);
 
@@ -14706,8 +14604,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Sela sela4and8ccThin(Sela sela);
 
     /**
-     * Original signature :
-     * <code>SEL* selMakePlusSign(l_int32, l_int32)</code>
+     * Original signature : <code>SEL* selMakePlusSign(l_int32, l_int32)</code>
      */
     public static native Sel selMakePlusSign(int size, int linewidth);
 
@@ -14913,8 +14810,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int sreadHeaderSpix(IntBuffer data, NativeSize size, IntBuffer pwidth, IntBuffer pheight, IntBuffer pbps, IntBuffer pspp, IntBuffer piscmap);
 
     /**
-     * Original signature :
-     * <code>l_ok pixWriteStreamSpix(FILE*, PIX*)</code>
+     * Original signature : <code>l_ok pixWriteStreamSpix(FILE*, PIX*)</code>
      */
     public static native int pixWriteStreamSpix(FILE fp, Pix pix);
 
@@ -14948,8 +14844,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native L_Stack lstackCreate(int n);
 
     /**
-     * Original signature :
-     * <code>void lstackDestroy(L_STACK**, l_int32)</code>
+     * Original signature : <code>void lstackDestroy(L_STACK**, l_int32)</code>
      */
     public static native void lstackDestroy(PointerByReference plstack, int freeflag);
 
@@ -15057,14 +14952,12 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Pix pixSetStrokeWidth(Pix pixs, int width, int thinfirst, int connectivity);
 
     /**
-     * Original signature :
-     * <code>l_int32* sudokuReadFile(const char*)</code>
+     * Original signature : <code>l_int32* sudokuReadFile(const char*)</code>
      */
     public static native IntByReference sudokuReadFile(String filename);
 
     /**
-     * Original signature :
-     * <code>l_int32* sudokuReadString(const char*)</code>
+     * Original signature : <code>l_int32* sudokuReadString(const char*)</code>
      */
     public static native IntByReference sudokuReadString(String str);
 
@@ -15168,14 +15061,12 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Sarray splitStringToParagraphs(ByteBuffer textstr, int splitflag);
 
     /**
-     * Original signature :
-     * <code>PIX* pixReadTiff(const char*, l_int32)</code>
+     * Original signature : <code>PIX* pixReadTiff(const char*, l_int32)</code>
      */
     public static native Pix pixReadTiff(String filename, int n);
 
     /**
-     * Original signature :
-     * <code>PIX* pixReadStreamTiff(FILE*, l_int32)</code>
+     * Original signature : <code>PIX* pixReadStreamTiff(FILE*, l_int32)</code>
      */
     public static native Pix pixReadStreamTiff(FILE fp, int n);
 
@@ -15234,8 +15125,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int writeMultipageTiffSA(Sarray sa, String fileout);
 
     /**
-     * Original signature :
-     * <code>l_ok fprintTiffInfo(FILE*, const char*)</code>
+     * Original signature : <code>l_ok fprintTiffInfo(FILE*, const char*)</code>
      */
     public static native int fprintTiffInfo(FILE fpout, String tiffile);
 
@@ -15341,6 +15231,24 @@ public class Leptonica1 implements Library, ILeptonica {
 
     /**
      * Original signature :
+     * <code>l_int32 returnErrorInt1(const char*, const char*, const char*, l_int32)</code>
+     */
+    public static native int returnErrorInt1(String msg, String arg, String procname, int ival);
+
+    /**
+     * Original signature :
+     * <code>l_float32 returnErrorFloat1(const char*, const char*, const char*, l_float32)</code>
+     */
+    public static native float returnErrorFloat1(String msg, String arg, String procname, float fval);
+
+    /**
+     * Original signature :
+     * <code>void* returnErrorPtr1(const char*, const char*, const char*, void*)</code>
+     */
+    public static native Pointer returnErrorPtr1(String msg, String arg, String procname, Pointer pval);
+
+    /**
+     * Original signature :
      * <code>void leptSetStderrHandler(leptSetStderrHandler_handler_callback*)</code>
      */
     public static native void leptSetStderrHandler(leptSetStderrHandler_handler_callback handler);
@@ -15357,26 +15265,22 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int filesAreIdentical(String fname1, String fname2, IntBuffer psame);
 
     /**
-     * Original signature :
-     * <code>l_uint16 convertOnLittleEnd16(l_uint16)</code>
+     * Original signature : <code>l_uint16 convertOnLittleEnd16(l_uint16)</code>
      */
     public static native short convertOnLittleEnd16(short shortin);
 
     /**
-     * Original signature :
-     * <code>l_uint16 convertOnBigEnd16(l_uint16)</code>
+     * Original signature : <code>l_uint16 convertOnBigEnd16(l_uint16)</code>
      */
     public static native short convertOnBigEnd16(short shortin);
 
     /**
-     * Original signature :
-     * <code>l_uint32 convertOnLittleEnd32(l_uint32)</code>
+     * Original signature : <code>l_uint32 convertOnLittleEnd32(l_uint32)</code>
      */
     public static native int convertOnLittleEnd32(int wordin);
 
     /**
-     * Original signature :
-     * <code>l_uint32 convertOnBigEnd32(l_uint32)</code>
+     * Original signature : <code>l_uint32 convertOnBigEnd32(l_uint32)</code>
      */
     public static native int convertOnBigEnd32(int wordin);
 
@@ -15408,6 +15312,16 @@ public class Leptonica1 implements Library, ILeptonica {
      * Original signature : <code>l_int32 lept_roundftoi(l_float32)</code>
      */
     public static native int lept_roundftoi(float fval);
+
+    /**
+     * Original signature : <code>l_int32 lept_floor(l_float32)</code>
+     */
+    public static native int lept_floor(float fval);
+
+    /**
+     * Original signature : <code>l_int32 lept_ceiling(l_float32)</code>
+     */
+    public static native int lept_ceiling(float fval);
 
     /**
      * Original signature :
@@ -15446,14 +15360,12 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int lept_isPrime(long n, IntBuffer pis_prime, IntBuffer pfactor);
 
     /**
-     * Original signature :
-     * <code>l_uint32 convertIntToGrayCode(l_uint32)</code>
+     * Original signature : <code>l_uint32 convertIntToGrayCode(l_uint32)</code>
      */
     public static native int convertIntToGrayCode(int val);
 
     /**
-     * Original signature :
-     * <code>l_uint32 convertGrayCodeToInt(l_uint32)</code>
+     * Original signature : <code>l_uint32 convertGrayCodeToInt(l_uint32)</code>
      */
     public static native int convertGrayCodeToInt(int val);
 
@@ -15494,8 +15406,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native L_WallTimer startWallTimer();
 
     /**
-     * Original signature :
-     * <code>l_float32 stopWallTimer(L_WALLTIMER**)</code>
+     * Original signature : <code>l_float32 stopWallTimer(L_WALLTIMER**)</code>
      */
     public static native float stopWallTimer(PointerByReference ptimer);
 
@@ -15522,8 +15433,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Pointer stringCopySegment(String src, int start, int nbytes);
 
     /**
-     * Original signature :
-     * <code>l_ok stringReplace(char**, const char*)</code>
+     * Original signature : <code>l_ok stringReplace(char**, const char*)</code>
      */
     public static native int stringReplace(PointerByReference pdest, String src);
 
@@ -15552,8 +15462,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Pointer stringJoin(String src1, String src2);
 
     /**
-     * Original signature :
-     * <code>l_ok stringJoinIP(char**, const char*)</code>
+     * Original signature : <code>l_ok stringJoinIP(char**, const char*)</code>
      */
     public static native int stringJoinIP(PointerByReference psrc1, String src2);
 
@@ -15687,8 +15596,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int l_binaryCompare(ByteBuffer data1, NativeSize size1, ByteBuffer data2, NativeSize size2, IntBuffer psame);
 
     /**
-     * Original signature :
-     * <code>l_ok fileCopy(const char*, const char*)</code>
+     * Original signature : <code>l_ok fileCopy(const char*, const char*)</code>
      */
     public static native int fileCopy(String srcfile, String newfile);
 
@@ -16066,13 +15974,18 @@ public class Leptonica1 implements Library, ILeptonica {
 
     /**
      * Original signature :
+     * <code>l_int32 getFormatFromExtension(const char*)</code>
+     */
+    public static native int getFormatFromExtension(String extension);
+
+    /**
+     * Original signature :
      * <code>l_int32 getImpliedFileFormat(const char*)</code>
      */
     public static native int getImpliedFileFormat(String filename);
 
     /**
-     * Original signature :
-     * <code>l_ok pixGetAutoFormat(PIX*, l_int32*)</code>
+     * Original signature : <code>l_ok pixGetAutoFormat(PIX*, l_int32*)</code>
      */
     public static native int pixGetAutoFormat(Pix pix, IntBuffer pformat);
 
@@ -16094,8 +16007,7 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int l_fileDisplay(String fname, int x, int y, float scale);
 
     /**
-     * Original signature :
-     * <code>l_ok pixDisplay(PIX*, l_int32, l_int32)</code>
+     * Original signature : <code>l_ok pixDisplay(PIX*, l_int32, l_int32)</code>
      */
     public static native int pixDisplay(Pix pixs, int x, int y);
 

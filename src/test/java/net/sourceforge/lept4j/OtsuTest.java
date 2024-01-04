@@ -101,15 +101,15 @@ public class OtsuTest {
             Leptonica1.pixaAddPix(pixa1, pixg, L_COPY);
             Leptonica1.pixaAddPix(pixa1, pixb, L_INSERT);
 
-            thresh.rewind();
-            fgval.rewind();
-            bgval.rewind();
+            ((java.nio.Buffer) thresh).rewind();
+            ((java.nio.Buffer) fgval).rewind();
+            ((java.nio.Buffer) bgval).rewind();
             PointerByReference ppixp = new PointerByReference();
 
             /* Show the histogram of gray values and the split location */
             result = Leptonica1.pixSplitDistributionFgBg(pixg, scorefract, 1, thresh, fgval, bgval, ppixp);
             System.err.printf("thresh = %d, fgval = %d, bgval = %d\n", thresh.get(), fgval.get(), bgval.get());
-            thresh.rewind();
+            ((java.nio.Buffer) thresh).rewind();
 
             pixp = new Pix(ppixp.getValue());
             Leptonica1.pixaAddPix(pixa1, pixp, L_CLONE);

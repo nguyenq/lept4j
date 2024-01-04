@@ -676,15 +676,17 @@ public interface ILeptonica {
 	public static final int L_USE_INNER = 1;
 	/** Select the outer part (e.g., a frame) */
 	public static final int L_USE_OUTER = 2;
+        /** Disable pixDisplay() */
+	public static final int L_DISPLAY_WITH_NONE = 0;
 	/** Use xzgv with pixDisplay() */
 	public static final int L_DISPLAY_WITH_XZGV = 1;
 	/** Use xli with pixDisplay() */
 	public static final int L_DISPLAY_WITH_XLI = 2;
 	/** Use xv with pixDisplay() */
 	public static final int L_DISPLAY_WITH_XV = 3;
-	/** Use irfvanview (win) with pixDisplay() */
+	/** Use irfanview (win) with pixDisplay() */
 	public static final int L_DISPLAY_WITH_IV = 4;
-	/** Use open (apple) with pixDisplay() */
+	/** Use open (apple/win) with pixDisplay() */
 	public static final int L_DISPLAY_WITH_OPEN = 5;
 	/** Write full resolution chroma */
 	public static final int L_NO_CHROMA_SAMPLING_JPEG = 1;
@@ -775,7 +777,7 @@ public interface ILeptonica {
 	/** Percept. weight for blue */
 	public static final float L_BLUE_WEIGHT = 0.2f;
 	public static final int LIBLEPT_MAJOR_VERSION = (int)1;
-	public static final int LIBLEPT_MINOR_VERSION = (int)83;
+	public static final int LIBLEPT_MINOR_VERSION = (int)84;
 	public static final int LIBLEPT_PATCH_VERSION = (int)1;
 	public static final int HAVE_LIBJPEG = (int)1;
 	public static final int HAVE_LIBTIFF = (int)1;
