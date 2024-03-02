@@ -153,3 +153,6 @@ Version 1.18.2 (23 October 2023):
 Version 1.19.0 (4 January 2024):
 - Upgrade to Leptonica 1.84.1
 - Update dependencies
+
+Version 1.19.1 (1 March 2024):
+- Rebuild Leptonica 1.84.1 Windows binaries
