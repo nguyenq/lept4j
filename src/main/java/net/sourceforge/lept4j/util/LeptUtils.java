@@ -49,7 +49,6 @@ import static net.sourceforge.lept4j.ILeptonica.L_COPY;
 //import org.opencv.core.Mat;
 //import org.opencv.core.MatOfByte;
 //import org.opencv.imgcodecs.Imgcodecs;
-
 /**
  * Various utility methods for Leptonica.
  *
@@ -108,59 +107,61 @@ public class LeptUtils {
      */
     public static Pix removeLines(Pix pixs) {
         float angle, conf;
-        Pix pix1, pix2, pix3, pix4, pix5;
-        Pix pix6, pix7, pix8, pix9;
+        Pix pix1 = null, pix2 = null, pix3 = null, pix4 = null, pix5 = null;
+        Pix pix6 = null, pix7 = null, pix8, pix9 = null;
 
-        /* threshold to binary, extracting much of the lines */
-        pix1 = Leptonica1.pixThresholdToBinary(pixs, 170);
+        try {
+            /* threshold to binary, extracting much of the lines */
+            pix1 = Leptonica1.pixThresholdToBinary(pixs, 170);
 
-        /* find the skew angle and deskew using an interpolated
-         * rotator for anti-aliasing (to avoid jaggies) */
-        FloatBuffer pangle = FloatBuffer.allocate(1);
-        FloatBuffer pconf = FloatBuffer.allocate(1);
-        Leptonica1.pixFindSkew(pix1, pangle, pconf);
-        angle = pangle.get();
-        conf = pconf.get();
-        pix2 = Leptonica1.pixRotateAMGray(pixs, (float) (deg2rad * angle), (byte) 255);
+            /* find the skew angle and deskew using an interpolated
+             * rotator for anti-aliasing (to avoid jaggies) */
+            FloatBuffer pangle = FloatBuffer.allocate(1);
+            FloatBuffer pconf = FloatBuffer.allocate(1);
+            Leptonica1.pixFindSkew(pix1, pangle, pconf);
+            angle = pangle.get();
+            conf = pconf.get();
+            pix2 = Leptonica1.pixRotateAMGray(pixs, (float) (deg2rad * angle), (byte) 255);
 
-        /* extract the lines to be removed */
-        pix3 = Leptonica1.pixCloseGray(pix2, 51, 1);
+            /* extract the lines to be removed */
+            pix3 = Leptonica1.pixCloseGray(pix2, 51, 1);
 
-        /* solidify the lines to be removed */
-        pix4 = Leptonica1.pixErodeGray(pix3, 1, 5);
+            /* solidify the lines to be removed */
+            pix4 = Leptonica1.pixErodeGray(pix3, 1, 5);
 
-        /* clean the background of those lines */
-        pix5 = Leptonica1.pixThresholdToValue(null, pix4, 210, 255);
+            /* clean the background of those lines */
+            pix5 = Leptonica1.pixThresholdToValue(null, pix4, 210, 255);
 
-        pix6 = Leptonica1.pixThresholdToValue(null, pix5, 200, 0);
+            pix6 = Leptonica1.pixThresholdToValue(null, pix5, 200, 0);
 
-        /* get paint-through mask for changed pixels */
-        pix7 = Leptonica1.pixThresholdToBinary(pix6, 210);
+            /* get paint-through mask for changed pixels */
+            pix7 = Leptonica1.pixThresholdToBinary(pix6, 210);
 
-        /* add the inverted, cleaned lines to orig.  Because
+            /* add the inverted, cleaned lines to orig.  Because
          * the background was cleaned, the inversion is 0,
          * so when you add, it doesn't lighten those pixels.
          * It only lightens (to white) the pixels in the lines! */
-        Leptonica1.pixInvert(pix6, pix6);
-        pix8 = Leptonica1.pixAddGray(null, pix2, pix6);
+            Leptonica1.pixInvert(pix6, pix6);
+            pix8 = Leptonica1.pixAddGray(null, pix2, pix6);
 
-        pix9 = Leptonica1.pixOpenGray(pix8, 1, 9);
+            pix9 = Leptonica1.pixOpenGray(pix8, 1, 9);
 
-        Leptonica1.pixCombineMasked(pix8, pix9, pix7);
+            Leptonica1.pixCombineMasked(pix8, pix9, pix7);
 
-        // resource cleanup
-        disposePix(pix1);
-        disposePix(pix2);
-        disposePix(pix3);
-        disposePix(pix4);
-        disposePix(pix5);
-        disposePix(pix6);
-        disposePix(pix7);
-        disposePix(pix9);
-
-        return pix8;
+            return pix8;
+        } finally {
+            // resource cleanup
+            disposePix(pix1);
+            disposePix(pix2);
+            disposePix(pix3);
+            disposePix(pix4);
+            disposePix(pix5);
+            disposePix(pix6);
+            disposePix(pix7);
+            disposePix(pix9);
+        }
     }
-    
+
     /**
      * Remove lines from image file.
      *
@@ -169,49 +170,55 @@ public class LeptUtils {
      * @throws IOException
      */
     public static String removeLines(String imageFile) throws IOException {
-        Pixa pixa;
-        
-        if (imageFile.toLowerCase().endsWith(".tif") || imageFile.toLowerCase().endsWith(".tiff")) {
-            pixa = Leptonica1.pixaReadMultipageTiff(imageFile);
-        } else {
-            pixa = Leptonica1.pixaCreate(1);
-            Pix pix = Leptonica1.pixRead(imageFile);
-            Leptonica1.pixaAddPix(pixa, pix, L_COPY);
-            LeptUtils.dispose(pix);
-        }
-        
-        int numpages = Leptonica1.pixaGetCount(pixa);
-        Pixa pixb = Leptonica1.pixaCreate(numpages);
+        Pixa pixa = null, pixb = null;
 
-        for (int i = 0; i < numpages; i++) {
-            Pix pix = Leptonica1.pixaGetPix(pixa, i, L_COPY);
-            Pix pixGray = null;
-            int depth = Leptonica1.pixGetDepth(pix);
-            if (depth != 8) {
-                pixGray = Leptonica1.pixConvertTo8(pix, FALSE);
+        try {
+            if (imageFile.toLowerCase().endsWith(".tif") || imageFile.toLowerCase().endsWith(".tiff")) {
+                pixa = Leptonica1.pixaReadMultipageTiff(imageFile);
+            } else {
+                pixa = Leptonica1.pixaCreate(1);
+                Pix pix = Leptonica1.pixRead(imageFile);
+                Leptonica1.pixaAddPix(pixa, pix, L_COPY);
+                LeptUtils.dispose(pix);
             }
-            
-            Pix pix1 = LeptUtils.removeLines(pixGray != null ? pixGray : pix); // horizontal lines
-            Pix pix2 = Leptonica1.pixRotate90(pix1, 1); // rotate 90 deg CW
-            Pix pix3 = LeptUtils.removeLines(pix2); // effectively vertical lines
-            Pix pix4 = Leptonica1.pixRotate90(pix3, -1);  // rotate 90 deg CCW
-            
-            Leptonica1.pixaAddPix(pixb, pix4, L_COPY);
-            
-            LeptUtils.dispose(pix);
-            LeptUtils.dispose(pixGray);
-            LeptUtils.dispose(pix1);
-            LeptUtils.dispose(pix2);
-            LeptUtils.dispose(pix3);
-            LeptUtils.dispose(pix4);
-        }
-        
-        File file = File.createTempFile("temp", ".tif");
-        int result = Leptonica1.pixaWriteMultipageTiff(file.getPath(), pixb);
-        LeptUtils.dispose(pixa);
-        LeptUtils.dispose(pixb);
 
-        return file.getPath();
+            int numpages = Leptonica1.pixaGetCount(pixa);
+            pixb = Leptonica1.pixaCreate(numpages);
+
+            for (int i = 0; i < numpages; i++) {
+                Pix pix = null, pix1 = null, pix2 = null, pix3 = null, pix4 = null, pixGray = null;
+
+                try {
+                    pix = Leptonica1.pixaGetPix(pixa, i, L_COPY);
+                    int depth = Leptonica1.pixGetDepth(pix);
+                    if (depth != 8) {
+                        pixGray = Leptonica1.pixConvertTo8(pix, FALSE);
+                    }
+
+                    pix1 = LeptUtils.removeLines(pixGray != null ? pixGray : pix); // horizontal lines
+                    pix2 = Leptonica1.pixRotate90(pix1, 1); // rotate 90 deg CW
+                    pix3 = LeptUtils.removeLines(pix2); // effectively vertical lines
+                    pix4 = Leptonica1.pixRotate90(pix3, -1);  // rotate 90 deg CCW
+
+                    Leptonica1.pixaAddPix(pixb, pix4, L_COPY);
+                } finally {
+                    LeptUtils.dispose(pix);
+                    LeptUtils.dispose(pixGray);
+                    LeptUtils.dispose(pix1);
+                    LeptUtils.dispose(pix2);
+                    LeptUtils.dispose(pix3);
+                    LeptUtils.dispose(pix4);
+                }
+            }
+
+            File file = File.createTempFile("temp", ".tif");
+            int result = Leptonica1.pixaWriteMultipageTiff(file.getPath(), pixb);
+
+            return file.getPath();
+        } finally {
+            LeptUtils.dispose(pixa);
+            LeptUtils.dispose(pixb);
+        }
     }
 
     /**
@@ -244,35 +251,37 @@ public class LeptUtils {
      * @return pix with speckle removed
      */
     public static Pix despeckle(Pix pixs, String selStr, int selSize) {
-        Pix pix1, pix2, pix3;
-        Pix pix4, pix5, pix6;
-        Sel sel1, sel2;
+        Pix pix1 = null, pix2 = null, pix3 = null;
+        Pix pix4 = null, pix5 = null, pix6;
+        Sel sel1 = null, sel2 = null;
 
-        /*  Normalize for rapidly varying background */
-        pix1 = Leptonica1.pixBackgroundNormFlex(pixs, 7, 7, 1, 1, 10);
+        try {
+            /*  Normalize for rapidly varying background */
+            pix1 = Leptonica1.pixBackgroundNormFlex(pixs, 7, 7, 1, 1, 10);
 
-        /* Remove the background */
-        pix2 = Leptonica1.pixGammaTRCMasked(null, pix1, null, 1.0f, 100, 175);
-        /* Binarize */
-        pix3 = Leptonica1.pixThresholdToBinary(pix2, 180);
+            /* Remove the background */
+            pix2 = Leptonica1.pixGammaTRCMasked(null, pix1, null, 1.0f, 100, 175);
+            /* Binarize */
+            pix3 = Leptonica1.pixThresholdToBinary(pix2, 180);
 
-        /* Remove the speckle noise up to selSize x selSize */
-        sel1 = Leptonica1.selCreateFromString(selStr, selSize + 2, selSize + 2, "speckle" + selSize);
-        pix4 = Leptonica1.pixHMT(null, pix3, sel1.getPointer());
-        sel2 = Leptonica1.selCreateBrick(selSize, selSize, 0, 0, ILeptonica.SEL_HIT);
-        pix5 = Leptonica1.pixDilate(null, pix4, sel2.getPointer());
-        pix6 = Leptonica1.pixSubtract(null, pix3, pix5);
+            /* Remove the speckle noise up to selSize x selSize */
+            sel1 = Leptonica1.selCreateFromString(selStr, selSize + 2, selSize + 2, "speckle" + selSize);
+            pix4 = Leptonica1.pixHMT(null, pix3, sel1.getPointer());
+            sel2 = Leptonica1.selCreateBrick(selSize, selSize, 0, 0, ILeptonica.SEL_HIT);
+            pix5 = Leptonica1.pixDilate(null, pix4, sel2.getPointer());
+            pix6 = Leptonica1.pixSubtract(null, pix3, pix5);
 
-        LeptUtils.dispose(sel1);
-        LeptUtils.dispose(sel2);
+            return pix6;
+        } finally {
+            LeptUtils.dispose(sel1);
+            LeptUtils.dispose(sel2);
 
-        LeptUtils.dispose(pix1);
-        LeptUtils.dispose(pix2);
-        LeptUtils.dispose(pix3);
-        LeptUtils.dispose(pix4);
-        LeptUtils.dispose(pix5);
-
-        return pix6;
+            LeptUtils.dispose(pix1);
+            LeptUtils.dispose(pix2);
+            LeptUtils.dispose(pix3);
+            LeptUtils.dispose(pix4);
+            LeptUtils.dispose(pix5);
+        }
     }
 
     /**
