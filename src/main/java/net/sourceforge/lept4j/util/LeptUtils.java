@@ -72,9 +72,10 @@ public class LeptUtils {
         int format = IFF_TIFF;
         Leptonica1.pixWriteMem(pdata, psize, pix, format);
         byte[] b = pdata.getValue().getByteArray(0, psize.getValue().intValue());
-        InputStream in = new ByteArrayInputStream(b);
-        BufferedImage bi = ImageIO.read(in);
-        in.close();
+        BufferedImage bi;
+        try (InputStream in = new ByteArrayInputStream(b)) {
+            bi = ImageIO.read(in);
+        }
         Leptonica1.lept_free(pdata.getValue());
         return bi;
     }
@@ -138,9 +139,9 @@ public class LeptUtils {
             pix7 = Leptonica1.pixThresholdToBinary(pix6, 210);
 
             /* add the inverted, cleaned lines to orig.  Because
-         * the background was cleaned, the inversion is 0,
-         * so when you add, it doesn't lighten those pixels.
-         * It only lightens (to white) the pixels in the lines! */
+             * the background was cleaned, the inversion is 0,
+             * so when you add, it doesn't lighten those pixels.
+             * It only lightens (to white) the pixels in the lines! */
             Leptonica1.pixInvert(pix6, pix6);
             pix8 = Leptonica1.pixAddGray(null, pix2, pix6);
 
@@ -420,15 +421,16 @@ public class LeptUtils {
         IIOMetadata streamMetadata = writer.getDefaultStreamMetadata(tiffWriteParam);
 
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-        ImageOutputStream ios = ImageIO.createImageOutputStream(outputStream);
-        writer.setOutput(ios);
-        writer.write(streamMetadata, new IIOImage(image, null, null), tiffWriteParam);
-//        writer.write(image);
-        writer.dispose();
-        ios.seek(0);
-        byte[] b = new byte[(int) ios.length()];
-        ios.read(b);
-        ios.close();
+        byte[] b;
+        try (ImageOutputStream ios = ImageIO.createImageOutputStream(outputStream)) {
+            writer.setOutput(ios);
+            writer.write(streamMetadata, new IIOImage(image, null, null), tiffWriteParam);
+            //writer.write(image);
+            writer.dispose();
+            ios.seek(0);
+            b = new byte[(int) ios.length()];
+            ios.read(b);
+        }
 
         ByteBuffer buf = ByteBuffer.allocateDirect(b.length);
         buf.order(ByteOrder.nativeOrder());
