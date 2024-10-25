@@ -5628,6 +5628,13 @@ public interface Leptonica extends Library, ILeptonica {
 //       * <code>l_int32 fgetJp2kResolution(FILE*, l_int32*, l_int32*)</code>
 //       */
 //      int fgetJp2kResolution(FILE fp, IntBuffer pxres, IntBuffer pyres);
+    
+//    /**
+//     * Original signature : 
+//     * <code>l_ok readResolutionMemJp2k(const l_uint8*, size_t, l_int32*, l_int32*)</code>
+//     */
+//    int readResolutionMemJp2k(ByteBuffer data, NativeSize nbytes, IntBuffer pxres, IntBuffer pyres);
+    
     /**
      * Original signature :
      * <code>PIX* pixReadJp2k(const char*, l_uint32, BOX*, l_int32, l_int32)</code>
@@ -7263,10 +7270,10 @@ public interface Leptonica extends Library, ILeptonica {
     Pix pixGenTextblockMask(Pix pixs, Pix pixvws, Pixa pixadb);
 
     /**
-     * Original signature :
-     * <code>PIX* pixCropImage(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_float32, const char*, BOX**)</code>
+     * Original signature : 
+     * <code>PIX* pixCropImage(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_float32, l_int32, const char*, BOX**)</code>
      */
-    Pix pixCropImage(Pix pixs, int lr_clear, int tb_clear, int edgeclean, int lr_add, int tb_add, float maxwiden, String debugfile, PointerByReference pcropbox);
+    Pix pixCropImage(Pix pixs, int lr_clear, int tb_clear, int edgeclean, int lr_border, int tb_border, float maxwiden, int printwiden, String debugfile, PointerByReference pcropbox);
 
     /**
      * Original signature :
@@ -7431,9 +7438,9 @@ public interface Leptonica extends Library, ILeptonica {
 //
 //    /**
 //     * Original signature :
-//     * <code>l_ok cropFilesToPdf(SARRAY*, l_int32, l_int32, l_int32, l_int32, l_int32, l_float32, const char*, const char*)</code>
+//     * <code>l_ok cropFilesToPdf(SARRAY*, l_int32, l_int32, l_int32, l_int32, l_int32, l_float32, l_int32, const char*, const char*)</code>
 //     */
-//    int cropFilesToPdf(Sarray sa, int lr_clear, int tb_clear, int edgeclean, int lr_add, int tb_add, float maxwiden, String title, String fileout);
+//    int cropFilesToPdf(Sarray sa, int lr_clear, int tb_clear, int edgeclean, int lr_add, int tb_add, float maxwiden, int printwiden, String title, String fileout);
 //
 //    /**
 //     * Original signature :
@@ -8886,6 +8893,11 @@ public interface Leptonica extends Library, ILeptonica {
 //       * <code>l_ok pixConformsToRectangle(PIX*, BOX*, l_int32, l_int32*)</code>
 //       */
 //      int pixConformsToRectangle(Pix pixs, Box box, int dist, IntBuffer pconforms);
+//    /**
+//     * Original signature : 
+//     * <code>PIX* pixExtractRectangularRegions(PIX*, BOXA*)</code>
+//     */
+//    Pix pixExtractRectangularRegions(Pix pixs, Boxa boxa);
 //      /**
 //       * Original signature :
 //       * <code>PIXA* pixClipRectangles(PIX*, BOXA*)</code>
@@ -12223,6 +12235,19 @@ public interface Leptonica extends Library, ILeptonica {
      * <code>char* regTestGenLocalFilename(L_REGPARAMS*, l_int32, l_int32)</code>
      */
     Pointer regTestGenLocalFilename(L_RegParams rp, int index, int format);
+    
+//    /**
+//     * Original signature : 
+//     * <code>l_ok l_pdfRenderFile(const char*, l_int32, SARRAY**)</code>
+//     */
+//    int l_pdfRenderFile(String filename, int res, PointerByReference psaout);
+//
+//    /**
+//     * Original signature : 
+//     * <code>l_ok l_pdfRenderFiles(const char*, SARRAY*, l_int32, SARRAY**)</code>
+//     */
+//    int l_pdfRenderFiles(String dir, Sarray sain, int res, PointerByReference psaout);
+    
 //      /**
 //       * Original signature :
 //       * <code>l_ok pixRasterop(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, PIX*, l_int32, l_int32)</code>
@@ -14325,9 +14350,9 @@ public interface Leptonica extends Library, ILeptonica {
 //      int lept_cp(String srcfile, String newdir, String newtail, PointerByReference pnewpath);
 
     /**
-     * Original signature : <code>void callSystemDebug(const char*)</code>
+     * Original signature : <code>l_int32 callSystemDebug(const char*)</code>
      */
-    void callSystemDebug(String cmd);
+    int callSystemDebug(String cmd);
 
     /**
      * Original signature :

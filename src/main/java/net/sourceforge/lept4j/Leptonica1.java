@@ -6097,7 +6097,13 @@ public class Leptonica1 implements Library, ILeptonica {
      * <code>l_int32 fgetJp2kResolution(FILE*, l_int32*, l_int32*)</code>
      */
     public static native int fgetJp2kResolution(FILE fp, IntBuffer pxres, IntBuffer pyres);
-
+    
+    /**
+     * Original signature : 
+     * <code>l_ok readResolutionMemJp2k(const l_uint8*, size_t, l_int32*, l_int32*)</code>
+     */
+    public static native int readResolutionMemJp2k(ByteBuffer data, NativeSize nbytes, IntBuffer pxres, IntBuffer pyres);
+    
     /**
      * Original signature :
      * <code>PIX* pixReadJp2k(const char*, l_uint32, BOX*, l_int32, l_int32)</code>
@@ -7881,10 +7887,10 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Pix pixGenTextblockMask(Pix pixs, Pix pixvws, Pixa pixadb);
 
     /**
-     * Original signature :
-     * <code>PIX* pixCropImage(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_float32, const char*, BOX**)</code>
+     * Original signature : 
+     * <code>PIX* pixCropImage(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_float32, l_int32, const char*, BOX**)</code>
      */
-    public static native Pix pixCropImage(Pix pixs, int lr_clear, int tb_clear, int edgeclean, int lr_add, int tb_add, float maxwiden, String debugfile, PointerByReference pcropbox);
+    public static native Pix pixCropImage(Pix pixs, int lr_clear, int tb_clear, int edgeclean, int lr_border, int tb_border, float maxwiden, int printwiden, String debugfile, PointerByReference pcropbox);
 
     /**
      * Original signature :
@@ -8062,9 +8068,9 @@ public class Leptonica1 implements Library, ILeptonica {
 
     /**
      * Original signature :
-     * <code>l_ok cropFilesToPdf(SARRAY*, l_int32, l_int32, l_int32, l_int32, l_int32, l_float32, const char*, const char*)</code>
+     * <code>l_ok cropFilesToPdf(SARRAY*, l_int32, l_int32, l_int32, l_int32, l_int32, l_float32, l_int32, const char*, const char*)</code>
      */
-    public static native int cropFilesToPdf(Sarray sa, int lr_clear, int tb_clear, int edgeclean, int lr_add, int tb_add, float maxwiden, String title, String fileout);
+    public static native int cropFilesToPdf(Sarray sa, int lr_clear, int tb_clear, int edgeclean, int lr_add, int tb_add, float maxwiden, int printwiden, String title, String fileout);
 
     /**
      * Original signature :
@@ -9675,7 +9681,14 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int pixConformsToRectangle(Pix pixs, Box box, int dist, IntBuffer pconforms);
 
     /**
-     * Original signature : <code>PIXA* pixClipRectangles(PIX*, BOXA*)</code>
+     * Original signature : 
+     * <code>PIX* pixExtractRectangularRegions(PIX*, BOXA*)</code>
+     */
+    public static native Pix pixExtractRectangularRegions(Pix pixs, Boxa boxa);
+        
+    /**
+     * Original signature : 
+     * <code>PIXA* pixClipRectangles(PIX*, BOXA*)</code>
      */
     public static native Pixa pixClipRectangles(Pix pixs, Boxa boxa);
 
@@ -13404,6 +13417,18 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native Pointer regTestGenLocalFilename(L_RegParams rp, int index, int format);
 
     /**
+     * Original signature : 
+     * <code>l_ok l_pdfRenderFile(const char*, l_int32, SARRAY**)</code>
+     */
+    public static native int l_pdfRenderFile(String filename, int res, PointerByReference psaout);
+
+    /**
+     * Original signature : 
+     * <code>l_ok l_pdfRenderFiles(const char*, SARRAY*, l_int32, SARRAY**)</code>
+     */
+    public static native int l_pdfRenderFiles(String dir, Sarray sain, int res, PointerByReference psaout);
+        
+    /**
      * Original signature :
      * <code>l_ok pixRasterop(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, PIX*, l_int32, l_int32)</code>
      */
@@ -15707,9 +15732,9 @@ public class Leptonica1 implements Library, ILeptonica {
     public static native int lept_cp(String srcfile, String newdir, String newtail, PointerByReference pnewpath);
 
     /**
-     * Original signature : <code>void callSystemDebug(const char*)</code>
+     * Original signature : <code>l_int32 callSystemDebug(const char*)</code>
      */
-    public static native void callSystemDebug(String cmd);
+    public static native int callSystemDebug(String cmd);
 
     /**
      * Original signature :

@@ -3897,7 +3897,7 @@ public class LeptonicaImpl implements Leptonica {
     }
 
     @Override
-    public Pix pixCropImage(Pix pixs, int lr_clear, int tb_clear, int edgeclean, int lr_add, int tb_add, float maxwiden, String debugfile, PointerByReference pcropbox) {
+    public Pix pixCropImage(Pix pixs, int lr_clear, int tb_clear, int edgeclean, int lr_border, int tb_border, float maxwiden, int printwiden, String debugfile, PointerByReference pcropbox) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
@@ -6622,7 +6622,7 @@ public class LeptonicaImpl implements Leptonica {
     }
 
     @Override
-    public void callSystemDebug(String cmd) {
+    public int callSystemDebug(String cmd) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 

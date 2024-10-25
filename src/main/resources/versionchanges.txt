@@ -156,3 +156,6 @@ Version 1.19.0 (4 January 2024):
 
 Version 1.19.1 (1 March 2024):
 - Rebuild Leptonica 1.84.1 Windows binaries
+
+Version 1.20.0 (24 October 2024):
+- Upgrade to Leptonica 1.85.0

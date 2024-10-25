@@ -76,7 +76,6 @@ public class L_Bmf extends Structure {
 	 * table mapping ascii --&gt; char width<br>
 	 * C type : l_int32*
 	 */
-	public IntByReference widthtab;
 	public L_Bmf() {
 		super();
 	}
@@ -86,7 +85,7 @@ public class L_Bmf extends Structure {
 	 */
 	@Override
 	protected List<String> getFieldOrder() {
-		return Arrays.asList("pixa", "size", "directory", "baseline1", "baseline2", "baseline3", "lineheight", "kernwidth", "spacewidth", "vertlinesep", "fonttab", "baselinetab", "widthtab");
+		return Arrays.asList("pixa", "size", "directory", "baseline1", "baseline2", "baseline3", "lineheight", "kernwidth", "spacewidth", "vertlinesep", "fonttab", "baselinetab");
 	}
 	public L_Bmf(Pointer peer) {
 		super(peer);
