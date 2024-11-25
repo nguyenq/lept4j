@@ -190,59 +190,59 @@ public interface Leptonica extends Library, ILeptonica {
 //     */
 //    Pix pixConvertTo8MinMax(Pix pixs);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixAffineSampledPta(PIX*, PTA*, PTA*, l_int32)</code>
-     */
-    Pix pixAffineSampledPta(Pix pixs, Pta ptad, Pta ptas, int incolor);
-
-    /**
-     * Original signature :
-     * <code>PIX* pixAffineSampled(PIX*, l_float32*, l_int32)</code>
-     */
-    Pix pixAffineSampled(Pix pixs, FloatBuffer vc, int incolor);
-
-    /**
-     * Original signature :
-     * <code>PIX* pixAffinePta(PIX*, PTA*, PTA*, l_int32)</code>
-     */
-    Pix pixAffinePta(Pix pixs, Pta ptad, Pta ptas, int incolor);
-
-    /**
-     * Original signature :
-     * <code>PIX* pixAffine(PIX*, l_float32*, l_int32)</code>
-     */
-    Pix pixAffine(Pix pixs, FloatBuffer vc, int incolor);
-
-    /**
-     * Original signature :
-     * <code>PIX* pixAffinePtaColor(PIX*, PTA*, PTA*, l_uint32)</code>
-     */
-    Pix pixAffinePtaColor(Pix pixs, Pta ptad, Pta ptas, int colorval);
-
-    /**
-     * Original signature :
-     * <code>PIX* pixAffineColor(PIX*, l_float32*, l_uint32)</code>
-     */
-    Pix pixAffineColor(Pix pixs, FloatBuffer vc, int colorval);
-
-    /**
-     * Original signature :
-     * <code>PIX* pixAffinePtaGray(PIX*, PTA*, PTA*, l_uint8)</code>
-     */
-    Pix pixAffinePtaGray(Pix pixs, Pta ptad, Pta ptas, byte grayval);
-
-    /**
-     * Original signature :
-     * <code>PIX* pixAffineGray(PIX*, l_float32*, l_uint8)</code>
-     */
-    Pix pixAffineGray(Pix pixs, FloatBuffer vc, byte grayval);
-
-    /**
-     * Original signature :
-     * <code>PIX* pixAffinePtaWithAlpha(PIX*, PTA*, PTA*, PIX*, l_float32, l_int32)</code>
-     */
-    Pix pixAffinePtaWithAlpha(Pix pixs, Pta ptad, Pta ptas, Pix pixg, float fract, int border);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixAffineSampledPta(PIX*, PTA*, PTA*, l_int32)</code>
+//     */
+//    Pix pixAffineSampledPta(Pix pixs, Pta ptad, Pta ptas, int incolor);
+//
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixAffineSampled(PIX*, l_float32*, l_int32)</code>
+//     */
+//    Pix pixAffineSampled(Pix pixs, FloatBuffer vc, int incolor);
+//
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixAffinePta(PIX*, PTA*, PTA*, l_int32)</code>
+//     */
+//    Pix pixAffinePta(Pix pixs, Pta ptad, Pta ptas, int incolor);
+//
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixAffine(PIX*, l_float32*, l_int32)</code>
+//     */
+//    Pix pixAffine(Pix pixs, FloatBuffer vc, int incolor);
+//
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixAffinePtaColor(PIX*, PTA*, PTA*, l_uint32)</code>
+//     */
+//    Pix pixAffinePtaColor(Pix pixs, Pta ptad, Pta ptas, int colorval);
+//
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixAffineColor(PIX*, l_float32*, l_uint32)</code>
+//     */
+//    Pix pixAffineColor(Pix pixs, FloatBuffer vc, int colorval);
+//
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixAffinePtaGray(PIX*, PTA*, PTA*, l_uint8)</code>
+//     */
+//    Pix pixAffinePtaGray(Pix pixs, Pta ptad, Pta ptas, byte grayval);
+//
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixAffineGray(PIX*, l_float32*, l_uint8)</code>
+//     */
+//    Pix pixAffineGray(Pix pixs, FloatBuffer vc, byte grayval);
+//
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixAffinePtaWithAlpha(PIX*, PTA*, PTA*, PIX*, l_float32, l_int32)</code>
+//     */
+//    Pix pixAffinePtaWithAlpha(Pix pixs, Pta ptad, Pta ptas, Pix pixg, float fract, int border);
 
 //      /**
 //       * Original signature :
@@ -299,53 +299,53 @@ public interface Leptonica extends Library, ILeptonica {
 //       * <code>l_float32* createMatrix2dRotate(l_float32, l_float32, l_float32)</code>
 //       */
 //      FloatByReference createMatrix2dRotate(float xc, float yc, float angle);
-    /**
-     * Original signature :
-     * <code>PTA* ptaTranslate(PTA*, l_float32, l_float32)</code>
-     */
-    Pta ptaTranslate(Pta ptas, float transx, float transy);
-
-    /**
-     * Original signature :
-     * <code>PTA* ptaScale(PTA*, l_float32, l_float32)</code>
-     */
-    Pta ptaScale(Pta ptas, float scalex, float scaley);
-
-    /**
-     * Original signature :
-     * <code>PTA* ptaRotate(PTA*, l_float32, l_float32, l_float32)</code>
-     */
-    Pta ptaRotate(Pta ptas, float xc, float yc, float angle);
-
-    /**
-     * Original signature :
-     * <code>BOXA* boxaTranslate(BOXA*, l_float32, l_float32)</code>
-     */
-    Boxa boxaTranslate(Boxa boxas, float transx, float transy);
-
-    /**
-     * Original signature :
-     * <code>BOXA* boxaScale(BOXA*, l_float32, l_float32)</code>
-     */
-    Boxa boxaScale(Boxa boxas, float scalex, float scaley);
-
-    /**
-     * Original signature :
-     * <code>BOXA* boxaRotate(BOXA*, l_float32, l_float32, l_float32)</code>
-     */
-    Boxa boxaRotate(Boxa boxas, float xc, float yc, float angle);
-
-    /**
-     * Original signature :
-     * <code>PTA* ptaAffineTransform(PTA*, l_float32*)</code>
-     */
-    Pta ptaAffineTransform(Pta ptas, FloatBuffer mat);
-
-    /**
-     * Original signature :
-     * <code>BOXA* boxaAffineTransform(BOXA*, l_float32*)</code>
-     */
-    Boxa boxaAffineTransform(Boxa boxas, FloatBuffer mat);
+//    /**
+//     * Original signature :
+//     * <code>PTA* ptaTranslate(PTA*, l_float32, l_float32)</code>
+//     */
+//    Pta ptaTranslate(Pta ptas, float transx, float transy);
+//
+//    /**
+//     * Original signature :
+//     * <code>PTA* ptaScale(PTA*, l_float32, l_float32)</code>
+//     */
+//    Pta ptaScale(Pta ptas, float scalex, float scaley);
+//
+//    /**
+//     * Original signature :
+//     * <code>PTA* ptaRotate(PTA*, l_float32, l_float32, l_float32)</code>
+//     */
+//    Pta ptaRotate(Pta ptas, float xc, float yc, float angle);
+//
+//    /**
+//     * Original signature :
+//     * <code>BOXA* boxaTranslate(BOXA*, l_float32, l_float32)</code>
+//     */
+//    Boxa boxaTranslate(Boxa boxas, float transx, float transy);
+//
+//    /**
+//     * Original signature :
+//     * <code>BOXA* boxaScale(BOXA*, l_float32, l_float32)</code>
+//     */
+//    Boxa boxaScale(Boxa boxas, float scalex, float scaley);
+//
+//    /**
+//     * Original signature :
+//     * <code>BOXA* boxaRotate(BOXA*, l_float32, l_float32, l_float32)</code>
+//     */
+//    Boxa boxaRotate(Boxa boxas, float xc, float yc, float angle);
+//
+//    /**
+//     * Original signature :
+//     * <code>PTA* ptaAffineTransform(PTA*, l_float32*)</code>
+//     */
+//    Pta ptaAffineTransform(Pta ptas, FloatBuffer mat);
+//
+//    /**
+//     * Original signature :
+//     * <code>BOXA* boxaAffineTransform(BOXA*, l_float32*)</code>
+//     */
+//    Boxa boxaAffineTransform(Boxa boxas, FloatBuffer mat);
 
 //      /**
 //       * Original signature :
@@ -491,30 +491,30 @@ public interface Leptonica extends Library, ILeptonica {
      * Original signature : <code>void bbufferDestroy(L_BBUFFER**)</code>
      */
     void bbufferDestroy(PointerByReference pbb);
-
-    /**
-     * Original signature :
-     * <code>l_uint8* bbufferDestroyAndSaveData(L_BBUFFER**, size_t*)</code>
-     */
-    Pointer bbufferDestroyAndSaveData(PointerByReference pbb, NativeSizeByReference pnbytes);
-
+//
+//    /**
+//     * Original signature :
+//     * <code>l_uint8* bbufferDestroyAndSaveData(L_BBUFFER**, size_t*)</code>
+//     */
+//    Pointer bbufferDestroyAndSaveData(PointerByReference pbb, NativeSizeByReference pnbytes);
+//
     /**
      * Original signature :
      * <code>l_ok bbufferRead(L_BBUFFER*, l_uint8*, l_int32)</code>
      */
     int bbufferRead(L_ByteBuffer bb, ByteBuffer src, int nbytes);
 
-//      /**
-//       * Original signature :
-//       * <code>l_ok bbufferReadStream(L_BBUFFER*, FILE*, l_int32)</code>
-//       */
-//      int bbufferReadStream(L_ByteBuffer bb, FILE fp, int nbytes);
-    /**
-     * Original signature :
-     * <code>l_ok bbufferExtendArray(L_BBUFFER*, l_int32)</code>
-     */
-    int bbufferExtendArray(L_ByteBuffer bb, int nbytes);
-
+      /**
+       * Original signature :
+       * <code>l_ok bbufferReadStream(L_BBUFFER*, FILE*, l_int32)</code>
+       */
+      int bbufferReadStream(L_ByteBuffer bb, FILE fp, int nbytes);
+//    /**
+//     * Original signature :
+//     * <code>l_ok bbufferExtendArray(L_BBUFFER*, l_int32)</code>
+//     */
+//    int bbufferExtendArray(L_ByteBuffer bb, int nbytes);
+//
     /**
      * Original signature :
      * <code>l_ok bbufferWrite(L_BBUFFER*, l_uint8*, size_t, size_t*)</code>
@@ -647,173 +647,173 @@ public interface Leptonica extends Library, ILeptonica {
      */
     int pixSauvolaBinarize(Pix pixs, int whsize, float factor, int addborder, PointerByReference ppixm, PointerByReference ppixsd, PointerByReference ppixth, PointerByReference ppixd);
 
-    /**
-     * Original signature :
-     * <code>l_ok pixThresholdByConnComp(PIX*, PIX*, l_int32, l_int32, l_int32, l_float32, l_float32, l_int32*, PIX**, l_int32)</code>
-     */
-    int pixThresholdByConnComp(Pix pixs, Pix pixm, int start, int end, int incr, float thresh48, float threshdiff, IntBuffer pglobthresh, PointerByReference ppixd, int debugflag);
+//    /**
+//     * Original signature :
+//     * <code>l_ok pixThresholdByConnComp(PIX*, PIX*, l_int32, l_int32, l_int32, l_float32, l_float32, l_int32*, PIX**, l_int32)</code>
+//     */
+//    int pixThresholdByConnComp(Pix pixs, Pix pixm, int start, int end, int incr, float thresh48, float threshdiff, IntBuffer pglobthresh, PointerByReference ppixd, int debugflag);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_ok pixThresholdByConnComp(PIX*, PIX*, l_int32, l_int32, l_int32, l_float32, l_float32, l_int32*, PIX**, l_int32)</code>
+//     */
+//    int pixThresholdByConnComp(Pix pixs, Pix pixm, int start, int end, int incr, float thresh48, float threshdiff, IntByReference pglobthresh, PointerByReference ppixd, int debugflag);
 
-    /**
-     * Original signature :
-     * <code>l_ok pixThresholdByConnComp(PIX*, PIX*, l_int32, l_int32, l_int32, l_float32, l_float32, l_int32*, PIX**, l_int32)</code>
-     */
-    int pixThresholdByConnComp(Pix pixs, Pix pixm, int start, int end, int incr, float thresh48, float threshdiff, IntByReference pglobthresh, PointerByReference ppixd, int debugflag);
-
-    /**
-     * Original signature :
-     * <code>PIX* pixExpandBinaryReplicate(PIX*, l_int32, l_int32)</code>
-     */
-    Pix pixExpandBinaryReplicate(Pix pixs, int xfact, int yfact);
-
-    /**
-     * Original signature :
-     * <code>PIX* pixExpandBinaryPower2(PIX*, l_int32)</code>
-     */
-    Pix pixExpandBinaryPower2(Pix pixs, int factor);
-
-    /**
-     * Original signature : <code>PIX* pixReduceBinary2(PIX*, l_uint8*)</code>
-     */
-    Pix pixReduceBinary2(Pix pixs, ByteBuffer intab);
-
-    /**
-     * Original signature :
-     * <code>PIX* pixReduceRankBinaryCascade(PIX*, l_int32, l_int32, l_int32, l_int32)</code>
-     */
-    Pix pixReduceRankBinaryCascade(Pix pixs, int level1, int level2, int level3, int level4);
-
-    /**
-     * Original signature :
-     * <code>PIX* pixReduceRankBinary2(PIX*, l_int32, l_uint8*)</code>
-     */
-    Pix pixReduceRankBinary2(Pix pixs, int level, ByteBuffer intab);
-
-    /**
-     * Original signature : <code>l_uint8* makeSubsampleTab2x()</code>
-     */
-    Pointer makeSubsampleTab2x();
-
-    /**
-     * Original signature :
-     * <code>PIX* pixBlend(PIX*, PIX*, l_int32, l_int32, l_float32)</code>
-     */
-    Pix pixBlend(Pix pixs1, Pix pixs2, int x, int y, float fract);
-
-    /**
-     * Original signature :
-     * <code>PIX* pixBlendMask(PIX*, PIX*, PIX*, l_int32, l_int32, l_float32, l_int32)</code>
-     */
-    Pix pixBlendMask(Pix pixd, Pix pixs1, Pix pixs2, int x, int y, float fract, int type);
-
-    /**
-     * Original signature :
-     * <code>PIX* pixBlendGray(PIX*, PIX*, PIX*, l_int32, l_int32, l_float32, l_int32, l_int32, l_uint32)</code>
-     */
-    Pix pixBlendGray(Pix pixd, Pix pixs1, Pix pixs2, int x, int y, float fract, int type, int transparent, int transpix);
-
-    /**
-     * Original signature :
-     * <code>PIX* pixBlendGrayInverse(PIX*, PIX*, PIX*, l_int32, l_int32, l_float32)</code>
-     */
-    Pix pixBlendGrayInverse(Pix pixd, Pix pixs1, Pix pixs2, int x, int y, float fract);
-
-    /**
-     * Original signature :
-     * <code>PIX* pixBlendColor(PIX*, PIX*, PIX*, l_int32, l_int32, l_float32, l_int32, l_uint32)</code>
-     */
-    Pix pixBlendColor(Pix pixd, Pix pixs1, Pix pixs2, int x, int y, float fract, int transparent, int transpix);
-
-    /**
-     * Original signature :
-     * <code>PIX* pixBlendColorByChannel(PIX*, PIX*, PIX*, l_int32, l_int32, l_float32, l_float32, l_float32, l_int32, l_uint32)</code>
-     */
-    Pix pixBlendColorByChannel(Pix pixd, Pix pixs1, Pix pixs2, int x, int y, float rfract, float gfract, float bfract, int transparent, int transpix);
-
-    /**
-     * Original signature :
-     * <code>PIX* pixBlendGrayAdapt(PIX*, PIX*, PIX*, l_int32, l_int32, l_float32, l_int32)</code>
-     */
-    Pix pixBlendGrayAdapt(Pix pixd, Pix pixs1, Pix pixs2, int x, int y, float fract, int shift);
-
-    /**
-     * Original signature :
-     * <code>PIX* pixFadeWithGray(PIX*, PIX*, l_float32, l_int32)</code>
-     */
-    Pix pixFadeWithGray(Pix pixs, Pix pixb, float factor, int type);
-
-    /**
-     * Original signature :
-     * <code>PIX* pixBlendHardLight(PIX*, PIX*, PIX*, l_int32, l_int32, l_float32)</code>
-     */
-    Pix pixBlendHardLight(Pix pixd, Pix pixs1, Pix pixs2, int x, int y, float fract);
-
-    /**
-     * Original signature :
-     * <code>l_ok pixBlendCmap(PIX*, PIX*, l_int32, l_int32, l_int32)</code>
-     */
-    int pixBlendCmap(Pix pixs, Pix pixb, int x, int y, int sindex);
-
-    /**
-     * Original signature :
-     * <code>PIX* pixBlendWithGrayMask(PIX*, PIX*, PIX*, l_int32, l_int32)</code>
-     */
-    Pix pixBlendWithGrayMask(Pix pixs1, Pix pixs2, Pix pixg, int x, int y);
-
-    /**
-     * Original signature :
-     * <code>PIX* pixBlendBackgroundToColor(PIX*, PIX*, BOX*, l_uint32, l_float32, l_int32, l_int32)</code>
-     */
-    Pix pixBlendBackgroundToColor(Pix pixd, Pix pixs, Box box, int color, float gamma, int minval, int maxval);
-
-    /**
-     * Original signature :
-     * <code>PIX* pixMultiplyByColor(PIX*, PIX*, BOX*, l_uint32)</code>
-     */
-    Pix pixMultiplyByColor(Pix pixd, Pix pixs, Box box, int color);
-
-    /**
-     * Original signature :
-     * <code>PIX* pixAlphaBlendUniform(PIX*, l_uint32)</code>
-     */
-    Pix pixAlphaBlendUniform(Pix pixs, int color);
-
-    /**
-     * Original signature :
-     * <code>PIX* pixAddAlphaToBlend(PIX*, l_float32, l_int32)</code>
-     */
-    Pix pixAddAlphaToBlend(Pix pixs, float fract, int invert);
-
-    /**
-     * Original signature : <code>PIX* pixSetAlphaOverWhite(PIX*)</code>
-     */
-    Pix pixSetAlphaOverWhite(Pix pixs);
-
-    /**
-     * Original signature : <code>L_BMF* bmfCreate(const char*, l_int32)</code>
-     */
-    L_Bmf bmfCreate(String dir, int fontsize);
-
-    /**
-     * Original signature : <code>void bmfDestroy(L_BMF**)</code>
-     */
-    void bmfDestroy(PointerByReference pbmf);
-
-    /**
-     * Original signature : <code>PIX* bmfGetPix(L_BMF*, char)</code>
-     */
-    Pix bmfGetPix(L_Bmf bmf, byte chr);
-
-    /**
-     * Original signature :
-     * <code>l_ok bmfGetWidth(L_BMF*, char, l_int32*)</code>
-     */
-    int bmfGetWidth(L_Bmf bmf, byte chr, IntBuffer pw);
-
-    /**
-     * Original signature :
-     * <code>l_ok bmfGetBaseline(L_BMF*, char, l_int32*)</code>
-     */
-    int bmfGetBaseline(L_Bmf bmf, byte chr, IntBuffer pbaseline);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixExpandBinaryReplicate(PIX*, l_int32, l_int32)</code>
+//     */
+//    Pix pixExpandBinaryReplicate(Pix pixs, int xfact, int yfact);
+//
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixExpandBinaryPower2(PIX*, l_int32)</code>
+//     */
+//    Pix pixExpandBinaryPower2(Pix pixs, int factor);
+//
+//    /**
+//     * Original signature : <code>PIX* pixReduceBinary2(PIX*, l_uint8*)</code>
+//     */
+//    Pix pixReduceBinary2(Pix pixs, ByteBuffer intab);
+//
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixReduceRankBinaryCascade(PIX*, l_int32, l_int32, l_int32, l_int32)</code>
+//     */
+//    Pix pixReduceRankBinaryCascade(Pix pixs, int level1, int level2, int level3, int level4);
+//
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixReduceRankBinary2(PIX*, l_int32, l_uint8*)</code>
+//     */
+//    Pix pixReduceRankBinary2(Pix pixs, int level, ByteBuffer intab);
+//
+//    /**
+//     * Original signature : <code>l_uint8* makeSubsampleTab2x()</code>
+//     */
+//    Pointer makeSubsampleTab2x();
+//
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixBlend(PIX*, PIX*, l_int32, l_int32, l_float32)</code>
+//     */
+//    Pix pixBlend(Pix pixs1, Pix pixs2, int x, int y, float fract);
+//
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixBlendMask(PIX*, PIX*, PIX*, l_int32, l_int32, l_float32, l_int32)</code>
+//     */
+//    Pix pixBlendMask(Pix pixd, Pix pixs1, Pix pixs2, int x, int y, float fract, int type);
+//
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixBlendGray(PIX*, PIX*, PIX*, l_int32, l_int32, l_float32, l_int32, l_int32, l_uint32)</code>
+//     */
+//    Pix pixBlendGray(Pix pixd, Pix pixs1, Pix pixs2, int x, int y, float fract, int type, int transparent, int transpix);
+//
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixBlendGrayInverse(PIX*, PIX*, PIX*, l_int32, l_int32, l_float32)</code>
+//     */
+//    Pix pixBlendGrayInverse(Pix pixd, Pix pixs1, Pix pixs2, int x, int y, float fract);
+//
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixBlendColor(PIX*, PIX*, PIX*, l_int32, l_int32, l_float32, l_int32, l_uint32)</code>
+//     */
+//    Pix pixBlendColor(Pix pixd, Pix pixs1, Pix pixs2, int x, int y, float fract, int transparent, int transpix);
+//
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixBlendColorByChannel(PIX*, PIX*, PIX*, l_int32, l_int32, l_float32, l_float32, l_float32, l_int32, l_uint32)</code>
+//     */
+//    Pix pixBlendColorByChannel(Pix pixd, Pix pixs1, Pix pixs2, int x, int y, float rfract, float gfract, float bfract, int transparent, int transpix);
+//
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixBlendGrayAdapt(PIX*, PIX*, PIX*, l_int32, l_int32, l_float32, l_int32)</code>
+//     */
+//    Pix pixBlendGrayAdapt(Pix pixd, Pix pixs1, Pix pixs2, int x, int y, float fract, int shift);
+//
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixFadeWithGray(PIX*, PIX*, l_float32, l_int32)</code>
+//     */
+//    Pix pixFadeWithGray(Pix pixs, Pix pixb, float factor, int type);
+//
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixBlendHardLight(PIX*, PIX*, PIX*, l_int32, l_int32, l_float32)</code>
+//     */
+//    Pix pixBlendHardLight(Pix pixd, Pix pixs1, Pix pixs2, int x, int y, float fract);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_ok pixBlendCmap(PIX*, PIX*, l_int32, l_int32, l_int32)</code>
+//     */
+//    int pixBlendCmap(Pix pixs, Pix pixb, int x, int y, int sindex);
+//
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixBlendWithGrayMask(PIX*, PIX*, PIX*, l_int32, l_int32)</code>
+//     */
+//    Pix pixBlendWithGrayMask(Pix pixs1, Pix pixs2, Pix pixg, int x, int y);
+//
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixBlendBackgroundToColor(PIX*, PIX*, BOX*, l_uint32, l_float32, l_int32, l_int32)</code>
+//     */
+//    Pix pixBlendBackgroundToColor(Pix pixd, Pix pixs, Box box, int color, float gamma, int minval, int maxval);
+//
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixMultiplyByColor(PIX*, PIX*, BOX*, l_uint32)</code>
+//     */
+//    Pix pixMultiplyByColor(Pix pixd, Pix pixs, Box box, int color);
+//
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixAlphaBlendUniform(PIX*, l_uint32)</code>
+//     */
+//    Pix pixAlphaBlendUniform(Pix pixs, int color);
+//
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixAddAlphaToBlend(PIX*, l_float32, l_int32)</code>
+//     */
+//    Pix pixAddAlphaToBlend(Pix pixs, float fract, int invert);
+//
+//    /**
+//     * Original signature : <code>PIX* pixSetAlphaOverWhite(PIX*)</code>
+//     */
+//    Pix pixSetAlphaOverWhite(Pix pixs);
+//
+//    /**
+//     * Original signature : <code>L_BMF* bmfCreate(const char*, l_int32)</code>
+//     */
+//    L_Bmf bmfCreate(String dir, int fontsize);
+//
+//    /**
+//     * Original signature : <code>void bmfDestroy(L_BMF**)</code>
+//     */
+//    void bmfDestroy(PointerByReference pbmf);
+//
+//    /**
+//     * Original signature : <code>PIX* bmfGetPix(L_BMF*, char)</code>
+//     */
+//    Pix bmfGetPix(L_Bmf bmf, byte chr);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_ok bmfGetWidth(L_BMF*, char, l_int32*)</code>
+//     */
+//    int bmfGetWidth(L_Bmf bmf, byte chr, IntBuffer pw);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_ok bmfGetBaseline(L_BMF*, char, l_int32*)</code>
+//     */
+//    int bmfGetBaseline(L_Bmf bmf, byte chr, IntBuffer pbaseline);
 
     /**
      * Original signature :
@@ -5894,175 +5894,175 @@ public interface Leptonica extends Library, ILeptonica {
      */
     void listDestroy(PointerByReference phead);
 
-    /**
-     * Original signature : <code>l_ok listAddToHead(DLLIST**, void*)</code>
-     */
-    int listAddToHead(PointerByReference phead, Pointer data);
-
-    /**
-     * Original signature :
-     * <code>l_ok listAddToTail(DLLIST**, DLLIST**, void*)</code>
-     */
-    int listAddToTail(PointerByReference phead, PointerByReference ptail, Pointer data);
-
-    /**
-     * Original signature :
-     * <code>l_ok listInsertBefore(DLLIST**, DLLIST*, void*)</code>
-     */
-    int listInsertBefore(PointerByReference phead, DoubleLinkedList elem, Pointer data);
-
-    /**
-     * Original signature :
-     * <code>l_ok listInsertAfter(DLLIST**, DLLIST*, void*)</code>
-     */
-    int listInsertAfter(PointerByReference phead, DoubleLinkedList elem, Pointer data);
-
-    /**
-     * Original signature :
-     * <code>void* listRemoveElement(DLLIST**, DLLIST*)</code>
-     */
-    Pointer listRemoveElement(PointerByReference phead, DoubleLinkedList elem);
-
-    /**
-     * Original signature : <code>void* listRemoveFromHead(DLLIST**)</code>
-     */
-    Pointer listRemoveFromHead(PointerByReference phead);
-
-    /**
-     * Original signature :
-     * <code>void* listRemoveFromTail(DLLIST**, DLLIST**)</code>
-     */
-    Pointer listRemoveFromTail(PointerByReference phead, PointerByReference ptail);
-
-    /**
-     * Original signature : <code>DLLIST* listFindElement(DLLIST*, void*)</code>
-     */
-    DoubleLinkedList listFindElement(DoubleLinkedList head, Pointer data);
-
-    /**
-     * Original signature : <code>DLLIST* listFindTail(DLLIST*)</code>
-     */
-    DoubleLinkedList listFindTail(DoubleLinkedList head);
-
-    /**
-     * Original signature : <code>l_int32 listGetCount(DLLIST*)</code>
-     */
-    int listGetCount(DoubleLinkedList head);
-
-    /**
-     * Original signature : <code>l_ok listReverse(DLLIST**)</code>
-     */
-    int listReverse(PointerByReference phead);
-
-    /**
-     * Original signature : <code>l_ok listJoin(DLLIST**, DLLIST**)</code>
-     */
-    int listJoin(PointerByReference phead1, PointerByReference phead2);
-
-    /**
-     * Original signature : <code>L_AMAP* l_amapCreate(l_int32)</code>
-     */
-    L_Rbtree l_amapCreate(int keytype);
-
-    /**
-     * Original signature : <code>RB_TYPE* l_amapFind(L_AMAP*, RB_TYPE)</code>
-     */
-    Rb_Type l_amapFind(L_Rbtree m, Rb_Type.ByValue key);
-
-    /**
-     * Original signature :
-     * <code>void l_amapInsert(L_AMAP*, RB_TYPE, RB_TYPE)</code>
-     */
-    void l_amapInsert(L_Rbtree m, Rb_Type.ByValue key, Rb_Type.ByValue value);
-
-    /**
-     * Original signature : <code>void l_amapDelete(L_AMAP*, RB_TYPE)</code>
-     */
-    void l_amapDelete(L_Rbtree m, Rb_Type.ByValue key);
-
-    /**
-     * Original signature : <code>void l_amapDestroy(L_AMAP**)</code>
-     */
-    void l_amapDestroy(PointerByReference pm);
-
-    /**
-     * Original signature : <code>L_AMAP_NODE* l_amapGetFirst(L_AMAP*)</code>
-     */
-    L_Rbtree_Node l_amapGetFirst(L_Rbtree m);
-
-    /**
-     * Original signature :
-     * <code>L_AMAP_NODE* l_amapGetNext(L_AMAP_NODE*)</code>
-     */
-    L_Rbtree_Node l_amapGetNext(L_Rbtree_Node n);
-
-    /**
-     * Original signature : <code>L_AMAP_NODE* l_amapGetLast(L_AMAP*)</code>
-     */
-    L_Rbtree_Node l_amapGetLast(L_Rbtree m);
-
-    /**
-     * Original signature :
-     * <code>L_AMAP_NODE* l_amapGetPrev(L_AMAP_NODE*)</code>
-     */
-    L_Rbtree_Node l_amapGetPrev(L_Rbtree_Node n);
-
-    /**
-     * Original signature : <code>l_int32 l_amapSize(L_AMAP*)</code>
-     */
-    int l_amapSize(L_Rbtree m);
-
-    /**
-     * Original signature : <code>L_ASET* l_asetCreate(l_int32)</code>
-     */
-    L_Rbtree l_asetCreate(int keytype);
-
-    /**
-     * Original signature : <code>RB_TYPE* l_asetFind(L_ASET*, RB_TYPE)</code>
-     */
-    Rb_Type l_asetFind(L_Rbtree s, Rb_Type.ByValue key);
-
-    /**
-     * Original signature : <code>void l_asetInsert(L_ASET*, RB_TYPE)</code>
-     */
-    void l_asetInsert(L_Rbtree s, Rb_Type.ByValue key);
-
-    /**
-     * Original signature : <code>void l_asetDelete(L_ASET*, RB_TYPE)</code>
-     */
-    void l_asetDelete(L_Rbtree s, Rb_Type.ByValue key);
-
-    /**
-     * Original signature : <code>void l_asetDestroy(L_ASET**)</code>
-     */
-    void l_asetDestroy(PointerByReference ps);
-
-    /**
-     * Original signature : <code>L_ASET_NODE* l_asetGetFirst(L_ASET*)</code>
-     */
-    L_Rbtree_Node l_asetGetFirst(L_Rbtree s);
-
-    /**
-     * Original signature :
-     * <code>L_ASET_NODE* l_asetGetNext(L_ASET_NODE*)</code>
-     */
-    L_Rbtree_Node l_asetGetNext(L_Rbtree_Node n);
-
-    /**
-     * Original signature : <code>L_ASET_NODE* l_asetGetLast(L_ASET*)</code>
-     */
-    L_Rbtree_Node l_asetGetLast(L_Rbtree s);
-
-    /**
-     * Original signature :
-     * <code>L_ASET_NODE* l_asetGetPrev(L_ASET_NODE*)</code>
-     */
-    L_Rbtree_Node l_asetGetPrev(L_Rbtree_Node n);
-
-    /**
-     * Original signature : <code>l_int32 l_asetSize(L_ASET*)</code>
-     */
-    int l_asetSize(L_Rbtree s);
+//    /**
+//     * Original signature : <code>l_ok listAddToHead(DLLIST**, void*)</code>
+//     */
+//    int listAddToHead(PointerByReference phead, Pointer data);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_ok listAddToTail(DLLIST**, DLLIST**, void*)</code>
+//     */
+//    int listAddToTail(PointerByReference phead, PointerByReference ptail, Pointer data);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_ok listInsertBefore(DLLIST**, DLLIST*, void*)</code>
+//     */
+//    int listInsertBefore(PointerByReference phead, DoubleLinkedList elem, Pointer data);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_ok listInsertAfter(DLLIST**, DLLIST*, void*)</code>
+//     */
+//    int listInsertAfter(PointerByReference phead, DoubleLinkedList elem, Pointer data);
+//
+//    /**
+//     * Original signature :
+//     * <code>void* listRemoveElement(DLLIST**, DLLIST*)</code>
+//     */
+//    Pointer listRemoveElement(PointerByReference phead, DoubleLinkedList elem);
+//
+//    /**
+//     * Original signature : <code>void* listRemoveFromHead(DLLIST**)</code>
+//     */
+//    Pointer listRemoveFromHead(PointerByReference phead);
+//
+//    /**
+//     * Original signature :
+//     * <code>void* listRemoveFromTail(DLLIST**, DLLIST**)</code>
+//     */
+//    Pointer listRemoveFromTail(PointerByReference phead, PointerByReference ptail);
+//
+//    /**
+//     * Original signature : <code>DLLIST* listFindElement(DLLIST*, void*)</code>
+//     */
+//    DoubleLinkedList listFindElement(DoubleLinkedList head, Pointer data);
+//
+//    /**
+//     * Original signature : <code>DLLIST* listFindTail(DLLIST*)</code>
+//     */
+//    DoubleLinkedList listFindTail(DoubleLinkedList head);
+//
+//    /**
+//     * Original signature : <code>l_int32 listGetCount(DLLIST*)</code>
+//     */
+//    int listGetCount(DoubleLinkedList head);
+//
+//    /**
+//     * Original signature : <code>l_ok listReverse(DLLIST**)</code>
+//     */
+//    int listReverse(PointerByReference phead);
+//
+//    /**
+//     * Original signature : <code>l_ok listJoin(DLLIST**, DLLIST**)</code>
+//     */
+//    int listJoin(PointerByReference phead1, PointerByReference phead2);
+//
+//    /**
+//     * Original signature : <code>L_AMAP* l_amapCreate(l_int32)</code>
+//     */
+//    L_Rbtree l_amapCreate(int keytype);
+//
+//    /**
+//     * Original signature : <code>RB_TYPE* l_amapFind(L_AMAP*, RB_TYPE)</code>
+//     */
+//    Rb_Type l_amapFind(L_Rbtree m, Rb_Type.ByValue key);
+//
+//    /**
+//     * Original signature :
+//     * <code>void l_amapInsert(L_AMAP*, RB_TYPE, RB_TYPE)</code>
+//     */
+//    void l_amapInsert(L_Rbtree m, Rb_Type.ByValue key, Rb_Type.ByValue value);
+//
+//    /**
+//     * Original signature : <code>void l_amapDelete(L_AMAP*, RB_TYPE)</code>
+//     */
+//    void l_amapDelete(L_Rbtree m, Rb_Type.ByValue key);
+//
+//    /**
+//     * Original signature : <code>void l_amapDestroy(L_AMAP**)</code>
+//     */
+//    void l_amapDestroy(PointerByReference pm);
+//
+//    /**
+//     * Original signature : <code>L_AMAP_NODE* l_amapGetFirst(L_AMAP*)</code>
+//     */
+//    L_Rbtree_Node l_amapGetFirst(L_Rbtree m);
+//
+//    /**
+//     * Original signature :
+//     * <code>L_AMAP_NODE* l_amapGetNext(L_AMAP_NODE*)</code>
+//     */
+//    L_Rbtree_Node l_amapGetNext(L_Rbtree_Node n);
+//
+//    /**
+//     * Original signature : <code>L_AMAP_NODE* l_amapGetLast(L_AMAP*)</code>
+//     */
+//    L_Rbtree_Node l_amapGetLast(L_Rbtree m);
+//
+//    /**
+//     * Original signature :
+//     * <code>L_AMAP_NODE* l_amapGetPrev(L_AMAP_NODE*)</code>
+//     */
+//    L_Rbtree_Node l_amapGetPrev(L_Rbtree_Node n);
+//
+//    /**
+//     * Original signature : <code>l_int32 l_amapSize(L_AMAP*)</code>
+//     */
+//    int l_amapSize(L_Rbtree m);
+//
+//    /**
+//     * Original signature : <code>L_ASET* l_asetCreate(l_int32)</code>
+//     */
+//    L_Rbtree l_asetCreate(int keytype);
+//
+//    /**
+//     * Original signature : <code>RB_TYPE* l_asetFind(L_ASET*, RB_TYPE)</code>
+//     */
+//    Rb_Type l_asetFind(L_Rbtree s, Rb_Type.ByValue key);
+//
+//    /**
+//     * Original signature : <code>void l_asetInsert(L_ASET*, RB_TYPE)</code>
+//     */
+//    void l_asetInsert(L_Rbtree s, Rb_Type.ByValue key);
+//
+//    /**
+//     * Original signature : <code>void l_asetDelete(L_ASET*, RB_TYPE)</code>
+//     */
+//    void l_asetDelete(L_Rbtree s, Rb_Type.ByValue key);
+//
+//    /**
+//     * Original signature : <code>void l_asetDestroy(L_ASET**)</code>
+//     */
+//    void l_asetDestroy(PointerByReference ps);
+//
+//    /**
+//     * Original signature : <code>L_ASET_NODE* l_asetGetFirst(L_ASET*)</code>
+//     */
+//    L_Rbtree_Node l_asetGetFirst(L_Rbtree s);
+//
+//    /**
+//     * Original signature :
+//     * <code>L_ASET_NODE* l_asetGetNext(L_ASET_NODE*)</code>
+//     */
+//    L_Rbtree_Node l_asetGetNext(L_Rbtree_Node n);
+//
+//    /**
+//     * Original signature : <code>L_ASET_NODE* l_asetGetLast(L_ASET*)</code>
+//     */
+//    L_Rbtree_Node l_asetGetLast(L_Rbtree s);
+//
+//    /**
+//     * Original signature :
+//     * <code>L_ASET_NODE* l_asetGetPrev(L_ASET_NODE*)</code>
+//     */
+//    L_Rbtree_Node l_asetGetPrev(L_Rbtree_Node n);
+//
+//    /**
+//     * Original signature : <code>l_int32 l_asetSize(L_ASET*)</code>
+//     */
+//    int l_asetSize(L_Rbtree s);
 
     /**
      * Original signature :
@@ -7215,59 +7215,59 @@ public interface Leptonica extends Library, ILeptonica {
 //       * <code>l_ok numaEvalHaarSum(NUMA*, l_float32, l_float32, l_float32, l_float32*)</code>
 //       */
 //      int numaEvalHaarSum(Numa nas, float width, float shift, float relweight, FloatBuffer pscore);
-    /**
-     * Original signature :
-     * <code>NUMA* genConstrainedNumaInRange(l_int32, l_int32, l_int32, l_int32)</code>
-     */
-    Numa genConstrainedNumaInRange(int first, int last, int nmax, int use_pairs);
-
-    /**
-     * Original signature :
-     * <code>l_ok pixGetRegionsBinary(PIX*, PIX**, PIX**, PIX**, PIXA*)</code>
-     */
-    int pixGetRegionsBinary(Pix pixs, PointerByReference ppixhm, PointerByReference ppixtm, PointerByReference ppixtb, Pixa pixadb);
-
-    /**
-     * Original signature :
-     * <code>PIX* pixGenHalftoneMask(PIX*, PIX**, l_int32*, l_int32)</code>
-     */
-    Pix pixGenHalftoneMask(Pix pixs, PointerByReference ppixtext, IntBuffer phtfound, int debug);
-
-    /**
-     * Original signature :
-     * <code>PIX* pixGenHalftoneMask(PIX*, PIX**, l_int32*, l_int32)</code>
-     */
-    Pix pixGenHalftoneMask(Pix pixs, PointerByReference ppixtext, IntByReference phtfound, int debug);
-
-    /**
-     * Original signature :
-     * <code>PIX* pixGenerateHalftoneMask(PIX*, PIX**, l_int32*, PIXA*)</code>
-     */
-    Pix pixGenerateHalftoneMask(Pix pixs, PointerByReference ppixtext, IntBuffer phtfound, Pixa pixadb);
-
-    /**
-     * Original signature :
-     * <code>PIX* pixGenerateHalftoneMask(PIX*, PIX**, l_int32*, PIXA*)</code>
-     */
-    Pix pixGenerateHalftoneMask(Pix pixs, PointerByReference ppixtext, IntByReference phtfound, Pixa pixadb);
-
-    /**
-     * Original signature :
-     * <code>PIX* pixGenTextlineMask(PIX*, PIX**, l_int32*, PIXA*)</code>
-     */
-    Pix pixGenTextlineMask(Pix pixs, PointerByReference ppixvws, IntBuffer ptlfound, Pixa pixadb);
-
-    /**
-     * Original signature :
-     * <code>PIX* pixGenTextlineMask(PIX*, PIX**, l_int32*, PIXA*)</code>
-     */
-    Pix pixGenTextlineMask(Pix pixs, PointerByReference ppixvws, IntByReference ptlfound, Pixa pixadb);
-
-    /**
-     * Original signature :
-     * <code>PIX* pixGenTextblockMask(PIX*, PIX*, PIXA*)</code>
-     */
-    Pix pixGenTextblockMask(Pix pixs, Pix pixvws, Pixa pixadb);
+//    /**
+//     * Original signature :
+//     * <code>NUMA* genConstrainedNumaInRange(l_int32, l_int32, l_int32, l_int32)</code>
+//     */
+//    Numa genConstrainedNumaInRange(int first, int last, int nmax, int use_pairs);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_ok pixGetRegionsBinary(PIX*, PIX**, PIX**, PIX**, PIXA*)</code>
+//     */
+//    int pixGetRegionsBinary(Pix pixs, PointerByReference ppixhm, PointerByReference ppixtm, PointerByReference ppixtb, Pixa pixadb);
+//
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixGenHalftoneMask(PIX*, PIX**, l_int32*, l_int32)</code>
+//     */
+//    Pix pixGenHalftoneMask(Pix pixs, PointerByReference ppixtext, IntBuffer phtfound, int debug);
+//
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixGenHalftoneMask(PIX*, PIX**, l_int32*, l_int32)</code>
+//     */
+//    Pix pixGenHalftoneMask(Pix pixs, PointerByReference ppixtext, IntByReference phtfound, int debug);
+//
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixGenerateHalftoneMask(PIX*, PIX**, l_int32*, PIXA*)</code>
+//     */
+//    Pix pixGenerateHalftoneMask(Pix pixs, PointerByReference ppixtext, IntBuffer phtfound, Pixa pixadb);
+//
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixGenerateHalftoneMask(PIX*, PIX**, l_int32*, PIXA*)</code>
+//     */
+//    Pix pixGenerateHalftoneMask(Pix pixs, PointerByReference ppixtext, IntByReference phtfound, Pixa pixadb);
+//
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixGenTextlineMask(PIX*, PIX**, l_int32*, PIXA*)</code>
+//     */
+//    Pix pixGenTextlineMask(Pix pixs, PointerByReference ppixvws, IntBuffer ptlfound, Pixa pixadb);
+//
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixGenTextlineMask(PIX*, PIX**, l_int32*, PIXA*)</code>
+//     */
+//    Pix pixGenTextlineMask(Pix pixs, PointerByReference ppixvws, IntByReference ptlfound, Pixa pixadb);
+//
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixGenTextblockMask(PIX*, PIX*, PIXA*)</code>
+//     */
+//    Pix pixGenTextblockMask(Pix pixs, Pix pixvws, Pixa pixadb);
 
     /**
      * Original signature : 
@@ -7322,179 +7322,179 @@ public interface Leptonica extends Library, ILeptonica {
      * <code>l_ok pixDecideIfText(PIX*, BOX*, l_int32*, PIXA*)</code>
      */
     int pixDecideIfText(Pix pixs, Box box, IntBuffer pistext, Pixa pixadb);
-
-    /**
-     * Original signature :
-     * <code>l_ok pixFindThreshFgExtent(PIX*, l_int32, l_int32*, l_int32*)</code>
-     */
-    int pixFindThreshFgExtent(Pix pixs, int thresh, IntBuffer ptop, IntBuffer pbot);
-
-    /**
-     * Original signature :
-     * <code>l_ok pixDecideIfTable(PIX*, BOX*, l_int32*, PIXA*)</code>
-     */
-    int pixDecideIfTable(Pix pixs, Box box, IntBuffer pistable, Pixa pixadb);
-
-    /**
-     * Original signature :
-     * <code>PIX* pixPrepare1bpp(PIX*, BOX*, l_float32, l_int32)</code>
-     */
-    Pix pixPrepare1bpp(Pix pixs, Box box, float cropfract, int outres);
-
-    /**
-     * Original signature :
-     * <code>l_ok pixEstimateBackground(PIX*, l_int32, l_float32, l_int32*)</code>
-     */
-    int pixEstimateBackground(Pix pixs, int darkthresh, float edgecrop, IntBuffer pbg);
-
-    /**
-     * Original signature :
-     * <code>l_ok pixFindLargeRectangles(PIX*, l_int32, l_int32, BOXA**, PIX**)</code>
-     */
-    int pixFindLargeRectangles(Pix pixs, int polarity, int nrect, PointerByReference pboxa, PointerByReference ppixdb);
-
-    /**
-     * Original signature :
-     * <code>l_ok pixFindLargestRectangle(PIX*, l_int32, BOX**, PIX**)</code>
-     */
-    int pixFindLargestRectangle(Pix pixs, int polarity, PointerByReference pbox, PointerByReference ppixdb);
-
-//    /**
-//     * Original signature :
-//     * <code>BOX* pixFindRectangleInCC(PIX*, BOX*, l_float32, l_int32, l_int32, l_int32)</code>
-//     */
-//    Box pixFindRectangleInCC(Pix pixs, Box boxs, float fract, int dir, int select, int debug);
-    /**
-     * Original signature :
-     * <code>PIX* pixAutoPhotoinvert(PIX*, l_int32, PIX**, PIXA*)</code>
-     */
-    Pix pixAutoPhotoinvert(Pix pixs, int thresh, PointerByReference ppixm, Pixa pixadb);
-
-    /**
-     * Original signature :
-     * <code>l_ok pixSetSelectCmap(PIX*, BOX*, l_int32, l_int32, l_int32, l_int32)</code>
-     */
-    int pixSetSelectCmap(Pix pixs, Box box, int sindex, int rval, int gval, int bval);
-
-    /**
-     * Original signature :
-     * <code>l_ok pixColorGrayRegionsCmap(PIX*, BOXA*, l_int32, l_int32, l_int32, l_int32)</code>
-     */
-    int pixColorGrayRegionsCmap(Pix pixs, Boxa boxa, int type, int rval, int gval, int bval);
-
-    /**
-     * Original signature :
-     * <code>l_ok pixColorGrayCmap(PIX*, BOX*, l_int32, l_int32, l_int32, l_int32)</code>
-     */
-    int pixColorGrayCmap(Pix pixs, Box box, int type, int rval, int gval, int bval);
-
-    /**
-     * Original signature :
-     * <code>l_ok pixColorGrayMaskedCmap(PIX*, PIX*, l_int32, l_int32, l_int32, l_int32)</code>
-     */
-    int pixColorGrayMaskedCmap(Pix pixs, Pix pixm, int type, int rval, int gval, int bval);
-
-    /**
-     * Original signature :
-     * <code>l_ok addColorizedGrayToCmap(PIXCMAP*, l_int32, l_int32, l_int32, l_int32, NUMA**)</code>
-     */
-    int addColorizedGrayToCmap(PixColormap cmap, int type, int rval, int gval, int bval, PointerByReference pna);
-
-    /**
-     * Original signature :
-     * <code>l_ok pixSetSelectMaskedCmap(PIX*, PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32)</code>
-     */
-    int pixSetSelectMaskedCmap(Pix pixs, Pix pixm, int x, int y, int sindex, int rval, int gval, int bval);
-
-    /**
-     * Original signature :
-     * <code>l_ok pixSetMaskedCmap(PIX*, PIX*, l_int32, l_int32, l_int32, l_int32, l_int32)</code>
-     */
-    int pixSetMaskedCmap(Pix pixs, Pix pixm, int x, int y, int rval, int gval, int bval);
-
-    /**
-     * Original signature :
-     * <code>char* parseForProtos(const char*, const char*)</code>
-     */
-    Pointer parseForProtos(String filein, String prestring);
-
-    /**
-     * Original signature :
-     * <code>BOXA* boxaGetWhiteblocks(BOXA*, BOX*, l_int32, l_int32, l_float32, l_int32, l_float32, l_int32)</code>
-     */
-    Boxa boxaGetWhiteblocks(Boxa boxas, Box box, int sortflag, int maxboxes, float maxoverlap, int maxperim, float fract, int maxpops);
-
-    /**
-     * Original signature :
-     * <code>BOXA* boxaPruneSortedOnOverlap(BOXA*, l_float32)</code>
-     */
-    Boxa boxaPruneSortedOnOverlap(Boxa boxas, float maxoverlap);
-
-//    /**
-//     * Original signature :
-//     * <code>l_ok compressFilesToPdf(SARRAY*, l_int32, l_int32, l_float32, l_int32, const char*, const char*)</code>
-//     */
-//    int compressFilesToPdf(Sarray sa, int onebit, int savecolor, float scalefactor, int quality, String title, String fileout);
 //
 //    /**
 //     * Original signature :
-//     * <code>l_ok cropFilesToPdf(SARRAY*, l_int32, l_int32, l_int32, l_int32, l_int32, l_float32, l_int32, const char*, const char*)</code>
+//     * <code>l_ok pixFindThreshFgExtent(PIX*, l_int32, l_int32*, l_int32*)</code>
 //     */
-//    int cropFilesToPdf(Sarray sa, int lr_clear, int tb_clear, int edgeclean, int lr_add, int tb_add, float maxwiden, int printwiden, String title, String fileout);
+//    int pixFindThreshFgExtent(Pix pixs, int thresh, IntBuffer ptop, IntBuffer pbot);
 //
 //    /**
 //     * Original signature :
-//     * <code>l_ok cleanTo1bppFilesToPdf(SARRAY*, l_int32, l_int32, l_int32, l_int32, const char*, const char*)</code>
+//     * <code>l_ok pixDecideIfTable(PIX*, BOX*, l_int32*, PIXA*)</code>
 //     */
-//    int cleanTo1bppFilesToPdf(Sarray sa, int res, int contrast, int rotation, int opensize, String title, String fileout);
-
-    /**
-     * Original signature :
-     * <code>l_ok convertFilesToPdf(const char*, const char*, l_int32, l_float32, l_int32, l_int32, const char*, const char*)</code>
-     */
-    int convertFilesToPdf(String dirname, String substr, int res, float scalefactor, int type, int quality, String title, String fileout);
-
-    /**
-     * Original signature :
-     * <code>l_ok saConvertFilesToPdf(SARRAY*, l_int32, l_float32, l_int32, l_int32, const char*, const char*)</code>
-     */
-    int saConvertFilesToPdf(Sarray sa, int res, float scalefactor, int type, int quality, String title, String fileout);
-
-    /**
-     * Original signature :
-     * <code>l_ok saConvertFilesToPdfData(SARRAY*, l_int32, l_float32, l_int32, l_int32, const char*, l_uint8**, size_t*)</code>
-     */
-    int saConvertFilesToPdfData(Sarray sa, int res, float scalefactor, int type, int quality, String title, PointerByReference pdata, NativeSizeByReference pnbytes);
-
-    /**
-     * Original signature :
-     * <code>l_ok selectDefaultPdfEncoding(PIX*, l_int32*)</code>
-     */
-    int selectDefaultPdfEncoding(Pix pix, IntBuffer ptype);
-
-    /**
-     * Original signature :
-     * <code>l_ok convertUnscaledFilesToPdf(const char*, const char*, const char*, const char*)</code>
-     */
-    int convertUnscaledFilesToPdf(String dirname, String substr, String title, String fileout);
-
-    /**
-     * Original signature :
-     * <code>l_ok saConvertUnscaledFilesToPdf(SARRAY*, const char*, const char*)</code>
-     */
-    int saConvertUnscaledFilesToPdf(Sarray sa, String title, String fileout);
-
-    /**
-     * Original signature :
-     * <code>l_ok saConvertUnscaledFilesToPdfData(SARRAY*, const char*, l_uint8**, size_t*)</code>
-     */
-    int saConvertUnscaledFilesToPdfData(Sarray sa, String title, PointerByReference pdata, NativeSizeByReference pnbytes);
-
-    /**
-     * Original signature :
-     * <code>l_ok convertUnscaledToPdfData(const char*, const char*, l_uint8**, size_t*)</code>
-     */
-    int convertUnscaledToPdfData(String fname, String title, PointerByReference pdata, NativeSizeByReference pnbytes);
+//    int pixDecideIfTable(Pix pixs, Box box, IntBuffer pistable, Pixa pixadb);
+//
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixPrepare1bpp(PIX*, BOX*, l_float32, l_int32)</code>
+//     */
+//    Pix pixPrepare1bpp(Pix pixs, Box box, float cropfract, int outres);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_ok pixEstimateBackground(PIX*, l_int32, l_float32, l_int32*)</code>
+//     */
+//    int pixEstimateBackground(Pix pixs, int darkthresh, float edgecrop, IntBuffer pbg);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_ok pixFindLargeRectangles(PIX*, l_int32, l_int32, BOXA**, PIX**)</code>
+//     */
+//    int pixFindLargeRectangles(Pix pixs, int polarity, int nrect, PointerByReference pboxa, PointerByReference ppixdb);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_ok pixFindLargestRectangle(PIX*, l_int32, BOX**, PIX**)</code>
+//     */
+//    int pixFindLargestRectangle(Pix pixs, int polarity, PointerByReference pbox, PointerByReference ppixdb);
+//
+////    /**
+////     * Original signature :
+////     * <code>BOX* pixFindRectangleInCC(PIX*, BOX*, l_float32, l_int32, l_int32, l_int32)</code>
+////     */
+////    Box pixFindRectangleInCC(Pix pixs, Box boxs, float fract, int dir, int select, int debug);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixAutoPhotoinvert(PIX*, l_int32, PIX**, PIXA*)</code>
+//     */
+//    Pix pixAutoPhotoinvert(Pix pixs, int thresh, PointerByReference ppixm, Pixa pixadb);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_ok pixSetSelectCmap(PIX*, BOX*, l_int32, l_int32, l_int32, l_int32)</code>
+//     */
+//    int pixSetSelectCmap(Pix pixs, Box box, int sindex, int rval, int gval, int bval);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_ok pixColorGrayRegionsCmap(PIX*, BOXA*, l_int32, l_int32, l_int32, l_int32)</code>
+//     */
+//    int pixColorGrayRegionsCmap(Pix pixs, Boxa boxa, int type, int rval, int gval, int bval);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_ok pixColorGrayCmap(PIX*, BOX*, l_int32, l_int32, l_int32, l_int32)</code>
+//     */
+//    int pixColorGrayCmap(Pix pixs, Box box, int type, int rval, int gval, int bval);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_ok pixColorGrayMaskedCmap(PIX*, PIX*, l_int32, l_int32, l_int32, l_int32)</code>
+//     */
+//    int pixColorGrayMaskedCmap(Pix pixs, Pix pixm, int type, int rval, int gval, int bval);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_ok addColorizedGrayToCmap(PIXCMAP*, l_int32, l_int32, l_int32, l_int32, NUMA**)</code>
+//     */
+//    int addColorizedGrayToCmap(PixColormap cmap, int type, int rval, int gval, int bval, PointerByReference pna);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_ok pixSetSelectMaskedCmap(PIX*, PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32)</code>
+//     */
+//    int pixSetSelectMaskedCmap(Pix pixs, Pix pixm, int x, int y, int sindex, int rval, int gval, int bval);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_ok pixSetMaskedCmap(PIX*, PIX*, l_int32, l_int32, l_int32, l_int32, l_int32)</code>
+//     */
+//    int pixSetMaskedCmap(Pix pixs, Pix pixm, int x, int y, int rval, int gval, int bval);
+//
+//    /**
+//     * Original signature :
+//     * <code>char* parseForProtos(const char*, const char*)</code>
+//     */
+//    Pointer parseForProtos(String filein, String prestring);
+//
+//    /**
+//     * Original signature :
+//     * <code>BOXA* boxaGetWhiteblocks(BOXA*, BOX*, l_int32, l_int32, l_float32, l_int32, l_float32, l_int32)</code>
+//     */
+//    Boxa boxaGetWhiteblocks(Boxa boxas, Box box, int sortflag, int maxboxes, float maxoverlap, int maxperim, float fract, int maxpops);
+//
+//    /**
+//     * Original signature :
+//     * <code>BOXA* boxaPruneSortedOnOverlap(BOXA*, l_float32)</code>
+//     */
+//    Boxa boxaPruneSortedOnOverlap(Boxa boxas, float maxoverlap);
+//
+////    /**
+////     * Original signature :
+////     * <code>l_ok compressFilesToPdf(SARRAY*, l_int32, l_int32, l_float32, l_int32, const char*, const char*)</code>
+////     */
+////    int compressFilesToPdf(Sarray sa, int onebit, int savecolor, float scalefactor, int quality, String title, String fileout);
+////
+////    /**
+////     * Original signature :
+////     * <code>l_ok cropFilesToPdf(SARRAY*, l_int32, l_int32, l_int32, l_int32, l_int32, l_float32, l_int32, const char*, const char*)</code>
+////     */
+////    int cropFilesToPdf(Sarray sa, int lr_clear, int tb_clear, int edgeclean, int lr_add, int tb_add, float maxwiden, int printwiden, String title, String fileout);
+////
+////    /**
+////     * Original signature :
+////     * <code>l_ok cleanTo1bppFilesToPdf(SARRAY*, l_int32, l_int32, l_int32, l_int32, const char*, const char*)</code>
+////     */
+////    int cleanTo1bppFilesToPdf(Sarray sa, int res, int contrast, int rotation, int opensize, String title, String fileout);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_ok convertFilesToPdf(const char*, const char*, l_int32, l_float32, l_int32, l_int32, const char*, const char*)</code>
+//     */
+//    int convertFilesToPdf(String dirname, String substr, int res, float scalefactor, int type, int quality, String title, String fileout);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_ok saConvertFilesToPdf(SARRAY*, l_int32, l_float32, l_int32, l_int32, const char*, const char*)</code>
+//     */
+//    int saConvertFilesToPdf(Sarray sa, int res, float scalefactor, int type, int quality, String title, String fileout);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_ok saConvertFilesToPdfData(SARRAY*, l_int32, l_float32, l_int32, l_int32, const char*, l_uint8**, size_t*)</code>
+//     */
+//    int saConvertFilesToPdfData(Sarray sa, int res, float scalefactor, int type, int quality, String title, PointerByReference pdata, NativeSizeByReference pnbytes);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_ok selectDefaultPdfEncoding(PIX*, l_int32*)</code>
+//     */
+//    int selectDefaultPdfEncoding(Pix pix, IntBuffer ptype);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_ok convertUnscaledFilesToPdf(const char*, const char*, const char*, const char*)</code>
+//     */
+//    int convertUnscaledFilesToPdf(String dirname, String substr, String title, String fileout);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_ok saConvertUnscaledFilesToPdf(SARRAY*, const char*, const char*)</code>
+//     */
+//    int saConvertUnscaledFilesToPdf(Sarray sa, String title, String fileout);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_ok saConvertUnscaledFilesToPdfData(SARRAY*, const char*, l_uint8**, size_t*)</code>
+//     */
+//    int saConvertUnscaledFilesToPdfData(Sarray sa, String title, PointerByReference pdata, NativeSizeByReference pnbytes);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_ok convertUnscaledToPdfData(const char*, const char*, l_uint8**, size_t*)</code>
+//     */
+//    int convertUnscaledToPdfData(String fname, String title, PointerByReference pdata, NativeSizeByReference pnbytes);
 
     /**
      * Original signature :
@@ -8653,29 +8653,29 @@ public interface Leptonica extends Library, ILeptonica {
 //       * <code>NUMA* pixGetCmapHistogramInRect(PIX*, BOX*, l_int32)</code>
 //       */
 //      Numa pixGetCmapHistogramInRect(Pix pixs, Box box, int factor);
-    /**
-     * Original signature :
-     * <code>l_ok pixCountRGBColorsByHash(PIX*, l_int32*)</code>
-     */
-    int pixCountRGBColorsByHash(Pix pixs, IntBuffer pncolors);
-
-    /**
-     * Original signature :
-     * <code>l_ok pixCountRGBColors(PIX*, l_int32, l_int32*)</code>
-     */
-    int pixCountRGBColors(Pix pixs, int factor, IntBuffer pncolors);
-
-    /**
-     * Original signature :
-     * <code>L_AMAP* pixGetColorAmapHistogram(PIX*, l_int32)</code>
-     */
-    L_Rbtree pixGetColorAmapHistogram(Pix pixs, int factor);
-
-    /**
-     * Original signature :
-     * <code>l_int32 amapGetCountForColor(L_AMAP*, l_uint32)</code>
-     */
-    int amapGetCountForColor(L_Rbtree amap, int val);
+//    /**
+//     * Original signature :
+//     * <code>l_ok pixCountRGBColorsByHash(PIX*, l_int32*)</code>
+//     */
+//    int pixCountRGBColorsByHash(Pix pixs, IntBuffer pncolors);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_ok pixCountRGBColors(PIX*, l_int32, l_int32*)</code>
+//     */
+//    int pixCountRGBColors(Pix pixs, int factor, IntBuffer pncolors);
+//
+//    /**
+//     * Original signature :
+//     * <code>L_AMAP* pixGetColorAmapHistogram(PIX*, l_int32)</code>
+//     */
+//    L_Rbtree pixGetColorAmapHistogram(Pix pixs, int factor);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 amapGetCountForColor(L_AMAP*, l_uint32)</code>
+//     */
+//    int amapGetCountForColor(L_Rbtree amap, int val);
 
 //      /**
 //       * Original signature :
@@ -8727,11 +8727,11 @@ public interface Leptonica extends Library, ILeptonica {
 //       * <code>l_int32 pixColumnStats(PIX*, BOX*, NUMA**, NUMA**, NUMA**, NUMA**, NUMA**, NUMA**)</code>
 //       */
 //      int pixColumnStats(Pix pixs, Box box, PointerByReference pnamean, PointerByReference pnamedian, PointerByReference pnamode, PointerByReference pnamodecount, PointerByReference pnavar, PointerByReference pnarootvar);
-    /**
-     * Original signature :
-     * <code>l_ok pixGetRangeValues(PIX*, l_int32, l_int32, l_int32*, l_int32*)</code>
-     */
-    int pixGetRangeValues(Pix pixs, int factor, int color, IntBuffer pminval, IntBuffer pmaxval);
+//    /**
+//     * Original signature :
+//     * <code>l_ok pixGetRangeValues(PIX*, l_int32, l_int32, l_int32*, l_int32*)</code>
+//     */
+//    int pixGetRangeValues(Pix pixs, int factor, int color, IntBuffer pminval, IntBuffer pmaxval);
 
 //      /**
 //       * Original signature :
@@ -8743,34 +8743,34 @@ public interface Leptonica extends Library, ILeptonica {
 //       * <code>l_ok pixGetMaxValueInRect(PIX*, BOX*, l_uint32*, l_int32*, l_int32*)</code>
 //       */
 //      int pixGetMaxValueInRect(Pix pixs, Box box, IntBuffer pmaxval, IntBuffer pxmax, IntBuffer pymax);
-    /**
-     * Original signature :
-     * <code>l_ok pixGetMaxColorIndex(PIX*, l_int32*)</code>
-     */
-    int pixGetMaxColorIndex(Pix pixs, IntBuffer pmaxindex);
-
-    /**
-     * Original signature :
-     * <code>l_ok pixGetBinnedComponentRange(PIX*, l_int32, l_int32, l_int32, l_int32*, l_int32*, l_uint32**, l_int32)</code>
-     */
-    int pixGetBinnedComponentRange(Pix pixs, int nbins, int factor, int color, IntBuffer pminval, IntBuffer pmaxval, PointerByReference pcarray, int fontsize);
-
-    /**
-     * Original signature :
-     * <code>l_ok pixGetRankColorArray(PIX*, l_int32, l_int32, l_int32, l_uint32**, PIXA*, l_int32)</code>
-     */
-    int pixGetRankColorArray(Pix pixs, int nbins, int type, int factor, PointerByReference pcarray, Pixa pixadb, int fontsize);
+//    /**
+//     * Original signature :
+//     * <code>l_ok pixGetMaxColorIndex(PIX*, l_int32*)</code>
+//     */
+//    int pixGetMaxColorIndex(Pix pixs, IntBuffer pmaxindex);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_ok pixGetBinnedComponentRange(PIX*, l_int32, l_int32, l_int32, l_int32*, l_int32*, l_uint32**, l_int32)</code>
+//     */
+//    int pixGetBinnedComponentRange(Pix pixs, int nbins, int factor, int color, IntBuffer pminval, IntBuffer pmaxval, PointerByReference pcarray, int fontsize);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_ok pixGetRankColorArray(PIX*, l_int32, l_int32, l_int32, l_uint32**, PIXA*, l_int32)</code>
+//     */
+//    int pixGetRankColorArray(Pix pixs, int nbins, int type, int factor, PointerByReference pcarray, Pixa pixadb, int fontsize);
 
 //    /**
 //     * Original signature :
 //     * <code>l_ok pixGetBinnedColor(PIX*, PIX*, l_int32, l_int32, l_uint32**, PIXA*)</code>
 //     */
 //    int pixGetBinnedColor(Pix pixs, Pix pixg, int factor, int nbins, PointerByReference pcarray, Pixa pixadb);
-    /**
-     * Original signature :
-     * <code>PIX* pixDisplayColorArray(l_uint32*, l_int32, l_int32, l_int32, l_int32)</code>
-     */
-    Pix pixDisplayColorArray(IntBuffer carray, int ncolors, int side, int ncols, int fontsize);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixDisplayColorArray(l_uint32*, l_int32, l_int32, l_int32, l_int32)</code>
+//     */
+//    Pix pixDisplayColorArray(IntBuffer carray, int ncolors, int side, int ncols, int fontsize);
 
 //      /**
 //       * Original signature :
@@ -8812,11 +8812,11 @@ public interface Leptonica extends Library, ILeptonica {
 //       * <code>l_ok pixSplitDistributionFgBg(PIX*, l_float32, l_int32, l_int32*, l_int32*, l_int32*, PIX**)</code>
 //       */
 //      int pixSplitDistributionFgBg(Pix pixs, float scorefract, int factor, IntBuffer pthresh, IntBuffer pfgval, IntBuffer pbgval, PointerByReference ppixdb);
-    /**
-     * Original signature :
-     * <code>l_ok pixSplitDistributionFgBg(PIX*, l_float32, l_int32, l_int32*, l_int32*, l_int32*, PIX**)</code>
-     */
-    int pixSplitDistributionFgBg(Pix pixs, float scorefract, int factor, IntByReference pthresh, IntByReference pfgval, IntByReference pbgval, PointerByReference ppixdb);
+//    /**
+//     * Original signature :
+//     * <code>l_ok pixSplitDistributionFgBg(PIX*, l_float32, l_int32, l_int32*, l_int32*, l_int32*, PIX**)</code>
+//     */
+//    int pixSplitDistributionFgBg(Pix pixs, float scorefract, int factor, IntByReference pthresh, IntByReference pfgval, IntByReference pbgval, PointerByReference ppixdb);
 
 //      /**
 //       * Original signature :
@@ -12305,71 +12305,71 @@ public interface Leptonica extends Library, ILeptonica {
      */
     Pix pixRotate(Pix pixs, float angle, int type, int incolor, int width, int height);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixEmbedForRotation(PIX*, l_float32, l_int32, l_int32, l_int32)</code>
-     */
-    Pix pixEmbedForRotation(Pix pixs, float angle, int incolor, int width, int height);
-
-    /**
-     * Original signature :
-     * <code>PIX* pixRotateBySampling(PIX*, l_int32, l_int32, l_float32, l_int32)</code>
-     */
-    Pix pixRotateBySampling(Pix pixs, int xcen, int ycen, float angle, int incolor);
-
-    /**
-     * Original signature :
-     * <code>PIX* pixRotateBinaryNice(PIX*, l_float32, l_int32)</code>
-     */
-    Pix pixRotateBinaryNice(Pix pixs, float angle, int incolor);
-
-    /**
-     * Original signature :
-     * <code>PIX* pixRotateWithAlpha(PIX*, l_float32, PIX*, l_float32)</code>
-     */
-    Pix pixRotateWithAlpha(Pix pixs, float angle, Pix pixg, float fract);
-
-    /**
-     * Original signature :
-     * <code>PIX* pixRotateAM(PIX*, l_float32, l_int32)</code>
-     */
-    Pix pixRotateAM(Pix pixs, float angle, int incolor);
-
-    /**
-     * Original signature :
-     * <code>PIX* pixRotateAMColor(PIX*, l_float32, l_uint32)</code>
-     */
-    Pix pixRotateAMColor(Pix pixs, float angle, int colorval);
-
-    /**
-     * Original signature :
-     * <code>PIX* pixRotateAMGray(PIX*, l_float32, l_uint8)</code>
-     */
-    Pix pixRotateAMGray(Pix pixs, float angle, byte grayval);
-
-    /**
-     * Original signature :
-     * <code>PIX* pixRotateAMCorner(PIX*, l_float32, l_int32)</code>
-     */
-    Pix pixRotateAMCorner(Pix pixs, float angle, int incolor);
-
-    /**
-     * Original signature :
-     * <code>PIX* pixRotateAMColorCorner(PIX*, l_float32, l_uint32)</code>
-     */
-    Pix pixRotateAMColorCorner(Pix pixs, float angle, int fillval);
-
-    /**
-     * Original signature :
-     * <code>PIX* pixRotateAMGrayCorner(PIX*, l_float32, l_uint8)</code>
-     */
-    Pix pixRotateAMGrayCorner(Pix pixs, float angle, byte grayval);
-
-    /**
-     * Original signature :
-     * <code>PIX* pixRotateAMColorFast(PIX*, l_float32, l_uint32)</code>
-     */
-    Pix pixRotateAMColorFast(Pix pixs, float angle, int colorval);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixEmbedForRotation(PIX*, l_float32, l_int32, l_int32, l_int32)</code>
+//     */
+//    Pix pixEmbedForRotation(Pix pixs, float angle, int incolor, int width, int height);
+//
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixRotateBySampling(PIX*, l_int32, l_int32, l_float32, l_int32)</code>
+//     */
+//    Pix pixRotateBySampling(Pix pixs, int xcen, int ycen, float angle, int incolor);
+//
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixRotateBinaryNice(PIX*, l_float32, l_int32)</code>
+//     */
+//    Pix pixRotateBinaryNice(Pix pixs, float angle, int incolor);
+//
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixRotateWithAlpha(PIX*, l_float32, PIX*, l_float32)</code>
+//     */
+//    Pix pixRotateWithAlpha(Pix pixs, float angle, Pix pixg, float fract);
+//
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixRotateAM(PIX*, l_float32, l_int32)</code>
+//     */
+//    Pix pixRotateAM(Pix pixs, float angle, int incolor);
+//
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixRotateAMColor(PIX*, l_float32, l_uint32)</code>
+//     */
+//    Pix pixRotateAMColor(Pix pixs, float angle, int colorval);
+//
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixRotateAMGray(PIX*, l_float32, l_uint8)</code>
+//     */
+//    Pix pixRotateAMGray(Pix pixs, float angle, byte grayval);
+//
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixRotateAMCorner(PIX*, l_float32, l_int32)</code>
+//     */
+//    Pix pixRotateAMCorner(Pix pixs, float angle, int incolor);
+//
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixRotateAMColorCorner(PIX*, l_float32, l_uint32)</code>
+//     */
+//    Pix pixRotateAMColorCorner(Pix pixs, float angle, int fillval);
+//
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixRotateAMGrayCorner(PIX*, l_float32, l_uint8)</code>
+//     */
+//    Pix pixRotateAMGrayCorner(Pix pixs, float angle, byte grayval);
+//
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixRotateAMColorFast(PIX*, l_float32, l_uint32)</code>
+//     */
+//    Pix pixRotateAMColorFast(Pix pixs, float angle, int colorval);
 
     /**
      * Original signature : <code>PIX* pixRotateOrth(PIX*, l_int32)</code>
@@ -12482,22 +12482,22 @@ public interface Leptonica extends Library, ILeptonica {
 //       * Original signature : <code>SARRAY* sarrayCreate(l_int32)</code>
 //       */
 //      Sarray sarrayCreate(int n);
-    /**
-     * Original signature :
-     * <code>SARRAY* sarrayCreateInitialized(l_int32, const char*)</code>
-     */
-    Sarray sarrayCreateInitialized(int n, String initstr);
+//    /**
+//     * Original signature :
+//     * <code>SARRAY* sarrayCreateInitialized(l_int32, const char*)</code>
+//     */
+//    Sarray sarrayCreateInitialized(int n, String initstr);
 
 //      /**
 //       * Original signature :
 //       * <code>SARRAY* sarrayCreateWordsFromString(const char*)</code>
 //       */
 //      Sarray sarrayCreateWordsFromString(String string);
-    /**
-     * Original signature :
-     * <code>SARRAY* sarrayCreateLinesFromString(const char*, l_int32)</code>
-     */
-    Sarray sarrayCreateLinesFromString(String string, int blankflag);
+//    /**
+//     * Original signature :
+//     * <code>SARRAY* sarrayCreateLinesFromString(const char*, l_int32)</code>
+//     */
+//    Sarray sarrayCreateLinesFromString(String string, int blankflag);
 //  
 //      /**
 //       * Original signature : <code>void sarrayDestroy(SARRAY**)</code>
@@ -12514,22 +12514,22 @@ public interface Leptonica extends Library, ILeptonica {
 //       */
 //      Sarray sarrayClone(Sarray sa);
 
-    /**
-     * Original signature :
-     * <code>l_ok sarrayAddString(SARRAY*, const char*, l_int32)</code>
-     */
-    int sarrayAddString(Sarray sa, String string, int copyflag);
+//    /**
+//     * Original signature :
+//     * <code>l_ok sarrayAddString(SARRAY*, const char*, l_int32)</code>
+//     */
+//    int sarrayAddString(Sarray sa, String string, int copyflag);
 
 //      /**
 //       * Original signature :
 //       * <code>char* sarrayRemoveString(SARRAY*, l_int32)</code>
 //       */
 //      Pointer sarrayRemoveString(Sarray sa, int index);
-    /**
-     * Original signature :
-     * <code>l_ok sarrayReplaceString(SARRAY*, l_int32, char*, l_int32)</code>
-     */
-    int sarrayReplaceString(Sarray sa, int index, ByteBuffer newstr, int copyflag);
+//    /**
+//     * Original signature :
+//     * <code>l_ok sarrayReplaceString(SARRAY*, l_int32, char*, l_int32)</code>
+//     */
+//    int sarrayReplaceString(Sarray sa, int index, ByteBuffer newstr, int copyflag);
 //  
 //      /**
 //       * Original signature : <code>l_ok sarrayClear(SARRAY*)</code>
@@ -12561,21 +12561,21 @@ public interface Leptonica extends Library, ILeptonica {
 //       * <code>char* sarrayToStringRange(SARRAY*, l_int32, l_int32, l_int32)</code>
 //       */
 //      Pointer sarrayToStringRange(Sarray sa, int first, int nstrings, int addnlflag);
-    /**
-     * Original signature : <code>l_ok sarrayJoin(SARRAY*, SARRAY*)</code>
-     */
-    int sarrayJoin(Sarray sa1, Sarray sa2);
-
-//      /**
-//       * Original signature :
-//       * <code>l_ok sarrayAppendRange(SARRAY*, SARRAY*, l_int32, l_int32)</code>
-//       */
-//      int sarrayAppendRange(Sarray sa1, Sarray sa2, int start, int end);
-    /**
-     * Original signature :
-     * <code>l_ok sarrayPadToSameSize(SARRAY*, SARRAY*, const char*)</code>
-     */
-    int sarrayPadToSameSize(Sarray sa1, Sarray sa2, String padstring);
+//    /**
+//     * Original signature : <code>l_ok sarrayJoin(SARRAY*, SARRAY*)</code>
+//     */
+//    int sarrayJoin(Sarray sa1, Sarray sa2);
+//
+////      /**
+////       * Original signature :
+////       * <code>l_ok sarrayAppendRange(SARRAY*, SARRAY*, l_int32, l_int32)</code>
+////       */
+////      int sarrayAppendRange(Sarray sa1, Sarray sa2, int start, int end);
+//    /**
+//     * Original signature :
+//     * <code>l_ok sarrayPadToSameSize(SARRAY*, SARRAY*, const char*)</code>
+//     */
+//    int sarrayPadToSameSize(Sarray sa1, Sarray sa2, String padstring);
 
 //      /**
 //       * Original signature :
@@ -13310,20 +13310,20 @@ public interface Leptonica extends Library, ILeptonica {
 //       */
 //      Sela selaAddTJunctions(Sela sela, float hlsize, float mdist, int norient, int debugflag);
 
-    /**
-     * Original signature : <code>SELA* sela4ccThin(SELA*)</code>
-     */
-    Sela sela4ccThin(Sela sela);
-
-    /**
-     * Original signature : <code>SELA* sela8ccThin(SELA*)</code>
-     */
-    Sela sela8ccThin(Sela sela);
-
-    /**
-     * Original signature : <code>SELA* sela4and8ccThin(SELA*)</code>
-     */
-    Sela sela4and8ccThin(Sela sela);
+//    /**
+//     * Original signature : <code>SELA* sela4ccThin(SELA*)</code>
+//     */
+//    Sela sela4ccThin(Sela sela);
+//
+//    /**
+//     * Original signature : <code>SELA* sela8ccThin(SELA*)</code>
+//     */
+//    Sela sela8ccThin(Sela sela);
+//
+//    /**
+//     * Original signature : <code>SELA* sela4and8ccThin(SELA*)</code>
+//     */
+//    Sela sela4and8ccThin(Sela sela);
 
 //      /**
 //       * Original signature :
@@ -14175,23 +14175,23 @@ public interface Leptonica extends Library, ILeptonica {
 //     * <code>l_int32 stringFindSubstr(const char*, const char*, l_int32*)</code>
 //     */
 //    int stringFindSubstr(String src, String sub, IntBuffer ploc);
-    /**
-     * Original signature :
-     * <code>l_uint8* arrayReplaceEachSequence(const l_uint8*, size_t, const l_uint8*, size_t, const l_uint8*, size_t, size_t*, l_int32*)</code>
-     */
-    Pointer arrayReplaceEachSequence(ByteBuffer datas, NativeSize dataslen, ByteBuffer seq, NativeSize seqlen, ByteBuffer newseq, NativeSize newseqlen, NativeSizeByReference pdatadlen, IntBuffer pcount);
-
-    /**
-     * Original signature :
-     * <code>L_DNA* arrayFindEachSequence(const l_uint8*, size_t, const l_uint8*, size_t)</code>
-     */
-    L_Dna arrayFindEachSequence(ByteBuffer data, NativeSize datalen, ByteBuffer sequence, NativeSize seqlen);
-
-    /**
-     * Original signature :
-     * <code>l_ok arrayFindSequence(const l_uint8*, size_t, const l_uint8*, size_t, l_int32*, l_int32*)</code>
-     */
-    int arrayFindSequence(ByteBuffer data, NativeSize datalen, ByteBuffer sequence, NativeSize seqlen, IntBuffer poffset, IntBuffer pfound);
+//    /**
+//     * Original signature :
+//     * <code>l_uint8* arrayReplaceEachSequence(const l_uint8*, size_t, const l_uint8*, size_t, const l_uint8*, size_t, size_t*, l_int32*)</code>
+//     */
+//    Pointer arrayReplaceEachSequence(ByteBuffer datas, NativeSize dataslen, ByteBuffer seq, NativeSize seqlen, ByteBuffer newseq, NativeSize newseqlen, NativeSizeByReference pdatadlen, IntBuffer pcount);
+//
+//    /**
+//     * Original signature :
+//     * <code>L_DNA* arrayFindEachSequence(const l_uint8*, size_t, const l_uint8*, size_t)</code>
+//     */
+//    L_Dna arrayFindEachSequence(ByteBuffer data, NativeSize datalen, ByteBuffer sequence, NativeSize seqlen);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_ok arrayFindSequence(const l_uint8*, size_t, const l_uint8*, size_t, l_int32*, l_int32*)</code>
+//     */
+//    int arrayFindSequence(ByteBuffer data, NativeSize datalen, ByteBuffer sequence, NativeSize seqlen, IntBuffer poffset, IntBuffer pfound);
 
     /**
      * Original signature :
@@ -14412,126 +14412,126 @@ public interface Leptonica extends Library, ILeptonica {
 //       * <code>l_int32 extractNumberFromFilename(const char*, l_int32, l_int32)</code>
 //       */
 //      int extractNumberFromFilename(String fname, int numpre, int numpost);
-    /**
-     * Original signature :
-     * <code>PIX* pixSimpleCaptcha(PIX*, l_int32, l_int32, l_uint32, l_uint32, l_int32)</code>
-     */
-    Pix pixSimpleCaptcha(Pix pixs, int border, int nterms, int seed, int color, int cmapflag);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixSimpleCaptcha(PIX*, l_int32, l_int32, l_uint32, l_uint32, l_int32)</code>
+//     */
+//    Pix pixSimpleCaptcha(Pix pixs, int border, int nterms, int seed, int color, int cmapflag);
+//
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixRandomHarmonicWarp(PIX*, l_float32, l_float32, l_float32, l_float32, l_int32, l_int32, l_uint32, l_int32)</code>
+//     */
+//    Pix pixRandomHarmonicWarp(Pix pixs, float xmag, float ymag, float xfreq, float yfreq, int nx, int ny, int seed, int grayval);
+//
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixWarpStereoscopic(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32)</code>
+//     */
+//    Pix pixWarpStereoscopic(Pix pixs, int zbend, int zshiftt, int zshiftb, int ybendt, int ybendb, int redleft);
+//
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixStretchHorizontal(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32)</code>
+//     */
+//    Pix pixStretchHorizontal(Pix pixs, int dir, int type, int hmax, int operation, int incolor);
 
-    /**
-     * Original signature :
-     * <code>PIX* pixRandomHarmonicWarp(PIX*, l_float32, l_float32, l_float32, l_float32, l_int32, l_int32, l_uint32, l_int32)</code>
-     */
-    Pix pixRandomHarmonicWarp(Pix pixs, float xmag, float ymag, float xfreq, float yfreq, int nx, int ny, int seed, int grayval);
-
-    /**
-     * Original signature :
-     * <code>PIX* pixWarpStereoscopic(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32, l_int32)</code>
-     */
-    Pix pixWarpStereoscopic(Pix pixs, int zbend, int zshiftt, int zshiftb, int ybendt, int ybendb, int redleft);
-
-    /**
-     * Original signature :
-     * <code>PIX* pixStretchHorizontal(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32)</code>
-     */
-    Pix pixStretchHorizontal(Pix pixs, int dir, int type, int hmax, int operation, int incolor);
-
-    /**
-     * Original signature :
-     * <code>PIX* pixStretchHorizontalSampled(PIX*, l_int32, l_int32, l_int32, l_int32)</code>
-     */
-    Pix pixStretchHorizontalSampled(Pix pixs, int dir, int type, int hmax, int incolor);
-
-    /**
-     * Original signature :
-     * <code>PIX* pixStretchHorizontalLI(PIX*, l_int32, l_int32, l_int32, l_int32)</code>
-     */
-    Pix pixStretchHorizontalLI(Pix pixs, int dir, int type, int hmax, int incolor);
-
-    /**
-     * Original signature :
-     * <code>PIX* pixQuadraticVShear(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32)</code>
-     */
-    Pix pixQuadraticVShear(Pix pixs, int dir, int vmaxt, int vmaxb, int operation, int incolor);
-
-    /**
-     * Original signature :
-     * <code>PIX* pixQuadraticVShearSampled(PIX*, l_int32, l_int32, l_int32, l_int32)</code>
-     */
-    Pix pixQuadraticVShearSampled(Pix pixs, int dir, int vmaxt, int vmaxb, int incolor);
-
-    /**
-     * Original signature :
-     * <code>PIX* pixQuadraticVShearLI(PIX*, l_int32, l_int32, l_int32, l_int32)</code>
-     */
-    Pix pixQuadraticVShearLI(Pix pixs, int dir, int vmaxt, int vmaxb, int incolor);
-
-    /**
-     * Original signature :
-     * <code>PIX* pixStereoFromPair(PIX*, PIX*, l_float32, l_float32, l_float32)</code>
-     */
-    Pix pixStereoFromPair(Pix pix1, Pix pix2, float rwt, float gwt, float bwt);
-
-    /**
-     * Original signature :
-     * <code>L_WSHED* wshedCreate(PIX*, PIX*, l_int32, l_int32)</code>
-     */
-    L_WShed wshedCreate(Pix pixs, Pix pixm, int mindepth, int debugflag);
-
-    /**
-     * Original signature : <code>void wshedDestroy(L_WSHED**)</code>
-     */
-    void wshedDestroy(PointerByReference pwshed);
-
-    /**
-     * Original signature : <code>l_ok wshedApply(L_WSHED*)</code>
-     */
-    int wshedApply(L_WShed wshed);
-
-    /**
-     * Original signature :
-     * <code>l_ok wshedBasins(L_WSHED*, PIXA**, NUMA**)</code>
-     */
-    int wshedBasins(L_WShed wshed, PointerByReference ppixa, PointerByReference pnalevels);
-
-    /**
-     * Original signature : <code>PIX* wshedRenderFill(L_WSHED*)</code>
-     */
-    Pix wshedRenderFill(L_WShed wshed);
-
-    /**
-     * Original signature : <code>PIX* wshedRenderColors(L_WSHED*)</code>
-     */
-    Pix wshedRenderColors(L_WShed wshed);
-//  
-//      /**
-//       * Original signature : <code>PIX* pixReadStreamWebP(FILE*)</code>
-//       */
-//      Pix pixReadStreamWebP(FILE fp);
-
-    /**
-     * Original signature :
-     * <code>PIX* pixReadMemWebP(const l_uint8*, size_t)</code>
-     */
-    Pix pixReadMemWebP(ByteBuffer filedata, NativeSize filesize);
-
-    /**
-     * Original signature :
-     * <code>l_ok readHeaderWebP(const char*, l_int32*, l_int32*, l_int32*)</code>
-     */
-    int readHeaderWebP(String filename, IntBuffer pw, IntBuffer ph, IntBuffer pspp);
-
-    /**
-     * Original signature :
-     * <code>l_ok readHeaderMemWebP(const l_uint8*, size_t, l_int32*, l_int32*, l_int32*)</code>
-     */
-    int readHeaderMemWebP(ByteBuffer data, NativeSize size, IntBuffer pw, IntBuffer ph, IntBuffer pspp);
-
-    /**
-     * Original signature :
-     * <code>l_ok pixWriteWebP(const char*, PIX*, l_int32, l_int32)</code>
-     */
-    int pixWriteWebP(String filename, Pix pixs, int quality, int lossless);
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixStretchHorizontalSampled(PIX*, l_int32, l_int32, l_int32, l_int32)</code>
+//     */
+//    Pix pixStretchHorizontalSampled(Pix pixs, int dir, int type, int hmax, int incolor);
+//
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixStretchHorizontalLI(PIX*, l_int32, l_int32, l_int32, l_int32)</code>
+//     */
+//    Pix pixStretchHorizontalLI(Pix pixs, int dir, int type, int hmax, int incolor);
+//
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixQuadraticVShear(PIX*, l_int32, l_int32, l_int32, l_int32, l_int32)</code>
+//     */
+//    Pix pixQuadraticVShear(Pix pixs, int dir, int vmaxt, int vmaxb, int operation, int incolor);
+//
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixQuadraticVShearSampled(PIX*, l_int32, l_int32, l_int32, l_int32)</code>
+//     */
+//    Pix pixQuadraticVShearSampled(Pix pixs, int dir, int vmaxt, int vmaxb, int incolor);
+//
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixQuadraticVShearLI(PIX*, l_int32, l_int32, l_int32, l_int32)</code>
+//     */
+//    Pix pixQuadraticVShearLI(Pix pixs, int dir, int vmaxt, int vmaxb, int incolor);
+//
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixStereoFromPair(PIX*, PIX*, l_float32, l_float32, l_float32)</code>
+//     */
+//    Pix pixStereoFromPair(Pix pix1, Pix pix2, float rwt, float gwt, float bwt);
+//
+//    /**
+//     * Original signature :
+//     * <code>L_WSHED* wshedCreate(PIX*, PIX*, l_int32, l_int32)</code>
+//     */
+//    L_WShed wshedCreate(Pix pixs, Pix pixm, int mindepth, int debugflag);
+//
+//    /**
+//     * Original signature : <code>void wshedDestroy(L_WSHED**)</code>
+//     */
+//    void wshedDestroy(PointerByReference pwshed);
+//
+//    /**
+//     * Original signature : <code>l_ok wshedApply(L_WSHED*)</code>
+//     */
+//    int wshedApply(L_WShed wshed);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_ok wshedBasins(L_WSHED*, PIXA**, NUMA**)</code>
+//     */
+//    int wshedBasins(L_WShed wshed, PointerByReference ppixa, PointerByReference pnalevels);
+//
+//    /**
+//     * Original signature : <code>PIX* wshedRenderFill(L_WSHED*)</code>
+//     */
+//    Pix wshedRenderFill(L_WShed wshed);
+//
+//    /**
+//     * Original signature : <code>PIX* wshedRenderColors(L_WSHED*)</code>
+//     */
+//    Pix wshedRenderColors(L_WShed wshed);
+////  
+////      /**
+////       * Original signature : <code>PIX* pixReadStreamWebP(FILE*)</code>
+////       */
+////      Pix pixReadStreamWebP(FILE fp);
+//
+//    /**
+//     * Original signature :
+//     * <code>PIX* pixReadMemWebP(const l_uint8*, size_t)</code>
+//     */
+//    Pix pixReadMemWebP(ByteBuffer filedata, NativeSize filesize);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_ok readHeaderWebP(const char*, l_int32*, l_int32*, l_int32*)</code>
+//     */
+//    int readHeaderWebP(String filename, IntBuffer pw, IntBuffer ph, IntBuffer pspp);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_ok readHeaderMemWebP(const l_uint8*, size_t, l_int32*, l_int32*, l_int32*)</code>
+//     */
+//    int readHeaderMemWebP(ByteBuffer data, NativeSize size, IntBuffer pw, IntBuffer ph, IntBuffer pspp);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_ok pixWriteWebP(const char*, PIX*, l_int32, l_int32)</code>
+//     */
+//    int pixWriteWebP(String filename, Pix pixs, int quality, int lossless);
 
 //      /**
 //       * Original signature :
