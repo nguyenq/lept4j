@@ -159,7 +159,3 @@ Version 1.19.1 (1 March 2024):
 
 Version 1.20.0 (24 October 2024):
 - Upgrade to Leptonica 1.85.0
-
-Version 1.21.0 (24 November 2024):
-- Modularize the library
-- Target JDK 11
