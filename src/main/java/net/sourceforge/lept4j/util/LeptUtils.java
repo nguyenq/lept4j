@@ -403,12 +403,12 @@ public class LeptUtils {
      * @return a byte buffer of image data
      * @throws IOException
      */
-    static ByteBuffer getImageByteBuffer(RenderedImage image) throws IOException {
+    public static ByteBuffer getImageByteBuffer(RenderedImage image) throws IOException {
         //Set up the writeParam
         TIFFImageWriteParam tiffWriteParam = new TIFFImageWriteParam(Locale.US);
         tiffWriteParam.setCompressionMode(ImageWriteParam.MODE_DISABLED);
 
-        //Get tif writer and set output to file
+        //Get tiff writer and set output to file
         Iterator<ImageWriter> writers = ImageIO.getImageWritersByFormatName(TIFF_FORMAT);
 
         if (!writers.hasNext()) {

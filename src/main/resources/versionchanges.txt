@@ -162,3 +162,4 @@ Version 1.20.0 (24 October 2024):
 
 Version 1.20.1 (20 January 2025):
 - Update Maven plug-ins and dependencies
+- Make getImageByteBuffer method public
