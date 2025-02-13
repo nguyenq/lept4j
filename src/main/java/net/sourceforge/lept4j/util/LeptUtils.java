@@ -94,6 +94,49 @@ public class LeptUtils {
     }
 
     /**
+     * Gets image data of a <code>RenderedImage</code> object.
+     *
+     * @param image a <code>RenderedImage</code> object
+     * @return a byte buffer of image data
+     * @throws IOException
+     */
+    public static ByteBuffer getImageByteBuffer(RenderedImage image) throws IOException {
+        //Set up the writeParam
+        TIFFImageWriteParam tiffWriteParam = new TIFFImageWriteParam(Locale.US);
+        tiffWriteParam.setCompressionMode(ImageWriteParam.MODE_DISABLED);
+
+        //Get tiff writer and set output to file
+        Iterator<ImageWriter> writers = ImageIO.getImageWritersByFormatName(TIFF_FORMAT);
+
+        if (!writers.hasNext()) {
+            throw new RuntimeException(JAI_IMAGE_WRITER_MESSAGE);
+        }
+
+        ImageWriter writer = writers.next();
+
+        //Get the stream metadata
+        IIOMetadata streamMetadata = writer.getDefaultStreamMetadata(tiffWriteParam);
+
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        byte[] b;
+        try (ImageOutputStream ios = ImageIO.createImageOutputStream(outputStream)) {
+            writer.setOutput(ios);
+            writer.write(streamMetadata, new IIOImage(image, null, null), tiffWriteParam);
+            //writer.write(image);
+            writer.dispose();
+            ios.seek(0);
+            b = new byte[(int) ios.length()];
+            ios.read(b);
+        }
+
+        ByteBuffer buf = ByteBuffer.allocateDirect(b.length);
+        buf.order(ByteOrder.nativeOrder());
+        buf.put(b);
+        ((Buffer) buf).flip();
+        return buf;
+    }
+
+    /**
      * Removes horizontal lines from a grayscale image. The algorithm is based
      * on Leptonica <code>lineremoval.c</code> example.
      * <br>
@@ -394,49 +437,6 @@ public class LeptUtils {
         } else {
             throw new RuntimeException("Not supported.");
         }
-    }
-
-    /**
-     * Gets image data of an <code>RenderedImage</code> object.
-     *
-     * @param image an <code>RenderedImage</code> object
-     * @return a byte buffer of image data
-     * @throws IOException
-     */
-    public static ByteBuffer getImageByteBuffer(RenderedImage image) throws IOException {
-        //Set up the writeParam
-        TIFFImageWriteParam tiffWriteParam = new TIFFImageWriteParam(Locale.US);
-        tiffWriteParam.setCompressionMode(ImageWriteParam.MODE_DISABLED);
-
-        //Get tiff writer and set output to file
-        Iterator<ImageWriter> writers = ImageIO.getImageWritersByFormatName(TIFF_FORMAT);
-
-        if (!writers.hasNext()) {
-            throw new RuntimeException(JAI_IMAGE_WRITER_MESSAGE);
-        }
-
-        ImageWriter writer = writers.next();
-
-        //Get the stream metadata
-        IIOMetadata streamMetadata = writer.getDefaultStreamMetadata(tiffWriteParam);
-
-        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-        byte[] b;
-        try (ImageOutputStream ios = ImageIO.createImageOutputStream(outputStream)) {
-            writer.setOutput(ios);
-            writer.write(streamMetadata, new IIOImage(image, null, null), tiffWriteParam);
-            //writer.write(image);
-            writer.dispose();
-            ios.seek(0);
-            b = new byte[(int) ios.length()];
-            ios.read(b);
-        }
-
-        ByteBuffer buf = ByteBuffer.allocateDirect(b.length);
-        buf.order(ByteOrder.nativeOrder());
-        buf.put(b);
-        ((Buffer) buf).flip();
-        return buf;
     }
 
 //    /**

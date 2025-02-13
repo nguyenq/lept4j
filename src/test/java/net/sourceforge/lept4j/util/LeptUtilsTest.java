@@ -95,6 +95,7 @@ public class LeptUtilsTest {
 
     /**
      * Test of getImageByteBuffer method, of class LeptUtils.
+     * @throws java.lang.Exception
      */
     @Disabled("Disabled until finding a way")
     @Test

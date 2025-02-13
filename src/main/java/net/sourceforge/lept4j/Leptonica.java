@@ -3931,10 +3931,10 @@ public interface Leptonica extends Library, ILeptonica {
 //       * <code>l_ok l_dnaJoin(L_DNA*, L_DNA*, l_int32, l_int32)</code>
 //       */
 //      int l_dnaJoin(L_Dna dad, L_Dna das, int istart, int iend);
-    /**
-     * Original signature : <code>L_DNA* l_dnaaFlattenToDna(L_DNAA*)</code>
-     */
-    L_Dna l_dnaaFlattenToDna(L_Dnaa daa);
+//    /**
+//     * Original signature : <code>L_DNA* l_dnaaFlattenToDna(L_DNAA*)</code>
+//     */
+//    L_Dna l_dnaaFlattenToDna(L_Dnaa daa);
 //  
 //      /**
 //       * Original signature : <code>NUMA* l_dnaConvertToNuma(L_DNA*)</code>
@@ -3950,79 +3950,79 @@ public interface Leptonica extends Library, ILeptonica {
 //     * Original signature : <code>L_DNA* pixConvertDataToDna(PIX*)</code>
 //     */
 //    L_Dna pixConvertDataToDna(Pix pix);
-    /**
-     * Original signature : <code>L_ASET* l_asetCreateFromDna(L_DNA*)</code>
-     */
-    L_Rbtree l_asetCreateFromDna(L_Dna da);
+//    /**
+//     * Original signature : <code>L_ASET* l_asetCreateFromDna(L_DNA*)</code>
+//     */
+//    L_Rbtree l_asetCreateFromDna(L_Dna da);
+//
+//    /**
+//     * Original signature : <code>L_DNA* l_dnaDiffAdjValues(L_DNA*)</code>
+//     */
+//    L_Dna l_dnaDiffAdjValues(L_Dna das);
 
-    /**
-     * Original signature : <code>L_DNA* l_dnaDiffAdjValues(L_DNA*)</code>
-     */
-    L_Dna l_dnaDiffAdjValues(L_Dna das);
+//    /**
+//     * Original signature :
+//     * <code>L_DNAHASH* l_dnaHashCreate(l_int32, l_int32)</code>
+//     */
+//    L_DnaHash l_dnaHashCreate(int nbuckets, int initsize);
+//
+//    /**
+//     * Original signature : <code>void l_dnaHashDestroy(L_DNAHASH**)</code>
+//     */
+//    void l_dnaHashDestroy(PointerByReference pdahash);
+//
+//    /**
+//     * Original signature : <code>l_int32 l_dnaHashGetCount(L_DNAHASH*)</code>
+//     */
+//    int l_dnaHashGetCount(L_DnaHash dahash);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_int32 l_dnaHashGetTotalCount(L_DNAHASH*)</code>
+//     */
+//    int l_dnaHashGetTotalCount(L_DnaHash dahash);
+//
+//    /**
+//     * Original signature :
+//     * <code>L_DNA* l_dnaHashGetDna(L_DNAHASH*, l_uint64, l_int32)</code>
+//     */
+//    L_Dna l_dnaHashGetDna(L_DnaHash dahash, long key, int copyflag);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_ok l_dnaHashAdd(L_DNAHASH*, l_uint64, l_float64)</code>
+//     */
+//    int l_dnaHashAdd(L_DnaHash dahash, long key, double value);
+//
+//    /**
+//     * Original signature :
+//     * <code>L_DNAHASH* l_dnaHashCreateFromDna(L_DNA*)</code>
+//     */
+//    L_DnaHash l_dnaHashCreateFromDna(L_Dna da);
 
-    /**
-     * Original signature :
-     * <code>L_DNAHASH* l_dnaHashCreate(l_int32, l_int32)</code>
-     */
-    L_DnaHash l_dnaHashCreate(int nbuckets, int initsize);
-
-    /**
-     * Original signature : <code>void l_dnaHashDestroy(L_DNAHASH**)</code>
-     */
-    void l_dnaHashDestroy(PointerByReference pdahash);
-
-    /**
-     * Original signature : <code>l_int32 l_dnaHashGetCount(L_DNAHASH*)</code>
-     */
-    int l_dnaHashGetCount(L_DnaHash dahash);
-
-    /**
-     * Original signature :
-     * <code>l_int32 l_dnaHashGetTotalCount(L_DNAHASH*)</code>
-     */
-    int l_dnaHashGetTotalCount(L_DnaHash dahash);
-
-    /**
-     * Original signature :
-     * <code>L_DNA* l_dnaHashGetDna(L_DNAHASH*, l_uint64, l_int32)</code>
-     */
-    L_Dna l_dnaHashGetDna(L_DnaHash dahash, long key, int copyflag);
-
-    /**
-     * Original signature :
-     * <code>l_ok l_dnaHashAdd(L_DNAHASH*, l_uint64, l_float64)</code>
-     */
-    int l_dnaHashAdd(L_DnaHash dahash, long key, double value);
-
-    /**
-     * Original signature :
-     * <code>L_DNAHASH* l_dnaHashCreateFromDna(L_DNA*)</code>
-     */
-    L_DnaHash l_dnaHashCreateFromDna(L_Dna da);
-
-    /**
-     * Original signature :
-     * <code>l_ok l_dnaRemoveDupsByHash(L_DNA*, L_DNA**, L_DNAHASH**)</code>
-     */
-    int l_dnaRemoveDupsByHash(L_Dna das, PointerByReference pdad, PointerByReference pdahash);
-
-    /**
-     * Original signature :
-     * <code>l_ok l_dnaMakeHistoByHash(L_DNA*, L_DNAHASH**, L_DNA**, L_DNA**)</code>
-     */
-    int l_dnaMakeHistoByHash(L_Dna das, PointerByReference pdahash, PointerByReference pdav, PointerByReference pdac);
-
-    /**
-     * Original signature :
-     * <code>L_DNA* l_dnaIntersectionByHash(L_DNA*, L_DNA*)</code>
-     */
-    L_Dna l_dnaIntersectionByHash(L_Dna da1, L_Dna da2);
-
-    /**
-     * Original signature :
-     * <code>l_ok l_dnaFindValByHash(L_DNA*, L_DNAHASH*, l_float64, l_int32*)</code>
-     */
-    int l_dnaFindValByHash(L_Dna da, L_DnaHash dahash, double val, IntBuffer pindex);
+//    /**
+//     * Original signature :
+//     * <code>l_ok l_dnaRemoveDupsByHash(L_DNA*, L_DNA**, L_DNAHASH**)</code>
+//     */
+//    int l_dnaRemoveDupsByHash(L_Dna das, PointerByReference pdad, PointerByReference pdahash);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_ok l_dnaMakeHistoByHash(L_DNA*, L_DNAHASH**, L_DNA**, L_DNA**)</code>
+//     */
+//    int l_dnaMakeHistoByHash(L_Dna das, PointerByReference pdahash, PointerByReference pdav, PointerByReference pdac);
+//
+//    /**
+//     * Original signature :
+//     * <code>L_DNA* l_dnaIntersectionByHash(L_DNA*, L_DNA*)</code>
+//     */
+//    L_Dna l_dnaIntersectionByHash(L_Dna da1, L_Dna da2);
+//
+//    /**
+//     * Original signature :
+//     * <code>l_ok l_dnaFindValByHash(L_DNA*, L_DNAHASH*, l_float64, l_int32*)</code>
+//     */
+//    int l_dnaFindValByHash(L_Dna da, L_DnaHash dahash, double val, IntBuffer pindex);
 
     /**
      * Original signature :
@@ -8023,16 +8023,27 @@ public interface Leptonica extends Library, ILeptonica {
      * <code>l_int32 pixFreeAndSetData(PIX*, l_uint32*)</code><br>
      */
     int pixFreeAndSetData(Pix pix, IntBuffer data);
+    
+    /**
+     * Original signature :
+     * <code>l_int32 pixFreeAndSetData(PIX*, l_uint32*)</code>
+     */
+    int pixFreeAndSetData(Pix pix, IntByReference data);
 
     /**
      * Original signature : <code>l_int32 pixSetData(PIX*, l_uint32*)</code>
      */
     int pixSetData(Pix pix, IntBuffer data);
+    
+    /**
+     * Original signature : <code>l_int32 pixSetData(PIX*, l_uint32*)</code>
+     */
+    int pixSetData(Pix pix, IntByReference data);
 
     /**
      * Original signature : <code>l_uint32* pixExtractData(PIX*)</code>
      */
-    IntByReference pixExtractData(Pix pixs);
+    IntByReference pixExtractData(Pix pix);
 
     /**
      * Original signature : <code>l_int32 pixFreeData(PIX*)</code>
@@ -8054,6 +8065,12 @@ public interface Leptonica extends Library, ILeptonica {
      * <code>l_ok pixGetPixel(PIX*, l_int32, l_int32, l_uint32*)</code>
      */
     int pixGetPixel(Pix pix, int x, int y, IntBuffer pval);
+    
+    /**
+     * Original signature :
+     * <code>l_ok pixGetPixel(PIX*, l_int32, l_int32, l_uint32*)</code>
+     */
+     int pixGetPixel(Pix pix, int x, int y, IntByReference pval);
 
     /**
      * Original signature :
@@ -8066,6 +8083,12 @@ public interface Leptonica extends Library, ILeptonica {
      * <code>l_ok pixGetRGBPixel(PIX*, l_int32, l_int32, l_int32*, l_int32*, l_int32*)</code>
      */
     int pixGetRGBPixel(Pix pix, int x, int y, IntBuffer prval, IntBuffer pgval, IntBuffer pbval);
+
+    /**
+     * Original signature :
+     * <code>l_ok pixGetRGBPixel(PIX*, l_int32, l_int32, l_int32*, l_int32*, l_int32*)</code>
+     */
+    int pixGetRGBPixel(Pix pix, int x, int y, IntByReference prval, IntByReference pgval, IntByReference pbval);
 
     /**
      * Original signature :

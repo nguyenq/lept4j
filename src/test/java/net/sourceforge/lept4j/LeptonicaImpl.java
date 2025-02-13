@@ -2062,76 +2062,6 @@ public class LeptonicaImpl implements Leptonica {
     }
 
     @Override
-    public L_Dna l_dnaaFlattenToDna(L_Dnaa daa) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public L_Rbtree l_asetCreateFromDna(L_Dna da) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public L_Dna l_dnaDiffAdjValues(L_Dna das) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public L_DnaHash l_dnaHashCreate(int nbuckets, int initsize) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public void l_dnaHashDestroy(PointerByReference pdahash) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public int l_dnaHashGetCount(L_DnaHash dahash) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public int l_dnaHashGetTotalCount(L_DnaHash dahash) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public L_Dna l_dnaHashGetDna(L_DnaHash dahash, long key, int copyflag) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public int l_dnaHashAdd(L_DnaHash dahash, long key, double value) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public L_DnaHash l_dnaHashCreateFromDna(L_Dna da) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public int l_dnaRemoveDupsByHash(L_Dna das, PointerByReference pdad, PointerByReference pdahash) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public int l_dnaMakeHistoByHash(L_Dna das, PointerByReference pdahash, PointerByReference pdav, PointerByReference pdac) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public L_Dna l_dnaIntersectionByHash(L_Dna da1, L_Dna da2) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public int l_dnaFindValByHash(L_Dna da, L_DnaHash dahash, double val, IntBuffer pindex) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
     public Pix pixMorphDwa_2(Pix pixd, Pix pixs, int operation, ByteBuffer selname) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
@@ -3967,12 +3897,22 @@ public class LeptonicaImpl implements Leptonica {
     }
 
     @Override
+    public int pixFreeAndSetData(Pix pix, IntByReference data) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
     public int pixSetData(Pix pix, IntBuffer data) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
-    public IntByReference pixExtractData(Pix pixs) {
+    public int pixSetData(Pix pix, IntByReference data) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public IntByReference pixExtractData(Pix pix) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
@@ -3992,6 +3932,11 @@ public class LeptonicaImpl implements Leptonica {
     }
 
     @Override
+    public int pixGetPixel(Pix pix, int x, int y, IntByReference pval) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
     public int pixSetPixel(Pix pix, int x, int y, int val) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
@@ -4001,6 +3946,11 @@ public class LeptonicaImpl implements Leptonica {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
+    @Override
+    public int pixGetRGBPixel(Pix pix, int x, int y, IntByReference prval, IntByReference pgval, IntByReference pbval) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+    
     @Override
     public int pixSetRGBPixel(Pix pix, int x, int y, int rval, int gval, int bval) {
         throw new UnsupportedOperationException("Not supported yet.");
@@ -6029,7 +5979,5 @@ public class LeptonicaImpl implements Leptonica {
     @Override
     public Pointer zlibUncompress(ByteBuffer datain, NativeSize nin, NativeSizeByReference pnout) {
         throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-   
+    }   
 }

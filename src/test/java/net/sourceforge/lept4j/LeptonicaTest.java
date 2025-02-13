@@ -18,6 +18,7 @@ package net.sourceforge.lept4j;
 import com.ochafik.lang.jnaerator.runtime.NativeSize;
 import com.ochafik.lang.jnaerator.runtime.NativeSizeByReference;
 import com.sun.jna.Pointer;
+import com.sun.jna.ptr.IntByReference;
 import com.sun.jna.ptr.PointerByReference;
 import java.io.File;
 import java.nio.FloatBuffer;
@@ -23372,20 +23373,29 @@ public class LeptonicaTest {
 //        fail("The test case is a prototype.");
 //    }
 //
-//    /**
-//     * Test of pixGetData method, of class Leptonica.
-//     */
-//    @Test
-//    public void testPixGetData() {
-//        System.out.println("pixGetData");
-//        Pix pix = null;
-
-//        IntByReference expResult = null;
-//        IntByReference result = instance.pixGetData(pix);
-//        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
+    /**
+     * Test of pixGetData method, of class Leptonica.
+     */
+    @Test
+    public void testPixGetData() {
+        System.out.println("pixGetData");
+        String filename = "eurotext.png";
+        File image = new File(testResourcesPath, filename);
+        Pix pixs = instance.pixRead(image.getPath());
+        IntByReference imageData = instance.pixGetData(pixs);
+        Pix pixd = instance.pixCreate(instance.pixGetWidth(pixs), instance.pixGetHeight(pixs), instance.pixGetDepth(pixs));
+        instance.pixSetData(pixd, imageData);
+        PixColormap cmap = instance.pixGetColormap(pixs); // null since this image has no colormap
+        instance.pixSetColormap(pixd, cmap);
+        IntBuffer psame = IntBuffer.allocate(1);
+        int result = instance.pixEqual(pixd, pixs, psame); // 0 if OK; 1 on error
+        int sameOrNot = psame.get(); // 1 if same; 0 if different
+        LeptUtils.dispose(pixd);
+        // pixs already disposed since it shares resources with pixd
+        LeptUtils.dispose(cmap);
+        assertEquals(0, result);
+        assertEquals(1, sameOrNot);
+    }
 //
 //    /**
 //     * Test of pixSetData method, of class Leptonica.

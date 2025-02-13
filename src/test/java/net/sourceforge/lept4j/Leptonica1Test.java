@@ -18,6 +18,7 @@ package net.sourceforge.lept4j;
 import com.ochafik.lang.jnaerator.runtime.NativeSize;
 import com.ochafik.lang.jnaerator.runtime.NativeSizeByReference;
 import com.sun.jna.Pointer;
+import com.sun.jna.ptr.IntByReference;
 import com.sun.jna.ptr.PointerByReference;
 import java.io.File;
 import java.nio.FloatBuffer;
@@ -22043,19 +22044,29 @@ public class Leptonica1Test {
 //        fail("The test case is a prototype.");
 //    }
 //
-//    /**
-//     * Test of pixGetData method, of class Leptonica1.
-//     */
-//    @Test
-//    public void testPixGetData() {
-//        System.out.println("pixGetData");
-//        Pix pix = null;
-//        IntByReference expResult = null;
-//        IntByReference result = Leptonica1.pixGetData(pix);
-//        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
+    /**
+     * Test of pixGetData method, of class Leptonica1.
+     */
+    @Test
+    public void testPixGetData() {
+        System.out.println("pixGetData");
+        String filename = "eurotext.png";
+        File image = new File(testResourcesPath, filename);
+        Pix pixs = Leptonica1.pixRead(image.getPath());
+        IntByReference imageData = Leptonica1.pixGetData(pixs);
+        Pix pixd = Leptonica1.pixCreate(Leptonica1.pixGetWidth(pixs), Leptonica1.pixGetHeight(pixs), Leptonica1.pixGetDepth(pixs));
+        Leptonica1.pixSetData(pixd, imageData);
+        PixColormap cmap = Leptonica1.pixGetColormap(pixs); // null since this image has no colormap
+        Leptonica1.pixSetColormap(pixd, cmap);
+        IntBuffer psame = IntBuffer.allocate(1);
+        int result = Leptonica1.pixEqual(pixd, pixs, psame); // 0 if OK; 1 on error
+        int sameOrNot = psame.get(); // 1 if same; 0 if different
+        LeptUtils.dispose(pixd);
+        // pixs already disposed since it shares resources with pixd
+        LeptUtils.dispose(cmap);
+        assertEquals(0, result);
+        assertEquals(1, sameOrNot);
+    }
 //
 //    /**
 //     * Test of pixSetData method, of class Leptonica1.
@@ -32222,6 +32233,7 @@ public class Leptonica1Test {
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
 //    }
+
     /**
      * Test of pixRead method, of class Leptonica1.
      */
@@ -37514,7 +37526,7 @@ public class Leptonica1Test {
         Pix result = Leptonica1.pixFindSkewAndDeskew(pixs, redsearch, pangle, pconf);
         float angle = pangle.get();
         float conf = pconf.get();
-        System.out.println(String.format("Confidence: %s, Angle: %s degree", conf , angle));
+        System.out.println(String.format("Confidence: %s, Angle: %s degree", conf, angle));
         LeptUtils.dispose(pixs);
         LeptUtils.dispose(result);
         assertNotNull(result);
@@ -37541,6 +37553,7 @@ public class Leptonica1Test {
 //        fail("The test case is a prototype.");
 //    }
 //
+
     /**
      * Test of pixFindSkew method, of class Leptonica1.
      */
@@ -37556,11 +37569,11 @@ public class Leptonica1Test {
         int result = Leptonica1.pixFindSkew(pixb, pangle, pconf);
         LeptUtils.dispose(pix);
         LeptUtils.dispose(pixb);
-        
+
         if (result == 0) {
             float angle = pangle.get();
             float conf = pconf.get();
-            System.out.println(String.format("Confidence: %s, Angle: %s degree", conf , angle));
+            System.out.println(String.format("Confidence: %s, Angle: %s degree", conf, angle));
             assertTrue(expResult < Math.abs(angle));
         } else {
             System.out.println("Need to binarize the image first");
@@ -38339,6 +38352,7 @@ public class Leptonica1Test {
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
 //    }
+
     /**
      * Test of pixReadFromMultipageTiff method, of class Leptonica1.
      */
