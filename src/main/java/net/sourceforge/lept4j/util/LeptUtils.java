@@ -87,7 +87,19 @@ public class LeptUtils {
      * @return Pix output pix
      * @throws IOException
      */
+    @Deprecated
     public static Pix convertImageToPix(BufferedImage image) throws IOException {
+        return convertImageToPix((RenderedImage) image);
+    }
+
+    /**
+     * Converts <code>RenderedImage</code> to Leptonica <code>Pix</code> .
+     *
+     * @param image source image
+     * @return Pix output pix
+     * @throws IOException
+     */
+    public static Pix convertImageToPix(RenderedImage image) throws IOException {
         ByteBuffer buff = getImageByteBuffer(image);
         Pix pix = Leptonica1.pixReadMem(buff, new NativeSize(buff.capacity()));
         return pix;
