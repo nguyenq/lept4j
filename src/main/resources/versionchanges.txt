@@ -163,3 +163,7 @@ Version 1.20.0 (24 October 2024):
 Version 1.21.0 (14 February 2025):
 - Update Maven plug-ins and dependencies
 - Additional API methods
+
+Version 1.21.1 (5 June 2025):
+- Update Maven plug-ins and dependencies
+- Rebuild Leptonica 1.85.0 Windows binaries with updated dependencies
