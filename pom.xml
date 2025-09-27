@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>net.sourceforge.lept4j</groupId>
     <artifactId>lept4j</artifactId>
-    <version>1.21.2-SNAPSHOT</version>
+    <version>1.22.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <properties>
@@ -100,7 +100,7 @@
         <dependency>
             <groupId>net.java.dev.jna</groupId>
             <artifactId>jna</artifactId>
-            <version>5.17.0</version>
+            <version>5.18.0</version>
         </dependency>
         <dependency>
             <groupId>commons-io</groupId>

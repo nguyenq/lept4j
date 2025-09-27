@@ -157,6 +157,11 @@ public class LeptonicaImpl implements Leptonica {
     }
 
     @Override
+    public Numa pixFindBaselinesGen(Pix pixs, int minw, PointerByReference ppta, Pixa pixadb) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
     public Pix pixDeskewLocal(Pix pixs, int nslices, int redsweep, int redsearch, float sweeprange, float sweepdelta, float minbsdelta) {
         throw new UnsupportedOperationException("Not supported yet.");
     }

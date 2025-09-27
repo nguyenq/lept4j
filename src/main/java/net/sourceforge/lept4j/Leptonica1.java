@@ -500,6 +500,12 @@ public class Leptonica1 implements Library, ILeptonica {
 
     /**
      * Original signature :
+     * <code>NUMA* pixFindBaselinesGen(PIX*, l_int32, PTA**, PIXA*)</code><br>
+     */
+    public static native Numa pixFindBaselinesGen(Pix pixs, int minw, PointerByReference ppta, Pixa pixadb);
+
+    /**
+     * Original signature :
      * <code>PIX* pixDeskewLocal(PIX*, l_int32, l_int32, l_int32, l_float32, l_float32, l_float32)</code>
      */
     public static native Pix pixDeskewLocal(Pix pixs, int nslices, int redsweep, int redsearch, float sweeprange, float sweepdelta, float minbsdelta);
