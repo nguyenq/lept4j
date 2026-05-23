@@ -22,28 +22,18 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-import java.nio.Buffer;
 import java.nio.ByteBuffer;
-import java.nio.ByteOrder;
 import java.nio.FloatBuffer;
-import java.util.Iterator;
-import java.util.Locale;
-import javax.imageio.IIOImage;
 import javax.imageio.ImageIO;
-import javax.imageio.ImageWriteParam;
-import javax.imageio.ImageWriter;
-import javax.imageio.metadata.IIOMetadata;
-import javax.imageio.stream.ImageOutputStream;
-
-import com.github.jaiimageio.plugins.tiff.TIFFImageWriteParam;
-import com.sun.jna.ptr.PointerByReference;
 
 import com.ochafik.lang.jnaerator.runtime.NativeSize;
 import com.ochafik.lang.jnaerator.runtime.NativeSizeByReference;
+import com.sun.jna.ptr.PointerByReference;
 import com.sun.jna.Structure;
 import net.sourceforge.lept4j.*;
+
 import static net.sourceforge.lept4j.ILeptonica.FALSE;
-import static net.sourceforge.lept4j.ILeptonica.IFF_TIFF;
+import static net.sourceforge.lept4j.ILeptonica.IFF_PNG;
 import static net.sourceforge.lept4j.ILeptonica.L_COPY;
 
 //import org.opencv.core.Mat;
@@ -55,8 +45,6 @@ import static net.sourceforge.lept4j.ILeptonica.L_COPY;
  */
 public class LeptUtils {
 
-    final static String JAI_IMAGE_WRITER_MESSAGE = "Need to install JAI Image I/O package.\nhttps://github.com/jai-imageio/jai-imageio-core";
-    final static String TIFF_FORMAT = "tiff";
     final static float deg2rad = (float) (3.14159 / 180.);
 
     /**
@@ -69,7 +57,7 @@ public class LeptUtils {
     public static BufferedImage convertPixToImage(Pix pix) throws IOException {
         PointerByReference pdata = new PointerByReference();
         NativeSizeByReference psize = new NativeSizeByReference();
-        int format = IFF_TIFF;
+        int format = IFF_PNG;
         Leptonica1.pixWriteMem(pdata, psize, pix, format);
         byte[] b = pdata.getValue().getByteArray(0, psize.getValue().intValue());
         BufferedImage bi;
@@ -79,21 +67,9 @@ public class LeptUtils {
         Leptonica1.lept_free(pdata.getValue());
         return bi;
     }
-
+   
     /**
-     * Converts <code>BufferedImage</code> to Leptonica <code>Pix</code> .
-     *
-     * @param image source image
-     * @return Pix output pix
-     * @throws IOException
-     */
-    @Deprecated
-    public static Pix convertImageToPix(BufferedImage image) throws IOException {
-        return convertImageToPix((RenderedImage) image);
-    }
-
-    /**
-     * Converts <code>RenderedImage</code> to Leptonica <code>Pix</code> .
+     * Converts <code>RenderedImage</code> to Leptonica <code>Pix</code>.
      *
      * @param image source image
      * @return Pix output pix
@@ -101,51 +77,23 @@ public class LeptUtils {
      */
     public static Pix convertImageToPix(RenderedImage image) throws IOException {
         ByteBuffer buff = getImageByteBuffer(image);
-        Pix pix = Leptonica1.pixReadMem(buff, new NativeSize(buff.capacity()));
+        Pix pix = Leptonica1.pixReadMemPng(buff, new NativeSize(buff.capacity()));
         return pix;
     }
 
     /**
-     * Gets image data of a <code>RenderedImage</code> object.
+     * Gets image data of a <code>RenderedImage</code> object in memory.
      *
      * @param image a <code>RenderedImage</code> object
-     * @return a byte buffer of image data
+     * @return a byte buffer of image data in PNG format
      * @throws IOException
      */
     public static ByteBuffer getImageByteBuffer(RenderedImage image) throws IOException {
-        //Set up the writeParam
-        TIFFImageWriteParam tiffWriteParam = new TIFFImageWriteParam(Locale.US);
-        tiffWriteParam.setCompressionMode(ImageWriteParam.MODE_DISABLED);
-
-        //Get tiff writer and set output to file
-        Iterator<ImageWriter> writers = ImageIO.getImageWritersByFormatName(TIFF_FORMAT);
-
-        if (!writers.hasNext()) {
-            throw new RuntimeException(JAI_IMAGE_WRITER_MESSAGE);
-        }
-
-        ImageWriter writer = writers.next();
-
-        //Get the stream metadata
-        IIOMetadata streamMetadata = writer.getDefaultStreamMetadata(tiffWriteParam);
-
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-        byte[] b;
-        try (ImageOutputStream ios = ImageIO.createImageOutputStream(outputStream)) {
-            writer.setOutput(ios);
-            writer.write(streamMetadata, new IIOImage(image, null, null), tiffWriteParam);
-            //writer.write(image);
-            writer.dispose();
-            ios.seek(0);
-            b = new byte[(int) ios.length()];
-            ios.read(b);
-        }
+        ImageIO.write(image, "png", outputStream);
+        byte[] b = outputStream.toByteArray();
 
-        ByteBuffer buf = ByteBuffer.allocateDirect(b.length);
-        buf.order(ByteOrder.nativeOrder());
-        buf.put(b);
-        ((Buffer) buf).flip();
-        return buf;
+        return ByteBuffer.wrap(b);
     }
 
     /**
