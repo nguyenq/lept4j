@@ -3,13 +3,12 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>net.sourceforge.lept4j</groupId>
     <artifactId>lept4j</artifactId>
-    <version>1.24.1-SNAPSHOT</version>
+    <version>1.25.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.release>17</maven.compiler.release>
     </properties>
 
     <name>Lept4J - Leptonica for Java</name>
@@ -89,7 +88,7 @@
             <plugin>
               <groupId>org.apache.maven.plugins</groupId>
               <artifactId>maven-surefire-plugin</artifactId>
-              <version>3.5.5</version>
+              <version>3.5.6</version>
               <configuration>
                 <argLine>-Dfile.encoding=${project.build.sourceEncoding}</argLine>
               </configuration>
@@ -119,7 +118,7 @@
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
-            <version>5.14.4</version>
+            <version>6.1.0</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
