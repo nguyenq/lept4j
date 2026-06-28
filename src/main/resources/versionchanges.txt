@@ -179,7 +179,7 @@ Version 1.24.0 (26 May 2026):
 - Use PNG format for image conversion
 - Eliminate jai-imageio-core dependency
 
-Version 1.25.0-SHAPSHOT (20 June 2026):
+Version 1.25.0-SHAPSHOT (28 June 2026):
 - Target Java 17
 - Remove Windows 32-bit support
 - Update dependencies
