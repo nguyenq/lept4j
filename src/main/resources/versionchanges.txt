@@ -183,3 +183,7 @@ Version 1.25.0 (28 July 2026):
 - Target Java 17
 - Remove Windows 32-bit support
 - Update dependencies
+
+Version 1.25.1 (1 November 2026):
+- Update Leptonica native library's dependencies
+- Update dependencies
